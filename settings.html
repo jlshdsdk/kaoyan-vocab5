@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设置 · 考研五书词汇</title>
+<link rel="stylesheet" href="assets/css/base.css?v=4">
+<style>
+.set-row { display:flex; align-items:center; gap:12px; padding:14px 0; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+.set-row:last-child { border-bottom:0; }
+.set-row label { font-weight:600; }
+.set-row .sub { color:var(--ink-2); font-size:14px; width:100%; margin:0; }
+select, input[type=number] { padding:8px 12px; border-radius:8px; border:1px solid var(--line); background:var(--bg-card); color:var(--ink); font-size:15px; }
+.seg { display:flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+.seg button { padding:8px 16px; border:0; background:var(--bg-card); color:var(--ink); cursor:pointer; font-size:15px; }
+.seg button.on { background:var(--accent); color:var(--accent-ink); }
+.danger { color:var(--bad); border-color:color-mix(in srgb, var(--bad) 40%, var(--line)); }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="index.html">📚 五书词汇</a>
+  <a class="tab" href="index.html">今日</a>
+  <a class="tab" href="browse.html">词库</a>
+  <a class="tab" href="wordbook.html">生词本</a>
+  <a class="tab" href="stats.html">统计</a>
+  <a class="tab active" href="settings.html">设置</a>
+  <span class="spacer"></span>
+  <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
+</nav>
+
+<main>
+  <div class="card">
+    <h2 style="margin:0 0 6px">学习偏好</h2>
+    <div class="set-row">
+      <label for="goal">每日新词目标</label>
+      <input type="number" id="goal" min="5" max="200" step="5" style="width:90px">
+      <span style="color:var(--ink-2)">词/天</span>
+    </div>
+    <div class="set-row">
+      <label>外观主题</label>
+      <div class="seg" id="themeSeg">
+        <button data-v="auto">跟随系统</button><button data-v="light">浅色</button><button data-v="dark">深色</button>
+      </div>
+    </div>
+    <div class="set-row">
+      <label>真人发音优先</label>
+      <div class="seg" id="realSeg">
+        <button data-v="1">开</button><button data-v="0">关（纯TTS）</button>
+      </div>
+      <p class="sub">开启后首次看到卡片会后台预取 dictionaryapi.dev 真人音频；取不到自动用 TTS，点击永远即时。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin:0 0 6px">数据管理</h2>
+    <p style="color:var(--ink-2)">学习进度（生词本/复习记录/每日历史/设置）保存在本机浏览器 localStorage。换设备时导出 JSON 带走、再导入即可，不丢数据。</p>
+    <div class="set-row">
+      <button class="btn primary" id="exportBtn">导出数据 JSON</button>
+      <button class="btn" id="importBtn">导入数据 JSON</button>
+      <input type="file" id="importFile" accept=".json,application/json" hidden>
+      <span id="ioMsg" style="color:var(--good)"></span>
+    </div>
+    <div class="set-row">
+      <button class="btn danger" id="wipeBtn">清空全部学习数据</button>
+      <p class="sub">不可恢复，建议先导出备份。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin:0 0 6px">关于</h2>
+    <p style="color:var(--ink-2);margin:4px 0">
+      词库 = 五本考研词汇书并集 9405 词：「★」数量 = 被几本书收录（重要性 rank）。
+      例句类型：<em style="color:var(--bad);font-style:normal">真题</em>（书内标注年份）/
+      <em style="font-style:normal">仿写</em>（真题风格创作）/<em style="font-style:normal">词典例句</em>（书内例句）。
+      本站为个人学习用途的加工改编数据，不含原书排版内容。
+    </p>
+  </div>
+</main>
+
+<script type="module">
+import { initTheme, setTheme, getTheme, toast } from './assets/js/ui.js?v=4';
+import { initAudio } from './assets/js/audio.js?v=4';
+import * as store from './assets/js/store.js?v=4';
+
+initTheme(); initAudio();
+const $ = id => document.getElementById(id);
+$('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+$('themeBtn').onclick = () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  $('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+  syncSeg();
+};
+
+function segSet(id, v) {
+  document.querySelectorAll(`#${id} button`).forEach(b => b.classList.toggle('on', b.dataset.v === String(v)));
+}
+function syncSeg() {
+  segSet('themeSeg', getTheme());
+  segSet('realSeg', store.getState().settings.realAudio ? 1 : 0);
+}
+
+$('goal').value = store.todayGoal();
+$('goal').onchange = () => {
+  const v = Math.max(5, Math.min(200, +$('goal').value || 50));
+  store.getState().settings.dailyGoal = v;
+  store.save();
+  toast(`每日目标已设为 ${v} 词`);
+};
+
+document.querySelectorAll('#themeSeg button').forEach(b => b.onclick = () => { setTheme(b.dataset.v); $('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙'; syncSeg(); });
+document.querySelectorAll('#realSeg button').forEach(b => b.onclick = () => {
+  store.getState().settings.realAudio = b.dataset.v === '1';
+  store.save(); syncSeg();
+});
+syncSeg();
+
+$('exportBtn').onclick = () => {
+  const blob = new Blob([store.exportJSON()], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `vocab5-backup-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+  $('ioMsg').textContent = '已导出 ✓';
+};
+
+$('importBtn').onclick = () => $('importFile').click();
+$('importFile').onchange = async () => {
+  const f = $('importFile').files[0];
+  if (!f) return;
+  try {
+    store.importJSON(await f.text(), { whole: true });
+    $('ioMsg').textContent = '导入成功 ✓（覆盖式）';
+    toast('数据已导入，页面即将刷新');
+    setTimeout(() => location.reload(), 900);
+  } catch (e) {
+    toast('导入失败：' + e.message);
+  }
+};
+
+$('wipeBtn').onclick = () => {
+  if (!confirm('确定清空全部学习数据？此操作不可恢复（建议先导出）。')) return;
+  if (!confirm('再次确认：真的要清空吗？')) return;
+  store.wipe();
+  toast('已清空，页面即将刷新');
+  setTimeout(() => location.reload(), 900);
+};
+</script>
+</body>
+</html>
