@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今日学习 · 考研五书词汇</title>
+<link rel="stylesheet" href="assets/css/base.css?v=4">
+<script>
+addEventListener('error', function(e){
+  var t = document.getElementById('v5err'); if (!t) { t = document.createElement('pre'); t.id = 'v5err';
+  t.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:999;background:#fee;color:#900;font-size:12px;white-space:pre-wrap;margin:0';
+  document.body.appendChild(t); }
+  t.textContent += '\nERR: ' + e.message + ' @' + (e.filename||'').split('/').pop() + ':' + e.lineno;
+});
+addEventListener('unhandledrejection', function(e){
+  var t = document.getElementById('v5err'); if (!t) { t = document.createElement('pre'); t.id = 'v5err';
+  t.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:999;background:#fee;color:#900;font-size:12px;white-space:pre-wrap;margin:0';
+  document.body.appendChild(t); }
+  t.textContent += '\nREJ: ' + (e.reason && e.reason.message ? e.reason.message : String(e.reason));
+});
+</script>
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="index.html">📚 五书词汇</a>
+  <a class="tab active" href="index.html">今日</a>
+  <a class="tab" href="browse.html">词库</a>
+  <a class="tab" href="wordbook.html">生词本</a>
+  <a class="tab" href="stats.html">统计</a>
+  <a class="tab" href="settings.html">设置</a>
+  <span class="spacer"></span>
+  <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
+</nav>
+
+<main>
+  <section class="card" id="goalCard">
+    <div style="display:flex;align-items:baseline;gap:10px">
+      <h2 style="margin:0">今日任务</h2>
+      <span style="margin-left:auto;color:var(--ink-2)" id="dateStr"></span>
+    </div>
+    <p style="margin:10px 0 8px">新词 <b id="goalNum">0/50</b>
+      <span id="overgoal" hidden style="color:var(--good)">（超额 +<span id="overNum">0</span>）</span></p>
+    <div class="progress"><i id="goalBar" style="width:0%"></i></div>
+    <p id="dueHint" style="margin:10px 0 0;color:var(--warn);font-size:15px" hidden></p>
+  </section>
+
+  <div id="celebrate" class="card" hidden
+       style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);text-align:center">
+    <h2 style="margin:6px 0">🎉 今日 50 词已完成！</h2>
+    <p style="margin:0;color:var(--ink-2)">多背的都是净赚的，继续吧</p>
+  </div>
+
+  <section id="cardArea">
+    <div class="card" id="wordCard">
+      <div id="cardBody"><p style="color:var(--ink-2)">加载中…</p></div>
+      <div class="card-actions" style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn primary" id="flipBtn">翻开释义 <span class="kbd">空格</span></button>
+        <button class="btn good" id="knowBtn" hidden>认识 <span class="kbd">K</span></button>
+        <button class="btn bad" id="unknownBtn" hidden>不认识（入生词本） <span class="kbd">J</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="emptyCard" hidden>
+    <p style="text-align:center;color:var(--ink-2);margin:20px 0">今日词库已尽 —— 五书全部词条都已过目或已入本 🎓</p>
+  </section>
+
+  <p style="color:var(--ink-2);font-size:14px;text-align:center;margin-top:18px">
+    快捷键：<span class="kbd">空格</span> 翻开 · <span class="kbd">K</span> 认识 · <span class="kbd">J</span> 不认识 ·
+    <span class="kbd">U</span> 英音 · <span class="kbd">I</span> 美音
+  </p>
+</main>
+
+<script type="module">
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=4';
+import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=4';
+import * as store from './assets/js/store.js?v=4';
+import * as data from './assets/js/data.js?v=4';
+
+initTheme(); initAudio();
+document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+document.getElementById('themeBtn').onclick = () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+};
+
+const state = {
+  shouldSkip: w => store.shouldSkip(w),
+};
+let queue = [];          // 今日候选词头
+let cur = null;          // 当前词条
+let curRank = 0;
+let flipped = false;
+let goal, added;
+
+const $ = id => document.getElementById(id);
+
+function refreshGoal() {
+  goal = store.todayGoal();
+  added = store.todayAdded();
+  $('goalNum').textContent = `${Math.min(added, goal)}/${goal}`;
+  const over = Math.max(0, added - goal);
+  $('overgoal').hidden = !over;
+  $('overNum').textContent = over;
+  $('goalBar').style.width = Math.min(100, added / goal * 100) + '%';
+  $('celebrate').hidden = added < goal;
+}
+
+async function refreshDue() {
+  const s = store.getState();
+  const due = await data.dueWords(s.words);
+  if (due.length) {
+    $('dueHint').hidden = false;
+    $('dueHint').innerHTML = `📌 生词本有 <a href="wordbook.html">${due.length} 个词</a> 到期该复习了`;
+  }
+}
+
+async function nextWord() {
+  flipped = false;
+  $('cardBody').innerHTML = '<p style="color:var(--ink-2)">加载中…</p>';
+  $('flipBtn').hidden = false; $('knowBtn').hidden = true; $('unknownBtn').hidden = true;
+  while (queue.length) {
+    const w = queue.shift();
+    if (store.shouldSkip(w)) continue;      // 队列推进中状态可能已变
+    const e = await data.getEntry(w);
+    if (!e) continue;
+    cur = e; curRank = data.getIndex().map[w][1];
+    render();
+    prefetchRealAudio(e.w);
+    return;
+  }
+  $('cardBody').innerHTML = '';
+  $('wordCard').hidden = true;
+  $('emptyCard').hidden = false;
+  $('flipBtn').hidden = true;
+}
+
+function render() {
+  $('cardBody').innerHTML = cardFront(cur, { rank: curRank });
+  $('cardBody').insertAdjacentHTML('beforeend', '<div id="backArea"></div>');
+}
+
+function flip() {
+  if (!cur || flipped) return;
+  flipped = true;
+  $('backArea').innerHTML = cardBack(cur);
+  $('flipBtn').hidden = true;
+  $('knowBtn').hidden = false;
+  $('unknownBtn').hidden = false;
+}
+
+function markKnow() {
+  if (!cur) return;
+  store.markFamiliar(cur.w);
+  toast('已标记熟悉，今后不再出现');
+  refreshGoal();
+  nextWord();
+}
+
+function markUnknown() {
+  if (!cur) return;
+  const before = store.todayAdded();
+  store.addWord(cur.w);
+  if (store.todayAdded() > before) toast('已加入生词本，明日开始复习');
+  refreshGoal();
+  nextWord();
+}
+
+$('flipBtn').onclick = flip;
+$('knowBtn').onclick = markKnow;
+$('unknownBtn').onclick = markUnknown;
+
+addEventListener('keydown', e => {
+  if (e.repeat) return;
+  if (e.code === 'Space') { e.preventDefault(); if (!flipped) flip(); }
+  else if (e.key === 'k' || e.key === 'K') { if (flipped) markKnow(); }
+  else if (e.key === 'j' || e.key === 'J') { if (flipped) markUnknown(); }
+  else if (e.key === 'u' || e.key === 'U') { if (cur) pronounce(cur.w, 'uk'); }
+  else if (e.key === 'i' || e.key === 'I') { if (cur) pronounce(cur.w, 'us'); }
+});
+
+bindAudioButtons(document, pronounce);
+
+$('dateStr').textContent = new Date().toLocaleDateString('zh-CN', { month: 'long', day: 'numeric', weekday: 'long' });
+
+(async function init() {
+  await data.loadIndex();
+  refreshGoal();
+  refreshDue();
+  queue = await data.newWordCandidates(state);
+  nextWord();
+})();
+</script>
+</body>
+</html>
