@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>统计 · 考研五书词汇</title>
+<link rel="stylesheet" href="assets/css/base.css?v=4">
+<style>
+.stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; margin:16px 0; }
+.stat-grid .card { margin:0; padding:14px; text-align:center; }
+.stat-grid b { font-size:26px; display:block; }
+.stat-grid span { color:var(--ink-2); font-size:13px; }
+.bars { display:flex; align-items:flex-end; gap:4px; height:180px; padding:10px 4px 0; }
+.bars .bar { flex:1; background:var(--accent); border-radius:4px 4px 0 0; min-height:2px; position:relative; opacity:.85; }
+.bars .bar:hover { opacity:1; }
+.bars .bar i { position:absolute; bottom:-22px; left:50%; transform:translateX(-50%); font-size:11px; color:var(--ink-2); font-style:normal; white-space:nowrap; }
+.bars .bar b { position:absolute; top:-20px; left:50%; transform:translateX(-50%); font-size:11px; color:var(--ink-2); }
+.legend { display:flex; gap:14px; margin:6px 2px 0; color:var(--ink-2); font-size:13px; flex-wrap:wrap; }
+.legend i { display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:4px; vertical-align:-1px; }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="index.html">📚 五书词汇</a>
+  <a class="tab" href="index.html">今日</a>
+  <a class="tab" href="browse.html">词库</a>
+  <a class="tab" href="wordbook.html">生词本</a>
+  <a class="tab active" href="stats.html">统计</a>
+  <a class="tab" href="settings.html">设置</a>
+  <span class="spacer"></span>
+  <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
+</nav>
+
+<main>
+  <div class="stat-grid">
+    <div class="card"><b id="stStreak">0</b><span>连续打卡（天）</span></div>
+    <div class="card"><b id="stLearning">0</b><span>学生词</span></div>
+    <div class="card"><b id="stGrad">0</b><span>已毕业</span></div>
+    <div class="card"><b id="stFam">0</b><span>已标熟悉</span></div>
+    <div class="card"><b id="stAcc">0%</b><span>复习正确率</span></div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin:0 0 6px">近 30 天每日新增 / 标熟悉</h3>
+    <div class="bars" id="dailyBars"></div>
+    <div class="legend">
+      <span><i style="background:var(--accent)"></i>新增生词</span>
+      <span><i style="background:var(--good)"></i>标熟悉</span>
+      <span style="margin-left:auto">横轴 = 日期</span>
+    </div>
+    <div id="dualBars" style="margin-top:26px"></div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin:0 0 10px">词库总览</h3>
+    <p id="rankDist" style="color:var(--ink-2);margin:4px 0"></p>
+    <div class="legend"><span><i style="background:#d84315"></i>五书齐收</span><span><i style="background:#e64a19"></i>四书</span><span><i style="background:var(--warn)"></i>三书</span><span><i style="background:var(--accent)"></i>两书</span><span><i style="background:var(--ink-2)"></i>一书</span></div>
+    <div class="bars" id="rankBars" style="height:140px"></div>
+  </div>
+</main>
+
+<script type="module">
+import { initTheme, setTheme, getTheme } from './assets/js/ui.js?v=4';
+import { initAudio } from './assets/js/audio.js?v=4';
+import * as store from './assets/js/store.js?v=4';
+import * as data from './assets/js/data.js?v=4';
+
+initTheme(); initAudio();
+document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+document.getElementById('themeBtn').onclick = () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+};
+const $ = id => document.getElementById(id);
+
+function render() {
+  const s = store.getState();
+  $('stStreak').textContent = store.streakDays();
+  $('stLearning').textContent = Object.keys(s.words).length;
+  $('stGrad').textContent = Object.keys(s.graduated).length;
+  $('stFam').textContent = Object.keys(s.familiar).length;
+  let r = 0, c = 0;
+  for (const w of Object.values(s.words)) { r += w.reviews || 0; c += w.correct || 0; }
+  $('stAcc').textContent = (r ? Math.round(c / r * 100) : 0) + '%';
+
+  // 近30天双序列柱状
+  const days = [];
+  const d = new Date();
+  for (let i = 0; i < 30; i++) { days.unshift(store.todayKey(new Date(d))); d.setDate(d.getDate() - 1); }
+  const maxV = Math.max(10, ...days.map(k => Math.max((s.daily[k]?.added || 0), (s.daily[k]?.familiar || 0))));
+  let html = '<div class="bars">';
+  for (const k of days) {
+    const a = s.daily[k]?.added || 0, f = s.daily[k]?.familiar || 0;
+    const ha = Math.round(a / maxV * 100), hf = Math.round(f / maxV * 100);
+    const label = k.slice(5).replace('-', '/');
+    html += `<div class="bar" style="height:${Math.max(ha, 1)}%;background:var(--accent)" title="${k} 新增${a}"><b>${a || ''}</b><i>${label.slice(0, 5) == days[days.length - 1].slice(5, 10) ? label : ''}</i></div>`;
+  }
+  html += '</div>';
+  $('dailyBars').innerHTML = html;
+
+  // rank 分布
+  const idx = data.getIndex();
+  if (idx) {
+    const dist = [0, 0, 0, 0, 0, 0];
+    for (const [, m] of Object.entries(idx.map)) dist[m[1]]++;
+    const colors = { 5: '#d84315', 4: '#e64a19', 3: '#b26a00', 2: '#3f51b5', 1: '#6b6558' };
+    $('rankDist').textContent = `词库共 ${idx.count} 词（五书并集）`;
+    const mx = Math.max(...dist.slice(1));
+    let rh = '<div class="bars">';
+    for (let k = 5; k >= 1; k--) {
+      rh += `<div class="bar" style="height:${Math.max(dist[k] / mx * 100, 1)}%;background:${colors[k]}" title="${'★'.repeat(k)} ${dist[k]}词"><b>${dist[k]}</b><i>${'★'.repeat(k)}</i></div>`;
+    }
+    rh += '</div>';
+    $('rankBars').innerHTML = rh;
+  }
+}
+
+(async function init() { await data.loadIndex(); render(); })();
+</script>
+</body>
+</html>
