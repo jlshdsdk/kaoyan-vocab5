@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>词库浏览 · 考研五书词汇</title>
+<link rel="stylesheet" href="assets/css/base.css?v=4">
+<style>
+.filters { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0; align-items:center; }
+.filters select, .filters input {
+  padding:8px 12px; border-radius:8px; border:1px solid var(--line);
+  background:var(--bg-card); color:var(--ink); font-size:15px;
+}
+.filters input[type=search] { flex:1; min-width:160px; }
+.count-hint { color:var(--ink-2); font-size:14px; margin:6px 2px; }
+#viewport { height: calc(100vh - 240px); min-height:400px; overflow-y:auto; border:1px solid var(--line); border-radius:var(--radius); background:var(--bg-card); }
+.row { display:flex; align-items:center; gap:12px; padding:12px 16px; border-bottom:1px solid var(--line); cursor:pointer; }
+.row:hover { background:var(--bg-inset); }
+.row .w { font-weight:600; font-size:18px; }
+.row .stars { color:var(--warn); font-size:13px; letter-spacing:1px; }
+.row .meta { margin-left:auto; color:var(--ink-2); font-size:13px; }
+.detail { padding:8px 20px 18px; border-bottom:1px solid var(--line); background:var(--bg-inset); }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="index.html">📚 五书词汇</a>
+  <a class="tab" href="index.html">今日</a>
+  <a class="tab active" href="browse.html">词库</a>
+  <a class="tab" href="wordbook.html">生词本</a>
+  <a class="tab" href="stats.html">统计</a>
+  <a class="tab" href="settings.html">设置</a>
+  <span class="spacer"></span>
+  <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
+</nav>
+
+<main>
+  <div class="filters">
+    <input type="search" id="q" placeholder="搜索单词…" aria-label="搜索">
+    <select id="letter"><option value="">首字母</option></select>
+    <select id="book">
+      <option value="">全部书目</option>
+      <option value="hbs">红宝书</option><option value="slp926">核心926</option>
+      <option value="lxy">你还在背单词吗</option><option value="sg">词汇闪过</option>
+      <option value="llyc">恋练有词</option>
+    </select>
+    <select id="minrank">
+      <option value="1">全部重要性</option><option value="2">★★ 以上</option>
+      <option value="3">★★★ 以上</option><option value="4">★★★★ 以上</option>
+      <option value="5">五书齐收</option>
+    </select>
+  </div>
+  <p class="count-hint" id="hint">加载中…</p>
+  <div id="viewport"><div id="spacer" class="spacer"></div><div id="rows"></div></div>
+</main>
+
+<script type="module">
+import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=4';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=4';
+import * as data from './assets/js/data.js?v=4';
+import * as store from './assets/js/store.js?v=4';
+
+initTheme(); initAudio();
+document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+document.getElementById('themeBtn').onclick = () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+};
+
+const $ = id => document.getElementById(id);
+const ROW_H = 49;
+let list = [];            // 过滤后的 [w, rank, mask]
+let expanded = null;      // 展开的词头
+let chunkPromises = new Map();
+
+// 首字母选项
+for (const L of 'abcdefghijklmnopqrstuvwxyz') {
+  const o = document.createElement('option'); o.value = L; o.textContent = L.toUpperCase();
+  $('letter').appendChild(o);
+}
+
+function refilter() {
+  expanded = null;
+  list = data.browseList({
+    letter: $('letter').value || null,
+    book: $('book').value || null,
+    minRank: +$('minrank').value,
+    q: $('q').value,
+  });
+  $('hint').textContent = `共 ${list.length} 词`;
+  $('spacer').style.height = list.length * ROW_H + 'px';
+  $('rows').innerHTML = '';
+  renderWindow(true);
+}
+
+async function getEntryCached(w) {
+  const m = data.getIndex().map[w];
+  if (!m) return null;
+  if (!chunkPromises.has(m[0])) chunkPromises.set(m[0], data.loadChunk(m[0]));
+  const chunk = await chunkPromises.get(m[0]);
+  return chunk.words[w];
+}
+
+function renderWindow(force) {
+  const vp = $('viewport');
+  if (force) vp.scrollTop = 0;
+  const top = Math.max(0, vp.scrollTop - 400);
+  const bottom = vp.scrollTop + vp.clientHeight + 400;
+  const i0 = Math.floor(top / ROW_H), i1 = Math.min(list.length, Math.ceil(bottom / ROW_H));
+  const rows = $('rows');
+  rows.style.transform = `translateY(${i0 * ROW_H}px)`;
+  let html = '';
+  for (let i = i0; i < i1; i++) {
+    const [w, rank, mask] = list[i];
+    const skip = store.shouldSkip(w);
+    html += `<div class="row" data-w="${w}" data-i="${i}">
+      <span class="w">${w}${skip ? ' <span style="font-size:12px;color:var(--good)">✓在本/熟悉</span>' : ''}</span>
+      <span class="stars">${'★'.repeat(rank)}</span>
+      <span class="meta">${data.maskToBooks(mask).map(b => data.BOOK_NAMES[b]).join('·')}</span>
+    </div>`;
+    if (expanded === w) html += `<div class="detail" data-detail="${w}"><p style="color:var(--ink-2)">加载中…</p></div>`;
+  }
+  rows.innerHTML = html;
+  if (expanded) loadDetail(expanded);
+}
+
+async function loadDetail(w) {
+  const el = document.querySelector(`[data-detail="${w}"]`);
+  if (!el) return;
+  const e = await getEntryCached(w);
+  if (!e || expanded !== w) return;
+  el.innerHTML = cardFront(e, { rank: data.getIndex().map[w][1] }) + cardBack(e);
+  prefetchRealAudio(w);
+}
+
+$('viewport').addEventListener('scroll', () => renderWindow(false));
+$('viewport').addEventListener('click', e => {
+  const row = e.target.closest('.row');
+  if (!row) return;
+  const w = row.dataset.w;
+  expanded = expanded === w ? null : w;
+  renderWindow(false);
+});
+bindAudioButtons(document, pronounce);
+
+let t = 0;
+$('q').addEventListener('input', () => { clearTimeout(t); t = setTimeout(refilter, 200); });
+$('letter').onchange = refilter;
+$('book').onchange = refilter;
+$('minrank').onchange = refilter;
+
+(async function init() {
+  await data.loadIndex();
+  refilter();
+})();
+</script>
+</body>
+</html>
