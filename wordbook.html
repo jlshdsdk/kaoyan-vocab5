@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生词本 · 考研五书词汇</title>
+<link rel="stylesheet" href="assets/css/base.css?v=4">
+<script>
+addEventListener('error', function(e){
+  var t = document.getElementById('v5err'); if (!t) { t = document.createElement('pre'); t.id = 'v5err';
+  t.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:999;background:#fee;color:#900;font-size:12px;white-space:pre-wrap;margin:0';
+  document.body.appendChild(t); }
+  t.textContent += '\nERR: ' + e.message + ' @' + (e.filename||'').split('/').pop() + ':' + e.lineno;
+});
+addEventListener('unhandledrejection', function(e){
+  var t = document.getElementById('v5err'); if (!t) { t = document.createElement('pre'); t.id = 'v5err';
+  t.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:999;background:#fee;color:#900;font-size:12px;white-space:pre-wrap;margin:0';
+  document.body.appendChild(t); }
+  t.textContent += '\nREJ: ' + (e.reason && e.reason.message ? e.reason.message : String(e.reason));
+});
+</script>
+<style>
+.tabs { display:flex; gap:8px; margin:16px 0; flex-wrap:wrap; }
+.tabs .btn.on { background:var(--accent); color:var(--accent-ink); border-color:transparent; }
+.stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin:12px 0; }
+.stat-grid .card { margin:0; padding:12px 14px; text-align:center; }
+.stat-grid b { font-size:24px; display:block; }
+.stat-grid span { color:var(--ink-2); font-size:13px; }
+.rate-btns { display:flex; gap:8px; flex-wrap:wrap; margin-top:16px; }
+.wlist { border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--bg-card); }
+.wrow { display:flex; align-items:center; gap:10px; padding:10px 14px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+.wrow:last-child { border-bottom:0; }
+.wrow .w { font-weight:600; font-size:17px; }
+.wrow .st { color:var(--ink-2); font-size:13px; margin-left:auto; text-align:right; }
+.wrow .due { font-size:13px; color:var(--warn); }
+.wrow .due.ok { color:var(--good); }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="index.html">📚 五书词汇</a>
+  <a class="tab" href="index.html">今日</a>
+  <a class="tab" href="browse.html">词库</a>
+  <a class="tab active" href="wordbook.html">生词本</a>
+  <a class="tab" href="stats.html">统计</a>
+  <a class="tab" href="settings.html">设置</a>
+  <span class="spacer"></span>
+  <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
+</nav>
+
+<main>
+  <div class="tabs">
+    <button class="btn on" id="tabReview">到期复习 <span id="dueCount"></span></button>
+    <button class="btn" id="tabAll">全部生词</button>
+    <button class="btn" id="tabGrad">已掌握</button>
+  </div>
+
+  <!-- 到期复习 -->
+  <section id="paneReview">
+    <div class="card" id="reviewCard">
+      <div id="reviewBody"><p style="color:var(--ink-2)">加载中…</p></div>
+      <div id="reviewActions">
+        <button class="btn primary" id="flipBtn2" style="margin-top:14px">翻面 <span class="kbd">空格</span></button>
+        <div class="rate-btns" id="rateBtns" hidden>
+          <button class="btn bad" data-q="0">不认识(0) <span class="kbd">1</span></button>
+          <button class="btn" data-q="2">模糊(2) <span class="kbd">2</span></button>
+          <button class="btn good" data-q="4">认识(4) <span class="kbd">3</span></button>
+          <button class="btn primary" data-q="5">太简单(5·毕业) <span class="kbd">4</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="reviewEmpty" hidden>
+      <p style="text-align:center;color:var(--ink-2);margin:16px 0">当前没有到期复习的词 🎉<br>
+      <small>新学的词次日进入复习队列</small></p>
+    </div>
+  </section>
+
+  <!-- 全部生词 -->
+  <section id="paneAll" hidden>
+    <div class="stat-grid" id="allStats"></div>
+    <div class="wlist" id="allList"></div>
+  </section>
+
+  <!-- 已掌握 -->
+  <section id="paneGrad" hidden>
+    <p style="color:var(--ink-2)">毕业词 = 复习间隔 ≥21 天且连续答对 ≥4 次（或一键"太简单"）。可复活重新学。</p>
+    <div class="wlist" id="gradList"></div>
+  </section>
+
+  <p style="color:var(--ink-2);font-size:14px;text-align:center;margin-top:18px">
+    快捷键：<span class="kbd">空格</span> 翻面 · <span class="kbd">1/2/3/4</span> 评分
+  </p>
+</main>
+
+<script type="module">
+import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=4';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=4';
+import * as store from './assets/js/store.js?v=4';
+import { review } from './assets/js/srs.js?v=4';
+import * as data from './assets/js/data.js?v=4';
+
+initTheme(); initAudio();
+document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+document.getElementById('themeBtn').onclick = () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+};
+const $ = id => document.getElementById(id);
+let dueWords = [];
+let curW = null, curEntry = null, curRec = null, flipped = false;
+let pane = 'review';
+
+function showPane(p) {
+  pane = p;
+  $('paneReview').hidden = p !== 'review';
+  $('paneAll').hidden = p !== 'all';
+  $('paneGrad').hidden = p !== 'grad';
+  for (const [id, key] of [['tabReview','review'],['tabAll','all'],['tabGrad','grad']])
+    $(id).classList.toggle('on', key === p);
+  if (p === 'all') renderAll();
+  if (p === 'grad') renderGrad();
+}
+$('tabReview').onclick = () => showPane('review');
+$('tabAll').onclick = () => showPane('all');
+$('tabGrad').onclick = () => showPane('grad');
+
+async function loadDue() {
+  await data.loadIndex();
+  dueWords = await data.dueWords(store.getState().words);
+  $('dueCount').textContent = dueWords.length ? `(${dueWords.length})` : '';
+  $('reviewEmpty').hidden = !!dueWords.length;
+  $('reviewCard').hidden = !dueWords.length;
+  nextCard();
+}
+
+async function nextCard() {
+  if (!dueWords.length) { curW = null; return; }
+  curW = dueWords[0];
+  curRec = store.getState().words[curW];
+  curEntry = await data.getEntry(curW);
+  flipped = false;
+  if (!curEntry) { dueWords.shift(); nextCard(); return; }
+  $('reviewBody').innerHTML = cardFront(curEntry, { rank: data.getIndex().map[curW][1] }) + '<div id="backArea2"></div>' +
+    `<p style="color:var(--ink-2);font-size:14px;margin:12px 0 0">
+      复习 <b>${curRec.reviews||0}</b> 次 · 答对 <b>${curRec.correct||0}</b> · 连对 <b>${curRec.streak||0}</b> ·
+      间隔 <b>${curRec.interval||0}</b> 天 · 上次 ${fmtDate(curRec.lastAt)} · 加入 ${fmtDate(curRec.addedAt)}</p>`;
+  $('flipBtn2').hidden = false;
+  $('rateBtns').hidden = true;
+  prefetchRealAudio(curW);
+}
+
+function flip2() {
+  if (!curW || flipped) return;
+  flipped = true;
+  $('backArea2').innerHTML = cardBack(curEntry);
+  $('flipBtn2').hidden = true;
+  $('rateBtns').hidden = false;
+}
+
+function rate(q) {
+  if (!curW || !flipped) return;
+  const now = Date.now();
+  const newRec = review(curRec, q, now);
+  const willGrad = newRec.graduated;
+  delete newRec.graduated;
+  store.applyReview(curW, newRec);
+  if (willGrad) store.graduate(curW, now);
+  toast(willGrad ? `「${curW}」毕业！🎉` : q >= 3 ? '很好' : '明日再来');
+  dueWords.shift();
+  refreshLists();
+  nextCard();
+}
+
+$('flipBtn2').onclick = flip2;
+document.querySelectorAll('#rateBtns [data-q]').forEach(b => b.onclick = () => rate(+b.dataset.q));
+
+addEventListener('keydown', e => {
+  if (e.repeat || pane !== 'review') return;
+  if (e.code === 'Space') { e.preventDefault(); flip2(); }
+  else if (flipped && ['1','2','3','4'].includes(e.key)) rate([0,2,4,5][+e.key-1]);
+});
+
+function refreshLists() { if (pane === 'all') renderAll(); if (pane === 'grad') renderGrad(); loadDueCount(); }
+
+async function loadDueCount() {
+  const due = await data.dueWords(store.getState().words);
+  $('dueCount').textContent = due.length ? `(${due.length})` : '';
+}
+
+function renderAll() {
+  const s = store.getState();
+  const esc = window.__v5esc;
+  const words = Object.entries(s.words);
+  const totalR = words.reduce((a, [, r]) => a + (r.reviews||0), 0);
+  const totalC = words.reduce((a, [, r]) => a + (r.correct||0), 0);
+  $('allStats').innerHTML = `
+    <div class="card"><b>${words.length}</b><span>生词总数</span></div>
+    <div class="card"><b>${Object.keys(s.graduated).length}</b><span>已毕业</span></div>
+    <div class="card"><b>${Object.keys(s.familiar).length}</b><span>已标熟悉</span></div>
+    <div class="card"><b>${totalR ? Math.round(totalC/totalR*100) : 0}%</b><span>总正确率</span></div>`;
+  const now = Date.now();
+  $('allList').innerHTML = words.sort((a,b) => (a[1].dueAt||0)-(b[1].dueAt||0)).map(([w, r]) => `
+    <div class="wrow">
+      <span class="w">${esc(w)}</span>
+      <span class="st">复习 ${r.reviews||0} · 对 ${r.correct||0} · 连 ${r.streak||0} · 间隔 ${r.interval||0}d</span>
+      <span class="due ${(r.dueAt||0) <= now ? '' : 'ok'}">${(r.dueAt||0) <= now ? '到期' : '下次 ' + fmtDate(r.dueAt)}</span>
+      <span class="st">加入 ${fmtDate(r.addedAt)}</span>
+    </div>`).join('') || '<div class="wrow"><span style="color:var(--ink-2)">生词本是空的，去<a href="index.html">今日学习</a>加词吧</span></div>';
+}
+
+function renderGrad() {
+  const g = store.getState().graduated;
+  const esc = window.__v5esc;
+  $('gradList').innerHTML = Object.entries(g).sort((a,b) => b[1].graduatedAt - a[1].graduatedAt).map(([w, info]) => `
+    <div class="wrow">
+      <span class="w">${esc(w)}</span>
+      <span class="st">毕业于 ${fmtDate(info.graduatedAt)} · 复活 ${info.reviveCount||0} 次</span>
+      <button class="btn" data-revive="${esc(w)}">复活重学</button>
+    </div>`).join('') || '<div class="wrow"><span style="color:var(--ink-2)">还没有毕业词</span></div>';
+  document.querySelectorAll('[data-revive]').forEach(b => b.onclick = () => {
+    store.revive(b.dataset.revive);
+    toast(`「${b.dataset.revive}」已复活，重新开始学习`);
+    renderGrad();
+  });
+}
+
+bindAudioButtons(document, pronounce);
+
+(async function init() { await loadDue(); })();
+</script>
+</body>
+</html>
