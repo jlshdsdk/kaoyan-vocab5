@@ -29,7 +29,6 @@ addEventListener('unhandledrejection', function(e){
   <a class="tab" href="stats.html">统计</a>
   <a class="tab" href="settings.html">设置</a>
   <span class="spacer"></span>
-  <span id="authSlot"></span>
   <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
 </nav>
 
@@ -56,8 +55,8 @@ addEventListener('unhandledrejection', function(e){
       <div id="cardBody"><p style="color:var(--ink-2)">加载中…</p></div>
       <div class="card-actions" style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
         <button class="btn primary" id="flipBtn">翻开释义 <span class="kbd">空格</span></button>
-        <button class="btn good" id="knowBtn" hidden>认识 <span class="kbd">K</span></button>
-        <button class="btn bad" id="unknownBtn" hidden>不认识（入生词本） <span class="kbd">J</span></button>
+        <button class="btn good" id="knowBtn" hidden>认识 <span class="kbd">J</span></button>
+        <button class="btn bad" id="unknownBtn" hidden>不认识（入生词本） <span class="kbd">K</span></button>
       </div>
     </div>
   </section>
@@ -67,7 +66,7 @@ addEventListener('unhandledrejection', function(e){
   </section>
 
   <p style="color:var(--ink-2);font-size:14px;text-align:center;margin-top:18px">
-    快捷键：<span class="kbd">空格</span> 翻开 · <span class="kbd">K</span> 认识 · <span class="kbd">J</span> 不认识 ·
+    快捷键：<span class="kbd">空格</span> 翻开 · <span class="kbd">J</span> 认识 · <span class="kbd">K</span> 不认识 ·
     <span class="kbd">U</span> 英音 · <span class="kbd">I</span> 美音
   </p>
 </main>
@@ -77,9 +76,8 @@ import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=
 import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=9';
 import * as store from './assets/js/store.js?v=9';
 import * as data from './assets/js/data.js?v=9';
-import { initAuthNav } from './assets/js/auth-nav.js?v=9';
 
-initTheme(); initAudio(); initAuthNav();
+initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
 document.getElementById('themeBtn').onclick = () => {
   const next = getTheme() === 'dark' ? 'light' : 'dark';
@@ -176,8 +174,8 @@ $('unknownBtn').onclick = markUnknown;
 addEventListener('keydown', e => {
   if (e.repeat) return;
   if (e.code === 'Space') { e.preventDefault(); if (!flipped) flip(); }
-  else if (e.key === 'k' || e.key === 'K') { if (flipped) markKnow(); }
-  else if (e.key === 'j' || e.key === 'J') { if (flipped) markUnknown(); }
+  else if (e.key === 'j' || e.key === 'J') { if (flipped) markKnow(); }
+  else if (e.key === 'k' || e.key === 'K') { if (flipped) markUnknown(); }
   else if (e.key === 'u' || e.key === 'U') { if (cur) pronounce(cur.w, 'uk'); }
   else if (e.key === 'i' || e.key === 'I') { if (cur) pronounce(cur.w, 'us'); }
 });
@@ -187,7 +185,6 @@ bindAudioButtons(document, pronounce);
 $('dateStr').textContent = new Date().toLocaleDateString('zh-CN', { month: 'long', day: 'numeric', weekday: 'long' });
 
 (async function init() {
-  await store.syncOnStart();
   await data.loadIndex();
   refreshGoal();
   refreshDue();
