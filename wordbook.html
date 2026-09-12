@@ -45,7 +45,6 @@ addEventListener('unhandledrejection', function(e){
   <a class="tab" href="stats.html">统计</a>
   <a class="tab" href="settings.html">设置</a>
   <span class="spacer"></span>
-  <span id="authSlot"></span>
   <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
 </nav>
 
@@ -99,9 +98,8 @@ import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=
 import * as store from './assets/js/store.js?v=9';
 import { review } from './assets/js/srs.js?v=9';
 import * as data from './assets/js/data.js?v=9';
-import { initAuthNav } from './assets/js/auth-nav.js?v=9';
 
-initTheme(); initAudio(); initAuthNav();
+initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
 document.getElementById('themeBtn').onclick = () => {
   const next = getTheme() === 'dark' ? 'light' : 'dark';
@@ -192,6 +190,7 @@ async function loadDueCount() {
 
 function renderAll() {
   const s = store.getState();
+  const esc = window.__v5esc;
   const words = Object.entries(s.words);
   const totalR = words.reduce((a, [, r]) => a + (r.reviews||0), 0);
   const totalC = words.reduce((a, [, r]) => a + (r.correct||0), 0);
@@ -212,6 +211,7 @@ function renderAll() {
 
 function renderGrad() {
   const g = store.getState().graduated;
+  const esc = window.__v5esc;
   $('gradList').innerHTML = Object.entries(g).sort((a,b) => b[1].graduatedAt - a[1].graduatedAt).map(([w, info]) => `
     <div class="wrow">
       <span class="w">${esc(w)}</span>
@@ -227,7 +227,7 @@ function renderGrad() {
 
 bindAudioButtons(document, pronounce);
 
-(async function init() { await store.syncOnStart(); await loadDue(); })();
+(async function init() { await loadDue(); })();
 </script>
 </body>
 </html>
