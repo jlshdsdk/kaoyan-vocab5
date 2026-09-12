@@ -138,8 +138,8 @@ a { color: var(--accent); }
 }
 #v5toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* 键盘提示 */
-.kbd { font-family: Consolas, monospace; font-size: 13px; background: var(--bg-inset); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 0 6px; }
+/* 键盘提示：黄底深字，浅色/深色主题及彩色按钮上都醒目 */
+.kbd { font-family: Consolas, monospace; font-size: 13px; background: #ffe082; color: #4e3b00; border: 1px solid #d4a900; border-bottom-width: 2px; border-radius: 6px; padding: 0 6px; }
 
 /* 虚拟滚动容器 */
 .vlist { position: relative; overflow-y: auto; }
