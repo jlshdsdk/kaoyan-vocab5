@@ -138,8 +138,8 @@ a { color: var(--accent); }
 }
 #v5toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* 键盘提示：黄底深字 + 圆润黑体系（中文不再回落到生硬的等宽衬线） */
-.kbd { font-family: "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; font-size: 12.5px; font-weight: 600; letter-spacing: .5px; background: linear-gradient(180deg, #ffe082, #ffd54f); color: #4e3b00; border: 1px solid #d4a900; border-bottom-width: 2px; border-radius: 6px; padding: 1px 8px; }
+/* 键盘提示：黄底键帽；字体随上下文继承（与按钮/正文同字体同字重） */
+.kbd { font-family: inherit; font-size: .82em; letter-spacing: normal; background: linear-gradient(180deg, #ffe082, #ffd54f); color: #4e3b00; border: 1px solid #d4a900; border-bottom-width: 2px; border-radius: 6px; padding: 1px 8px; }
 
 /* 虚拟滚动容器 */
 .vlist { position: relative; overflow-y: auto; }
