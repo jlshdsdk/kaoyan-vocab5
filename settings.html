@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>设置 · 考研五书词汇</title>
-<link rel="stylesheet" href="assets/css/base.css?v=8">
+<link rel="stylesheet" href="assets/css/base.css?v=9">
 <style>
 .set-row { display:flex; align-items:center; gap:12px; padding:14px 0; border-bottom:1px solid var(--line); flex-wrap:wrap; }
 .set-row:last-child { border-bottom:0; }
@@ -26,6 +26,7 @@ select, input[type=number] { padding:8px 12px; border-radius:8px; border:1px sol
   <a class="tab" href="stats.html">统计</a>
   <a class="tab active" href="settings.html">设置</a>
   <span class="spacer"></span>
+  <span id="authSlot"></span>
   <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
 </nav>
 
@@ -54,7 +55,12 @@ select, input[type=number] { padding:8px 12px; border-radius:8px; border:1px sol
 
   <div class="card">
     <h2 style="margin:0 0 6px">数据管理</h2>
-    <p style="color:var(--ink-2)">学习进度（生词本/复习记录/每日历史/设置）保存在本机浏览器 localStorage。换设备时导出 JSON 带走、再导入即可，不丢数据。</p>
+    <p style="color:var(--ink-2)" id="dataDesc">学习进度（生词本/复习记录/每日历史/设置）保存在本机浏览器 localStorage。换设备时导出 JSON 带走、再导入即可，不丢数据。</p>
+    <div class="set-row" id="cloudRow" hidden>
+      <label>云端同步</label>
+      <span id="cloudStatus"></span>
+      <a href="login.html" class="btn" id="cloudAccountBtn">账号中心</a>
+    </div>
     <div class="set-row">
       <button class="btn primary" id="exportBtn">导出数据 JSON</button>
       <button class="btn" id="importBtn">导入数据 JSON</button>
@@ -79,11 +85,13 @@ select, input[type=number] { padding:8px 12px; border-radius:8px; border:1px sol
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, toast } from './assets/js/ui.js?v=8';
-import { initAudio } from './assets/js/audio.js?v=8';
-import * as store from './assets/js/store.js?v=8';
+import { initTheme, setTheme, getTheme, toast } from './assets/js/ui.js?v=9';
+import { initAudio } from './assets/js/audio.js?v=9';
+import * as store from './assets/js/store.js?v=9';
+import { initAuthNav } from './assets/js/auth-nav.js?v=9';
+import { cloudEnabled, getUser, getProfile } from './assets/js/auth.js?v=9';
 
-initTheme(); initAudio();
+initTheme(); initAudio(); initAuthNav();
 const $ = id => document.getElementById(id);
 $('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
 $('themeBtn').onclick = () => {
@@ -99,6 +107,21 @@ function segSet(id, v) {
 function syncSeg() {
   segSet('themeSeg', getTheme());
   segSet('realSeg', store.getState().settings.realAudio ? 1 : 0);
+}
+
+/* 登录状态下先等云端进度合并完成，再显示当前设置 */
+if (cloudEnabled) {
+  await store.syncOnStart();
+  const u = await getUser();
+  $('cloudRow').hidden = false;
+  if (u) {
+    const p = await getProfile();
+    $('cloudStatus').innerHTML = `<span style="color:var(--good)">已开启 ✓（${p?.is_admin ? '👑 管理员' : '已登录'}）换设备登录同一账号自动恢复进度</span>`;
+    $('dataDesc').textContent = '学习进度保存在本机浏览器，同时自动云同步到你登录的账号；换设备登录即可继续，导出 JSON 可作额外备份。';
+  } else {
+    $('cloudStatus').innerHTML = '<span style="color:var(--warn)">未登录 —— 进度只保存在本机</span>';
+    $('dataDesc').textContent = '登录账号后进度自动云同步：换设备、换浏览器都能继续。当前未登录，进度仅保存在本机浏览器。';
+  }
 }
 
 $('goal').value = store.todayGoal();

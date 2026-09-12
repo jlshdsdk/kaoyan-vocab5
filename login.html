@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>账号 · 考研五书词汇</title>
+<link rel="stylesheet" href="assets/css/base.css?v=9">
+<style>
+.tabs2 { display:flex; gap:0; margin:0 0 18px; border-bottom:2px solid var(--line); }
+.tabs2 button { flex:1; padding:12px; border:0; background:none; font-size:17px; color:var(--ink-2); cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px; }
+.tabs2 button.on { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+.field { margin:14px 0; }
+.field label { display:block; font-weight:600; margin-bottom:6px; font-size:15px; }
+.field input { width:100%; padding:11px 14px; border-radius:10px; border:1px solid var(--line); background:var(--bg-card); color:var(--ink); font-size:16px; }
+.field .tip { color:var(--ink-2); font-size:13px; margin-top:4px; }
+.err { color:var(--bad); font-size:15px; min-height:22px; margin:8px 0; }
+.okmsg { color:var(--good); font-size:15px; min-height:22px; margin:8px 0; }
+.kv { display:flex; gap:10px; padding:10px 0; border-bottom:1px dashed var(--line); flex-wrap:wrap; }
+.kv b.k { color:var(--ink-2); font-weight:400; min-width:88px; }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="index.html">📚 五书词汇</a>
+  <a class="tab" href="index.html">今日</a>
+  <a class="tab" href="browse.html">词库</a>
+  <a class="tab" href="wordbook.html">生词本</a>
+  <a class="tab" href="stats.html">统计</a>
+  <a class="tab" href="settings.html">设置</a>
+  <span class="spacer"></span>
+  <span id="authSlot"></span>
+  <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
+</nav>
+
+<main>
+  <div id="noCloud" class="card" hidden>
+    <h2 style="margin:0 0 8px">云同步尚未配置</h2>
+    <p style="color:var(--ink-2)">
+      站长还没有在 <code>assets/js/config.js</code> 里填入 Supabase 配置，
+      所以目前只能单机使用（进度保存在本机浏览器）。<br>
+      配置方法见仓库 <code>README.md</code> 的「账号与云同步」一节。
+    </p>
+  </div>
+
+  <!-- 已登录：账号信息 -->
+  <div id="accountCard" class="card" hidden>
+    <h2 style="margin:0 0 12px">👤 账号中心</h2>
+    <div class="kv"><b class="k">昵称</b><span id="acNick"></span></div>
+    <div class="kv"><b class="k">邮箱</b><span id="acMail"></span></div>
+    <div class="kv"><b class="k">身份</b><span id="acRole"></span></div>
+    <div class="kv"><b class="k">注册时间</b><span id="acSince"></span></div>
+    <div class="kv" style="border-bottom:0"><b class="k">进度同步</b>
+      <span style="color:var(--good)">已开启 ✓ 登录任何设备都会自动恢复/合并进度</span></div>
+    <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
+      <a class="btn primary" href="index.html">去学习</a>
+      <a class="btn" id="adminLink" href="admin.html" hidden>👑 账号管理</a>
+      <button class="btn danger" id="logoutBtn" style="color:var(--bad)">退出登录</button>
+    </div>
+  </div>
+
+  <!-- 未登录：登录 / 注册 -->
+  <div id="authCard" class="card" hidden>
+    <div class="tabs2">
+      <button id="tabLogin" class="on">登录</button>
+      <button id="tabSignup">注册新账号</button>
+    </div>
+
+    <form id="loginForm">
+      <div class="field"><label for="liMail">邮箱</label>
+        <input id="liMail" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+      <div class="field"><label for="liPwd">密码</label>
+        <input id="liPwd" type="password" autocomplete="current-password" required placeholder="••••••"></div>
+      <p class="err" id="liErr"></p>
+      <button class="btn primary big" style="width:100%" type="submit">登 录</button>
+      <p style="text-align:center;margin:12px 0 0">
+        <button type="button" class="btn" id="forgotBtn" style="font-size:14px">忘记密码？发重置邮件</button>
+      </p>
+    </form>
+
+    <form id="signupForm" hidden>
+      <div class="field"><label for="suNick">昵称（可选）</label>
+        <input id="suNick" type="text" maxlength="20" placeholder="怎么称呼你"></div>
+      <div class="field"><label for="suMail">邮箱</label>
+        <input id="suMail" type="email" autocomplete="email" required placeholder="you@example.com">
+        <p class="tip">邮箱即账号。别人看不到你的邮箱。</p></div>
+      <div class="field"><label for="suPwd">密码</label>
+        <input id="suPwd" type="password" autocomplete="new-password" required minlength="6" placeholder="至少 6 位"></div>
+      <div class="field"><label for="suPwd2">确认密码</label>
+        <input id="suPwd2" type="password" autocomplete="new-password" required placeholder="再输一遍"></div>
+      <p class="err" id="suErr"></p>
+      <button class="btn primary big" style="width:100%" type="submit">注 册</button>
+      <p class="tip" style="color:var(--ink-2);font-size:13px;margin-top:10px">
+        注册后进度自动云端保存：换设备、换浏览器，登录同一账号即可继续。</p>
+    </form>
+
+    <p class="okmsg" id="okMsg"></p>
+  </div>
+</main>
+
+<script type="module">
+import { initTheme, setTheme, getTheme, toast } from './assets/js/ui.js?v=9';
+import { initAuthNav } from './assets/js/auth-nav.js?v=9';
+import { cloudEnabled, getUser, getProfile, userLabel, signUp, signIn, signOut, client } from './assets/js/auth.js?v=9';
+
+initTheme();
+initAuthNav();
+const $ = id => document.getElementById(id);
+$('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+$('themeBtn').onclick = () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  $('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+};
+
+function show(which) {           // 'account' | 'auth' | 'none'
+  $('accountCard').hidden = which !== 'account';
+  $('authCard').hidden = which !== 'auth';
+  $('noCloud').hidden = cloudEnabled;
+}
+
+function fillAccount(u, p) {
+  $('acNick').textContent = userLabel();
+  $('acMail').textContent = u.email || '—';
+  $('acRole').textContent = p?.is_admin ? '👑 管理员（只有你）' : '普通用户';
+  $('acSince').textContent = p?.created_at ? new Date(p.created_at).toLocaleDateString('zh-CN') : '—';
+  $('adminLink').hidden = !p?.is_admin;
+}
+
+(async function init() {
+  if (!cloudEnabled) { show('none'); return; }
+  const u = await getUser();
+  if (!u) { show('auth'); return; }
+  const p = await getProfile();
+  fillAccount(u, p);
+  show('account');
+})();
+
+/* 登录/注册页签切换 */
+$('tabLogin').onclick = () => { $('tabLogin').classList.add('on'); $('tabSignup').classList.remove('on'); $('loginForm').hidden = false; $('signupForm').hidden = true; };
+$('tabSignup').onclick = () => { $('tabSignup').classList.add('on'); $('tabLogin').classList.remove('on'); $('signupForm').hidden = false; $('loginForm').hidden = true; };
+
+$('loginForm').onsubmit = async e => {
+  e.preventDefault();
+  $('liErr').textContent = '';
+  const btn = $('loginForm').querySelector('button[type=submit]');
+  btn.disabled = true;
+  try {
+    await signIn($('liMail').value, $('liPwd').value);
+    toast('登录成功，正在同步云端进度…');
+    setTimeout(() => location.href = 'index.html', 600);
+  } catch (err) {
+    $('liErr').textContent = err.message || '登录失败，请重试';
+    btn.disabled = false;
+  }
+};
+
+$('signupForm').onsubmit = async e => {
+  e.preventDefault();
+  $('suErr').textContent = '';
+  if ($('suPwd').value !== $('suPwd2').value) { $('suErr').textContent = '两次输入的密码不一致'; return; }
+  const btn = $('signupForm').querySelector('button[type=submit]');
+  btn.disabled = true;
+  try {
+    const r = await signUp($('suMail').value, $('suPwd').value, $('suNick').value);
+    if (r.needConfirm) {
+      $('signupForm').hidden = true; $('loginForm').hidden = false;
+      $('tabLogin').classList.add('on'); $('tabSignup').classList.remove('on');
+      $('okMsg').textContent = r.message;
+      btn.disabled = false;
+    } else {
+      toast('注册成功，正在初始化云端进度…');
+      setTimeout(() => location.href = 'index.html', 600);
+    }
+  } catch (err) {
+    const m = err.message || '注册失败，请重试';
+    $('suErr').textContent = /already registered/i.test(m) ? '这个邮箱已经注册过了，直接登录即可' : m;
+    btn.disabled = false;
+  }
+};
+
+$('forgotBtn').onclick = async () => {
+  const mail = $('liMail').value.trim();
+  if (!mail) { $('liErr').textContent = '先在上方输入你的注册邮箱，再点这里'; return; }
+  try {
+    await client().auth.resetPasswordForEmail(mail);
+    toast('重置邮件已发送，请到邮箱查收（若收不到请稍后再试）');
+  } catch (err) { $('liErr').textContent = err.message || '发送失败'; }
+};
+
+$('logoutBtn').onclick = async () => {
+  await signOut();
+  toast('已退出登录');
+  setTimeout(() => location.reload(), 600);
+};
+</script>
+</body>
+</html>

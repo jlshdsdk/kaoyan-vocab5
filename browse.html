@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>词库浏览 · 考研五书词汇</title>
-<link rel="stylesheet" href="assets/css/base.css?v=8">
+<link rel="stylesheet" href="assets/css/base.css?v=9">
 <style>
 .filters { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0; align-items:center; }
 .filters select, .filters input {
@@ -31,6 +31,7 @@
   <a class="tab" href="stats.html">统计</a>
   <a class="tab" href="settings.html">设置</a>
   <span class="spacer"></span>
+  <span id="authSlot"></span>
   <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
 </nav>
 
@@ -55,12 +56,13 @@
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=8';
-import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=8';
-import * as data from './assets/js/data.js?v=8';
-import * as store from './assets/js/store.js?v=8';
+import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=9';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=9';
+import * as data from './assets/js/data.js?v=9';
+import * as store from './assets/js/store.js?v=9';
+import { initAuthNav } from './assets/js/auth-nav.js?v=9';
 
-initTheme(); initAudio();
+initTheme(); initAudio(); initAuthNav();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
 document.getElementById('themeBtn').onclick = () => {
   const next = getTheme() === 'dark' ? 'light' : 'dark';
@@ -151,6 +153,7 @@ $('book').onchange = refilter;
 $('minrank').onchange = refilter;
 
 (async function init() {
+  await store.syncOnStart();
   await data.loadIndex();
   refilter();
 })();
