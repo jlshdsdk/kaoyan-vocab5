@@ -50,22 +50,26 @@ export async function getEntry(word) {
   return chunk.words[word] || null;
 }
 
-/** 新词队列：按 rank 降序 → tier 高频优先 → 字母序，产出词头数组（懒加载时按块流式产出） */
+/** 新词队列：全词库每日随机打乱（按日期做种子：同一天内刷新顺序稳定，每天换一批新顺序） */
 export function newWordCandidates(state) {
   if (!index) return Promise.reject(new Error('index not loaded'));
-  // 生成全局候选序列：按 rank 降序；同 rank 按字母序（块内已排序）
-  const order = [];
-  const byRank = new Map();     // rank -> [word...]
-  for (const [w, m] of Object.entries(index.map)) {
-    const rank = m[1];
-    if (!byRank.has(rank)) byRank.set(rank, []);
-    byRank.get(rank).push(w);
+  const all = Object.keys(index.map);
+  const d = new Date();
+  const seedStr = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+  let h = 5381;                                   // djb2 种子
+  for (let i = 0; i < seedStr.length; i++) h = ((h << 5) + h + seedStr.charCodeAt(i)) >>> 0;
+  const rnd = () => {                             // mulberry32
+    h = (h + 0x6D2B79F5) >>> 0;
+    let t = h;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  for (let i = all.length - 1; i > 0; i--) {      // Fisher-Yates
+    const j = Math.floor(rnd() * (i + 1));
+    [all[i], all[j]] = [all[j], all[i]];
   }
-  for (const rank of [...byRank.keys()].sort((a, b) => b - a)) {
-    byRank.get(rank).sort();
-    order.push(...byRank.get(rank));
-  }
-  return order.filter(w => !state.shouldSkip(w));
+  return all.filter(w => !state.shouldSkip(w));
 }
 
 /** 词库浏览：按过滤条件返回 [word, rank, booksBitmask] 列表 */
