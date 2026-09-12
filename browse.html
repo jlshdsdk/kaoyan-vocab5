@@ -31,7 +31,6 @@
   <a class="tab" href="stats.html">统计</a>
   <a class="tab" href="settings.html">设置</a>
   <span class="spacer"></span>
-  <span id="authSlot"></span>
   <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
 </nav>
 
@@ -60,9 +59,8 @@ import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } 
 import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=9';
 import * as data from './assets/js/data.js?v=9';
 import * as store from './assets/js/store.js?v=9';
-import { initAuthNav } from './assets/js/auth-nav.js?v=9';
 
-initTheme(); initAudio(); initAuthNav();
+initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
 document.getElementById('themeBtn').onclick = () => {
   const next = getTheme() === 'dark' ? 'light' : 'dark';
@@ -153,7 +151,6 @@ $('book').onchange = refilter;
 $('minrank').onchange = refilter;
 
 (async function init() {
-  await store.syncOnStart();
   await data.loadIndex();
   refilter();
 })();
