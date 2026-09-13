@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>生词本 · 考研五书词汇</title>
-<link rel="stylesheet" href="assets/css/base.css?v=11">
+<link rel="stylesheet" href="assets/css/base.css?v=13">
 <script>
 addEventListener('error', function(e){
   var t = document.getElementById('v5err'); if (!t) { t = document.createElement('pre'); t.id = 'v5err';
@@ -93,11 +93,11 @@ addEventListener('unhandledrejection', function(e){
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=11';
-import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=11';
-import * as store from './assets/js/store.js?v=11';
-import { review } from './assets/js/srs.js?v=11';
-import * as data from './assets/js/data.js?v=11';
+import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=13';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=13';
+import * as store from './assets/js/store.js?v=13';
+import { review } from './assets/js/srs.js?v=13';
+import * as data from './assets/js/data.js?v=13';
 
 initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
