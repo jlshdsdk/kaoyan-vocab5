@@ -50,10 +50,16 @@ export async function getEntry(word) {
   return chunk.words[word] || null;
 }
 
-/** 新词队列：全词库每日随机打乱（按日期做种子：同一天内刷新顺序稳定，每天换一批新顺序） */
+/** 新词队列：星级优先（★★★★★ 先背完，再到 ★4/★3/★2/★1）；
+ * 同星级内部每日随机打乱（按日期做种子：同一天内刷新顺序稳定，每天换一批新顺序） */
 export function newWordCandidates(state) {
   if (!index) return Promise.reject(new Error('index not loaded'));
-  const all = Object.keys(index.map);
+  const byRank = new Map();                         // rank -> [word...]
+  for (const [w, m] of Object.entries(index.map)) {
+    const r = m[1];
+    if (!byRank.has(r)) byRank.set(r, []);
+    byRank.get(r).push(w);
+  }
   const d = new Date();
   const seedStr = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
   let h = 5381;                                   // djb2 种子
@@ -65,11 +71,16 @@ export function newWordCandidates(state) {
     t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
-  for (let i = all.length - 1; i > 0; i--) {      // Fisher-Yates
-    const j = Math.floor(rnd() * (i + 1));
-    [all[i], all[j]] = [all[j], all[i]];
+  const order = [];
+  for (const rank of [...byRank.keys()].sort((a, b) => b - a)) {   // 5★ → 1★
+    const ws = byRank.get(rank);
+    for (let i = ws.length - 1; i > 0; i--) {     // 组内 Fisher-Yates
+      const j = Math.floor(rnd() * (i + 1));
+      [ws[i], ws[j]] = [ws[j], ws[i]];
+    }
+    order.push(...ws);
   }
-  return all.filter(w => !state.shouldSkip(w));
+  return order.filter(w => !state.shouldSkip(w));
 }
 
 /** 词库浏览：按过滤条件返回 [word, rank, booksBitmask] 列表 */
