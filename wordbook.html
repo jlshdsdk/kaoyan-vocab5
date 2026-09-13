@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>生词本 · 考研五书词汇</title>
-<link rel="stylesheet" href="assets/css/base.css?v=13">
+<link rel="stylesheet" href="assets/css/base.css?v=14">
 <script>
 addEventListener('error', function(e){
   var t = document.getElementById('v5err'); if (!t) { t = document.createElement('pre'); t.id = 'v5err';
@@ -93,11 +93,11 @@ addEventListener('unhandledrejection', function(e){
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=13';
-import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=13';
-import * as store from './assets/js/store.js?v=13';
-import { review } from './assets/js/srs.js?v=13';
-import * as data from './assets/js/data.js?v=13';
+import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=14';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=14';
+import * as store from './assets/js/store.js?v=14';
+import { review } from './assets/js/srs.js?v=14';
+import * as data from './assets/js/data.js?v=14';
 
 initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
@@ -126,7 +126,14 @@ $('tabAll').onclick = () => showPane('all');
 $('tabGrad').onclick = () => showPane('grad');
 
 async function loadDue() {
-  await data.loadIndex();
+  try {
+    await data.loadIndex();
+  } catch (e) {
+    $('reviewBody').innerHTML = '<p style="color:var(--bad)">词库数据加载失败（多为网络原因），<button class="btn" id="retryIdx" style="padding:4px 14px;font-size:14px">点此重试</button> 或刷新页面。（生词列表不受影响，可点上方"全部生词"查看）</p>';
+    const rb = document.getElementById('retryIdx');
+    if (rb) rb.onclick = () => { $('reviewBody').innerHTML = '<p style="color:var(--ink-2)">加载中…</p>'; loadDue(); };
+    return;
+  }
   dueWords = await data.dueWords(store.getState().words);
   $('dueCount').textContent = dueWords.length ? `(${dueWords.length})` : '';
   $('reviewEmpty').hidden = !!dueWords.length;
