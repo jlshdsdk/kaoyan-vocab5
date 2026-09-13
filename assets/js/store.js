@@ -40,8 +40,13 @@ function deepMerge(base, over) {
 
 function cloneDefaults() { return JSON.parse(JSON.stringify(DEFAULTS)); }
 
-/** 防抖保存（200ms），避免高频评分时同步写盘卡顿 */
+/** 防抖保存（200ms），避免高频评分时同步写盘卡顿。
+ * dirty 门闸：只有本页真正改过状态才允许写盘——防止后台旧标签页在
+ * pagehide 时用内存里的旧快照/空默认覆盖其他标签页已保存的数据 */
+let dirty = false;
+
 export function save() {
+  dirty = true;
   clearTimeout(saveTimer);
   saveTimer = setTimeout(flush, 200);
 }
@@ -49,14 +54,15 @@ export function save() {
 function flush() {
   clearTimeout(saveTimer);
   saveTimer = 0;
+  if (!dirty) return;
   try { localStorage.setItem(KEY, JSON.stringify(load())); }
   catch (e) { console.error('state save failed (quota?)', e); }
 }
 
-// 页面卸载前冲刷 pending 写盘（评分后立即导航不丢数据）
+// 页面隐藏/卸载前冲刷 pending 写盘（评分后立即导航不丢数据）
 addEventListener('pagehide', flush);
 // 其他标签页写入时丢弃内存快照，下次读盘取最新（避免后写者吞掉先写者）
-addEventListener('storage', e => { if (e.key === KEY && !saveTimer) state = null; });
+addEventListener('storage', e => { if (e.key === KEY && !saveTimer) { state = null; dirty = false; } });
 
 export function getState() { return load(); }
 
@@ -185,6 +191,9 @@ export function importJSON(text, { whole = true } = {}) {
 }
 
 export function wipe() {
+  dirty = false;
+  clearTimeout(saveTimer);
+  saveTimer = 0;
   localStorage.removeItem(KEY);
   state = null;
 }
