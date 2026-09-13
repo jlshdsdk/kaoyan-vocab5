@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>词库浏览 · 考研五书词汇</title>
-<link rel="stylesheet" href="assets/css/base.css?v=10">
+<link rel="stylesheet" href="assets/css/base.css?v=11">
 <style>
 .filters { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0; align-items:center; }
 .filters select, .filters input {
@@ -55,10 +55,10 @@
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=10';
-import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=10';
-import * as data from './assets/js/data.js?v=10';
-import * as store from './assets/js/store.js?v=10';
+import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=11';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=11';
+import * as data from './assets/js/data.js?v=11';
+import * as store from './assets/js/store.js?v=11';
 
 initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
