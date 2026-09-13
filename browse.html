@@ -4,7 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>词库浏览 · 考研五书词汇</title>
-<link rel="stylesheet" href="assets/css/base.css?v=13">
+<link rel="stylesheet" href="assets/css/base.css?v=14">
+<script>
+addEventListener('error', function(e){
+  var t = document.getElementById('v5err'); if (!t) { t = document.createElement('pre'); t.id = 'v5err';
+  t.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:999;background:#fee;color:#900;font-size:12px;white-space:pre-wrap;margin:0';
+  document.body.appendChild(t); }
+  t.textContent += '\nERR: ' + e.message + ' @' + (e.filename||'').split('/').pop() + ':' + e.lineno;
+});
+addEventListener('unhandledrejection', function(e){
+  var t = document.getElementById('v5err'); if (!t) { t = document.createElement('pre'); t.id = 'v5err';
+  t.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:999;background:#fee;color:#900;font-size:12px;white-space:pre-wrap;margin:0';
+  document.body.appendChild(t); }
+  t.textContent += '\nREJ: ' + (e.reason && e.reason.message ? e.reason.message : String(e.reason));
+});
+</script>
 <style>
 .filters { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0; align-items:center; }
 .filters select, .filters input {
@@ -55,10 +69,10 @@
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=13';
-import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=13';
-import * as data from './assets/js/data.js?v=13';
-import * as store from './assets/js/store.js?v=13';
+import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=14';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=14';
+import * as data from './assets/js/data.js?v=14';
+import * as store from './assets/js/store.js?v=14';
 
 initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
@@ -151,7 +165,13 @@ $('book').onchange = refilter;
 $('minrank').onchange = refilter;
 
 (async function init() {
-  await data.loadIndex();
+  try {
+    await data.loadIndex();
+  } catch (e) {
+    $('hint').innerHTML = '词库数据加载失败（多为网络原因）。<button class="btn" id="retryIdx" style="padding:4px 14px;font-size:14px">点此重试</button> 或稍后刷新；也可用镜像地址 cdn.jsdelivr.net/gh/jlshdsdk/kaoyan-vocab5@main/';
+    document.getElementById('retryIdx').onclick = () => { $('hint').textContent = '加载中…'; init(); };
+    return;
+  }
   refilter();
 })();
 </script>
