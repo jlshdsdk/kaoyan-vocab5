@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>生词本 · 考研五书词汇</title>
-<link rel="stylesheet" href="assets/css/base.css?v=14">
+<link rel="stylesheet" href="assets/css/base.css?v=15">
 <script>
 addEventListener('error', function(e){
   var t = document.getElementById('v5err'); if (!t) { t = document.createElement('pre'); t.id = 'v5err';
@@ -34,6 +34,13 @@ addEventListener('unhandledrejection', function(e){
 .wrow .st { color:var(--ink-2); font-size:13px; margin-left:auto; text-align:right; }
 .wrow .due { font-size:13px; color:var(--warn); }
 .wrow .due.ok { color:var(--good); }
+.wrow.clickable { cursor:pointer; }
+.wrow.clickable:hover { background:var(--bg-inset); }
+.wrow .hint-arrow { color:var(--ink-2); font-size:13px; }
+.detail { padding:8px 18px 16px; background:var(--bg-inset); border-bottom:1px solid var(--line); }
+.pager { display:flex; align-items:center; justify-content:center; gap:14px; padding:12px 0 6px; border-bottom:0; }
+.pager .btn { padding:6px 18px; font-size:14px; }
+.pginfo { color:var(--ink-2); font-size:14px; white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -93,11 +100,11 @@ addEventListener('unhandledrejection', function(e){
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=14';
-import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=14';
-import * as store from './assets/js/store.js?v=14';
-import { review } from './assets/js/srs.js?v=14';
-import * as data from './assets/js/data.js?v=14';
+import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=15';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=15';
+import * as store from './assets/js/store.js?v=15';
+import { review } from './assets/js/srs.js?v=15';
+import * as data from './assets/js/data.js?v=15';
 
 initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
@@ -195,6 +202,44 @@ async function loadDueCount() {
   $('dueCount').textContent = due.length ? `(${due.length})` : '';
 }
 
+/* ---- 列表分页 + 行展开（每页 15 词） ---- */
+const PAGE_SIZE = 15;
+let allPage = 1, gradPage = 1;
+let expandedAll = null, expandedGrad = null;
+
+function pagerHTML(page, totalPages, prefix) {
+  if (totalPages <= 1) return '';
+  return `<div class="pager">
+    <button class="btn" data-pg="${prefix}-" ${page <= 1 ? 'disabled' : ''}>‹ 上一页</button>
+    <span class="pginfo">第 ${page} / ${totalPages} 页</span>
+    <button class="btn" data-pg="${prefix}+" ${page >= totalPages ? 'disabled' : ''}>下一页 ›</button>
+  </div>`;
+}
+
+function bindPager(containerId, prefix, getPage, setPage, rerender) {
+  document.querySelectorAll(`#${containerId} [data-pg]`).forEach(b => {
+    b.onclick = () => {
+      const p = getPage();
+      setPage(b.dataset.pg.endsWith('-') ? Math.max(1, p - 1) : p + 1);
+      rerender();
+    };
+  });
+}
+
+async function fillDetail(containerId, w) {
+  const el = document.querySelector(`#${containerId} [data-detail]`);
+  if (!el) return;
+  try {
+    const e = await data.getEntry(w);
+    if (!e) throw 0;
+    const m = data.getIndex().map[w];
+    el.innerHTML = cardFront(e, { rank: m ? m[1] : 0 }) + cardBack(e);
+    prefetchRealAudio(w);
+  } catch (err) {
+    el.innerHTML = '<p style="color:var(--ink-2);padding:4px 0">词条数据加载失败，收起再点开可重试</p>';
+  }
+}
+
 function renderAll() {
   const s = store.getState();
   const words = Object.entries(s.words);
@@ -205,29 +250,62 @@ function renderAll() {
     <div class="card"><b>${Object.keys(s.graduated).length}</b><span>已毕业</span></div>
     <div class="card"><b>${Object.keys(s.familiar).length}</b><span>已标熟悉</span></div>
     <div class="card"><b>${totalR ? Math.round(totalC/totalR*100) : 0}%</b><span>总正确率</span></div>`;
+  words.sort((a, b) => (a[1].dueAt||0) - (b[1].dueAt||0));
+  const totalPages = Math.max(1, Math.ceil(words.length / PAGE_SIZE));
+  if (allPage > totalPages) allPage = totalPages;
   const now = Date.now();
-  $('allList').innerHTML = words.sort((a,b) => (a[1].dueAt||0)-(b[1].dueAt||0)).map(([w, r]) => `
-    <div class="wrow">
+  const pageWords = words.slice((allPage - 1) * PAGE_SIZE, allPage * PAGE_SIZE);
+  let html = pageWords.map(([w, r]) => `
+    <div class="wrow clickable" data-w="${esc(w)}">
       <span class="w">${esc(w)}</span>
       <span class="st">复习 ${r.reviews||0} · 对 ${r.correct||0} · 连 ${r.streak||0} · 间隔 ${r.interval||0}d</span>
       <span class="due ${(r.dueAt||0) <= now ? '' : 'ok'}">${(r.dueAt||0) <= now ? '到期' : '下次 ' + fmtDate(r.dueAt)}</span>
       <span class="st">加入 ${fmtDate(r.addedAt)}</span>
-    </div>`).join('') || '<div class="wrow"><span style="color:var(--ink-2)">生词本是空的，去<a href="index.html">今日学习</a>加词吧</span></div>';
+      <span class="hint-arrow">${expandedAll === w ? '▾' : '▸'}</span>
+    </div>` + (expandedAll === w ? `<div class="detail" data-detail="${esc(w)}"><p style="color:var(--ink-2)">加载中…</p></div>` : '')).join('');
+  html += pagerHTML(allPage, totalPages, 'all');
+  $('allList').innerHTML = html || '<div class="wrow"><span style="color:var(--ink-2)">生词本是空的，去<a href="index.html">今日学习</a>加词吧</span></div>';
+  bindPager('allList', 'all', () => allPage, v => { allPage = v; expandedAll = null; }, renderAll);
+  document.querySelectorAll('#allList .wrow[data-w]').forEach(row => {
+    row.onclick = () => {
+      const w = row.dataset.w;
+      expandedAll = expandedAll === w ? null : w;
+      renderAll();
+    };
+  });
+  if (expandedAll) fillDetail('allList', expandedAll);
 }
 
 function renderGrad() {
   const g = store.getState().graduated;
-  $('gradList').innerHTML = Object.entries(g).sort((a,b) => b[1].graduatedAt - a[1].graduatedAt).map(([w, info]) => `
-    <div class="wrow">
+  const entries = Object.entries(g).sort((a, b) => b[1].graduatedAt - a[1].graduatedAt);
+  const totalPages = Math.max(1, Math.ceil(entries.length / PAGE_SIZE));
+  if (gradPage > totalPages) gradPage = totalPages;
+  const pageEntries = entries.slice((gradPage - 1) * PAGE_SIZE, gradPage * PAGE_SIZE);
+  let html = pageEntries.map(([w, info]) => `
+    <div class="wrow clickable" data-g="${esc(w)}">
       <span class="w">${esc(w)}</span>
       <span class="st">毕业于 ${fmtDate(info.graduatedAt)} · 复活 ${info.reviveCount||0} 次</span>
       <button class="btn" data-revive="${esc(w)}">复活重学</button>
-    </div>`).join('') || '<div class="wrow"><span style="color:var(--ink-2)">还没有毕业词</span></div>';
-  document.querySelectorAll('[data-revive]').forEach(b => b.onclick = () => {
+      <span class="hint-arrow">${expandedGrad === w ? '▾' : '▸'}</span>
+    </div>` + (expandedGrad === w ? `<div class="detail" data-detail="${esc(w)}"><p style="color:var(--ink-2)">加载中…</p></div>` : '')).join('');
+  html += pagerHTML(gradPage, totalPages, 'grad');
+  $('gradList').innerHTML = html || '<div class="wrow"><span style="color:var(--ink-2)">还没有毕业词</span></div>';
+  bindPager('gradList', 'grad', () => gradPage, v => { gradPage = v; expandedGrad = null; }, renderGrad);
+  document.querySelectorAll('#gradList [data-revive]').forEach(b => b.onclick = e => {
+    e.stopPropagation();
     store.revive(b.dataset.revive);
     toast(`「${b.dataset.revive}」已复活，重新开始学习`);
     renderGrad();
   });
+  document.querySelectorAll('#gradList .wrow[data-g]').forEach(row => {
+    row.onclick = () => {
+      const w = row.dataset.g;
+      expandedGrad = expandedGrad === w ? null : w;
+      renderGrad();
+    };
+  });
+  if (expandedGrad) fillDetail('gradList', expandedGrad);
 }
 
 bindAudioButtons(document, pronounce);
