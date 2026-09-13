@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>生词本 · 考研五书词汇</title>
-<link rel="stylesheet" href="assets/css/base.css?v=10">
+<link rel="stylesheet" href="assets/css/base.css?v=11">
 <script>
 addEventListener('error', function(e){
   var t = document.getElementById('v5err'); if (!t) { t = document.createElement('pre'); t.id = 'v5err';
@@ -93,11 +93,11 @@ addEventListener('unhandledrejection', function(e){
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=10';
-import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=10';
-import * as store from './assets/js/store.js?v=10';
-import { review } from './assets/js/srs.js?v=10';
-import * as data from './assets/js/data.js?v=10';
+import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=11';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=11';
+import * as store from './assets/js/store.js?v=11';
+import { review } from './assets/js/srs.js?v=11';
+import * as data from './assets/js/data.js?v=11';
 
 initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
@@ -190,7 +190,6 @@ async function loadDueCount() {
 
 function renderAll() {
   const s = store.getState();
-  const esc = window.__v5esc;
   const words = Object.entries(s.words);
   const totalR = words.reduce((a, [, r]) => a + (r.reviews||0), 0);
   const totalC = words.reduce((a, [, r]) => a + (r.correct||0), 0);
@@ -211,7 +210,6 @@ function renderAll() {
 
 function renderGrad() {
   const g = store.getState().graduated;
-  const esc = window.__v5esc;
   $('gradList').innerHTML = Object.entries(g).sort((a,b) => b[1].graduatedAt - a[1].graduatedAt).map(([w, info]) => `
     <div class="wrow">
       <span class="w">${esc(w)}</span>
