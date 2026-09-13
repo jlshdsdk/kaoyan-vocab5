@@ -4,19 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>统计 · 考研五书词汇</title>
-<link rel="stylesheet" href="assets/css/base.css?v=11">
+<link rel="stylesheet" href="assets/css/base.css?v=13">
 <style>
 .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; margin:16px 0; }
 .stat-grid .card { margin:0; padding:14px; text-align:center; }
 .stat-grid b { font-size:26px; display:block; }
 .stat-grid span { color:var(--ink-2); font-size:13px; }
-.bars { display:flex; align-items:flex-end; gap:4px; height:180px; padding:10px 4px 0; }
-.bars .bar { flex:1; background:var(--accent); border-radius:4px 4px 0 0; min-height:2px; position:relative; opacity:.85; }
+
+/* 近30天柱状图：无浮动标签，数值看悬停提示 */
+.bars { display:flex; align-items:flex-end; gap:3px; height:150px; margin:18px 0 6px; }
+.bars .bar { flex:1; background:var(--accent); border-radius:3px 3px 0 0; min-height:2px; opacity:.85; cursor:default; }
 .bars .bar:hover { opacity:1; }
-.bars .bar i { position:absolute; bottom:-22px; left:50%; transform:translateX(-50%); font-size:11px; color:var(--ink-2); font-style:normal; white-space:nowrap; }
-.bars .bar b { position:absolute; top:-20px; left:50%; transform:translateX(-50%); font-size:11px; color:var(--ink-2); }
-.legend { display:flex; gap:14px; margin:6px 2px 0; color:var(--ink-2); font-size:13px; flex-wrap:wrap; }
-.legend i { display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:4px; vertical-align:-1px; }
+.axis { display:flex; justify-content:space-between; color:var(--ink-2); font-size:12px; }
+
+/* 词库总览：横向条形行（星级 | 条 | 数量），无绝对定位不叠字 */
+.rrow { display:flex; align-items:center; gap:10px; margin:9px 0; }
+.rrow .rlabel { width:86px; text-align:right; color:var(--warn); font-size:14px; letter-spacing:1px; white-space:nowrap; }
+.rrow .rtrack { flex:1; height:16px; background:var(--bg-inset); border-radius:999px; overflow:hidden; }
+.rrow .rtrack i { display:block; height:100%; border-radius:999px; }
+.rrow .rcount { width:64px; color:var(--ink-2); font-size:14px; white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -41,29 +47,24 @@
   </div>
 
   <div class="card">
-    <h3 style="margin:0 0 6px">近 30 天每日新增 / 标熟悉</h3>
+    <h3 style="margin:0 0 2px">近 30 天每日新增</h3>
     <div class="bars" id="dailyBars"></div>
-    <div class="legend">
-      <span><i style="background:var(--accent)"></i>新增生词</span>
-      <span><i style="background:var(--good)"></i>标熟悉</span>
-      <span style="margin-left:auto">横轴 = 日期</span>
-    </div>
-    <div id="dualBars" style="margin-top:26px"></div>
+    <div class="axis"><span id="axStart"></span><span>悬停柱子看当日数量</span><span id="axEnd">今天</span></div>
   </div>
 
   <div class="card">
-    <h3 style="margin:0 0 10px">词库总览</h3>
-    <p id="rankDist" style="color:var(--ink-2);margin:4px 0"></p>
-    <div class="legend"><span><i style="background:#d84315"></i>五书齐收</span><span><i style="background:#e64a19"></i>四书</span><span><i style="background:var(--warn)"></i>三书</span><span><i style="background:var(--accent)"></i>两书</span><span><i style="background:var(--ink-2)"></i>一书</span></div>
-    <div class="bars" id="rankBars" style="height:140px"></div>
+    <h3 style="margin:0 0 8px">词库总览 · 重要性分布</h3>
+    <p id="rankDist" style="color:var(--ink-2);margin:0 0 12px;font-size:15px"></p>
+    <div id="rankRows"></div>
+    <p style="color:var(--ink-2);font-size:13px;margin:12px 0 0">★ 数量 = 该词被几本书同时收录，越多越重要；学习顺序、筛选都以它为优先级依据。</p>
   </div>
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme } from './assets/js/ui.js?v=11';
-import { initAudio } from './assets/js/audio.js?v=11';
-import * as store from './assets/js/store.js?v=11';
-import * as data from './assets/js/data.js?v=11';
+import { initTheme, setTheme, getTheme } from './assets/js/ui.js?v=13';
+import { initAudio } from './assets/js/audio.js?v=13';
+import * as store from './assets/js/store.js?v=13';
+import * as data from './assets/js/data.js?v=13';
 
 initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
@@ -73,6 +74,8 @@ document.getElementById('themeBtn').onclick = () => {
   document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
 };
 const $ = id => document.getElementById(id);
+
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
 function render() {
   const s = store.getState();
@@ -84,35 +87,38 @@ function render() {
   for (const w of Object.values(s.words)) { r += w.reviews || 0; c += w.correct || 0; }
   $('stAcc').textContent = (r ? Math.round(c / r * 100) : 0) + '%';
 
-  // 近30天双序列柱状
+  // 近30天：纯柱状，无浮动标签
   const days = [];
   const d = new Date();
   for (let i = 0; i < 30; i++) { days.unshift(store.todayKey(new Date(d))); d.setDate(d.getDate() - 1); }
-  const maxV = Math.max(10, ...days.map(k => Math.max((s.daily[k]?.added || 0), (s.daily[k]?.familiar || 0))));
-  let html = '<div class="bars">';
+  const maxV = Math.max(10, ...days.map(k => s.daily[k]?.added || 0));
+  let html = '';
   for (const k of days) {
-    const a = s.daily[k]?.added || 0, f = s.daily[k]?.familiar || 0;
-    const ha = Math.round(a / maxV * 100), hf = Math.round(f / maxV * 100);
-    const label = k.slice(5).replace('-', '/');
-    html += `<div class="bar" style="height:${Math.max(ha, 1)}%;background:var(--accent)" title="${k} 新增${a}"><b>${a || ''}</b><i>${label.slice(0, 5) == days[days.length - 1].slice(5, 10) ? label : ''}</i></div>`;
+    const a = s.daily[k]?.added || 0;
+    const h = Math.max(Math.round(a / maxV * 100), a > 0 ? 6 : 2);
+    html += `<div class="bar" style="height:${h}%" title="${esc(k)}：新增 ${a} 词"></div>`;
   }
-  html += '</div>';
   $('dailyBars').innerHTML = html;
+  $('axStart').textContent = days[0].slice(5).replace('-', '/');
 
-  // rank 分布
+  // rank 分布：横向条形行
   const idx = data.getIndex();
   if (idx) {
     const dist = [0, 0, 0, 0, 0, 0];
     for (const [, m] of Object.entries(idx.map)) dist[m[1]]++;
     const colors = { 5: '#d84315', 4: '#e64a19', 3: '#b26a00', 2: '#3f51b5', 1: '#6b6558' };
+    const names = { 5: '五书齐收', 4: '四书', 3: '三书', 2: '两书', 1: '一书' };
     $('rankDist').textContent = `词库共 ${idx.count} 词（五书并集）`;
     const mx = Math.max(...dist.slice(1));
-    let rh = '<div class="bars">';
+    let rh = '';
     for (let k = 5; k >= 1; k--) {
-      rh += `<div class="bar" style="height:${Math.max(dist[k] / mx * 100, 1)}%;background:${colors[k]}" title="${'★'.repeat(k)} ${dist[k]}词"><b>${dist[k]}</b><i>${'★'.repeat(k)}</i></div>`;
+      rh += `<div class="rrow">
+        <span class="rlabel">${'★'.repeat(k)}<small style="color:var(--ink-2)"> ${names[k]}</small></span>
+        <div class="rtrack"><i style="width:${Math.round(dist[k] / mx * 100)}%;background:${colors[k]}"></i></div>
+        <span class="rcount">${dist[k]} 词</span>
+      </div>`;
     }
-    rh += '</div>';
-    $('rankBars').innerHTML = rh;
+    $('rankRows').innerHTML = rh;
   }
 }
 
