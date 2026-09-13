@@ -1,9 +1,5 @@
-/* store.js — 学习状态持久化（localStorage v5vocab.state.v1）+ 每日任务记账 + 导入导出
- * 登录后自动云同步（Supabase user_data 表）：启动时拉云端做词级合并，
- * 本机每次保存 3 秒后增量推回云端。未登录/未配置云 = 纯本机模式。
- */
+/* store.js — 学习状态持久化（localStorage v5vocab.state.v1）+ 每日任务记账 + 导入导出 */
 import { newRec } from './srs.js';
-import { cloudEnabled, client, getUser } from './auth.js?v=9';
 
 const KEY = 'v5vocab.state.v1';
 const DEFAULTS = {
@@ -55,58 +51,10 @@ function flush() {
   saveTimer = 0;
   try { localStorage.setItem(KEY, JSON.stringify(load())); }
   catch (e) { console.error('state save failed (quota?)', e); }
-  scheduleCloudPush();
 }
 
-/* ---- 云同步 ---- */
-
-let cloudPushTimer = 0;
-
-function scheduleCloudPush() {
-  if (!cloudEnabled || !client()) return;
-  clearTimeout(cloudPushTimer);
-  cloudPushTimer = setTimeout(() => { cloudPushTimer = 0; pushCloud(); }, 3000);
-}
-
-/** 把当前进度整份写入云端自己名下（user_data 一人一行，词级冲突由合并策略兜底） */
-export async function pushCloud(userId) {
-  if (!cloudEnabled) return;
-  const sb = client();
-  if (!sb) return;
-  try {
-    const uid = userId || (await getUser())?.id;
-    if (!uid) return;
-    const { error } = await sb.from('user_data')
-      .upsert({ user_id: uid, data: JSON.parse(JSON.stringify(load())) }, { onConflict: 'user_id' });
-    if (error) console.warn('cloud push failed', error.message);
-  } catch (e) { console.warn('cloud push failed', e); }
-}
-
-/** 页面启动时调用：已登录则拉云端进度与本地合并（记录较新者优先），合并后推回云端。
- * 云端还没有记录时（新账号/第一次在云上），把本机现有进度作为初始进度上传。 */
-export async function syncOnStart(timeoutMs = 8000) {
-  if (!cloudEnabled) return;
-  const sb = client();
-  if (!sb) return;
-  try {
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-    const u = await Promise.race([getUser(), sleep(timeoutMs).then(() => null)]);
-    if (!u) return;                                   // 未登录或网络太慢，先走本机
-    const { data, error } = await sb.from('user_data').select('data').eq('user_id', u.id).maybeSingle();
-    if (error) { console.warn('cloud pull failed', error.message); return; }
-    if (!data) { pushCloud(u.id); return; }
-    const before = JSON.stringify(load());
-    try { importJSON(JSON.stringify(data.data), { whole: false }); } catch (e) { console.warn('cloud merge failed', e); return; }
-    if (JSON.stringify(load()) !== before) save();    // 云端带来了新东西才落盘
-    pushCloud(u.id);                                  // 合并结果推回云端
-  } catch (e) { console.warn('syncOnStart failed', e); }
-}
-
-// 页面卸载前冲刷 pending 写盘（评分后立即导航不丢数据）+ 尽力推一次云端
-addEventListener('pagehide', () => {
-  flush();
-  if (cloudPushTimer) { clearTimeout(cloudPushTimer); cloudPushTimer = 0; pushCloud(); }
-});
+// 页面卸载前冲刷 pending 写盘（评分后立即导航不丢数据）
+addEventListener('pagehide', flush);
 // 其他标签页写入时丢弃内存快照，下次读盘取最新（避免后写者吞掉先写者）
 addEventListener('storage', e => { if (e.key === KEY && !saveTimer) state = null; });
 
@@ -230,14 +178,7 @@ export function importJSON(text, { whole = true } = {}) {
     }
     for (const [w, t] of Object.entries(data.familiar || {})) if (!s.familiar[w] || t > s.familiar[w]) s.familiar[w] = t;
     for (const [w, g] of Object.entries(data.graduated || {})) if (!s.graduated[w]) s.graduated[w] = g;
-    for (const [k, v] of Object.entries(data.daily || {})) {
-      const cur = s.daily[k];
-      if (!cur) s.daily[k] = v;
-      else {  // 两台设备同一天都学过：按各字段较大值合并，避免翻倍也避免丢数
-        cur.added = Math.max(cur.added || 0, v.added || 0);
-        cur.familiar = Math.max(cur.familiar || 0, v.familiar || 0);
-      }
-    }
+    for (const [k, v] of Object.entries(data.daily || {})) if (!s.daily[k]) s.daily[k] = v;
   }
   save();
   return true;
@@ -246,14 +187,4 @@ export function importJSON(text, { whole = true } = {}) {
 export function wipe() {
   localStorage.removeItem(KEY);
   state = null;
-  // 已登录时同步清空云端，防止下次启动被云端旧数据"复活"
-  if (cloudEnabled) {
-    (async () => {
-      const sb = client();
-      const u = await getUser();
-      if (!sb || !u) return;
-      const { error } = await sb.from('user_data').delete().eq('user_id', u.id);
-      if (error) console.warn('cloud wipe failed', error.message);
-    })();
-  }
 }
