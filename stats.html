@@ -22,7 +22,8 @@
 .rrow .rlabel { width:86px; text-align:right; color:var(--warn); font-size:14px; letter-spacing:1px; white-space:nowrap; }
 .rrow .rtrack { flex:1; height:16px; background:var(--bg-inset); border-radius:999px; overflow:hidden; }
 .rrow .rtrack i { display:block; height:100%; border-radius:999px; }
-.rrow .rcount { width:64px; color:var(--ink-2); font-size:14px; white-space:nowrap; }
+.rrow .rcount { width:96px; color:var(--ink-2); font-size:14px; white-space:nowrap; }
+.rrow .rcount b { color:var(--good); font-weight:700; }
 </style>
 </head>
 <body>
@@ -56,7 +57,7 @@
     <h3 style="margin:0 0 8px">词库总览 · 重要性分布</h3>
     <p id="rankDist" style="color:var(--ink-2);margin:0 0 12px;font-size:15px"></p>
     <div id="rankRows"></div>
-    <p style="color:var(--ink-2);font-size:13px;margin:12px 0 0">★ 数量 = 该词被几本书同时收录，越多越重要；学习顺序、筛选都以它为优先级依据。</p>
+    <p style="color:var(--ink-2);font-size:13px;margin:12px 0 0">★ 数量 = 该词被几本书同时收录，越多越重要；学习顺序、筛选都以它为优先级依据。<br>行末 <b style="color:var(--good)">已掌握</b>/总数：仅统计完全毕业词，生词库中正在学习的词不计入。</p>
   </div>
 </main>
 
@@ -106,6 +107,12 @@ function render() {
   if (idx) {
     const dist = [0, 0, 0, 0, 0, 0];
     for (const [, m] of Object.entries(idx.map)) dist[m[1]]++;
+    // 各星级已掌握数：只统计完全毕业词（生词库/熟悉词不算）
+    const mast = [0, 0, 0, 0, 0, 0];
+    for (const w of Object.keys(s.graduated)) {
+      const m = idx.map[w];
+      if (m) mast[m[1]]++;
+    }
     const colors = { 5: '#d84315', 4: '#e64a19', 3: '#b26a00', 2: '#3f51b5', 1: '#6b6558' };
     const names = { 5: '五书齐收', 4: '四书', 3: '三书', 2: '两书', 1: '一书' };
     $('rankDist').textContent = `词库共 ${idx.count} 词（五书并集）`;
@@ -115,7 +122,7 @@ function render() {
       rh += `<div class="rrow">
         <span class="rlabel">${'★'.repeat(k)}<small style="color:var(--ink-2)"> ${names[k]}</small></span>
         <div class="rtrack"><i style="width:${Math.round(dist[k] / mx * 100)}%;background:${colors[k]}"></i></div>
-        <span class="rcount">${dist[k]} 词</span>
+        <span class="rcount" title="已掌握 ${mast[k]} / 共 ${dist[k]} 词"><b>${mast[k]}</b>/${dist[k]} 词</span>
       </div>`;
     }
     $('rankRows').innerHTML = rh;
