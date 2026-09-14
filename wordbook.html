@@ -202,8 +202,8 @@ async function loadDueCount() {
   $('dueCount').textContent = due.length ? `(${due.length})` : '';
 }
 
-/* ---- 列表分页 + 行展开（每页 15 词） ---- */
-const PAGE_SIZE = 15;
+/* ---- 列表分页 + 行展开（每页 30 词） ---- */
+const PAGE_SIZE = 30;
 let allPage = 1, gradPage = 1;
 let expandedAll = null, expandedGrad = null;
 
