@@ -19,7 +19,7 @@
 
 /* 词库总览：横向条形行（星级 | 条 | 数量），无绝对定位不叠字 */
 .rrow { display:flex; align-items:center; gap:10px; margin:9px 0; }
-.rrow .rlabel { width:86px; text-align:right; color:var(--warn); font-size:14px; letter-spacing:1px; white-space:nowrap; }
+.rrow .rlabel { width:100px; text-align:right; color:var(--warn); font-size:14px; letter-spacing:1px; white-space:nowrap; }
 .rrow .rtrack { flex:1; height:16px; background:var(--bg-inset); border-radius:999px; overflow:hidden; }
 .rrow .rtrack i { display:block; height:100%; border-radius:999px; }
 .rrow .rcount { width:96px; color:var(--ink-2); font-size:14px; white-space:nowrap; }
@@ -114,7 +114,7 @@ function render() {
       if (m) mast[m[1]]++;
     }
     const colors = { 5: '#d84315', 4: '#e64a19', 3: '#b26a00', 2: '#3f51b5', 1: '#6b6558' };
-    const names = { 5: '五书齐收', 4: '四书', 3: '三书', 2: '两书', 1: '一书' };
+    const names = { 5: '五书', 4: '四书', 3: '三书', 2: '两书', 1: '一书' };
     $('rankDist').textContent = `词库共 ${idx.count} 词（五书并集）`;
     const mx = Math.max(...dist.slice(1));
     let rh = '';
