@@ -67,7 +67,7 @@ addEventListener('unhandledrejection', function(e){
 
   <p style="color:var(--ink-2);font-size:14px;text-align:center;margin-top:18px">
     快捷键：<span class="kbd">空格</span> 翻开 · <span class="kbd">J</span> 认识 · <span class="kbd">K</span> 不认识 ·
-    <span class="kbd">U</span> 英音 · <span class="kbd">I</span> 美音
+    <span class="kbd">U</span> 美音 · <span class="kbd">I</span> 英音
   </p>
 </main>
 
@@ -176,8 +176,8 @@ addEventListener('keydown', e => {
   if (e.code === 'Space') { e.preventDefault(); if (!flipped) flip(); }
   else if (e.key === 'j' || e.key === 'J') { if (flipped) markKnow(); }
   else if (e.key === 'k' || e.key === 'K') { if (flipped) markUnknown(); }
-  else if (e.key === 'u' || e.key === 'U') { if (cur) pronounce(cur.w, 'uk'); }
-  else if (e.key === 'i' || e.key === 'I') { if (cur) pronounce(cur.w, 'us'); }
+  else if (e.key === 'u' || e.key === 'U') { if (cur) pronounce(cur.w, 'us'); }
+  else if (e.key === 'i' || e.key === 'I') { if (cur) pronounce(cur.w, 'uk'); }
 });
 
 bindAudioButtons(document, pronounce);
