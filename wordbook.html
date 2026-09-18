@@ -96,7 +96,7 @@ addEventListener('unhandledrejection', function(e){
 
   <p style="color:var(--ink-2);font-size:14px;text-align:center;margin-top:18px">
     快捷键：<span class="kbd">空格</span> 翻面 · <span class="kbd">1/2/3/4</span> 评分 ·
-    <span class="kbd">U</span> 美音 · <span class="kbd">I</span> 英音
+    <span class="kbd">U</span> 英音 · <span class="kbd">I</span> 美音
   </p>
 </main>
 
@@ -193,8 +193,8 @@ document.querySelectorAll('#rateBtns [data-q]').forEach(b => b.onclick = () => r
 addEventListener('keydown', e => {
   if (e.repeat || pane !== 'review') return;
   if (e.code === 'Space') { e.preventDefault(); flip2(); }
-  else if (e.key === 'u' || e.key === 'U') { if (curW) pronounce(curW, 'us'); }
-  else if (e.key === 'i' || e.key === 'I') { if (curW) pronounce(curW, 'uk'); }
+  else if (e.key === 'u' || e.key === 'U') { if (curW) pronounce(curW, 'uk'); }
+  else if (e.key === 'i' || e.key === 'I') { if (curW) pronounce(curW, 'us'); }
   else if (flipped && ['1','2','3','4'].includes(e.key)) rate([0,2,4,5][+e.key-1]);
 });
 
