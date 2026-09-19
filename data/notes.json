@@ -2,175 +2,705 @@
   "v": 1,
   "notes": [
     {
+      "date": "2026-09-18",
+      "label": "手写生词笔记 · 第2页（共4页）",
+      "count": 22,
+      "words": [
+        {
+          "w": "immersive",
+          "rank": 1,
+          "ph": {
+            "uk": "ɪˈmɜːsɪv",
+            "us": "ɪˈmɜːrsɪv"
+          },
+          "pos": "adj.",
+          "gloss": "沉浸式的",
+          "points": [
+            "【搭配】immersive reading 沉浸式阅读",
+            "【易混】↔ extensive / intense（见下方辨析卡）"
+          ],
+          "memo": "im-(进入) + mers(浸) + -ive → 浸进去 → 沉浸式的",
+          "rel": "immerse vt. 使沉浸；immersion n. 沉浸"
+        },
+        {
+          "w": "resistant",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈzɪstənt",
+            "us": "rɪˈzɪstənt"
+          },
+          "pos": "adj.",
+          "gloss": "抵抗的；有抵抗力的",
+          "points": [
+            "【笔记】be resistant to… 对……有抵抗力／抵制……"
+          ],
+          "memo": "resist(抵抗) + -ant → 抵抗的",
+          "rel": "resist v. 抵抗；resistance n. 抵抗，抵抗力"
+        },
+        {
+          "w": "prospect",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈprɒspekt",
+            "us": "ˈprɑːspekt"
+          },
+          "pos": "n.",
+          "gloss": "前景；可能性；景色",
+          "points": [
+            "【搭配】in prospect 可预期到的；job prospects 就业前景"
+          ],
+          "memo": "pro-(向前) + spect(看) → 向前看到的东西 → 前景",
+          "rel": "prospective adj. 预期的；prospect vi. 勘探"
+        },
+        {
+          "w": "collapse",
+          "rank": 5,
+          "ph": {
+            "uk": "kəˈlæps",
+            "us": "kəˈlæps"
+          },
+          "pos": "vi. / n.",
+          "gloss": "倒塌；崩溃；暴跌",
+          "points": [
+            "【一词多义】具体\"倒塌\" → 抽象\"崩溃／暴跌\"（the collapse of the economy）"
+          ],
+          "memo": "col-(共同) + laps(滑落) → 一起滑落 → 倒塌、崩溃",
+          "rel": "近义：crash v./n. 崩溃"
+        },
+        {
+          "w": "opponent",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈpəʊnənt",
+            "us": "əˈpoʊnənt"
+          },
+          "pos": "n.[C]",
+          "gloss": "对手；反对者",
+          "points": [
+            "【搭配】opponents of the plan 计划的反对者；a political opponent 政敌"
+          ],
+          "memo": "op-(相反) + pon(放) + -ent → 站在对立面的人 → 对手",
+          "rel": "oppose vt. 反对；反义：supporter n. 支持者"
+        },
+        {
+          "w": "regulate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈreɡjuleɪt",
+            "us": "ˈreɡjuleɪt"
+          },
+          "pos": "vt.",
+          "gloss": "管理，管制；调节",
+          "points": [
+            "【搭配】regulate one's emotions 调节情绪；regulate the temperature 调节温度"
+          ],
+          "memo": "reg(统治，规则) + -ulate → 定规则 → 管理、调节",
+          "rel": "regulation n. 法规；regulator n. 监管机构"
+        },
+        {
+          "w": "exception",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪkˈsepʃn",
+            "us": "ɪkˈsepʃn"
+          },
+          "pos": "n.",
+          "gloss": "例外",
+          "points": [
+            "【笔记】with the exception of… 除……之外",
+            "without exception 无例外"
+          ],
+          "memo": "except(除外) + -ion → 例外",
+          "rel": "exceptional adj. 例外的；杰出的"
+        },
+        {
+          "w": "dependent",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈpendənt",
+            "us": "dɪˈpendənt"
+          },
+          "pos": "adj.",
+          "gloss": "依靠的；取决于……的",
+          "points": [
+            "【笔记】be dependent on… 依赖于……"
+          ],
+          "memo": "depend(依靠) + -ent → 依靠的",
+          "rel": "反义：independent adj. 独立的；dependence n. 依赖"
+        },
+        {
+          "w": "suppress",
+          "rank": 5,
+          "ph": {
+            "uk": "səˈpres",
+            "us": "səˈpres"
+          },
+          "pos": "vt.",
+          "gloss": "镇压；抑制；查禁",
+          "points": [
+            "【笔记】同义词六连：restrain / crush / repress / restrict / refrain / limit",
+            "【搭配】suppress a smile 忍住笑容"
+          ],
+          "memo": "sup-(向下) + press(压) → 往下压 → 镇压、抑制",
+          "rel": "suppression n. 镇压；反义：express v. 表达"
+        },
+        {
+          "w": "gamble",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɡæmbl",
+            "us": "ˈɡæmbl"
+          },
+          "pos": "v. / n.",
+          "gloss": "赌博；投机，冒险",
+          "points": [
+            "【搭配】take a gamble 冒险行事；gamble on sth. 在……上投机"
+          ],
+          "memo": "gam(=game 游戏) + -ble → 当游戏玩 → 赌博",
+          "rel": "gambler n. 赌徒；gambling n. 赌博"
+        },
+        {
+          "w": "acclaim",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈkleɪm",
+            "us": "əˈkleɪm"
+          },
+          "pos": "vt. / n.",
+          "gloss": "称赞，为……喝彩",
+          "points": [
+            "【笔记】be acclaimed as… 被誉为……",
+            "win critical acclaim 赢得评论界赞誉"
+          ],
+          "memo": "ac-(加强) + claim(喊) → 一再喊好 → 称赞",
+          "rel": "acclaimed adj. 备受赞誉的；claim v. 声称"
+        },
+        {
+          "w": "entertain",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌentəˈteɪn",
+            "us": "ˌentərˈteɪn"
+          },
+          "pos": "vt.",
+          "gloss": "招待，款待；使娱乐",
+          "points": [
+            "【搭配】entertain the audience 娱乐观众；entertain oneself 自娱自乐"
+          ],
+          "memo": "enter(进) + tain(拿住) → 把人\"拿住\" → 款待、逗乐",
+          "rel": "entertainment n. 娱乐"
+        },
+        {
+          "w": "clarity",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈklærəti",
+            "us": "ˈklærəti"
+          },
+          "pos": "n.[U]",
+          "gloss": "清晰，明晰",
+          "points": [
+            "【真题用法】images of unsurpassed clarity 无与伦比的清晰图像"
+          ],
+          "memo": "clar(=clear 清晰) + -ity → 清晰",
+          "rel": "clarify vt. 澄清"
+        },
+        {
+          "w": "affirm",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈfɜːm",
+            "us": "əˈfɜːrm"
+          },
+          "pos": "vt.",
+          "gloss": "断言，申明；证实",
+          "points": [
+            "【辨析】affirm 断言属实 ↔ confirm 确认；法庭上\"宣誓证实\"也用它"
+          ],
+          "memo": "af-(加强) + firm(牢固) → 使牢固 → 肯定属实",
+          "rel": "affirmative adj. 肯定的"
+        },
+        {
+          "w": "extension",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪkˈstenʃn",
+            "us": "ɪkˈstenʃn"
+          },
+          "pos": "n.",
+          "gloss": "延长，扩展；分机",
+          "points": [
+            "【笔记】↔ extensive adj. 广泛的（同族词，别混）"
+          ],
+          "memo": "extend(延伸) + -sion → 延伸出的部分；电话\"分机\"就是延伸出去的线",
+          "rel": "extend v. 延伸；extensive adj. 广泛的"
+        },
+        {
+          "w": "territory",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈterətri",
+            "us": "ˈterətɔːri"
+          },
+          "pos": "n.",
+          "gloss": "领土，领地；领域",
+          "points": [
+            "【笔记】↔ territorial adj. 领土的",
+            "【搭配】unknown territory 未知领域"
+          ],
+          "memo": "terr(陆地) + -itory → 一国管辖的陆地 → 领土",
+          "rel": "territorial adj. 领土的；近义：domain n. 领域"
+        },
+        {
+          "w": "attribute",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈtrɪbjuːt",
+            "us": "əˈtrɪbjuːt"
+          },
+          "pos": "vt. / n.",
+          "gloss": "把……归因于；属性（n.）",
+          "points": [
+            "【笔记】attribute A to B 把 A 归因于 B",
+            "【读音】动词 /əˈtrɪbjuːt/，名词 /ˈætrɪbjuːt/（重音前移）"
+          ],
+          "memo": "at-(去) + tribut(给予) → 把原因\"给\"出去 → 归因",
+          "rel": "辨：contribute 贡献；distribute 分发"
+        },
+        {
+          "w": "constitute",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnstɪtjuːt",
+            "us": "ˈkɑːnstətuːt"
+          },
+          "pos": "vt.",
+          "gloss": "组成，构成；建立",
+          "points": [
+            "【笔记】↔ constitution n. 宪法；组成",
+            "【搭配】constitute a threat to… 构成对……的威胁"
+          ],
+          "memo": "con-(一起) + stitut(站) → 站在一起 → 组成",
+          "rel": "constitution n. 宪法；体质"
+        },
+        {
+          "w": "source",
+          "rank": 5,
+          "ph": {
+            "uk": "sɔːs",
+            "us": "sɔːrs"
+          },
+          "pos": "n.[C]",
+          "gloss": "来源，源头；消息来源",
+          "points": [
+            "【笔记】↔ resource n. 资源（经典形近词）",
+            "【搭配】reliable sources 可靠的消息来源"
+          ],
+          "memo": "河流的\"源头\"、信息的\"来源\"",
+          "rel": "辨：resource 资源；origin 起源"
+        },
+        {
+          "w": "resource",
+          "rank": 4,
+          "ph": {
+            "uk": "rɪˈsɔːs",
+            "us": "ˈriːsɔːrs"
+          },
+          "pos": "n.",
+          "gloss": "资源，财力；谋略",
+          "points": [
+            "【搭配】natural resources 自然资源；human resources 人力资源",
+            "【读音】英音重音在后 /rɪˈsɔːs/，美音重音在前 /ˈriːsɔːrs/"
+          ],
+          "memo": "re-(再) + source(源头) → 可反复取用的\"源头\" → 资源",
+          "rel": "resourceful adj. 机智的"
+        },
+        {
+          "w": "constitution",
+          "rank": 4,
+          "ph": {
+            "uk": "ˌkɒnstɪˈtjuːʃn",
+            "us": "ˌkɑːnstəˈtuːʃn"
+          },
+          "pos": "n.",
+          "gloss": "宪法；构成；体质",
+          "points": [
+            "【一词多义】constitute 的名词：构成 → 宪法（国家的\"构成\"文件）＋ 体质（身体的\"构成\"）"
+          ],
+          "memo": "constitute + -ion",
+          "rel": "constitute vt. 组成"
+        },
+        {
+          "w": "territorial",
+          "ph": {
+            "uk": "ˌterəˈtɔːriəl",
+            "us": "ˌterəˈtɔːriəl"
+          },
+          "pos": "adj.",
+          "gloss": "领土的",
+          "points": [
+            "【笔记】territory 的形容词",
+            "territorial integrity 领土完整（高频短语）"
+          ],
+          "memo": "territory + -al",
+          "rel": "territory n. 领土"
+        }
+      ],
+      "groups": [
+        {
+          "title": "extensive · intense · immersive",
+          "words": [
+            {
+              "w": "extensive",
+              "ph": "ɪkˈstensɪv",
+              "gloss": "adj. 广泛的",
+              "tip": "ex-(向外)+tens(伸) → 向外铺开 → 广（9.16 已收录）"
+            },
+            {
+              "w": "intense",
+              "ph": "ɪnˈtens",
+              "gloss": "adj. 强烈的",
+              "tip": "in-(向内)+tens(拉紧) → 拉满 → 强（9.16 已收录）"
+            },
+            {
+              "w": "immersive",
+              "ph": "ɪˈmɜːsɪv",
+              "gloss": "adj. 沉浸式的",
+              "tip": "im-(进入)+mers(浸) → 浸入 → 沉浸"
+            }
+          ],
+          "memo": "三个 -ensive/-ersive 形容词只差前缀方向：向外→广、向内→强、浸入→沉浸。"
+        }
+      ]
+    },
+    {
       "date": "2026-09-16",
       "label": "手写生词笔记",
       "count": 21,
       "words": [
         {
-          "w": "extensive", "rank": 5,
-          "ph": { "uk": "ɪkˈstensɪv", "us": "ɪkˈstensɪv" },
-          "pos": "adj.", "gloss": "广泛的；大量的",
-          "points": ["【搭配】make extensive use of… 大量使用……"],
+          "w": "extensive",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪkˈstensɪv",
+            "us": "ɪkˈstensɪv"
+          },
+          "pos": "adj.",
+          "gloss": "广泛的；大量的",
+          "points": [
+            "【搭配】make extensive use of… 大量使用……"
+          ],
           "memo": "ex-(向外) + tens(伸) + -ive → 不断向外延伸 → 广阔的、大量的",
           "rel": "extensively ad. 广泛地；extension n. 延伸；extent n. 程度"
         },
         {
-          "w": "intense", "rank": 5,
-          "ph": { "uk": "ɪnˈtens", "us": "ɪnˈtens" },
-          "pos": "adj.", "gloss": "强烈的；激烈的；紧张的",
-          "points": ["【真题用法】spark intense opposition 引发强烈反对"],
+          "w": "intense",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈtens",
+            "us": "ɪnˈtens"
+          },
+          "pos": "adj.",
+          "gloss": "强烈的；激烈的；紧张的",
+          "points": [
+            "【真题用法】spark intense opposition 引发强烈反对"
+          ],
           "memo": "in-(进入) + tens(伸) → 拉到极限 → 强烈的",
           "rel": "intensity n. 强度；intensive adj. 密集的（辨：intense 强烈的 / intensive 集中强化的）"
         },
         {
-          "w": "conclude", "rank": 5,
-          "ph": { "uk": "kənˈkluːd", "us": "kənˈkluːd" },
-          "pos": "v.", "gloss": "得出结论；结束；缔结（协议）",
-          "points": ["【笔记】conclude from… 从……得出结论", "to conclude 最后，总之（结束语）"],
+          "w": "conclude",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈkluːd",
+            "us": "kənˈkluːd"
+          },
+          "pos": "v.",
+          "gloss": "得出结论；结束；缔结（协议）",
+          "points": [
+            "【笔记】conclude from… 从……得出结论",
+            "to conclude 最后，总之（结束语）"
+          ],
           "memo": "con-(共同) + clud(关闭) → 一起关上 → 告一段落 → 下结论",
           "rel": "conclusion n. 结论；in conclusion 最后"
         },
         {
-          "w": "despair", "rank": 5,
-          "ph": { "uk": "dɪˈspeə(r)", "us": "dɪˈsper" },
-          "pos": "vi. / n.[U]", "gloss": "绝望",
-          "points": ["【搭配】despair of… 对……感到绝望", "in despair 处于绝望之中"],
+          "w": "despair",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈspeə(r)",
+            "us": "dɪˈsper"
+          },
+          "pos": "vi. / n.[U]",
+          "gloss": "绝望",
+          "points": [
+            "【搭配】despair of… 对……感到绝望",
+            "in despair 处于绝望之中"
+          ],
           "memo": "des-(分离) + pair(一对) → 把一对拆散 → 绝望",
           "rel": "despairing adj. 绝望的"
         },
         {
-          "w": "resemble", "rank": 5,
-          "ph": { "uk": "rɪˈzembl", "us": "rɪˈzembl" },
-          "pos": "vt.", "gloss": "与……相似，像",
-          "points": ["【笔记】resemble sb./sth. in… 在……方面像……"],
+          "w": "resemble",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈzembl",
+            "us": "rɪˈzembl"
+          },
+          "pos": "vt.",
+          "gloss": "与……相似，像",
+          "points": [
+            "【笔记】resemble sb./sth. in… 在……方面像……"
+          ],
           "memo": "re-(一再) + semble(=same 像) → 一再相像 → 类似；无进行时（状态动词）",
           "rel": "resemblance n. 相似，相似之处"
         },
         {
-          "w": "trait", "rank": 5,
-          "ph": { "uk": "treɪt", "us": "treɪt" },
-          "pos": "n.", "gloss": "特征，特点，特性",
-          "points": ["【易混】↔ trial 审判/试验、treaty 条约（见下方辨析卡）"],
+          "w": "trait",
+          "rank": 5,
+          "ph": {
+            "uk": "treɪt",
+            "us": "treɪt"
+          },
+          "pos": "n.",
+          "gloss": "特征，特点，特性",
+          "points": [
+            "【易混】↔ trial 审判/试验、treaty 条约（见下方辨析卡）"
+          ],
           "memo": "personality traits 个性特征",
           "rel": "近义：characteristic n. 特征；feature n. 特点"
         },
         {
-          "w": "alternative", "rank": 5,
-          "ph": { "uk": "ɔːlˈtɜːnətɪv", "us": "ɔːlˈtɜːrnətɪv" },
-          "pos": "n.[C] / adj.", "gloss": "可供选择的事物；可替代的",
-          "points": ["【搭配】have no alternative but to do… 别无选择只能……", "an alternative to… ……的替代品；alternative energy 替代能源"],
+          "w": "alternative",
+          "rank": 5,
+          "ph": {
+            "uk": "ɔːlˈtɜːnətɪv",
+            "us": "ɔːlˈtɜːrnətɪv"
+          },
+          "pos": "n.[C] / adj.",
+          "gloss": "可供选择的事物；可替代的",
+          "points": [
+            "【搭配】have no alternative but to do… 别无选择只能……",
+            "an alternative to… ……的替代品；alternative energy 替代能源"
+          ],
           "memo": "altern-(交替) + -ative → 两者交替可选 → 替代（品）",
           "rel": "alternate v. 交替；alternatively ad. 或者"
         },
         {
-          "w": "contrary", "rank": 5,
-          "ph": { "uk": "ˈkɒntrəri", "us": "ˈkɑːntreri" },
-          "pos": "adj. / n.[U]", "gloss": "相反的；相反",
-          "points": ["【笔记】contrary to… 与……相反", "on the contrary 恰恰相反；quite the contrary 恰恰相反"],
+          "w": "contrary",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒntrəri",
+            "us": "ˈkɑːntreri"
+          },
+          "pos": "adj. / n.[U]",
+          "gloss": "相反的；相反",
+          "points": [
+            "【笔记】contrary to… 与……相反",
+            "on the contrary 恰恰相反；quite the contrary 恰恰相反"
+          ],
           "memo": "contra-(相反) + -ry → 相反的",
           "rel": "contrast n./v. 对比，对照"
         },
         {
-          "w": "warrant", "rank": 5,
-          "ph": { "uk": "ˈwɒrənt", "us": "ˈwɔːrənt" },
-          "pos": "n.[C] / vt.", "gloss": "授权令，许可证；使有必要，保证",
-          "points": ["【笔记】n. 授权，批准", "【搭配】obtain a warrant to do… 获得……的授权令"],
+          "w": "warrant",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈwɒrənt",
+            "us": "ˈwɔːrənt"
+          },
+          "pos": "n.[C] / vt.",
+          "gloss": "授权令，许可证；使有必要，保证",
+          "points": [
+            "【笔记】n. 授权，批准",
+            "【搭配】obtain a warrant to do… 获得……的授权令"
+          ],
           "memo": "近义：justify vt. 证明……正当",
           "rel": "warranty n. 保修单"
         },
         {
-          "w": "refer", "rank": 5,
-          "ph": { "uk": "rɪˈfɜː(r)", "us": "rɪˈfɝː" },
-          "pos": "v.", "gloss": "提到，谈及；参考，查阅；指的是",
-          "points": ["【笔记】refer to 指的是；参考；涉及", "refer to…as… 把……称作……", "【衍生】reference n. 谈及；参考"],
+          "w": "refer",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈfɜː(r)",
+            "us": "rɪˈfɝː"
+          },
+          "pos": "v.",
+          "gloss": "提到，谈及；参考，查阅；指的是",
+          "points": [
+            "【笔记】refer to 指的是；参考；涉及",
+            "refer to…as… 把……称作……",
+            "【衍生】reference n. 谈及；参考"
+          ],
           "memo": "re-(回) + fer(带) → 带回原处 → 引用、提及",
           "rel": "reference n. 参考，谈及；referral n. 转送"
         },
         {
-          "w": "trial", "rank": 5,
-          "ph": { "uk": "ˈtraɪəl", "us": "ˈtraɪəl" },
-          "pos": "n.", "gloss": "审判；试验，试用；选拔赛",
-          "points": ["【笔记】on trial 在试验中/在受审", "【搭配】await trial 等候审理"],
+          "w": "trial",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈtraɪəl",
+            "us": "ˈtraɪəl"
+          },
+          "pos": "n.",
+          "gloss": "审判；试验，试用；选拔赛",
+          "points": [
+            "【笔记】on trial 在试验中/在受审",
+            "【搭配】await trial 等候审理"
+          ],
           "memo": "try 的名词形式 → 试过才知道 → 试验；（法律）审理",
           "rel": "同义：test n. 试验"
         },
         {
-          "w": "elevation", "rank": 5,
-          "ph": { "uk": "ˌelɪˈveɪʃn", "us": "ˌeləˈveɪʃn" },
-          "pos": "n.", "gloss": "海拔，高度；提升，晋级",
-          "points": ["【一词多义】本义\"升高\" → 高度/海拔（具体）+ 提拔/晋升（抽象）"],
+          "w": "elevation",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌelɪˈveɪʃn",
+            "us": "ˌeləˈveɪʃn"
+          },
+          "pos": "n.",
+          "gloss": "海拔，高度；提升，晋级",
+          "points": [
+            "【一词多义】本义\"升高\" → 高度/海拔（具体）+ 提拔/晋升（抽象）"
+          ],
           "memo": "e-(出) + lev(升) + -ation → 升起来的高度 → 海拔；提拔",
           "rel": "elevate vt. 提升；elevator n. 电梯（美）"
         },
         {
-          "w": "descendant", "rank": 5,
-          "ph": { "uk": "dɪˈsendənt", "us": "dɪˈsendənt" },
-          "pos": "n.", "gloss": "后代，后裔",
-          "points": ["【反义】ancestor n. 祖先"],
+          "w": "descendant",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈsendənt",
+            "us": "dɪˈsendənt"
+          },
+          "pos": "n.",
+          "gloss": "后代，后裔",
+          "points": [
+            "【反义】ancestor n. 祖先"
+          ],
           "memo": "de-(向下) + scend(爬) → 往下传的人 → 后代",
           "rel": "descend v. 下降；源自（be descended from）"
         },
         {
-          "w": "imply", "rank": 5,
-          "ph": { "uk": "ɪmˈplaɪ", "us": "ɪmˈplaɪ" },
-          "pos": "vt.", "gloss": "暗示；含有……的意思",
-          "points": ["【经典辨析】说者 imply（暗示）↔ 听者 infer（推断）"],
+          "w": "imply",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪmˈplaɪ",
+            "us": "ɪmˈplaɪ"
+          },
+          "pos": "vt.",
+          "gloss": "暗示；含有……的意思",
+          "points": [
+            "【经典辨析】说者 imply（暗示）↔ 听者 infer（推断）"
+          ],
           "memo": "im-(进入) + ply(折) → 折在里面不说破 → 暗示",
           "rel": "implication n. 含义，暗示"
         },
         {
-          "w": "resent", "rank": 5,
-          "ph": { "uk": "rɪˈzent", "us": "rɪˈzent" },
-          "pos": "vt.", "gloss": "怨恨，愤恨",
-          "points": ["【笔记】resent doing sth. 怨恨做某事（接动名词，不接不定式）"],
+          "w": "resent",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈzent",
+            "us": "rɪˈzent"
+          },
+          "pos": "vt.",
+          "gloss": "怨恨，愤恨",
+          "points": [
+            "【笔记】resent doing sth. 怨恨做某事（接动名词，不接不定式）"
+          ],
           "memo": "re-(反) + sent(感觉) → 感觉总对着干 → 怨恨",
           "rel": "resentment n. 怨恨"
         },
         {
-          "w": "discriminate", "rank": 5,
-          "ph": { "uk": "dɪˈskrɪmɪneɪt", "us": "dɪˈskrɪmɪneɪt" },
-          "pos": "v.", "gloss": "区别，辨别；歧视",
-          "points": ["【笔记】discriminate between A and B 区别 A 和 B", "discriminate against… 歧视……（笔记笔误 aganist 应为 against）"],
+          "w": "discriminate",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈskrɪmɪneɪt",
+            "us": "dɪˈskrɪmɪneɪt"
+          },
+          "pos": "v.",
+          "gloss": "区别，辨别；歧视",
+          "points": [
+            "【笔记】discriminate between A and B 区别 A 和 B",
+            "discriminate against… 歧视……（笔记笔误 aganist 应为 against）"
+          ],
           "memo": "dis-(分开) + crimin(分辨) + -ate → 分开挑出来 → 区别对待 → 歧视",
           "rel": "discrimination n. 歧视"
         },
         {
-          "w": "identity", "rank": 5,
-          "ph": { "uk": "aɪˈdentəti", "us": "aɪˈdentəti" },
-          "pos": "n.", "gloss": "身份；特性；同一性",
-          "points": ["【搭配】identity card 身份证；national identity 民族认同"],
+          "w": "identity",
+          "rank": 5,
+          "ph": {
+            "uk": "aɪˈdentəti",
+            "us": "aɪˈdentəti"
+          },
+          "pos": "n.",
+          "gloss": "身份；特性；同一性",
+          "points": [
+            "【搭配】identity card 身份证；national identity 民族认同"
+          ],
           "memo": "ident(相同) + -ity → 与本人相符 → 身份",
           "rel": "identify v. 鉴定，确认；identical adj. 完全相同的"
         },
         {
-          "w": "hostile", "rank": 5,
-          "ph": { "uk": "ˈhɒstaɪl", "us": "ˈhɑːstl" },
-          "pos": "adj.", "gloss": "敌对的，怀有敌意的",
-          "points": ["【笔记】be hostile to/towards… 对……怀有敌意"],
+          "w": "hostile",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈhɒstaɪl",
+            "us": "ˈhɑːstl"
+          },
+          "pos": "adj.",
+          "gloss": "敌对的，怀有敌意的",
+          "points": [
+            "【笔记】be hostile to/towards… 对……怀有敌意"
+          ],
           "memo": "反义：friendly；host(主人)+ile → 翻脸不认主 → 敌对的",
           "rel": "hostility n. 敌意，对抗"
         },
         {
-          "w": "withdraw", "rank": 5,
-          "ph": { "uk": "wɪðˈdrɔː", "us": "wɪðˈdrɑː" },
-          "pos": "vt. / vi.", "gloss": "取（款）；收回；撤回；撤退",
-          "points": ["【搭配】withdraw money from… 从……取钱", "withdraw troops 撤军；withdraw a remark 收回说过的话"],
+          "w": "withdraw",
+          "rank": 5,
+          "ph": {
+            "uk": "wɪðˈdrɔː",
+            "us": "wɪðˈdrɑː"
+          },
+          "pos": "vt. / vi.",
+          "gloss": "取（款）；收回；撤回；撤退",
+          "points": [
+            "【搭配】withdraw money from… 从……取钱",
+            "withdraw troops 撤军；withdraw a remark 收回说过的话"
+          ],
           "memo": "with-(回) + draw(拉) → 往回拉 → 撤回、取款",
           "rel": "withdrawal n. 取款；撤退"
         },
         {
-          "w": "treaty", "rank": 4,
-          "ph": { "uk": "ˈtriːti", "us": "ˈtriːti" },
-          "pos": "n.", "gloss": "条约，协定（国家间）",
-          "points": ["【搭配】sign a treaty 签署条约；a peace treaty 和平条约", "enter into a treaty with… 与……缔结条约"],
+          "w": "treaty",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈtriːti",
+            "us": "ˈtriːti"
+          },
+          "pos": "n.",
+          "gloss": "条约，协定（国家间）",
+          "points": [
+            "【搭配】sign a treaty 签署条约；a peace treaty 和平条约",
+            "enter into a treaty with… 与……缔结条约"
+          ],
           "memo": "treat(对待) + -y → 国与国之间的\"相处约定\" → 条约",
           "rel": "辨：contract 合同；convention 公约"
         },
         {
-          "w": "reference", "rank": 5,
-          "ph": { "uk": "ˈrefrəns", "us": "ˈrefrəns" },
-          "pos": "n.", "gloss": "谈及，提及；参考；推荐信",
-          "points": ["【搭配】in/with reference to 关于……"],
+          "w": "reference",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈrefrəns",
+            "us": "ˈrefrəns"
+          },
+          "pos": "n.",
+          "gloss": "谈及，提及；参考；推荐信",
+          "points": [
+            "【搭配】in/with reference to 关于……"
+          ],
           "memo": "refer + -ence → 提及；参考",
           "rel": "源自笔记 refer 词条的衍生词"
         }
@@ -179,9 +709,24 @@
         {
           "title": "trait · trial · treaty",
           "words": [
-            { "w": "trait", "ph": "treɪt", "gloss": "n. 特征，特点", "tip": "中间 ai，单音节 /treɪt/" },
-            { "w": "trial", "ph": "ˈtraɪəl", "gloss": "n. 审判；试验", "tip": "中间 ia，双音节 /ˈtraɪəl/，on trial 在试验中/在受审" },
-            { "w": "treaty", "ph": "triːti", "gloss": "n. 条约", "tip": "treat + y，/ˈtriːti/，sign a treaty" }
+            {
+              "w": "trait",
+              "ph": "treɪt",
+              "gloss": "n. 特征，特点",
+              "tip": "中间 ai，单音节 /treɪt/"
+            },
+            {
+              "w": "trial",
+              "ph": "ˈtraɪəl",
+              "gloss": "n. 审判；试验",
+              "tip": "中间 ia，双音节 /ˈtraɪəl/，on trial 在试验中/在受审"
+            },
+            {
+              "w": "treaty",
+              "ph": "triːti",
+              "gloss": "n. 条约",
+              "tip": "treat + y，/ˈtriːti/，sign a treaty"
+            }
           ],
           "memo": "三词都以 tre- 开头，只差中间元音：ai→特征、ia→审判/试验、ea→条约。trial 是 try 的名词；treaty 是 treat 的名词。"
         }
