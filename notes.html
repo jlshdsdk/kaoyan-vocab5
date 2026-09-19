@@ -6,22 +6,35 @@
 <title>生词笔记 · 考研五书词汇</title>
 <link rel="stylesheet" href="assets/css/base.css?v=18">
 <style>
-/* 点开式日期选择列表：日期由上到下，最新在最上；每页 15 天，超出自动分页 */
-.note-day { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); margin: 10px 0; overflow: hidden; box-shadow: var(--shadow); }
-.note-day > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; padding: 14px 18px; user-select: none; flex-wrap: wrap; }
-.note-day > summary::-webkit-details-marker { display: none; }
-.note-day > summary:hover { background: var(--bg-inset); }
-.note-day .caret { color: var(--accent); font-size: 13px; transition: transform .15s; width: 14px; }
-.note-day[open] .caret { transform: rotate(90deg); }
-.note-day .dtitle { font-weight: 600; font-size: 16.5px; }
-.note-day .dcount { color: var(--accent); font-size: 14px; font-weight: 600; }
-.note-day .dpage { margin-left: auto; color: var(--ink-2); font-size: 13px; }
-.note-body { padding: 6px 16px 16px; border-top: 1px solid var(--line); }
-
-/* 日期分页器 */
-.pager { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 12px 0 4px; }
+/* 日期选择器：收起显示所选日期，点开是一列日期（每页 15 天），选哪天只显示哪天 */
+.datesel {
+  width: 100%; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 14px 18px; border: 1px solid var(--accent); border-radius: 12px;
+  background: var(--bg-card); color: var(--ink); cursor: pointer; font-size: 16.5px;
+  font-weight: 600; text-align: left; box-shadow: var(--shadow);
+}
+.datesel:hover { background: var(--bg-inset); }
+.datesel .caret { margin-left: auto; color: var(--accent); font-size: 13px; transition: transform .15s; }
+.datesel.on .caret { transform: rotate(90deg); }
+.datesel .selcount { color: var(--accent); font-size: 14px; font-weight: 600; }
+.datelist { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); margin: 10px 0; overflow: hidden; box-shadow: var(--shadow); }
+.drow { display: flex; align-items: center; gap: 10px; padding: 13px 18px; cursor: pointer; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.drow:last-child { border-bottom: 0; }
+.drow:hover { background: var(--bg-inset); }
+.drow.sel { background: var(--accent); color: var(--accent-ink); }
+.drow.sel .dcount, .drow.sel .dpage { color: var(--accent-ink); }
+.drow .dtitle { font-weight: 600; font-size: 15.5px; }
+.drow .dcount { color: var(--accent); font-size: 14px; font-weight: 600; }
+.drow .dpage { margin-left: auto; color: var(--ink-2); font-size: 13px; }
+.pager { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); }
 .pager .btn { padding: 6px 18px; font-size: 14px; }
 .pginfo { color: var(--ink-2); font-size: 14px; white-space: nowrap; }
+
+/* 所选日期的笔记 */
+.daycard { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); margin: 14px 0; padding: 6px 16px 16px; box-shadow: var(--shadow); }
+.dayhead { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; padding: 10px 2px 6px; border-bottom: 1px solid var(--line); }
+.dayhead h3 { margin: 0; }
+.dayhead .nmeta { color: var(--ink-2); font-size: 13.5px; }
 
 /* 词卡 */
 .note-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 10px; margin-top: 10px; }
@@ -61,10 +74,12 @@
       <h2 style="margin:0">📖 生词笔记</h2>
       <span id="noteSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
     </div>
-    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">点选日期只显示当天的笔记 · 点击 🔊 听英 / 美发音</p>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">点开下方日期选择当天笔记 · 点击 🔊 听英 / 美发音</p>
   </div>
 
-  <div id="noteDays"><p style="color:var(--ink-2)">加载中…</p></div>
+  <button class="datesel" id="dateSel" aria-expanded="false"></button>
+  <div class="datelist" id="dateList" hidden></div>
+  <div id="dayView"></div>
 </main>
 
 <script type="module">
@@ -83,7 +98,7 @@ const $ = id => document.getElementById(id);
 function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
 const WEEK = ['日','一','二','三','四','五','六'];
-const PAGE_SIZE = 15;              // 日期列表每页天数，超出自动分页
+const PAGE_SIZE = 15;              // 日期每页天数，超出自动分页
 
 function noteWordCard(w) {
   const ph = w.ph || {};
@@ -108,37 +123,55 @@ function noteGroupCard(g) {
   </div>`;
 }
 
-let days = [];                     // 全部日期（降序）
-const pg = { cur: 0, total: 1, openDate: null };
+let days = [];                     // 全部日期（降序，最新在前）
+const pg = { cur: 0, total: 1 };
+let selDate = null, listOpen = false;
 
-function dayRow(d) {
-  const words = d.words || [], groups = d.groups || [];
-  const dt = new Date(d.date + 'T00:00:00');
-  const wd = isNaN(dt) ? '' : ' 周' + WEEK[dt.getDay()];
-  const open = d.date === pg.openDate;
-  return `<details class="note-day" data-date="${esc(d.date)}"${open ? ' open' : ''}>
-    <summary>
-      <span class="caret">▶</span>
-      <span class="dtitle">📝 ${esc(d.date)}${wd}</span>
-      <span class="dcount">${words.length} 词</span>
-      <span class="dpage">${esc(d.label || '')}</span>
-    </summary>
-    <div class="note-body">
-      <div class="note-grid">${words.map(noteWordCard).join('')}</div>
-      ${groups.map(noteGroupCard).join('')}
-    </div>
-  </details>`;
+const wd = d => { const t = new Date(d + 'T00:00:00'); return isNaN(t) ? '' : ' 周' + WEEK[t.getDay()]; };
+
+function renderSel() {
+  const rec = days.find(d => d.date === selDate);
+  if (!rec) { $('dateSel').innerHTML = '📅 选择日期'; return; }
+  $('dateSel').innerHTML = `📅 ${esc(rec.date)}${wd(rec.date)} <span class="selcount">${(rec.words || []).length} 词</span> <span class="caret">${listOpen ? '▾' : '▸'}</span>`;
+  $('dateSel').classList.toggle('on', listOpen);
+  $('dateSel').setAttribute('aria-expanded', listOpen);
 }
 
 function renderList() {
   const start = pg.cur * PAGE_SIZE;
   const slice = days.slice(start, start + PAGE_SIZE);
-  const pagerHtml = pg.total > 1 ? `<div class="pager">
-    <button class="btn pgbtn" data-pg="${pg.cur - 1}" ${pg.cur === 0 ? 'disabled' : ''}>‹ 上一页</button>
-    <span class="pginfo">第 ${pg.cur + 1} / ${pg.total} 页</span>
-    <button class="btn pgbtn" data-pg="${pg.cur + 1}" ${pg.cur === pg.total - 1 ? 'disabled' : ''}>下一页 ›</button>
-  </div>` : '';
-  $('noteDays').innerHTML = slice.map(dayRow).join('') + pagerHtml;
+  const rows = slice.map(d => `<div class="drow${d.date === selDate ? ' sel' : ''}" data-date="${esc(d.date)}" role="button" tabindex="0">
+      <span class="dtitle">📝 ${esc(d.date)}${wd(d.date)}</span>
+      <span class="dcount">${(d.words || []).length} 词</span>
+      <span class="dpage">${esc(d.label || '')}</span>
+    </div>`).join('');
+  const pager = pg.total > 1 ? `<div class="pager">
+      <button class="btn pgbtn" data-pg="${pg.cur - 1}" ${pg.cur === 0 ? 'disabled' : ''}>‹ 上一页</button>
+      <span class="pginfo">第 ${pg.cur + 1} / ${pg.total} 页</span>
+      <button class="btn pgbtn" data-pg="${pg.cur + 1}" ${pg.cur === pg.total - 1 ? 'disabled' : ''}>下一页 ›</button>
+    </div>` : '';
+  $('dateList').innerHTML = rows + pager;
+}
+
+function renderDay() {
+  const rec = days.find(d => d.date === selDate);
+  if (!rec) { $('dayView').innerHTML = ''; return; }
+  const words = rec.words || [], groups = rec.groups || [];
+  $('dayView').innerHTML = `<section class="daycard">
+    <div class="dayhead">
+      <h3>📝 ${esc(rec.date)}${wd(rec.date)}</h3>
+      <span class="nmeta">${words.length} 词 · ${esc(rec.label || '')}</span>
+    </div>
+    <div class="note-grid">${words.map(noteWordCard).join('')}</div>
+    ${groups.map(noteGroupCard).join('')}
+  </section>`;
+  for (const w of words) prefetchRealAudio(w.w);
+}
+
+function setListOpen(v) {
+  listOpen = v;
+  $('dateList').hidden = !v;
+  renderSel();
 }
 
 async function load() {
@@ -147,46 +180,37 @@ async function load() {
   try { const r = await fetch(`data/notes.json?v=${v}`); if (r.ok) j = await r.json(); } catch (e) {}
   const raw = (j && Array.isArray(j.notes)) ? j.notes : [];
   if (!raw.length) {
-    $('noteDays').innerHTML = '<div class="card"><p style="color:var(--ink-2);margin:6px 0">暂无生词笔记</p></div>';
+    $('dateSel').hidden = true;
+    $('dayView').innerHTML = '<div class="card"><p style="color:var(--ink-2);margin:6px 0">暂无生词笔记</p></div>';
     return;
   }
   const total = raw.reduce((n, d) => n + (d.words || []).length, 0);
   $('noteSummary').textContent = `共 ${raw.length} 天 · ${total} 词`;
-  days = [...raw].sort((a, b) => String(b.date).localeCompare(String(a.date)));   // 最新在最上
+  days = [...raw].sort((a, b) => String(b.date).localeCompare(String(a.date)));   // 最新在前
   pg.total = Math.max(1, Math.ceil(days.length / PAGE_SIZE));
   pg.cur = 0;
-  pg.openDate = days[0].date;      // 最新一天默认展开
-  renderList();
-
-  // 预取默认展开日的真人音频
-  const first = days[0];
-  for (const w of ((first && first.words) || [])) prefetchRealAudio(w.w);
+  selDate = days[0].date;         // 默认选最新一天
+  renderSel(); renderList(); renderDay();
 }
 
-const box = $('noteDays');
+/* 交互 */
+$('dateSel').addEventListener('click', () => setListOpen(!listOpen));
 
-// 手风琴：展开某天时收起其他天（只显示所选那天），并预取当天真人音频
-box.addEventListener('toggle', e => {
-  const day = e.target;
-  if (!day.matches || !day.matches('details.note-day') || !day.open) return;
-  pg.openDate = day.dataset.date;
-  box.querySelectorAll('details.note-day[open]').forEach(d => { if (d !== day) d.open = false; });
-  const rec = days.find(x => x.date === day.dataset.date);
-  for (const w of ((rec && rec.words) || [])) prefetchRealAudio(w.w);
-}, true);   // toggle 不冒泡，用捕获
-
-// 日期分页：翻页重渲染；目标页含已选日期则保持展开，否则收起
-box.addEventListener('click', e => {
-  const btn = e.target.closest('.pgbtn');
-  if (!btn || btn.disabled) return;
-  const next = Number(btn.dataset.pg);
-  if (Number.isNaN(next) || next < 0 || next >= pg.total) return;
-  pg.cur = next;
-  const start = pg.cur * PAGE_SIZE;
-  if (!days.slice(start, start + PAGE_SIZE).some(d => d.date === pg.openDate)) pg.openDate = null;
-  renderList();
+$('dateList').addEventListener('click', e => {
+  const pgbtn = e.target.closest('.pgbtn');
+  if (pgbtn && !pgbtn.disabled) {
+    const next = Number(pgbtn.dataset.pg);
+    if (!Number.isNaN(next) && next >= 0 && next < pg.total) { pg.cur = next; renderList(); }
+    return;
+  }
+  const row = e.target.closest('.drow');
+  if (!row) return;
+  selDate = row.dataset.date;
+  renderSel(); renderList(); renderDay();
+  setListOpen(false);             // 选完日期收起列表，只显示所选那天
 });
 
+bindAudioButtons(document, pronounce);
 load();
 </script>
 </body>
