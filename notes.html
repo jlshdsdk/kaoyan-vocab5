@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生词笔记 · 考研五书词汇</title>
+<link rel="stylesheet" href="assets/css/base.css?v=18">
+<style>
+/* 日期小目录：吸顶锚点导航 */
+.date-nav {
+  position: sticky; top: 54px; z-index: 40;
+  display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+  padding: 10px 2px; margin: 14px 0 2px;
+  border-bottom: 1px dashed var(--line);
+  scroll-margin-top: 120px;
+}
+.date-chip {
+  padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--bg-card); color: var(--ink); text-decoration: none;
+  font-size: 14px; white-space: nowrap;
+}
+.date-chip:hover { border-color: var(--accent); color: var(--accent); }
+.date-chip.on { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+.date-chip small { opacity: .72; font-size: 12px; margin-left: 3px; }
+
+/* 日期分节 */
+.day-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.day-head h3 { margin: 0; }
+.day-head .nmeta { color: var(--ink-2); font-size: 14px; }
+.day-head .toc { margin-left: auto; font-size: 13px; color: var(--ink-2); }
+section.day { scroll-margin-top: 118px; }
+
+/* 词卡 */
+.note-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 10px; margin-top: 10px; }
+.nw { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--bg-inset); }
+.nw-top { display: flex; align-items: baseline; gap: 8px; }
+.nw-w { font-size: 19px; }
+.nw-rank { font-size: 12px; color: var(--warn); letter-spacing: 1px; margin-left: auto; white-space: nowrap; }
+.nw .phon-row { margin: 6px 0 4px; gap: 14px; }
+.acc { font-style: normal; font-size: 11px; color: var(--accent); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+.nw-gloss { font-size: 14.5px; margin: 4px 0 0; }
+.nw-gloss i { color: var(--ink-2); }
+.nw-pts { margin: 7px 0 0; padding: 0; list-style: none; font-size: 13.5px; color: var(--ink-2); }
+.nw-pts li { margin: 3px 0; }
+.nw-memo { margin-top: 7px; font-size: 13.5px; color: var(--warn); }
+.nw-rel { margin-top: 5px; font-size: 13px; color: var(--ink-2); }
+.ng { border: 1px dashed var(--accent); border-radius: 10px; padding: 10px 14px; margin-top: 10px; background: var(--bg-inset); }
+.ng-title { font-weight: 600; color: var(--accent); margin-bottom: 6px; }
+.ng-w { display: block; margin: 5px 0; font-size: 14.5px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="index.html">📚 五书词汇</a>
+  <a class="tab" href="index.html">今日</a>
+  <a class="tab" href="browse.html">词库</a>
+  <a class="tab" href="wordbook.html">生词本</a>
+  <a class="tab active" href="notes.html">生词笔记</a>
+  <a class="tab" href="stats.html">统计</a>
+  <a class="tab" href="settings.html">设置</a>
+  <span class="spacer"></span>
+  <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
+</nav>
+
+<main>
+  <div class="card">
+    <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+      <h2 style="margin:0">📖 生词笔记</h2>
+      <span id="noteSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
+    </div>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">每日手写生词笔记归档，按日期整理 · 点击 🔊 听英 / 美发音</p>
+  </div>
+
+  <nav class="date-nav" id="dateNav" aria-label="按日期浏览"></nav>
+  <div id="noteDays"><p style="color:var(--ink-2)">加载中…</p></div>
+</main>
+
+<script type="module">
+import { initTheme, setTheme, getTheme, icon, bindAudioButtons } from './assets/js/ui.js?v=17';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=17';
+
+initTheme(); initAudio();
+document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+document.getElementById('themeBtn').onclick = () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+};
+const $ = id => document.getElementById(id);
+
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+const WEEK = ['日','一','二','三','四','五','六'];
+
+function noteWordCard(w) {
+  const ph = w.ph || {};
+  return `<div class="nw">
+    <div class="nw-top"><b class="nw-w">${esc(w.w)}</b>${w.rank ? `<span class="nw-rank">${'★'.repeat(w.rank)}</span>` : ''}</div>
+    <div class="phon-row">
+      ${ph.uk ? `<span class="phon"><button class="btn-audio" data-acc="uk" data-w="${esc(w.w)}" aria-label="${esc(w.w)} 英音">${icon('uk')}</button><span class="ph-text">/${esc(ph.uk)}/</span><i class="acc">英</i></span>` : ''}
+      ${ph.us ? `<span class="phon"><button class="btn-audio" data-acc="us" data-w="${esc(w.w)}" aria-label="${esc(w.w)} 美音">${icon('us')}</button><span class="ph-text">/${esc(ph.us)}/</span><i class="acc">美</i></span>` : ''}
+    </div>
+    <div class="nw-gloss"><i>${esc(w.pos || '')}</i> ${esc(w.gloss || '')}</div>
+    ${(w.points && w.points.length) ? `<ul class="nw-pts">${w.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>` : ''}
+    ${w.memo ? `<div class="nw-memo">💡 ${esc(w.memo)}</div>` : ''}
+    ${w.rel ? `<div class="nw-rel">${esc(w.rel)}</div>` : ''}
+  </div>`;
+}
+
+function noteGroupCard(g) {
+  return `<div class="ng">
+    <div class="ng-title">⚡ 易混辨析 · ${esc(g.title)}</div>
+    ${(g.words || []).map(x => `<span class="ng-w"><b>${esc(x.w)}</b> <button class="btn-audio" data-acc="uk" data-w="${esc(x.w)}" aria-label="${esc(x.w)} 发音">${icon('uk')}</button> <span class="ph-text">/${esc(x.ph || '')}/</span> ${esc(x.gloss || '')}${x.tip ? ` — ${esc(x.tip)}` : ''}</span>`).join('')}
+    ${g.memo ? `<div class="nw-memo">💡 ${esc(g.memo)}</div>` : ''}
+  </div>`;
+}
+
+async function load() {
+  let j = null;
+  const v = new Date().toISOString().slice(0, 10).replace(/-/g, '');   // 日期版缓存击穿
+  try { const r = await fetch(`data/notes.json?v=${v}`); if (r.ok) j = await r.json(); } catch (e) {}
+  const days = (j && Array.isArray(j.notes)) ? j.notes : [];
+  if (!days.length) {
+    $('noteDays').innerHTML = '<div class="card"><p style="color:var(--ink-2);margin:6px 0">暂无生词笔记</p></div>';
+    $('dateNav').style.display = 'none';
+    return;
+  }
+  const total = days.reduce((n, d) => n + (d.words || []).length, 0);
+  $('noteSummary').textContent = `共 ${days.length} 天 · ${total} 词`;
+
+  // 小目录：日期 chips
+  $('dateNav').innerHTML = days.map(d => {
+    const mmdd = (d.date || '').slice(5).replace('-', '/');
+    return `<a class="date-chip" href="#d${esc(d.date)}" data-d="${esc(d.date)}">${mmdd}<small>${(d.words || []).length} 词</small></a>`;
+  }).join('');
+  $('dateNav').addEventListener('click', e => {
+    const chip = e.target.closest('.date-chip');
+    if (!chip) return;
+    document.querySelectorAll('.date-chip').forEach(c => c.classList.toggle('on', c === chip));
+  });
+
+  // 各日期分节（大目录正文）
+  $('noteDays').innerHTML = days.map(d => {
+    const words = d.words || [], groups = d.groups || [];
+    const dt = new Date(d.date + 'T00:00:00');
+    const wd = isNaN(dt) ? '' : ' 周' + WEEK[dt.getDay()];
+    return `<section class="card day" id="d${esc(d.date)}">
+      <div class="day-head">
+        <h3>📝 ${esc(d.date)}${wd}</h3>
+        <span class="nmeta">${words.length} 词 · ${esc(d.label || '')}</span>
+        <a class="toc" href="#dateNav">↑ 目录</a>
+      </div>
+      <div class="note-grid">${words.map(noteWordCard).join('')}</div>
+      ${groups.map(noteGroupCard).join('')}
+    </section>`;
+  }).join('');
+
+  bindAudioButtons($('noteDays'), pronounce);
+  for (const d of days) for (const w of (d.words || [])) prefetchRealAudio(w.w);
+  const first = document.querySelector('.date-chip');
+  if (first) first.classList.add('on');
+}
+
+load();
+</script>
+</body>
+</html>
