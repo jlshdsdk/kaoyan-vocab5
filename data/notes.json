@@ -2,6 +2,363 @@
   "v": 1,
   "notes": [
     {
+      "date": "2026-09-19",
+      "label": "手写生词笔记 · 第3页（共4页）",
+      "count": 21,
+      "words": [
+        {
+          "w": "retain",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈteɪn",
+            "us": "rɪˈteɪn"
+          },
+          "pos": "vt.",
+          "gloss": "保留；保持",
+          "points": [
+            "【笔记】同义四连：keep / preserve / hold / maintain",
+            "【搭配】retain control of… 保持对……的控制"
+          ],
+          "memo": "re-(回) + tain(拿住) → 拿回来不放 → 保留",
+          "rel": "retain → retention n. 保留"
+        },
+        {
+          "w": "procedure",
+          "rank": 5,
+          "ph": {
+            "uk": "prəˈsiːdʒə(r)",
+            "us": "prəˈsiːdʒər"
+          },
+          "pos": "n.",
+          "gloss": "程序；手续；步骤",
+          "points": [
+            "【辨析】proceed 的每一步就是 procedure → 程序、步骤"
+          ],
+          "memo": "pro-(向前) + ced(走) + -ure → 向前走的流程 → 程序",
+          "rel": "proceed vi. 继续进行（词形相近）"
+        },
+        {
+          "w": "demonstrate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈdemənstreɪt",
+            "us": "ˈdemənstreɪt"
+          },
+          "pos": "vt. / vi.",
+          "gloss": "证明；演示；示威",
+          "points": [
+            "【笔记】同义四连：prove / illustrate / display / show",
+            "【搭配】demonstrate against… 示威反对……"
+          ],
+          "memo": "de-(加强) + monstr(显示) + -ate → 摆出来给人看 → 演示、证明",
+          "rel": "demonstration n. 演示；示威游行"
+        },
+        {
+          "w": "pledge",
+          "rank": 5,
+          "ph": {
+            "uk": "pledʒ",
+            "us": "pledʒ"
+          },
+          "pos": "v. / n.",
+          "gloss": "承诺，保证；誓言",
+          "points": [
+            "【笔记】pledge to do 承诺做某事（笔迹似 plage，应为 pledge）",
+            "【辨析】同义 promise；pledge 更正式（ fulfil a pledge 履行承诺）"
+          ],
+          "memo": "比 promise 更正式的\"誓言\"；\"铺了纸\"写下诺言",
+          "rel": "近义：promise / guarantee"
+        },
+        {
+          "w": "urgent",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɜːdʒənt",
+            "us": "ˈɜːrdʒənt"
+          },
+          "pos": "adj.",
+          "gloss": "紧急的，急迫的",
+          "points": [
+            "【笔记】同义：pressing；名词 urgency（笔记写作 urgence，规范为 urgency）",
+            "【搭配】an urgent matter 紧急事项"
+          ],
+          "memo": "urg(驱赶) + -ent → 被催着办的 → 紧急的",
+          "rel": "urgency n. 紧急；urge vt. 催促"
+        },
+        {
+          "w": "instinct",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɪnstɪŋkt",
+            "us": "ˈɪnstɪŋkt"
+          },
+          "pos": "n.",
+          "gloss": "本能；直觉；天性",
+          "points": [
+            "【笔记】by instinct 出于本能",
+            "have an instinct for… 有……的天赋"
+          ],
+          "memo": "in-(内) + stinct(刺) → 内在的驱动 → 本能",
+          "rel": "instinctive adj. 本能的"
+        },
+        {
+          "w": "entitle",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈtaɪtl",
+            "us": "ɪnˈtaɪtl"
+          },
+          "pos": "vt.",
+          "gloss": "使享有权利；给……题名",
+          "points": [
+            "【笔记】be entitled to (do) sth. 有权享有/有资格做……"
+          ],
+          "memo": "en-(使) + title(名分) → 使有名分 → 使有权利",
+          "rel": "entitlement n. 权利；反义：deprive vt. 剥夺"
+        },
+        {
+          "w": "integrate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɪntɪɡreɪt",
+            "us": "ˈɪntɪɡreɪt"
+          },
+          "pos": "v.",
+          "gloss": "（使）合并；（使）融入",
+          "points": [
+            "【笔记】integrate…into… 使……并入；同义：incorporate"
+          ],
+          "memo": "integr(完整) + -ate → 使成整体 → 融合",
+          "rel": "integration n. 融合；integral adj. 不可或缺的"
+        },
+        {
+          "w": "approval",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈpruːvl",
+            "us": "əˈpruːvl"
+          },
+          "pos": "n.",
+          "gloss": "批准；赞成",
+          "points": [
+            "【笔记】with the approval of… 经……批准"
+          ],
+          "memo": "approve(批准) + -al → 批准",
+          "rel": "approve v. 批准；反义：disapproval n. 反对"
+        },
+        {
+          "w": "proceed",
+          "rank": 5,
+          "ph": {
+            "uk": "prəˈsiːd",
+            "us": "prəˈsiːd"
+          },
+          "pos": "vi.",
+          "gloss": "继续进行；接着做",
+          "points": [
+            "【搭配】proceed to do / proceed with sth. 继续做某事"
+          ],
+          "memo": "pro-(向前) + ceed(走) → 往前走 → 继续进行",
+          "rel": "procedure n. 程序（词形相近）"
+        },
+        {
+          "w": "manipulate",
+          "rank": 5,
+          "ph": {
+            "uk": "məˈnɪpjuleɪt",
+            "us": "məˈnɪpjuleɪt"
+          },
+          "pos": "vt.",
+          "gloss": "操纵，控制；（熟练）操作",
+          "points": [
+            "【搭配】manipulate public opinion 操纵舆论；manipulate the stock market 操纵股市"
+          ],
+          "memo": "man(手) + ipul(拉) + -ate → 用手拉线摆布木偶 → 操纵",
+          "rel": "manipulation n. 操纵；manipulative adj. 操控的"
+        },
+        {
+          "w": "assurance",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈʃʊərəns",
+            "us": "əˈʃʊrəns"
+          },
+          "pos": "n.",
+          "gloss": "保证，担保；（英式）人寿保险；自信",
+          "points": [
+            "【笔记】life assurance 人寿保险（英式）",
+            "【搭配】give sb. an assurance 向某人保证",
+            "【易混】↔ insurance（见下方辨析卡）"
+          ],
+          "memo": "assure(保证) + -ance → 保证；英国人管寿险叫 assurance",
+          "rel": "assure vt. 保证；近义：insurance"
+        },
+        {
+          "w": "permit",
+          "rank": 5,
+          "ph": {
+            "uk": "pəˈmɪt",
+            "us": "pəˈmɪt"
+          },
+          "pos": "vt. / n.",
+          "gloss": "允许；许可证（n.）",
+          "points": [
+            "【笔记】反义：prohibit vt. 禁止；名词 permission n. 准许",
+            "【搭配】permit sb. to do sth. 允许某人做……",
+            "【读音】动词 /pəˈmɪt/，名词 /ˈpɜːmɪt/（重音前移）"
+          ],
+          "memo": "per-(通过) + mit(送) → 让其通过 → 允许",
+          "rel": "permission n. 许可；反义：prohibit"
+        },
+        {
+          "w": "negotiate",
+          "rank": 5,
+          "ph": {
+            "uk": "nɪˈɡəʊʃieɪt",
+            "us": "nɪˈɡoʊʃieɪt"
+          },
+          "pos": "v.",
+          "gloss": "谈判；协商",
+          "points": [
+            "【笔记】negotiate a price 协商价格",
+            "negotiate with sb. over sth. 与某人协商某事"
+          ],
+          "memo": "neg(不) + oti(闲暇) + -ate → 放下闲暇谈正事 → 谈判",
+          "rel": "negotiation n. 谈判"
+        },
+        {
+          "w": "flourish",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈflʌrɪʃ",
+            "us": "ˈflɜːrɪʃ"
+          },
+          "pos": "vi.",
+          "gloss": "繁荣，兴旺；茁壮成长",
+          "points": [
+            "【笔记】同义三连：thrive / prosper / bloom；反义：decline",
+            "【搭配】a flourishing economy 繁荣的经济"
+          ],
+          "memo": "flour(花) + -ish → 花开得好 → 繁荣",
+          "rel": "反义：decline vi. 下降，衰退"
+        },
+        {
+          "w": "invest",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈvest",
+            "us": "ɪnˈvest"
+          },
+          "pos": "v.",
+          "gloss": "投资；投入",
+          "points": [
+            "【搭配】invest in… 投资于……；invest time in doing 花时间做……"
+          ],
+          "memo": "in-(进) + vest(投入) → 投进去 → 投资",
+          "rel": "investment n. 投资；investor n. 投资者"
+        },
+        {
+          "w": "entitlement",
+          "rank": 2,
+          "ph": {
+            "uk": "ɪnˈtaɪtlmənt",
+            "us": "ɪnˈtaɪtlmənt"
+          },
+          "pos": "n.",
+          "gloss": "权利；资格；政府津贴",
+          "points": [
+            "【笔记】entitle 的名词"
+          ],
+          "memo": "entitle + -ment → 应得的\"名分\" → 权利",
+          "rel": "entitle vt. 使有权利"
+        },
+        {
+          "w": "permission",
+          "rank": 5,
+          "ph": {
+            "uk": "pəˈmɪʃn",
+            "us": "pəˈmɪʃn"
+          },
+          "pos": "n.[U]",
+          "gloss": "准许，许可",
+          "points": [
+            "【笔记】permit 的名词",
+            "【搭配】without permission 未经许可；ask for permission 请求许可"
+          ],
+          "memo": "permit + -sion → 许可",
+          "rel": "permit vt. 允许"
+        },
+        {
+          "w": "insurance",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈʃʊərəns",
+            "us": "ɪnˈʃʊrəns"
+          },
+          "pos": "n.",
+          "gloss": "保险；保险费",
+          "points": [
+            "【笔记】assurance 的近义词；泛指各类保险",
+            "【搭配】health insurance 健康保险；insurance company 保险公司"
+          ],
+          "memo": "insure(投保) + -ance → 保险",
+          "rel": "insure vt. 投保；↔ assurance（见辨析卡）"
+        },
+        {
+          "w": "prohibit",
+          "rank": 4,
+          "ph": {
+            "uk": "prəˈhɪbɪt",
+            "us": "prəˈhɪbɪt"
+          },
+          "pos": "vt.",
+          "gloss": "禁止；（法令）阻止",
+          "points": [
+            "【笔记】permit 的反义词",
+            "【搭配】prohibit sb. from doing sth. 禁止某人做……"
+          ],
+          "memo": "pro-(在前) + hibit(拿住) → 拿住不让过 → 禁止",
+          "rel": "prohibition n. 禁令；反义：permit / allow"
+        },
+        {
+          "w": "decline",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈklaɪn",
+            "us": "dɪˈklaɪn"
+          },
+          "pos": "vi. / vt. / n.",
+          "gloss": "下降，衰退；婉拒",
+          "points": [
+            "【笔记】flourish 的反义词",
+            "【一词多义】\"下降\"与\"婉拒\"两个高频义都要记：decline to do sth. 拒绝做……"
+          ],
+          "memo": "de-(向下) + cline(倾) → 向下倾 → 下降；低头 → 婉拒",
+          "rel": "反义：flourish；近义（拒绝）：refuse / reject"
+        }
+      ],
+      "groups": [
+        {
+          "title": "assurance · insurance",
+          "words": [
+            {
+              "w": "assurance",
+              "ph": "əˈʃʊərəns",
+              "gloss": "n. 保证；（英式）人寿保险",
+              "tip": "assure vt. 保证 → 名词\"保证\"；英式寿险惯用 life assurance"
+            },
+            {
+              "w": "insurance",
+              "ph": "ɪnˈʃʊərəns",
+              "gloss": "n. 保险；保险费",
+              "tip": "insure vt. 投保 → 名词\"保险\"；各类保险通用，美式寿险也是 life insurance"
+            }
+          ],
+          "memo": "同根 assure/insure 分家：assurance 重\"保证\"（英式寿险），insurance 重\"保险\"。考研完形考过 give him our assurance that…（保证）。"
+        }
+      ]
+    },
+    {
       "date": "2026-09-18",
       "label": "手写生词笔记 · 第2页（共4页）",
       "count": 22,
