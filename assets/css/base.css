@@ -49,6 +49,7 @@ a { color: var(--accent); }
   position: sticky; top: 0; z-index: 50;
   display: flex; gap: 4px; align-items: center;
   padding: 8px 16px;
+  overflow-x: auto; scrollbar-width: none;   /* tab 多时窄屏横向滑动 */
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
