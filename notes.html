@@ -6,7 +6,7 @@
 <title>生词笔记 · 考研五书词汇</title>
 <link rel="stylesheet" href="assets/css/base.css?v=18">
 <style>
-/* 点开式日期列表（手风琴）：日期由上到下，最新在最上，点哪天展开哪天 */
+/* 点开式日期选择列表：日期由上到下，最新在最上；每页 15 天，超出自动分页 */
 .note-day { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); margin: 10px 0; overflow: hidden; box-shadow: var(--shadow); }
 .note-day > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; padding: 14px 18px; user-select: none; flex-wrap: wrap; }
 .note-day > summary::-webkit-details-marker { display: none; }
@@ -17,6 +17,11 @@
 .note-day .dcount { color: var(--accent); font-size: 14px; font-weight: 600; }
 .note-day .dpage { margin-left: auto; color: var(--ink-2); font-size: 13px; }
 .note-body { padding: 6px 16px 16px; border-top: 1px solid var(--line); }
+
+/* 日期分页器 */
+.pager { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 12px 0 4px; }
+.pager .btn { padding: 6px 18px; font-size: 14px; }
+.pginfo { color: var(--ink-2); font-size: 14px; white-space: nowrap; }
 
 /* 词卡 */
 .note-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 10px; margin-top: 10px; }
@@ -56,7 +61,7 @@
       <h2 style="margin:0">📖 生词笔记</h2>
       <span id="noteSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
     </div>
-    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">点开日期查看当天的笔记 · 点击 🔊 听英 / 美发音</p>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">点选日期只显示当天的笔记 · 点击 🔊 听英 / 美发音</p>
   </div>
 
   <div id="noteDays"><p style="color:var(--ink-2)">加载中…</p></div>
@@ -78,6 +83,7 @@ const $ = id => document.getElementById(id);
 function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
 const WEEK = ['日','一','二','三','四','五','六'];
+const PAGE_SIZE = 15;              // 日期列表每页天数，超出自动分页
 
 function noteWordCard(w) {
   const ph = w.ph || {};
@@ -102,54 +108,84 @@ function noteGroupCard(g) {
   </div>`;
 }
 
+let days = [];                     // 全部日期（降序）
+const pg = { cur: 0, total: 1, openDate: null };
+
+function dayRow(d) {
+  const words = d.words || [], groups = d.groups || [];
+  const dt = new Date(d.date + 'T00:00:00');
+  const wd = isNaN(dt) ? '' : ' 周' + WEEK[dt.getDay()];
+  const open = d.date === pg.openDate;
+  return `<details class="note-day" data-date="${esc(d.date)}"${open ? ' open' : ''}>
+    <summary>
+      <span class="caret">▶</span>
+      <span class="dtitle">📝 ${esc(d.date)}${wd}</span>
+      <span class="dcount">${words.length} 词</span>
+      <span class="dpage">${esc(d.label || '')}</span>
+    </summary>
+    <div class="note-body">
+      <div class="note-grid">${words.map(noteWordCard).join('')}</div>
+      ${groups.map(noteGroupCard).join('')}
+    </div>
+  </details>`;
+}
+
+function renderList() {
+  const start = pg.cur * PAGE_SIZE;
+  const slice = days.slice(start, start + PAGE_SIZE);
+  const pagerHtml = pg.total > 1 ? `<div class="pager">
+    <button class="btn pgbtn" data-pg="${pg.cur - 1}" ${pg.cur === 0 ? 'disabled' : ''}>‹ 上一页</button>
+    <span class="pginfo">第 ${pg.cur + 1} / ${pg.total} 页</span>
+    <button class="btn pgbtn" data-pg="${pg.cur + 1}" ${pg.cur === pg.total - 1 ? 'disabled' : ''}>下一页 ›</button>
+  </div>` : '';
+  $('noteDays').innerHTML = slice.map(dayRow).join('') + pagerHtml;
+}
+
 async function load() {
   let j = null;
   const v = new Date().toISOString().slice(0, 10).replace(/-/g, '');   // 日期版缓存击穿
   try { const r = await fetch(`data/notes.json?v=${v}`); if (r.ok) j = await r.json(); } catch (e) {}
-  const days = (j && Array.isArray(j.notes)) ? j.notes : [];
-  if (!days.length) {
+  const raw = (j && Array.isArray(j.notes)) ? j.notes : [];
+  if (!raw.length) {
     $('noteDays').innerHTML = '<div class="card"><p style="color:var(--ink-2);margin:6px 0">暂无生词笔记</p></div>';
     return;
   }
-  const total = days.reduce((n, d) => n + (d.words || []).length, 0);
-  $('noteSummary').textContent = `共 ${days.length} 天 · ${total} 词`;
+  const total = raw.reduce((n, d) => n + (d.words || []).length, 0);
+  $('noteSummary').textContent = `共 ${raw.length} 天 · ${total} 词`;
+  days = [...raw].sort((a, b) => String(b.date).localeCompare(String(a.date)));   // 最新在最上
+  pg.total = Math.max(1, Math.ceil(days.length / PAGE_SIZE));
+  pg.cur = 0;
+  pg.openDate = days[0].date;      // 最新一天默认展开
+  renderList();
 
-  // 日期由上到下：最新在最上；点哪天展开哪天（手风琴，同时只开一天，最新默认展开）
-  const sorted = [...days].sort((a, b) => String(b.date).localeCompare(String(a.date)));
-  $('noteDays').innerHTML = sorted.map((d, i) => {
-    const words = d.words || [], groups = d.groups || [];
-    const dt = new Date(d.date + 'T00:00:00');
-    const wd = isNaN(dt) ? '' : ' 周' + WEEK[dt.getDay()];
-    return `<details class="note-day" data-date="${esc(d.date)}"${i === 0 ? ' open' : ''}>
-      <summary>
-        <span class="caret">▶</span>
-        <span class="dtitle">📝 ${esc(d.date)}${wd}</span>
-        <span class="dcount">${words.length} 词</span>
-        <span class="dpage">${esc(d.label || '')}</span>
-      </summary>
-      <div class="note-body">
-        <div class="note-grid">${words.map(noteWordCard).join('')}</div>
-        ${groups.map(noteGroupCard).join('')}
-      </div>
-    </details>`;
-  }).join('');
-
-  bindAudioButtons($('noteDays'), pronounce);
-
-  // 手风琴：展开某天时收起其他天，并预取当天真人音频
-  const box = $('noteDays');
-  box.addEventListener('toggle', e => {
-    const day = e.target;
-    if (!day.matches || !day.matches('details.note-day') || !day.open) return;
-    box.querySelectorAll('details.note-day[open]').forEach(d => { if (d !== day) d.open = false; });
-    const rec = days.find(x => x.date === day.dataset.date);
-    for (const w of ((rec && rec.words) || [])) prefetchRealAudio(w.w);
-  }, true);   // toggle 不冒泡，用捕获
-
-  // 默认展开的最新一天也预取
-  const firstRec = sorted[0];
-  for (const w of ((firstRec && firstRec.words) || [])) prefetchRealAudio(w.w);
+  // 预取默认展开日的真人音频
+  const first = days[0];
+  for (const w of ((first && first.words) || [])) prefetchRealAudio(w.w);
 }
+
+const box = $('noteDays');
+
+// 手风琴：展开某天时收起其他天（只显示所选那天），并预取当天真人音频
+box.addEventListener('toggle', e => {
+  const day = e.target;
+  if (!day.matches || !day.matches('details.note-day') || !day.open) return;
+  pg.openDate = day.dataset.date;
+  box.querySelectorAll('details.note-day[open]').forEach(d => { if (d !== day) d.open = false; });
+  const rec = days.find(x => x.date === day.dataset.date);
+  for (const w of ((rec && rec.words) || [])) prefetchRealAudio(w.w);
+}, true);   // toggle 不冒泡，用捕获
+
+// 日期分页：翻页重渲染；目标页含已选日期则保持展开，否则收起
+box.addEventListener('click', e => {
+  const btn = e.target.closest('.pgbtn');
+  if (!btn || btn.disabled) return;
+  const next = Number(btn.dataset.pg);
+  if (Number.isNaN(next) || next < 0 || next >= pg.total) return;
+  pg.cur = next;
+  const start = pg.cur * PAGE_SIZE;
+  if (!days.slice(start, start + PAGE_SIZE).some(d => d.date === pg.openDate)) pg.openDate = null;
+  renderList();
+});
 
 load();
 </script>
