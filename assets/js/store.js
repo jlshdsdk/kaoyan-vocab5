@@ -1,5 +1,5 @@
 /* store.js — 学习状态持久化（localStorage v5vocab.state.v1）+ 每日任务记账 + 导入导出 */
-import { newRec } from './srs.js';
+import { newRec } from './srs.js?v=18';
 
 const KEY = 'v5vocab.state.v1';
 const DEFAULTS = {
@@ -55,7 +55,11 @@ function flush() {
   clearTimeout(saveTimer);
   saveTimer = 0;
   if (!dirty) return;
-  try { localStorage.setItem(KEY, JSON.stringify(load())); }
+  try {
+    localStorage.setItem(KEY, JSON.stringify(load()));
+    // 通知云同步模块（sync.js 监听；未登录/未启用时无人接收，零开销）
+    document.dispatchEvent(new CustomEvent('v5:flush'));
+  }
   catch (e) { console.error('state save failed (quota?)', e); }
 }
 
@@ -196,4 +200,5 @@ export function wipe() {
   saveTimer = 0;
   localStorage.removeItem(KEY);
   state = null;
+  document.dispatchEvent(new CustomEvent('v5:wipe'));
 }

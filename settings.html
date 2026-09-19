@@ -25,7 +25,7 @@ select, input[type=number] { padding:8px 12px; border-radius:8px; border:1px sol
   <a class="tab" href="wordbook.html">生词本</a>
   <a class="tab" href="stats.html">统计</a>
   <a class="tab active" href="settings.html">设置</a>
-  <span class="spacer"></span>
+  <span class="spacer"></span><span id="authSlot"></span>
   <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
 </nav>
 
@@ -79,10 +79,15 @@ select, input[type=number] { padding:8px 12px; border-radius:8px; border:1px sol
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, toast } from './assets/js/ui.js?v=17';
-import { initAudio } from './assets/js/audio.js?v=17';
-import * as store from './assets/js/store.js?v=17';
+import { initAuthNav } from './assets/js/auth-nav.js?v=18';
+import { startSync, wipeCloud } from './assets/js/sync.js?v=18';
 
+
+import { initTheme, setTheme, getTheme, toast } from './assets/js/ui.js?v=18';
+import { initAudio } from './assets/js/audio.js?v=18';
+import * as store from './assets/js/store.js?v=18';
+
+initAuthNav(); startSync();
 initTheme(); initAudio();
 const $ = id => document.getElementById(id);
 $('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
@@ -140,10 +145,12 @@ $('importFile').onchange = async () => {
   }
 };
 
-$('wipeBtn').onclick = () => {
+$('wipeBtn').onclick = async () => {
   if (!confirm('确定清空全部学习数据？此操作不可恢复（建议先导出）。')) return;
   if (!confirm('再次确认：真的要清空吗？')) return;
   store.wipe();
+  toast('已清空，正在删除云端记录…');
+  await wipeCloud();          // 已登录时同步清空云端，防止进度复活
   toast('已清空，页面即将刷新');
   setTimeout(() => location.reload(), 900);
 };

@@ -45,7 +45,7 @@ addEventListener('unhandledrejection', function(e){
   <a class="tab" href="wordbook.html">生词本</a>
   <a class="tab" href="stats.html">统计</a>
   <a class="tab" href="settings.html">设置</a>
-  <span class="spacer"></span>
+  <span class="spacer"></span><span id="authSlot"></span>
   <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
 </nav>
 
@@ -70,11 +70,16 @@ addEventListener('unhandledrejection', function(e){
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=17';
-import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=17';
-import * as data from './assets/js/data.js?v=17';
-import * as store from './assets/js/store.js?v=17';
+import { initAuthNav } from './assets/js/auth-nav.js?v=18';
+import { startSync } from './assets/js/sync.js?v=18';
 
+
+import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=18';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=18';
+import * as data from './assets/js/data.js?v=18';
+import * as store from './assets/js/store.js?v=18';
+
+initAuthNav(); startSync();
 initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
 document.getElementById('themeBtn').onclick = () => {

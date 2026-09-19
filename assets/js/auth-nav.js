@@ -1,6 +1,6 @@
 /* auth-nav.js — 各页顶栏右侧的账号入口（登录/用户名/管理面板） */
-import { esc } from './ui.js';
-import { cloudEnabled, getUser, getProfile, userLabel } from './auth.js';
+import { esc } from './ui.js?v=18';
+import { cloudEnabled, getUser, getProfile, userLabel } from './auth.js?v=18';
 
 export async function initAuthNav() {
   const slot = document.getElementById('authSlot');

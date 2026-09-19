@@ -49,8 +49,12 @@
     <div class="kv"><b class="k">邮箱</b><span id="acMail"></span></div>
     <div class="kv"><b class="k">身份</b><span id="acRole"></span></div>
     <div class="kv"><b class="k">注册时间</b><span id="acSince"></span></div>
-    <div class="kv" style="border-bottom:0"><b class="k">进度同步</b>
-      <span style="color:var(--good)">已开启 ✓ 登录任何设备都会自动恢复/合并进度</span></div>
+    <div class="kv"><b class="k">进度同步</b><span id="acSync">检查中…</span></div>
+    <div class="kv" style="border-bottom:0"><b class="k">进度管理</b>
+      <span style="display:inline-flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" id="ovUpBtn" style="font-size:14px;padding:7px 11px">⬆️ 以本机进度覆盖云端</button>
+        <button class="btn" id="ovDownBtn" style="font-size:14px;padding:7px 11px">⬇️ 以云端进度覆盖本机</button>
+      </span></div>
     <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
       <a class="btn primary" href="index.html">去学习</a>
       <a class="btn" id="adminLink" href="admin.html" hidden>👑 账号管理</a>
@@ -98,12 +102,14 @@
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme, toast } from './assets/js/ui.js?v=9';
-import { initAuthNav } from './assets/js/auth-nav.js?v=9';
-import { cloudEnabled, getUser, getProfile, userLabel, signUp, signIn, signOut, client } from './assets/js/auth.js?v=9';
+import { initTheme, setTheme, getTheme, toast } from './assets/js/ui.js?v=18';
+import { initAuthNav } from './assets/js/auth-nav.js?v=18';
+import { cloudEnabled, getUser, getProfile, userLabel, signUp, signIn, signOut, client } from './assets/js/auth.js?v=18';
+import { startSync, cloudInfo, pushLocalOverwrite, pullCloudOverwrite } from './assets/js/sync.js?v=18';
 
 initTheme();
 initAuthNav();
+startSync();
 const $ = id => document.getElementById(id);
 $('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
 $('themeBtn').onclick = () => {
@@ -126,6 +132,21 @@ function fillAccount(u, p) {
   $('adminLink').hidden = !p?.is_admin;
 }
 
+async function refreshSyncInfo() {
+  const el = $('acSync');
+  try {
+    const info = await cloudInfo();
+    if (!info) {
+      el.innerHTML = '<span style="color:var(--warn)">云端暂无记录</span> — 学习后本机进度会自动上传';
+    } else {
+      const t = new Date(info.updatedAt).toLocaleString('zh-CN', { hour12: false });
+      el.innerHTML = `<span style="color:var(--good)">已开启 ✓</span> 云端 ${info.count} 条，更新于 ${t}`;
+    }
+  } catch (e) {
+    el.textContent = '状态获取失败（网络？）';
+  }
+}
+
 (async function init() {
   if (!cloudEnabled) { show('none'); return; }
   const u = await getUser();
@@ -133,6 +154,7 @@ function fillAccount(u, p) {
   const p = await getProfile();
   fillAccount(u, p);
   show('account');
+  refreshSyncInfo();
 })();
 
 /* 登录/注册页签切换 */
@@ -191,6 +213,30 @@ $('logoutBtn').onclick = async () => {
   await signOut();
   toast('已退出登录');
   setTimeout(() => location.reload(), 600);
+};
+
+$('ovUpBtn').onclick = async () => {
+  if (!confirm('用本机当前进度整份覆盖云端？云端现有记录将被替换（本机不受影响）。')) return;
+  $('ovUpBtn').disabled = true;
+  try {
+    await pushLocalOverwrite();
+    toast('已用本机进度覆盖云端 ✓');
+    refreshSyncInfo();
+  } catch (e) { toast('失败：' + (e.message || e)); }
+  $('ovUpBtn').disabled = false;
+};
+
+$('ovDownBtn').onclick = async () => {
+  if (!confirm('用云端进度整份覆盖本机？本机当前进度将被替换（建议先在「设置 → 导出」备份）。')) return;
+  $('ovDownBtn').disabled = true;
+  try {
+    await pullCloudOverwrite();
+    toast('已用云端进度覆盖本机，即将刷新');
+    setTimeout(() => location.reload(), 900);
+  } catch (e) {
+    toast('失败：' + (e.message || e));
+    $('ovDownBtn').disabled = false;
+  }
 };
 </script>
 </body>

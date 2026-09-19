@@ -1,5 +1,5 @@
 /* ui.js — 共享 UI 工具：toast、主题、图标、词条渲染卡片 */
-import { BOOK_NAMES } from './data.js';
+import { BOOK_NAMES } from './data.js?v=18';
 
 export function toast(msg, ms = 2600) {
   let t = document.getElementById('v5toast');
