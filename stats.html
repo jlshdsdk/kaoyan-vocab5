@@ -6,7 +6,7 @@
 <title>统计 · 考研五书词汇</title>
 <link rel="stylesheet" href="assets/css/base.css?v=17">
 <style>
-.stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; margin:16px 0; }
+.stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin:16px 0; }
 .stat-grid .card { margin:0; padding:14px; text-align:center; }
 .stat-grid b { font-size:26px; display:block; }
 .stat-grid span { color:var(--ink-2); font-size:13px; }
@@ -19,11 +19,34 @@
 
 /* 词库总览：横向条形行（星级 | 条 | 数量），无绝对定位不叠字 */
 .rrow { display:flex; align-items:center; gap:10px; margin:9px 0; }
-.rrow .rlabel { width:100px; text-align:right; color:var(--warn); font-size:14px; letter-spacing:1px; white-space:nowrap; }
+.rrow .rlabel { width:86px; text-align:right; color:var(--warn); font-size:14px; letter-spacing:1px; white-space:nowrap; }
 .rrow .rtrack { flex:1; height:16px; background:var(--bg-inset); border-radius:999px; overflow:hidden; }
 .rrow .rtrack i { display:block; height:100%; border-radius:999px; }
-.rrow .rcount { width:96px; color:var(--ink-2); font-size:14px; white-space:nowrap; }
-.rrow .rcount b { color:var(--good); font-weight:700; }
+.rrow .rcount { width:64px; color:var(--ink-2); font-size:14px; white-space:nowrap; }
+
+/* 生词笔记 */
+.note-day { margin-top:8px; }
+.note-day summary { cursor:pointer; font-weight:600; padding:8px 2px; display:flex; align-items:baseline; gap:8px; list-style:none; }
+.note-day summary::-webkit-details-marker { display:none; }
+.note-day summary::before { content:'▸'; color:var(--accent); }
+.note-day[open] summary::before { content:'▾'; }
+.note-day summary .nmeta { color:var(--ink-2); font-weight:400; font-size:13px; }
+.note-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(255px,1fr)); gap:10px; margin-top:8px; }
+.nw { border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:var(--bg-inset); }
+.nw-top { display:flex; align-items:baseline; gap:8px; }
+.nw-w { font-size:19px; }
+.nw-rank { font-size:12px; color:var(--warn); letter-spacing:1px; margin-left:auto; white-space:nowrap; }
+.nw .phon-row { margin:6px 0 4px; gap:14px; }
+.acc { font-style:normal; font-size:11px; color:var(--accent); border:1px solid var(--line); border-radius:4px; padding:0 4px; }
+.nw-gloss { font-size:14.5px; margin:4px 0 0; }
+.nw-gloss i { color:var(--ink-2); }
+.nw-pts { margin:7px 0 0; padding:0; list-style:none; font-size:13.5px; color:var(--ink-2); }
+.nw-pts li { margin:3px 0; }
+.nw-memo { margin-top:7px; font-size:13.5px; color:var(--warn); }
+.nw-rel { margin-top:5px; font-size:13px; color:var(--ink-2); }
+.ng { border:1px dashed var(--accent); border-radius:10px; padding:10px 14px; margin-top:10px; background:var(--bg-inset); }
+.ng-title { font-weight:600; color:var(--accent); margin-bottom:6px; }
+.ng-w { display:block; margin:5px 0; font-size:14.5px; line-height:1.6; }
 </style>
 </head>
 <body>
@@ -34,7 +57,7 @@
   <a class="tab" href="wordbook.html">生词本</a>
   <a class="tab active" href="stats.html">统计</a>
   <a class="tab" href="settings.html">设置</a>
-  <span class="spacer"></span><span id="authSlot"></span>
+  <span class="spacer"></span>
   <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
 </nav>
 
@@ -45,6 +68,13 @@
     <div class="card"><b id="stGrad">0</b><span>已毕业</span></div>
     <div class="card"><b id="stFam">0</b><span>已标熟悉</span></div>
     <div class="card"><b id="stAcc">0%</b><span>复习正确率</span></div>
+    <div class="card"><b id="stNotes">—</b><span>生词笔记词数</span></div>
+  </div>
+
+  <div class="card" id="noteCard" style="display:none">
+    <h3 style="margin:0 0 2px">📖 生词笔记</h3>
+    <p style="color:var(--ink-2);font-size:13px;margin:0 0 6px">每日手写生词笔记归档 · 点击 🔊 按钮听英 / 美发音</p>
+    <div id="noteBox"></div>
   </div>
 
   <div class="card">
@@ -57,21 +87,16 @@
     <h3 style="margin:0 0 8px">词库总览 · 重要性分布</h3>
     <p id="rankDist" style="color:var(--ink-2);margin:0 0 12px;font-size:15px"></p>
     <div id="rankRows"></div>
-    <p style="color:var(--ink-2);font-size:13px;margin:12px 0 0">★ 数量 = 该词被几本书同时收录，越多越重要；学习顺序、筛选都以它为优先级依据。<br>行末 <b style="color:var(--good)">已掌握</b>/总数：仅统计完全毕业词，生词库中正在学习的词不计入。</p>
+    <p style="color:var(--ink-2);font-size:13px;margin:12px 0 0">★ 数量 = 该词被几本书同时收录，越多越重要；学习顺序、筛选都以它为优先级依据。</p>
   </div>
 </main>
 
 <script type="module">
-import { initAuthNav } from './assets/js/auth-nav.js?v=18';
-import { startSync } from './assets/js/sync.js?v=18';
+import { initTheme, setTheme, getTheme, icon, bindAudioButtons } from './assets/js/ui.js?v=17';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=17';
+import * as store from './assets/js/store.js?v=17';
+import * as data from './assets/js/data.js?v=17';
 
-
-import { initTheme, setTheme, getTheme } from './assets/js/ui.js?v=18';
-import { initAudio } from './assets/js/audio.js?v=18';
-import * as store from './assets/js/store.js?v=18';
-import * as data from './assets/js/data.js?v=18';
-
-initAuthNav(); startSync();
 initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
 document.getElementById('themeBtn').onclick = () => {
@@ -112,14 +137,8 @@ function render() {
   if (idx) {
     const dist = [0, 0, 0, 0, 0, 0];
     for (const [, m] of Object.entries(idx.map)) dist[m[1]]++;
-    // 各星级已掌握数：只统计完全毕业词（生词库/熟悉词不算）
-    const mast = [0, 0, 0, 0, 0, 0];
-    for (const w of Object.keys(s.graduated)) {
-      const m = idx.map[w];
-      if (m) mast[m[1]]++;
-    }
     const colors = { 5: '#d84315', 4: '#e64a19', 3: '#b26a00', 2: '#3f51b5', 1: '#6b6558' };
-    const names = { 5: '五书', 4: '四书', 3: '三书', 2: '两书', 1: '一书' };
+    const names = { 5: '五书齐收', 4: '四书', 3: '三书', 2: '两书', 1: '一书' };
     $('rankDist').textContent = `词库共 ${idx.count} 词（五书并集）`;
     const mx = Math.max(...dist.slice(1));
     let rh = '';
@@ -127,14 +146,63 @@ function render() {
       rh += `<div class="rrow">
         <span class="rlabel">${'★'.repeat(k)}<small style="color:var(--ink-2)"> ${names[k]}</small></span>
         <div class="rtrack"><i style="width:${Math.round(dist[k] / mx * 100)}%;background:${colors[k]}"></i></div>
-        <span class="rcount" title="已掌握 ${mast[k]} / 共 ${dist[k]} 词"><b>${mast[k]}</b>/${dist[k]} 词</span>
+        <span class="rcount">${dist[k]} 词</span>
       </div>`;
     }
     $('rankRows').innerHTML = rh;
   }
 }
 
-(async function init() { await data.loadIndex(); render(); })();
+/* ---- 生词笔记（data/notes.json，由 word-note 流程每日追加） ---- */
+const NOTES_V = 1;
+const WEEK = ['日','一','二','三','四','五','六'];
+
+function noteWordCard(w) {
+  const ph = w.ph || {};
+  return `<div class="nw">
+    <div class="nw-top"><b class="nw-w">${esc(w.w)}</b>${w.rank ? `<span class="nw-rank">${'★'.repeat(w.rank)}</span>` : ''}</div>
+    <div class="phon-row">
+      ${ph.uk ? `<span class="phon"><button class="btn-audio" data-acc="uk" data-w="${esc(w.w)}" aria-label="${esc(w.w)} 英音">${icon('uk')}</button><span class="ph-text">/${esc(ph.uk)}/</span><i class="acc">英</i></span>` : ''}
+      ${ph.us ? `<span class="phon"><button class="btn-audio" data-acc="us" data-w="${esc(w.w)}" aria-label="${esc(w.w)} 美音">${icon('us')}</button><span class="ph-text">/${esc(ph.us)}/</span><i class="acc">美</i></span>` : ''}
+    </div>
+    <div class="nw-gloss"><i>${esc(w.pos || '')}</i> ${esc(w.gloss || '')}</div>
+    ${(w.points && w.points.length) ? `<ul class="nw-pts">${w.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>` : ''}
+    ${w.memo ? `<div class="nw-memo">💡 ${esc(w.memo)}</div>` : ''}
+    ${w.rel ? `<div class="nw-rel">${esc(w.rel)}</div>` : ''}
+  </div>`;
+}
+
+function noteGroupCard(g) {
+  return `<div class="ng">
+    <div class="ng-title">⚡ 易混辨析 · ${esc(g.title)}</div>
+    ${(g.words || []).map(x => `<span class="ng-w"><b>${esc(x.w)}</b> <button class="btn-audio" data-acc="uk" data-w="${esc(x.w)}" aria-label="${esc(x.w)} 发音">${icon('uk')}</button> <span class="ph-text">/${esc(x.ph || '')}/</span> ${esc(x.gloss || '')}${x.tip ? ` — ${esc(x.tip)}` : ''}</span>`).join('')}
+    ${g.memo ? `<div class="nw-memo">💡 ${esc(g.memo)}</div>` : ''}
+  </div>`;
+}
+
+async function loadNotes() {
+  let j = null;
+  try { const r = await fetch(`data/notes.json?v=${NOTES_V}`); if (r.ok) j = await r.json(); } catch (e) {}
+  const card = document.getElementById('noteCard'), box = document.getElementById('noteBox');
+  if (!j || !Array.isArray(j.notes) || !j.notes.length) return;   // 无数据/本地 file:// 整卡隐藏
+  const total = j.notes.reduce((n, d) => n + (d.count || (d.words || []).length), 0);
+  $('stNotes').textContent = total;
+  card.style.display = '';
+  box.innerHTML = j.notes.map((d, i) => {
+    const words = d.words || [], groups = d.groups || [];
+    const dt = new Date(d.date + 'T00:00:00');
+    const wd = isNaN(dt) ? '' : ' 周' + WEEK[dt.getDay()];
+    return `<details class="note-day"${i === 0 ? ' open' : ''}>
+      <summary>📝 ${esc(d.date)}${wd} · ${words.length} 词 <span class="nmeta">${esc(d.label || '')}</span></summary>
+      <div class="note-grid">${words.map(noteWordCard).join('')}</div>
+      ${groups.map(noteGroupCard).join('')}
+    </details>`;
+  }).join('');
+  bindAudioButtons(box, pronounce);
+  for (const d of j.notes) for (const w of (d.words || [])) prefetchRealAudio(w.w);
+}
+
+(async function init() { await Promise.all([data.loadIndex(), loadNotes()]); render(); })();
 </script>
 </body>
 </html>
