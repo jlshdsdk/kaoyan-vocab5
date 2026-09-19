@@ -1,0 +1,191 @@
+{
+  "v": 1,
+  "notes": [
+    {
+      "date": "2026-09-16",
+      "label": "手写生词笔记",
+      "count": 21,
+      "words": [
+        {
+          "w": "extensive", "rank": 5,
+          "ph": { "uk": "ɪkˈstensɪv", "us": "ɪkˈstensɪv" },
+          "pos": "adj.", "gloss": "广泛的；大量的",
+          "points": ["【搭配】make extensive use of… 大量使用……"],
+          "memo": "ex-(向外) + tens(伸) + -ive → 不断向外延伸 → 广阔的、大量的",
+          "rel": "extensively ad. 广泛地；extension n. 延伸；extent n. 程度"
+        },
+        {
+          "w": "intense", "rank": 5,
+          "ph": { "uk": "ɪnˈtens", "us": "ɪnˈtens" },
+          "pos": "adj.", "gloss": "强烈的；激烈的；紧张的",
+          "points": ["【真题用法】spark intense opposition 引发强烈反对"],
+          "memo": "in-(进入) + tens(伸) → 拉到极限 → 强烈的",
+          "rel": "intensity n. 强度；intensive adj. 密集的（辨：intense 强烈的 / intensive 集中强化的）"
+        },
+        {
+          "w": "conclude", "rank": 5,
+          "ph": { "uk": "kənˈkluːd", "us": "kənˈkluːd" },
+          "pos": "v.", "gloss": "得出结论；结束；缔结（协议）",
+          "points": ["【笔记】conclude from… 从……得出结论", "to conclude 最后，总之（结束语）"],
+          "memo": "con-(共同) + clud(关闭) → 一起关上 → 告一段落 → 下结论",
+          "rel": "conclusion n. 结论；in conclusion 最后"
+        },
+        {
+          "w": "despair", "rank": 5,
+          "ph": { "uk": "dɪˈspeə(r)", "us": "dɪˈsper" },
+          "pos": "vi. / n.[U]", "gloss": "绝望",
+          "points": ["【搭配】despair of… 对……感到绝望", "in despair 处于绝望之中"],
+          "memo": "des-(分离) + pair(一对) → 把一对拆散 → 绝望",
+          "rel": "despairing adj. 绝望的"
+        },
+        {
+          "w": "resemble", "rank": 5,
+          "ph": { "uk": "rɪˈzembl", "us": "rɪˈzembl" },
+          "pos": "vt.", "gloss": "与……相似，像",
+          "points": ["【笔记】resemble sb./sth. in… 在……方面像……"],
+          "memo": "re-(一再) + semble(=same 像) → 一再相像 → 类似；无进行时（状态动词）",
+          "rel": "resemblance n. 相似，相似之处"
+        },
+        {
+          "w": "trait", "rank": 5,
+          "ph": { "uk": "treɪt", "us": "treɪt" },
+          "pos": "n.", "gloss": "特征，特点，特性",
+          "points": ["【易混】↔ trial 审判/试验、treaty 条约（见下方辨析卡）"],
+          "memo": "personality traits 个性特征",
+          "rel": "近义：characteristic n. 特征；feature n. 特点"
+        },
+        {
+          "w": "alternative", "rank": 5,
+          "ph": { "uk": "ɔːlˈtɜːnətɪv", "us": "ɔːlˈtɜːrnətɪv" },
+          "pos": "n.[C] / adj.", "gloss": "可供选择的事物；可替代的",
+          "points": ["【搭配】have no alternative but to do… 别无选择只能……", "an alternative to… ……的替代品；alternative energy 替代能源"],
+          "memo": "altern-(交替) + -ative → 两者交替可选 → 替代（品）",
+          "rel": "alternate v. 交替；alternatively ad. 或者"
+        },
+        {
+          "w": "contrary", "rank": 5,
+          "ph": { "uk": "ˈkɒntrəri", "us": "ˈkɑːntreri" },
+          "pos": "adj. / n.[U]", "gloss": "相反的；相反",
+          "points": ["【笔记】contrary to… 与……相反", "on the contrary 恰恰相反；quite the contrary 恰恰相反"],
+          "memo": "contra-(相反) + -ry → 相反的",
+          "rel": "contrast n./v. 对比，对照"
+        },
+        {
+          "w": "warrant", "rank": 5,
+          "ph": { "uk": "ˈwɒrənt", "us": "ˈwɔːrənt" },
+          "pos": "n.[C] / vt.", "gloss": "授权令，许可证；使有必要，保证",
+          "points": ["【笔记】n. 授权，批准", "【搭配】obtain a warrant to do… 获得……的授权令"],
+          "memo": "近义：justify vt. 证明……正当",
+          "rel": "warranty n. 保修单"
+        },
+        {
+          "w": "refer", "rank": 5,
+          "ph": { "uk": "rɪˈfɜː(r)", "us": "rɪˈfɝː" },
+          "pos": "v.", "gloss": "提到，谈及；参考，查阅；指的是",
+          "points": ["【笔记】refer to 指的是；参考；涉及", "refer to…as… 把……称作……", "【衍生】reference n. 谈及；参考"],
+          "memo": "re-(回) + fer(带) → 带回原处 → 引用、提及",
+          "rel": "reference n. 参考，谈及；referral n. 转送"
+        },
+        {
+          "w": "trial", "rank": 5,
+          "ph": { "uk": "ˈtraɪəl", "us": "ˈtraɪəl" },
+          "pos": "n.", "gloss": "审判；试验，试用；选拔赛",
+          "points": ["【笔记】on trial 在试验中/在受审", "【搭配】await trial 等候审理"],
+          "memo": "try 的名词形式 → 试过才知道 → 试验；（法律）审理",
+          "rel": "同义：test n. 试验"
+        },
+        {
+          "w": "elevation", "rank": 5,
+          "ph": { "uk": "ˌelɪˈveɪʃn", "us": "ˌeləˈveɪʃn" },
+          "pos": "n.", "gloss": "海拔，高度；提升，晋级",
+          "points": ["【一词多义】本义\"升高\" → 高度/海拔（具体）+ 提拔/晋升（抽象）"],
+          "memo": "e-(出) + lev(升) + -ation → 升起来的高度 → 海拔；提拔",
+          "rel": "elevate vt. 提升；elevator n. 电梯（美）"
+        },
+        {
+          "w": "descendant", "rank": 5,
+          "ph": { "uk": "dɪˈsendənt", "us": "dɪˈsendənt" },
+          "pos": "n.", "gloss": "后代，后裔",
+          "points": ["【反义】ancestor n. 祖先"],
+          "memo": "de-(向下) + scend(爬) → 往下传的人 → 后代",
+          "rel": "descend v. 下降；源自（be descended from）"
+        },
+        {
+          "w": "imply", "rank": 5,
+          "ph": { "uk": "ɪmˈplaɪ", "us": "ɪmˈplaɪ" },
+          "pos": "vt.", "gloss": "暗示；含有……的意思",
+          "points": ["【经典辨析】说者 imply（暗示）↔ 听者 infer（推断）"],
+          "memo": "im-(进入) + ply(折) → 折在里面不说破 → 暗示",
+          "rel": "implication n. 含义，暗示"
+        },
+        {
+          "w": "resent", "rank": 5,
+          "ph": { "uk": "rɪˈzent", "us": "rɪˈzent" },
+          "pos": "vt.", "gloss": "怨恨，愤恨",
+          "points": ["【笔记】resent doing sth. 怨恨做某事（接动名词，不接不定式）"],
+          "memo": "re-(反) + sent(感觉) → 感觉总对着干 → 怨恨",
+          "rel": "resentment n. 怨恨"
+        },
+        {
+          "w": "discriminate", "rank": 5,
+          "ph": { "uk": "dɪˈskrɪmɪneɪt", "us": "dɪˈskrɪmɪneɪt" },
+          "pos": "v.", "gloss": "区别，辨别；歧视",
+          "points": ["【笔记】discriminate between A and B 区别 A 和 B", "discriminate against… 歧视……（笔记笔误 aganist 应为 against）"],
+          "memo": "dis-(分开) + crimin(分辨) + -ate → 分开挑出来 → 区别对待 → 歧视",
+          "rel": "discrimination n. 歧视"
+        },
+        {
+          "w": "identity", "rank": 5,
+          "ph": { "uk": "aɪˈdentəti", "us": "aɪˈdentəti" },
+          "pos": "n.", "gloss": "身份；特性；同一性",
+          "points": ["【搭配】identity card 身份证；national identity 民族认同"],
+          "memo": "ident(相同) + -ity → 与本人相符 → 身份",
+          "rel": "identify v. 鉴定，确认；identical adj. 完全相同的"
+        },
+        {
+          "w": "hostile", "rank": 5,
+          "ph": { "uk": "ˈhɒstaɪl", "us": "ˈhɑːstl" },
+          "pos": "adj.", "gloss": "敌对的，怀有敌意的",
+          "points": ["【笔记】be hostile to/towards… 对……怀有敌意"],
+          "memo": "反义：friendly；host(主人)+ile → 翻脸不认主 → 敌对的",
+          "rel": "hostility n. 敌意，对抗"
+        },
+        {
+          "w": "withdraw", "rank": 5,
+          "ph": { "uk": "wɪðˈdrɔː", "us": "wɪðˈdrɑː" },
+          "pos": "vt. / vi.", "gloss": "取（款）；收回；撤回；撤退",
+          "points": ["【搭配】withdraw money from… 从……取钱", "withdraw troops 撤军；withdraw a remark 收回说过的话"],
+          "memo": "with-(回) + draw(拉) → 往回拉 → 撤回、取款",
+          "rel": "withdrawal n. 取款；撤退"
+        },
+        {
+          "w": "treaty", "rank": 4,
+          "ph": { "uk": "ˈtriːti", "us": "ˈtriːti" },
+          "pos": "n.", "gloss": "条约，协定（国家间）",
+          "points": ["【搭配】sign a treaty 签署条约；a peace treaty 和平条约", "enter into a treaty with… 与……缔结条约"],
+          "memo": "treat(对待) + -y → 国与国之间的\"相处约定\" → 条约",
+          "rel": "辨：contract 合同；convention 公约"
+        },
+        {
+          "w": "reference", "rank": 5,
+          "ph": { "uk": "ˈrefrəns", "us": "ˈrefrəns" },
+          "pos": "n.", "gloss": "谈及，提及；参考；推荐信",
+          "points": ["【搭配】in/with reference to 关于……"],
+          "memo": "refer + -ence → 提及；参考",
+          "rel": "源自笔记 refer 词条的衍生词"
+        }
+      ],
+      "groups": [
+        {
+          "title": "trait · trial · treaty",
+          "words": [
+            { "w": "trait", "ph": "treɪt", "gloss": "n. 特征，特点", "tip": "中间 ai，单音节 /treɪt/" },
+            { "w": "trial", "ph": "ˈtraɪəl", "gloss": "n. 审判；试验", "tip": "中间 ia，双音节 /ˈtraɪəl/，on trial 在试验中/在受审" },
+            { "w": "treaty", "ph": "triːti", "gloss": "n. 条约", "tip": "treat + y，/ˈtriːti/，sign a treaty" }
+          ],
+          "memo": "三词都以 tre- 开头，只差中间元音：ai→特征、ia→审判/试验、ea→条约。trial 是 try 的名词；treaty 是 treat 的名词。"
+        }
+      ]
+    }
+  ]
+}
