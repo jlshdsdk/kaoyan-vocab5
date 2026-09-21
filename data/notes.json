@@ -2,6 +2,30 @@
   "v": 1,
   "notes": [
     {
+      "date": "2026-09-21",
+      "label": "生词速记",
+      "count": 1,
+      "words": [
+        {
+          "w": "exert",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪɡˈzɜːt",
+            "us": "ɪɡˈzɜːrt"
+          },
+          "pos": "vt.",
+          "gloss": "施加（压力、影响）；运用（权力）；努力",
+          "points": [
+            "【搭配】exert pressure / influence on… 对……施加压力／影响",
+            "exert oneself 竭尽全力"
+          ],
+          "memo": "ex-(出) + ert(力量) → 把力量用出去 → 施加",
+          "rel": "exertion n. 努力，费力；近义：apply vt. 施加"
+        }
+      ],
+      "groups": []
+    },
+    {
       "date": "2026-09-19",
       "label": "手写生词笔记 · 第3页（共4页）",
       "count": 21,
