@@ -67,8 +67,9 @@ addEventListener('unhandledrejection', function(e){
   <section id="paneReview">
     <div class="card" id="reviewCard">
       <div id="reviewBody"><p style="color:var(--ink-2)">加载中…</p></div>
-      <div id="reviewActions">
-        <button class="btn primary" id="flipBtn2" style="margin-top:14px">翻面 <span class="kbd">空格</span></button>
+      <div id="reviewActions" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px">
+        <button class="btn primary" id="flipBtn2">翻面 <span class="kbd">空格</span></button>
+        <button class="btn" id="noteBtn" title="把当前复习的词记入今天的生词笔记">📝 记入今日笔记 <span class="kbd">N</span></button>
         <div class="rate-btns" id="rateBtns" hidden>
           <button class="btn bad" data-q="0">不认识(0) <span class="kbd">1</span></button>
           <button class="btn" data-q="2">模糊(2) <span class="kbd">2</span></button>
@@ -190,9 +191,25 @@ function rate(q) {
 $('flipBtn2').onclick = flip2;
 document.querySelectorAll('#rateBtns [data-q]').forEach(b => b.onclick = () => rate(+b.dataset.q));
 
+/* 记入今日生词笔记（localStorage v5vocab.notes.today.v1，notes.html 读取并合并展示） */
+const NOTE_TODAY_KEY = 'v5vocab.notes.today.v1';
+function noteToday() {
+  if (!curW) return;
+  let j = null;
+  try { j = JSON.parse(localStorage.getItem(NOTE_TODAY_KEY) || 'null'); } catch (e) {}
+  const today = store.todayKey();
+  if (!j || j.date !== today) j = { date: today, words: [] };
+  if (j.words.includes(curW)) { toast(`「${curW}」已在今日生词笔记中`); return; }
+  j.words.push(curW);
+  localStorage.setItem(NOTE_TODAY_KEY, JSON.stringify(j));
+  toast(`「${curW}」已记入今日生词笔记 📝`);
+}
+$('noteBtn').onclick = noteToday;
+
 addEventListener('keydown', e => {
   if (e.repeat || pane !== 'review') return;
   if (e.code === 'Space') { e.preventDefault(); flip2(); }
+  else if (e.key === 'n' || e.key === 'N') noteToday();
   else if (flipped && ['1','2','3','4'].includes(e.key)) rate([0,2,4,5][+e.key-1]);
 });
 
