@@ -19,10 +19,11 @@
 
 /* 词库总览：横向条形行（星级 | 条 | 数量），无绝对定位不叠字 */
 .rrow { display:flex; align-items:center; gap:10px; margin:9px 0; }
-.rrow .rlabel { width:86px; text-align:right; color:var(--warn); font-size:14px; letter-spacing:1px; white-space:nowrap; }
+.rrow .rlabel { width:100px; text-align:right; color:var(--warn); font-size:14px; letter-spacing:1px; white-space:nowrap; }
 .rrow .rtrack { flex:1; height:16px; background:var(--bg-inset); border-radius:999px; overflow:hidden; }
 .rrow .rtrack i { display:block; height:100%; border-radius:999px; }
-.rrow .rcount { width:64px; color:var(--ink-2); font-size:14px; white-space:nowrap; }
+.rrow .rcount { width:96px; color:var(--ink-2); font-size:14px; white-space:nowrap; }
+.rrow .rcount b { color:var(--good); font-weight:700; }
 </style>
 </head>
 <body>
@@ -34,7 +35,7 @@
   <a class="tab" href="notes.html">生词笔记</a>
   <a class="tab active" href="stats.html">统计</a>
   <a class="tab" href="settings.html">设置</a>
-  <span class="spacer"></span>
+  <span class="spacer"></span><span id="authSlot"></span>
   <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
 </nav>
 
@@ -57,16 +58,21 @@
     <h3 style="margin:0 0 8px">词库总览 · 重要性分布</h3>
     <p id="rankDist" style="color:var(--ink-2);margin:0 0 12px;font-size:15px"></p>
     <div id="rankRows"></div>
-    <p style="color:var(--ink-2);font-size:13px;margin:12px 0 0">★ 数量 = 该词被几本书同时收录，越多越重要；学习顺序、筛选都以它为优先级依据。</p>
+    <p style="color:var(--ink-2);font-size:13px;margin:12px 0 0">★ 数量 = 该词被几本书同时收录，越多越重要；学习顺序、筛选都以它为优先级依据。<br>行末 <b style="color:var(--good)">已掌握</b>/总数：仅统计完全毕业词，生词库中正在学习的词不计入。</p>
   </div>
 </main>
 
 <script type="module">
-import { initTheme, setTheme, getTheme } from './assets/js/ui.js?v=17';
-import { initAudio } from './assets/js/audio.js?v=17';
-import * as store from './assets/js/store.js?v=17';
-import * as data from './assets/js/data.js?v=17';
+import { initAuthNav } from './assets/js/auth-nav.js?v=18';
+import { startSync } from './assets/js/sync.js?v=18';
 
+
+import { initTheme, setTheme, getTheme } from './assets/js/ui.js?v=18';
+import { initAudio } from './assets/js/audio.js?v=18';
+import * as store from './assets/js/store.js?v=18';
+import * as data from './assets/js/data.js?v=18';
+
+initAuthNav(); startSync();
 initTheme(); initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
 document.getElementById('themeBtn').onclick = () => {
@@ -107,8 +113,14 @@ function render() {
   if (idx) {
     const dist = [0, 0, 0, 0, 0, 0];
     for (const [, m] of Object.entries(idx.map)) dist[m[1]]++;
+    // 各星级已掌握数：只统计完全毕业词（生词库/熟悉词不算）
+    const mast = [0, 0, 0, 0, 0, 0];
+    for (const w of Object.keys(s.graduated)) {
+      const m = idx.map[w];
+      if (m) mast[m[1]]++;
+    }
     const colors = { 5: '#d84315', 4: '#e64a19', 3: '#b26a00', 2: '#3f51b5', 1: '#6b6558' };
-    const names = { 5: '五书齐收', 4: '四书', 3: '三书', 2: '两书', 1: '一书' };
+    const names = { 5: '五书', 4: '四书', 3: '三书', 2: '两书', 1: '一书' };
     $('rankDist').textContent = `词库共 ${idx.count} 词（五书并集）`;
     const mx = Math.max(...dist.slice(1));
     let rh = '';
@@ -116,7 +128,7 @@ function render() {
       rh += `<div class="rrow">
         <span class="rlabel">${'★'.repeat(k)}<small style="color:var(--ink-2)"> ${names[k]}</small></span>
         <div class="rtrack"><i style="width:${Math.round(dist[k] / mx * 100)}%;background:${colors[k]}"></i></div>
-        <span class="rcount">${dist[k]} 词</span>
+        <span class="rcount" title="已掌握 ${mast[k]} / 共 ${dist[k]} 词"><b>${mast[k]}</b>/${dist[k]} 词</span>
       </div>`;
     }
     $('rankRows').innerHTML = rh;
