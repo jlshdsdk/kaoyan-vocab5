@@ -1,0 +1,75 @@
+{
+  "v": 1,
+  "syn": [
+    {
+      "title": "retain · keep · preserve · hold · maintain",
+      "memo": "retain 最正式，强调\"保留不放\"（保留控制权/信息）；keep 最通用；preserve 重\"防损坏、维持原状\"（保护环境/保鲜）；hold 重\"握住、容纳、举行\"；maintain 重\"通过持续努力维系\"（保养机器/维持关系）。考研完形最爱 retain / maintain 的正式语域。",
+      "words": [
+        {
+          "w": "retain", "rank": 5, "ph": { "uk": "rɪˈteɪn", "us": "rɪˈteɪn" },
+          "pos": "vt.", "gloss": "保留；保持；留住",
+          "usage": "正式用语，强调\"继续持有\"不失去，宾语常为 control / information / position",
+          "phrases": ["retain control of… 保持对……的控制", "retain information 记住信息"],
+          "ex": [{ "en": "She retained her position as chairman despite the challenge.", "zh": "尽管受到挑战，她仍保住了主席之位。" }]
+        },
+        {
+          "w": "keep", "rank": 5, "ph": { "uk": "kiːp", "us": "kiːp" },
+          "pos": "v.", "gloss": "保持；保存；继续",
+          "usage": "最通用的\"保持\"，口语书面皆宜，搭配最广",
+          "phrases": ["keep calm 保持冷静", "keep a secret 保守秘密"],
+          "ex": [{ "en": "Keep the receipt in case you want to return it.", "zh": "保存好收据，以防你想退货。" }]
+        },
+        {
+          "w": "preserve", "rank": 5, "ph": { "uk": "prɪˈzɜːv", "us": "prɪˈzɜːrv" },
+          "pos": "vt.", "gloss": "保护；保存；维持……的原状",
+          "usage": "强调\"防止损坏、变质\"，对象常为环境/文物/传统/食物",
+          "phrases": ["preserve the environment 保护环境", "preserve traditional culture 保护传统文化"],
+          "ex": [{ "en": "We must preserve our cultural heritage for future generations.", "zh": "我们必须为子孙后代保护好文化遗产。" }]
+        },
+        {
+          "w": "hold", "rank": 5, "ph": { "uk": "həʊld", "us": "hoʊld" },
+          "pos": "vt.", "gloss": "握住；持有；容纳；举行",
+          "usage": "重\"占据/盛纳\"的具体感：hold a meeting 举行会议、hold the record 保持纪录",
+          "phrases": ["hold a meeting 举行会议", "hold the world record 保持世界纪录"],
+          "ex": [{ "en": "The new hall can hold over 500 people.", "zh": "新大厅能容纳五百多人。" }]
+        },
+        {
+          "w": "maintain", "rank": 5, "ph": { "uk": "meɪnˈteɪn", "us": "meɪnˈteɪn" },
+          "pos": "vt.", "gloss": "维持；保养；检修；主张",
+          "usage": "强调\"付出努力使持续运转\"；maintain that… 还表\"坚持主张\"",
+          "phrases": ["maintain friendly relations 保持友好关系", "maintain that… 主张/坚称……"],
+          "ex": [{ "en": "The two countries have maintained friendly relations for decades.", "zh": "两国数十年来一直保持着友好关系。" }]
+        }
+      ]
+    }
+  ],
+  "form": [
+    {
+      "title": "trait · trial · treaty",
+      "memo": "中间元音定词义：ai→特征（单音节 /treɪt/）；ia→审判/试验（/ˈtraɪəl/，try 的名词）；ea→条约（/ˈtriːti/，treat 的名词）。三个词都是考研高频，拼写只差一两个字母。",
+      "words": [
+        {
+          "w": "trait", "rank": 5, "ph": { "uk": "treɪt", "us": "treɪt" },
+          "pos": "n.[C]", "gloss": "特征，特点，特性",
+          "usage": "多指人的性格特征；形容词搭配 personality / character traits",
+          "phrases": ["personality traits 个性特征", "a family trait 家族特征"],
+          "ex": [{ "en": "Generosity is her most admirable trait.", "zh": "慷慨是她最令人钦佩的品质。" }]
+        },
+        {
+          "w": "trial", "rank": 5, "ph": { "uk": "ˈtraɪəl", "us": "ˈtraɪəl" },
+          "pos": "n.", "gloss": "审判；试验，试用；选拔赛",
+          "usage": "try 的名词形式；法律语境\"审理\"，科研语境\"试验\"",
+          "phrases": ["on trial 在受审；在试验中", "clinical trials 临床试验"],
+          "ex": [{ "en": "The new drug is undergoing clinical trials.", "zh": "这种新药正在进行临床试验。" }]
+        },
+        {
+          "w": "treaty", "rank": 4, "ph": { "uk": "ˈtriːti", "us": "ˈtriːti" },
+          "pos": "n.[C]", "gloss": "条约，协定（国家间）",
+          "usage": "treat 的名词；正式的国家间书面协定",
+          "phrases": ["sign a treaty 签署条约", "a peace treaty 和平条约"],
+          "ex": [{ "en": "The two nations finally signed a peace treaty.", "zh": "两国最终签署了和平条约。" }]
+        }
+      ]
+    }
+  ]
+}
