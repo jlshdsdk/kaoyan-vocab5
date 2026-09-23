@@ -466,6 +466,53 @@
   ],
   "form": [
     {
+      "title": "nevertheless · otherwise",
+      "memo": "两个长副词都是\"复合拼接\"造出来的：nevertheless = never+the+less（否定叠加→\"尽管如此仍然\"，表转折让步）；otherwise = other+wise（\"以别的方式\"→ 否则/在其他方面，表相反条件）。逻辑方向完全不同：nevertheless 是\"前面说了让步，后面坚持原观点\"；otherwise 是\"如果不这样，就会……\"（虚拟后果，常引导倒装 Otherwise would the cost be...）。完形填空高频：判断句间逻辑就靠这类衔接词。",
+      "words": [
+        {
+          "w": "nevertheless",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌnevəðəˈles",
+            "us": "ˌnevərðəˈles"
+          },
+          "pos": "adv.",
+          "gloss": "然而，尽管如此；仍然",
+          "usage": "never+the+less：让步后转折——\"虽然如此，但依然……\"；语气强于 however",
+          "phrases": [
+            "nevertheless = nonetheless 然而，不过（二者可互换）"
+          ],
+          "ex": [
+            {
+              "en": "The task was difficult; nevertheless, she finished it on time.",
+              "zh": "任务很难；尽管如此，她还是按时完成了。"
+            }
+          ]
+        },
+        {
+          "w": "otherwise",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈʌðəwaɪz",
+            "us": "ˈʌðərwaɪz"
+          },
+          "pos": "adv. / conj.",
+          "gloss": "否则；在其他方面；以别的方式",
+          "usage": "other+wise：\"以别的方式\"→ 引出相反后果（否则……）；还表\"在其他方面\"",
+          "phrases": [
+            "or otherwise 或其他情况",
+            "otherwise healthy 其他方面健康的"
+          ],
+          "ex": [
+            {
+              "en": "Leave now; otherwise, you will miss the last train.",
+              "zh": "现在就走；否则你要错过末班车了。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "diffuse · difficult",
       "memo": "都以 diffi-/dif- 开头、双音节感相似，但构词完全不同：diffuse = dif-(分开)+fus(流)→\"向四处流\"=扩散、传播（气体扩散、谣言散布），形容词\"弥漫的、冗长的\"；difficult = dif-(不)+fic(做)→\"不好做\"=困难的。拼写分界：-fus- 流动 vs -ficul- 困难。读音差异大：diffuse /dɪˈfjuːz/ 双音节，difficult /ˈdɪfɪkəlt/ 三音节，重音在前。",
       "words": [
