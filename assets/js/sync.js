@@ -74,7 +74,16 @@ async function initialSync() {
 
   if (localCount === 0) {
     try {
-      store.importJSON(JSON.stringify(cloud), { whole: true });  // 内部 save 会安排一次回推，幂等无害
+      // 只记过笔记、没加过生词的设备：云端整份恢复前，把本机 notes 按日期并集并入云端数据，
+      // 否则整份替换会吞掉本机笔记（countAll 已计入 notes 日期数，此处为双保险）
+      const localNotes = store.getState().notes || {};
+      const merged = { ...cloud, notes: { ...((cloud && cloud.notes) || {}) } };
+      for (const [k, arr] of Object.entries(localNotes)) {
+        const cur = merged.notes[k] ? [...merged.notes[k]] : [];
+        for (const w of (arr || [])) if (!cur.includes(w)) cur.push(w);
+        merged.notes[k] = cur;
+      }
+      store.importJSON(JSON.stringify(merged), { whole: true });  // 内部 save 会安排一次回推，幂等无害
       toast('☁️ 已从云端恢复学习进度');
     } catch (e) { console.warn('云端进度恢复失败', e); }
     return;
@@ -88,15 +97,17 @@ async function initialSync() {
     await pushNow();
     toast(gained > 0 ? `☁️ 已合并云端与本机进度（新并入 ${gained} 条）` : '☁️ 已同步云端进度');
   } catch (e) {
-    console.warn('云端进度合并失败', e);
-    schedulePush();   // 合并失败也先把本机推上去，下次加载再试合并
+    console.warn('云端进度合并失败，30 秒后重试（不回推，保住云端待重试的记录）', e);
+    clearTimeout(retryTimer);
+    retryTimer = setTimeout(initialSync, RETRY_MS);
   }
 }
 
 function countAll(s) {
   return Object.keys(s.words || {}).length
        + Object.keys(s.graduated || {}).length
-       + Object.keys(s.familiar || {}).length;
+       + Object.keys(s.familiar || {}).length
+       + Object.keys(s.notes || {}).length;   // 笔记也是用户数据：只有笔记的设备不能被判为"空"
 }
 
 /* ---- 回推 ---- */
@@ -182,15 +193,18 @@ export async function pullCloudOverwrite() {
   return true;
 }
 
-/** 「清空全部学习数据」时同步删除云端记录（settings.html 在 reload 前 await） */
+/** 「清空全部学习数据」时同步删除云端记录；返回是否删除成功（失败时调用方不应 reload，
+ *  否则页面重载后会从云端"恢复"回刚被清空的数据） */
 export async function wipeCloud() {
-  if (!cloudEnabled) return;
+  if (!cloudEnabled) return true;
   const sb = client(); const u = await getUser();
-  if (!sb || !u) return;
+  if (!sb || !u) return false;
   online = false;
   clearTimeout(pushTimer); clearTimeout(retryTimer);
   pushTimer = 0; retryTimer = 0;
   try {
-    await sb.from('user_data').delete().eq('user_id', u.id);
-  } catch (e) { console.warn('云端进度删除失败', e); }
+    const { error } = await sb.from('user_data').delete().eq('user_id', u.id);
+    if (error) throw error;
+    return true;
+  } catch (e) { console.warn('云端进度删除失败', e); return false; }
 }
