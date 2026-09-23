@@ -2,6 +2,75 @@
   "v": 1,
   "syn": [
     {
+      "title": "contempt · prejudice · discriminate",
+      "memo": "\"负面态度\"三段链——心里**蔑视**（contempt，n.）→ 未了解先**下判断**（prejudice，n. 偏见，pre-预先+jud 判断）→ 行动上**区别对待**（discriminate，v. 歧视，dis-+crimin 分开）。词性注意：前两个常作名词，discriminate 是动词（discriminate against 歧视 / between A and B 区分）。discriminate 在 9.18 生词笔记出现过，本组串成完整态度链。写作升级：don't look down on → have contempt for；be biased → have a prejudice against。",
+      "words": [
+        {
+          "w": "contempt",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈtempt",
+            "us": "kənˈtempt"
+          },
+          "pos": "n.[U]",
+          "gloss": "蔑视，轻蔑；藐视",
+          "usage": "con-(加强)+tempt(藐视)：心里最底层的不屑；法律语境 contempt of court 藐视法庭",
+          "phrases": [
+            "have/show contempt for… 对……表示蔑视",
+            "contempt of court 藐视法庭"
+          ],
+          "ex": [
+            {
+              "en": "He showed open contempt for the court's rules.",
+              "zh": "他对法庭规则公然表示蔑视。"
+            }
+          ]
+        },
+        {
+          "w": "prejudice",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈpredʒədɪs",
+            "us": "ˈpredʒədɪs"
+          },
+          "pos": "n. / vt.",
+          "gloss": "偏见，成见；使有偏见",
+          "usage": "pre-(预先)+jud(判断)：未经了解先下判断→成见；常见 a prejudice against…",
+          "phrases": [
+            "have a prejudice against… 对……抱有偏见",
+            "gender prejudice 性别偏见"
+          ],
+          "ex": [
+            {
+              "en": "The report revealed a deep prejudice against older workers.",
+              "zh": "该报告揭露了对年长员工的深层偏见。"
+            }
+          ]
+        },
+        {
+          "w": "discriminate",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈskrɪmɪneɪt",
+            "us": "dɪˈskrɪmɪneɪt"
+          },
+          "pos": "vi. / vt.",
+          "gloss": "歧视；区别，辨别",
+          "usage": "dis-(分开)+crimin(分辨)：区别对待=歧视（against）；中性义\"区分\"接 between A and B",
+          "phrases": [
+            "discriminate against… 歧视……",
+            "discriminate between A and B 区分 A 和 B"
+          ],
+          "ex": [
+            {
+              "en": "The law forbids firms to discriminate against disabled applicants.",
+              "zh": "法律禁止企业歧视残障求职者。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "incentive · affirm · acclaim",
       "memo": "\"正面反馈三件套\"：incentive 是推你行动的\"激励\"（名词，an incentive to do）；affirm 是\"肯定\"其正确（af-加强+firm 牢固→断言属实）；acclaim 是为其\"喝彩\"（ac-加强+claim 喊→公开称赞，be acclaimed as 被誉为）。后两个都出自你的生词笔记（9.18 acclaim / 9.19 affirm），本组串成一条\"激励→肯定→赞誉\"的反馈链。词性提示：incentive 是名词，另两个动词用法为主。",
       "words": [
