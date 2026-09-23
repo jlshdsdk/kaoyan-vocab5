@@ -115,6 +115,54 @@
   ],
   "form": [
     {
+      "title": "consensus · consequence",
+      "memo": "两词都是 con- 开头的形近词：consensus 中间是 sens（感觉）→\"共同的感觉\"=共识，常与 reach / build a consensus 搭配；consequence 中间是 sequ（跟随）→\"随之而来的东西\"=后果，高频搭配 as a consequence of（由于）。记法：共识靠\"感觉\"，后果会\"跟\"着你。",
+      "words": [
+        {
+          "w": "consensus",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsensəs",
+            "us": "kənˈsensəs"
+          },
+          "pos": "n.",
+          "gloss": "共识，一致意见",
+          "usage": "con-(共同) + sens(感觉) + -us：群体\"共同的感觉\"=共识；不可数，常与 reach/build 搭配",
+          "phrases": [
+            "reach a consensus on… 就……达成共识",
+            "build a consensus on… 就……建立共识"
+          ],
+          "ex": [
+            {
+              "en": "The committee finally reached a consensus on the plan.",
+              "zh": "委员会最终就这项计划达成了共识。"
+            }
+          ]
+        },
+        {
+          "w": "consequence",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnsɪkwəns",
+            "us": "ˈkɑːnsəkwens"
+          },
+          "pos": "n.[C,U]",
+          "gloss": "结果，后果；重要性",
+          "usage": "con-(加强) + sequ(跟随) + -ence：随之而来的结果，多指不良后果；另表\"重要性\"（a matter of consequence）",
+          "phrases": [
+            "as a consequence of… 由于……（的结果）",
+            "face / suffer the consequences 承担后果"
+          ],
+          "ex": [
+            {
+              "en": "He was absent three times as a consequence of the traffic jams.",
+              "zh": "由于堵车，他缺席了三次。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "sufficient · substantial · suspicious",
       "memo": "三词都以 su- 开头、形近而义不同：sufficient 和 substantial 都谈\"量\"——sufficient 重\"够用\"（满足需要即可），substantial 重\"大量、可观、实质\"（substance 实质）；suspicious 与\"量\"无关，指\"怀疑的／可疑的\"（be suspicious of）。完形填空中 sufficient / substantial 常互为干扰项，suspicious 多靠 of 搭配排除。",
       "words": [
