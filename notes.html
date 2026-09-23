@@ -207,6 +207,7 @@ async function mergeLocalNotes(raw) {
         };
       }
     } catch (err) {}
+    if (!card) card = { w, pos: '', gloss: '（词条数据暂缺，已保留记录）', points: [] };   // 降级卡：词头必须可见
     seen.set(w, card);
     return card;
   };
@@ -219,6 +220,7 @@ async function mergeLocalNotes(raw) {
     if (!extras.length) continue;
     const rec = raw.find(x => x.date === k);
     if (rec) {
+      rec.words = Array.isArray(rec.words) ? rec.words : [];
       const have = new Set(rec.words.map(x => x.w));
       rec.words.push(...extras.filter(x => !have.has(x.w)));
       rec.count = rec.words.length;
@@ -268,6 +270,15 @@ $('dateList').addEventListener('click', e => {
 
 bindAudioButtons(document, pronounce);
 load();
+
+/* 云同步/其他标签页写入后自动重渲：新设备登录首次同步晚于首渲，不再停留在"暂无生词笔记" */
+let reloadTimer = 0;
+function scheduleReload() {
+  clearTimeout(reloadTimer);
+  reloadTimer = setTimeout(load, 500);
+}
+document.addEventListener('v5:flush', scheduleReload);
+addEventListener('storage', e => { if (e.key === 'v5vocab.state.v1' && e.newValue) scheduleReload(); });
 </script>
 </body>
 </html>
