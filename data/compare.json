@@ -163,6 +163,75 @@
   ],
   "form": [
     {
+      "title": "interfere · integrate · integrity",
+      "memo": "三词长相对像、词根分两家：interfere = inter-(之间)+fere(打)→\"插手到别人之间\"=干涉（注意 in 是介入、with 是妨碍）；integrate 与 integrity 同根 integr(完整)：integrate 使成整体→合并融入，integrity 完整无损→(数据)完整/人品正直。辨形口诀：ter+fere=插手搅局，tegr=凑完整。",
+      "words": [
+        {
+          "w": "interfere",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌɪntəˈfɪə(r)",
+            "us": "ˌɪntərˈfɪr"
+          },
+          "pos": "vi.",
+          "gloss": "干涉，干预；妨碍，干扰",
+          "usage": "inter-(之间)+fere(打)：插到别人之间搅局；不及物，in 后接\"事\"、with 后接\"物\"",
+          "phrases": [
+            "interfere in sth. 干涉某事",
+            "interfere with sth. 妨碍/干扰某事"
+          ],
+          "ex": [
+            {
+              "en": "Don't interfere in matters that are none of your business.",
+              "zh": "别去干涉那些与你无关的事。"
+            }
+          ]
+        },
+        {
+          "w": "integrate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɪntɪɡreɪt",
+            "us": "ˈɪntɪɡreɪt"
+          },
+          "pos": "v.",
+          "gloss": "（使）成为一体；（使）合并，融入",
+          "usage": "integr(完整)+-ate：使不完整的成整体；常接 integrate…into… 使……并入",
+          "phrases": [
+            "integrate…into… 使……并入……",
+            "integrate theory with practice 理论联系实际"
+          ],
+          "ex": [
+            {
+              "en": "The school helps newcomers integrate into the community.",
+              "zh": "学校帮助新来者融入社区。"
+            }
+          ]
+        },
+        {
+          "w": "integrity",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈteɡrəti",
+            "us": "ɪnˈteɡrəti"
+          },
+          "pos": "n.[U]",
+          "gloss": "正直，诚实；完整，完好",
+          "usage": "integr(完整)+-ity：人\"人格完整无损\"=正直；数据\"完好\"=完整",
+          "phrases": [
+            "a man of integrity 正直的人",
+            "data integrity 数据完整性"
+          ],
+          "ex": [
+            {
+              "en": "The judge is respected as a man of integrity.",
+              "zh": "这位法官以正直著称。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "perceive · preserve",
       "memo": "一对\"形近脸\"：都以 per-/pre- 开头、以 -ve 结尾，只差中间的 ceive 与 serve。perceive = per-(透过)+ceive(抓)→\"抓住含义\"=感知；preserve = pre-(提前)+serve(守)→\"提前守住\"=保护保存。词义零交集：一个感知，一个保存。另 preserve 还是近义组 retain·keep·preserve·hold·maintain 的成员，别只当近形词记。",
       "words": [
