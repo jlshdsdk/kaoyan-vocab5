@@ -583,6 +583,54 @@
   ],
   "form": [
     {
+      "title": "recession · recur",
+      "memo": "拼写钩子在词根：recession 含 cess（走），re- 往回走，义为衰退；recur 含 cur（跑），re- 再跑回来，义为再发生、复发。看见 -cess- 想经济，看见 -cur 想又来了。",
+      "words": [
+        {
+          "w": "recession",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈseʃn",
+            "us": "rɪˈseʃn"
+          },
+          "pos": "n.",
+          "gloss": "衰退；经济衰退",
+          "usage": "re-+cess（走）：往回走即经济衰退；名词，不是再次发生",
+          "phrases": [
+            "economic recession 经济衰退",
+            "in a recession 处于衰退期"
+          ],
+          "ex": [
+            {
+              "en": "A lot of companies have been adversely affected by the recession.",
+              "zh": "许多公司受到经济衰退的不利影响。"
+            }
+          ]
+        },
+        {
+          "w": "recur",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈkɜː(r)",
+            "us": "rɪˈkɜːr"
+          },
+          "pos": "vi.",
+          "gloss": "再发生；复发，反复出现",
+          "usage": "re-+cur（跑）：再跑回来即再发生、复发；不及物，名词 recurrence",
+          "phrases": [
+            "recur several times 反复出现好几次",
+            "a recurring problem 反复出现的问题"
+          ],
+          "ex": [
+            {
+              "en": "The theme of loneliness recurs throughout her novels.",
+              "zh": "孤独这一主题在她的小说中反复出现。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "designate · design",
       "memo": "都带着 sign（记号），多出来的 -ate 改词义：design 是把记号画成方案，义为设计；designate = design + -ate，把记号点在人事物上，义为指定、任命。看见词尾 -ate 就不是设计。",
       "words": [
