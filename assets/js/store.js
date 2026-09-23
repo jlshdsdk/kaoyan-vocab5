@@ -32,7 +32,7 @@ function load() {
 }
 
 /* 一次性迁移：旧版「今日笔记」独立键（只在当天显示，跨天即隐形）→ 永久并入 state.notes，
- * 随即 save() 触发云同步，其他设备也能看到。 */
+ * 先同步写盘再删旧键（消除他页在防抖窗口内抢先保存的微竞态），随后触发云同步。 */
 function migrateOldNoteKey(s) {
   try {
     const old = JSON.parse(localStorage.getItem('v5vocab.notes.today.v1') || 'null');
@@ -40,10 +40,15 @@ function migrateOldNoteKey(s) {
       const arr = s.notes[old.date] || (s.notes[old.date] = []);
       let added = false;
       for (const w of old.words) if (w && !arr.includes(w)) { arr.push(w); added = true; }
-      localStorage.removeItem('v5vocab.notes.today.v1');
-      if (added) save();
+      if (added) {
+        try {
+          localStorage.setItem(KEY, JSON.stringify(s));
+          document.dispatchEvent(new CustomEvent('v5:flush'));
+        } catch (e) { console.warn('note migration save failed', e); }
+      }
     }
-  } catch (e) { /* 坏数据直接丢弃旧键内容 */ localStorage.removeItem('v5vocab.notes.today.v1'); }
+  } catch (e) { /* 坏数据直接丢弃 */ }
+  localStorage.removeItem('v5vocab.notes.today.v1');
 }
 
 function deepMerge(base, over) {
@@ -74,6 +79,7 @@ function flush() {
   if (!dirty) return;
   try {
     localStorage.setItem(KEY, JSON.stringify(load()));
+    dirty = false;   // 落盘成功后复位，防止 pagehide 用陈旧快照再整写一遍
     // 通知云同步模块（sync.js 监听；未登录/未启用时无人接收，零开销）
     document.dispatchEvent(new CustomEvent('v5:flush'));
   }
@@ -82,8 +88,34 @@ function flush() {
 
 // 页面隐藏/卸载前冲刷 pending 写盘（评分后立即导航不丢数据）
 addEventListener('pagehide', flush);
-// 其他标签页写入时丢弃内存快照，下次读盘取最新（避免后写者吞掉先写者）
-addEventListener('storage', e => { if (e.key === KEY && !saveTimer) { state = null; dirty = false; } });
+// 其他标签页写入：无待写时直接读盘取最新；有待写时把对方记录并入内存（否则自己的
+// 整份快照会吞掉对方刚落盘的新增）——按记录级新者胜合并，删除操作不跨标签传播（已知限制）
+addEventListener('storage', e => {
+  if (e.key !== KEY || !e.newValue) return;
+  if (!saveTimer) { state = null; dirty = false; return; }
+  try { mergeIncoming(JSON.parse(e.newValue)); } catch (err) {}
+});
+
+/** 把另一标签页刚写入的记录按"新者胜/并集"并入本页内存（words 比 lastAt、familiar 取 max、
+ *  graduated/notes 并集、daily 取字段 max）。本页删除与对方并发时以对方为准（无 tombstone）。 */
+function mergeIncoming(disk) {
+  const s = load();
+  if (!disk || disk.v !== 1) return;
+  for (const [w, rec] of Object.entries(disk.words || {})) {
+    if (!s.words[w] || (rec.lastAt || 0) > (s.words[w].lastAt || 0)) s.words[w] = rec;
+  }
+  for (const [w, t] of Object.entries(disk.familiar || {})) if (!s.familiar[w] || t > s.familiar[w]) s.familiar[w] = t;
+  for (const [w, g] of Object.entries(disk.graduated || {})) if (!s.graduated[w]) s.graduated[w] = g;
+  for (const [k, arr] of Object.entries(disk.notes || {})) {
+    const cur = s.notes[k] || (s.notes[k] = []);
+    for (const w of (arr || [])) if (!cur.includes(w)) cur.push(w);
+  }
+  for (const [k, v] of Object.entries(disk.daily || {})) {
+    const c = s.daily[k];
+    if (!c) s.daily[k] = v;
+    else { c.added = Math.max(c.added || 0, v.added || 0); c.familiar = Math.max(c.familiar || 0, v.familiar || 0); }
+  }
+}
 
 export function getState() { return load(); }
 
@@ -218,10 +250,14 @@ export function importJSON(text, { whole = true } = {}) {
     }
     for (const [w, t] of Object.entries(data.familiar || {})) if (!s.familiar[w] || t > s.familiar[w]) s.familiar[w] = t;
     for (const [w, g] of Object.entries(data.graduated || {})) if (!s.graduated[w]) s.graduated[w] = g;
-    for (const [k, v] of Object.entries(data.daily || {})) if (!s.daily[k]) s.daily[k] = v;
     for (const [k, arr] of Object.entries(data.notes || {})) {
       const cur = s.notes[k] || (s.notes[k] = []);
       for (const w of (arr || [])) if (!cur.includes(w)) cur.push(w);
+    }
+    for (const [k, v] of Object.entries(data.daily || {})) {
+      const c = s.daily[k];
+      if (!c) s.daily[k] = v;
+      else { c.added = Math.max(c.added || 0, v.added || 0); c.familiar = Math.max(c.familiar || 0, v.familiar || 0); }
     }
   }
   save();
@@ -233,6 +269,7 @@ export function wipe() {
   clearTimeout(saveTimer);
   saveTimer = 0;
   localStorage.removeItem(KEY);
+  localStorage.removeItem('v5vocab.notes.today.v1');   // 旧笔记键一并清除，防止迁移"复活"已清空的数据
   state = null;
   document.dispatchEvent(new CustomEvent('v5:wipe'));
 }
