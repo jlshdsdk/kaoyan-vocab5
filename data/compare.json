@@ -163,6 +163,54 @@
   ],
   "form": [
     {
+      "title": "allege · array",
+      "memo": "两词都是 /ə/ 弱音起手、听力易混：allege /əˈledʒ/ = al-(向)+lege(说)→\"说出去\"=（无证据）宣称、指控，法律语境高频（It is alleged that 据称）；array /əˈreɪ/ = ar-(向)+ray(排列)→\"排成一列\"=一系列/大量（an array of）／数组。词义零交集：一个是\"嘴上说\"，一个是\"排成队\"。拼写再分：-ledge（联想 college）vs -ray（光线 ray）。",
+      "words": [
+        {
+          "w": "allege",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈledʒ",
+            "us": "əˈledʒ"
+          },
+          "pos": "vt.",
+          "gloss": "（无证据地）断言，宣称；指控",
+          "usage": "法律/新闻语境高频：\"据说、涉嫌\"；alleged adj. 所谓的、涉嫌的",
+          "phrases": [
+            "It is alleged that… 据称……",
+            "allege corruption 指控腐败"
+          ],
+          "ex": [
+            {
+              "en": "It is alleged that the company hid the safety risks.",
+              "zh": "据称该公司隐瞒了安全隐患。"
+            }
+          ]
+        },
+        {
+          "w": "array",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈreɪ",
+            "us": "əˈreɪ"
+          },
+          "pos": "n.[C] / vt.",
+          "gloss": "一系列，大量；排列；数组",
+          "usage": "an array of… 一系列/大量（考研阅读高频）；计算机语境指\"数组\"",
+          "phrases": [
+            "an array of… 一系列……",
+            "a dazzling array of products 琳琅满目的产品"
+          ],
+          "ex": [
+            {
+              "en": "The store offers a wide array of imported goods.",
+              "zh": "这家商店提供种类繁多的进口商品。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "resistant · consistent · constitute",
       "memo": "三词同属\"站（sist/stit）\"词根家族：re-sist-ant = 回+站→顶住不退=抵抗的；con-sist-ent = 共同+站→站在一起=一致的（搭配 be consistent with）；con-stit-ute = 站到一起→组成、构成。拼写陷阱：consistent 词尾是 -ent 不是 -ant（笔记原笔 consistant 系笔误）。resistant 与 constitute 也是 9.18 生词笔记成员，可联动复习。",
       "words": [
