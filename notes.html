@@ -86,7 +86,8 @@ import { initAuthNav } from './assets/js/auth-nav.js?v=18';
 import { startSync } from './assets/js/sync.js?v=18';
 import { initTheme, setTheme, getTheme, icon, bindAudioButtons } from './assets/js/ui.js?v=18';
 import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=18';
-import * as data from './assets/js/data.js?v=18';   // 本地今日笔记需要查词条
+import * as data from './assets/js/data.js?v=18';   // 本地笔记需要查词条
+import * as store from './assets/js/store.js?v=18'; // state.notes（复习页按钮写入，随账号同步）
 
 initAuthNav(); startSync();
 initTheme(); initAudio();
@@ -176,39 +177,54 @@ function setListOpen(v) {
   renderSel();
 }
 
-/* 复习页「记入今日笔记」按钮写入 localStorage，这里合并进当天展示（静态站无法回写 notes.json，走本机数据） */
-async function mergeTodayLocal(raw) {
-  let t = null;
-  try { t = JSON.parse(localStorage.getItem('v5vocab.notes.today.v1') || 'null'); } catch (e) {}
-  const d = new Date();
-  const tk = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-  if (!t || t.date !== tk || !Array.isArray(t.words) || !t.words.length) return raw;
+/* 账号笔记词（store 状态 state.notes：复习页「记入今日笔记」按钮写入，按日期永久累积、
+ * 随账号云同步跨设备），与静态 notes.json 合并展示；词条数据从词库分片实时取。
+ * 旧版"仅当天"独立键由 store.load() 自动迁移找回。 */
+async function mergeLocalNotes(raw) {
+  let local = {};
+  try { local = store.getState().notes || {}; } catch (e) {}
+  const dates = Object.keys(local).filter(k => Array.isArray(local[k]) && local[k].length);
+  if (!dates.length) return raw;
   try { await data.loadIndex(); } catch (e) { return raw; }
-  const extras = [];
-  for (const w of t.words) {
-    const e = await data.getEntry(w);
-    if (!e) continue;
-    const m = data.getIndex().map[w];
-    const senses = (e.senses || []).slice(0, 2)
-      .map(s => typeof s === 'string' ? s : ((s.pos || '') + ' ' + (s.gloss || '')).trim()).filter(Boolean);
-    const phrases = (e.phrases || []).slice(0, 2)
-      .map(p => typeof p === 'string' ? p : ((p.p || '') + ' ' + (p.m || '')).trim()).filter(Boolean);
-    extras.push({
-      w,
-      rank: m ? m[1] : undefined,
-      ph: (e.ph && (e.ph.uk || e.ph.us)) ? { uk: e.ph.uk || e.ph.us, us: e.ph.us || e.ph.uk } : undefined,
-      pos: '', gloss: senses.join('；'),
-      points: phrases.map(p => '【搭配】' + p),
-    });
-  }
-  if (!extras.length) return raw;
-  const todayRec = raw.find(x => x.date === tk);
-  if (todayRec) {
-    const have = new Set(todayRec.words.map(x => x.w));
-    todayRec.words.push(...extras.filter(x => !have.has(x.w)));
-    todayRec.count = todayRec.words.length;
-  } else {
-    raw = [{ date: tk, label: '复习速记', count: extras.length, words: extras, groups: [] }, ...raw];
+  const seen = new Map();
+  const toCard = async w => {
+    if (seen.has(w)) return seen.get(w);
+    let card = null;
+    try {
+      const e = await data.getEntry(w);
+      if (e) {
+        const m = data.getIndex().map[w];
+        const senses = (e.senses || []).slice(0, 2)
+          .map(s => typeof s === 'string' ? s : ((s.pos || '') + ' ' + (s.gloss || '')).trim()).filter(Boolean);
+        const phrases = (e.phrases || []).slice(0, 2)
+          .map(p => typeof p === 'string' ? p : ((p.p || '') + ' ' + (p.m || '')).trim()).filter(Boolean);
+        card = {
+          w,
+          rank: m ? m[1] : undefined,
+          ph: (e.ph && (e.ph.uk || e.ph.us)) ? { uk: e.ph.uk || e.ph.us, us: e.ph.us || e.ph.uk } : undefined,
+          pos: '', gloss: senses.join('；'),
+          points: phrases.map(p => '【搭配】' + p),
+        };
+      }
+    } catch (err) {}
+    seen.set(w, card);
+    return card;
+  };
+  for (const k of dates) {
+    const extras = [];
+    for (const w of local[k]) {
+      const c = await toCard(w);
+      if (c) extras.push(c);
+    }
+    if (!extras.length) continue;
+    const rec = raw.find(x => x.date === k);
+    if (rec) {
+      const have = new Set(rec.words.map(x => x.w));
+      rec.words.push(...extras.filter(x => !have.has(x.w)));
+      rec.count = rec.words.length;
+    } else {
+      raw = [{ date: k, label: '复习速记', count: extras.length, words: extras, groups: [] }, ...raw];
+    }
   }
   return raw;
 }
@@ -218,7 +234,7 @@ async function load() {
   const v = new Date().toISOString().slice(0, 10).replace(/-/g, '');   // 日期版缓存击穿
   try { const r = await fetch(`data/notes.json?v=${v}`); if (r.ok) j = await r.json(); } catch (e) {}
   let raw = (j && Array.isArray(j.notes)) ? j.notes : [];
-  raw = await mergeTodayLocal(raw);   // 合并本机「今日生词笔记」
+  raw = await mergeLocalNotes(raw);   // 合并账号/本机笔记词（按日期）
   if (!raw.length) {
     $('dateSel').hidden = true;
     $('dayView').innerHTML = '<div class="card"><p style="color:var(--ink-2);margin:6px 0">暂无生词笔记</p></div>';
