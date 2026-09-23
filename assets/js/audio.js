@@ -30,7 +30,7 @@ function pickVoices() {
   voicesUS = us[0] || uk[0] || null;
   if (!voicesUK && voicesUS && !warnedNoUK) {
     warnedNoUK = true;
-    import('./ui.js').then(ui => ui.toast('未找到英音声音，英音将用美音代替')).catch(() => {});
+    import('./ui.js?v=18').then(ui => ui.toast('未找到英音声音，英音将用美音代替')).catch(() => {});
   }
 }
 
