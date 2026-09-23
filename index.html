@@ -129,7 +129,8 @@ async function nextWord() {
   while (queue.length) {
     const w = queue.shift();
     if (store.shouldSkip(w)) continue;      // 队列推进中状态可能已变
-    const e = await data.getEntry(w);
+    let e = null;
+    try { e = await data.getEntry(w); } catch (err) { continue; }   // 分片拉取失败跳过该词，不让卡片卡死
     if (!e) continue;
     cur = e; curRank = data.getIndex().map[w][1];
     render();
