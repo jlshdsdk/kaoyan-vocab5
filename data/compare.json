@@ -466,6 +466,54 @@
   ],
   "form": [
     {
+      "title": "assemble · resemble",
+      "memo": "两词都收在 -semble，前缀定词义：assemble = as-（到一起）+semble，把人或零件聚到一处（集合、组装）；resemble = re-（像）+semble，一再显得一样（看起来像）。拼写钩子：a 开头是聚，re 开头是像。切勿当近义词：一个是动手聚拢，一个是外观相似。",
+      "words": [
+        {
+          "w": "assemble",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈsembl",
+            "us": "əˈsembl"
+          },
+          "pos": "v.",
+          "gloss": "集合，聚集；装配，组装",
+          "usage": "as-（到一起）+semble：把人或零件聚到一处，即集合或组装",
+          "phrases": [
+            "assemble the parts 组装零件",
+            "assemble in the hall 在大厅集合"
+          ],
+          "ex": [
+            {
+              "en": "Workers assemble the car's main parts on a moving line.",
+              "zh": "工人们在流动的装配线上组装汽车的主要部件。"
+            }
+          ]
+        },
+        {
+          "w": "resemble",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈzembl",
+            "us": "rɪˈzembl"
+          },
+          "pos": "vt.",
+          "gloss": "看起来像；与……相似",
+          "usage": "re-（像）+semble：一再显得一样，即看起来像；名词 resemblance",
+          "phrases": [
+            "resemble sb. in… 在……方面像某人",
+            "closely resemble… 与……极为相似"
+          ],
+          "ex": [
+            {
+              "en": "Modern e-cigarettes closely resemble ordinary cigarettes in shape.",
+              "zh": "现代电子烟的外形与普通香烟极为相似。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "nevertheless · otherwise",
       "memo": "两个长副词都是\"复合拼接\"造出来的：nevertheless = never+the+less（否定叠加→\"尽管如此仍然\"，表转折让步）；otherwise = other+wise（\"以别的方式\"→ 否则/在其他方面，表相反条件）。逻辑方向完全不同：nevertheless 是\"前面说了让步，后面坚持原观点\"；otherwise 是\"如果不这样，就会……\"（虚拟后果，常引导倒装 Otherwise would the cost be...）。完形填空高频：判断句间逻辑就靠这类衔接词。",
       "words": [
