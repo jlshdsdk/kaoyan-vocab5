@@ -11,8 +11,19 @@
 .seg2 .btn { flex: 1; min-width: 140px; padding: 12px 16px; font-size: 16px; }
 .seg2 .btn.on { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
 
-/* 对比组卡片 */
-.cgroup { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); margin: 14px 0; box-shadow: var(--shadow); overflow: hidden; }
+/* 对比组卡片：可折叠式（details/summary），每页 15 组超出翻页 */
+.cgroup { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); margin: 10px 0; box-shadow: var(--shadow); overflow: hidden; }
+.cgroup > summary { cursor: pointer; user-select: none; }
+.cgroup > summary::-webkit-details-marker { display: none; }
+.cgroup > summary:hover { background: var(--bg-inset); }
+.cgroup > summary .cg-head { padding: 14px 18px; border-bottom: 0; }
+.cgroup[open] > summary .cg-head { border-bottom: 1px solid var(--line); }
+.cgroup .caret { color: var(--accent); font-size: 13px; transition: transform .15s; width: 14px; }
+.cgroup[open] .caret { transform: rotate(90deg); }
+.cg-body { padding: 0 0 2px; }
+.pgr { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 14px 0 4px; }
+.pgr .btn { padding: 6px 18px; font-size: 14px; }
+.pginfo { color: var(--ink-2); font-size: 14px; white-space: nowrap; }
 .cg-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; padding: 14px 18px 10px; border-bottom: 1px solid var(--line); }
 .cg-head h3 { margin: 0; font-size: 17px; }
 .cg-tag { font-size: 12px; font-weight: 700; border-radius: 6px; padding: 2px 8px; letter-spacing: 1px; white-space: nowrap; }
@@ -93,6 +104,8 @@ function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&
 
 let groups = { syn: [], form: [] };
 let pane = 'syn';
+const PAGE = 15;                                   // 每页组数，超出自动分页
+const pgState = { syn: 0, form: 0 };               // 各板块当前页码
 
 function wordCol(w) {
   const ph = w.ph || {};
@@ -109,27 +122,49 @@ function wordCol(w) {
   </div>`;
 }
 
-function groupCard(g, tag) {
+function groupCard(g, tag, open) {
   const words = g.words || [];
-  return `<section class="cgroup">
-    <div class="cg-head">
-      <span class="cg-tag ${tag}">${tag === 'syn' ? '近义' : '近形'}</span>
-      <h3>${esc(g.title || words.map(x => x.w).join(' · '))}</h3>
-      <span class="cg-meta">${words.length} 词</span>
+  return `<details class="cgroup" data-idx="${esc(String(g._idx))}"${open ? ' open' : ''}>
+    <summary>
+      <div class="cg-head">
+        <span class="caret">▶</span>
+        <span class="cg-tag ${tag}">${tag === 'syn' ? '近义' : '近形'}</span>
+        <h3>${esc(g.title || words.map(x => x.w).join(' · '))}</h3>
+        <span class="cg-meta">${words.length} 词</span>
+      </div>
+    </summary>
+    <div class="cg-body">
+      <div class="cg-grid">${words.map(wordCol).join('')}</div>
+      ${g.memo ? `<div class="cg-memo">💡 ${esc(g.memo)}</div>` : ''}
     </div>
-    <div class="cg-grid">${words.map(wordCol).join('')}</div>
-    ${g.memo ? `<div class="cg-memo">💡 ${esc(g.memo)}</div>` : ''}
-  </section>`;
+  </details>`;
+}
+
+function pagerHTML(cur, total) {
+  if (total <= 1) return '';
+  return `<div class="pgr">
+    <button class="btn pgbtn" data-pg="${cur - 1}" ${cur === 0 ? 'disabled' : ''}>‹ 上一页</button>
+    <span class="pginfo">第 ${cur + 1} / ${total} 页</span>
+    <button class="btn pgbtn" data-pg="${cur + 1}" ${cur === total - 1 ? 'disabled' : ''}>下一页 ›</button>
+  </div>`;
 }
 
 function render() {
   const list = groups[pane] || [];
+  const total = Math.max(1, Math.ceil(list.length / PAGE));
+  if (pgState[pane] >= total) pgState[pane] = 0;
+  const cur = pgState[pane];
+  const slice = list.slice(cur * PAGE, cur * PAGE + PAGE).map((g, i) => ({ ...g, _idx: cur * PAGE + i }));
   $('tabSyn').classList.toggle('on', pane === 'syn');
   $('tabForm').classList.toggle('on', pane === 'form');
-  $('cpBody').innerHTML = list.length
-    ? list.map(g => groupCard(g, pane)).join('')
+  $('cpBody').innerHTML = slice.length
+    ? slice.map((g, i) => groupCard(g, pane, cur === 0 && i === 0)).join('') + pagerHTML(cur, total)
     : `<div class="card"><p style="color:var(--ink-2);margin:6px 0">「${pane === 'syn' ? '近义' : '近形'}」板块还没有内容</p></div>`;
-  for (const g of list) for (const w of (g.words || [])) prefetchRealAudio(w.w);
+  // 预取已展开组的真人音频（默认展开的最新组 + 用户手动展开的组）
+  for (const d of document.querySelectorAll('details.cgroup[open]')) {
+    const g = slice[+d.dataset.idx - cur * PAGE];
+    for (const w of ((g && g.words) || [])) prefetchRealAudio(w.w);
+  }
 }
 
 async function load() {
@@ -147,6 +182,22 @@ async function load() {
 
 $('tabSyn').onclick = () => { pane = 'syn'; render(); };
 $('tabForm').onclick = () => { pane = 'form'; render(); };
+
+// 翻页与展开：事件委托
+$('cpBody').addEventListener('click', e => {
+  const btn = e.target.closest('.pgbtn');
+  if (btn && !btn.disabled) {
+    const next = Number(btn.dataset.pg);
+    if (!Number.isNaN(next) && next >= 0) { pgState[pane] = next; render(); }
+  }
+});
+$('cpBody').addEventListener('toggle', e => {
+  const d = e.target;
+  if (!d.matches || !d.matches('details.cgroup') || !d.open) return;
+  const list = groups[pane] || [];
+  const g = list[+d.dataset.idx];
+  for (const w of ((g && g.words) || [])) prefetchRealAudio(w.w);
+}, true);   // toggle 不冒泡，用捕获
 
 bindAudioButtons(document, pronounce);
 load();
