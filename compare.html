@@ -14,14 +14,13 @@
 /* 对比组卡片：可折叠式（details/summary），每页 15 组超出翻页 */
 html { interpolate-size: allow-keywords; }   /* 支持的浏览器：height auto 平滑过渡，展开不跳 */
 .cgroup { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); margin: 10px 0; box-shadow: var(--shadow); overflow: hidden; }
-.cgroup > summary { cursor: pointer; user-select: none; }
+.cgroup > summary { cursor: pointer; user-select: none; list-style: none; }
 .cgroup > summary::-webkit-details-marker { display: none; }
+.cgroup > summary::marker { content: ''; }
 .cgroup > summary:hover { background: var(--bg-inset); }
 /* 组头边框常驻透明（收起/展开零高度差，消除 1px 抖动） */
 .cgroup > summary .cg-head { padding: 14px 18px; border-bottom: 1px solid transparent; }
 .cgroup[open] > summary .cg-head { border-bottom-color: var(--line); }
-.cgroup .caret { color: var(--accent); font-size: 13px; transition: transform .15s; width: 14px; }
-.cgroup[open] .caret { transform: rotate(90deg); }
 /* 展开高度动画：不支持 ::details-content / interpolate-size 的浏览器自动退化为瞬时展开（无回归） */
 .cgroup::details-content { block-size: 0; overflow: hidden; transition: block-size .28s ease; }
 .cgroup[open]::details-content { block-size: auto; }
@@ -127,12 +126,11 @@ function wordCol(w) {
   </div>`;
 }
 
-function groupCard(g, tag, open) {
+function groupCard(g, tag) {
   const words = g.words || [];
-  return `<details class="cgroup" data-idx="${esc(String(g._idx))}"${open ? ' open' : ''}>
+  return `<details class="cgroup" data-idx="${esc(String(g._idx))}">
     <summary>
       <div class="cg-head">
-        <span class="caret">▶</span>
         <span class="cg-tag ${tag}">${tag === 'syn' ? '近义' : '近形'}</span>
         <h3>${esc(g.title || words.map(x => x.w).join(' · '))}</h3>
         <span class="cg-meta">${words.length} 词</span>
@@ -163,9 +161,9 @@ function render() {
   $('tabSyn').classList.toggle('on', pane === 'syn');
   $('tabForm').classList.toggle('on', pane === 'form');
   $('cpBody').innerHTML = slice.length
-    ? slice.map((g, i) => groupCard(g, pane, cur === 0 && i === 0)).join('') + pagerHTML(cur, total)
+    ? slice.map(g => groupCard(g, pane)).join('') + pagerHTML(cur, total)
     : `<div class="card"><p style="color:var(--ink-2);margin:6px 0">「${pane === 'syn' ? '近义' : '近形'}」板块还没有内容</p></div>`;
-  // 预取已展开组的真人音频（默认展开的最新组 + 用户手动展开的组）
+  // 预取用户手动展开的组的真人音频（默认全部折叠，不预取）
   for (const d of document.querySelectorAll('details.cgroup[open]')) {
     const g = slice[+d.dataset.idx - cur * PAGE];
     for (const w of ((g && g.words) || [])) prefetchRealAudio(w.w);
