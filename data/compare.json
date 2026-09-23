@@ -583,6 +583,54 @@
   ],
   "form": [
     {
+      "title": "designate · design",
+      "memo": "都带着 sign（记号），多出来的 -ate 改词义：design 是把记号画成方案，义为设计；designate = design + -ate，把记号点在人事物上，义为指定、任命。看见词尾 -ate 就不是设计。",
+      "words": [
+        {
+          "w": "designate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈdezɪɡneɪt",
+            "us": "ˈdezɪɡneɪt"
+          },
+          "pos": "vt.",
+          "gloss": "指定，任命；标明",
+          "usage": "design 加 -ate：把记号落在人事物上，即指定、任命，不是设计",
+          "phrases": [
+            "designate sb. as… 任命某人为……",
+            "designate an area as a reserve 把某地指定为保护区"
+          ],
+          "ex": [
+            {
+              "en": "The eastern part of the island has been designated a nature reserve.",
+              "zh": "该岛东部已被指定为自然保护区。"
+            }
+          ]
+        },
+        {
+          "w": "design",
+          "rank": 4,
+          "ph": {
+            "uk": "dɪˈzaɪn",
+            "us": "dɪˈzaɪn"
+          },
+          "pos": "v. / n.",
+          "gloss": "设计；图样；意图",
+          "usage": "de-+sign（记号）：画出方案即设计；by design 表故意，不是任命",
+          "phrases": [
+            "by design 故意地",
+            "be designed to do sth. 旨在做某事"
+          ],
+          "ex": [
+            {
+              "en": "The course is designed for students with no prior programming experience.",
+              "zh": "这门课程是为没有任何编程经验的学生设计的。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "superior · inferior",
       "memo": "拼写只差前缀：super-（在上）对 infer-（在下），词尾都是 -erior。superior 是上级的、更好的；inferior 是下级的、较差的。这是反义近形，不是近义。比较一律 be … to，不能用 than。",
       "words": [
