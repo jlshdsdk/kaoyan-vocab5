@@ -232,6 +232,54 @@
   ],
   "form": [
     {
+      "title": "formulate · fortunate",
+      "memo": "都以 -ate 结尾的长词，中间差一截：formula(公式)+te → formulate \"给出形式\"=制定、系统阐述（动词，对象是政策/计划/假设）；fortune(运气)+ate → fortunate \"有运气\"=幸运的（形容词，fortunate enough to do 万幸能……）。拼写分界：-mul- 是动词（制定），-tun- 是形容词（幸运）。词性也不同：formulate 是动作，fortunate 是状态。",
+      "words": [
+        {
+          "w": "formulate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈfɔːmjuleɪt",
+            "us": "ˈfɔːrmjəleɪt"
+          },
+          "pos": "vt.",
+          "gloss": "制定；系统地阐述",
+          "usage": "form(形式)+ulate：构想出形式→制定（政策/计划）、确切表达（观点）",
+          "phrases": [
+            "formulate a policy 制定政策",
+            "formulate a plan to do sth. 制定做某事的计划"
+          ],
+          "ex": [
+            {
+              "en": "The government formulated a new policy to cut carbon emissions.",
+              "zh": "政府制定了一项削减碳排放的新政策。"
+            }
+          ]
+        },
+        {
+          "w": "fortunate",
+          "rank": 2,
+          "ph": {
+            "uk": "ˈfɔːtʃənət",
+            "us": "ˈfɔːrtʃənət"
+          },
+          "pos": "adj.",
+          "gloss": "幸运的，侥幸的",
+          "usage": "fortune(运气)+-ate：反义 unfortunate；比 lucky 更书面",
+          "phrases": [
+            "be fortunate enough to do 万幸能……",
+            "be fortunate in… 在……方面幸运"
+          ],
+          "ex": [
+            {
+              "en": "He was fortunate enough to escape the fire unharmed.",
+              "zh": "他非常幸运，从火灾中毫发无伤地逃了出来。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "allege · array",
       "memo": "两词都是 /ə/ 弱音起手、听力易混：allege /əˈledʒ/ = al-(向)+lege(说)→\"说出去\"=（无证据）宣称、指控，法律语境高频（It is alleged that 据称）；array /əˈreɪ/ = ar-(向)+ray(排列)→\"排成一列\"=一系列/大量（an array of）／数组。词义零交集：一个是\"嘴上说\"，一个是\"排成队\"。拼写再分：-ledge（联想 college）vs -ray（光线 ray）。",
       "words": [
