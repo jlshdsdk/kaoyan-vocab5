@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "hospitality · zeal",
+      "memo": "两词都含一份热，方向相反：hospitality 热在待人——好客、殷勤款待（主人待客，也指酒店服务业）；zeal 热在做事——对目标或信念的热忱，投入很深，有时近乎偏执。一个对外，一个对事。",
+      "words": [
+        {
+          "w": "hospitality",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌhɒspɪˈtæləti",
+            "us": "ˌhɑːspɪˈtæləti"
+          },
+          "pos": "n.[U]",
+          "gloss": "好客；殷勤款待",
+          "usage": "热在待人：对外的好客与款待；也指酒店业。反义 hostility 敌意",
+          "phrases": [
+            "warm hospitality 热情款待",
+            "hospitality industry 酒店服务业"
+          ],
+          "ex": [
+            {
+              "en": "We thanked our hosts for their warm hospitality during our stay.",
+              "zh": "我们感谢主人在我们逗留期间的热情款待。"
+            }
+          ]
+        },
+        {
+          "w": "zeal",
+          "rank": 2,
+          "ph": {
+            "uk": "ziːl",
+            "us": "ziːl"
+          },
+          "pos": "n.[U]",
+          "gloss": "热忱，热情",
+          "usage": "热在做事：对目标或信念的内在热忱，常很投入；形容词 zealous",
+          "phrases": [
+            "with great zeal 以极大的热忱",
+            "a zeal for reform 改革的热忱"
+          ],
+          "ex": [
+            {
+              "en": "She pursued her research with such zeal that she often worked late into the night.",
+              "zh": "她以极大的热忱投入研究，常常工作到深夜。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "eliminate · obsolete",
       "memo": "\"淘汰\"的动与静：eliminate 是动词，主动\"消除、淘汰\"（e-(出)+limin 门槛→赶出门槛；比赛淘汰选手、消除贫困/隐患）；obsolete 是形容词，被动\"被时代淘汰的、过时的\"（obsolete technology 过时技术）。搭配记忆：eliminate the obsolete 淘汰过时之物——一句话把两个词串起来。词性：eliminate vt. / obsolete adj.，注意 eliminate 与 exclude 的辨析（内部除名 vs 拒之门外）。",
       "words": [
