@@ -163,6 +163,75 @@
   ],
   "form": [
     {
+      "title": "concede · conclude · convert",
+      "memo": "三词都是 con- 开头，词根定乾坤：cede(走/放弃)→\"都走了\"=承认失败让步；clud(关闭)→\"一起关上\"=结束得出结论；vert(转)→\"完全转变\"=转换。辨形口诀：cede 让步认输、clude 关门下结论、vert 翻转变化。conclude 在 9.16 生词笔记也出现过，此处与形近词对比记忆。",
+      "words": [
+        {
+          "w": "concede",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsiːd",
+            "us": "kənˈsiːd"
+          },
+          "pos": "v.",
+          "gloss": "（不情愿地）承认；让步，认输",
+          "usage": "con-(全部)+cede(走/放弃)：\"都走了\"=无可奈何地承认；选举败选常用 concede defeat",
+          "phrases": [
+            "concede defeat 承认失败",
+            "concede to sb. 向某人让步"
+          ],
+          "ex": [
+            {
+              "en": "After the final vote count, he conceded defeat in the election.",
+              "zh": "最终计票结果出来后，他承认竞选失败。"
+            }
+          ]
+        },
+        {
+          "w": "conclude",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈkluːd",
+            "us": "kənˈkluːd"
+          },
+          "pos": "v.",
+          "gloss": "得出结论；结束；缔结（协议）",
+          "usage": "con-(共同)+clud(关闭)：\"一起关上\"=告一段落→下结论；conclude from 从……推断",
+          "phrases": [
+            "conclude from… 从……得出结论",
+            "to conclude 最后，总之"
+          ],
+          "ex": [
+            {
+              "en": "The researchers concluded that exercise improves sleep quality.",
+              "zh": "研究人员得出结论：运动能改善睡眠质量。"
+            }
+          ]
+        },
+        {
+          "w": "convert",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈvɜːt",
+            "us": "kənˈvɜːrt"
+          },
+          "pos": "v.",
+          "gloss": "（使）转变，转化；（使）改变信仰",
+          "usage": "con-(完全)+vert(转)：\"完全转变\"；常接 convert…into/to… 把……变成……",
+          "phrases": [
+            "convert…into/to… 把……变成……",
+            "convert waste into energy 变废为能"
+          ],
+          "ex": [
+            {
+              "en": "The factory converted its old machines into modern equipment.",
+              "zh": "工厂把旧机器改造成了现代化设备。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "interfere · integrate · integrity",
       "memo": "三词长相对像、词根分两家：interfere = inter-(之间)+fere(打)→\"插手到别人之间\"=干涉（注意 in 是介入、with 是妨碍）；integrate 与 integrity 同根 integr(完整)：integrate 使成整体→合并融入，integrity 完整无损→(数据)完整/人品正直。辨形口诀：ter+fere=插手搅局，tegr=凑完整。",
       "words": [
