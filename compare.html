@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>词义辨析 · 考研五书词汇</title>
+<link rel="stylesheet" href="assets/css/base.css?v=18">
+<style>
+/* 板块切换：近义 / 近形 */
+.seg2 { display: flex; gap: 8px; margin: 14px 0; flex-wrap: wrap; }
+.seg2 .btn { flex: 1; min-width: 140px; padding: 12px 16px; font-size: 16px; }
+.seg2 .btn.on { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+
+/* 对比组卡片 */
+.cgroup { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); margin: 14px 0; box-shadow: var(--shadow); overflow: hidden; }
+.cg-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; padding: 14px 18px 10px; border-bottom: 1px solid var(--line); }
+.cg-head h3 { margin: 0; font-size: 17px; }
+.cg-tag { font-size: 12px; font-weight: 700; border-radius: 6px; padding: 2px 8px; letter-spacing: 1px; white-space: nowrap; }
+.cg-tag.syn { color: #1b5e20; background: #e8f5e9; }
+.cg-tag.form { color: #b26a00; background: #fff3e0; }
+:root[data-theme=dark] .cg-tag.syn, .dark .cg-tag.syn { color: #a5d6a7; background: rgba(76,175,80,.15); }
+:root[data-theme=dark] .cg-tag.form, .dark .cg-tag.form { color: #ffcc80; background: rgba(255,152,0,.15); }
+.cg-meta { margin-left: auto; color: var(--ink-2); font-size: 13px; }
+
+/* 词列 */
+.cg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; padding: 12px 16px 4px; }
+.cw { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--bg-inset); }
+.cw-top { display: flex; align-items: baseline; gap: 8px; }
+.cw-w { font-size: 19px; }
+.cw-rank { font-size: 12px; color: var(--warn); letter-spacing: 1px; margin-left: auto; white-space: nowrap; }
+.cw .phon-row { margin: 6px 0 4px; gap: 14px; }
+.acc { font-style: normal; font-size: 11px; color: var(--accent); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+.cw-gloss { font-size: 14.5px; margin: 4px 0 0; }
+.cw-gloss i { color: var(--ink-2); }
+.cw-usage { margin-top: 7px; font-size: 13.5px; color: var(--ink-2); }
+.cw-usage b { color: var(--ink); font-weight: 600; }
+.cw-ph { margin: 7px 0 0; padding: 0; list-style: none; font-size: 13.5px; color: var(--ink-2); }
+.cw-ph li { margin: 3px 0; }
+.cw-ex { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); }
+.cw-ex .en { margin: 0; font-size: 13.5px; line-height: 1.6; }
+.cw-ex .zh { margin: 2px 0 0; font-size: 13px; color: var(--ink-2); }
+.cg-memo { margin: 8px 18px 14px; padding: 10px 14px; border: 1px dashed var(--accent); border-radius: 10px; background: var(--bg-inset); color: var(--warn); font-size: 13.5px; line-height: 1.7; }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="index.html">📚 五书词汇</a>
+  <a class="tab" href="index.html">今日</a>
+  <a class="tab" href="browse.html">词库</a>
+  <a class="tab" href="wordbook.html">生词本</a>
+  <a class="tab" href="notes.html">生词笔记</a>
+  <a class="tab active" href="compare.html">词义辨析</a>
+  <a class="tab" href="stats.html">统计</a>
+  <a class="tab" href="settings.html">设置</a>
+  <span class="spacer"></span><span id="authSlot"></span>
+  <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
+</nav>
+
+<main>
+  <div class="card">
+    <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+      <h2 style="margin:0">⚖️ 词义辨析</h2>
+      <span id="cpSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
+    </div>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">近义词 / 近形词分组对比 · 每词含释义、发音、用法、搭配与例句</p>
+  </div>
+
+  <div class="seg2">
+    <button class="btn on" id="tabSyn">近义辨析 <span id="synCount"></span></button>
+    <button class="btn" id="tabForm">近形辨析 <span id="formCount"></span></button>
+  </div>
+
+  <div id="cpBody"><p style="color:var(--ink-2)">加载中…</p></div>
+</main>
+
+<script type="module">
+import { initAuthNav } from './assets/js/auth-nav.js?v=18';
+import { startSync } from './assets/js/sync.js?v=18';
+import { initTheme, setTheme, getTheme, icon, bindAudioButtons } from './assets/js/ui.js?v=18';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=18';
+
+initAuthNav(); startSync();
+initTheme(); initAudio();
+document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+document.getElementById('themeBtn').onclick = () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+};
+const $ = id => document.getElementById(id);
+
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+let groups = { syn: [], form: [] };
+let pane = 'syn';
+
+function wordCol(w) {
+  const ph = w.ph || {};
+  return `<div class="cw">
+    <div class="cw-top"><b class="cw-w">${esc(w.w)}</b>${w.rank ? `<span class="cw-rank">${'★'.repeat(w.rank)}</span>` : ''}</div>
+    <div class="phon-row">
+      ${ph.uk ? `<span class="phon"><button class="btn-audio" data-acc="uk" data-w="${esc(w.w)}" aria-label="${esc(w.w)} 英音">${icon('uk')}</button><span class="ph-text">/${esc(ph.uk)}/</span><i class="acc">英</i></span>` : ''}
+      ${ph.us ? `<span class="phon"><button class="btn-audio" data-acc="us" data-w="${esc(w.w)}" aria-label="${esc(w.w)} 美音">${icon('us')}</button><span class="ph-text">/${esc(ph.us)}/</span><i class="acc">美</i></span>` : ''}
+    </div>
+    <div class="cw-gloss"><i>${esc(w.pos || '')}</i> ${esc(w.gloss || '')}</div>
+    ${w.usage ? `<div class="cw-usage"><b>用法</b> ${esc(w.usage)}</div>` : ''}
+    ${(w.phrases && w.phrases.length) ? `<ul class="cw-ph">${w.phrases.map(p => `<li>▸ ${esc(p)}</li>`).join('')}</ul>` : ''}
+    ${(w.ex && w.ex.length) ? `<div class="cw-ex">${w.ex.map(x => `<p class="en">${esc(x.en)}</p><p class="zh">${esc(x.zh)}</p>`).join('')}</div>` : ''}
+  </div>`;
+}
+
+function groupCard(g, tag) {
+  const words = g.words || [];
+  return `<section class="cgroup">
+    <div class="cg-head">
+      <span class="cg-tag ${tag}">${tag === 'syn' ? '近义' : '近形'}</span>
+      <h3>${esc(g.title || words.map(x => x.w).join(' · '))}</h3>
+      <span class="cg-meta">${words.length} 词</span>
+    </div>
+    <div class="cg-grid">${words.map(wordCol).join('')}</div>
+    ${g.memo ? `<div class="cg-memo">💡 ${esc(g.memo)}</div>` : ''}
+  </section>`;
+}
+
+function render() {
+  const list = groups[pane] || [];
+  $('tabSyn').classList.toggle('on', pane === 'syn');
+  $('tabForm').classList.toggle('on', pane === 'form');
+  $('cpBody').innerHTML = list.length
+    ? list.map(g => groupCard(g, pane)).join('')
+    : `<div class="card"><p style="color:var(--ink-2);margin:6px 0">「${pane === 'syn' ? '近义' : '近形'}」板块还没有内容</p></div>`;
+  for (const g of list) for (const w of (g.words || [])) prefetchRealAudio(w.w);
+}
+
+async function load() {
+  let j = null;
+  const v = new Date().toISOString().slice(0, 10).replace(/-/g, '');   // 日期版缓存击穿
+  try { const r = await fetch(`data/compare.json?v=${v}`); if (r.ok) j = await r.json(); } catch (e) {}
+  groups = { syn: (j && j.syn) || [], form: (j && j.form) || [] };
+  const nSyn = groups.syn.reduce((n, g) => n + (g.words || []).length, 0);
+  const nForm = groups.form.reduce((n, g) => n + (g.words || []).length, 0);
+  $('synCount').textContent = groups.syn.length ? `(${groups.syn.length} 组)` : '';
+  $('formCount').textContent = groups.form.length ? `(${groups.form.length} 组)` : '';
+  $('cpSummary').textContent = `近义 ${nSyn} 词 · 近形 ${nForm} 词`;
+  render();
+}
+
+$('tabSyn').onclick = () => { pane = 'syn'; render(); };
+$('tabForm').onclick = () => { pane = 'form'; render(); };
+
+bindAudioButtons(document, pronounce);
+load();
+</script>
+</body>
+</html>
