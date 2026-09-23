@@ -8,6 +8,7 @@ const DEFAULTS = {
   graduated: {},    // word -> {graduatedAt, reviveCount}
   familiar: {},     // word -> timestamp
   daily: {},        // 'YYYY-MM-DD' -> {added, familiar}
+  notes: {},        // 'YYYY-MM-DD' -> [word]（复习页「记入今日笔记」按钮，随账号云同步）
   settings: { dailyGoal: 50, realAudio: true, theme: 'auto', voice: 'auto' },
 };
 
@@ -26,7 +27,23 @@ function load() {
     if (raw) state = JSON.parse(raw);
   } catch (e) { console.warn('state load failed', e); }
   state = deepMerge(cloneDefaults(), state || {});
+  migrateOldNoteKey(state);
   return state;
+}
+
+/* 一次性迁移：旧版「今日笔记」独立键（只在当天显示，跨天即隐形）→ 永久并入 state.notes，
+ * 随即 save() 触发云同步，其他设备也能看到。 */
+function migrateOldNoteKey(s) {
+  try {
+    const old = JSON.parse(localStorage.getItem('v5vocab.notes.today.v1') || 'null');
+    if (old && old.date && Array.isArray(old.words)) {
+      const arr = s.notes[old.date] || (s.notes[old.date] = []);
+      let added = false;
+      for (const w of old.words) if (w && !arr.includes(w)) { arr.push(w); added = true; }
+      localStorage.removeItem('v5vocab.notes.today.v1');
+      if (added) save();
+    }
+  } catch (e) { /* 坏数据直接丢弃旧键内容 */ localStorage.removeItem('v5vocab.notes.today.v1'); }
 }
 
 function deepMerge(base, over) {
@@ -128,6 +145,19 @@ export function applyReview(word, newRecFields) {
   save();
 }
 
+/* ---- 生词笔记（复习页按钮） ---- */
+
+/** 把词记入今天的生词笔记；已存在返回 false */
+export function addNoteWord(word, now = Date.now()) {
+  const s = load();
+  const k = todayKey(new Date(now));
+  s.notes[k] = s.notes[k] || [];
+  if (s.notes[k].includes(word)) return false;
+  s.notes[k].push(word);
+  save();
+  return true;
+}
+
 /* ---- 每日任务 ---- */
 
 function bumpDaily(field, now = Date.now()) {
@@ -189,6 +219,10 @@ export function importJSON(text, { whole = true } = {}) {
     for (const [w, t] of Object.entries(data.familiar || {})) if (!s.familiar[w] || t > s.familiar[w]) s.familiar[w] = t;
     for (const [w, g] of Object.entries(data.graduated || {})) if (!s.graduated[w]) s.graduated[w] = g;
     for (const [k, v] of Object.entries(data.daily || {})) if (!s.daily[k]) s.daily[k] = v;
+    for (const [k, arr] of Object.entries(data.notes || {})) {
+      const cur = s.notes[k] || (s.notes[k] = []);
+      for (const w of (arr || [])) if (!cur.includes(w)) cur.push(w);
+    }
   }
   save();
   return true;
