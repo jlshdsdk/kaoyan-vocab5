@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "argument · dispute",
+      "memo": "都表\"争论\"，侧重不同：argument 泛指\"争吵/辩论\"，另一高频义\"论点、论据\"（present an argument 提出论点——写作核心词）；dispute 更正式、多指\"就重大问题的争端/纠纷\"（legal disputes 法律纠纷、industrial disputes 劳资纠纷），且可作动词表\"对……提出异议\"（dispute the claim）。搭配锚点：settle an argument 解决争吵 / beyond dispute 无可争辩。",
+      "words": [
+        {
+          "w": "argument",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈɑːɡjumənt",
+            "us": "ˈɑːrɡjəmənt"
+          },
+          "pos": "n.[C]",
+          "gloss": "争论，争吵；论点，论据",
+          "usage": "argue 的名词；双重身份：日常\"拌嘴\"+ 写作\"论点论据\"（develop an argument 展开论证）",
+          "phrases": [
+            "settle an argument 解决争端",
+            "present an argument 提出论点"
+          ],
+          "ex": [
+            {
+              "en": "They had an argument over who should pay the bill.",
+              "zh": "他们为该谁付账吵了一架。"
+            }
+          ]
+        },
+        {
+          "w": "dispute",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈspjuːt",
+            "us": "dɪˈspjuːt"
+          },
+          "pos": "n. / v.",
+          "gloss": "争端，纠纷；争论；对……提出异议",
+          "usage": "dis-(分离)+put(放)：各执一词→正式争端；动词 dispute sth. 表\"质疑、否认\"",
+          "phrases": [
+            "be beyond dispute 无可争辩",
+            "settle a dispute between A and B 解决 A 与 B 的纠纷"
+          ],
+          "ex": [
+            {
+              "en": "The two countries settled their long-running border dispute.",
+              "zh": "两国解决了长期存在的边界争端。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "contempt · prejudice · discriminate",
       "memo": "\"负面态度\"三段链——心里**蔑视**（contempt，n.）→ 未了解先**下判断**（prejudice，n. 偏见，pre-预先+jud 判断）→ 行动上**区别对待**（discriminate，v. 歧视，dis-+crimin 分开）。词性注意：前两个常作名词，discriminate 是动词（discriminate against 歧视 / between A and B 区分）。discriminate 在 9.18 生词笔记出现过，本组串成完整态度链。写作升级：don't look down on → have contempt for；be biased → have a prejudice against。",
       "words": [
