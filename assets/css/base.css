@@ -30,7 +30,7 @@
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-y: scroll; scrollbar-gutter: stable; }   /* 滚动条轨道常驻：页面高度变化时内容不再左右挤动 */
 body {
   margin: 0;
   background: var(--bg);
