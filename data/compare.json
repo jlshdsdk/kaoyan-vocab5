@@ -583,6 +583,138 @@
   ],
   "form": [
     {
+      "title": "convention · conversion · conversation · conservation · convenience · contention",
+      "memo": "切勿当近义词。都是 con-，中段定词义：ven（来）→convention 惯例、大会；vers（转）→conversion 转变；conversa 多一个 a→conversation 谈话；serv（守）→conservation 保护；veni→convenience 便利；tent（争）→contention 争论、论点。",
+      "words": [
+        {
+          "w": "convention",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈvenʃn",
+            "us": "kənˈvenʃn"
+          },
+          "pos": "n.",
+          "gloss": "惯例，习俗；大会",
+          "usage": "ven（来）：人走到一起即大会；也指约定俗成的惯例",
+          "phrases": [
+            "by convention 按照惯例",
+            "hold a convention 召开大会"
+          ],
+          "ex": [
+            {
+              "en": "By convention, the oldest member of the committee chairs the opening session.",
+              "zh": "按照惯例，委员会中年纪最大的成员主持开幕会议。"
+            }
+          ]
+        },
+        {
+          "w": "conversion",
+          "rank": 3,
+          "ph": {
+            "uk": "kənˈvɜːʃn",
+            "us": "kənˈvɜːrʒn"
+          },
+          "pos": "n.",
+          "gloss": "转变，转换；改建",
+          "usage": "vers（转）：从一种形态转到另一种；也可指信仰改变",
+          "phrases": [
+            "the conversion of A into B 把 A 转变为 B",
+            "energy conversion 能量转换"
+          ],
+          "ex": [
+            {
+              "en": "The factory completed its conversion from coal to natural gas last year.",
+              "zh": "该工厂去年完成了从燃煤到天然气的转换。"
+            }
+          ]
+        },
+        {
+          "w": "conversation",
+          "rank": 3,
+          "ph": {
+            "uk": "ˌkɒnvəˈseɪʃn",
+            "us": "ˌkɑːnvərˈseɪʃn"
+          },
+          "pos": "n.",
+          "gloss": "谈话，交谈",
+          "usage": "conversa 比 conversion 多一个 a：人对人说话，不是转变",
+          "phrases": [
+            "have a conversation with… 与……交谈",
+            "in conversation with… 在与……谈话"
+          ],
+          "ex": [
+            {
+              "en": "He tried to steer the conversation away from his recent dismissal.",
+              "zh": "他试图把谈话从自己最近被解雇的话题上引开。"
+            }
+          ]
+        },
+        {
+          "w": "conservation",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌkɒnsəˈveɪʃn",
+            "us": "ˌkɑːnsərˈveɪʃn"
+          },
+          "pos": "n.[U]",
+          "gloss": "保护，保存；节约",
+          "usage": "serv（守）：守住资源或文物不流失，即保护、节约",
+          "phrases": [
+            "energy conservation 能源节约",
+            "wildlife conservation 野生动物保护"
+          ],
+          "ex": [
+            {
+              "en": "The society raises money for the conservation of historic buildings.",
+              "zh": "该协会为保护历史建筑筹集资金。"
+            }
+          ]
+        },
+        {
+          "w": "convenience",
+          "rank": 3,
+          "ph": {
+            "uk": "kənˈviːniəns",
+            "us": "kənˈviːniəns"
+          },
+          "pos": "n.[U]",
+          "gloss": "方便，便利",
+          "usage": "veni（合宜）：使人省事的便利；常说 at one's convenience",
+          "phrases": [
+            "at one's convenience 在某人方便的时候",
+            "for convenience 为了方便"
+          ],
+          "ex": [
+            {
+              "en": "We have provided seats for the convenience of our customers.",
+              "zh": "为方便顾客我们备有座位。"
+            }
+          ]
+        },
+        {
+          "w": "contention",
+          "rank": 3,
+          "ph": {
+            "uk": "kənˈtenʃn",
+            "us": "kənˈtenʃn"
+          },
+          "pos": "n.",
+          "gloss": "争论；论点，看法",
+          "usage": "tent（争）：双方拉扯即争论；作可数名词时指一条论点",
+          "phrases": [
+            "a bone of contention 争论的焦点",
+            "It is sb.'s contention that… 某人认为……"
+          ],
+          "ex": [
+            {
+              "en": "It is her contention that remote work raises productivity.",
+              "zh": "她的观点是，远程办公会提高生产率。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "recession · recur",
       "memo": "拼写钩子在词根：recession 含 cess（走），re- 往回走，义为衰退；recur 含 cur（跑），re- 再跑回来，义为再发生、复发。看见 -cess- 想经济，看见 -cur 想又来了。",
       "words": [
