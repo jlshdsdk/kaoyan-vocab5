@@ -71,7 +71,7 @@ select, input[type=number] { padding:8px 12px; border-radius:8px; border:1px sol
   <div class="card">
     <h2 style="margin:0 0 6px">关于</h2>
     <p style="color:var(--ink-2);margin:4px 0">
-      词库 = 五本考研词汇书并集 9405 词：「★」数量 = 被几本书收录（重要性 rank）。
+      词库 = 五本考研词汇书并集 9404 词：「★」数量 = 被几本书收录（重要性 rank）。
       例句类型：<em style="color:var(--bad);font-style:normal">真题</em>（书内标注年份）/
       <em style="font-style:normal">仿写</em>（真题风格创作）/<em style="font-style:normal">词典例句</em>（书内例句）。
       本站为个人学习用途的加工改编数据，不含原书排版内容。
@@ -151,7 +151,11 @@ $('wipeBtn').onclick = async () => {
   if (!confirm('再次确认：真的要清空吗？')) return;
   store.wipe();
   toast('已清空，正在删除云端记录…');
-  await wipeCloud();          // 已登录时同步清空云端，防止进度复活
+  const ok = await wipeCloud();   // 已登录时同步清空云端，防止进度复活
+  if (!ok) {
+    toast('⚠️ 云端记录删除失败（网络？）。为防止数据被云端恢复，暂不刷新页面，请检查网络后重试');
+    return;
+  }
   toast('已清空，页面即将刷新');
   setTimeout(() => location.reload(), 900);
 };
