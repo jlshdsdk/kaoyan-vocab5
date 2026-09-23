@@ -2,6 +2,75 @@
   "v": 1,
   "syn": [
     {
+      "title": "diminish · decline · descend",
+      "memo": "都含\"往下/变少\"的意象，分工不同：diminish 重\"逐渐变少、削弱\"（di-+mini 小，数字/资源/风险在缩水）；decline 最全能——数字\"下降\"、健康\"衰退\"、还有\"婉拒\"（de-+clin 倾斜，向下弯腰也=谢绝）；descend 最具体——空间上\"下来\"（de-+scend 爬，楼梯/后代），descend from 还表\"是……后裔\"。完形里三者可互换看搭配：risks diminish、birth rate declines、stairs descend。",
+      "words": [
+        {
+          "w": "diminish",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈmɪnɪʃ",
+            "us": "dɪˈmɪnɪʃ"
+          },
+          "pos": "v.",
+          "gloss": "（使）减少，缩小；削弱",
+          "usage": "di-(分离)+mini(小)：逐渐变小，常含\"不幸地缩减\"意味；另有\"贬低\"义",
+          "phrases": [
+            "diminish the risk 降低风险",
+            "diminish the rights of… 削减……的权利"
+          ],
+          "ex": [
+            {
+              "en": "The medicine can diminish the risk of heart disease.",
+              "zh": "这种药能降低患心脏病的风险。"
+            }
+          ]
+        },
+        {
+          "w": "decline",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈklaɪn",
+            "us": "dɪˈklaɪn"
+          },
+          "pos": "vi. / vt. / n.",
+          "gloss": "下降；衰退；婉拒",
+          "usage": "de-(向下)+clin(倾)：数字\"下降\"、产业\"衰退\"、礼貌\"谢绝\" decline to do",
+          "phrases": [
+            "decline to do sth. 婉拒做某事",
+            "fall into a decline 陷入衰退"
+          ],
+          "ex": [
+            {
+              "en": "The birth rate continued to decline for a third year.",
+              "zh": "出生率连续第三年下降。"
+            }
+          ]
+        },
+        {
+          "w": "descend",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈsend",
+            "us": "dɪˈsend"
+          },
+          "pos": "vi.",
+          "gloss": "下降，下来；是……的后裔",
+          "usage": "de-(向下)+scend(爬)：空间上的\"下来、降临\"；descend from 表血统\"源自\"",
+          "phrases": [
+            "descend from… 从……下来；是……的后裔",
+            "descend on/upon… 突然造访"
+          ],
+          "ex": [
+            {
+              "en": "The plane began to descend through the clouds.",
+              "zh": "飞机开始穿云下降。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "perceive · detect",
       "memo": "都表\"察觉\"，但路径相反：perceive 重主观感知——\"通过心灵意识到\"（per-(透过)+ceive 抓住→透过表象抓住含义，高频 perceive…as… 视为）；detect 重客观发觉——\"借助观察或仪器测出\"隐藏的事实（detect a lie / detect cancer）。阅读题里 perceive 常与理解、观点绑定，detect 常与证据、信号绑定。",
       "words": [
