@@ -232,6 +232,54 @@
   ],
   "form": [
     {
+      "title": "strike · strive",
+      "memo": "只差结尾一个字母：strike(k) 打/罢工，strive(v) 努力。两个都是不规则动词且变形不同——strike-struck-struck（打/罢工）、strive-strove-striven（努力），写作里千万别混。词义联想：strike 重\"撞击的瞬间\"（打、罢工停摆、It strikes me that 我突然想到），strive 重\"持续的用力\"（strive to do / strive for 成功）。strike 还有\"给……留下印象\"义。",
+      "words": [
+        {
+          "w": "strike",
+          "rank": 5,
+          "ph": {
+            "uk": "straɪk",
+            "us": "straɪk"
+          },
+          "pos": "v. / n.",
+          "gloss": "打，击；罢工；给……留下印象（n. 罢工）",
+          "usage": "不规则变形 strike-struck-struck；高频义：罢工（go on strike）、突然想到（It strikes me that…）",
+          "phrases": [
+            "go on strike 举行罢工",
+            "strike a balance (between A and B) 在……之间求得平衡"
+          ],
+          "ex": [
+            {
+              "en": "Workers voted to go on strike for higher pay.",
+              "zh": "工人们投票决定罢工以争取加薪。"
+            }
+          ]
+        },
+        {
+          "w": "strive",
+          "rank": 5,
+          "ph": {
+            "uk": "straɪv",
+            "us": "straɪv"
+          },
+          "pos": "vi.",
+          "gloss": "努力，奋斗，力求",
+          "usage": "不规则变形 strive-strove-striven；后接 to do 或 for，书面语强于 try",
+          "phrases": [
+            "strive to do sth. 努力做某事",
+            "strive for success 为成功而奋斗"
+          ],
+          "ex": [
+            {
+              "en": "The team strives to improve service quality every year.",
+              "zh": "这个团队每年都努力提升服务质量。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "formulate · fortunate",
       "memo": "都以 -ate 结尾的长词，中间差一截：formula(公式)+te → formulate \"给出形式\"=制定、系统阐述（动词，对象是政策/计划/假设）；fortune(运气)+ate → fortunate \"有运气\"=幸运的（形容词，fortunate enough to do 万幸能……）。拼写分界：-mul- 是动词（制定），-tun- 是形容词（幸运）。词性也不同：formulate 是动作，fortunate 是状态。",
       "words": [
