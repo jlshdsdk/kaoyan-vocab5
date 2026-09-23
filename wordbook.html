@@ -157,7 +157,13 @@ async function loadDue() {
 }
 
 async function nextCard() {
-  if (!dueWords.length) { curW = null; return; }
+  if (!dueWords.length) {
+    curW = null;
+    $('reviewCard').hidden = true;      // 清空队列时收起旧卡，切到空态（否则残留最后一词的卡片和按钮）
+    $('reviewEmpty').hidden = false;
+    $('rateBtns').hidden = true;
+    return;
+  }
   curW = dueWords[0];
   curRec = store.getState().words[curW];
   curEntry = await data.getEntry(curW);
