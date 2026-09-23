@@ -197,18 +197,10 @@ function rate(q) {
 $('flipBtn2').onclick = flip2;
 document.querySelectorAll('#rateBtns [data-q]').forEach(b => b.onclick = () => rate(+b.dataset.q));
 
-/* 记入今日生词笔记（localStorage v5vocab.notes.today.v1，notes.html 读取并合并展示） */
-const NOTE_TODAY_KEY = 'v5vocab.notes.today.v1';
+/* 记入今日生词笔记：写入 store 状态（永久、按日期累积、随账号云同步） */
 function noteToday() {
   if (!curW) return;
-  let j = null;
-  try { j = JSON.parse(localStorage.getItem(NOTE_TODAY_KEY) || 'null'); } catch (e) {}
-  const today = store.todayKey();
-  if (!j || j.date !== today) j = { date: today, words: [] };
-  if (j.words.includes(curW)) { toast(`「${curW}」已在今日生词笔记中`); return; }
-  j.words.push(curW);
-  localStorage.setItem(NOTE_TODAY_KEY, JSON.stringify(j));
-  toast(`「${curW}」已记入今日生词笔记 📝`);
+  toast(store.addNoteWord(curW) ? `「${curW}」已记入今日生词笔记 📝` : `「${curW}」已在今日生词笔记中`);
 }
 $('noteBtn').onclick = noteToday;
 
