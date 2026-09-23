@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "perceive · detect",
+      "memo": "都表\"察觉\"，但路径相反：perceive 重主观感知——\"通过心灵意识到\"（per-(透过)+ceive 抓住→透过表象抓住含义，高频 perceive…as… 视为）；detect 重客观发觉——\"借助观察或仪器测出\"隐藏的事实（detect a lie / detect cancer）。阅读题里 perceive 常与理解、观点绑定，detect 常与证据、信号绑定。",
+      "words": [
+        {
+          "w": "perceive",
+          "rank": 5,
+          "ph": {
+            "uk": "pəˈsiːv",
+            "us": "pərˈsiːv"
+          },
+          "pos": "vt.",
+          "gloss": "察觉，感知；理解，认为",
+          "usage": "per-(透过) + ceive(抓住)：透过表象抓住含义→主观上意识到；常接 perceive…as…",
+          "phrases": [
+            "perceive…as… 把……视为……",
+            "perceive a change 察觉到变化"
+          ],
+          "ex": [
+            {
+              "en": "Many people perceive failure as a stepping stone to success.",
+              "zh": "许多人把失败视为通往成功的垫脚石。"
+            }
+          ]
+        },
+        {
+          "w": "detect",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈtekt",
+            "us": "dɪˈtekt"
+          },
+          "pos": "vt.",
+          "gloss": "察觉，发觉；探测",
+          "usage": "侧重客观\"发现\"：用观察或仪器测出隐藏的事物（谎言/信号/疾病）",
+          "phrases": [
+            "detect a lie 识破谎言",
+            "detect cancer early 及早发现癌症"
+          ],
+          "ex": [
+            {
+              "en": "The sensor can detect smoke within seconds.",
+              "zh": "这个传感器能在几秒内探测到烟雾。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "retain · keep · preserve · hold · maintain",
       "memo": "retain 最正式，强调\"保留不放\"（保留控制权/信息）；keep 最通用；preserve 重\"防损坏、维持原状\"（保护环境/保鲜）；hold 重\"握住、容纳、举行\"；maintain 重\"通过持续努力维系\"（保养机器/维持关系）。考研完形最爱 retain / maintain 的正式语域。",
       "words": [
