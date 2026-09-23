@@ -75,7 +75,7 @@ import { initAuthNav } from './assets/js/auth-nav.js?v=18';
 import { startSync } from './assets/js/sync.js?v=18';
 
 
-import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=18';
+import { initTheme, setTheme, getTheme, cardFront, cardBack, bindAudioButtons, esc } from './assets/js/ui.js?v=18';
 import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=18';
 import * as data from './assets/js/data.js?v=18';
 import * as store from './assets/js/store.js?v=18';
@@ -90,10 +90,18 @@ document.getElementById('themeBtn').onclick = () => {
 };
 
 const $ = id => document.getElementById(id);
-const ROW_H = 49;
+let ROW_H = 49;             // 首次渲染后按真实行高校准（样式改动不再导致尾部滚不到）
 let list = [];            // 过滤后的 [w, rank, mask]
 let expanded = null;      // 展开的词头
 let chunkPromises = new Map();
+
+function calibrateRowH() {
+  const row = document.querySelector('.row');
+  if (row && row.offsetHeight > 20) {
+    const h = row.offsetHeight;
+    if (h !== ROW_H) { ROW_H = h; $('spacer').style.height = list.length * ROW_H + 'px'; renderWindow(false); }
+  }
+}
 
 // 首字母选项
 for (const L of 'abcdefghijklmnopqrstuvwxyz') {
@@ -135,14 +143,16 @@ function renderWindow(force) {
   for (let i = i0; i < i1; i++) {
     const [w, rank, mask] = list[i];
     const skip = store.shouldSkip(w);
-    html += `<div class="row" data-w="${w}" data-i="${i}">
-      <span class="w">${w}${skip ? ' <span style="font-size:12px;color:var(--good)">✓在本/熟悉</span>' : ''}</span>
+    const we = esc(w);
+    html += `<div class="row" data-w="${we}" data-i="${i}">
+      <span class="w">${we}${skip ? ' <span style="font-size:12px;color:var(--good)">✓在本/熟悉</span>' : ''}</span>
       <span class="stars">${'★'.repeat(rank)}</span>
       <span class="meta">${data.maskToBooks(mask).map(b => data.BOOK_NAMES[b]).join('·')}</span>
     </div>`;
-    if (expanded === w) html += `<div class="detail" data-detail="${w}"><p style="color:var(--ink-2)">加载中…</p></div>`;
+    if (expanded === w) html += `<div class="detail" data-detail="${we}"><p style="color:var(--ink-2)">加载中…</p></div>`;
   }
   rows.innerHTML = html;
+  requestAnimationFrame(calibrateRowH);
   if (expanded) loadDetail(expanded);
 }
 
