@@ -466,6 +466,54 @@
   ],
   "form": [
     {
+      "title": "diffuse · difficult",
+      "memo": "都以 diffi-/dif- 开头、双音节感相似，但构词完全不同：diffuse = dif-(分开)+fus(流)→\"向四处流\"=扩散、传播（气体扩散、谣言散布），形容词\"弥漫的、冗长的\"；difficult = dif-(不)+fic(做)→\"不好做\"=困难的。拼写分界：-fus- 流动 vs -ficul- 困难。读音差异大：diffuse /dɪˈfjuːz/ 双音节，difficult /ˈdɪfɪkəlt/ 三音节，重音在前。",
+      "words": [
+        {
+          "w": "diffuse",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈfjuːz",
+            "us": "dɪˈfjuːz"
+          },
+          "pos": "v. / adj.",
+          "gloss": "扩散，传播；弥漫的；（文章）冗长的",
+          "usage": "dif-(分开)+fus(流)：向四处流→气体扩散、技术/知识传播；形容词多含\"散漫无重点\"贬义",
+          "phrases": [
+            "diffuse knowledge 传播知识",
+            "a diffuse report 一份冗长散漫的报告"
+          ],
+          "ex": [
+            {
+              "en": "Technologies diffuse rapidly across national borders.",
+              "zh": "技术会迅速跨国界传播。"
+            }
+          ]
+        },
+        {
+          "w": "difficult",
+          "rank": 2,
+          "ph": {
+            "uk": "ˈdɪfɪkəlt",
+            "us": "ˈdɪfɪkəlt"
+          },
+          "pos": "adj.",
+          "gloss": "困难的；难相处的",
+          "usage": "dif-(不)+fic(做)：不好做→困难；形容人时指\"难伺候、难对付\"",
+          "phrases": [
+            "a difficult decision艰难的决定",
+            "a difficult customer 难伺候的顾客"
+          ],
+          "ex": [
+            {
+              "en": "It is difficult to balance work and family life.",
+              "zh": "平衡工作与家庭生活很困难。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "strike · strive",
       "memo": "只差结尾一个字母：strike(k) 打/罢工，strive(v) 努力。两个都是不规则动词且变形不同——strike-struck-struck（打/罢工）、strive-strove-striven（努力），写作里千万别混。词义联想：strike 重\"撞击的瞬间\"（打、罢工停摆、It strikes me that 我突然想到），strive 重\"持续的用力\"（strive to do / strive for 成功）。strike 还有\"给……留下印象\"义。",
       "words": [
