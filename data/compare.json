@@ -2,6 +2,75 @@
   "v": 1,
   "syn": [
     {
+      "title": "territory · boundary · scope",
+      "memo": "都在回答“到哪里为止”：territory 是被管辖的一整块区域或知识领域；boundary 是切开两边的那条线；scope 是事情覆盖的幅度，也指还剩的余地。一块地、一条线、一个幅度。",
+      "words": [
+        {
+          "w": "territory",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈterətri",
+            "us": "ˈterətɔːri"
+          },
+          "pos": "n.",
+          "gloss": "领土，领地；领域",
+          "usage": "一块被划归的区域：领土，或知识、活动领域；不是那条分界线",
+          "phrases": [
+            "unknown territory 未知的领域",
+            "national territory 国家领土"
+          ],
+          "ex": [
+            {
+              "en": "Artificial intelligence is unfamiliar territory for many traditional publishers.",
+              "zh": "对许多传统出版商来说，人工智能是个陌生的领域。"
+            }
+          ]
+        },
+        {
+          "w": "boundary",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈbaʊndri",
+            "us": "ˈbaʊndri"
+          },
+          "pos": "n.",
+          "gloss": "边界，分界线；界限",
+          "usage": "分开两边的那条线：可指国境，也可指抽象界限；不是整片区域",
+          "phrases": [
+            "the boundary between A and B A 与 B 的分界",
+            "set boundaries 设定界限"
+          ],
+          "ex": [
+            {
+              "en": "The river is the boundary between the two countries.",
+              "zh": "这条河是两国的分界线。"
+            }
+          ]
+        },
+        {
+          "w": "scope",
+          "rank": 5,
+          "ph": {
+            "uk": "skəʊp",
+            "us": "skoʊp"
+          },
+          "pos": "n.[U]",
+          "gloss": "范围；余地",
+          "usage": "事情覆盖的幅度，或尚有的余地；不指土地，也不指分界线",
+          "phrases": [
+            "beyond the scope of… 超出……的范围",
+            "scope for improvement 改进的余地"
+          ],
+          "ex": [
+            {
+              "en": "The inquiry's scope was limited to the years after 2010.",
+              "zh": "调查范围仅限于2010年之后。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "hospitality · zeal",
       "memo": "两词都含一份热，方向相反：hospitality 热在待人——好客、殷勤款待（主人待客，也指酒店服务业）；zeal 热在做事——对目标或信念的热忱，投入很深，有时近乎偏执。一个对外，一个对事。",
       "words": [
