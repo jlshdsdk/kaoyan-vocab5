@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>账号 · 考研五书词汇</title>
-<link rel="stylesheet" href="assets/css/base.css?v=9">
+<link rel="stylesheet" href="assets/css/base.css?v=18">
 <style>
 .tabs2 { display:flex; gap:0; margin:0 0 18px; border-bottom:2px solid var(--line); }
 .tabs2 button { flex:1; padding:12px; border:0; background:none; font-size:17px; color:var(--ink-2); cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px; }
@@ -25,6 +25,7 @@
   <a class="tab" href="index.html">今日</a>
   <a class="tab" href="browse.html">词库</a>
   <a class="tab" href="wordbook.html">生词本</a>
+  <a class="tab" href="notes.html">生词笔记</a>
   <a class="tab" href="stats.html">统计</a>
   <a class="tab" href="settings.html">设置</a>
   <span class="spacer"></span>
@@ -106,6 +107,7 @@ import { initTheme, setTheme, getTheme, toast } from './assets/js/ui.js?v=18';
 import { initAuthNav } from './assets/js/auth-nav.js?v=18';
 import { cloudEnabled, getUser, getProfile, userLabel, signUp, signIn, signOut, client } from './assets/js/auth.js?v=18';
 import { startSync, cloudInfo, pushLocalOverwrite, pullCloudOverwrite } from './assets/js/sync.js?v=18';
+import * as store from './assets/js/store.js?v=18';   // 覆盖云端按钮需读本机条数做守卫
 
 initTheme();
 initAuthNav();
@@ -216,7 +218,12 @@ $('logoutBtn').onclick = async () => {
 };
 
 $('ovUpBtn').onclick = async () => {
-  if (!confirm('用本机当前进度整份覆盖云端？云端现有记录将被替换（本机不受影响）。')) return;
+  const localN = Object.keys(store.getState().words || {}).length
+               + Object.keys(store.getState().graduated || {}).length
+               + Object.keys(store.getState().familiar || {}).length
+               + Object.keys(store.getState().notes || {}).length;
+  if (localN === 0) { toast('本机没有任何学习数据，不允许用空数据覆盖云端'); return; }
+  if (!confirm(`用本机当前进度（${localN} 条）整份覆盖云端？云端现有记录将被替换（本机不受影响）。`)) return;
   $('ovUpBtn').disabled = true;
   try {
     await pushLocalOverwrite();
