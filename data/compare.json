@@ -2,6 +2,75 @@
   "v": 1,
   "syn": [
     {
+      "title": "incentive · affirm · acclaim",
+      "memo": "\"正面反馈三件套\"：incentive 是推你行动的\"激励\"（名词，an incentive to do）；affirm 是\"肯定\"其正确（af-加强+firm 牢固→断言属实）；acclaim 是为其\"喝彩\"（ac-加强+claim 喊→公开称赞，be acclaimed as 被誉为）。后两个都出自你的生词笔记（9.18 acclaim / 9.19 affirm），本组串成一条\"激励→肯定→赞誉\"的反馈链。词性提示：incentive 是名词，另两个动词用法为主。",
+      "words": [
+        {
+          "w": "incentive",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈsentɪv",
+            "us": "ɪnˈsentɪv"
+          },
+          "pos": "n.[C,U]",
+          "gloss": "激励，刺激；动机，诱因",
+          "usage": "推人行动的\"动力\"；常接 an incentive to do sth. / for sb. to do sth.",
+          "phrases": [
+            "give sb. an incentive to do 激励某人做……",
+            "economic incentives 经济激励"
+          ],
+          "ex": [
+            {
+              "en": "Bonuses give employees an incentive to work harder.",
+              "zh": "奖金给了员工更努力工作的动力。"
+            }
+          ]
+        },
+        {
+          "w": "affirm",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈfɜːm",
+            "us": "əˈfɜːrm"
+          },
+          "pos": "vt.",
+          "gloss": "断言，申明；肯定，证实",
+          "usage": "af-(加强)+firm(牢固)：使牢固→坚定地说属实；法庭语境\"宣誓证实\"",
+          "phrases": [
+            "affirm one's belief 坚定信念",
+            "affirm that… 断言……属实"
+          ],
+          "ex": [
+            {
+              "en": "The report affirmed that the policy had worked.",
+              "zh": "报告证实该政策确实奏效。"
+            }
+          ]
+        },
+        {
+          "w": "acclaim",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈkleɪm",
+            "us": "əˈkleɪm"
+          },
+          "pos": "vt. / n.",
+          "gloss": "称赞，为……喝彩；赞誉（n.）",
+          "usage": "ac-(加强)+claim(喊)：一再喊好→公开称誉；be acclaimed as 被誉为",
+          "phrases": [
+            "be acclaimed as… 被誉为……",
+            "win critical acclaim 赢得评论界赞誉"
+          ],
+          "ex": [
+            {
+              "en": "The young director was acclaimed as a new master of cinema.",
+              "zh": "这位年轻导演被誉为影坛新大师。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "diminish · decline · descend",
       "memo": "都含\"往下/变少\"的意象，分工不同：diminish 重\"逐渐变少、削弱\"（di-+mini 小，数字/资源/风险在缩水）；decline 最全能——数字\"下降\"、健康\"衰退\"、还有\"婉拒\"（de-+clin 倾斜，向下弯腰也=谢绝）；descend 最具体——空间上\"下来\"（de-+scend 爬，楼梯/后代），descend from 还表\"是……后裔\"。完形里三者可互换看搭配：risks diminish、birth rate declines、stairs descend。",
       "words": [
