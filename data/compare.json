@@ -115,6 +115,54 @@
   ],
   "form": [
     {
+      "title": "strain · constrain",
+      "memo": "两词共享 \"strain\" 词根（拉紧）：strain 是根词，重\"拉紧→压力/拉伤\"；constrain = con-(加强)+strain，重\"使劲拉紧→限制、约束\"（被外力拽住施展不开）。另注意一对形近冤家：strain（拉紧）vs stain（污点），一个拉、一个染。",
+      "words": [
+        {
+          "w": "strain",
+          "rank": 5,
+          "ph": {
+            "uk": "streɪn",
+            "us": "streɪn"
+          },
+          "pos": "n. / vt.",
+          "gloss": "压力，重负；拉紧；拉伤",
+          "usage": "本义\"拉紧\"；引申为压力重负（多指过度用力）及\"拉伤肌肉\"",
+          "phrases": [
+            "the strain of modern life 现代生活的压力",
+            "strain a muscle 拉伤肌肉"
+          ],
+          "ex": [
+            {
+              "en": "The long hours put a severe strain on her health.",
+              "zh": "长时间的工作严重损害了她的健康。"
+            }
+          ]
+        },
+        {
+          "w": "constrain",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈstreɪn",
+            "us": "kənˈstreɪn"
+          },
+          "pos": "vt.",
+          "gloss": "限制，约束；强迫",
+          "usage": "con-(加强)+strain(拉紧)：被使劲拽住→受限；被动 be constrained to do / from doing",
+          "phrases": [
+            "constrain sb. from doing sth. 限制某人做某事",
+            "be constrained to do sth. 被迫做某事"
+          ],
+          "ex": [
+            {
+              "en": "Limited resources constrain what the school can offer.",
+              "zh": "有限的资源限制了学校能提供的教学。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "consensus · consequence",
       "memo": "两词都是 con- 开头的形近词：consensus 中间是 sens（感觉）→\"共同的感觉\"=共识，常与 reach / build a consensus 搭配；consequence 中间是 sequ（跟随）→\"随之而来的东西\"=后果，高频搭配 as a consequence of（由于）。记法：共识靠\"感觉\"，后果会\"跟\"着你。",
       "words": [
