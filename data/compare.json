@@ -163,6 +163,54 @@
   ],
   "form": [
     {
+      "title": "perceive · preserve",
+      "memo": "一对\"形近脸\"：都以 per-/pre- 开头、以 -ve 结尾，只差中间的 ceive 与 serve。perceive = per-(透过)+ceive(抓)→\"抓住含义\"=感知；preserve = pre-(提前)+serve(守)→\"提前守住\"=保护保存。词义零交集：一个感知，一个保存。另 preserve 还是近义组 retain·keep·preserve·hold·maintain 的成员，别只当近形词记。",
+      "words": [
+        {
+          "w": "perceive",
+          "rank": 5,
+          "ph": {
+            "uk": "pəˈsiːv",
+            "us": "pərˈsiːv"
+          },
+          "pos": "vt.",
+          "gloss": "察觉，感知；理解，认为",
+          "usage": "per-(透过)+ceive(抓住)：主观\"意识到\"；高频 perceive…as… 把……视为",
+          "phrases": [
+            "perceive…as… 把……视为……",
+            "perceive a change 察觉到变化"
+          ],
+          "ex": [
+            {
+              "en": "Most readers perceive the ending as open to interpretation.",
+              "zh": "多数读者认为这个结局有解读空间。"
+            }
+          ]
+        },
+        {
+          "w": "preserve",
+          "rank": 5,
+          "ph": {
+            "uk": "prɪˈzɜːv",
+            "us": "prɪˈzɜːrv"
+          },
+          "pos": "vt.",
+          "gloss": "保护；保存；维持……的原状",
+          "usage": "pre-(提前)+serve(守)：提前守住→防损坏、维持原状（环境/文物/食物）",
+          "phrases": [
+            "preserve the environment 保护环境",
+            "preserve traditional culture 保护传统文化"
+          ],
+          "ex": [
+            {
+              "en": "The museum works to preserve rare manuscripts.",
+              "zh": "这家博物馆致力于保护珍贵手稿。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "strain · constrain",
       "memo": "两词共享 \"strain\" 词根（拉紧）：strain 是根词，重\"拉紧→压力/拉伤\"；constrain = con-(加强)+strain，重\"使劲拉紧→限制、约束\"（被外力拽住施展不开）。另注意一对形近冤家：strain（拉紧）vs stain（污点），一个拉、一个染。",
       "words": [
