@@ -514,6 +514,54 @@
   ],
   "form": [
     {
+      "title": "negotiate · navigation",
+      "memo": "拼写钩子在词头：nego-（没有闲暇，忙着谈）对应 negotiate，义为谈判、协商；nav-（navis 船）对应 navigation，义为航行、导航。看见 nego- 是谈，看见 nav- 是航。",
+      "words": [
+        {
+          "w": "negotiate",
+          "rank": 5,
+          "ph": {
+            "uk": "nɪˈɡəʊʃieɪt",
+            "us": "nɪˈɡoʊʃieɪt"
+          },
+          "pos": "v.",
+          "gloss": "谈判，协商；商定",
+          "usage": "nego-（无闲暇）：与对方商谈条件、达成协议；名词 negotiation",
+          "phrases": [
+            "negotiate a contract 商定合同",
+            "negotiate with sb. over sth. 与某人就某事谈判"
+          ],
+          "ex": [
+            {
+              "en": "The union plans to negotiate with management over pay and working conditions.",
+              "zh": "工会计划就工资和工作条件与管理层进行谈判。"
+            }
+          ]
+        },
+        {
+          "w": "navigation",
+          "rank": 4,
+          "ph": {
+            "uk": "ˌnævɪˈɡeɪʃn",
+            "us": "ˌnævɪˈɡeɪʃn"
+          },
+          "pos": "n.",
+          "gloss": "航行；导航，领航",
+          "usage": "nav-（船）：本义航行、领航，现多指卫星或手机导航",
+          "phrases": [
+            "satellite navigation 卫星导航",
+            "navigation apps 导航应用程序"
+          ],
+          "ex": [
+            {
+              "en": "Early sailors depended on the stars for navigation across the open ocean.",
+              "zh": "早期水手依靠星星在辽阔的大洋上导航。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "assemble · resemble",
       "memo": "两词都收在 -semble，前缀定词义：assemble = as-（到一起）+semble，把人或零件聚到一处（集合、组装）；resemble = re-（像）+semble，一再显得一样（看起来像）。拼写钩子：a 开头是聚，re 开头是像。切勿当近义词：一个是动手聚拢，一个是外观相似。",
       "words": [
