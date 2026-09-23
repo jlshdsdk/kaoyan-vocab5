@@ -172,7 +172,7 @@ function render() {
 
 async function load() {
   let j = null;
-  const v = new Date().toISOString().slice(0, 10).replace(/-/g, '');   // 日期版缓存击穿
+  const v = Date.now();   // 每次加载都取新（同日多次推送不再命中 CDN 旧缓存）   // 日期版缓存击穿
   try { const r = await fetch(`data/compare.json?v=${v}`); if (r.ok) j = await r.json(); } catch (e) {}
   groups = { syn: (j && j.syn) || [], form: (j && j.form) || [] };
   const nSyn = groups.syn.reduce((n, g) => n + (g.words || []).length, 0);
