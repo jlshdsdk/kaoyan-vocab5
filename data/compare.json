@@ -583,6 +583,54 @@
   ],
   "form": [
     {
+      "title": "superior · inferior",
+      "memo": "拼写只差前缀：super-（在上）对 infer-（在下），词尾都是 -erior。superior 是上级的、更好的；inferior 是下级的、较差的。这是反义近形，不是近义。比较一律 be … to，不能用 than。",
+      "words": [
+        {
+          "w": "superior",
+          "rank": 5,
+          "ph": {
+            "uk": "suːˈpɪəriə(r)",
+            "us": "suːˈpɪriər"
+          },
+          "pos": "adj. / n.",
+          "gloss": "更好的；上级的；上司",
+          "usage": "super-（在上）：更好或职位更高；比较接 to，不接 than",
+          "phrases": [
+            "be superior to… 比……更好",
+            "superior quality 上乘的质量"
+          ],
+          "ex": [
+            {
+              "en": "She felt socially superior to most of her neighbours.",
+              "zh": "她觉得自己的社会地位比多数邻居高。"
+            }
+          ]
+        },
+        {
+          "w": "inferior",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈfɪəriə(r)",
+            "us": "ɪnˈfɪriər"
+          },
+          "pos": "adj. / n.",
+          "gloss": "较差的；下级的；下级",
+          "usage": "infer-（在下）：较差或职位更低；同样 be inferior to，不用 than",
+          "phrases": [
+            "be inferior to… 比……差",
+            "inferior goods 劣质商品"
+          ],
+          "ex": [
+            {
+              "en": "Modern music is often considered inferior to that of the past.",
+              "zh": "现代音乐常被认为不如过去的。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "negotiate · navigation",
       "memo": "拼写钩子在词头：nego-（没有闲暇，忙着谈）对应 negotiate，义为谈判、协商；nav-（navis 船）对应 navigation，义为航行、导航。看见 nego- 是谈，看见 nav- 是航。",
       "words": [
