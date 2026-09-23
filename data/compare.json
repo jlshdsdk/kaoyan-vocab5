@@ -163,6 +163,75 @@
   ],
   "form": [
     {
+      "title": "resistant · consistent · constitute",
+      "memo": "三词同属\"站（sist/stit）\"词根家族：re-sist-ant = 回+站→顶住不退=抵抗的；con-sist-ent = 共同+站→站在一起=一致的（搭配 be consistent with）；con-stit-ute = 站到一起→组成、构成。拼写陷阱：consistent 词尾是 -ent 不是 -ant（笔记原笔 consistant 系笔误）。resistant 与 constitute 也是 9.18 生词笔记成员，可联动复习。",
+      "words": [
+        {
+          "w": "resistant",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈzɪstənt",
+            "us": "rɪˈzɪstənt"
+          },
+          "pos": "adj.",
+          "gloss": "抵抗的；有抵抗力的；耐……的",
+          "usage": "re-(回)+sist(站)+-ant：顶住不退→抵抗的；drug-resistant 耐药的",
+          "phrases": [
+            "be resistant to… 对……有抵抗力",
+            "water-resistant 防水的"
+          ],
+          "ex": [
+            {
+              "en": "The new wheat variety is resistant to drought.",
+              "zh": "这种小麦新品种耐旱。"
+            }
+          ]
+        },
+        {
+          "w": "consistent",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsɪstənt",
+            "us": "kənˈsɪstənt"
+          },
+          "pos": "adj.",
+          "gloss": "一致的，相符的；始终如一的",
+          "usage": "con-(共同)+sist(站)+-ent：站到一起→前后一致、持续不变；名词 consistency",
+          "phrases": [
+            "be consistent with… 与……一致",
+            "a consistent policy 一贯的政策"
+          ],
+          "ex": [
+            {
+              "en": "His account is consistent with the security footage.",
+              "zh": "他的说法与监控录像相符。"
+            }
+          ]
+        },
+        {
+          "w": "constitute",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnstɪtjuːt",
+            "us": "ˈkɑːnstətuːt"
+          },
+          "pos": "vt.",
+          "gloss": "组成，构成；被视为；建立",
+          "usage": "con-(共同)+stitut(站)+e：站到一起→共同构成；constitute a threat 构成威胁",
+          "phrases": [
+            "constitute a threat to… 构成对……的威胁",
+            "constitute the majority 构成多数"
+          ],
+          "ex": [
+            {
+              "en": "Women constitute nearly half of the workforce.",
+              "zh": "女性占劳动力的近一半。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "concede · conclude · convert",
       "memo": "三词都是 con- 开头，词根定乾坤：cede(走/放弃)→\"都走了\"=承认失败让步；clud(关闭)→\"一起关上\"=结束得出结论；vert(转)→\"完全转变\"=转换。辨形口诀：cede 让步认输、clude 关门下结论、vert 翻转变化。conclude 在 9.16 生词笔记也出现过，此处与形近词对比记忆。",
       "words": [
