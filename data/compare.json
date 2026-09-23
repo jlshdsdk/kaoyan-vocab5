@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "eliminate · obsolete",
+      "memo": "\"淘汰\"的动与静：eliminate 是动词，主动\"消除、淘汰\"（e-(出)+limin 门槛→赶出门槛；比赛淘汰选手、消除贫困/隐患）；obsolete 是形容词，被动\"被时代淘汰的、过时的\"（obsolete technology 过时技术）。搭配记忆：eliminate the obsolete 淘汰过时之物——一句话把两个词串起来。词性：eliminate vt. / obsolete adj.，注意 eliminate 与 exclude 的辨析（内部除名 vs 拒之门外）。",
+      "words": [
+        {
+          "w": "eliminate",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈlɪmɪneɪt",
+            "us": "ɪˈlɪmɪneɪt"
+          },
+          "pos": "vt.",
+          "gloss": "消除；淘汰（比赛中）；消灭",
+          "usage": "e-(出)+limin(门槛)+ate：赶出门槛→彻底除去；辨 exclude 是\"拒之门外\"（从未进入）",
+          "phrases": [
+            "eliminate poverty 消除贫困",
+            "be eliminated from the contest 在比赛中被淘汰"
+          ],
+          "ex": [
+            {
+              "en": "The new system aims to eliminate human error.",
+              "zh": "新系统旨在消除人为失误。"
+            }
+          ]
+        },
+        {
+          "w": "obsolete",
+          "rank": 2,
+          "ph": {
+            "uk": "ˈɒbsəliːt",
+            "us": "ˌɑːbsəˈliːt"
+          },
+          "pos": "adj.",
+          "gloss": "过时的，废弃的，被淘汰的",
+          "usage": "只作形容词（被时代淘汰的状态）；obsolescence n. 过时",
+          "phrases": [
+            "obsolete technology 过时的技术",
+            "become obsolete 被淘汰，变得过时"
+          ],
+          "ex": [
+            {
+              "en": "Typewriters have become obsolete in most offices.",
+              "zh": "打字机在大多数办公室里已经被淘汰了。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "argument · dispute",
       "memo": "都表\"争论\"，侧重不同：argument 泛指\"争吵/辩论\"，另一高频义\"论点、论据\"（present an argument 提出论点——写作核心词）；dispute 更正式、多指\"就重大问题的争端/纠纷\"（legal disputes 法律纠纷、industrial disputes 劳资纠纷），且可作动词表\"对……提出异议\"（dispute the claim）。搭配锚点：settle an argument 解决争吵 / beyond dispute 无可争辩。",
       "words": [
