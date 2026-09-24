@@ -1,6 +1,6 @@
-/* audio.js — 点击即出声
- * 热路径：内存里已缓冲的英/美真人音频立刻 play()；否则同步走本地 TTS，不等 IndexedDB、不等网络。
- * 卡片出现时预载有道英音(type=1)/美音(type=2)，下次点击走缓存。 */
+/* audio.js — 按键/点击即出声
+ * 百度英音(lan=uk)、美音(lan=en)开头几乎没有静音，比有道少约 300ms 空等。
+ * 卡片出现时预载；缓冲好了直接 play()。还没好才回落系统语音。 */
 const clips = new Map();
 let voicesUK = null, voicesUS = null;
 let warnedNoUK = false;
@@ -32,14 +32,20 @@ function pickVoices() {
 }
 
 export function initAudio() {
+  if (!document.querySelector('meta[name="referrer"]')) {
+    const meta = document.createElement('meta');
+    meta.name = 'referrer';
+    meta.content = 'no-referrer';
+    document.head.appendChild(meta);
+  }
   if (!('speechSynthesis' in window)) return;
   pickVoices();
   speechSynthesis.onvoiceschanged = pickVoices;
   try { speechSynthesis.resume(); } catch (e) {}
-  const warm = () => { try { speechSynthesis.resume(); } catch (e) {} };
-  addEventListener('pointerdown', warm, { once: true, passive: true });
   setInterval(() => {
-    if (!speechSynthesis.speaking && !speechSynthesis.pending) warm();
+    if (!speechSynthesis.speaking && !speechSynthesis.pending) {
+      try { speechSynthesis.resume(); } catch (e) {}
+    }
   }, 8000);
 }
 
@@ -51,9 +57,9 @@ function clipKey(word, accent) {
   return String(word).toLowerCase() + '|' + accent;
 }
 
-function youdaoUrl(word, accent) {
-  const type = accent === 'uk' ? 1 : 2;
-  return 'https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(word) + '&type=' + type;
+function clipUrl(word, accent) {
+  const lan = accent === 'uk' ? 'uk' : 'en';
+  return 'https://fanyi.baidu.com/gettts?lan=' + lan + '&text=' + encodeURIComponent(word) + '&spd=3&source=web';
 }
 
 function ensureClip(word, accent) {
@@ -62,7 +68,8 @@ function ensureClip(word, accent) {
   if (a) return a;
   a = new Audio();
   a.preload = 'auto';
-  a.src = youdaoUrl(word, accent);
+  a.referrerPolicy = 'no-referrer';
+  a.src = clipUrl(word, accent);
   clips.set(key, a);
   if (clips.size > 80) {
     const oldest = clips.keys().next().value;
@@ -75,7 +82,7 @@ function ensureClip(word, accent) {
 
 function stopClip() {
   if (!playing) return;
-  try { playing.pause(); playing.currentTime = 0; } catch (e) {}
+  try { playing.pause(); } catch (e) {}
   playing = null;
 }
 
@@ -118,7 +125,6 @@ function realAudioEnabled() {
   } catch (e) { return true; }
 }
 
-/** 后台预载英音和美音；失败静默，不挡点击 */
 export function prefetchRealAudio(word) {
   if (!word || !realAudioEnabled() || !window.navigator.onLine) return;
   ensureClip(word, 'uk');
