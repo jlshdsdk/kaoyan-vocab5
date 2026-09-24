@@ -1,31 +1,28 @@
-/* audio.js — 发音模块：SpeechSynthesis 即时主路径 + 真人音频按需缓存增强
- * 设计目标：点击 <100ms 响应。utterance 预建缓存；真人音频（dictionaryapi.dev）就绪后自动升级，
- * 取不到就永远 TTS，不阻塞点击。 */
-const IDX_DB = 'v5audio';
-const STORE = 'clips';
-
+/* audio.js — 点击即出声
+ * 热路径：内存里已缓冲的英/美真人音频立刻 play()；否则同步走本地 TTS，不等 IndexedDB、不等网络。
+ * 卡片出现时预载有道英音(type=1)/美音(type=2)，下次点击走缓存。 */
+const clips = new Map();
 let voicesUK = null, voicesUS = null;
-const uttrCache = new Map();     // word|accent -> SpeechSynthesisUtterance
-let dbPromise = null;
-let unlocked = false;
 let warnedNoUK = false;
+let playing = null;
+
+function scoreVoice(v) {
+  let s = 0;
+  const n = (v.name || '').toLowerCase();
+  if (v.localService) s += 12;
+  if (n.includes('online')) s -= 10;
+  if (n.includes('espeak')) s -= 8;
+  if (n.includes('natural') || n.includes('neural')) s += v.localService ? 3 : -4;
+  return s;
+}
 
 function pickVoices() {
   if (!('speechSynthesis' in window)) return;
   const vs = speechSynthesis.getVoices();
   if (!vs.length) return;
-  const score = v => {
-    let s = 0;
-    const n = v.name.toLowerCase();
-    if (n.includes('espeak')) s -= 10;              // 机械合成声降权
-    if (n.includes('google')) s += 3;
-    if (n.includes('natural') || n.includes('neural')) s += 4;
-    if (n.includes('siri')) s += 3;
-    if (v.localService) s += 1;
-    return s;
-  };
-  const uk = vs.filter(v => v.lang === 'en-GB' || v.lang.toLowerCase().startsWith('en-gb')).sort((a, b) => score(b) - score(a));
-  const us = vs.filter(v => v.lang === 'en-US' || v.lang.toLowerCase().startsWith('en-us')).sort((a, b) => score(b) - score(a));
+  const rank = list => list.slice().sort((a, b) => scoreVoice(b) - scoreVoice(a));
+  const uk = rank(vs.filter(v => (v.lang || '').toLowerCase().startsWith('en-gb')));
+  const us = rank(vs.filter(v => (v.lang || '').toLowerCase().startsWith('en-us')));
   voicesUK = uk[0] || null;
   voicesUS = us[0] || uk[0] || null;
   if (!voicesUK && voicesUS && !warnedNoUK) {
@@ -38,39 +35,81 @@ export function initAudio() {
   if (!('speechSynthesis' in window)) return;
   pickVoices();
   speechSynthesis.onvoiceschanged = pickVoices;
-  // 首次用户交互后解锁（移动端自动播放策略）
-  const unlock = () => {
-    if (unlocked) return;
-    unlocked = true;
-    try { const u = new SpeechSynthesisUtterance(''); u.volume = 0; speechSynthesis.speak(u); } catch (e) {}
-  };
-  addEventListener('pointerdown', unlock, { once: true, passive: true });
-  addEventListener('keydown', unlock, { once: true });
+  try { speechSynthesis.resume(); } catch (e) {}
+  const warm = () => { try { speechSynthesis.resume(); } catch (e) {} };
+  addEventListener('pointerdown', warm, { once: true, passive: true });
+  setInterval(() => {
+    if (!speechSynthesis.speaking && !speechSynthesis.pending) warm();
+  }, 8000);
 }
 
 export function accentAvailable() {
   return { uk: !!voicesUK, us: !!voicesUS, tts: 'speechSynthesis' in window };
 }
 
-/** 即时发音（TTS 主路径，永远 <100ms） */
-export function speak(word, accent = 'uk') {
-  if (!('speechSynthesis' in window)) return;
-  const key = word + '|' + accent;
-  let u = uttrCache.get(key);
-  if (!u) {
-    u = new SpeechSynthesisUtterance(word);
-    u.rate = 0.95;
-    u.lang = accent === 'uk' ? 'en-GB' : 'en-US';
-    const v = accent === 'uk' ? (voicesUK || voicesUS) : (voicesUS || voicesUK);
-    if (v) u.voice = v;
-    uttrCache.set(key, u);
-    if (uttrCache.size > 500) uttrCache.delete(uttrCache.keys().next().value);
-  }
-  speechSynthesis.cancel();   // 连点时掐掉上一个
-  speechSynthesis.speak(u);
+function clipKey(word, accent) {
+  return String(word).toLowerCase() + '|' + accent;
 }
 
-/* ---- 真人音频增强（IndexedDB 缓存 + dictionaryapi.dev） ---- */
+function youdaoUrl(word, accent) {
+  const type = accent === 'uk' ? 1 : 2;
+  return 'https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(word) + '&type=' + type;
+}
+
+function ensureClip(word, accent) {
+  const key = clipKey(word, accent);
+  let a = clips.get(key);
+  if (a) return a;
+  a = new Audio();
+  a.preload = 'auto';
+  a.src = youdaoUrl(word, accent);
+  clips.set(key, a);
+  if (clips.size > 80) {
+    const oldest = clips.keys().next().value;
+    const old = clips.get(oldest);
+    try { old.pause(); old.removeAttribute('src'); old.load(); } catch (e) {}
+    clips.delete(oldest);
+  }
+  return a;
+}
+
+function stopClip() {
+  if (!playing) return;
+  try { playing.pause(); playing.currentTime = 0; } catch (e) {}
+  playing = null;
+}
+
+function playReadyClip(word, accent) {
+  const a = clips.get(clipKey(word, accent));
+  if (!a || a.readyState < 2 || a.error) return false;
+  stopClip();
+  playing = a;
+  if (a.currentTime > 0.05) {
+    try { a.currentTime = 0; } catch (e) {}
+  }
+  const p = a.play();
+  if (p && p.catch) p.catch(() => {});
+  return true;
+}
+
+export function speak(word, accent = 'uk') {
+  if (!('speechSynthesis' in window)) return;
+  if (!voicesUK && !voicesUS) pickVoices();
+  const acc = accent === 'us' ? 'us' : 'uk';
+  const u = new SpeechSynthesisUtterance(word);
+  u.rate = 0.95;
+  u.lang = acc === 'uk' ? 'en-GB' : 'en-US';
+  const v = acc === 'uk' ? (voicesUK || voicesUS) : (voicesUS || voicesUK);
+  if (v) u.voice = v;
+  const synth = speechSynthesis;
+  synth.resume();
+  if (synth.speaking || synth.pending) {
+    synth.cancel();
+    setTimeout(() => { synth.resume(); synth.speak(u); }, 0);
+  } else {
+    synth.speak(u);
+  }
+}
 
 function realAudioEnabled() {
   try {
@@ -79,89 +118,25 @@ function realAudioEnabled() {
   } catch (e) { return true; }
 }
 
-function openDB() {
-  if (dbPromise) return dbPromise;
-  dbPromise = new Promise((res, rej) => {
-    const rq = indexedDB.open(IDX_DB, 1);
-    rq.onupgradeneeded = () => rq.result.createObjectStore(STORE);
-    rq.onsuccess = () => res(rq.result);
-    rq.onerror = () => rej(rq.error);
-  });
-  return dbPromise;
-}
-
-async function idbGet(word) {
-  try {
-    const db = await openDB();
-    return await new Promise((res, rej) => {
-      const tx = db.transaction(STORE, 'readonly').objectStore(STORE).get(word);
-      tx.onsuccess = () => res(tx.result || null);
-      tx.onerror = () => rej(tx.error);
-    });
-  } catch (e) { return null; }
-}
-
-async function idbPut(word, buf) {
-  try {
-    const db = await openDB();
-    const tx = db.transaction(STORE, 'readwrite');
-    tx.objectStore(STORE).put(buf, word);
-  } catch (e) {}
-}
-
-/** 后台预取真人音频（卡片进入视口时调用）；失败静默 */
+/** 后台预载英音和美音；失败静默，不挡点击 */
 export function prefetchRealAudio(word) {
-  if (!realAudioEnabled() || !window.navigator.onLine) return;
-  idbGet(word).then(hit => {
-    if (hit) return;
-    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`)
-      .then(r => r.ok ? r.json() : Promise.reject())
-      .then(data => {
-        let url = '', urlAny = '';
-        for (const ent of data || []) {
-          for (const ph of ent.phonetics || []) {
-            if (!ph.audio) continue;
-            if (ph.audio.includes('-uk')) { url = ph.audio; break; }
-            if (!url && ph.audio.includes('-us')) url = ph.audio;
-            if (!urlAny && !ph.audio.includes('-us') && !ph.audio.includes('-uk')) urlAny = ph.audio;
-          }
-          if (url) break;
-        }
-        url = url || urlAny;
-        if (!url) throw 0;
-        return fetch(url).then(r => r.ok ? r.arrayBuffer() : Promise.reject());
-      })
-      .then(buf => buf && idbPut(word, buf))
-      .catch(() => {});
-  });
+  if (!word || !realAudioEnabled() || !window.navigator.onLine) return;
+  ensureClip(word, 'uk');
+  ensureClip(word, 'us');
 }
 
-/** 若真人音频缓存就绪则播放之，返回 true；否则 false（调用方回落 TTS） */
-export async function speakRealIfReady(word) {
-  const hit = await idbGet(word);
-  if (!hit) return false;
-  try {
-    const ctx = getCtx();
-    const src = ctx.createBufferSource();
-    src.buffer = await ctx.decodeAudioData(hit.slice(0));
-    src.connect(ctx.destination);
-    src.start();
-    return true;
-  } catch (e) { return false; }
-}
-
-let _ctx = null;
-function getCtx() {
-  if (!_ctx) _ctx = new (window.AudioContext || window.webkitAudioContext)();
-  if (_ctx.state === 'suspended') _ctx.resume();
-  return _ctx;
-}
-
-/** 统一入口：真人音频优先（可在设置中关），回落 TTS；两者都是即时路径 */
 export function pronounce(word, accent = 'uk', preferReal = realAudioEnabled()) {
+  if (!word) return;
+  const acc = accent === 'us' ? 'us' : 'uk';
   if (preferReal) {
-    speakRealIfReady(word).then(ok => { if (!ok) speak(word, accent); });
-  } else {
-    speak(word, accent);
+    ensureClip(word, acc);
+    if (playReadyClip(word, acc)) {
+      if ('speechSynthesis' in window && (speechSynthesis.speaking || speechSynthesis.pending)) {
+        speechSynthesis.cancel();
+      }
+      return;
+    }
   }
+  stopClip();
+  speak(word, acc);
 }
