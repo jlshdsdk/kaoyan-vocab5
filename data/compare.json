@@ -2,117 +2,90 @@
   "v": 1,
   "syn": [
     {
-      "title": "territory · boundary · scope",
-      "memo": "都在回答“到哪里为止”：territory 是被管辖的一整块区域或知识领域；boundary 是切开两边的那条线；scope 是事情覆盖的幅度，也指还剩的余地。一块地、一条线、一个幅度。",
+      "title": "incentive · inspire · affirm · acclaim",
+      "memo": "激励一词先分词性：incentive 是推你行动的外在\"激励物\"（名词，an incentive to do）；inspire 是把劲鼓进人心里（in-入+spir 呼吸→打气，inspire sb. to do，另有启发灵感）。后面两个是反馈：affirm 是\"肯定\"其正确（af-加强+firm 牢固→断言属实）；acclaim 是为其\"喝彩\"（ac-加强+claim 喊→公开称赞，be acclaimed as）。串成\"给诱因→鼓舞人→肯定→赞誉\"。",
       "words": [
         {
-          "w": "territory",
+          "w": "incentive",
           "rank": 5,
           "ph": {
-            "uk": "ˈterətri",
-            "us": "ˈterətɔːri"
+            "uk": "ɪnˈsentɪv",
+            "us": "ɪnˈsentɪv"
           },
-          "pos": "n.",
-          "gloss": "领土，领地；领域",
-          "usage": "一块被划归的区域：领土，或知识、活动领域；不是那条分界线",
+          "pos": "n.[C,U]",
+          "gloss": "激励，刺激；动机，诱因",
+          "usage": "推人行动的\"动力\"；常接 an incentive to do sth. / for sb. to do sth.",
           "phrases": [
-            "unknown territory 未知的领域",
-            "national territory 国家领土"
+            "give sb. an incentive to do 激励某人做……",
+            "economic incentives 经济激励"
           ],
           "ex": [
             {
-              "en": "Artificial intelligence is unfamiliar territory for many traditional publishers.",
-              "zh": "对许多传统出版商来说，人工智能是个陌生的领域。"
+              "en": "Bonuses give employees an incentive to work harder.",
+              "zh": "奖金给了员工更努力工作的动力。"
             }
           ]
         },
         {
-          "w": "boundary",
+          "w": "inspire",
           "rank": 5,
           "ph": {
-            "uk": "ˈbaʊndri",
-            "us": "ˈbaʊndri"
+            "uk": "ɪnˈspaɪə",
+            "us": "ɪnˈspaɪər"
           },
-          "pos": "n.",
-          "gloss": "边界，分界线；界限",
-          "usage": "分开两边的那条线：可指国境，也可指抽象界限；不是整片区域",
+          "pos": "vt.",
+          "gloss": "鼓舞，激励；启发，启迪",
+          "usage": "in-(入)+spir(呼吸)：往里打气→鼓舞激励；inspire sb. to do",
           "phrases": [
-            "the boundary between A and B A 与 B 的分界",
-            "set boundaries 设定界限"
+            "inspire sb. to do sth. 激励某人做某事",
+            "inspire confidence 激发信心"
           ],
           "ex": [
             {
-              "en": "The river is the boundary between the two countries.",
-              "zh": "这条河是两国的分界线。"
+              "en": "Her talk inspired the students to keep going.",
+              "zh": "她的讲话激励学生们坚持下去。"
             }
           ]
         },
         {
-          "w": "scope",
+          "w": "affirm",
           "rank": 5,
           "ph": {
-            "uk": "skəʊp",
-            "us": "skoʊp"
+            "uk": "əˈfɜːm",
+            "us": "əˈfɜːrm"
           },
-          "pos": "n.[U]",
-          "gloss": "范围；余地",
-          "usage": "事情覆盖的幅度，或尚有的余地；不指土地，也不指分界线",
+          "pos": "vt.",
+          "gloss": "断言，申明；肯定，证实",
+          "usage": "af-(加强)+firm(牢固)：使牢固→坚定地说属实；法庭语境\"宣誓证实\"",
           "phrases": [
-            "beyond the scope of… 超出……的范围",
-            "scope for improvement 改进的余地"
+            "affirm one's belief 坚定信念",
+            "affirm that… 断言……属实"
           ],
           "ex": [
             {
-              "en": "The inquiry's scope was limited to the years after 2010.",
-              "zh": "调查范围仅限于2010年之后。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "hospitality · zeal",
-      "memo": "两词都含一份热，方向相反：hospitality 热在待人——好客、殷勤款待（主人待客，也指酒店服务业）；zeal 热在做事——对目标或信念的热忱，投入很深，有时近乎偏执。一个对外，一个对事。",
-      "words": [
-        {
-          "w": "hospitality",
-          "rank": 5,
-          "ph": {
-            "uk": "ˌhɒspɪˈtæləti",
-            "us": "ˌhɑːspɪˈtæləti"
-          },
-          "pos": "n.[U]",
-          "gloss": "好客；殷勤款待",
-          "usage": "热在待人：对外的好客与款待；也指酒店业。反义 hostility 敌意",
-          "phrases": [
-            "warm hospitality 热情款待",
-            "hospitality industry 酒店服务业"
-          ],
-          "ex": [
-            {
-              "en": "We thanked our hosts for their warm hospitality during our stay.",
-              "zh": "我们感谢主人在我们逗留期间的热情款待。"
+              "en": "The report affirmed that the policy had worked.",
+              "zh": "报告证实该政策确实奏效。"
             }
           ]
         },
         {
-          "w": "zeal",
-          "rank": 2,
+          "w": "acclaim",
+          "rank": 5,
           "ph": {
-            "uk": "ziːl",
-            "us": "ziːl"
+            "uk": "əˈkleɪm",
+            "us": "əˈkleɪm"
           },
-          "pos": "n.[U]",
-          "gloss": "热忱，热情",
-          "usage": "热在做事：对目标或信念的内在热忱，常很投入；形容词 zealous",
+          "pos": "vt. / n.",
+          "gloss": "称赞，为……喝彩；赞誉（n.）",
+          "usage": "ac-(加强)+claim(喊)：一再喊好→公开称誉；be acclaimed as 被誉为",
           "phrases": [
-            "with great zeal 以极大的热忱",
-            "a zeal for reform 改革的热忱"
+            "be acclaimed as… 被誉为……",
+            "win critical acclaim 赢得评论界赞誉"
           ],
           "ex": [
             {
-              "en": "She pursued her research with such zeal that she often worked late into the night.",
-              "zh": "她以极大的热忱投入研究，常常工作到深夜。"
+              "en": "The young director was acclaimed as a new master of cinema.",
+              "zh": "这位年轻导演被誉为影坛新大师。"
             }
           ]
         }
@@ -278,75 +251,6 @@
             {
               "en": "The law forbids firms to discriminate against disabled applicants.",
               "zh": "法律禁止企业歧视残障求职者。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "incentive · affirm · acclaim",
-      "memo": "\"正面反馈三件套\"：incentive 是推你行动的\"激励\"（名词，an incentive to do）；affirm 是\"肯定\"其正确（af-加强+firm 牢固→断言属实）；acclaim 是为其\"喝彩\"（ac-加强+claim 喊→公开称赞，be acclaimed as 被誉为）。后两个都出自你的生词笔记（9.18 acclaim / 9.19 affirm），本组串成一条\"激励→肯定→赞誉\"的反馈链。词性提示：incentive 是名词，另两个动词用法为主。",
-      "words": [
-        {
-          "w": "incentive",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪnˈsentɪv",
-            "us": "ɪnˈsentɪv"
-          },
-          "pos": "n.[C,U]",
-          "gloss": "激励，刺激；动机，诱因",
-          "usage": "推人行动的\"动力\"；常接 an incentive to do sth. / for sb. to do sth.",
-          "phrases": [
-            "give sb. an incentive to do 激励某人做……",
-            "economic incentives 经济激励"
-          ],
-          "ex": [
-            {
-              "en": "Bonuses give employees an incentive to work harder.",
-              "zh": "奖金给了员工更努力工作的动力。"
-            }
-          ]
-        },
-        {
-          "w": "affirm",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈfɜːm",
-            "us": "əˈfɜːrm"
-          },
-          "pos": "vt.",
-          "gloss": "断言，申明；肯定，证实",
-          "usage": "af-(加强)+firm(牢固)：使牢固→坚定地说属实；法庭语境\"宣誓证实\"",
-          "phrases": [
-            "affirm one's belief 坚定信念",
-            "affirm that… 断言……属实"
-          ],
-          "ex": [
-            {
-              "en": "The report affirmed that the policy had worked.",
-              "zh": "报告证实该政策确实奏效。"
-            }
-          ]
-        },
-        {
-          "w": "acclaim",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈkleɪm",
-            "us": "əˈkleɪm"
-          },
-          "pos": "vt. / n.",
-          "gloss": "称赞，为……喝彩；赞誉（n.）",
-          "usage": "ac-(加强)+claim(喊)：一再喊好→公开称誉；be acclaimed as 被誉为",
-          "phrases": [
-            "be acclaimed as… 被誉为……",
-            "win critical acclaim 赢得评论界赞誉"
-          ],
-          "ex": [
-            {
-              "en": "The young director was acclaimed as a new master of cinema.",
-              "zh": "这位年轻导演被誉为影坛新大师。"
             }
           ]
         }
@@ -582,378 +486,6 @@
     }
   ],
   "form": [
-    {
-      "title": "convention · conversion · conversation · conservation · convenience · contention",
-      "memo": "切勿当近义词。都是 con-，中段定词义：ven（来）→convention 惯例、大会；vers（转）→conversion 转变；conversa 多一个 a→conversation 谈话；serv（守）→conservation 保护；veni→convenience 便利；tent（争）→contention 争论、论点。",
-      "words": [
-        {
-          "w": "convention",
-          "rank": 5,
-          "ph": {
-            "uk": "kənˈvenʃn",
-            "us": "kənˈvenʃn"
-          },
-          "pos": "n.",
-          "gloss": "惯例，习俗；大会",
-          "usage": "ven（来）：人走到一起即大会；也指约定俗成的惯例",
-          "phrases": [
-            "by convention 按照惯例",
-            "hold a convention 召开大会"
-          ],
-          "ex": [
-            {
-              "en": "By convention, the oldest member of the committee chairs the opening session.",
-              "zh": "按照惯例，委员会中年纪最大的成员主持开幕会议。"
-            }
-          ]
-        },
-        {
-          "w": "conversion",
-          "rank": 3,
-          "ph": {
-            "uk": "kənˈvɜːʃn",
-            "us": "kənˈvɜːrʒn"
-          },
-          "pos": "n.",
-          "gloss": "转变，转换；改建",
-          "usage": "vers（转）：从一种形态转到另一种；也可指信仰改变",
-          "phrases": [
-            "the conversion of A into B 把 A 转变为 B",
-            "energy conversion 能量转换"
-          ],
-          "ex": [
-            {
-              "en": "The factory completed its conversion from coal to natural gas last year.",
-              "zh": "该工厂去年完成了从燃煤到天然气的转换。"
-            }
-          ]
-        },
-        {
-          "w": "conversation",
-          "rank": 3,
-          "ph": {
-            "uk": "ˌkɒnvəˈseɪʃn",
-            "us": "ˌkɑːnvərˈseɪʃn"
-          },
-          "pos": "n.",
-          "gloss": "谈话，交谈",
-          "usage": "conversa 比 conversion 多一个 a：人对人说话，不是转变",
-          "phrases": [
-            "have a conversation with… 与……交谈",
-            "in conversation with… 在与……谈话"
-          ],
-          "ex": [
-            {
-              "en": "He tried to steer the conversation away from his recent dismissal.",
-              "zh": "他试图把谈话从自己最近被解雇的话题上引开。"
-            }
-          ]
-        },
-        {
-          "w": "conservation",
-          "rank": 5,
-          "ph": {
-            "uk": "ˌkɒnsəˈveɪʃn",
-            "us": "ˌkɑːnsərˈveɪʃn"
-          },
-          "pos": "n.[U]",
-          "gloss": "保护，保存；节约",
-          "usage": "serv（守）：守住资源或文物不流失，即保护、节约",
-          "phrases": [
-            "energy conservation 能源节约",
-            "wildlife conservation 野生动物保护"
-          ],
-          "ex": [
-            {
-              "en": "The society raises money for the conservation of historic buildings.",
-              "zh": "该协会为保护历史建筑筹集资金。"
-            }
-          ]
-        },
-        {
-          "w": "convenience",
-          "rank": 3,
-          "ph": {
-            "uk": "kənˈviːniəns",
-            "us": "kənˈviːniəns"
-          },
-          "pos": "n.[U]",
-          "gloss": "方便，便利",
-          "usage": "veni（合宜）：使人省事的便利；常说 at one's convenience",
-          "phrases": [
-            "at one's convenience 在某人方便的时候",
-            "for convenience 为了方便"
-          ],
-          "ex": [
-            {
-              "en": "We have provided seats for the convenience of our customers.",
-              "zh": "为方便顾客我们备有座位。"
-            }
-          ]
-        },
-        {
-          "w": "contention",
-          "rank": 3,
-          "ph": {
-            "uk": "kənˈtenʃn",
-            "us": "kənˈtenʃn"
-          },
-          "pos": "n.",
-          "gloss": "争论；论点，看法",
-          "usage": "tent（争）：双方拉扯即争论；作可数名词时指一条论点",
-          "phrases": [
-            "a bone of contention 争论的焦点",
-            "It is sb.'s contention that… 某人认为……"
-          ],
-          "ex": [
-            {
-              "en": "It is her contention that remote work raises productivity.",
-              "zh": "她的观点是，远程办公会提高生产率。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "recession · recur",
-      "memo": "拼写钩子在词根：recession 含 cess（走），re- 往回走，义为衰退；recur 含 cur（跑），re- 再跑回来，义为再发生、复发。看见 -cess- 想经济，看见 -cur 想又来了。",
-      "words": [
-        {
-          "w": "recession",
-          "rank": 5,
-          "ph": {
-            "uk": "rɪˈseʃn",
-            "us": "rɪˈseʃn"
-          },
-          "pos": "n.",
-          "gloss": "衰退；经济衰退",
-          "usage": "re-+cess（走）：往回走即经济衰退；名词，不是再次发生",
-          "phrases": [
-            "economic recession 经济衰退",
-            "in a recession 处于衰退期"
-          ],
-          "ex": [
-            {
-              "en": "A lot of companies have been adversely affected by the recession.",
-              "zh": "许多公司受到经济衰退的不利影响。"
-            }
-          ]
-        },
-        {
-          "w": "recur",
-          "rank": 5,
-          "ph": {
-            "uk": "rɪˈkɜː(r)",
-            "us": "rɪˈkɜːr"
-          },
-          "pos": "vi.",
-          "gloss": "再发生；复发，反复出现",
-          "usage": "re-+cur（跑）：再跑回来即再发生、复发；不及物，名词 recurrence",
-          "phrases": [
-            "recur several times 反复出现好几次",
-            "a recurring problem 反复出现的问题"
-          ],
-          "ex": [
-            {
-              "en": "The theme of loneliness recurs throughout her novels.",
-              "zh": "孤独这一主题在她的小说中反复出现。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "designate · design",
-      "memo": "都带着 sign（记号），多出来的 -ate 改词义：design 是把记号画成方案，义为设计；designate = design + -ate，把记号点在人事物上，义为指定、任命。看见词尾 -ate 就不是设计。",
-      "words": [
-        {
-          "w": "designate",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈdezɪɡneɪt",
-            "us": "ˈdezɪɡneɪt"
-          },
-          "pos": "vt.",
-          "gloss": "指定，任命；标明",
-          "usage": "design 加 -ate：把记号落在人事物上，即指定、任命，不是设计",
-          "phrases": [
-            "designate sb. as… 任命某人为……",
-            "designate an area as a reserve 把某地指定为保护区"
-          ],
-          "ex": [
-            {
-              "en": "The eastern part of the island has been designated a nature reserve.",
-              "zh": "该岛东部已被指定为自然保护区。"
-            }
-          ]
-        },
-        {
-          "w": "design",
-          "rank": 4,
-          "ph": {
-            "uk": "dɪˈzaɪn",
-            "us": "dɪˈzaɪn"
-          },
-          "pos": "v. / n.",
-          "gloss": "设计；图样；意图",
-          "usage": "de-+sign（记号）：画出方案即设计；by design 表故意，不是任命",
-          "phrases": [
-            "by design 故意地",
-            "be designed to do sth. 旨在做某事"
-          ],
-          "ex": [
-            {
-              "en": "The course is designed for students with no prior programming experience.",
-              "zh": "这门课程是为没有任何编程经验的学生设计的。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "superior · inferior",
-      "memo": "拼写只差前缀：super-（在上）对 infer-（在下），词尾都是 -erior。superior 是上级的、更好的；inferior 是下级的、较差的。这是反义近形，不是近义。比较一律 be … to，不能用 than。",
-      "words": [
-        {
-          "w": "superior",
-          "rank": 5,
-          "ph": {
-            "uk": "suːˈpɪəriə(r)",
-            "us": "suːˈpɪriər"
-          },
-          "pos": "adj. / n.",
-          "gloss": "更好的；上级的；上司",
-          "usage": "super-（在上）：更好或职位更高；比较接 to，不接 than",
-          "phrases": [
-            "be superior to… 比……更好",
-            "superior quality 上乘的质量"
-          ],
-          "ex": [
-            {
-              "en": "She felt socially superior to most of her neighbours.",
-              "zh": "她觉得自己的社会地位比多数邻居高。"
-            }
-          ]
-        },
-        {
-          "w": "inferior",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪnˈfɪəriə(r)",
-            "us": "ɪnˈfɪriər"
-          },
-          "pos": "adj. / n.",
-          "gloss": "较差的；下级的；下级",
-          "usage": "infer-（在下）：较差或职位更低；同样 be inferior to，不用 than",
-          "phrases": [
-            "be inferior to… 比……差",
-            "inferior goods 劣质商品"
-          ],
-          "ex": [
-            {
-              "en": "Modern music is often considered inferior to that of the past.",
-              "zh": "现代音乐常被认为不如过去的。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "negotiate · navigation",
-      "memo": "拼写钩子在词头：nego-（没有闲暇，忙着谈）对应 negotiate，义为谈判、协商；nav-（navis 船）对应 navigation，义为航行、导航。看见 nego- 是谈，看见 nav- 是航。",
-      "words": [
-        {
-          "w": "negotiate",
-          "rank": 5,
-          "ph": {
-            "uk": "nɪˈɡəʊʃieɪt",
-            "us": "nɪˈɡoʊʃieɪt"
-          },
-          "pos": "v.",
-          "gloss": "谈判，协商；商定",
-          "usage": "nego-（无闲暇）：与对方商谈条件、达成协议；名词 negotiation",
-          "phrases": [
-            "negotiate a contract 商定合同",
-            "negotiate with sb. over sth. 与某人就某事谈判"
-          ],
-          "ex": [
-            {
-              "en": "The union plans to negotiate with management over pay and working conditions.",
-              "zh": "工会计划就工资和工作条件与管理层进行谈判。"
-            }
-          ]
-        },
-        {
-          "w": "navigation",
-          "rank": 4,
-          "ph": {
-            "uk": "ˌnævɪˈɡeɪʃn",
-            "us": "ˌnævɪˈɡeɪʃn"
-          },
-          "pos": "n.",
-          "gloss": "航行；导航，领航",
-          "usage": "nav-（船）：本义航行、领航，现多指卫星或手机导航",
-          "phrases": [
-            "satellite navigation 卫星导航",
-            "navigation apps 导航应用程序"
-          ],
-          "ex": [
-            {
-              "en": "Early sailors depended on the stars for navigation across the open ocean.",
-              "zh": "早期水手依靠星星在辽阔的大洋上导航。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "assemble · resemble",
-      "memo": "两词都收在 -semble，前缀定词义：assemble = as-（到一起）+semble，把人或零件聚到一处（集合、组装）；resemble = re-（像）+semble，一再显得一样（看起来像）。拼写钩子：a 开头是聚，re 开头是像。切勿当近义词：一个是动手聚拢，一个是外观相似。",
-      "words": [
-        {
-          "w": "assemble",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈsembl",
-            "us": "əˈsembl"
-          },
-          "pos": "v.",
-          "gloss": "集合，聚集；装配，组装",
-          "usage": "as-（到一起）+semble：把人或零件聚到一处，即集合或组装",
-          "phrases": [
-            "assemble the parts 组装零件",
-            "assemble in the hall 在大厅集合"
-          ],
-          "ex": [
-            {
-              "en": "Workers assemble the car's main parts on a moving line.",
-              "zh": "工人们在流动的装配线上组装汽车的主要部件。"
-            }
-          ]
-        },
-        {
-          "w": "resemble",
-          "rank": 5,
-          "ph": {
-            "uk": "rɪˈzembl",
-            "us": "rɪˈzembl"
-          },
-          "pos": "vt.",
-          "gloss": "看起来像；与……相似",
-          "usage": "re-（像）+semble：一再显得一样，即看起来像；名词 resemblance",
-          "phrases": [
-            "resemble sb. in… 在……方面像某人",
-            "closely resemble… 与……极为相似"
-          ],
-          "ex": [
-            {
-              "en": "Modern e-cigarettes closely resemble ordinary cigarettes in shape.",
-              "zh": "现代电子烟的外形与普通香烟极为相似。"
-            }
-          ]
-        }
-      ]
-    },
     {
       "title": "nevertheless · otherwise",
       "memo": "两个长副词都是\"复合拼接\"造出来的：nevertheless = never+the+less（否定叠加→\"尽管如此仍然\"，表转折让步）；otherwise = other+wise（\"以别的方式\"→ 否则/在其他方面，表相反条件）。逻辑方向完全不同：nevertheless 是\"前面说了让步，后面坚持原观点\"；otherwise 是\"如果不这样，就会……\"（虚拟后果，常引导倒装 Otherwise would the cost be...）。完形填空高频：判断句间逻辑就靠这类衔接词。",
