@@ -700,6 +700,54 @@
   ],
   "form": [
     {
+      "title": "exploit · explicit",
+      "memo": "都是 ex-+plic/ploit（折），中间元音定词义：exploit 是 oi，把资源折出来用→开发、利用、剥削；explicit 是 ici，把意思摊开说→明确、直言。反义搭档：explicit 对 implicit（含蓄）。",
+      "words": [
+        {
+          "w": "exploit",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪkˈsplɔɪt",
+            "us": "ɪkˈsplɔɪt"
+          },
+          "pos": "vt. / n.",
+          "gloss": "利用，开发；剥削；功绩（n.）",
+          "usage": "ex-(出)+ploit(折)：把资源折出来用；贬义是剥削",
+          "phrases": [
+            "exploit natural resources 开发自然资源",
+            "exploit workers 剥削工人"
+          ],
+          "ex": [
+            {
+              "en": "The company was accused of exploiting its workers.",
+              "zh": "这家公司被指控剥削工人。"
+            }
+          ]
+        },
+        {
+          "w": "explicit",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪkˈsplɪsɪt",
+            "us": "ɪkˈsplɪsɪt"
+          },
+          "pos": "adj.",
+          "gloss": "明确的，清楚的；直言的",
+          "usage": "ex-(出)+plic(折)：把意思摊开；反义 implicit 含蓄的",
+          "phrases": [
+            "explicit instructions 明确的指示",
+            "be explicit about… 对……直言不讳"
+          ],
+          "ex": [
+            {
+              "en": "The rules are explicit about what students may not do.",
+              "zh": "这些规定把学生不准做的事说得很明确。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "convention · conversion · conversation · conservation · convenience · contention",
       "memo": "切勿当近义词。都是 con-，中段定词义：ven（来）→convention 惯例、大会；vers（转）→conversion 转变；conversa 多一个 a→conversation 谈话；serv（守）→conservation 保护；veni→convenience 便利；tent（争）→contention 争论、论点。",
       "words": [
