@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "immense · enormous",
+      "memo": "都是\"巨大\"，量的对象不同：immense 是 im-(不)+mens(测量)→大到测不完，偏空间/规模/程度（immense scale）；enormous 是 e-(超出)+norm(常规)→超出常规的大，更常接数量和影响（an enormous amount of、enormous impact）。写作：规模用 immense，数量/影响用 enormous。",
+      "words": [
+        {
+          "w": "immense",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈmens",
+            "us": "ɪˈmens"
+          },
+          "pos": "adj.",
+          "gloss": "极大的，巨大的",
+          "usage": "im-(不)+mens(测量)：大到无法度量；常接规模、程度",
+          "phrases": [
+            "immense scale 巨大的规模",
+            "an immense improvement 巨大的进步"
+          ],
+          "ex": [
+            {
+              "en": "The project was carried out on an immense scale.",
+              "zh": "这项工程的规模极其巨大。"
+            }
+          ]
+        },
+        {
+          "w": "enormous",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɔːməs",
+            "us": "ɪˈnɔːrməs"
+          },
+          "pos": "adj.",
+          "gloss": "巨大的，庞大的",
+          "usage": "e-(超出)+norm(常规)：超出常规；常接数量与影响",
+          "phrases": [
+            "an enormous amount of 大量的",
+            "enormous impact 巨大的影响"
+          ],
+          "ex": [
+            {
+              "en": "The decision had an enormous impact on the industry.",
+              "zh": "这一决定对该行业产生了巨大影响。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "incentive · inspire · affirm · acclaim",
       "memo": "激励一词先分词性：incentive 是推你行动的外在\"激励物\"（名词，an incentive to do）；inspire 是把劲鼓进人心里（in-入+spir 呼吸→打气，inspire sb. to do，另有启发灵感）。后面两个是反馈：affirm 是\"肯定\"其正确（af-加强+firm 牢固→断言属实）；acclaim 是为其\"喝彩\"（ac-加强+claim 喊→公开称赞，be acclaimed as）。串成\"给诱因→鼓舞人→肯定→赞誉\"。",
       "words": [
