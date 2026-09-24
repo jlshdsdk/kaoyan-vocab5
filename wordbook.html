@@ -72,10 +72,10 @@ addEventListener('unhandledrejection', function(e){
         <button class="btn primary" id="flipBtn2">翻面 <span class="kbd">空格</span></button>
         <button class="btn" id="noteBtn" title="把当前复习的词记入今天的生词笔记">📝 记入今日笔记 <span class="kbd">N</span></button>
         <div class="rate-btns" id="rateBtns" hidden>
-          <button class="btn bad" data-q="0">不认识 <span class="kbd">1</span></button>
-          <button class="btn" data-q="2">模糊 <span class="kbd">2</span></button>
-          <button class="btn good" data-q="4">认识 <span class="kbd">3</span></button>
-          <button class="btn primary" data-q="5">太简单·毕业 <span class="kbd">4</span></button>
+          <button class="btn bad" data-q="0">明天 <span class="kbd">1</span></button>
+          <button class="btn" data-q="2">后天 <span class="kbd">2</span></button>
+          <button class="btn good" data-q="4">大后天 <span class="kbd">3</span></button>
+          <button class="btn primary" data-q="5">毕业 <span class="kbd">4</span></button>
         </div>
       </div>
     </div>
@@ -93,12 +93,12 @@ addEventListener('unhandledrejection', function(e){
 
   <!-- 已掌握 -->
   <section id="paneGrad" hidden>
-    <p style="color:var(--ink-2)">毕业词 = 复习间隔 ≥21 天且连续答对 ≥4 次（或一键"太简单"）。可复活重新学。</p>
+    <p style="color:var(--ink-2)">毕业词 = 复习时按 4。可复活重新学。</p>
     <div class="wlist" id="gradList"></div>
   </section>
 
   <p style="color:var(--ink-2);font-size:14px;text-align:center;margin-top:18px">
-    快捷键：<span class="kbd">空格</span> 翻面 · <span class="kbd">1/2/3/4</span> 评分 ·
+    快捷键：<span class="kbd">空格</span> 翻面 · <span class="kbd">1</span> 明天 · <span class="kbd">2</span> 后天 · <span class="kbd">3</span> 大后天 · <span class="kbd">4</span> 毕业 ·
     <span class="kbd">U</span> 英音 · <span class="kbd">I</span> 美音
   </p>
 </main>
@@ -111,7 +111,7 @@ import { startSync } from './assets/js/sync.js?v=18';
 import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=18';
 import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=23';
 import * as store from './assets/js/store.js?v=18';
-import { review } from './assets/js/srs.js?v=18';
+import { review } from './assets/js/srs.js?v=25';
 import * as data from './assets/js/data.js?v=24';
 
 initAuthNav(); startSync();
