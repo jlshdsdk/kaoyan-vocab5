@@ -31,7 +31,13 @@ export function loadChunk(idx) {
     chunkCache.set(idx, p);
     return p;
   }
-  p = fetch(index.chunks[idx].file, { cache: 'force-cache' }).then(r => r.json());
+  p = fetch(index.chunks[idx].file, { cache: 'force-cache' }).then(r => {
+    if (!r.ok) throw new Error('chunk ' + idx + ' ' + r.status);
+    return r.json();
+  }).catch(e => {
+    chunkCache.delete(idx);   // 失败不占缓存，下次取词可以重试
+    throw e;
+  });
   chunkCache.set(idx, p);
   if (chunkCache.size > LRU_MAX) {
     const oldest = chunkCache.keys().next().value;
