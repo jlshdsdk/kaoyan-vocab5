@@ -3,27 +3,35 @@ export const Q = { AGAIN: 0, FUZZY: 2, GOOD: 4, EASY: 5 };
 
 /** 对一个生词记录应用评分，返回新记录（不改原对象）。
  * rec: {reviews, correct, streak, ef, interval, dueAt, lastAt}（lastAt 为本次复习时间 ms）
- * 毕业判定：interval>=21 且 streak>=4，或 q===EASY */
+ * 按键间隔：q=0 明天、q=2 后天、q=4 大后天、q=EASY 毕业 */
 export function review(rec, q, now = Date.now()) {
   const r = { ...rec, reviews: (rec.reviews || 0) + 1, lastAt: now };
   if (q >= 3) r.correct = (rec.correct || 0) + 1;
   else r.correct = rec.correct || 0;
 
-  // EF 更新
-  r.ef = Math.max(1.3, (rec.ef == null ? 2.5 : rec.ef) + 0.1 - (5 - q) * (0.08 + (5 - q) * 0.02));
-
-  if (q < 3) {           // 不认识/模糊重置
+  // 生词本：1→明天，2→后天，3→大后天，4→立刻毕业。到期取目标日 0 点，当天一打开就出现。
+  if (q === Q.EASY) {
+    r.streak = (rec.streak || 0) + 1;
+    r.reps = (rec.reps || 0) + 1;
+    r.interval = Math.max(rec.interval || 0, 21);
+    r.dueAt = now;
+    r.graduated = true;
+    return r;
+  }
+  const days = q === 0 ? 1 : q === 2 ? 2 : 3;
+  if (q < 3) {
     r.streak = 0;
     r.reps = 0;
-    r.interval = 1;
   } else {
     r.streak = (rec.streak || 0) + 1;
-    const reps = (rec.reps || 0) + 1;
-    r.reps = reps;
-    r.interval = reps <= 1 ? 1 : (reps === 2 ? 3 : Math.round((rec.interval || 3) * r.ef));
+    r.reps = (rec.reps || 0) + 1;
   }
-  r.dueAt = now + r.interval * 86400000;
-  r.graduated = (r.interval >= 21 && r.streak >= 4) || q === Q.EASY;
+  r.interval = days;
+  const due = new Date(now);
+  due.setHours(0, 0, 0, 0);
+  due.setDate(due.getDate() + days);
+  r.dueAt = due.getTime();
+  r.graduated = false;
   return r;
 }
 
