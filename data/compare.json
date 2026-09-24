@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "specific · concrete",
+      "memo": "都译\"具体\"，对立面不同：specific 对着含糊、一般，指明确、特定的那一个（a specific goal）；concrete 对着抽象，指感官摸得到的、落地的（concrete evidence），名词还是混凝土。写作：要求\"说明确\"用 specific，要求\"不空洞\"用 concrete。",
+      "words": [
+        {
+          "w": "specific",
+          "rank": 5,
+          "ph": {
+            "uk": "spəˈsɪfɪk",
+            "us": "spəˈsɪfɪk"
+          },
+          "pos": "adj. / n.",
+          "gloss": "明确的，具体的；特定的",
+          "usage": "对着含糊和一般：指定到某一个；名词是细节",
+          "phrases": [
+            "a specific goal 明确的目标",
+            "specific evidence 具体证据"
+          ],
+          "ex": [
+            {
+              "en": "The teacher asked for a specific example, not a general idea.",
+              "zh": "老师要的是一个明确例子，不是笼统的想法。"
+            }
+          ]
+        },
+        {
+          "w": "concrete",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒŋkriːt",
+            "us": "ˈkɑːŋkriːt"
+          },
+          "pos": "adj. / n.",
+          "gloss": "具体的，确实的；混凝土（n.）",
+          "usage": "con-(共同)+cret(长出)：对着抽象，感官可及；名词是混凝土",
+          "phrases": [
+            "concrete evidence 确凿的证据",
+            "a concrete proposal 一项具体建议"
+          ],
+          "ex": [
+            {
+              "en": "We need concrete evidence, not an abstract argument.",
+              "zh": "我们要的是确凿的证据，不是抽象的论证。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "immense · enormous",
       "memo": "都是\"巨大\"，量的对象不同：immense 是 im-(不)+mens(测量)→大到测不完，偏空间/规模/程度（immense scale）；enormous 是 e-(超出)+norm(常规)→超出常规的大，更常接数量和影响（an enormous amount of、enormous impact）。写作：规模用 immense，数量/影响用 enormous。",
       "words": [
