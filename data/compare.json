@@ -2,6 +2,75 @@
   "v": 1,
   "syn": [
     {
+      "title": "outcome · consequence · conclusion",
+      "memo": "都译\"结果\"，因果链上的位置不同：outcome 最中性——行动或过程的\"最终产出\"（the final outcome of the negotiations 谈判的最终结果），不带好坏色彩；consequence 偏\"后果\"——强调前因引发的逻辑链，多指不良结果（face/suffer the consequences 承担后果，as a consequence of 由于……），另有\"重要性\"义（a matter of consequence）；conclusion 不是事情的结果——是推理的\"结论\"或文章的\"结尾\"（draw a conclusion、in conclusion 总之），jump to conclusions 匆匆下结论是阅读态度题高频。搭配分工：experiment/negotiation + outcome，决策失误 + consequence，研究/文章 + conclusion。",
+      "words": [
+        {
+          "w": "outcome",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈaʊtkʌm",
+            "us": "ˈaʊtkʌm"
+          },
+          "pos": "n.",
+          "gloss": "结果，结局；成果",
+          "usage": "out+come→出来的东西→结果（和 come out 一起记）；中性词，指行动/过程可能产生的结果；近义 result",
+          "phrases": [
+            "the final outcome 最终结果",
+            "the outcome of the experiment 实验结果"
+          ],
+          "ex": [
+            {
+              "en": "Researchers measured the outcome of the experiment after six months.",
+              "zh": "研究人员在六个月后评估了这项实验的结果。"
+            }
+          ]
+        },
+        {
+          "w": "consequence",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnsɪkwəns",
+            "us": "ˈkɒnsɪkwəns"
+          },
+          "pos": "n.",
+          "gloss": "结果，后果；重要性（u.）",
+          "usage": "con(共同)+sequ(跟随)→随之而来→后果；多指不良结果、侧重逻辑关系；同根 consequently 因此；形近角度另见 consensus·consequence 组",
+          "phrases": [
+            "as a consequence of 由于……的结果",
+            "face/suffer the consequences 承担后果"
+          ],
+          "ex": [
+            {
+              "en": "Cutting the training budget may save money now, but the long-term consequences could be severe.",
+              "zh": "削减培训预算或许现在能省钱，但长期后果可能很严重。"
+            }
+          ]
+        },
+        {
+          "w": "conclusion",
+          "rank": 4,
+          "ph": {
+            "uk": "kənˈkluːʒn",
+            "us": "kənˈkluːʒn"
+          },
+          "pos": "n.",
+          "gloss": "结论，推论；结尾，结束",
+          "usage": "conclude 的名词（con-clude 全部关上→收尾）；搭配 draw/come to a conclusion、in conclusion 总之（写作收尾）、jump to conclusions 匆匆下结论；动词另义\"缔结\"",
+          "phrases": [
+            "draw a conclusion 得出结论",
+            "in conclusion 总之"
+          ],
+          "ex": [
+            {
+              "en": "The researchers were careful not to draw conclusions from incomplete data.",
+              "zh": "研究人员谨慎地避免从不完整的数据中得出结论。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "guarantee · ensure · promise · assure",
       "memo": "都译\"保证\"，保的对象和力度不同：ensure 是\"确保\"——采取措施让事情必然发生，宾语只能是事（ensure safety、ensure that...）；assure 是\"使确信\"——宾语必须是人（assure sb. that/of sth.），目的是消除对方疑虑，同根 insurance 保险；guarantee 语气最强——对质量、结果\"担保\"，能开保修单的那种（under guarantee 在保修期内），名动同形；promise 最轻——只是主观\"答应\"，可能不兑现（keep/break a promise），另有\"预示\"义（clear skies promise a fine day）。句型抓手：ensure/guarantee + 事情，assure + 人，promise + to do。",
       "words": [
