@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "prosperity · flourish",
+      "memo": "都译\"繁荣\"，先分词性：prosperity 是名词——繁荣这个\"状态\"（economic prosperity 经济繁荣，bring prosperity 带来繁荣），形容词 prosperous；flourish 是动词——\"繁荣起来\"的\"过程\"，主语可以是经济、行业、公司，也能是植物和文化（a flourishing business 兴隆的生意）。画面感词根：prosper＝pro(向前)+sper(希望)→有希望向前→昌盛；flourish＝flour(花)+ish→开花→茁壮成长。近义 thrive 偏有生命物长势好；另注意 flourish 还有\"挥舞\"义。",
+      "words": [
+        {
+          "w": "prosperity",
+          "rank": 5,
+          "ph": {
+            "uk": "prɒˈsperəti",
+            "us": "prɒˈsperəti"
+          },
+          "pos": "n. [U]",
+          "gloss": "繁荣，昌盛；成功",
+          "usage": "pro(向前)+sper(希望)+ity→有希望向前→昌盛；形容词 prosperous；搭配 economic prosperity、bring prosperity",
+          "phrases": [
+            "economic prosperity 经济繁荣",
+            "bring prosperity 带来繁荣"
+          ],
+          "ex": [
+            {
+              "en": "Trade with neighbouring countries brought great prosperity to the coastal region.",
+              "zh": "与邻国的贸易给沿海地区带来了巨大的繁荣。"
+            }
+          ]
+        },
+        {
+          "w": "flourish",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈflʌrɪʃ",
+            "us": "ˈflʌrɪʃ"
+          },
+          "pos": "vi. / n.",
+          "gloss": "繁荣，兴旺；茁壮成长；挥舞（vt.）",
+          "usage": "flour(花)+ish→开花→繁荣；近义 thrive、prosper，反义 decline 衰退；形容词 flourishing；另义 挥舞",
+          "phrases": [
+            "a flourishing economy 繁荣的经济",
+            "continue to flourish 继续繁荣"
+          ],
+          "ex": [
+            {
+              "en": "The author believes the anti-happy art flourishes when economy booms.",
+              "zh": "作者认为，当经济繁荣时，反快乐艺术也会繁荣。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "specific · concrete",
       "memo": "都译\"具体\"，对立面不同：specific 对着含糊、一般，指明确、特定的那一个（a specific goal）；concrete 对着抽象，指感官摸得到的、落地的（concrete evidence），名词还是混凝土。写作：要求\"说明确\"用 specific，要求\"不空洞\"用 concrete。",
       "words": [
