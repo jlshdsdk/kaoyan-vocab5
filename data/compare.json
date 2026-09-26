@@ -997,6 +997,54 @@
   ],
   "form": [
     {
+      "title": "propose · purpose",
+      "memo": "pose（放）家族两兄弟，开头定身份：propose＝pro(向前)+pose(放)→把观点放到人前→提议、建议，还有\"求婚\"义（propose to sb.）；purpose＝pur(向前)+pose→放在前面的目标→目的、意图（on purpose 故意，for the purpose of 为了）。形近区分：propose 动词重音在后 /prəˈpəʊz/，purpose 名词重音在前 /ˈpɜːpəs/；\"提出建议\"用 propose，\"目的\"用 purpose。同根还有 expose（往外放→暴露），见 exploit·expose·explicit·explore 组。",
+      "words": [
+        {
+          "w": "propose",
+          "rank": 5,
+          "ph": {
+            "uk": "prəˈpəʊz",
+            "us": "prəˈpəʊz"
+          },
+          "pos": "vt. / vi.",
+          "gloss": "提议，建议；求婚；提名，推荐",
+          "usage": "pro(向前)+pose(放)→把观点放到人前→提出；propose that + (should) do 虚拟语气是考点；名词 proposal 提议/求婚",
+          "phrases": [
+            "propose a new initiative 提出新倡议",
+            "propose to sb. 向某人求婚"
+          ],
+          "ex": [
+            {
+              "en": "To solve the euro problem, Germany proposed that stricter regulations be imposed.",
+              "zh": "为了解决欧元问题，德国提议实施更严格的法规。"
+            }
+          ]
+        },
+        {
+          "w": "purpose",
+          "rank": 3,
+          "ph": {
+            "uk": "ˈpɜːpəs",
+            "us": "ˈpɜːpəs"
+          },
+          "pos": "n.",
+          "gloss": "目的，意图；用途；重要意义",
+          "usage": "pur(向前)+pose(放)→放在前面的目标→目的；搭配 on purpose 故意、for the purpose of 为了；a sense of purpose 使命感",
+          "phrases": [
+            "on purpose 故意",
+            "for (the) purpose of 为了"
+          ],
+          "ex": [
+            {
+              "en": "The purpose of the meeting is to review the company's plans for the coming year.",
+              "zh": "此次会议的目的是审查公司来年的计划。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "expectation · expect · except · exception",
       "memo": "四词是两对孪生：expect 家族走 pect（看）——ex(往外)+pect→往外看→期待、预期，expect 动词\"预料/期待\"，expectation 名词\"期望\"（beyond expectation 出乎意料）；except 家族走 cept（拿）——ex(向外)+cept→拿出去→排除在外，except 是\"除……之外\"（except for 除整体中的细节），exception 名词\"例外\"（with the exception of、no exception 不例外）。陷阱在中间三个字母：-pect- 是看（期待），-cept- 是拿（排除）；听力上 expect /ɪkˈspekt/ 多个 /k/，except /ɪkˈsept/ 短一截。",
       "words": [
