@@ -25,9 +25,17 @@
 .drow.sel .dcount { color: var(--accent-ink); }
 .drow .dtitle { font-weight: 600; font-size: 15.5px; }
 .drow .dcount { color: var(--accent); font-size: 14px; font-weight: 600; }
-.pager { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); }
-.pager .btn { padding: 6px 18px; font-size: 14px; }
-.pginfo { color: var(--ink-2); font-size: 14px; white-space: nowrap; }
+/* 日期按月分组折叠 + 筛选：百天级笔记也能快速定位与统计 */
+.datelist { max-height: 72vh; overflow: auto; }
+.dsearch { position: sticky; top: 0; z-index: 2; padding: 10px 12px; border-bottom: 1px solid var(--line); background: var(--bg-card); }
+.dsearch input { width: 100%; box-sizing: border-box; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg-inset); color: var(--ink); font-size: 14px; outline: none; }
+.dsearch input:focus { border-color: var(--accent); }
+.mrow { display: flex; align-items: center; gap: 9px; padding: 11px 16px; cursor: pointer; background: var(--bg-inset); border-bottom: 1px solid var(--line); font-weight: 600; font-size: 14.5px; user-select: none; }
+.mrow:hover { filter: brightness(0.97); }
+.mrow .mcaret { color: var(--accent); font-size: 12px; transition: transform .15s; }
+.mrow.on .mcaret { transform: rotate(90deg); }
+.mrow .mstat { margin-left: auto; color: var(--accent); font-size: 13px; font-weight: 600; }
+.mempty { padding: 16px; color: var(--ink-2); font-size: 14px; }
 
 /* 所选日期的笔记 */
 .daycard { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); margin: 14px 0; padding: 6px 16px 16px; box-shadow: var(--shadow); }
@@ -78,7 +86,10 @@
   </div>
 
   <button class="datesel" id="dateSel" aria-expanded="false"></button>
-  <div class="datelist" id="dateList" hidden></div>
+  <div class="datelist" id="dateList" hidden>
+    <div class="dsearch"><input id="dateSearch" placeholder="🔍 输入日期筛选，如 09-12、8月、周三" aria-label="按日期筛选笔记"></div>
+    <div id="dateGroups"></div>
+  </div>
   <div id="dayView"></div>
 </main>
 
@@ -103,7 +114,6 @@ const $ = id => document.getElementById(id);
 function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
 const WEEK = ['日','一','二','三','四','五','六'];
-const PAGE_SIZE = 15;              // 日期每页天数，超出自动分页
 
 function noteWordCard(w) {
   const ph = w.ph || {};
@@ -129,10 +139,13 @@ function noteGroupCard(g) {
 }
 
 let days = [];                     // 全部日期（降序，最新在前）
-const pg = { cur: 0, total: 1 };
 let selDate = null, listOpen = false;
+let openMonths = new Set();        // 展开的月份（YYYY-MM）；筛选时全部展开
+let monthFilter = '';              // 日期筛选串
 
 const wd = d => { const t = new Date(d + 'T00:00:00'); return isNaN(t) ? '' : ' 周' + WEEK[t.getDay()]; };
+const monthKey = d => String(d).slice(0, 7);
+const monthLabel = k => { const [y, m] = k.split('-'); return `${y}年${+m}月`; };
 
 function renderSel() {
   const rec = days.find(d => d.date === selDate);
@@ -142,20 +155,33 @@ function renderSel() {
   $('dateSel').setAttribute('aria-expanded', listOpen);
 }
 
-function renderList() {
-  const start = pg.cur * PAGE_SIZE;
-  const slice = days.slice(start, start + PAGE_SIZE);
-  const rows = slice.map(d => `<div class="drow${d.date === selDate ? ' sel' : ''}" data-date="${esc(d.date)}" role="button" tabindex="0">
-      <span class="dtitle">📝 ${esc(d.date)}${wd(d.date)}</span>
-      <span class="dcount">${(d.words || []).length} 词</span>
-    </div>`).join('');
-  const pager = pg.total > 1 ? `<div class="pager">
-      <button class="btn pgbtn" data-pg="${pg.cur - 1}" ${pg.cur === 0 ? 'disabled' : ''}>‹ 上一页</button>
-      <span class="pginfo">第 ${pg.cur + 1} / ${pg.total} 页</span>
-      <button class="btn pgbtn" data-pg="${pg.cur + 1}" ${pg.cur === pg.total - 1 ? 'disabled' : ''}>下一页 ›</button>
-    </div>` : '';
-  $('dateList').innerHTML = rows + pager;
+/* 日期列表：按月分组的折叠导航（搜索框是 dateList 里的静态节点，重渲只刷 dateGroups 保焦点） */
+function renderGroups() {
+  const q = monthFilter.trim().toLowerCase();
+  const hit = d => !q || d.date.includes(q) || wd(d.date).includes(q) || monthLabel(monthKey(d.date)).includes(q);
+  const groups = [];
+  for (const d of days) {
+    if (!hit(d)) continue;
+    const k = monthKey(d.date);
+    let g = groups[groups.length - 1];
+    if (!g || g.key !== k) groups.push(g = { key: k, days: [] });
+    g.days.push(d);
+  }
+  $('dateGroups').innerHTML = groups.length ? groups.map(g => {
+    const open = q || openMonths.has(g.key);
+    const stat = `${g.days.length} 天 · ${g.days.reduce((n, d) => n + (d.words || []).length, 0)} 词`;
+    const rows = g.days.map(d => `<div class="drow${d.date === selDate ? ' sel' : ''}" data-date="${esc(d.date)}" role="button" tabindex="0">
+        <span class="dtitle">📝 ${esc(d.date)}${wd(d.date)}</span>
+        <span class="dcount">${(d.words || []).length} 词</span>
+      </div>`).join('');
+    return `<div class="mrow${open ? ' on' : ''}" data-m="${g.key}" role="button" tabindex="0" aria-expanded="${open}">
+        <span class="mcaret">▶</span>${esc(monthLabel(g.key))}<span class="mstat">${stat}</span>
+      </div>
+      <div class="mbody" ${open ? '' : 'hidden'}>${rows}</div>`;
+  }).join('') : '<div class="mempty">没有匹配的日期</div>';
 }
+
+function renderList() { renderGroups(); }
 
 function renderDay() {
   const rec = days.find(d => d.date === selDate);
@@ -246,26 +272,28 @@ async function load() {
   const total = raw.reduce((n, d) => n + (d.words || []).length, 0);
   $('noteSummary').textContent = `共 ${raw.length} 天 · ${total} 词`;
   days = [...raw].sort((a, b) => String(b.date).localeCompare(String(a.date)));   // 最新在前
-  pg.total = Math.max(1, Math.ceil(days.length / PAGE_SIZE));
-  pg.cur = 0;
+  openMonths = new Set([monthKey(days[0].date)]);   // 默认展开最新一个月，其余折叠
   selDate = days[0].date;         // 默认选最新一天
   renderSel(); renderList(); renderDay();
 }
 
 /* 交互 */
 $('dateSel').addEventListener('click', () => setListOpen(!listOpen));
+$('dateSearch').addEventListener('input', e => { monthFilter = e.target.value; renderGroups(); });
 
 $('dateList').addEventListener('click', e => {
-  const pgbtn = e.target.closest('.pgbtn');
-  if (pgbtn && !pgbtn.disabled) {
-    const next = Number(pgbtn.dataset.pg);
-    if (!Number.isNaN(next) && next >= 0 && next < pg.total) { pg.cur = next; renderList(); }
+  const m = e.target.closest('.mrow');
+  if (m) {                          // 月头：展开/收起当月，不影响已选日期
+    const k = m.dataset.m;
+    if (openMonths.has(k)) openMonths.delete(k); else openMonths.add(k);
+    renderGroups();
     return;
   }
   const row = e.target.closest('.drow');
   if (!row) return;
   selDate = row.dataset.date;
-  renderSel(); renderList(); renderDay();
+  openMonths.add(monthKey(selDate));
+  renderSel(); renderGroups(); renderDay();
   setListOpen(false);             // 选完日期收起列表，只显示所选那天
 });
 
