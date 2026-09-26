@@ -700,6 +700,54 @@
   ],
   "form": [
     {
+      "title": "successive · successful",
+      "memo": "都是 success 开头，尾巴定身份：succeed 有两条线——\"继承\"这条线生出 succession（连续/继任）→ successive 连续的、接连的（successive governments 历届政府，three successive years 连续三年）；\"成功\"这条线生出 success → successful 成功的（be successful in 在……成功）。最大的坑：successive 长得像\"成功的\"，其实是\"连续的\"——看到 -ive 想接连，看到 -ful 想成功。",
+      "words": [
+        {
+          "w": "successive",
+          "rank": 5,
+          "ph": {
+            "uk": "səkˈsesɪv",
+            "us": "səkˈsesɪv"
+          },
+          "pos": "adj.",
+          "gloss": "连续的，接连的",
+          "usage": "succeed（继承）这条线：succession 连续/继任 → successive 一个接一个的；近义 consecutive；同根 successor 继任者",
+          "phrases": [
+            "successive governments 历届政府",
+            "three successive defeats 三连败"
+          ],
+          "ex": [
+            {
+              "en": "Successive governments have promised to cut hospital waiting lists, yet the queues keep growing.",
+              "zh": "历届政府都承诺缩短医院候诊名单，但排队人数仍在不断增加。"
+            }
+          ]
+        },
+        {
+          "w": "successful",
+          "rank": 3,
+          "ph": {
+            "uk": "səkˈsesfl",
+            "us": "səkˈsesfl"
+          },
+          "pos": "adj.",
+          "gloss": "成功的，有成就的；有成效的",
+          "usage": "succeed（成功）这条线：success 成功 → successful 成功的；搭配 be successful in (doing) sth",
+          "phrases": [
+            "a successful career 成功的事业",
+            "be successful in 在……上成功"
+          ],
+          "ex": [
+            {
+              "en": "She is one of the most successful novelists of her generation.",
+              "zh": "她是同代人中最成功的小说家之一。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "commit · commission · commitment · committee",
       "memo": "全家福都在 commi(t)：commit 是动词源头，com+mit(送)把自己\"送出去\"——送出去干坏事是犯罪（commit a crime），送出去担责任是承诺（be committed to）。名词化分三路：+ment 是\"承诺\"这件事本身（make a commitment）；+tee 是被委托做事的\"一群人\"（committee，注意双写 t）；commission 走 mission（任务）——把任务送出去是委托，受托的一群人是（官方专门设立的）委员会，办完事抽成是佣金。两个\"委员会\"的分工：commission 偏官方专门机构（Federal Trade Commission 联邦贸易委员会），committee 是从大群体里选出来的工作小组。",
       "words": [
