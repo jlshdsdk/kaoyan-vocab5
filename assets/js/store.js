@@ -28,7 +28,23 @@ function load() {
   } catch (e) { console.warn('state load failed', e); }
   state = deepMerge(cloneDefaults(), state || {});
   migrateOldNoteKey(state);
+  enforceGraduation(state);
   return state;
+}
+
+/** 不变量：一个词不能同时存在于 words 与 graduated。
+ *  跨标签页 mergeIncoming / 云端 importJSON 都是并集合并、无墓碑记录，旧快照会把
+ *  已毕业的词重新并回 words，导致毕业词反复出现在生词本复习。这里按时间戳裁决：
+ *  words 记录的 lastAt 晚于毕业时间 = 毕业后又在别的设备复活在学 → 保留在学；
+ *  否则毕业胜出，从 words 移除。每次 load / 合并后执行，旧脏数据自动自愈。 */
+function enforceGraduation(s) {
+  for (const w of Object.keys(s.words || {})) {
+    const g = s.graduated[w];
+    if (!g) continue;
+    const graduatedAt = (g.graduatedAt != null) ? g.graduatedAt : Infinity;
+    if ((s.words[w].lastAt || 0) > graduatedAt) delete s.graduated[w];   // 毕业后复活在学
+    else delete s.words[w];                                              // 毕业胜出
+  }
 }
 
 /* 一次性迁移：旧版「今日笔记」独立键（只在当天显示，跨天即隐形）→ 永久并入 state.notes，
@@ -115,6 +131,7 @@ function mergeIncoming(disk) {
     if (!c) s.daily[k] = v;
     else { c.added = Math.max(c.added || 0, v.added || 0); c.familiar = Math.max(c.familiar || 0, v.familiar || 0); }
   }
+  enforceGraduation(s);
 }
 
 export function getState() { return load(); }
@@ -155,13 +172,16 @@ export function graduate(word, now = Date.now()) {
   save();
 }
 
-/** 复活毕业词：清零重学，记 reviveCount */
+/** 复活毕业词：清零重学，记 reviveCount。lastAt 记为复活时刻，
+ *  让"新者胜"合并时压过其他设备上毕业前的旧记录（否则旧记录会复活成新队列）。 */
 export function revive(word, now = Date.now()) {
   const s = load();
   if (!s.graduated[word]) return false;
   s.graduated[word].reviveCount = (s.graduated[word].reviveCount || 0) + 1;
   delete s.graduated[word];
-  s.words[word] = newRec(now);
+  const rec = newRec(now);
+  rec.lastAt = now;
+  s.words[word] = rec;
   save();
   return true;
 }
@@ -260,6 +280,7 @@ export function importJSON(text, { whole = true } = {}) {
       else { c.added = Math.max(c.added || 0, v.added || 0); c.familiar = Math.max(c.familiar || 0, v.familiar || 0); }
     }
   }
+  enforceGraduation(load());
   save();
   return true;
 }

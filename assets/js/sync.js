@@ -12,7 +12,7 @@
  */
 import { cloudEnabled, getUser, client } from './auth.js?v=18';
 import { toast } from './ui.js?v=18';
-import * as store from './store.js?v=18';
+import * as store from './store.js?v=19';
 
 const PUSH_DEBOUNCE = 3000;   // 本机改动后延迟回推（README 约定 3 秒）
 const RETRY_MS = 30000;       // 网络失败后的重试间隔
