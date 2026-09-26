@@ -997,6 +997,96 @@
   ],
   "form": [
     {
+      "title": "expectation · expect · except · exception",
+      "memo": "四词是两对孪生：expect 家族走 pect（看）——ex(往外)+pect→往外看→期待、预期，expect 动词\"预料/期待\"，expectation 名词\"期望\"（beyond expectation 出乎意料）；except 家族走 cept（拿）——ex(向外)+cept→拿出去→排除在外，except 是\"除……之外\"（except for 除整体中的细节），exception 名词\"例外\"（with the exception of、no exception 不例外）。陷阱在中间三个字母：-pect- 是看（期待），-cept- 是拿（排除）；听力上 expect /ɪkˈspekt/ 多个 /k/，except /ɪkˈsept/ 短一截。",
+      "words": [
+        {
+          "w": "expectation",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌekspekˈteɪʃn",
+            "us": "ˌekspekˈteɪʃn"
+          },
+          "pos": "n.",
+          "gloss": "期待，预期；期望，指望",
+          "usage": "ex(往外)+pect(看)+ation→往外看→期望；动词 expect；搭配 beyond expectation 出乎意料、contrary to expectation(s) 与期望相反",
+          "phrases": [
+            "beyond expectation 出乎意料",
+            "contrary to expectation(s) 与期望相反"
+          ],
+          "ex": [
+            {
+              "en": "The product failed to meet customers' expectation of high quality.",
+              "zh": "该产品未能达到顾客对高质量的期望。"
+            }
+          ]
+        },
+        {
+          "w": "expect",
+          "rank": 4,
+          "ph": {
+            "uk": "ɪkˈspekt",
+            "us": "ɪkˈspekt"
+          },
+          "pos": "vt.",
+          "gloss": "预料，预期；期望，指望",
+          "usage": "ex(往外)+pect(看)→向外看→预期；搭配 be expected to do sth. 被期望；be expecting 还可指\"怀孕\"",
+          "phrases": [
+            "expect to do sth. 期望做某事",
+            "be expected to do sth. 被期望做某事"
+          ],
+          "ex": [
+            {
+              "en": "Analysts expect house prices to rise more slowly next year.",
+              "zh": "分析师预计明年房价上涨会放缓。"
+            }
+          ]
+        },
+        {
+          "w": "except",
+          "rank": 4,
+          "ph": {
+            "uk": "ɪkˈsept",
+            "us": "ɪkˈsept"
+          },
+          "pos": "prep. / conj.",
+          "gloss": "除……之外；只是",
+          "usage": "ex(向外)+cept(拿)→拿出去→排除在外；except for 除整体中的细节；except that 后接从句",
+          "phrases": [
+            "except for... 除……之外",
+            "except that... 除了……（接从句）"
+          ],
+          "ex": [
+            {
+              "en": "The museum is open daily except on Monday mornings.",
+              "zh": "博物馆每天开放，周一上午除外。"
+            }
+          ]
+        },
+        {
+          "w": "exception",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪkˈsepʃ(ə)n",
+            "us": "ɪkˈsepʃ(ə)n"
+          },
+          "pos": "n.",
+          "gloss": "例外，除外",
+          "usage": "except+ion→除外；搭配 with the exception of... 除……之外、no exception 不例外、take exception to 反对",
+          "phrases": [
+            "with the exception of... 除……之外",
+            "no exception 不例外"
+          ],
+          "ex": [
+            {
+              "en": "With a few exceptions, the songwriting is very good.",
+              "zh": "除个别地方外，这首歌写得很好。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "property · prosperity · prospect",
       "memo": "prop- 家族三张脸，中段定身份：property＝proper(自己的)+ty→归自己的东西→财产、房产，引申物品的\"特性\"（重音在前 ˈ-）；prosperity＝pro(向前)+sper(希望)+ity→有希望向前→繁荣、昌盛（重音在后 -ˈper-，同根 prosper 繁荣）；prospect＝pro(向前)+spect(看)→向前看→前景、前途（同根 inspect 检查、spectator 观众）。形近区分抓中段：-pert- 是财产，-sper- 是繁荣，-spect- 是前景。顺带一个对子：property 对 poverty（贫穷）——\"贫穷的人没有很多的财产\"。",
       "words": [
