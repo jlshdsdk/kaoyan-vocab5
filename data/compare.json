@@ -236,8 +236,8 @@
       ]
     },
     {
-      "title": "immense · enormous",
-      "memo": "都是\"巨大\"，量的对象不同：immense 是 im-(不)+mens(测量)→大到测不完，偏空间/规模/程度（immense scale）；enormous 是 e-(超出)+norm(常规)→超出常规的大，更常接数量和影响（an enormous amount of、enormous impact）。写作：规模用 immense，数量/影响用 enormous。",
+      "title": "immense · enormous · considerable",
+      "memo": "都是\"大\"，量级和对象不同：immense 是 im-(不)+mens(测量)→大到测不完，偏空间/规模/程度（immense scale）；enormous 是 e-(超出)+norm(常规)→超出常规的大，更常接数量和影响（an enormous amount of、enormous impact）；considerable 最温和——\"相当大的、可观的\"，只是\"不少\"，够不上巨大（considerable attention/investment）。经典近形坑：considerable 相当大的 ≠ considerate 体贴的。写作：规模用 immense，数量/影响用 enormous，程度\"可观\"用 considerable。",
       "words": [
         {
           "w": "immense",
@@ -278,6 +278,27 @@
             {
               "en": "The decision had an enormous impact on the industry.",
               "zh": "这一决定对该行业产生了巨大影响。"
+            }
+          ]
+        },
+        {
+          "w": "considerable",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsɪdərəbl",
+            "us": "kənˈsɪdərəbl"
+          },
+          "pos": "adj.",
+          "gloss": "相当大的，相当多的；可观的",
+          "usage": "consider 家族：字面\"值得考虑的量\"→量不小；近形陷阱 considerate 体贴的；搭配 considerable attention/investment",
+          "phrases": [
+            "considerable investment 相当大的投资",
+            "attract considerable attention 引起相当大的关注"
+          ],
+          "ex": [
+            {
+              "en": "The industry also points out that real grass require considerable amounts of water.",
+              "zh": "该行业还指出，种植真草需要大量的水。"
             }
           ]
         }
