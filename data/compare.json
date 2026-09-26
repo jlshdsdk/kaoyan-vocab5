@@ -700,6 +700,96 @@
   ],
   "form": [
     {
+      "title": "commit · commission · commitment · committee",
+      "memo": "全家福都在 commi(t)：commit 是动词源头，com+mit(送)把自己\"送出去\"——送出去干坏事是犯罪（commit a crime），送出去担责任是承诺（be committed to）。名词化分三路：+ment 是\"承诺\"这件事本身（make a commitment）；+tee 是被委托做事的\"一群人\"（committee，注意双写 t）；commission 走 mission（任务）——把任务送出去是委托，受托的一群人是（官方专门设立的）委员会，办完事抽成是佣金。两个\"委员会\"的分工：commission 偏官方专门机构（Federal Trade Commission 联邦贸易委员会），committee 是从大群体里选出来的工作小组。",
+      "words": [
+        {
+          "w": "commit",
+          "rank": 5,
+          "ph": {
+            "uk": "kəˈmɪt",
+            "us": "kəˈmɪt"
+          },
+          "pos": "vt.",
+          "gloss": "犯（罪、错）；承诺，致力于；把……交托给",
+          "usage": "com-(加强)+mit(送)→把自己交出去→承诺→干出（坏事）；搭配 commit a crime 犯罪、be committed to (doing) 致力于",
+          "phrases": [
+            "commit a crime 犯罪",
+            "be committed to (doing) sth 致力于/献身于"
+          ],
+          "ex": [
+            {
+              "en": "They want to see the text of the proposed treaty before fully committing themselves.",
+              "zh": "他们想先看看拟议条约的文本，然后再作出充分承诺。"
+            }
+          ]
+        },
+        {
+          "w": "commission",
+          "rank": 5,
+          "ph": {
+            "uk": "kəˈmɪʃ(ə)n",
+            "us": "kəˈmɪʃ(ə)n"
+          },
+          "pos": "n. / vt.",
+          "gloss": "委员会；佣金，回扣；委托，委任（vt.）",
+          "usage": "com-(共同)+miss(送)+ion→把任务送出去→委托；受托的一群人→（官方专门）委员会；办成事抽成→佣金",
+          "phrases": [
+            "set up a commission 设立委员会",
+            "earn a commission on sth 从某事中抽佣金"
+          ],
+          "ex": [
+            {
+              "en": "She earns a commission of ten percent on every house she sells for the agency.",
+              "zh": "她为该机构每售出一套房子可获得百分之十的佣金。"
+            }
+          ]
+        },
+        {
+          "w": "commitment",
+          "rank": 5,
+          "ph": {
+            "uk": "kəˈmɪtmənt",
+            "us": "kəˈmɪtmənt"
+          },
+          "pos": "n.",
+          "gloss": "承诺，保证；奉献，投入",
+          "usage": "commit+ment（名词后缀）→承诺/投入；搭配 make a commitment 作出承诺、firm commitment 坚定的承诺",
+          "phrases": [
+            "make a commitment 作出承诺",
+            "firm commitment 坚定的承诺/投入"
+          ],
+          "ex": [
+            {
+              "en": "The government has made a firm commitment to halving carbon emissions within fifteen years.",
+              "zh": "政府已作出坚定承诺，将在十五年内把碳排放量减半。"
+            }
+          ]
+        },
+        {
+          "w": "committee",
+          "rank": 5,
+          "ph": {
+            "uk": "kəˈmɪti",
+            "us": "kəˈmɪti"
+          },
+          "pos": "n.",
+          "gloss": "委员会，全体委员",
+          "usage": "commit+tee→被委托做事的一群人→委员会；注意双写 t；对比 commission 官方专门委员会",
+          "phrases": [
+            "set up a committee 成立委员会",
+            "committee member 委员会成员"
+          ],
+          "ex": [
+            {
+              "en": "A special committee was set up to investigate the causes of the accident.",
+              "zh": "人们成立了一个特别委员会来调查事故原因。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "literary · liberal",
       "memo": "只差一个 t：liter- 就是 letter（文字），literary 只管文学，同根 literature 文学；liber- 就是 liberty（自由），liberal 管自由、开明，引申慷慨大方。最坑的搭配是 liberal education／liberal arts＝人文（通识）教育，不是\"自由教育\"；literary 没有自由义，文学批评、文学作品一律用它。",
       "words": [
