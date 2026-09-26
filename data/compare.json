@@ -838,8 +838,8 @@
       ]
     },
     {
-      "title": "exploit · explicit",
-      "memo": "都是 ex-+plic/ploit（折），中间元音定词义：exploit 是 oi，把资源折出来用→开发、利用、剥削；explicit 是 ici，把意思摊开说→明确、直言。反义搭档：explicit 对 implicit（含蓄）。",
+      "title": "exploit · expose · explicit · explore",
+      "memo": "都是 ex-（向外）打头的 expl/expo 家族：exploit 中间是 oi，把资源折出来用→利用、剥削；expose 是 pos（放），放到外头→暴露、使接触（be exposed to，名词 exposure）。explicit 是 plic（折）摊开→明确、直言（反义 implicit）；explore 是 plor（喊出来探路）→探索、勘探。判别：-plo- 折了用（exploit），-po- 放外头（expose），-icit 说清楚（explicit），-ore 往里探（explore）。",
       "words": [
         {
           "w": "exploit",
@@ -863,6 +863,27 @@
           ]
         },
         {
+          "w": "expose",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪkˈspəʊz",
+            "us": "ɪkˈspəʊz"
+          },
+          "pos": "vt.",
+          "gloss": "暴露，显露；揭露，揭发；使接触（新思想等）",
+          "usage": "ex-(外)+pos(放)→放到外面→暴露；搭配 be exposed to 接触/暴露于；同根 exposure 暴露、接触",
+          "phrases": [
+            "be exposed to... 接触……；暴露于……",
+            "expose scandals 揭露丑闻"
+          ],
+          "ex": [
+            {
+              "en": "Children should be exposed to good music.",
+              "zh": "应该让孩子们接触优秀的音乐。"
+            }
+          ]
+        },
+        {
           "w": "explicit",
           "rank": 5,
           "ph": {
@@ -880,6 +901,27 @@
             {
               "en": "The rules are explicit about what students may not do.",
               "zh": "这些规定把学生不准做的事说得很明确。"
+            }
+          ]
+        },
+        {
+          "w": "explore",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪkˈsplɔː(r)",
+            "us": "ɪkˈsplɔː(r)"
+          },
+          "pos": "vt. & vi.",
+          "gloss": "探索，探究；勘探，勘查",
+          "usage": "ex-(向外)+plor(喊)→猎人喊叫着探路→探索；同根 exploration 探索、explorer 探险者",
+          "phrases": [
+            "explore the possibility of... 探索……的可能性",
+            "explorer n. 探险者，勘探者"
+          ],
+          "ex": [
+            {
+              "en": "The report explores the causes of rising house prices in large cities.",
+              "zh": "该报告探讨了大城市房价上涨的原因。"
             }
           ]
         }
