@@ -2,6 +2,75 @@
   "v": 1,
   "syn": [
     {
+      "title": "virtue · merit · morality",
+      "memo": "都带\"德\"，层次不同：morality 是宏观的\"道德\"——社会的道德规范/伦理体系（形容词 moral，同义 ethics，\"克隆的争论既是科学问题也是道德问题\"）；virtue 是个体的\"美德\"——诚实、耐心这类具体品质，可数（Patience is a virtue），反义 vice 罪恶，兼指事物的\"优点\"（the virtue of simplicity），by virtue of 凭借是高频考点；merit 是\"优点、价值\"——可长处可功绩，最中性（judge on merit 凭本身优劣评判），反义 defect，还可作动词\"值得\"。分工：谈社会伦理用 morality，夸人品用 virtue，评方案优劣用 merit。",
+      "words": [
+        {
+          "w": "virtue",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈvɜːtʃuː",
+            "us": "ˈvɜːtʃuː"
+          },
+          "pos": "n. [C, U]",
+          "gloss": "美德，德行；优点，长处",
+          "usage": "反义 vice 罪恶；by virtue of 凭借/因为 是高频考点；兼指事物\"优点\"（the virtue of simplicity）；近 merit、morality",
+          "phrases": [
+            "by virtue of 凭借，因为",
+            "virtue and vice 美德与罪恶"
+          ],
+          "ex": [
+            {
+              "en": "Patience is a virtue that modern society seems to have forgotten.",
+              "zh": "耐心是现代社会似乎已经遗忘的一种美德。"
+            }
+          ]
+        },
+        {
+          "w": "merit",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈmerɪt",
+            "us": "ˈmerɪt"
+          },
+          "pos": "n. / vt.",
+          "gloss": "优点，长处；价值，功绩；值得（vt.）",
+          "usage": "反义 defect 缺点；judge on (its) merit 凭本身优劣评判；还可作动词\"值得，应受\"；助记：身上有很多 merit 的人想 marry",
+          "phrases": [
+            "judge on (its) merit 凭本身优劣评判",
+            "have merit 有其优点"
+          ],
+          "ex": [
+            {
+              "en": "The plan has merit, but it also involves considerable financial risks.",
+              "zh": "这个计划有其优点，但也涉及相当大的财务风险。"
+            }
+          ]
+        },
+        {
+          "w": "morality",
+          "rank": 4,
+          "ph": {
+            "uk": "məˈræləti",
+            "us": "məˈræləti"
+          },
+          "pos": "n. [U]",
+          "gloss": "道德，道德观；正当性",
+          "usage": "形容词 moral；同义 ethics；指社会的道德规范/伦理体系；反义 immorality",
+          "phrases": [
+            "conventional morality 主流道德观念",
+            "a sense of morality 道德观念"
+          ],
+          "ex": [
+            {
+              "en": "The debate over cloning is as much about morality as about science.",
+              "zh": "关于克隆的争论既是科学问题，也是道德问题。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "outcome · consequence · conclusion",
       "memo": "都译\"结果\"，因果链上的位置不同：outcome 最中性——行动或过程的\"最终产出\"（the final outcome of the negotiations 谈判的最终结果），不带好坏色彩；consequence 偏\"后果\"——强调前因引发的逻辑链，多指不良结果（face/suffer the consequences 承担后果，as a consequence of 由于……），另有\"重要性\"义（a matter of consequence）；conclusion 不是事情的结果——是推理的\"结论\"或文章的\"结尾\"（draw a conclusion、in conclusion 总之），jump to conclusions 匆匆下结论是阅读态度题高频。搭配分工：experiment/negotiation + outcome，决策失误 + consequence，研究/文章 + conclusion。",
       "words": [
