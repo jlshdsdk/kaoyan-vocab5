@@ -2,6 +2,96 @@
   "v": 1,
   "syn": [
     {
+      "title": "guarantee · ensure · promise · assure",
+      "memo": "都译\"保证\"，保的对象和力度不同：ensure 是\"确保\"——采取措施让事情必然发生，宾语只能是事（ensure safety、ensure that...）；assure 是\"使确信\"——宾语必须是人（assure sb. that/of sth.），目的是消除对方疑虑，同根 insurance 保险；guarantee 语气最强——对质量、结果\"担保\"，能开保修单的那种（under guarantee 在保修期内），名动同形；promise 最轻——只是主观\"答应\"，可能不兑现（keep/break a promise），另有\"预示\"义（clear skies promise a fine day）。句型抓手：ensure/guarantee + 事情，assure + 人，promise + to do。",
+      "words": [
+        {
+          "w": "guarantee",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌɡærənˈtiː",
+            "us": "ˌɡærənˈtiː"
+          },
+          "pos": "vt. / n.",
+          "gloss": "保证，担保；保修单（n.）",
+          "usage": "guar(联想 guard 警卫)+antee→担保；语气最强，可担保产品质量/结果；名动同形；搭配 under guarantee 在保修期内",
+          "phrases": [
+            "under guarantee 在保修期内",
+            "guarantee sb. sth. 向某人保证某事"
+          ],
+          "ex": [
+            {
+              "en": "Hard work does not guarantee success, but it greatly improves your chances.",
+              "zh": "努力并不能保证成功，但会大大增加成功的机会。"
+            }
+          ]
+        },
+        {
+          "w": "ensure",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈʃʊə(r)",
+            "us": "ɪnˈʃʊə(r)"
+          },
+          "pos": "vt.",
+          "gloss": "确保，保证；保证给予",
+          "usage": "en(使)+sure(确信)→使确信→确保；宾语是事情不是人；常用 ensure that... / ensure sth.",
+          "phrases": [
+            "ensure the safety of... 确保……的安全",
+            "ensure that... 保证……"
+          ],
+          "ex": [
+            {
+              "en": "We are working to ensure the safety of people in the city.",
+              "zh": "我们正在努力确保这个城市里人们的安全。"
+            }
+          ]
+        },
+        {
+          "w": "promise",
+          "rank": 3,
+          "ph": {
+            "uk": "ˈprɒmɪs",
+            "us": "ˈprɒmɪs"
+          },
+          "pos": "vt. & vi. / n.",
+          "gloss": "许诺，答应；预示；诺言；出息，成功的迹象（n.）",
+          "usage": "主观答应、可能不兑现；搭配 keep/make/break a promise；另义\"预示\"（\"保证\"义考过 2020 完形）",
+          "phrases": [
+            "keep/make/break a promise 信守/许下/违背诺言",
+            "promise sb. to do sth. 答应某人做某事"
+          ],
+          "ex": [
+            {
+              "en": "The government has promised to cut taxes in order to stimulate the economy.",
+              "zh": "政府已承诺减税以刺激经济。"
+            }
+          ]
+        },
+        {
+          "w": "assure",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈʃʊə(r)",
+            "us": "əˈʃʊə(r)"
+          },
+          "pos": "vt.",
+          "gloss": "向……保证；使确信，使放心",
+          "usage": "as(一再)+sure(确信)→一再地确信→使确信；宾语必须是人：assure sb. that/of sth.；同根 insurance 保险",
+          "phrases": [
+            "assure sb. of sth. 向某人保证某事",
+            "assure oneself 弄清楚，查明"
+          ],
+          "ex": [
+            {
+              "en": "Let me assure you that I will try to help you.",
+              "zh": "我向你保证，我会尽力帮你。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "complicated · complex · intricate",
       "memo": "都译\"复杂\"，复杂的方式不同：complicated＝com(一起)+plic(折)+ated→因素交织折在一起，强调难分析、难处理（收养的法律程序漫长而复杂）；complex＝com+plex(折)→结构折叠到一起，强调结构深、要专门知识才懂（complex social structure），名词还是\"综合体/建筑群\"（apartment complexes），派生 complexity 复杂性高频；intricate＝in(里)+tric(纠缠)→盘根错节，强调细节精细密实（手表里两百多个零件的机构、社交关系网）。快速分工：事情难办用 complicated，体系宏大用 complex，细节缠人用 intricate。",
       "words": [
