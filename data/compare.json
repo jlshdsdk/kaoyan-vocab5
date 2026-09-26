@@ -161,8 +161,8 @@
       ]
     },
     {
-      "title": "demonstrate · illustrate · indicate",
-      "memo": "都译\"表明\"，证据力度不同：demonstrate 最硬——用实验、证据把结论\"证明\"出来（The study demonstrates...），另有\"演示、示范\"和 vi.\"示威\"义；illustrate 是\"举例说明\"——用例子、图表把道理讲明白（illustrate his argument with figures 用数据说明论点），不承担证明对错，另有\"加插图\"义；indicate 最软——数据、迹象\"指向\"结论，不把话说死，比 show 正式，\"暗示\"义是考点（2019 阅读）。惯搭：study/research + demonstrate，example/incident + illustrate，data/findings + indicate。",
+      "title": "demonstrate · illustrate · indicate · manifest",
+      "memo": "都译\"表明\"，证据力度不同：demonstrate 最硬——用实验、证据把结论\"证明\"出来（The study demonstrates...），另有\"演示、示范\"和 vi.\"示威\"义；illustrate 是\"举例说明\"——用例子、图表把道理讲明白（illustrate his argument with figures 用数据说明论点），不承担证明对错，另有\"加插图\"义；indicate 最软——数据、迹象\"指向\"结论，不把话说死，比 show 正式，\"暗示\"义是考点（2019 阅读）；manifest 偏\"显露\"——把看不见的情绪、品质、症状显性化，常考 manifests itself in...（压力常表现为头痛失眠），还兼形容词\"显而易见的\"（be manifest to all）。惯搭：study/research + demonstrate，example/incident + illustrate，data/findings + indicate，内在品质/症状 + manifest (itself)。",
       "words": [
         {
           "w": "demonstrate",
@@ -224,6 +224,27 @@
             {
               "en": "The survey data indicate a general satisfaction with the process.",
               "zh": "调查数据表明对该过程总体满意。"
+            }
+          ]
+        },
+        {
+          "w": "manifest",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈmænɪfest",
+            "us": "ˈmænɪfest"
+          },
+          "pos": "vt. / adj.",
+          "gloss": "表明，显示；表露，显露；显而易见的（adj.）",
+          "usage": "书面正式词，指明确地表明；把看不见的显性化，常考 manifest itself in...；形容词义\"显而易见的\"（be manifest to all）；近义 obvious",
+          "phrases": [
+            "manifest itself in... 表现为……",
+            "be manifest to all 显而易见，人所共见"
+          ],
+          "ex": [
+            {
+              "en": "Stress often manifests itself in physical symptoms such as headaches and sleeplessness.",
+              "zh": "压力常常表现为头痛和失眠等身体症状。"
             }
           ]
         }
