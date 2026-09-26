@@ -272,7 +272,7 @@ async function load() {
   const total = raw.reduce((n, d) => n + (d.words || []).length, 0);
   $('noteSummary').textContent = `共 ${raw.length} 天 · ${total} 词`;
   days = [...raw].sort((a, b) => String(b.date).localeCompare(String(a.date)));   // 最新在前
-  openMonths = new Set([monthKey(days[0].date)]);   // 默认展开最新一个月，其余折叠
+  openMonths = new Set();   // 默认全部折叠，点月头展开（筛选时仍自动全展开）
   selDate = days[0].date;         // 默认选最新一天
   renderSel(); renderList(); renderDay();
 }
