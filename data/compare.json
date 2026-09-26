@@ -2,6 +2,75 @@
   "v": 1,
   "syn": [
     {
+      "title": "demonstrate · illustrate · indicate",
+      "memo": "都译\"表明\"，证据力度不同：demonstrate 最硬——用实验、证据把结论\"证明\"出来（The study demonstrates...），另有\"演示、示范\"和 vi.\"示威\"义；illustrate 是\"举例说明\"——用例子、图表把道理讲明白（illustrate his argument with figures 用数据说明论点），不承担证明对错，另有\"加插图\"义；indicate 最软——数据、迹象\"指向\"结论，不把话说死，比 show 正式，\"暗示\"义是考点（2019 阅读）。惯搭：study/research + demonstrate，example/incident + illustrate，data/findings + indicate。",
+      "words": [
+        {
+          "w": "demonstrate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈdemənstreɪt",
+            "us": "ˈdemənstreɪt"
+          },
+          "pos": "vt. / vi.",
+          "gloss": "证明，论证；演示，示范；游行示威（vi.）",
+          "usage": "de(加强)+monstr(表示)+ate→使劲表示→证明；同义 prove；名词 demonstration 演示/示威",
+          "phrases": [
+            "demonstrate the ability to do sth 展示做某事的能力",
+            "demonstrate against... 示威反对……"
+          ],
+          "ex": [
+            {
+              "en": "The study demonstrates the effectiveness of the drug.",
+              "zh": "这项研究证明了该药物的有效性。"
+            }
+          ]
+        },
+        {
+          "w": "illustrate",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈɪləstreɪt",
+            "us": "ˈɪləstreɪt"
+          },
+          "pos": "vt.",
+          "gloss": "（用示例、图表）说明，阐明；给……加插图",
+          "usage": "il(向内)+lus(照亮)+trate→把里面照亮→阐明；名词 illustration 说明/图解；搭配 illustrate a point",
+          "phrases": [
+            "illustrate a point 说明一个观点",
+            "illustrate an argument with figures 用数据说明论点"
+          ],
+          "ex": [
+            {
+              "en": "The incident illustrates the need for better security measures.",
+              "zh": "这次事件说明了加强安全措施的必要。"
+            }
+          ]
+        },
+        {
+          "w": "indicate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɪndɪkeɪt",
+            "us": "ˈɪndɪkeɪt"
+          },
+          "pos": "vt.",
+          "gloss": "表明，标示；暗示；指出",
+          "usage": "in(里)+dic(说)+ate→话里带话→暗示；比 show 正式；名词 indication；\"暗示\"义是考点（2019 阅读）",
+          "phrases": [
+            "indicate that... 表明……",
+            "as indicated above 如上文所指出的"
+          ],
+          "ex": [
+            {
+              "en": "The survey data indicate a general satisfaction with the process.",
+              "zh": "调查数据表明对该过程总体满意。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "prosperity · flourish",
       "memo": "都译\"繁荣\"，先分词性：prosperity 是名词——繁荣这个\"状态\"（economic prosperity 经济繁荣，bring prosperity 带来繁荣），形容词 prosperous；flourish 是动词——\"繁荣起来\"的\"过程\"，主语可以是经济、行业、公司，也能是植物和文化（a flourishing business 兴隆的生意）。画面感词根：prosper＝pro(向前)+sper(希望)→有希望向前→昌盛；flourish＝flour(花)+ish→开花→茁壮成长。近义 thrive 偏有生命物长势好；另注意 flourish 还有\"挥舞\"义。",
       "words": [
