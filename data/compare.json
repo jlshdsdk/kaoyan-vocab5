@@ -700,6 +700,54 @@
   ],
   "form": [
     {
+      "title": "literary · liberal",
+      "memo": "只差一个 t：liter- 就是 letter（文字），literary 只管文学，同根 literature 文学；liber- 就是 liberty（自由），liberal 管自由、开明，引申慷慨大方。最坑的搭配是 liberal education／liberal arts＝人文（通识）教育，不是\"自由教育\"；literary 没有自由义，文学批评、文学作品一律用它。",
+      "words": [
+        {
+          "w": "literary",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈlɪtərəri",
+            "us": "ˈlɪtərəri"
+          },
+          "pos": "adj.",
+          "gloss": "文学的，文学上的；从事文学写作的",
+          "usage": "liter(=letter 文字)+ary→与文字相关的→文学的；同根 literature 文学、literal 字面的",
+          "phrases": [
+            "literary compositions 文学作品",
+            "literary field 文学领域"
+          ],
+          "ex": [
+            {
+              "en": "Her literary career began when her first novel won a major national prize.",
+              "zh": "她的文学生涯始于她的第一部小说获得一项重要的全国大奖。"
+            }
+          ]
+        },
+        {
+          "w": "liberal",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈlɪbərəl",
+            "us": "ˈlɪbərəl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "自由的，开明的；慷慨的，大方的；人文（教育）的；自由主义者（n.）",
+          "usage": "liber(自由)+al→自由的，引申开明、慷慨；考点 liberal education＝人文教育≠自由教育；同根 liberty 自由",
+          "phrases": [
+            "liberal education 人文教育",
+            "liberal reforms 自由改革"
+          ],
+          "ex": [
+            {
+              "en": "A liberal education teaches students to think critically rather than merely to acquire job skills.",
+              "zh": "人文教育教学生批判性思考，而不仅仅是习得职业技能。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "exploit · explicit",
       "memo": "都是 ex-+plic/ploit（折），中间元音定词义：exploit 是 oi，把资源折出来用→开发、利用、剥削；explicit 是 ici，把意思摊开说→明确、直言。反义搭档：explicit 对 implicit（含蓄）。",
       "words": [
