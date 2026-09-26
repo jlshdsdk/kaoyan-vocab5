@@ -1959,8 +1959,8 @@
       ]
     },
     {
-      "title": "trait · trial · treaty",
-      "memo": "中间元音定词义：ai→特征（单音节 /treɪt/）；ia→审判/试验（/ˈtraɪəl/，try 的名词）；ea→条约（/ˈtriːti/，treat 的名词）。三个词都是考研高频，拼写只差一两个字母。",
+      "title": "trait · trial · treaty · trace",
+      "memo": "中间元音定词义：ai→特征（单音节 /treɪt/）；ia→审判/试验（/ˈtraɪəl/，try 的名词）；ea→条约（/ˈtriːti/，treat 的名词）。trace 和 trait 只差结尾、几乎同音（/treɪs/ 对 /treɪt/）：trace 是 t+race（比赛）→你追我赶→追踪、痕迹，名词动词都能当（trace back to 追溯到）；trait 只有名词\"特征\"。听力抓尾音：/s/ 是 trace，/t/ 是 trait。",
       "words": [
         {
           "w": "trait",
@@ -2022,6 +2022,27 @@
             {
               "en": "The two nations finally signed a peace treaty.",
               "zh": "两国最终签署了和平条约。"
+            }
+          ]
+        },
+        {
+          "w": "trace",
+          "rank": 5,
+          "ph": {
+            "uk": "treɪs",
+            "us": "treɪs"
+          },
+          "pos": "n. / v.",
+          "gloss": "痕迹，踪迹；微量，少许；追踪，追溯，查出（v.）",
+          "usage": "t+race（比赛）→踢比赛你追我赶→追踪；搭配 trace back to 追溯到、a trace of 一丝/微量",
+          "phrases": [
+            "trace back to 追溯到",
+            "a trace of 一丝，少许"
+          ],
+          "ex": [
+            {
+              "en": "Language probably traces back at least 80,000 years.",
+              "zh": "语言的出现至少可以追溯到8万年前。"
             }
           ]
         }
