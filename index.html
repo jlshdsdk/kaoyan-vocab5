@@ -78,7 +78,7 @@ import { initAuthNav } from './assets/js/auth-nav.js?v=18';
 import { startSync } from './assets/js/sync.js?v=18';
 
 
-import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=23';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=24';
 import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=18';
 import * as store from './assets/js/store.js?v=18';
 import * as data from './assets/js/data.js?v=24';
@@ -136,6 +136,11 @@ async function nextWord() {
     cur = e; curRank = data.getIndex().map[w][1];
     render();
     prefetchRealAudio(e.w);
+    for (const nw of queue) {           // 队列里的下一个词提前预载，翻卡即响
+      if (store.shouldSkip(nw)) continue;
+      prefetchRealAudio(nw);
+      break;
+    }
     return;
   }
   $('cardBody').innerHTML = '';

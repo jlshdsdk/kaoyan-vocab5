@@ -109,7 +109,7 @@ import { startSync } from './assets/js/sync.js?v=18';
 
 
 import { initTheme, setTheme, getTheme, toast, cardFront, cardBack, bindAudioButtons, fmtDate, esc } from './assets/js/ui.js?v=18';
-import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=23';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=24';
 import * as store from './assets/js/store.js?v=18';
 import { review } from './assets/js/srs.js?v=25';
 import * as data from './assets/js/data.js?v=24';
@@ -177,6 +177,7 @@ async function nextCard() {
   $('flipBtn2').hidden = false;
   $('rateBtns').hidden = true;
   prefetchRealAudio(curW);
+  if (dueWords[1]) prefetchRealAudio(dueWords[1]);   // 下一张卡提前预载，连续 U/I 不空等
 }
 
 function flip2() {
