@@ -1342,8 +1342,8 @@
       ]
     },
     {
-      "title": "convention · conversion · conversation · conservation · convenience · contention",
-      "memo": "切勿当近义词。都是 con-，中段定词义：ven（来）→convention 惯例、大会；vers（转）→conversion 转变；conversa 多一个 a→conversation 谈话；serv（守）→conservation 保护；veni→convenience 便利；tent（争）→contention 争论、论点。",
+      "title": "convention · conversion · conversation · conservation · convenience · contention · convince",
+      "memo": "切勿当近义词。都是 con-，中段定词义：ven（来）→convention 惯例、大会；vers（转）→conversion 转变；conversa 多一个 a→conversation 谈话；serv（守）→conservation 保护；veni→convenience 便利；tent（争）→contention 争论、论点；convince 是队里唯一的动词——vinc（征服）→把疑虑\"征服\"掉→使确信、说服（convince sb. of sth.），同根 victory 胜利。",
       "words": [
         {
           "w": "convention",
@@ -1468,6 +1468,27 @@
             {
               "en": "It is her contention that remote work raises productivity.",
               "zh": "她的观点是，远程办公会提高生产率。"
+            }
+          ]
+        },
+        {
+          "w": "convince",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈvɪns",
+            "us": "kənˈvɪns"
+          },
+          "pos": "vt.",
+          "gloss": "使确信，使信服；说服",
+          "usage": "con(共同)+vinc(征服)→征服人心→使信服；搭配 convince sb. of sth. / convince sb. that；同根 victory；形容词 convincing 有说服力的",
+          "phrases": [
+            "convince sb. of sth. 使某人确信某事",
+            "convincing evidence 令人信服的证据"
+          ],
+          "ex": [
+            {
+              "en": "It took hours of discussion to convince the board that the plan was safe.",
+              "zh": "花了数小时的讨论才让董事会相信该计划是安全的。"
             }
           ]
         }
