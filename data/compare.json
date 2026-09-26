@@ -2,6 +2,75 @@
   "v": 1,
   "syn": [
     {
+      "title": "complicated · complex · intricate",
+      "memo": "都译\"复杂\"，复杂的方式不同：complicated＝com(一起)+plic(折)+ated→因素交织折在一起，强调难分析、难处理（收养的法律程序漫长而复杂）；complex＝com+plex(折)→结构折叠到一起，强调结构深、要专门知识才懂（complex social structure），名词还是\"综合体/建筑群\"（apartment complexes），派生 complexity 复杂性高频；intricate＝in(里)+tric(纠缠)→盘根错节，强调细节精细密实（手表里两百多个零件的机构、社交关系网）。快速分工：事情难办用 complicated，体系宏大用 complex，细节缠人用 intricate。",
+      "words": [
+        {
+          "w": "complicated",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒmplɪkeɪtɪd",
+            "us": "ˈkɒmplɪkeɪtɪd"
+          },
+          "pos": "adj.",
+          "gloss": "复杂的，难懂的；难处理的",
+          "usage": "com(一起)+plic(折叠)+ated→因素交织折在一起→难分析处理；书内辨析：complex 重结构深，intricate 重细节缠",
+          "phrases": [
+            "be further complicated by... 因……而更加复杂",
+            "a long and complicated process 漫长而复杂的过程"
+          ],
+          "ex": [
+            {
+              "en": "The legal process for adopting a child from abroad can be long and complicated.",
+              "zh": "从国外收养儿童的法律程序可能漫长而复杂。"
+            }
+          ]
+        },
+        {
+          "w": "complex",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒmpleks",
+            "us": "ˈkɒmpleks"
+          },
+          "pos": "adj. / n.",
+          "gloss": "复杂的，难懂的；综合体，建筑群（n.）",
+          "usage": "com(一起)+plex(折叠)→折叠到一起→结构复杂；派生 complexity n. 复杂性；名词义\"建筑群\"是考点",
+          "phrases": [
+            "complex social structure 复杂的社会结构",
+            "apartment complexes 公寓建筑群"
+          ],
+          "ex": [
+            {
+              "en": "We live in an increasingly complex world.",
+              "zh": "我们生活在一个日益复杂的世界。"
+            }
+          ]
+        },
+        {
+          "w": "intricate",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈɪntrɪkət",
+            "us": "ˈɪntrɪkət"
+          },
+          "pos": "adj.",
+          "gloss": "错综复杂的；复杂精细的",
+          "usage": "in(里)+tric(纠缠)+ate→纠缠在一起→盘根错节；近义 complicated；强调细节精细、难掌握细节",
+          "phrases": [
+            "an intricate mechanism 精密复杂的机构",
+            "intricate carvings 精细繁复的雕饰"
+          ],
+          "ex": [
+            {
+              "en": "The watch contains an intricate mechanism of more than two hundred tiny parts.",
+              "zh": "这块手表内部有一个由两百多个微小零件组成的精密复杂机构。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "demonstrate · illustrate · indicate",
       "memo": "都译\"表明\"，证据力度不同：demonstrate 最硬——用实验、证据把结论\"证明\"出来（The study demonstrates...），另有\"演示、示范\"和 vi.\"示威\"义；illustrate 是\"举例说明\"——用例子、图表把道理讲明白（illustrate his argument with figures 用数据说明论点），不承担证明对错，另有\"加插图\"义；indicate 最软——数据、迹象\"指向\"结论，不把话说死，比 show 正式，\"暗示\"义是考点（2019 阅读）。惯搭：study/research + demonstrate，example/incident + illustrate，data/findings + indicate。",
       "words": [
