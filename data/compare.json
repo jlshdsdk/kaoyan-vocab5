@@ -2,6 +2,95 @@
   "v": 1,
   "syn": [
     {
+      "title": "subsidy · allowance · grant · subvention",
+      "memo": "都是\"给钱\"，给法和对象不同：subsidy 是\"补贴\"——政府为扶持产业、压低成本发的（farm subsidies 农业补贴、housing subsidy 住房补贴），受补的是产业/项目；allowance 是\"津贴/零用钱\"——按期发给个人的固定款项（jobseeker's allowance 求职津贴），另考 make allowance(s) for 考虑到/体谅；grant 是\"拨款\"——机构为特定目的（尤指科研、学业）批的一笔钱（research grant 科研拨款、student grants 助学金），动词还可\"准予\"，必背 take...for granted 理所当然；subvention 最书面——公家给机构（大学、剧团）的补助金，词根 sub(从旁)+vent(来)→从旁相助。分工：产业用 subsidy，个人按月用 allowance，项目批款用 grant，机构受助用 subvention。",
+      "words": [
+        {
+          "w": "subsidy",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈsʌbsədi",
+            "us": "ˈsʌbsədi"
+          },
+          "pos": "n. [C]",
+          "gloss": "补贴，津贴，补助金",
+          "usage": "sub(辅助)+side(旁边)→在旁边支撑生活的收入→补贴；多为政府扶持产业/压低物价而发；动词 subsidize 补贴",
+          "phrases": [
+            "government subsidies 政府补贴",
+            "farm subsidy programme 农业补贴计划"
+          ],
+          "ex": [
+            {
+              "en": "Without a government subsidy, the rural bus service would have to close completely.",
+              "zh": "如果没有政府补贴，乡村巴士服务将不得不完全停运。"
+            }
+          ]
+        },
+        {
+          "w": "allowance",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈlaʊəns",
+            "us": "əˈlaʊəns"
+          },
+          "pos": "n. [C, U]",
+          "gloss": "津贴，补贴；零用钱；限额，免税额",
+          "usage": "allow(允许)+ance→允许支配的钱→津贴/零用钱；按期发给个人；高频搭配 make allowance(s) for 考虑到/体谅",
+          "phrases": [
+            "make allowance(s) for... 考虑到……；体谅……",
+            "jobseeker's allowance 求职者津贴"
+          ],
+          "ex": [
+            {
+              "en": "His parents give him a monthly allowance.",
+              "zh": "他的父母每月给他零用钱。"
+            }
+          ]
+        },
+        {
+          "w": "grant",
+          "rank": 4,
+          "ph": {
+            "uk": "ɡrɑːnt",
+            "us": "ɡrɑːnt"
+          },
+          "pos": "n. [C] / vt.",
+          "gloss": "拨款，补助金；授予物；准予，授予（vt.）",
+          "usage": "机构为特定目的（科研/学业）批的款项：research grant、student grants；动词 grant sb. sth. 准予/授予；必背 take...for granted 认为理所当然",
+          "phrases": [
+            "take...for granted 认为……理所当然",
+            "research grant 科研拨款"
+          ],
+          "ex": [
+            {
+              "en": "The university awarded her a research grant.",
+              "zh": "大学授予她一笔科研拨款。"
+            }
+          ]
+        },
+        {
+          "w": "subvention",
+          "ph": {
+            "uk": "səbˈvenʃn",
+            "us": "səbˈvenʃn"
+          },
+          "pos": "n. [C, U]",
+          "gloss": "（政府给机构的）补助金，津贴",
+          "usage": "sub(从旁)+vent(来)→从旁相助→补助；最书面，多指公共资金对大学、艺术团体等机构的资助；近 subsidy",
+          "phrases": [
+            "state subvention 国家补助",
+            "public subventions 公共补助金"
+          ],
+          "ex": [
+            {
+              "en": "The theatre survives on a modest annual subvention from the city.",
+              "zh": "这家剧院靠市政府每年一笔不多的补助维持运转。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "virtue · merit · morality",
       "memo": "都带\"德\"，层次不同：morality 是宏观的\"道德\"——社会的道德规范/伦理体系（形容词 moral，同义 ethics，\"克隆的争论既是科学问题也是道德问题\"）；virtue 是个体的\"美德\"——诚实、耐心这类具体品质，可数（Patience is a virtue），反义 vice 罪恶，兼指事物的\"优点\"（the virtue of simplicity），by virtue of 凭借是高频考点；merit 是\"优点、价值\"——可长处可功绩，最中性（judge on merit 凭本身优劣评判），反义 defect，还可作动词\"值得\"。分工：谈社会伦理用 morality，夸人品用 virtue，评方案优劣用 merit。",
       "words": [
