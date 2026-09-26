@@ -1974,8 +1974,8 @@
       ]
     },
     {
-      "title": "resistant · consistent · constitute",
-      "memo": "三词同属\"站（sist/stit）\"词根家族：re-sist-ant = 回+站→顶住不退=抵抗的；con-sist-ent = 共同+站→站在一起=一致的（搭配 be consistent with）；con-stit-ute = 站到一起→组成、构成。拼写陷阱：consistent 词尾是 -ent 不是 -ant（笔记原笔 consistant 系笔误）。resistant 与 constitute 也是 9.18 生词笔记成员，可联动复习。",
+      "title": "resistant · consistent · constitute · constant",
+      "memo": "四词同属\"站（sist/stit/stant）\"词根家族：re-sist-ant = 回+站→顶住不退=抵抗的；con-sist-ent = 共同+站→站在一起=一致的（搭配 be consistent with）；con-stit-ute = 站到一起→组成、构成；con-stant = 站定不动→恒定的、不断的（constant temperature 恒温，名词还是数学里的\"常数\"）。拼写陷阱：consistent 词尾是 -ent 不是 -ant（笔记原笔 consistant 系笔误）；resistant 和 constant 才是 -ant，consistent 与 constant 只差中间 ist/an。resistant 与 constitute 也是 9.18 生词笔记成员，可联动复习。",
       "words": [
         {
           "w": "resistant",
@@ -2037,6 +2037,27 @@
             {
               "en": "Women constitute nearly half of the workforce.",
               "zh": "女性占劳动力的近一半。"
+            }
+          ]
+        },
+        {
+          "w": "constant",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnstənt",
+            "us": "ˈkɒnstənt"
+          },
+          "pos": "adj. / n.",
+          "gloss": "不断的，持续发生的；恒定的，不变的；常数，常量（n.）",
+          "usage": "con(都)+stant(=stand 站)→站定不动→恒定不变、持续发生；书内辨析：continual 时断时续（常指烦心事）、continuous 连续不断；反义 changeable",
+          "phrases": [
+            "constant temperature 恒温",
+            "constant interruptions 接连不断的干扰"
+          ],
+          "ex": [
+            {
+              "en": "The machine requires constant attention, since a brief failure could halt the whole line.",
+              "zh": "这台机器需要持续的关注，因为短暂故障就可能使整条生产线停工。"
             }
           ]
         }
