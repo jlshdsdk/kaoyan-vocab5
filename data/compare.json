@@ -907,6 +907,75 @@
   ],
   "form": [
     {
+      "title": "property · prosperity · prospect",
+      "memo": "prop- 家族三张脸，中段定身份：property＝proper(自己的)+ty→归自己的东西→财产、房产，引申物品的\"特性\"（重音在前 ˈ-）；prosperity＝pro(向前)+sper(希望)+ity→有希望向前→繁荣、昌盛（重音在后 -ˈper-，同根 prosper 繁荣）；prospect＝pro(向前)+spect(看)→向前看→前景、前途（同根 inspect 检查、spectator 观众）。形近区分抓中段：-pert- 是财产，-sper- 是繁荣，-spect- 是前景。顺带一个对子：property 对 poverty（贫穷）——\"贫穷的人没有很多的财产\"。",
+      "words": [
+        {
+          "w": "property",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈprɒpəti",
+            "us": "ˈprɒpəti"
+          },
+          "pos": "n.",
+          "gloss": "财产，所有物；房地产；特性，性质",
+          "usage": "proper(自己的)+ty→归自己所有→财产；引申事物固有的\"特性\"；对 poverty 贫穷——\"贫穷的人没有很多的财产\"",
+          "phrases": [
+            "common property 公共财产",
+            "property developers 房地产开发商"
+          ],
+          "ex": [
+            {
+              "en": "The price of property has risen enormously.",
+              "zh": "房地产的价格大幅上升了。"
+            }
+          ]
+        },
+        {
+          "w": "prosperity",
+          "rank": 5,
+          "ph": {
+            "uk": "prɒˈsperəti",
+            "us": "prɒˈsperəti"
+          },
+          "pos": "n. [U]",
+          "gloss": "繁荣，昌盛；成功",
+          "usage": "pro(向前)+sper(希望)+ity→有希望向前→昌盛；形容词 prosperous；义近角度另见 prosperity·flourish 组",
+          "phrases": [
+            "economic prosperity 经济繁荣",
+            "bring prosperity 带来繁荣"
+          ],
+          "ex": [
+            {
+              "en": "It makes for economic prosperity.",
+              "zh": "它有利于经济繁荣。"
+            }
+          ]
+        },
+        {
+          "w": "prospect",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈprɒspekt",
+            "us": "ˈprɒspekt"
+          },
+          "pos": "n.",
+          "gloss": "前景，前途；可能性；景色",
+          "usage": "pro(向前)+spect(看)→向前看→前景；重音在首音节（vi. 勘探时移到第二音节 prəˈspekt）；同根 inspect、spectator；辨析 perspective 延绵远景",
+          "phrases": [
+            "job prospects 就业前景",
+            "in prospect 可预料到的"
+          ],
+          "ex": [
+            {
+              "en": "Many graduates are worried about their job prospects in an uncertain economy.",
+              "zh": "在经济前景不明朗的情况下，许多毕业生对自己的就业前景感到担忧。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "successive · successful",
       "memo": "都是 success 开头，尾巴定身份：succeed 有两条线——\"继承\"这条线生出 succession（连续/继任）→ successive 连续的、接连的（successive governments 历届政府，three successive years 连续三年）；\"成功\"这条线生出 success → successful 成功的（be successful in 在……成功）。最大的坑：successive 长得像\"成功的\"，其实是\"连续的\"——看到 -ive 想接连，看到 -ful 想成功。",
       "words": [
