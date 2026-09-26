@@ -997,6 +997,117 @@
   ],
   "form": [
     {
+      "title": "exclude · exclusive · include · inclusive · conclude",
+      "memo": "词根都是\"关\"（clud/clus＝close）：exclude＝ex(向外)关→排除在外（exclude...from...，反义 include）；exclusive 是其形容词，常考义偏\"独有的、专属的\"（be exclusive to 为……独有，n. 独家报道）；include＝in(向里)关→包括在内（书内辨析：include 部分包括、contain 内容包含、involve 牵涉）；inclusive 包容广阔的、含全部费用的（inclusive of meals 含餐食）；conclude＝con(全部)关上→结束，再引申\"得出结论\"（conclude that...，名词 conclusion，to conclude 总之）。规律：-clude 是动词、-clusive 是形容词。conclude 另在 concede·conclude·convert 组里有 con- 动词角度的辨析。",
+      "words": [
+        {
+          "w": "exclude",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪkˈskluːd",
+            "us": "ɪkˈskluːd"
+          },
+          "pos": "vt.",
+          "gloss": "把……排除在外，不包括；排斥",
+          "usage": "ex(外)+clude(=close 关)→关在外面→排除；反义 include；搭配 exclude...from...；还可排除可能性",
+          "phrases": [
+            "exclude...from... 把……排除在……之外",
+            "exclude the possibility 排除可能性"
+          ],
+          "ex": [
+            {
+              "en": "The price excludes breakfast, which costs extra at the hotel.",
+              "zh": "该价格不含早餐，早餐在酒店需额外付费。"
+            }
+          ]
+        },
+        {
+          "w": "exclusive",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪkˈskluːsɪv",
+            "us": "ɪkˈskluːsɪv"
+          },
+          "pos": "adj. / n.",
+          "gloss": "独有的，专属的；高档的；独家报道（n.）",
+          "usage": "ex+clus(关)+ive→关在外面别人进不来→独有的；搭配 be exclusive to...；名词义\"独家新闻\"是新闻语境高频",
+          "phrases": [
+            "be exclusive to... 为……独有",
+            "an exclusive interview 独家采访"
+          ],
+          "ex": [
+            {
+              "en": "The hotel offers exclusive access to a private beach for its guests.",
+              "zh": "这家酒店为客人提供私人海滩的专属使用权。"
+            }
+          ]
+        },
+        {
+          "w": "include",
+          "rank": 4,
+          "ph": {
+            "uk": "ɪnˈkluːd",
+            "us": "ɪnˈkluːd"
+          },
+          "pos": "vt.",
+          "gloss": "包括，包含；使成为……的一部分",
+          "usage": "in(里)+clude(关)→关在里面→包括；书内辨析：include 部分包括、contain 内容成分包含、involve 涉及牵涉；including 介词\"包括……在内\"",
+          "phrases": [
+            "include...in... 把……包括在……内",
+            "including... 包括……在内"
+          ],
+          "ex": [
+            {
+              "en": "The price of the course does not include the cost of textbooks.",
+              "zh": "课程费用不包括教科书的开销。"
+            }
+          ]
+        },
+        {
+          "w": "inclusive",
+          "rank": 4,
+          "ph": {
+            "uk": "ɪnˈkluːsɪv",
+            "us": "ɪnˈkluːsɪv"
+          },
+          "pos": "adj.",
+          "gloss": "包容广阔的，范围广泛的；包含全部费用的",
+          "usage": "in(里)+clus(关)+ive→能容纳很多→包容的；搭配 inclusive of 含……费用；社会语境\"包容性社会\"高频",
+          "phrases": [
+            "inclusive of meals 包含餐食",
+            "an inclusive society 包容的社会"
+          ],
+          "ex": [
+            {
+              "en": "The package costs 300 dollars a night, inclusive of meals and airport transfers.",
+              "zh": "这套套餐每晚300美元，包含餐食和机场接送。"
+            }
+          ]
+        },
+        {
+          "w": "conclude",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈkluːd",
+            "us": "kənˈkluːd"
+          },
+          "pos": "v.",
+          "gloss": "结束，终止；得出结论，推断出；缔结，达成",
+          "usage": "con(全部)+clude(关)→全部关掉→结束→下结论；conclude that...；名词 conclusion；to conclude 总之（写作收尾）",
+          "phrases": [
+            "conclude from... 从……得出结论",
+            "to conclude 最后，总之"
+          ],
+          "ex": [
+            {
+              "en": "It is too early for us to conclude anything.",
+              "zh": "我们现在下结论还为时过早。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "propose · purpose",
       "memo": "pose（放）家族两兄弟，开头定身份：propose＝pro(向前)+pose(放)→把观点放到人前→提议、建议，还有\"求婚\"义（propose to sb.）；purpose＝pur(向前)+pose→放在前面的目标→目的、意图（on purpose 故意，for the purpose of 为了）。形近区分：propose 动词重音在后 /prəˈpəʊz/，purpose 名词重音在前 /ˈpɜːpəs/；\"提出建议\"用 propose，\"目的\"用 purpose。同根还有 expose（往外放→暴露），见 exploit·expose·explicit·explore 组。",
       "words": [
