@@ -1293,6 +1293,54 @@
   ],
   "form": [
     {
+      "title": "describe · subscribe",
+      "memo": "同根 -scrib(e)＝写，前缀定词义：de(下)+scribe→写下来即描述；sub(下面)+scribe→在下面签名即订阅/赞成。读音仅第二字母 e/o 之差，重音同在第二音节。",
+      "words": [
+        {
+          "w": "describe",
+          "rank": 3,
+          "ph": {
+            "uk": "dɪˈskraɪb",
+            "us": "dɪˈskraɪb"
+          },
+          "pos": "vt.",
+          "gloss": "描述，形容",
+          "usage": "de(下)+scrib(写)→写下来。常与 as 连用：describe A as B。",
+          "phrases": [
+            "describe...as... 把……描述为……",
+            "describe in detail 详细描述"
+          ],
+          "ex": [
+            {
+              "en": "She described the scene in vivid detail.",
+              "zh": "她生动细致地描述了那个场景。"
+            }
+          ]
+        },
+        {
+          "w": "subscribe",
+          "rank": 5,
+          "ph": {
+            "uk": "səbˈskraɪb",
+            "us": "səbˈskraɪb"
+          },
+          "pos": "vi./vt.",
+          "gloss": "订阅，订购；（to）赞成，同意；捐助",
+          "usage": "sub(下)+scribe(写)→在下面签名→订阅。多与 to 连用；to 后接观点时表赞成。",
+          "phrases": [
+            "subscribe to a magazine 订阅杂志",
+            "subscribe to one's view 赞同某人的观点"
+          ],
+          "ex": [
+            {
+              "en": "I don't subscribe to the view that money brings happiness.",
+              "zh": "我不认同金钱带来幸福的观点。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "emerge · engage",
       "memo": "六字母 e·_·_g·e 骨架，第 2 个字母定乾坤：m→merg(沉)从沉没中冒出即浮现；n→en(入)+gage(约)卷入其中即从事。重音都在第二音节。",
       "words": [
