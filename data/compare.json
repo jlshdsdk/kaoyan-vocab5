@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "compete · contend",
+      "memo": "compete 中性常用：比赛/商业竞争（with/against/for）；contend 更正式激烈，且多两个高频义——contend that 主张、contend with 应对困境。重叠义仅“争夺”。",
+      "words": [
+        {
+          "w": "compete",
+          "rank": 5,
+          "ph": {
+            "uk": "kəmˈpiːt",
+            "us": "kəmˈpiːt"
+          },
+          "pos": "vi.",
+          "gloss": "竞争；参加比赛",
+          "usage": "最常用中性词，指体育比赛或商业/资源竞争；搭配 with/against + for。",
+          "phrases": [
+            "compete with/against sb. 与……竞争",
+            "compete for sth. 争夺……"
+          ],
+          "ex": [
+            {
+              "en": "Several companies are competing for the contract.",
+              "zh": "几家公司正在争夺这份合同。"
+            }
+          ]
+        },
+        {
+          "w": "contend",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈtend",
+            "us": "kənˈtend"
+          },
+          "pos": "vi./vt.",
+          "gloss": "争夺，竞争；声称，主张",
+          "usage": "con(共同)+tend(伸)→都把手伸向→争夺；contend that…＝主张；contend with＝不得不对付。",
+          "phrases": [
+            "contend for power 争夺权力",
+            "contend with sth. 应对，对付（困境）"
+          ],
+          "ex": [
+            {
+              "en": "Critics contend that the reform has gone too far.",
+              "zh": "批评者认为这项改革走得太远了。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "specific · concrete",
       "memo": "都译\"具体\"，对立面不同：specific 对着含糊、一般，指明确、特定的那一个（a specific goal）；concrete 对着抽象，指感官摸得到的、落地的（concrete evidence），名词还是混凝土。写作：要求\"说明确\"用 specific，要求\"不空洞\"用 concrete。",
       "words": [
