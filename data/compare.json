@@ -2,30 +2,9 @@
   "v": 1,
   "syn": [
     {
-      "title": "confine· restrict· limit· restrain· constrain",
-      "memo": "同为“限制”：confine 窄圈禁闭（to/within）；restrict 正式指规则限制（to）；limit 最通用，可名可动（数量/权力）；restrain 强调忍住不表露（from）；constrain 外部条件逼着你不得不。",
+      "title": "restrict · constrain · restrain · confine · circumscribe · limit",
+      "memo": "同为“限制”：limit 最通用，可名可动；restrict 正式指规则限制（to）；confine 窄圈禁闭（to/within）；restrain 忍住不表露（from）；constrain 外部条件所迫；circumscribe 最书面，circum(周围)+scribe(画线)→划定界限，常指权力被框死。",
       "words": [
-        {
-          "w": "confine",
-          "rank": 5,
-          "ph": {
-            "uk": "kənˈfaɪn",
-            "us": "kənˈfaɪn"
-          },
-          "pos": "vt.",
-          "gloss": "限制；把……局限于；禁闭",
-          "usage": "强调限在狭窄范围内，常被动，搭配 to/within；con(加强)+fin(界限)→给出边界。",
-          "phrases": [
-            "be confined to 局限于",
-            "confine oneself to 只谈，只涉及"
-          ],
-          "ex": [
-            {
-              "en": "The disease is not confined to one region.",
-              "zh": "这种疾病并不局限于某一地区。"
-            }
-          ]
-        },
         {
           "w": "restrict",
           "rank": 5,
@@ -48,23 +27,23 @@
           ]
         },
         {
-          "w": "limit",
-          "rank": 4,
+          "w": "constrain",
+          "rank": 5,
           "ph": {
-            "uk": "ˈlɪmɪt",
-            "us": "ˈlɪmɪt"
+            "uk": "kənˈstreɪn",
+            "us": "kənˈstreɪn"
           },
-          "pos": "vt./n.",
-          "gloss": "限制；限度，极限",
-          "usage": "最通用，可名可动，限制的可是数量、时间、权力等有形无形的边界。",
+          "pos": "vt.",
+          "gloss": "限制，约束；强迫，迫使",
+          "usage": "强调外部条件或情势逼得你不得不如此；词源同 strain(拉紧)。",
           "phrases": [
-            "limit...to... 把……限制在……",
-            "speed limit 限速"
+            "constrain sb. to do sth. 强迫某人做某事",
+            "financial constraints 财力限制"
           ],
           "ex": [
             {
-              "en": "We must limit our spending to what we can afford.",
-              "zh": "我们必须把开支限制在能承受的范围内。"
+              "en": "Lack of funds constrained the project.",
+              "zh": "资金短缺束缚了这个项目。"
             }
           ]
         },
@@ -90,23 +69,64 @@
           ]
         },
         {
-          "w": "constrain",
+          "w": "confine",
           "rank": 5,
           "ph": {
-            "uk": "kənˈstreɪn",
-            "us": "kənˈstreɪn"
+            "uk": "kənˈfaɪn",
+            "us": "kənˈfaɪn"
           },
           "pos": "vt.",
-          "gloss": "限制，约束；强迫，迫使",
-          "usage": "强调外部条件或情势逼得你不得不如此；词源同 strain(拉紧)。",
+          "gloss": "限制；把……局限于；禁闭",
+          "usage": "强调限在狭窄范围内，常被动，搭配 to/within；con(加强)+fin(界限)→给出边界。",
           "phrases": [
-            "constrain sb. to do sth. 强迫某人做某事",
-            "financial constraints 财力限制"
+            "be confined to 局限于",
+            "confine oneself to 只谈，只涉及"
           ],
           "ex": [
             {
-              "en": "Lack of funds constrained the project.",
-              "zh": "资金短缺束缚了这个项目。"
+              "en": "The disease is not confined to one region.",
+              "zh": "这种疾病并不局限于某一地区。"
+            }
+          ]
+        },
+        {
+          "w": "circumscribe",
+          "ph": {
+            "uk": "ˈsɜːkəmskraɪb",
+            "us": "ˈsɝːkəmskraɪb"
+          },
+          "pos": "vt.",
+          "gloss": "限制，约束（正式）；划定……界限",
+          "usage": "circum(周围)+scribe(画)→在周围画线→框定范围。最书面，常指权力、自由被限制。",
+          "phrases": [
+            "circumscribe the power of… 限制……的权力",
+            "be circumscribed by… 受……束缚/局限"
+          ],
+          "ex": [
+            {
+              "en": "The new constitution circumscribes the president's power.",
+              "zh": "新宪法限制了总统的权力。"
+            }
+          ]
+        },
+        {
+          "w": "limit",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈlɪmɪt",
+            "us": "ˈlɪmɪt"
+          },
+          "pos": "vt./n.",
+          "gloss": "限制；限度，极限",
+          "usage": "最通用，可名可动，限制的可是数量、时间、权力等有形无形的边界。",
+          "phrases": [
+            "limit...to... 把……限制在……",
+            "speed limit 限速"
+          ],
+          "ex": [
+            {
+              "en": "We must limit our spending to what we can afford.",
+              "zh": "我们必须把开支限制在能承受的范围内。"
             }
           ]
         }
