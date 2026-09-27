@@ -52,6 +52,11 @@
 .favbtn { border: 0; background: none; cursor: pointer; font-size: 19px; line-height: 1; color: var(--ink-2); padding: 2px 5px; border-radius: 6px; }
 .favbtn:hover { background: rgba(128,128,128,.15); }
 .favbtn.on { color: #f5a623; }
+/* 取消收藏确认弹窗（防误触） */
+.fc-mask { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 90; }
+.fc-box { position: fixed; z-index: 91; top: 50%; left: 50%; transform: translate(-50%,-50%); background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 20px 22px 16px; width: min(380px, calc(100vw - 40px)); }
+.fc-box p { margin: 0; font-size: 15.5px; line-height: 1.6; overflow-wrap: anywhere; }
+.fc-btns { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
 .nw .phon-row { margin: 6px 0 4px; gap: 14px; }
 .acc { font-style: normal; font-size: 11px; color: var(--accent); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
 .nw-gloss { font-size: 14.5px; margin: 4px 0 0; }
@@ -96,6 +101,17 @@
   </div>
   <div id="dayView"></div>
 </main>
+
+<div id="favConfirm" hidden>
+  <div class="fc-mask" id="fcMask"></div>
+  <div class="fc-box" role="dialog" aria-modal="true" aria-labelledby="fcMsg">
+    <p id="fcMsg"></p>
+    <div class="fc-btns">
+      <button class="btn" id="fcNo">先不取消</button>
+      <button class="btn bad" id="fcYes">取消收藏</button>
+    </div>
+  </div>
+</div>
 
 <script type="module">
 import { initAuthNav } from './assets/js/auth-nav.js?v=18';
@@ -303,23 +319,48 @@ $('dateList').addEventListener('click', e => {
   setListOpen(false);             // 选完日期收起列表，只显示所选那天
 });
 
-/* 收藏词：词卡 ☆ 切换（写入 state.favs，随账号云同步，收藏词页展示） */
+/* 取消收藏确认弹窗：返回 Promise<boolean>；Esc/点遮罩/「先不取消」= 否 */
+function confirmUnfav(w) {
+  return new Promise(resolve => {
+    $('fcMsg').textContent = `确定取消收藏「${w}」吗？`;
+    const box = $('favConfirm');
+    box.hidden = false;
+    const close = ok => {
+      box.hidden = true;
+      $('fcYes').onclick = $('fcNo').onclick = $('fcMask').onclick = null;
+      document.removeEventListener('keydown', onKey);
+      resolve(ok);
+    };
+    const onKey = e => { if (e.key === 'Escape') close(false); };
+    $('fcYes').onclick = () => close(true);
+    $('fcNo').onclick = () => close(false);
+    $('fcMask').onclick = () => close(false);
+    document.addEventListener('keydown', onKey);
+    $('fcNo').focus();
+  });
+}
+
+/* 收藏词：词卡 ☆ 切换（写入 state.favs，随账号云同步，收藏词页展示）。取消需确认防误触 */
 $('dayView').addEventListener('click', e => {
   const b = e.target.closest('.favbtn');
   if (!b) return;
   const w = b.dataset.w;
-  if (store.removeFav(w)) {
-    b.classList.remove('on');
-    b.textContent = '☆';
-    b.setAttribute('aria-label', `收藏 ${w}`);
-    toast(`已取消收藏「${w}」`);
-  } else {
+  if (!store.isFav(w)) {                    // 收藏：直接生效
     store.addFav(w);
     b.classList.add('on');
     b.textContent = '★';
     b.setAttribute('aria-label', `取消收藏 ${w}`);
     toast(`⭐ 已收藏「${w}」，到收藏词页查看`);
+    return;
   }
+  confirmUnfav(w).then(ok => {              // 已收藏再点 = 取消：先确认
+    if (!ok) return;
+    store.removeFav(w);
+    b.classList.remove('on');
+    b.textContent = '☆';
+    b.setAttribute('aria-label', `收藏 ${w}`);
+    toast(`已取消收藏「${w}」`);
+  });
 });
 
 /* 云同步/其他标签页写入后自动重渲：新设备登录首次同步晚于首渲，不再停留在"暂无生词笔记"。
