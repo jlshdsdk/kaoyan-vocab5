@@ -2,6 +2,117 @@
   "v": 1,
   "syn": [
     {
+      "title": "confine· restrict· limit· restrain· constrain",
+      "memo": "同为“限制”：confine 窄圈禁闭（to/within）；restrict 正式指规则限制（to）；limit 最通用，可名可动（数量/权力）；restrain 强调忍住不表露（from）；constrain 外部条件逼着你不得不。",
+      "words": [
+        {
+          "w": "confine",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈfaɪn",
+            "us": "kənˈfaɪn"
+          },
+          "pos": "vt.",
+          "gloss": "限制；把……局限于；禁闭",
+          "usage": "强调限在狭窄范围内，常被动，搭配 to/within；con(加强)+fin(界限)→给出边界。",
+          "phrases": [
+            "be confined to 局限于",
+            "confine oneself to 只谈，只涉及"
+          ],
+          "ex": [
+            {
+              "en": "The disease is not confined to one region.",
+              "zh": "这种疾病并不局限于某一地区。"
+            }
+          ]
+        },
+        {
+          "w": "restrict",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈstrɪkt",
+            "us": "rɪˈstrɪkt"
+          },
+          "pos": "vt.",
+          "gloss": "限制，限定（数量、范围等）",
+          "usage": "指出台规则去限定，比 limit 书面，restrict...to... 是固定搭配。",
+          "phrases": [
+            "restrict...to... 把……限制在……",
+            "restrict access to 限制进入"
+          ],
+          "ex": [
+            {
+              "en": "The new law restricts the sale of cigarettes.",
+              "zh": "新法规限制香烟销售。"
+            }
+          ]
+        },
+        {
+          "w": "limit",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈlɪmɪt",
+            "us": "ˈlɪmɪt"
+          },
+          "pos": "vt./n.",
+          "gloss": "限制；限度，极限",
+          "usage": "最通用，可名可动，限制的可是数量、时间、权力等有形无形的边界。",
+          "phrases": [
+            "limit...to... 把……限制在……",
+            "speed limit 限速"
+          ],
+          "ex": [
+            {
+              "en": "We must limit our spending to what we can afford.",
+              "zh": "我们必须把开支限制在能承受的范围内。"
+            }
+          ]
+        },
+        {
+          "w": "restrain",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈstreɪn",
+            "us": "rɪˈstreɪn"
+          },
+          "pos": "vt.",
+          "gloss": "阻止，抑制；管束，约束",
+          "usage": "重在忍住不让它发出，对象多为情绪、冲动；restrain sb. from doing 是核心搭配。",
+          "phrases": [
+            "restrain oneself 克制自己",
+            "restrain sb. from doing sth. 阻止某人做某事"
+          ],
+          "ex": [
+            {
+              "en": "She could hardly restrain her anger.",
+              "zh": "她几乎抑制不住自己的怒火。"
+            }
+          ]
+        },
+        {
+          "w": "constrain",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈstreɪn",
+            "us": "kənˈstreɪn"
+          },
+          "pos": "vt.",
+          "gloss": "限制，约束；强迫，迫使",
+          "usage": "强调外部条件或情势逼得你不得不如此；词源同 strain(拉紧)。",
+          "phrases": [
+            "constrain sb. to do sth. 强迫某人做某事",
+            "financial constraints 财力限制"
+          ],
+          "ex": [
+            {
+              "en": "Lack of funds constrained the project.",
+              "zh": "资金短缺束缚了这个项目。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "compete · contend",
       "memo": "compete 中性常用：比赛/商业竞争（with/against/for）；contend 更正式激烈，且多两个高频义——contend that 主张、contend with 应对困境。重叠义仅“争夺”。",
       "words": [
