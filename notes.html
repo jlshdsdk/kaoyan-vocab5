@@ -264,6 +264,7 @@ async function mergeLocalNotes(raw) {
 }
 
 async function load() {
+  lastNotesSig = notesSig();   // 记下本次渲染所基于的笔记快照（scheduleReload 靠它滤掉无关写入）
   let j = null;
   const v = Date.now();   // 每次加载都取新（同日多次推送不再命中 CDN 旧缓存）   // 日期版缓存击穿
   try { const r = await fetch(`data/notes.json?v=${v}`); if (r.ok) j = await r.json(); } catch (e) {}
@@ -277,8 +278,8 @@ async function load() {
   const total = raw.reduce((n, d) => n + (d.words || []).length, 0);
   $('noteSummary').textContent = `共 ${raw.length} 天 · ${total} 词`;
   days = [...raw].sort((a, b) => String(b.date).localeCompare(String(a.date)));   // 最新在前
-  openMonths = new Set();   // 默认全部折叠，点月头展开（筛选时仍自动全展开）
-  selDate = days[0].date;         // 默认选最新一天
+  // openMonths 不重置：保留用户手动展开的月份（首次为空 = 默认全折叠）
+  if (!selDate || !days.some(d => d.date === selDate)) selDate = days[0].date;   // 首次/所选日已消失才落到最新一天；重载不改变浏览位置
   renderSel(); renderList(); renderDay();
 }
 
@@ -321,17 +322,21 @@ $('dayView').addEventListener('click', e => {
   }
 });
 
-bindAudioButtons(document, pronounce);
-load();
-
-/* 云同步/其他标签页写入后自动重渲：新设备登录首次同步晚于首渲，不再停留在"暂无生词笔记" */
+/* 云同步/其他标签页写入后自动重渲：新设备登录首次同步晚于首渲，不再停留在"暂无生词笔记"。
+ * 只在笔记数据真正变化时才重载——收藏词等无关写入直接忽略，收藏/浏览过程不被重载打断 */
 let reloadTimer = 0;
+let lastNotesSig = null;
+const notesSig = () => JSON.stringify(store.getState().notes || {});
 function scheduleReload() {
+  if (notesSig() === lastNotesSig) return;
   clearTimeout(reloadTimer);
   reloadTimer = setTimeout(load, 500);
 }
 document.addEventListener('v5:flush', scheduleReload);
 addEventListener('storage', e => { if (e.key === 'v5vocab.state.v1' && e.newValue) scheduleReload(); });
+
+bindAudioButtons(document, pronounce);
+load();
 </script>
 </body>
 </html>
