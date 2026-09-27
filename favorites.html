@@ -44,6 +44,11 @@
 .pgbtn { padding: 7px 16px; font-size: 14px; }
 .pgbtn[disabled] { opacity: .45; cursor: default; pointer-events: none; }
 .pginfo { color: var(--ink-2); font-size: 14px; white-space: nowrap; }
+/* 取消收藏确认弹窗（防误触） */
+.fc-mask { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 90; }
+.fc-box { position: fixed; z-index: 91; top: 50%; left: 50%; transform: translate(-50%,-50%); background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 20px 22px 16px; width: min(380px, calc(100vw - 40px)); }
+.fc-box p { margin: 0; font-size: 15.5px; line-height: 1.6; overflow-wrap: anywhere; }
+.fc-btns { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
 </style>
 </head>
 <body>
@@ -73,6 +78,17 @@
   <div class="favsearch"><input id="favSearch" placeholder="🔍 筛选收藏词：词头或已加载词条的释义关键词" aria-label="筛选收藏词"></div>
   <div id="favList"></div>
 </main>
+
+<div id="favConfirm" hidden>
+  <div class="fc-mask" id="fcMask"></div>
+  <div class="fc-box" role="dialog" aria-modal="true" aria-labelledby="fcMsg">
+    <p id="fcMsg"></p>
+    <div class="fc-btns">
+      <button class="btn" id="fcNo">先不取消</button>
+      <button class="btn bad" id="fcYes">取消收藏</button>
+    </div>
+  </div>
+</div>
 
 <script type="module">
 import { initAuthNav } from './assets/js/auth-nav.js?v=18';
@@ -243,6 +259,27 @@ async function load() {
   renderList();
 }
 
+/* 取消收藏确认弹窗：返回 Promise<boolean>；Esc/点遮罩/「先不取消」= 否 */
+function confirmUnfav(w) {
+  return new Promise(resolve => {
+    $('fcMsg').textContent = `确定取消收藏「${w}」吗？`;
+    const box = $('favConfirm');
+    box.hidden = false;
+    const close = ok => {
+      box.hidden = true;
+      $('fcYes').onclick = $('fcNo').onclick = $('fcMask').onclick = null;
+      document.removeEventListener('keydown', onKey);
+      resolve(ok);
+    };
+    const onKey = e => { if (e.key === 'Escape') close(false); };
+    $('fcYes').onclick = () => close(true);
+    $('fcNo').onclick = () => close(false);
+    $('fcMask').onclick = () => close(false);
+    document.addEventListener('keydown', onKey);
+    $('fcNo').focus();
+  });
+}
+
 /* 交互 */
 $('favSearch').addEventListener('input', () => { page = 1; renderList(); });
 
@@ -251,10 +288,13 @@ $('favList').addEventListener('click', e => {
   const del = e.target.closest('.favdel');
   if (del) {
     const w = del.dataset.w;
-    if (!store.removeFav(w)) return;
-    flipped.delete(w);
-    renderList();
-    toast(`已取消收藏「${w}」`);
+    confirmUnfav(w).then(ok => {
+      if (!ok) return;
+      store.removeFav(w);
+      flipped.delete(w);
+      renderList();
+      toast(`已取消收藏「${w}」`);
+    });
     return;
   }
   if (e.target.closest('#pgPrev')) { page--; renderList(); return; }
