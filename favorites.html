@@ -17,8 +17,8 @@
 .favflip { position: relative; height: 100%; transform-style: preserve-3d; transition: transform .45s cubic-bezier(.2,.7,.3,1); cursor: pointer; }
 .favflip.flipped { transform: rotateY(180deg); }
 .favface { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-/* 正面：与旧版紧凑卡完全同款 */
-.favfront { height: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); padding: 12px 14px; box-shadow: var(--shadow); }
+/* 正面：与旧版紧凑卡同款；统一最小高度让全网格词卡大小一致，内容垂直居中 */
+.favfront { height: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); padding: 12px 14px; box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: center; min-height: 140px; }
 .favflip:hover .favfront { border-color: var(--accent); }
 .favhead { display: flex; align-items: center; gap: 8px; }
 .favhead .favdel { margin-left: auto; }
