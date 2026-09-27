@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>收藏词 · 考研五书词汇</title>
+<link rel="stylesheet" href="assets/css/base.css?v=19">
+<style>
+/* 收藏词页：按收藏日期分组，卡片复用全站词条卡样式（base.css） */
+.favsearch { margin: 14px 0 4px; }
+.favsearch input { width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg-card); color: var(--ink); font-size: 15px; outline: none; }
+.favsearch input:focus { border-color: var(--accent); }
+.favghead { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font-weight: 700; font-size: 16px; margin: 18px 2px 8px; }
+.favghead .cnt { color: var(--ink-2); font-size: 13.5px; font-weight: 400; }
+.favgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; }
+.favcard { position: relative; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); padding: 14px 16px; box-shadow: var(--shadow); }
+.favcard .headword { font-size: clamp(24px, 4vw, 32px); }
+.favcard .head-row { padding-right: 36px; }
+.favcard .phon-row { margin: 8px 0 2px; gap: 14px; }
+.favcard .sec { margin-top: 12px; }
+.favcard .books-row { margin-top: 12px; }
+.favbtn { border: 0; background: none; cursor: pointer; font-size: 19px; line-height: 1; color: var(--ink-2); padding: 2px 5px; border-radius: 6px; }
+.favbtn:hover { background: rgba(128,128,128,.15); }
+.favbtn.on { color: #f5a623; }
+.favcard .favdel { position: absolute; top: 8px; right: 8px; font-size: 21px; }
+.favmemo { margin-top: 10px; font-size: 13.5px; color: var(--warn); border-top: 1px dashed var(--line); padding-top: 8px; }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="index.html">📚 五书词汇</a>
+  <a class="tab" href="index.html">今日</a>
+  <a class="tab" href="browse.html">词库</a>
+  <a class="tab" href="wordbook.html">生词本</a>
+  <a class="tab" href="notes.html">生词笔记</a>
+  <a class="tab active" href="favorites.html">收藏词</a>
+  <a class="tab" href="compare.html">词义辨析</a>
+  <a class="tab" href="stats.html">统计</a>
+  <a class="tab" href="settings.html">设置</a>
+  <span class="spacer"></span><span id="authSlot"></span>
+  <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
+</nav>
+
+<main>
+  <div class="card">
+    <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+      <h2 style="margin:0">⭐ 收藏词</h2>
+      <span id="favSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
+    </div>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">在「生词笔记」页点词卡右上角 ☆ 即可收藏到本页 · 点击 🔊 听英 / 美发音</p>
+  </div>
+
+  <div class="favsearch"><input id="favSearch" placeholder="🔍 筛选收藏词：词头或释义关键词" aria-label="筛选收藏词"></div>
+  <div id="favList"></div>
+</main>
+
+<script type="module">
+import { initAuthNav } from './assets/js/auth-nav.js?v=18';
+import { startSync } from './assets/js/sync.js?v=19';
+import { initTheme, setTheme, getTheme, icon, toast, esc, cardFront, cardBack, bindAudioButtons } from './assets/js/ui.js?v=18';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=24';
+import * as data from './assets/js/data.js?v=24';   // 收藏卡按词取完整词条（发音/释义/搭配/用法/例句）
+import * as store from './assets/js/store.js?v=20'; // state.favs（生词笔记页 ☆ 写入，随账号云同步）
+
+initAuthNav(); startSync();
+initTheme(); initAudio();
+document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+document.getElementById('themeBtn').onclick = () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+};
+const $ = id => document.getElementById(id);
+
+const WEEK = ['日', '一', '二', '三', '四', '五', '六'];
+const wd = ts => { const t = new Date(ts); return isNaN(t) ? '' : ' 周' + WEEK[t.getDay()]; };
+const dayKey = ts => { const d = new Date(ts); const p = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`; };
+
+const entryCache = new Map();   // word -> 词条|null（null = 词库暂缺，降级只显词头）
+let memoMap = {};               // word -> [笔记memo,...]（静态 notes.json，日期新在前）
+let memosLoaded = false;
+
+async function loadMemos() {
+  if (memosLoaded) return;
+  try {
+    const r = await fetch(`data/notes.json?v=${Date.now()}`);   // 每次会话取新，防 CDN 旧缓存
+    if (r.ok) {
+      const j = await r.json();
+      const map = {};
+      for (const day of (j.notes || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date)))) {
+        for (const w of (day.words || [])) if (w.memo) (map[w.w] = map[w.w] || []).push(w.memo);
+      }
+      memoMap = map;
+    }
+  } catch (e) {}
+  memosLoaded = true;
+}
+
+const memoBlock = w => {
+  const ms = memoMap[w];
+  return ms && ms.length ? `<div class="favmemo">💡 ${esc(ms.join('；'))}</div>` : '';
+};
+
+function cardHTML(w) {
+  const entry = entryCache.get(w);
+  const inner = entry
+    ? cardFront(entry) + cardBack(entry) + memoBlock(w)
+    : `<div class="card-front"><div class="head-row"><h2 class="headword">${esc(w)}</h2></div>
+       <p style="color:var(--ink-2)">（词条数据暂缺，已保留收藏）</p></div>`;
+  return `<div class="favcard" data-w="${esc(w)}">
+      <button class="favbtn on favdel" data-w="${esc(w)}" aria-label="取消收藏 ${esc(w)}" title="取消收藏">★</button>
+      ${inner}
+    </div>`;
+}
+
+function renderList() {
+  const q = $('favSearch').value.trim().toLowerCase();
+  const favs = store.getState().favs || {};
+  const total = Object.keys(favs).length;
+  $('favSummary').textContent = total ? `共 ${total} 词` : '';
+  let items = Object.entries(favs).map(([w, r]) => ({ w, at: (r && r.at) || 0 }));
+  if (q) items = items.filter(({ w }) => {
+    const e = entryCache.get(w);
+    return (w + ' ' + ((e && (e.senses || []).join(' ')) || '')).toLowerCase().includes(q);
+  });
+  items.sort((a, b) => b.at - a.at);
+  if (!items.length) {
+    $('favList').innerHTML = total
+      ? '<div class="card"><p style="color:var(--ink-2);margin:6px 0">没有匹配的收藏词</p></div>'
+      : '<div class="card"><p style="color:var(--ink-2);margin:6px 0">还没有收藏词 —— 到「生词笔记」页点词卡右上角的 ☆，收藏会出现在这里（随账号云同步）</p></div>';
+    return;
+  }
+  const groups = [];   // 按收藏日期分组（items 已按时间倒序，组天然降序）
+  for (const it of items) {
+    const k = dayKey(it.at || Date.now());
+    let g = groups[groups.length - 1];
+    if (!g || g.key !== k) groups.push(g = { key: k, at: it.at, items: [] });
+    g.items.push(it);
+  }
+  $('favList').innerHTML = groups.map(g => `
+    <section class="favgroup">
+      <div class="favghead">📅 ${esc(g.key)}${wd(g.at)}<span class="cnt">${g.items.length} 词</span></div>
+      <div class="favgrid">${g.items.map(it => cardHTML(it.w)).join('')}</div>
+    </section>`).join('');
+  for (const it of items) prefetchRealAudio(it.w);
+}
+
+async function load() {
+  const words = Object.keys(store.getState().favs || {});
+  await loadMemos();
+  await Promise.all(words.map(async w => {
+    if (entryCache.has(w)) return;
+    try { entryCache.set(w, await data.getEntry(w)); }
+    catch (e) { entryCache.set(w, null); }   // 词库拉取失败也出降级卡，词头必须可见
+  }));
+  renderList();
+}
+
+/* 交互 */
+$('favSearch').addEventListener('input', renderList);
+
+$('favList').addEventListener('click', e => {
+  const b = e.target.closest('.favdel');
+  if (!b) return;
+  const w = b.dataset.w;
+  if (!store.removeFav(w)) return;
+  const card = b.closest('.favcard');
+  const group = card.closest('.favgroup');
+  card.remove();
+  if (group && !group.querySelector('.favcard')) group.remove();
+  const n = Object.keys(store.getState().favs || {}).length;
+  $('favSummary').textContent = n ? `共 ${n} 词` : '';
+  if (!n) renderList();
+  toast(`已取消收藏「${w}」`);
+});
+
+bindAudioButtons(document, pronounce);
+load();
+
+/* 云同步/其他标签页写入后自动重渲：新设备登录首同步晚于首渲，收藏也能及时出现 */
+let reloadTimer = 0;
+function scheduleReload() {
+  clearTimeout(reloadTimer);
+  reloadTimer = setTimeout(load, 500);
+}
+document.addEventListener('v5:flush', scheduleReload);
+addEventListener('storage', e => { if (e.key === 'v5vocab.state.v1' && e.newValue) scheduleReload(); });
+</script>
+</body>
+</html>
