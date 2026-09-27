@@ -1293,6 +1293,96 @@
   ],
   "form": [
     {
+      "title": "statute · statue · status · stature",
+      "memo": "四词共享词根 stat(站立)，结尾定乾坤：-ute 立的规→法令；-ue 立着的像→雕像；-us 站的位置→地位；-ure 站的高度→身高。前三个都含 /tʃuː/，status 元音变读 /eɪ/，别读混。",
+      "words": [
+        {
+          "w": "statute",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈstætʃuːt",
+            "us": "ˈstætʃuːt"
+          },
+          "pos": "n.",
+          "gloss": "法令，法规；章程，条例",
+          "usage": "statut(建立)+e→立法机关所立。正式语域，近义 legislation、regulation。",
+          "phrases": [
+            "the new statute 新法规",
+            "college statutes 大学校规"
+          ],
+          "ex": [
+            {
+              "en": "Parliament passed a statute banning smoking in public places.",
+              "zh": "议会通过了一项禁止在公共场所吸烟的法令。"
+            }
+          ]
+        },
+        {
+          "w": "statue",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈstætʃuː",
+            "us": "ˈstætʃuː"
+          },
+          "pos": "n.",
+          "gloss": "雕像，塑像",
+          "usage": "stat(站立)+ue→立着的像。statue 尾部无 t 音，勿与 statute 混读。",
+          "phrases": [
+            "the Statue of Liberty 自由女神像",
+            "erect a statue (of sb.) 为某人立雕像"
+          ],
+          "ex": [
+            {
+              "en": "A bronze statue of the founder stands in the square.",
+              "zh": "广场上立着创始人的一尊铜像。"
+            }
+          ]
+        },
+        {
+          "w": "status",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈsteɪtəs",
+            "us": "ˈsteɪtəs"
+          },
+          "pos": "n.",
+          "gloss": "地位，身份；状况，情形",
+          "usage": "stat(站)+us→我们所站的位置→地位。表单/问卷常客：marital status 婚姻状况。",
+          "phrases": [
+            "social status 社会地位",
+            "status quo 现状"
+          ],
+          "ex": [
+            {
+              "en": "Doctors enjoy high social status in this country.",
+              "zh": "在这个国家，医生享有很高的社会地位。"
+            }
+          ]
+        },
+        {
+          "w": "stature",
+          "rank": null,
+          "ph": {
+            "uk": "ˈstætʃə",
+            "us": "ˈstætʃɚ"
+          },
+          "pos": "n.",
+          "gloss": "身高，个子；（成就、品格的）高度，声望",
+          "usage": "stat(站)+ure→站立的高度→身高；引申为学识品格的境界，a man of stature 德高望重之人。",
+          "phrases": [
+            "a man of great stature 身材高大/德高望重之人",
+            "grow in stature 渐有威望"
+          ],
+          "ex": [
+            {
+              "en": "He is a scholar of international stature.",
+              "zh": "他是一位具有国际声望的学者。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "describe · subscribe",
       "memo": "同根 -scrib(e)＝写，前缀定词义：de(下)+scribe→写下来即描述；sub(下面)+scribe→在下面签名即订阅/赞成。读音仅第二字母 e/o 之差，重音同在第二音节。",
       "words": [
