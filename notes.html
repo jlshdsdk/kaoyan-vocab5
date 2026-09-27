@@ -49,6 +49,9 @@
 .nw-top { display: flex; align-items: baseline; gap: 8px; }
 .nw-w { font-size: 19px; }
 .nw-rank { font-size: 12px; color: var(--warn); letter-spacing: 1px; margin-left: auto; white-space: nowrap; }
+.favbtn { border: 0; background: none; cursor: pointer; font-size: 19px; line-height: 1; color: var(--ink-2); padding: 2px 5px; border-radius: 6px; }
+.favbtn:hover { background: rgba(128,128,128,.15); }
+.favbtn.on { color: #f5a623; }
 .nw .phon-row { margin: 6px 0 4px; gap: 14px; }
 .acc { font-style: normal; font-size: 11px; color: var(--accent); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
 .nw-gloss { font-size: 14.5px; margin: 4px 0 0; }
@@ -69,6 +72,7 @@
   <a class="tab" href="browse.html">词库</a>
   <a class="tab" href="wordbook.html">生词本</a>
   <a class="tab active" href="notes.html">生词笔记</a>
+  <a class="tab" href="favorites.html">收藏词</a>
   <a class="tab" href="compare.html">词义辨析</a>
   <a class="tab" href="stats.html">统计</a>
   <a class="tab" href="settings.html">设置</a>
@@ -95,11 +99,11 @@
 
 <script type="module">
 import { initAuthNav } from './assets/js/auth-nav.js?v=18';
-import { startSync } from './assets/js/sync.js?v=18';
-import { initTheme, setTheme, getTheme, icon, bindAudioButtons } from './assets/js/ui.js?v=18';
+import { startSync } from './assets/js/sync.js?v=19';
+import { initTheme, setTheme, getTheme, icon, toast, bindAudioButtons } from './assets/js/ui.js?v=18';
 import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=24';
 import * as data from './assets/js/data.js?v=24';   // 本地笔记需要查词条
-import * as store from './assets/js/store.js?v=19'; // state.notes（复习页按钮写入，随账号同步）
+import * as store from './assets/js/store.js?v=20'; // state.notes（复习页按钮写入，随账号同步）
 
 initAuthNav(); startSync();
 initTheme(); initAudio();
@@ -117,8 +121,9 @@ const WEEK = ['日','一','二','三','四','五','六'];
 
 function noteWordCard(w) {
   const ph = w.ph || {};
+  const fav = store.isFav(w.w);
   return `<div class="nw">
-    <div class="nw-top"><b class="nw-w">${esc(w.w)}</b>${w.rank ? `<span class="nw-rank">${'★'.repeat(w.rank)}</span>` : ''}</div>
+    <div class="nw-top"><b class="nw-w">${esc(w.w)}</b>${w.rank ? `<span class="nw-rank">${'★'.repeat(w.rank)}</span>` : ''}<button class="favbtn${fav ? ' on' : ''}" data-w="${esc(w.w)}" aria-label="${fav ? '取消收藏' : '收藏'} ${esc(w.w)}" title="${fav ? '取消收藏' : '收藏到收藏词'}">${fav ? '★' : '☆'}</button></div>
     <div class="phon-row">
       ${ph.uk ? `<span class="phon"><button class="btn-audio" data-acc="uk" data-w="${esc(w.w)}" aria-label="${esc(w.w)} 英音">${icon('uk')}</button><span class="ph-text">/${esc(ph.uk)}/</span><i class="acc">英</i></span>` : ''}
       ${ph.us ? `<span class="phon"><button class="btn-audio" data-acc="us" data-w="${esc(w.w)}" aria-label="${esc(w.w)} 美音">${icon('us')}</button><span class="ph-text">/${esc(ph.us)}/</span><i class="acc">美</i></span>` : ''}
@@ -295,6 +300,25 @@ $('dateList').addEventListener('click', e => {
   openMonths.add(monthKey(selDate));
   renderSel(); renderGroups(); renderDay();
   setListOpen(false);             // 选完日期收起列表，只显示所选那天
+});
+
+/* 收藏词：词卡 ☆ 切换（写入 state.favs，随账号云同步，收藏词页展示） */
+$('dayView').addEventListener('click', e => {
+  const b = e.target.closest('.favbtn');
+  if (!b) return;
+  const w = b.dataset.w;
+  if (store.removeFav(w)) {
+    b.classList.remove('on');
+    b.textContent = '☆';
+    b.setAttribute('aria-label', `收藏 ${w}`);
+    toast(`已取消收藏「${w}」`);
+  } else {
+    store.addFav(w);
+    b.classList.add('on');
+    b.textContent = '★';
+    b.setAttribute('aria-label', `取消收藏 ${w}`);
+    toast(`⭐ 已收藏「${w}」，到收藏词页查看`);
+  }
 });
 
 bindAudioButtons(document, pronounce);
