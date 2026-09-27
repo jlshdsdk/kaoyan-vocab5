@@ -109,7 +109,7 @@ function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&
 
 let groups = { syn: [], form: [] };
 let pane = 'syn';
-const PAGE = 40;                                   // 每页组数，超出自动分页。近形已有 19 组，15 会把后面几组挤到第二页
+const PAGE = 15;                                   // 每页 15 组，超出自动翻页（近义/近形各自独立页码）
 const pgState = { syn: 0, form: 0 };               // 各板块当前页码
 
 function wordCol(w) {
