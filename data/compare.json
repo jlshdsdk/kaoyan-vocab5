@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "dedicate · devote",
+      "memo": "近义可互换处多：dedicate 更庄重正式，对象是崇高事业，另有题献/落成典礼义；devote 重专注投入（时间精力），be devoted to 还可指深爱。两词都接 to doing/n.。",
+      "words": [
+        {
+          "w": "dedicate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈdedɪkeɪt",
+            "us": "ˈdedɪkeɪt"
+          },
+          "pos": "vt.",
+          "gloss": "奉献；把（时间、精力等）用于；题献",
+          "usage": "de(加强)+dic(宣称)→郑重宣告归属。庄重，对象多为崇高目标；著作可 dedicate to sb. 题献。",
+          "phrases": [
+            "dedicate oneself to 献身于",
+            "be dedicated to doing 致力于做"
+          ],
+          "ex": [
+            {
+              "en": "She dedicated her life to medical research.",
+              "zh": "她把一生奉献给了医学研究。"
+            }
+          ]
+        },
+        {
+          "w": "devote",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈvəʊt",
+            "us": "dɪˈvoʊt"
+          },
+          "pos": "vt.",
+          "gloss": "奉献；致力于；把……专用于",
+          "usage": "de+vot(许愿)→许愿奉献。重专注投入时间精力；be devoted to 还表深爱（人）。",
+          "phrases": [
+            "devote...to (doing) sth. 把……用于做某事",
+            "be devoted to sb. 深爱着某人"
+          ],
+          "ex": [
+            {
+              "en": "He devotes his weekends to volunteering.",
+              "zh": "他把周末都用于做志愿服务。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "restrict · constrain · restrain · confine · circumscribe · limit",
       "memo": "同为“限制”：limit 最通用，可名可动；restrict 正式指规则限制（to）；confine 窄圈禁闭（to/within）；restrain 忍住不表露（from）；constrain 外部条件所迫；circumscribe 最书面，circum(周围)+scribe(画线)→划定界限，常指权力被框死。",
       "words": [
