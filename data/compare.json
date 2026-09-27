@@ -1452,6 +1452,54 @@
   ],
   "form": [
     {
+      "title": "reluctant · relevant",
+      "memo": "都是 re- 开头的 9 字母形容词，中间定词义：-luct-(挣扎)→勉强的；-lev-(举起，同 elevate)→相关的。重音也不同：reluctant 第二音节，relevant 第一音节。结尾 -ant/-ent 别写混。",
+      "words": [
+        {
+          "w": "reluctant",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈlʌktənt",
+            "us": "rɪˈlʌktənt"
+          },
+          "pos": "adj.",
+          "gloss": "不情愿的，勉强的",
+          "usage": "luct(挣才)→心里挣扎→不情愿；书内谐音“驴拉坦克”。搭配 be reluctant to do。",
+          "phrases": [
+            "be reluctant to do sth. 不情愿做某事",
+            "a reluctant choice 勉强的选择"
+          ],
+          "ex": [
+            {
+              "en": "He was reluctant to admit his mistake.",
+              "zh": "他不愿承认自己的错误。"
+            }
+          ]
+        },
+        {
+          "w": "relevant",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈreləvənt",
+            "us": "ˈreləvənt"
+          },
+          "pos": "adj.",
+          "gloss": "紧密相关的，切题的",
+          "usage": "lev(举起，同 elevate)→举到议题跟前→相关；反义 irrelevant，近义 related。",
+          "phrases": [
+            "be relevant to… 与……相关",
+            "relevant experience 相关经验"
+          ],
+          "ex": [
+            {
+              "en": "Please keep your answers relevant to the question.",
+              "zh": "请让你的回答紧扣问题。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "resistant · consistent · constitute · constant",
       "memo": "四词同属\"站（sist/stit/stant）\"词根家族：re-sist-ant = 回+站→顶住不退=抵抗的；con-sist-ent = 共同+站→站在一起=一致的（搭配 be consistent with）；con-stit-ute = 站到一起→组成、构成；con-stant = 站定不动→恒定的、不断的（constant temperature 恒温，名词还是数学里的\"常数\"）。拼写陷阱：consistent 词尾是 -ent 不是 -ant（笔记原笔 consistant 系笔误）；resistant 和 constant 才是 -ant，consistent 与 constant 只差中间 ist/an。resistant 与 constitute 也是 9.18 生词笔记成员，可联动复习。",
       "words": [
