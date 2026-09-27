@@ -12,7 +12,7 @@
  */
 import { cloudEnabled, getUser, client } from './auth.js?v=18';
 import { toast } from './ui.js?v=18';
-import * as store from './store.js?v=19';
+import * as store from './store.js?v=20';
 
 const PUSH_DEBOUNCE = 3000;   // 本机改动后延迟回推（README 约定 3 秒）
 const RETRY_MS = 30000;       // 网络失败后的重试间隔
@@ -107,7 +107,8 @@ function countAll(s) {
   return Object.keys(s.words || {}).length
        + Object.keys(s.graduated || {}).length
        + Object.keys(s.familiar || {}).length
-       + Object.keys(s.notes || {}).length;   // 笔记也是用户数据：只有笔记的设备不能被判为"空"
+       + Object.keys(s.notes || {}).length   // 笔记也是用户数据：只有笔记的设备不能被判为"空"
+       + Object.keys(s.favs || {}).length;   // 收藏同理：只有收藏的设备不能被云端整份覆盖
 }
 
 /* ---- 回推 ---- */
