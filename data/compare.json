@@ -1293,6 +1293,96 @@
   ],
   "form": [
     {
+      "title": "resistant · consistent · constitute · constant",
+      "memo": "四词同属\"站（sist/stit/stant）\"词根家族：re-sist-ant = 回+站→顶住不退=抵抗的；con-sist-ent = 共同+站→站在一起=一致的（搭配 be consistent with）；con-stit-ute = 站到一起→组成、构成；con-stant = 站定不动→恒定的、不断的（constant temperature 恒温，名词还是数学里的\"常数\"）。拼写陷阱：consistent 词尾是 -ent 不是 -ant（笔记原笔 consistant 系笔误）；resistant 和 constant 才是 -ant，consistent 与 constant 只差中间 ist/an。resistant 与 constitute 也是 9.18 生词笔记成员，可联动复习。",
+      "words": [
+        {
+          "w": "resistant",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈzɪstənt",
+            "us": "rɪˈzɪstənt"
+          },
+          "pos": "adj.",
+          "gloss": "抵抗的；有抵抗力的；耐……的",
+          "usage": "re-(回)+sist(站)+-ant：顶住不退→抵抗的；drug-resistant 耐药的",
+          "phrases": [
+            "be resistant to… 对……有抵抗力",
+            "water-resistant 防水的"
+          ],
+          "ex": [
+            {
+              "en": "The new wheat variety is resistant to drought.",
+              "zh": "这种小麦新品种耐旱。"
+            }
+          ]
+        },
+        {
+          "w": "consistent",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsɪstənt",
+            "us": "kənˈsɪstənt"
+          },
+          "pos": "adj.",
+          "gloss": "一致的，相符的；始终如一的",
+          "usage": "con-(共同)+sist(站)+-ent：站到一起→前后一致、持续不变；名词 consistency",
+          "phrases": [
+            "be consistent with… 与……一致",
+            "a consistent policy 一贯的政策"
+          ],
+          "ex": [
+            {
+              "en": "His account is consistent with the security footage.",
+              "zh": "他的说法与监控录像相符。"
+            }
+          ]
+        },
+        {
+          "w": "constitute",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnstɪtjuːt",
+            "us": "ˈkɑːnstətuːt"
+          },
+          "pos": "vt.",
+          "gloss": "组成，构成；被视为；建立",
+          "usage": "con-(共同)+stitut(站)+e：站到一起→共同构成；constitute a threat 构成威胁",
+          "phrases": [
+            "constitute a threat to… 构成对……的威胁",
+            "constitute the majority 构成多数"
+          ],
+          "ex": [
+            {
+              "en": "Women constitute nearly half of the workforce.",
+              "zh": "女性占劳动力的近一半。"
+            }
+          ]
+        },
+        {
+          "w": "constant",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnstənt",
+            "us": "ˈkɒnstənt"
+          },
+          "pos": "adj. / n.",
+          "gloss": "不断的，持续发生的；恒定的，不变的；常数，常量（n.）",
+          "usage": "con(都)+stant(=stand 站)→站定不动→恒定不变、持续发生；书内辨析：continual 时断时续（常指烦心事）、continuous 连续不断；反义 changeable",
+          "phrases": [
+            "constant temperature 恒温",
+            "constant interruptions 接连不断的干扰"
+          ],
+          "ex": [
+            {
+              "en": "The machine requires constant attention, since a brief failure could halt the whole line.",
+              "zh": "这台机器需要持续的关注，因为短暂故障就可能使整条生产线停工。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "statute · statue · status · stature",
       "memo": "四词共享词根 stat(站立)，结尾定乾坤：-ute 立的规→法令；-ue 立着的像→雕像；-us 站的位置→地位；-ure 站的高度→身高。前三个都含 /tʃuː/，status 元音变读 /eɪ/，别读混。",
       "words": [
@@ -2132,75 +2222,6 @@
             {
               "en": "The store offers a wide array of imported goods.",
               "zh": "这家商店提供种类繁多的进口商品。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "resistant · consistent · constitute",
-      "memo": "三词同属\"站（sist/stit）\"词根家族：re-sist-ant = 回+站→顶住不退=抵抗的；con-sist-ent = 共同+站→站在一起=一致的（搭配 be consistent with）；con-stit-ute = 站到一起→组成、构成。拼写陷阱：consistent 词尾是 -ent 不是 -ant（笔记原笔 consistant 系笔误）。resistant 与 constitute 也是 9.18 生词笔记成员，可联动复习。",
-      "words": [
-        {
-          "w": "resistant",
-          "rank": 5,
-          "ph": {
-            "uk": "rɪˈzɪstənt",
-            "us": "rɪˈzɪstənt"
-          },
-          "pos": "adj.",
-          "gloss": "抵抗的；有抵抗力的；耐……的",
-          "usage": "re-(回)+sist(站)+-ant：顶住不退→抵抗的；drug-resistant 耐药的",
-          "phrases": [
-            "be resistant to… 对……有抵抗力",
-            "water-resistant 防水的"
-          ],
-          "ex": [
-            {
-              "en": "The new wheat variety is resistant to drought.",
-              "zh": "这种小麦新品种耐旱。"
-            }
-          ]
-        },
-        {
-          "w": "consistent",
-          "rank": 5,
-          "ph": {
-            "uk": "kənˈsɪstənt",
-            "us": "kənˈsɪstənt"
-          },
-          "pos": "adj.",
-          "gloss": "一致的，相符的；始终如一的",
-          "usage": "con-(共同)+sist(站)+-ent：站到一起→前后一致、持续不变；名词 consistency",
-          "phrases": [
-            "be consistent with… 与……一致",
-            "a consistent policy 一贯的政策"
-          ],
-          "ex": [
-            {
-              "en": "His account is consistent with the security footage.",
-              "zh": "他的说法与监控录像相符。"
-            }
-          ]
-        },
-        {
-          "w": "constitute",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈkɒnstɪtjuːt",
-            "us": "ˈkɑːnstətuːt"
-          },
-          "pos": "vt.",
-          "gloss": "组成，构成；被视为；建立",
-          "usage": "con-(共同)+stitut(站)+e：站到一起→共同构成；constitute a threat 构成威胁",
-          "phrases": [
-            "constitute a threat to… 构成对……的威胁",
-            "constitute the majority 构成多数"
-          ],
-          "ex": [
-            {
-              "en": "Women constitute nearly half of the workforce.",
-              "zh": "女性占劳动力的近一半。"
             }
           ]
         }
@@ -3374,96 +3395,6 @@
       ]
     },
     {
-      "title": "resistant · consistent · constitute · constant",
-      "memo": "四词同属\"站（sist/stit/stant）\"词根家族：re-sist-ant = 回+站→顶住不退=抵抗的；con-sist-ent = 共同+站→站在一起=一致的（搭配 be consistent with）；con-stit-ute = 站到一起→组成、构成；con-stant = 站定不动→恒定的、不断的（constant temperature 恒温，名词还是数学里的\"常数\"）。拼写陷阱：consistent 词尾是 -ent 不是 -ant（笔记原笔 consistant 系笔误）；resistant 和 constant 才是 -ant，consistent 与 constant 只差中间 ist/an。resistant 与 constitute 也是 9.18 生词笔记成员，可联动复习。",
-      "words": [
-        {
-          "w": "resistant",
-          "rank": 5,
-          "ph": {
-            "uk": "rɪˈzɪstənt",
-            "us": "rɪˈzɪstənt"
-          },
-          "pos": "adj.",
-          "gloss": "抵抗的；有抵抗力的；耐……的",
-          "usage": "re-(回)+sist(站)+-ant：顶住不退→抵抗的；drug-resistant 耐药的",
-          "phrases": [
-            "be resistant to… 对……有抵抗力",
-            "water-resistant 防水的"
-          ],
-          "ex": [
-            {
-              "en": "The new wheat variety is resistant to drought.",
-              "zh": "这种小麦新品种耐旱。"
-            }
-          ]
-        },
-        {
-          "w": "consistent",
-          "rank": 5,
-          "ph": {
-            "uk": "kənˈsɪstənt",
-            "us": "kənˈsɪstənt"
-          },
-          "pos": "adj.",
-          "gloss": "一致的，相符的；始终如一的",
-          "usage": "con-(共同)+sist(站)+-ent：站到一起→前后一致、持续不变；名词 consistency",
-          "phrases": [
-            "be consistent with… 与……一致",
-            "a consistent policy 一贯的政策"
-          ],
-          "ex": [
-            {
-              "en": "His account is consistent with the security footage.",
-              "zh": "他的说法与监控录像相符。"
-            }
-          ]
-        },
-        {
-          "w": "constitute",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈkɒnstɪtjuːt",
-            "us": "ˈkɑːnstətuːt"
-          },
-          "pos": "vt.",
-          "gloss": "组成，构成；被视为；建立",
-          "usage": "con-(共同)+stitut(站)+e：站到一起→共同构成；constitute a threat 构成威胁",
-          "phrases": [
-            "constitute a threat to… 构成对……的威胁",
-            "constitute the majority 构成多数"
-          ],
-          "ex": [
-            {
-              "en": "Women constitute nearly half of the workforce.",
-              "zh": "女性占劳动力的近一半。"
-            }
-          ]
-        },
-        {
-          "w": "constant",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈkɒnstənt",
-            "us": "ˈkɒnstənt"
-          },
-          "pos": "adj. / n.",
-          "gloss": "不断的，持续发生的；恒定的，不变的；常数，常量（n.）",
-          "usage": "con(都)+stant(=stand 站)→站定不动→恒定不变、持续发生；书内辨析：continual 时断时续（常指烦心事）、continuous 连续不断；反义 changeable",
-          "phrases": [
-            "constant temperature 恒温",
-            "constant interruptions 接连不断的干扰"
-          ],
-          "ex": [
-            {
-              "en": "The machine requires constant attention, since a brief failure could halt the whole line.",
-              "zh": "这台机器需要持续的关注，因为短暂故障就可能使整条生产线停工。"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "title": "trait · trial · treaty · trace",
       "memo": "中间元音定词义：ai→特征（单音节 /treɪt/）；ia→审判/试验（/ˈtraɪəl/，try 的名词）；ea→条约（/ˈtriːti/，treat 的名词）。trace 和 trait 只差结尾、几乎同音（/treɪs/ 对 /treɪt/）：trace 是 t+race（比赛）→你追我赶→追踪、痕迹，名词动词都能当（trace back to 追溯到）；trait 只有名词\"特征\"。听力抓尾音：/s/ 是 trace，/t/ 是 trait。",
       "words": [
@@ -3548,6 +3479,75 @@
             {
               "en": "Language probably traces back at least 80,000 years.",
               "zh": "语言的出现至少可以追溯到8万年前。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "resistant · consistent · constitute",
+      "memo": "三词同属\"站（sist/stit）\"词根家族：re-sist-ant = 回+站→顶住不退=抵抗的；con-sist-ent = 共同+站→站在一起=一致的（搭配 be consistent with）；con-stit-ute = 站到一起→组成、构成。拼写陷阱：consistent 词尾是 -ent 不是 -ant（笔记原笔 consistant 系笔误）。resistant 与 constitute 也是 9.18 生词笔记成员，可联动复习。",
+      "words": [
+        {
+          "w": "resistant",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈzɪstənt",
+            "us": "rɪˈzɪstənt"
+          },
+          "pos": "adj.",
+          "gloss": "抵抗的；有抵抗力的；耐……的",
+          "usage": "re-(回)+sist(站)+-ant：顶住不退→抵抗的；drug-resistant 耐药的",
+          "phrases": [
+            "be resistant to… 对……有抵抗力",
+            "water-resistant 防水的"
+          ],
+          "ex": [
+            {
+              "en": "The new wheat variety is resistant to drought.",
+              "zh": "这种小麦新品种耐旱。"
+            }
+          ]
+        },
+        {
+          "w": "consistent",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsɪstənt",
+            "us": "kənˈsɪstənt"
+          },
+          "pos": "adj.",
+          "gloss": "一致的，相符的；始终如一的",
+          "usage": "con-(共同)+sist(站)+-ent：站到一起→前后一致、持续不变；名词 consistency",
+          "phrases": [
+            "be consistent with… 与……一致",
+            "a consistent policy 一贯的政策"
+          ],
+          "ex": [
+            {
+              "en": "His account is consistent with the security footage.",
+              "zh": "他的说法与监控录像相符。"
+            }
+          ]
+        },
+        {
+          "w": "constitute",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnstɪtjuːt",
+            "us": "ˈkɑːnstətuːt"
+          },
+          "pos": "vt.",
+          "gloss": "组成，构成；被视为；建立",
+          "usage": "con-(共同)+stitut(站)+e：站到一起→共同构成；constitute a threat 构成威胁",
+          "phrases": [
+            "constitute a threat to… 构成对……的威胁",
+            "constitute the majority 构成多数"
+          ],
+          "ex": [
+            {
+              "en": "Women constitute nearly half of the workforce.",
+              "zh": "女性占劳动力的近一半。"
             }
           ]
         }
