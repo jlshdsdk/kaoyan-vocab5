@@ -6,14 +6,20 @@
 <title>收藏词 · 考研五书词汇</title>
 <link rel="stylesheet" href="assets/css/base.css?v=19">
 <style>
-/* 收藏词页：紧凑词条卡（单词+词性+发音），点开滚动式详情，一行 2 词、每页 20 词分页 */
+/* 收藏词页：紧凑词条卡（单词+词性+发音），点击 3D 翻面查详解；一行 2 词、每页 20 词分页。
+ * 背面绝对定位覆盖正面，翻面零布局位移；详解在背面内滚动。 */
 .favsearch { margin: 14px 0 4px; }
 .favsearch input { width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg-card); color: var(--ink); font-size: 15px; outline: none; }
 .favsearch input:focus { border-color: var(--accent); }
 .favgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px; }
 @media (max-width: 640px) { .favgrid { grid-template-columns: 1fr; } }
-.favcard { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); padding: 12px 14px; box-shadow: var(--shadow); cursor: pointer; }
-.favcard:hover { border-color: var(--accent); }
+.favcell { perspective: 1400px; }
+.favflip { position: relative; height: 100%; transform-style: preserve-3d; transition: transform .45s cubic-bezier(.2,.7,.3,1); cursor: pointer; }
+.favflip.flipped { transform: rotateY(180deg); }
+.favface { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+/* 正面：与旧版紧凑卡完全同款 */
+.favfront { height: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); padding: 12px 14px; box-shadow: var(--shadow); }
+.favflip:hover .favfront { border-color: var(--accent); }
 .favhead { display: flex; align-items: center; gap: 8px; }
 .favhead .favdel { margin-left: auto; }
 .favsub { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 3px; }
@@ -25,14 +31,15 @@
 .favbtn { border: 0; background: none; cursor: pointer; font-size: 19px; line-height: 1; color: var(--ink-2); padding: 2px 5px; border-radius: 6px; }
 .favbtn:hover { background: rgba(128,128,128,.15); }
 .favbtn.on { color: #f5a623; }
-.favchev { flex: none; color: var(--ink-2); font-size: 12px; transition: transform .15s; }
-.favcard.open .favchev { transform: rotate(180deg); }
-.favdetail { margin-top: 10px; max-height: 46vh; overflow: auto; border-top: 1px dashed var(--line); padding-top: 10px; cursor: auto; }
-.favdetail .headword { font-size: clamp(22px, 3.5vw, 30px); }
-.favdetail .phon-row { margin: 8px 0 2px; gap: 14px; }
-.favdetail .sec { margin-top: 12px; }
-.favdetail .books-row { margin-top: 12px; }
+.favchev { flex: none; color: var(--ink-2); font-size: 14px; }
+/* 背面：与正面同尺寸（绝对覆盖），内容滚动 */
+.favback { position: absolute; inset: 0; transform: rotateY(180deg); border: 1px solid var(--accent); border-radius: 12px; background: var(--bg-card); box-shadow: var(--shadow); overflow: hidden; }
+.favscroll { position: absolute; inset: 0; overflow: auto; padding: 12px 14px 12px; scrollbar-width: thin; }
+.favscroll .sec { margin-top: 12px; }
+.favscroll .books-row { margin-top: 12px; }
 .favmemo { margin-top: 10px; font-size: 13.5px; color: var(--warn); border-top: 1px dashed var(--line); padding-top: 8px; }
+.favflipback { position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 50%; background: var(--bg-card); color: var(--accent); cursor: pointer; font-size: 15px; z-index: 2; }
+.favflipback:hover { border-color: var(--accent); }
 .pager { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 18px 0 4px; }
 .pgbtn { padding: 7px 16px; font-size: 14px; }
 .pgbtn[disabled] { opacity: .45; cursor: default; pointer-events: none; }
@@ -60,7 +67,7 @@
       <h2 style="margin:0">⭐ 收藏词</h2>
       <span id="favSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
     </div>
-    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">在「生词笔记」页点词卡右上角 ☆ 即可收藏到本页（随账号云同步）· 点词条展开详解 · 点击 🔊 听英 / 美发音</p>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">在「生词笔记」页点词卡右上角 ☆ 即可收藏到本页（随账号云同步）· 点卡片翻面看详解 · 点击 🔊 听英 / 美发音</p>
   </div>
 
   <div class="favsearch"><input id="favSearch" placeholder="🔍 筛选收藏词：词头或已加载词条的释义关键词" aria-label="筛选收藏词"></div>
@@ -72,7 +79,7 @@ import { initAuthNav } from './assets/js/auth-nav.js?v=18';
 import { startSync } from './assets/js/sync.js?v=19';
 import { initTheme, setTheme, getTheme, icon, toast, esc, cardBack, bindAudioButtons } from './assets/js/ui.js?v=18';
 import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=24';
-import * as data from './assets/js/data.js?v=24';   // 词条按页懒取（chunk 缓存），详情点开即出
+import * as data from './assets/js/data.js?v=24';   // 词条按页懒取（chunk 缓存），翻面即出
 import * as store from './assets/js/store.js?v=20'; // state.favs（生词笔记页 ☆ 写入，随账号云同步）
 
 initAuthNav(); startSync();
@@ -88,7 +95,7 @@ const $ = id => document.getElementById(id);
 const PAGE_SIZE = 20;            // 每页 20 词（一行 2 词 × 10 行）
 let page = 1;                    // 当前页（1 起）
 let renderEpoch = 0;             // 异步取词条后重绘前，页面可能已切换
-const expanded = new Set();      // 展开了详情的词（跨翻页保留）
+const flipped = new Set();       // 翻到背面的词（跨翻页保留）
 const entryCache = new Map();    // word -> 词条|null（null = 词库暂缺）
 let memoMap = {};                // word -> [笔记memo,...]（静态 notes.json）
 let memosLoaded = false;
@@ -151,14 +158,15 @@ const memoBlock = w => {
   return ms && ms.length ? `<div class="favmemo">💡 ${esc(ms.join('；'))}</div>` : '';
 };
 
-function compactHTML(w, entry) {
+/* 正面：单词 + 词性 + 发音（紧凑同款） */
+function frontHTML(w, entry) {
   const pos = posOf(entry);
   const ph = (entry && entry.ph) || {};
   const strip = s => esc(String(s || '').replace(/^\/|\/$/g, ''));
   return `<div class="favhead">
       <b class="favword">${esc(w)}</b>
       <button class="favbtn on favdel" data-w="${esc(w)}" aria-label="取消收藏 ${esc(w)}" title="取消收藏">★</button>
-      <span class="favchev">▼</span>
+      <span class="favchev" title="点击翻面看详解">⟳</span>
     </div>
     <div class="favsub">
       ${pos ? `<span class="favpos">${esc(pos)}</span>` : ''}
@@ -169,31 +177,31 @@ function compactHTML(w, entry) {
     </div>`;
 }
 
-function cardHTML(w) {
+/* 首次翻面时才注入详解（正面布局零依赖），此后常驻便于反复翻看 */
+function ensureBack(w) {
+  const flip = document.querySelector(`.favflip[data-w="${CSS.escape(w)}"]`);
+  if (!flip) return;
+  const scroll = flip.querySelector('.favscroll');
+  if (!scroll || scroll.dataset.filled) return;
   const entry = entryCache.get(w);
-  const open = expanded.has(w);
-  const detail = open
-    ? `<div class="favdetail">${entry ? cardBack(entry) + memoBlock(w)
-        : '<p style="color:var(--ink-2)">（词条数据暂缺，已保留收藏）</p>'}</div>`
-    : '';
-  return `<div class="favcard${open ? ' open' : ''}" data-w="${esc(w)}" role="button" tabindex="0" aria-expanded="${open}">
-      ${compactHTML(w, entry)}${detail}
-    </div>`;
+  scroll.innerHTML = entry ? cardBack(entry) + memoBlock(w)
+    : '<p style="color:var(--ink-2)">（词条数据暂缺，已保留收藏）</p>';
+  scroll.dataset.filled = '1';
 }
 
-/** 原位切换一张卡的展开/收起（不动其他卡，保住它们的滚动与音频按钮） */
-function refreshCard(w) {
-  const card = document.querySelector(`.favcard[data-w="${CSS.escape(w)}"]`);
-  if (!card) return;
-  const open = expanded.has(w);
-  card.classList.toggle('open', open);
-  card.setAttribute('aria-expanded', open);
-  let d = card.querySelector('.favdetail');
-  if (open) {
-    const entry = entryCache.get(w);
-    if (!d) { d = document.createElement('div'); d.className = 'favdetail'; card.appendChild(d); }
-    d.innerHTML = entry ? cardBack(entry) + memoBlock(w) : '<p style="color:var(--ink-2)">（词条数据暂缺，已保留收藏）</p>';
-  } else if (d) d.remove();
+function cardHTML(w) {
+  const entry = entryCache.get(w);
+  const isFlipped = flipped.has(w);
+  return `<div class="favcell">
+    <div class="favflip${isFlipped ? ' flipped' : ''}" data-w="${esc(w)}" role="button" tabindex="0"
+         aria-label="收藏词 ${esc(w)}，点击翻面看详解"${isFlipped ? ' aria-pressed="true"' : ''}>
+      <div class="favface favfront">${frontHTML(w, entry)}</div>
+      <div class="favface favback" aria-hidden="${!isFlipped}">
+        <div class="favscroll"${isFlipped ? '' : ' hidden'}></div>
+        <button class="favflipback" data-w="${esc(w)}" aria-label="翻回正面" title="翻回正面">⟲</button>
+      </div>
+    </div>
+  </div>`;
 }
 
 const pagerHTML = (tp, count) => `<div class="pager">
@@ -220,8 +228,9 @@ function renderList() {
     $('favList').innerHTML = `<div class="favgrid">${pageItems.map(it => cardHTML(it.w)).join('')}</div>
       ${tp > 1 ? pagerHTML(tp, pageItems.length) : ''}`;
     for (const it of pageItems) prefetchRealAudio(it.w);
+    for (const it of pageItems) if (flipped.has(it.w)) ensureBack(it.w);   // 跨页返回的已翻卡补背面内容
   };
-  paint();                                    // 先出紧凑卡（词条未到的暂缺词性/音标）
+  paint();                                    // 先出正面紧凑卡
   const epoch = ++renderEpoch;
   ensureEntries(pageItems.map(it => it.w)).then(() => {
     if (epoch !== renderEpoch) return;        // 期间已翻页/重渲，丢弃
@@ -243,29 +252,41 @@ $('favList').addEventListener('click', e => {
   if (del) {
     const w = del.dataset.w;
     if (!store.removeFav(w)) return;
-    expanded.delete(w);
+    flipped.delete(w);
     renderList();
     toast(`已取消收藏「${w}」`);
     return;
   }
   if (e.target.closest('#pgPrev')) { page--; renderList(); return; }
   if (e.target.closest('#pgNext')) { page++; renderList(); return; }
-  if (e.target.closest('.favdetail')) return;             // 详情区内点击/选中文字不收起
-  const card = e.target.closest('.favcard');
-  if (!card) return;
-  const w = card.dataset.w;
-  if (expanded.has(w)) expanded.delete(w); else expanded.add(w);
-  refreshCard(w);                                          // 词条已在页缓存里，展开即时
+  const backBtn = e.target.closest('.favflipback');
+  const flipEl = e.target.closest('.favflip');
+  if (!flipEl) return;
+  const w = flipEl.dataset.w;
+  const setFlip = on => {
+    flipEl.classList.toggle('flipped', on);
+    flipEl.setAttribute('aria-pressed', on);
+    flipEl.querySelector('.favback .favscroll').hidden = !on;
+    flipEl.querySelector('.favback').setAttribute('aria-hidden', !on);
+    if (on) { flipped.add(w); ensureBack(w); } else flipped.delete(w);
+  };
+  if (backBtn) { setFlip(false); return; }                // 背面 ⟲ 翻回正面
+  if (e.target.closest('.favscroll')) return;             // 背面滚动区/选字不翻回
+  setFlip(!flipEl.classList.contains('flipped'));         // 正面点击翻面
 });
 
 $('favList').addEventListener('keydown', e => {
   if (e.key !== 'Enter' && e.key !== ' ') return;
-  const card = e.target.closest('.favcard');
-  if (!card || e.target.closest('.favdetail')) return;
+  const flipEl = e.target.closest('.favflip');
+  if (!flipEl) return;
   e.preventDefault();
-  const w = card.dataset.w;
-  if (expanded.has(w)) expanded.delete(w); else expanded.add(w);
-  refreshCard(w);
+  const on = !flipEl.classList.contains('flipped');
+  flipEl.classList.toggle('flipped', on);
+  flipEl.setAttribute('aria-pressed', on);
+  flipEl.querySelector('.favback .favscroll').hidden = !on;
+  flipEl.querySelector('.favback').setAttribute('aria-hidden', !on);
+  const w = flipEl.dataset.w;
+  if (on) { flipped.add(w); ensureBack(w); } else flipped.delete(w);
 });
 
 bindAudioButtons(document, pronounce);
