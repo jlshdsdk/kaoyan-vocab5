@@ -9,6 +9,7 @@ const DEFAULTS = {
   familiar: {},     // word -> timestamp
   daily: {},        // 'YYYY-MM-DD' -> {added, familiar}
   notes: {},        // 'YYYY-MM-DD' -> [word]（复习页「记入今日笔记」按钮，随账号云同步）
+  favs: {},         // word -> {at}（收藏词：生词笔记页 ☆ 按钮，随账号云同步；新者胜合并）
   settings: { dailyGoal: 50, realAudio: true, theme: 'auto', voice: 'auto' },
 };
 
@@ -126,6 +127,9 @@ function mergeIncoming(disk) {
     const cur = s.notes[k] || (s.notes[k] = []);
     for (const w of (arr || [])) if (!cur.includes(w)) cur.push(w);
   }
+  for (const [w, r] of Object.entries(disk.favs || {})) {
+    if (!s.favs[w] || (r.at || 0) > (s.favs[w].at || 0)) s.favs[w] = r;
+  }
   for (const [k, v] of Object.entries(disk.daily || {})) {
     const c = s.daily[k];
     if (!c) s.daily[k] = v;
@@ -210,6 +214,30 @@ export function addNoteWord(word, now = Date.now()) {
   return true;
 }
 
+/* ---- 收藏词（生词笔记页 ☆ 按钮，随账号云同步） ---- */
+
+/** 收藏一个词；已在收藏中返回 false */
+export function addFav(word, now = Date.now()) {
+  const s = load();
+  if (s.favs[word]) return false;
+  s.favs[word] = { at: now };
+  save();
+  return true;
+}
+
+/** 取消收藏；原本不在收藏中返回 false */
+export function removeFav(word) {
+  const s = load();
+  if (!s.favs[word]) return false;
+  delete s.favs[word];
+  save();
+  return true;
+}
+
+export function isFav(word) {
+  return !!load().favs[word];
+}
+
 /* ---- 每日任务 ---- */
 
 function bumpDaily(field, now = Date.now()) {
@@ -273,6 +301,9 @@ export function importJSON(text, { whole = true } = {}) {
     for (const [k, arr] of Object.entries(data.notes || {})) {
       const cur = s.notes[k] || (s.notes[k] = []);
       for (const w of (arr || [])) if (!cur.includes(w)) cur.push(w);
+    }
+    for (const [w, r] of Object.entries(data.favs || {})) {
+      if (!s.favs[w] || (r.at || 0) > (s.favs[w].at || 0)) s.favs[w] = r;
     }
     for (const [k, v] of Object.entries(data.daily || {})) {
       const c = s.daily[k];
