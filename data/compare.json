@@ -1899,6 +1899,54 @@
   ],
   "form": [
     {
+      "title": "circulate · accumulate",
+      "memo": "都以 -ulate 收尾的动词，前半截定乾坤：circulate＝circul(圈，同 circle)+ate→转圈→循环、流通、传播（blood/money/rumours circulate，名词 circulation 发行量）；accumulate＝ac(加强)+cumul(堆)+ate→堆起来→积累、积聚（accumulate experience/wealth 积累经验/财富，名词 accumulation，高频句型 Evidence has accumulated that... 越来越多的证据表明）。一句话：circulate 转圈跑（动态循环），accumulate 堆上去（越攒越多）。重音也分：circulate /ˈsɜːkjuleɪt/ 落首音节，accumulate /əˈkjuːmjəleɪt/ 落第二音节。",
+      "words": [
+        {
+          "w": "circulate",
+          "rank": 3,
+          "ph": {
+            "uk": "ˈsɜːkjuleɪt",
+            "us": "ˈsɜːrkjəleɪt"
+          },
+          "pos": "v.",
+          "gloss": "（使）循环，流通；传播，散布",
+          "usage": "circul（圈）+ate→转圈→循环；blood/money circulate 血液循环/货币流通；引申“谣言流传”（rumours circulate）；名词 circulation 循环、（报刊）发行量",
+          "phrases": [
+            "circulate rapidly 迅速流传",
+            "help the blood circulate 促进血液循环"
+          ],
+          "ex": [
+            {
+              "en": "Rumours began to circulate about his financial problems.",
+              "zh": "有关他财务问题的谣言开始流传开来。"
+            }
+          ]
+        },
+        {
+          "w": "accumulate",
+          "rank": 4,
+          "ph": {
+            "uk": "əˈkjuːmjəleɪt",
+            "us": "əˈkjuːmjəleɪt"
+          },
+          "pos": "v.",
+          "gloss": "积累，积聚；（数量）逐渐增加",
+          "usage": "ac（加强）+cumul（堆）+ate→堆起来→积累；指长年累月地攒（accumulate experience/wealth/savings）；高频句型 Evidence has accumulated that... 越来越多的证据表明；名词 accumulation 积累、堆积",
+          "phrases": [
+            "accumulate experience 积累经验",
+            "accumulate wealth 积累财富"
+          ],
+          "ex": [
+            {
+              "en": "Evidence has accumulated that regular exercise slows cognitive decline.",
+              "zh": "越来越多的证据表明，经常锻炼能减缓认知衰退。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "circumstance · circumscribe · circulate",
       "memo": "都是“圆圈”家族（circ/circum＝环）：circumstance＝circum(周围)+stance(站)→站在周围的东西→n. 环境、情况（under no circumstances 绝不，句首倒装高频）；circumscribe＝circum+scribe(画)→画个圈圈起来→vt. 限制、束缚（正式语域，被动高频 be circumscribed by law 受法律限制；近义分工见 restrict·constrain·confine·circumscribe·limit 组）；circulate＝circul(圈)+ate→转圈→v. 循环、流通、传播（blood/money/rumours circulate，名词 circulation 发行量）。一个圈三种活：围着站的是 circumstance，圈起来的是 circumscribe，转圈跑的是 circulate。",
       "words": [
