@@ -1617,6 +1617,54 @@
   ],
   "form": [
     {
+      "title": "undertake · undergo",
+      "memo": "都穿 under- 马甲，后半截定分工：undertake＝under(下面)+take(拿)→把担子从下面拿起来→承担、从事，还考“承诺”义 undertake to do 答应做（变化 undertook–undertaken，名词 undertaking 事业/保证）；undergo＝under+go(走)→从下面走过→经历、经受，宾语常是变化/手术/检查（undergo major changes、undergo surgery，变化 underwent–undergone）。一句话分工：undertake 主语是人，主动揽事；undergo 主语常是事物/病人，被动承受。别把过去分词写混：人 undertaken，事 undergone。",
+      "words": [
+        {
+          "w": "undertake",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌʌndəˈteɪk",
+            "us": "ˌʌndərˈteɪk"
+          },
+          "pos": "vt.",
+          "gloss": "承担，从事；承诺，答应",
+          "usage": "under（下面）+take（拿）→把担子从下面拿起来→承担；undertake to do 承诺/答应做，undertake a task/project 承担任务/工程；不规则变化 undertook–undertaken；名词 undertaking 事业、保证",
+          "phrases": [
+            "undertake to do 承诺/答应做",
+            "undertake a task 承担任务"
+          ],
+          "ex": [
+            {
+              "en": "The government undertook to halve carbon emissions within fifteen years, though experts doubted the timetable.",
+              "zh": "政府承诺在十五年内将碳排放减半，不过专家们对这一时间表表示怀疑。"
+            }
+          ]
+        },
+        {
+          "w": "undergo",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌʌndəˈɡəʊ",
+            "us": "ˌʌndərˈɡoʊ"
+          },
+          "pos": "vt.",
+          "gloss": "经历，经受，遭受（变化、手术等）",
+          "usage": "under（下面）+go（走）→从下面走过→经受；宾语常是变化、手术、检查、改造（undergo changes/surgery/tests）；不规则变化 underwent–undergone；近 experience",
+          "phrases": [
+            "undergo major changes 经历重大变化",
+            "undergo surgery 接受手术"
+          ],
+          "ex": [
+            {
+              "en": "Consequently, our feelings, thoughts and emotions have undergone a corresponding change.",
+              "zh": "因此，我们的感觉、思想和情绪也发生了相应的变化。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "contract · contrast",
       "memo": "双胞胎只差一个字母（-act vs -ast），词根定乾坤：contract＝con(一起)+tract(拉)→拉到一起→收缩（Metals contract in cold weather）；双方被“拉”到一起签约→合同（sign a contract 签合同、breach of contract 违约），tract 家族还有 attract 吸引、extract 抽出；冷门坑：contract 还可“感染”疾病（contract a virus）。contrast＝contra(相反)+st(站)→对着站→对比、差异，写作高频 by contrast 相比之下、in contrast to/with 与……形成对比。读音都名前动后：名词 /ˈkɒntrækt/ /ˈkɒntrɑːst/ 重音在前，动词 /kənˈtrækt/ /kənˈtrɑːst/ 重音后移。顺口溜：签 contract 之前多家 contrast。",
       "words": [
