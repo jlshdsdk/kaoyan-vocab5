@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "domestic · internal",
+      "memo": "都可译“国内的”，但边界不同：domestic 以国界为界，与 foreign/international 相对——domestic market/industries/policy 国内市场/产业/政策（GDP 里的 D 就是它），另有两个独有义：“家庭的”（domestic chores 家务、domestic violence 家暴）和“驯养的”（domestic animals 家畜）；internal 以任意边界为界——身体（internal organs/injuries 内脏/内伤）、机构（internal emails 内部邮件）、国家（internal affairs 内政），反义 external。易混警告：internal 与 international（国际的）就差一截字母，拼错意思翻车。一句话：对外谈经济用 domestic，往里看内部用 internal。",
+      "words": [
+        {
+          "w": "domestic",
+          "rank": 5,
+          "ph": {
+            "uk": "dəˈmestɪk",
+            "us": "dəˈmestɪk"
+          },
+          "pos": "adj.",
+          "gloss": "国内的；家庭的；驯养的",
+          "usage": "dom（家，同 dome 圆顶→家）→家里的/本国的；以国界为界：domestic market/industries，与 foreign 相对；独有义“家庭的”（domestic violence 家暴）、“驯养的”（domestic animals 家畜）",
+          "phrases": [
+            "domestic market 国内市场",
+            "domestic violence 家庭暴力"
+          ],
+          "ex": [
+            {
+              "en": "The government has taken measures to protect domestic industries from fierce foreign competition.",
+              "zh": "政府已采取措施保护国内产业免受激烈的外国竞争。"
+            }
+          ]
+        },
+        {
+          "w": "internal",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈtɜːnl",
+            "us": "ɪnˈtɜːrnl"
+          },
+          "pos": "adj.",
+          "gloss": "内部的；国内的，内政的；体内的",
+          "usage": "inter（在内）+nal→内部的；以任意边界为界：internal organs/injuries 内脏/内伤、internal emails 内部邮件、internal affairs 内政；反义 external 外部的；警告：international＝国际的，与 internal 只差一截，别拼混",
+          "phrases": [
+            "internal affairs 内政",
+            "internal organs 内脏"
+          ],
+          "ex": [
+            {
+              "en": "He accused the US of trying to interfere in his country's internal affairs.",
+              "zh": "他指责美国试图干涉他的国家的内政。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "oppose · object",
       "memo": "都译“反对”，出手方式不同：oppose 及物，直接挂宾语——oppose the plan / oppose doing sth.，立场鲜明地反对，常用状态式 be opposed to（＝be against），阅读高频 as opposed to 与……相对/不同于；object 不及物，必接介词 to（object to sth./doing sth.）——侧重“出声反对、提异议”（Nobody objected. 没人吭声反对），名词 objection 异议（have no objection to 不反对），它还有名词本义“物体/对象/宾语”（2006 年真题 the object of our study）。一句话：oppose 立场上反对（vt.），object 嘴上扔出反对（vi.+to）——词根都是姿态：pose 放到对面，ject 扔出去。",
       "words": [
