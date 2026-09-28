@@ -2,6 +2,75 @@
   "v": 1,
   "syn": [
     {
+      "title": "rival · opponent · competitor",
+      "memo": "都译“对手”，关系成色不同：rival 是势均力敌、长期争夺同一目标的“敌手”，可带敬意（a worthy rival 可敬的对手），还是三词中唯一能当动词的——rival sb. 匹敌；opponent＝op(相反)+pon(站)→站到对面的人——比赛/辩论的对手，更常考“反对者”（opponents of the plan 计划的反对者），绑定的是立场不是竞争，还能作 adj. 对立的；competitor 是 compete（竞争）的派生，商业/比赛语境的“竞争者、参赛者”（competitor firms 同业对手），纯描述、无褒贬。一句话：rival 争高低，opponent 立场相对，competitor 同场竞技。",
+      "words": [
+        {
+          "w": "rival",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈraɪvl",
+            "us": "ˈraɪvl"
+          },
+          "pos": "n. [C] / v. / adj.",
+          "gloss": "对手，竞争者；与……匹敌，媲美；竞争的",
+          "usage": "riv（河，同 river 词根）→词源“同饮一江水的人”→争水成对手；作动词“可与……匹敌”（rival sb. in sth.）；without rival 无可匹敌",
+          "phrases": [
+            "defeat one's rival 击败对手",
+            "without rival 无可匹敌"
+          ],
+          "ex": [
+            {
+              "en": "The two universities have long been rivals for research funding and the brightest students.",
+              "zh": "这两所大学长期以来一直在科研经费和最优秀生源上相互竞争。"
+            }
+          ]
+        },
+        {
+          "w": "opponent",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈpəʊnənt",
+            "us": "əˈpoʊnənt"
+          },
+          "pos": "n. [C] / adj.",
+          "gloss": "对手；反对者；adj. 对立的，敌对的",
+          "usage": "op（相反）+pon（站）+ent→站到对面的人；辩论/选举/体育的对手，更常考“反对者”（opponents of...），绑定立场而非竞争关系",
+          "phrases": [
+            "a political opponent 政敌",
+            "opponents of the plan 计划的反对者"
+          ],
+          "ex": [
+            {
+              "en": "Opponents of the new airport argue that it will destroy the nearby wetlands.",
+              "zh": "新机场的反对者认为它将毁掉附近的湿地。"
+            }
+          ]
+        },
+        {
+          "w": "competitor",
+          "rank": 3,
+          "ph": {
+            "uk": "kəmˈpetɪtə(r)",
+            "us": "kəmˈpetətər"
+          },
+          "pos": "n. [C]",
+          "gloss": "竞争者，对手；参赛者，选手",
+          "usage": "compete（竞争）+tor→参与竞争的人；商业语境常客（competitor firms 同业对手、a low-cost competitor 低成本竞争者）；名词 competition 竞争/比赛、competitive 竞争激烈的",
+          "phrases": [
+            "competitor firms 同业竞争对手",
+            "a low-cost competitor 低成本竞争对手"
+          ],
+          "ex": [
+            {
+              "en": "Firms that ignore their competitors' innovations risk losing market share.",
+              "zh": "无视竞争对手创新的公司面临失去市场份额的风险。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "cling · attach",
       "memo": "都含“附”意，方向和姿态不同：cling 不及物，自己“抓/粘”上去，必接 to——字面紧抓（clung to my mother's arm），引申“坚守、不肯撒手”（cling to the hope/power/old habits，常带固执色彩），变化 clung–clung，2015 年真题考 cling to their phones；attach 及物，把 A“钉/系”到 B 上——attach A to B（贴照片、附文件，邮件附件＝attachment），重心在“附加、赋予”：attach importance/significance to 重视（写作高频），be attached to 依恋/附属于，2005 年真题考 with few strings attached（没多少附带条件）。一句话：cling 自己粘上去（vi.+to，常含固执），attach 把东西钉上去（vt.，重在附加）。",
       "words": [
