@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "cling · attach",
+      "memo": "都含“附”意，方向和姿态不同：cling 不及物，自己“抓/粘”上去，必接 to——字面紧抓（clung to my mother's arm），引申“坚守、不肯撒手”（cling to the hope/power/old habits，常带固执色彩），变化 clung–clung，2015 年真题考 cling to their phones；attach 及物，把 A“钉/系”到 B 上——attach A to B（贴照片、附文件，邮件附件＝attachment），重心在“附加、赋予”：attach importance/significance to 重视（写作高频），be attached to 依恋/附属于，2005 年真题考 with few strings attached（没多少附带条件）。一句话：cling 自己粘上去（vi.+to，常含固执），attach 把东西钉上去（vt.，重在附加）。",
+      "words": [
+        {
+          "w": "cling",
+          "rank": 5,
+          "ph": {
+            "uk": "klɪŋ",
+            "us": "klɪŋ"
+          },
+          "pos": "vi.",
+          "gloss": "粘住，紧抓；依附；坚持，坚守",
+          "usage": "谐音“可怜”——可怜的孩子紧抓妈妈衣角；不及物，必接 cling to；引申“坚守”，常含不肯改变的固执；变化 clung–clung",
+          "phrases": [
+            "cling to 紧紧抓住；坚持",
+            "cling together 粘在一起；互相忠诚"
+          ],
+          "ex": [
+            {
+              "en": "Everyone around us seems to agree by the way they cling to their phones, even without a signal on a subway.",
+              "zh": "我们周围的每个人似乎都赞成在路上一直玩手机，即使是在没有信号的地铁里。"
+            }
+          ]
+        },
+        {
+          "w": "attach",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈtætʃ",
+            "us": "əˈtætʃ"
+          },
+          "pos": "vt.",
+          "gloss": "系上，贴上，附上；附加；重视；使依恋",
+          "usage": "at（加强）+tach（钉）→牢牢钉上；attach A to B 把 A 附在 B 上；核心搭配 attach importance/significance to 重视（写作高频）；名词 attachment 附件、依恋",
+          "phrases": [
+            "attach importance to... 重视……",
+            "be attached to 依恋；附属于"
+          ],
+          "ex": [
+            {
+              "en": "We attach great importance to good design of buildings and neighbourhoods.",
+              "zh": "我们非常重视建筑和社区的良好设计。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "initial · original · primary",
       "memo": "都能译“最初的”，落点不同：initial 只管时间轴上的“开头”（the initial stage/reaction/draft 初期/最初反应/初稿），暗示后面会发展变化；original 锚定“原本”——原计划/原版（the original plan 原计划，多半没照做、the original manuscript 原稿），还有硬核义“原创的”（original works 原创作品，名词 originality 创造力），还能当名词“原作/原件”；primary 管的是“主次”而非先后——首要的、最主要的（primary concern/goal/cause），另有“初级的”义（primary school 小学）。一句话分工：initial 管先后，original 管原本与原创，primary 管主次。",
       "words": [
