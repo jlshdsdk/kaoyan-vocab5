@@ -1793,8 +1793,8 @@
       ]
     },
     {
-      "title": "statute · statue · status · stature",
-      "memo": "四词共享词根 stat(站立)，结尾定乾坤：-ute 立的规→法令；-ue 立着的像→雕像；-us 站的位置→地位；-ure 站的高度→身高。前三个都含 /tʃuː/，status 元音变读 /eɪ/，别读混。",
+      "title": "statute · statue · status",
+      "memo": "三词共享词根 stat(站立)，结尾定乾坤：-ute 立的规→法令；-ue 立着的像→雕像；-us 站的位置→地位。statute/statue 都含 /tʃuː/，status 元音变读 /eɪ/，别读混。",
       "words": [
         {
           "w": "statute",
@@ -1856,27 +1856,6 @@
             {
               "en": "Doctors enjoy high social status in this country.",
               "zh": "在这个国家，医生享有很高的社会地位。"
-            }
-          ]
-        },
-        {
-          "w": "stature",
-          "rank": null,
-          "ph": {
-            "uk": "ˈstætʃə",
-            "us": "ˈstætʃɚ"
-          },
-          "pos": "n.",
-          "gloss": "身高，个子；（成就、品格的）高度，声望",
-          "usage": "stat(站)+ure→站立的高度→身高；引申为学识品格的境界，a man of stature 德高望重之人。",
-          "phrases": [
-            "a man of great stature 身材高大/德高望重之人",
-            "grow in stature 渐有威望"
-          ],
-          "ex": [
-            {
-              "en": "He is a scholar of international stature.",
-              "zh": "他是一位具有国际声望的学者。"
             }
           ]
         }
