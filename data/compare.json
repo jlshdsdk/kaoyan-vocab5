@@ -2389,8 +2389,8 @@
       ]
     },
     {
-      "title": "allege · array",
-      "memo": "两词都是 /ə/ 弱音起手、听力易混：allege /əˈledʒ/ = al-(向)+lege(说)→\"说出去\"=（无证据）宣称、指控，法律语境高频（It is alleged that 据称）；array /əˈreɪ/ = ar-(向)+ray(排列)→\"排成一列\"=一系列/大量（an array of）／数组。词义零交集：一个是\"嘴上说\"，一个是\"排成队\"。拼写再分：-ledge（联想 college）vs -ray（光线 ray）。",
+      "title": "allege · array · alley · ally",
+      "memo": "四词都双 l 起手、听着也近：allege /əˈledʒ/ = al(向)+lege(说)→（无证据）宣称、指控，法律高频（It is alleged that 据称）；array /əˈreɪ/ = ar(向)+ray(排列)→一系列/大量（an array of），计算机语境“数组”；alley /ˈæli/ 小巷（a blind alley 死胡同、绝路）；ally /ˈælaɪ/ 盟友/结盟（ally with，名词 allies、alliance 联盟）。最坑的是 alley/ally 同四个字母重排：-ley 收尾是“巷”，-ly 是“盟友”；读音也分：alley 重音在前收 /i/，ally（尤作动词）拖到后音节收 /aɪ/，听到 /aɪ/ 就是“结盟”。拼写再分：-lege 说（联想 college）、-ray 排（光线 ray）、-lley 巷（同族 valley 山谷、gallery 画廊）。",
       "words": [
         {
           "w": "allege",
@@ -2431,6 +2431,47 @@
             {
               "en": "The store offers a wide array of imported goods.",
               "zh": "这家商店提供种类繁多的进口商品。"
+            }
+          ]
+        },
+        {
+          "w": "alley",
+          "ph": {
+            "uk": "ˈæli",
+            "us": "ˈæli"
+          },
+          "pos": "n.",
+          "gloss": "小巷，胡同；小径",
+          "usage": "双 l 发 /l/、重音砸在首音节；a blind alley 死胡同，引申“绝路、没有前途的路”；美式口语 up one's alley 正合某人专长/口味",
+          "phrases": [
+            "a blind alley 死胡同；绝路",
+            "up one's alley 正合某人的专长/口味"
+          ],
+          "ex": [
+            {
+              "en": "He slipped into a narrow alley behind the shop.",
+              "zh": "他溜进了商店后面一条狭窄的小巷。"
+            }
+          ]
+        },
+        {
+          "w": "ally",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈælaɪ",
+            "us": "ˈælaɪ"
+          },
+          "pos": "n. [C] / v.",
+          "gloss": "同盟者，盟国；（使）结盟",
+          "usage": "all（都）+y→都站同一边→盟友；ally (oneself) with 与……结盟；名词复数 allies，再派生 alliance 联盟",
+          "phrases": [
+            "ally oneself with 与……结盟",
+            "potential allies 潜在的盟友"
+          ],
+          "ex": [
+            {
+              "en": "Portugal is a traditional ally of England.",
+              "zh": "葡萄牙是英国的传统盟友。"
             }
           ]
         }
