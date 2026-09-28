@@ -1713,8 +1713,8 @@
       ]
     },
     {
-      "title": "contract · contrast",
-      "memo": "双胞胎只差一个字母（-act vs -ast），词根定乾坤：contract＝con(一起)+tract(拉)→拉到一起→收缩（Metals contract in cold weather）；双方被“拉”到一起签约→合同（sign a contract 签合同、breach of contract 违约），tract 家族还有 attract 吸引、extract 抽出；冷门坑：contract 还可“感染”疾病（contract a virus）。contrast＝contra(相反)+st(站)→对着站→对比、差异，写作高频 by contrast 相比之下、in contrast to/with 与……形成对比。读音都名前动后：名词 /ˈkɒntrækt/ /ˈkɒntrɑːst/ 重音在前，动词 /kənˈtrækt/ /kənˈtrɑːst/ 重音后移。顺口溜：签 contract 之前多家 contrast。",
+      "title": "contract · contrast · contradict",
+      "memo": "contr- 三兄弟，尾巴定身份：contract＝con(一起)+tract(拉)→拉到一起→收缩（Metals contract in cold weather）；双方被“拉”到一起签约→合同（sign a contract、breach of contract 违约），tract 家族还有 attract、extract；冷门坑：还可“感染”疾病。contrast＝contra(相反)+st(站)→对着站→对比、差异（by contrast 相比之下、in contrast to/with）。contradict＝contra(相反)+dict(说)→说反话→反驳、与……矛盾（contradict oneself 自相矛盾），名词 contradiction，dict 家族 predict 预言、dictate 命令。读音分家：contract/contrast 名前动后，contradict 重音直接砸在尾音节 /ˌkɒntrəˈdɪkt/。顺口溜：签 contract 前多家 contrast，谁唱反调谁 contradict。",
       "words": [
         {
           "w": "contract",
@@ -1755,6 +1755,27 @@
             {
               "en": "In contrast with her quiet brother, she greets every stranger like an old friend.",
               "zh": "与沉默寡言的哥哥形成对比的是，她像对待老朋友一样招呼每个陌生人。"
+            }
+          ]
+        },
+        {
+          "w": "contradict",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌkɒntrəˈdɪkt",
+            "us": "ˌkɑːntrəˈdɪkt"
+          },
+          "pos": "vt.",
+          "gloss": "反驳，驳斥；与……矛盾，相抵触",
+          "usage": "contra（相反）+dict（说）→说反话→反驳；contradict oneself 自相矛盾；名词 contradiction（in contradiction to 与……相矛盾）；dict 家族：predict 预言、dictate 命令/听写；2015 年真题考过 contradicting conventional wisdom 的分词用法",
+          "phrases": [
+            "contradict oneself 自相矛盾",
+            "contradict each other 相互矛盾"
+          ],
+          "ex": [
+            {
+              "en": "The two reports contradict each other.",
+              "zh": "这两份报告相互矛盾。"
             }
           ]
         }
