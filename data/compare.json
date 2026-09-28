@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "ally · alliance",
+      "memo": "都译“结盟/联盟”，分工在词性：ally 是“盟友”——指人/国家（a close ally 亲密盟国），还能当动词，ally with / ally oneself with / be allied to 与……结盟，动词义只能用它；alliance 是“联盟”——指结盟的关系或组织本身（form an alliance with 结成联盟、in alliance with 与……联合、break off an alliance with 解除盟约），纯名词不能当动词。派生链记住：ally（盟友/结盟）→allied（结盟的）→alliance（联盟）。写作点：句子里缺动词选 ally，缺名词选 alliance。",
+      "words": [
+        {
+          "w": "ally",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈælaɪ",
+            "us": "ˈælaɪ"
+          },
+          "pos": "n. [C] / v.",
+          "gloss": "同盟者，盟国；（使）结盟",
+          "usage": "all（都）+y→都站同一边→盟友；ally (oneself) with 与……结盟、be allied to 与……结盟；名词复数 allies",
+          "phrases": [
+            "ally oneself with 与……结盟",
+            "potential allies 潜在的盟友"
+          ],
+          "ex": [
+            {
+              "en": "Portugal is a traditional ally of England.",
+              "zh": "葡萄牙是英国的传统盟友。"
+            }
+          ]
+        },
+        {
+          "w": "alliance",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈlaɪəns",
+            "us": "əˈlaɪəns"
+          },
+          "pos": "n.",
+          "gloss": "联盟，同盟；结盟",
+          "usage": "al（加强）+li（捆绑）+ance（名词后缀）→捆绑到一起→结盟；纯名词，动词义只能用 ally；2018 年真题考过 its alliance with... 的用法",
+          "phrases": [
+            "in alliance with 与……合作/联盟",
+            "break off an alliance with 与……解除联盟"
+          ],
+          "ex": [
+            {
+              "en": "The two parties formed a political alliance to push the education reforms through parliament.",
+              "zh": "两党结成政治联盟，以推动教育改革在议会获得通过。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "dedicate · devote",
       "memo": "近义可互换处多：dedicate 更庄重正式，对象是崇高事业，另有题献/落成典礼义；devote 重专注投入（时间精力），be devoted to 还可指深爱。两词都接 to doing/n.。",
       "words": [
