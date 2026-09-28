@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "notion · conception",
+      "memo": "都译“概念/观念”，成色不同：notion 是个人脑子里的想法、看法，常模糊未成型（a vague notion 模糊的想法，the notion that... 接同位语从句，议论文高频）；conception 更正式，指对某事物的整体理解/概念把握（one's conception of...、have no conception of 完全不懂），另有“构想”“怀孕/受孕”两义（动词 conceive 兼“构想”与“怀孕”）。顺带分清第三方 concept＝客观的抽象概念：随口的看法用 notion，成型的理解用 conception，教科书里的术语用 concept。2013 年真题考过 the top-down conception of the fashion business。",
+      "words": [
+        {
+          "w": "notion",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈnəʊʃn",
+            "us": "ˈnoʊʃn"
+          },
+          "pos": "n.",
+          "gloss": "概念，观念；想法，见解",
+          "usage": "not（知道）+ion→知道后产生的看法；the notion that... 接同位语从句是高频考点；谐音“闹心”——想法让人闹心",
+          "phrases": [
+            "the notion that... ……的想法/观念",
+            "a common-sense notion 常识性的概念"
+          ],
+          "ex": [
+            {
+              "en": "The notion that money can buy happiness has been questioned by many psychologists.",
+              "zh": "金钱能买到幸福的观念受到许多心理学家的质疑。"
+            }
+          ]
+        },
+        {
+          "w": "conception",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsepʃn",
+            "us": "kənˈsepʃn"
+          },
+          "pos": "n.",
+          "gloss": "概念，观念；构想；怀孕，受孕",
+          "usage": "动词 conceive（构想出/怀孕）的名词；侧重对某事物的整体理解、概括性把握；have no conception of 完全不懂；2013 年真题：the top-down conception of the fashion business",
+          "phrases": [
+            "have no conception of 完全不懂，不明白",
+            "one's conception of... 对……的理解"
+          ],
+          "ex": [
+            {
+              "en": "This top-down conception of the fashion business couldn't be more out of date.",
+              "zh": "这种自上而下的时尚行业理念已经完全过时了。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "eager · keen",
       "memo": "都译“渴望/热衷”，温度和落点不同：eager 情绪更烫——迫不及待地盼（be eager to do 渴望做、be eager for 渴望得到），主语人/机构皆可；keen 更像“热衷、有兴趣”，英式口语高频（be keen on doing 热衷于），程度平缓些；keen 还独有一义“敏锐的”——a keen sense of smell 嗅觉敏锐、keen eyesight、a keen observer 敏锐的观察者，夸眼光/感官用它。搭配小抄：be eager to do / be keen on doing，on 前只能站 keen。",
       "words": [
