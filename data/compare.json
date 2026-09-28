@@ -1617,6 +1617,54 @@
   ],
   "form": [
     {
+      "title": "contract · contrast",
+      "memo": "双胞胎只差一个字母（-act vs -ast），词根定乾坤：contract＝con(一起)+tract(拉)→拉到一起→收缩（Metals contract in cold weather）；双方被“拉”到一起签约→合同（sign a contract 签合同、breach of contract 违约），tract 家族还有 attract 吸引、extract 抽出；冷门坑：contract 还可“感染”疾病（contract a virus）。contrast＝contra(相反)+st(站)→对着站→对比、差异，写作高频 by contrast 相比之下、in contrast to/with 与……形成对比。读音都名前动后：名词 /ˈkɒntrækt/ /ˈkɒntrɑːst/ 重音在前，动词 /kənˈtrækt/ /kənˈtrɑːst/ 重音后移。顺口溜：签 contract 之前多家 contrast。",
+      "words": [
+        {
+          "w": "contract",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒntrækt",
+            "us": "ˈkɑːntrækt"
+          },
+          "pos": "n. [C] / v.",
+          "gloss": "合同，契约；收缩；（使）缩小；感染（疾病）；订立（合同）",
+          "usage": "con（一起）+tract（拉）→拉到一起→收缩；双方拉到一起签约→合同；名前动后：n. /ˈkɒntrækt/、v. /kənˈtrækt/；冷门考点“感染疾病”contract a virus；tract 家族：attract、extract、subtract",
+          "phrases": [
+            "sign a contract 签合同",
+            "breach of contract 违约行为"
+          ],
+          "ex": [
+            {
+              "en": "One accounting firm, EY, uses an AI system that helps review contracts during an audit.",
+              "zh": "安永会计师事务所使用人工智能系统，在审计期间帮助审查合同。"
+            }
+          ]
+        },
+        {
+          "w": "contrast",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒntrɑːst",
+            "us": "ˈkɑːntræst"
+          },
+          "pos": "n. [C, U] / v.",
+          "gloss": "对比，对照；差异",
+          "usage": "contra（相反）+st（站）→对着站→对比；写作高频：by contrast 相比之下、in contrast to/with 与……形成对比；动词重音后移读 kənˈtrɑːst；别与 compare to（比作）、compare with（比较）混",
+          "phrases": [
+            "by contrast 相比之下",
+            "in contrast to/with... 与……形成对比"
+          ],
+          "ex": [
+            {
+              "en": "In contrast with her quiet brother, she greets every stranger like an old friend.",
+              "zh": "与沉默寡言的哥哥形成对比的是，她像对待老朋友一样招呼每个陌生人。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "precede · concede · coincide",
       "memo": "三兄弟结尾都长 -cede/-cide，拼写差一个字母、意思差十万八千里：precede＝pre(在前)+cede(走)→走在前面→先于、发生在……之前（名词 precedent 先例、predecessor 前任）；concede＝con(彻底)+cede(让出)→彻底让出去→让步、（不情愿地）承认（concede defeat 承认失败）；coincide 最容易认错——结尾是 -cide 不是 -cede（co 共同+cid 落→落在同一点）→同时发生、（意见）一致，必接 coincide with，名词 coincidence 巧合。口诀：cede 走出“先后”与“让步”，cide 落到一起才“巧合一致”。precede 管“谁先谁后”，concede 管“认输让步”，coincide 管“对上号”。concede 另在 concede·conclude·convert 组里有 con- 动词角度的辨析。",
       "words": [
