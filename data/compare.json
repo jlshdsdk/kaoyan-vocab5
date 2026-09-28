@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "compose · constitute",
+      "memo": "都译“组成/构成”，方向是命门：compose 是“部分拼成整体”，常用被动——整体 be composed of 部分（The earth is composed of layers，＝consist of，但 consist of 只用主动无被动）；constitute 是“部分构成整体”，主动语态直接部分作主语——Women constitute half of the workforce。一句话正反记：Water is composed of hydrogen and oxygen ＝ Hydrogen and oxygen constitute water. 另记 constitute 的引申义“算是、构成（威胁/违约）”——constitute a threat to，正式语域高频；compose 还有“作曲/撰写”义（composer 作曲家、composition 作文）。",
+      "words": [
+        {
+          "w": "compose",
+          "rank": 5,
+          "ph": {
+            "uk": "kəmˈpəʊz",
+            "us": "kəmˈpoʊz"
+          },
+          "pos": "v.",
+          "gloss": "组成，构成；创作（乐曲、诗文）；使平静",
+          "usage": "com（都）+pose（摆）→都摆到一起→组成；被动搭配 be composed of 由……组成；另有“作曲、撰写”义，名词 composition 作文/构成",
+          "phrases": [
+            "be composed of... 由……组成",
+            "compose a symphony 创作交响曲"
+          ],
+          "ex": [
+            {
+              "en": "Women compose nearly sixty percent of the students enrolled in the medical schools.",
+              "zh": "在这些医学院注册的学生中，女性约占百分之六十。"
+            }
+          ]
+        },
+        {
+          "w": "constitute",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnstɪtjuːt",
+            "us": "ˈkɑːnstətuːt"
+          },
+          "pos": "vt.",
+          "gloss": "组成，构成；被视为，算是；设立，制定",
+          "usage": "con（一起）+stitut（站）+e→站到一起→组成；方向与 compose 相反：部分 constitute 整体，部分作主语；“算是/构成”义正式语域高频（constitute a threat/breach）；名词 constitution 宪法、体质",
+          "phrases": [
+            "constitute a threat to... 构成对……的威胁",
+            "constitute a breach of... 构成对……的违反"
+          ],
+          "ex": [
+            {
+              "en": "Women constitute nearly half of the workforce in this industry.",
+              "zh": "女性约占该行业劳动力的一半。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "ally · alliance",
       "memo": "都译“结盟/联盟”，分工在词性：ally 是“盟友”——指人/国家（a close ally 亲密盟国），还能当动词，ally with / ally oneself with / be allied to 与……结盟，动词义只能用它；alliance 是“联盟”——指结盟的关系或组织本身（form an alliance with 结成联盟、in alliance with 与……联合、break off an alliance with 解除盟约），纯名词不能当动词。派生链记住：ally（盟友/结盟）→allied（结盟的）→alliance（联盟）。写作点：句子里缺动词选 ally，缺名词选 alliance。",
       "words": [
