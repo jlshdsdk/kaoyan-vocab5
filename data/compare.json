@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "eager · keen",
+      "memo": "都译“渴望/热衷”，温度和落点不同：eager 情绪更烫——迫不及待地盼（be eager to do 渴望做、be eager for 渴望得到），主语人/机构皆可；keen 更像“热衷、有兴趣”，英式口语高频（be keen on doing 热衷于），程度平缓些；keen 还独有一义“敏锐的”——a keen sense of smell 嗅觉敏锐、keen eyesight、a keen observer 敏锐的观察者，夸眼光/感官用它。搭配小抄：be eager to do / be keen on doing，on 前只能站 keen。",
+      "words": [
+        {
+          "w": "eager",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈiːɡə",
+            "us": "ˈiːɡər"
+          },
+          "pos": "adj.",
+          "gloss": "渴望的，热切的，渴求的",
+          "usage": "谐音“一哥”——谁不想当一哥→渴望的；be eager to do 渴望做、be eager for sth 渴望得到；语气比 keen 更急切；近 anxious（注意 anxious 另有“焦虑”义）",
+          "phrases": [
+            "be eager to do sth. 渴望做某事",
+            "be eager for sth. 渴望得到某物"
+          ],
+          "ex": [
+            {
+              "en": "The company is eager to expand its share of the rapidly growing electric car market.",
+              "zh": "该公司渴望扩大其在快速增长的电动汽车市场的份额。"
+            }
+          ]
+        },
+        {
+          "w": "keen",
+          "rank": 3,
+          "ph": {
+            "uk": "kiːn",
+            "us": "kiːn"
+          },
+          "pos": "adj.",
+          "gloss": "热衷的，渴望的；敏锐的；（刀刃）锋利的",
+          "usage": "be keen on (doing) 热衷于，英式口语高频；另一核心义“敏锐”：keen sense/eyesight/observer；联想 keep a keen eye 保持敏锐眼光",
+          "phrases": [
+            "be keen on 热衷于",
+            "a keen sense of smell 敏锐的嗅觉"
+          ],
+          "ex": [
+            {
+              "en": "She is keen on photography and spends most weekends taking pictures.",
+              "zh": "她热衷于摄影，大部分周末都在拍照。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "compose · constitute · construct",
       "memo": "都译“组成/构成”，分工在方向和动作：compose 是“部分拼成整体”，常用被动——整体 be composed of 部分（＝consist of，但 consist of 只用主动无被动）；constitute 是“部分构成整体”，主动语态部分作主语——Women constitute half of the workforce，另有“算是、构成（威胁/违约）”引申义；construct 是“建造、构建”这个动作——把东西搭出来（construct a bridge 建桥、construct a theory 构建理论），不表组成关系，名词 construction 建造（be under construction 在建设中）、constructive 建设性的。正反记：Water is composed of hydrogen and oxygen ＝ Hydrogen and oxygen constitute water.；要表达“造出来”用 construct。",
       "words": [
