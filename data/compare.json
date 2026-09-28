@@ -1899,6 +1899,74 @@
   ],
   "form": [
     {
+      "title": "circumstance · circumscribe · circulate",
+      "memo": "都是“圆圈”家族（circ/circum＝环）：circumstance＝circum(周围)+stance(站)→站在周围的东西→n. 环境、情况（under no circumstances 绝不，句首倒装高频）；circumscribe＝circum+scribe(画)→画个圈圈起来→vt. 限制、束缚（正式语域，被动高频 be circumscribed by law 受法律限制；近义分工见 restrict·constrain·confine·circumscribe·limit 组）；circulate＝circul(圈)+ate→转圈→v. 循环、流通、传播（blood/money/rumours circulate，名词 circulation 发行量）。一个圈三种活：围着站的是 circumstance，圈起来的是 circumscribe，转圈跑的是 circulate。",
+      "words": [
+        {
+          "w": "circumstance",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈsɜːkəmstəns",
+            "us": "ˈsɜːrkəmstæns"
+          },
+          "pos": "n. [C, 常 pl.]",
+          "gloss": "环境，情况，条件；境遇",
+          "usage": "circum（周围）+stance（站）→周围站着的东西→情况；常用复数；under no circumstances 绝不（句首倒装高频）；辨析：environment 环境总称、surroundings 周围事物",
+          "phrases": [
+            "under no circumstances 无论如何不",
+            "under/in the circumstances 在这种情形下"
+          ],
+          "ex": [
+            {
+              "en": "Under no circumstances should personal information be shared with unregistered third-party applications.",
+              "zh": "在任何情况下都不得与未注册的第三方应用共享个人信息。"
+            }
+          ]
+        },
+        {
+          "w": "circumscribe",
+          "ph": {
+            "uk": "ˈsɜːkəmskraɪb",
+            "us": "ˈsɜːrkəmskraɪb"
+          },
+          "pos": "vt.",
+          "gloss": "限制，束缚；在……周围画线",
+          "usage": "circum（周围）+scribe（画）→画圈圈住→限制（正式语域，被动高频 be circumscribed by...）；scribe 家族：describe 描述、prescribe 规定/开处方、subscribe 订阅；近 confine/restrict",
+          "phrases": [
+            "be circumscribed by... 受……的限制",
+            "circumscribed powers 受到限制的权力"
+          ],
+          "ex": [
+            {
+              "en": "Their powers are strictly circumscribed by law.",
+              "zh": "他们的权力受到法律的严格限制。"
+            }
+          ]
+        },
+        {
+          "w": "circulate",
+          "rank": 3,
+          "ph": {
+            "uk": "ˈsɜːkjuleɪt",
+            "us": "ˈsɜːrkjəleɪt"
+          },
+          "pos": "v.",
+          "gloss": "（使）循环，流通；传播，散布",
+          "usage": "circul（圈）+ate→转圈→循环；blood/money circulate 血液循环/货币流通；引申“谣言流传”（rumours circulate）；名词 circulation 循环、（报刊）发行量",
+          "phrases": [
+            "circulate rapidly 迅速流传",
+            "help the blood circulate 促进血液循环"
+          ],
+          "ex": [
+            {
+              "en": "Rumours began to circulate about his financial problems.",
+              "zh": "有关他财务问题的谣言开始流传开来。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "rival · rural",
       "memo": "长得像，里面是两个世界：rival＝riv（河，同 river 词根）→词源是“住在同一条河边、共用水源的人”→抢水＝对手！n. 对手、v. 与……匹敌（Few can rival him in chess、without rival 无可匹敌）；rural＝rur（乡村）→adj. 农村的（rural areas/population，反义 urban 城市的，rural-urban gap 城乡差距是阅读常客）。拼写拆开：中间 -iva- 的是“对手”，-ura- 的是“农村”；读音 rival /ˈraɪvl/ 干脆两拍，rural /ˈrʊərəl/ 卷着舌。谐音：rural 类“孺弱”——村里只剩老弱妇孺。",
       "words": [
