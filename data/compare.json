@@ -1782,6 +1782,54 @@
   ],
   "form": [
     {
+      "title": "initial · initiative",
+      "memo": "同根双胞胎（都含 it“走”→起始）：initial 形容词“最初的”——the initial stage/reaction，只表先后不表重要性，另有名词“首字母”；initiative 是名词——“主动性/主动权/倡议”，必背 take the initiative 采取主动、on one's own initiative 主动地（没人推自己也干），阅读里还常译“新举措、倡议”（a government initiative 政府新举措）。区分一句话：initial 是“开头的”（形容词），initiative 是“起头、带节奏”的动作或方案（名词）。拼写上 initiative 多一段 -iative，别漏。",
+      "words": [
+        {
+          "w": "initial",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɪʃl",
+            "us": "ɪˈnɪʃl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "最初的，开始的；n. [pl.] 首字母",
+          "usage": "in（里）+it（走）+ial→向里去→最初的；只表先后、不表重要性；the initial stage/reaction/draft；副词 initially 起初；与 initiative 同根",
+          "phrases": [
+            "the initial stage 初始阶段",
+            "initial reaction 最初的反应"
+          ],
+          "ex": [
+            {
+              "en": "The initial reaction to the proposal was positive, but doubts soon appeared.",
+              "zh": "对该提案的最初反应是积极的，但疑问很快出现了。"
+            }
+          ]
+        },
+        {
+          "w": "initiative",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɪʃətɪv",
+            "us": "ɪˈnɪʃətɪv"
+          },
+          "pos": "n.",
+          "gloss": "主动性，进取心；主动权；倡议，新举措",
+          "usage": "initiate（v. 开始，发起）的派生；take the initiative 采取主动、have the initiative 处于主动、on one's own initiative 主动地；阅读中常指“新方案/倡议”",
+          "phrases": [
+            "take the initiative 采取主动",
+            "on one's own initiative 主动地"
+          ],
+          "ex": [
+            {
+              "en": "The government launched a new initiative to reduce plastic waste.",
+              "zh": "政府发起了一项减少塑料垃圾的新倡议。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "undertake · undergo",
       "memo": "都穿 under- 马甲，后半截定分工：undertake＝under(下面)+take(拿)→把担子从下面拿起来→承担、从事，还考“承诺”义 undertake to do 答应做（变化 undertook–undertaken，名词 undertaking 事业/保证）；undergo＝under+go(走)→从下面走过→经历、经受，宾语常是变化/手术/检查（undergo major changes、undergo surgery，变化 underwent–undergone）。一句话分工：undertake 主语是人，主动揽事；undergo 主语常是事物/病人，被动承受。别把过去分词写混：人 undertaken，事 undergone。",
       "words": [
