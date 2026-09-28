@@ -1830,6 +1830,54 @@
   ],
   "form": [
     {
+      "title": "rival · rural",
+      "memo": "长得像，里面是两个世界：rival＝riv（河，同 river 词根）→词源是“住在同一条河边、共用水源的人”→抢水＝对手！n. 对手、v. 与……匹敌（Few can rival him in chess、without rival 无可匹敌）；rural＝rur（乡村）→adj. 农村的（rural areas/population，反义 urban 城市的，rural-urban gap 城乡差距是阅读常客）。拼写拆开：中间 -iva- 的是“对手”，-ura- 的是“农村”；读音 rival /ˈraɪvl/ 干脆两拍，rural /ˈrʊərəl/ 卷着舌。谐音：rural 类“孺弱”——村里只剩老弱妇孺。",
+      "words": [
+        {
+          "w": "rival",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈraɪvl",
+            "us": "ˈraɪvl"
+          },
+          "pos": "n. [C] / v. / adj.",
+          "gloss": "对手，竞争者；与……匹敌，媲美；竞争的",
+          "usage": "riv（河，同 river 词根）→词源“同饮一江水的人”→争水成对手；作动词“可与……匹敌”（rival sb. in sth.）；without rival 无可匹敌；近 competitor",
+          "phrases": [
+            "defeat one's rival 击败对手",
+            "without rival 无可匹敌"
+          ],
+          "ex": [
+            {
+              "en": "The two universities have long been rivals for research funding and the brightest students.",
+              "zh": "这两所大学长期以来一直在科研经费和最优秀生源上相互竞争。"
+            }
+          ]
+        },
+        {
+          "w": "rural",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈrʊərəl",
+            "us": "ˈrʊrəl"
+          },
+          "pos": "adj.",
+          "gloss": "农村的，乡村的",
+          "usage": "rur（乡村）；反义 urban 城市的；rural-urban gap 城乡差距为阅读高频；谐音“孺弱”——村里只剩老弱妇孺",
+          "phrases": [
+            "rural areas 农村地区",
+            "the rural poor 农村贫困人口"
+          ],
+          "ex": [
+            {
+              "en": "Young people continue to leave rural communities in search of better schools and higher wages.",
+              "zh": "年轻人不断离开农村社区，去寻找更好的学校和更高的工资。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "initial · initiative",
       "memo": "同根双胞胎（都含 it“走”→起始）：initial 形容词“最初的”——the initial stage/reaction，只表先后不表重要性，另有名词“首字母”；initiative 是名词——“主动性/主动权/倡议”，必背 take the initiative 采取主动、on one's own initiative 主动地（没人推自己也干），阅读里还常译“新举措、倡议”（a government initiative 政府新举措）。区分一句话：initial 是“开头的”（形容词），initiative 是“起头、带节奏”的动作或方案（名词）。拼写上 initiative 多一段 -iative，别漏。",
       "words": [
