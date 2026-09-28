@@ -925,8 +925,8 @@
       ]
     },
     {
-      "title": "subsidy · allowance · grant · subvention",
-      "memo": "都是\"给钱\"，给法和对象不同：subsidy 是\"补贴\"——政府为扶持产业、压低成本发的（farm subsidies 农业补贴、housing subsidy 住房补贴），受补的是产业/项目；allowance 是\"津贴/零用钱\"——按期发给个人的固定款项（jobseeker's allowance 求职津贴），另考 make allowance(s) for 考虑到/体谅；grant 是\"拨款\"——机构为特定目的（尤指科研、学业）批的一笔钱（research grant 科研拨款、student grants 助学金），动词还可\"准予\"，必背 take...for granted 理所当然；subvention 最书面——公家给机构（大学、剧团）的补助金，词根 sub(从旁)+vent(来)→从旁相助。分工：产业用 subsidy，个人按月用 allowance，项目批款用 grant，机构受助用 subvention。",
+      "title": "subsidy · allowance · grant",
+      "memo": "都是“给钱”，给法和对象不同：subsidy 是“补贴”——政府为扶持产业、压低成本发的（farm subsidies 农业补贴、housing subsidy 住房补贴），受补的是产业/项目；allowance 是“津贴/零用钱”——按期发给个人的固定款项（jobseeker's allowance 求职津贴），另考 make allowance(s) for 考虑到/体谅；grant 是“拨款”——机构为特定目的（尤指科研、学业）批的一笔钱（research grant 科研拨款、student grants 助学金），动词还可“准予”，必背 take...for granted 理所当然。分工：产业用 subsidy，个人按月用 allowance，项目批款用 grant。",
       "words": [
         {
           "w": "subsidy",
@@ -988,26 +988,6 @@
             {
               "en": "The university awarded her a research grant.",
               "zh": "大学授予她一笔科研拨款。"
-            }
-          ]
-        },
-        {
-          "w": "subvention",
-          "ph": {
-            "uk": "səbˈvenʃn",
-            "us": "səbˈvenʃn"
-          },
-          "pos": "n. [C, U]",
-          "gloss": "（政府给机构的）补助金，津贴",
-          "usage": "sub(从旁)+vent(来)→从旁相助→补助；最书面，多指公共资金对大学、艺术团体等机构的资助；近 subsidy",
-          "phrases": [
-            "state subvention 国家补助",
-            "public subventions 公共补助金"
-          ],
-          "ex": [
-            {
-              "en": "The theatre survives on a modest annual subvention from the city.",
-              "zh": "这家剧院靠市政府每年一笔不多的补助维持运转。"
             }
           ]
         }
