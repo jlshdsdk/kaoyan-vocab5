@@ -2,8 +2,8 @@
   "v": 1,
   "syn": [
     {
-      "title": "compose · constitute",
-      "memo": "都译“组成/构成”，方向是命门：compose 是“部分拼成整体”，常用被动——整体 be composed of 部分（The earth is composed of layers，＝consist of，但 consist of 只用主动无被动）；constitute 是“部分构成整体”，主动语态直接部分作主语——Women constitute half of the workforce。一句话正反记：Water is composed of hydrogen and oxygen ＝ Hydrogen and oxygen constitute water. 另记 constitute 的引申义“算是、构成（威胁/违约）”——constitute a threat to，正式语域高频；compose 还有“作曲/撰写”义（composer 作曲家、composition 作文）。",
+      "title": "compose · constitute · construct",
+      "memo": "都译“组成/构成”，分工在方向和动作：compose 是“部分拼成整体”，常用被动——整体 be composed of 部分（＝consist of，但 consist of 只用主动无被动）；constitute 是“部分构成整体”，主动语态部分作主语——Women constitute half of the workforce，另有“算是、构成（威胁/违约）”引申义；construct 是“建造、构建”这个动作——把东西搭出来（construct a bridge 建桥、construct a theory 构建理论），不表组成关系，名词 construction 建造（be under construction 在建设中）、constructive 建设性的。正反记：Water is composed of hydrogen and oxygen ＝ Hydrogen and oxygen constitute water.；要表达“造出来”用 construct。",
       "words": [
         {
           "w": "compose",
@@ -44,6 +44,27 @@
             {
               "en": "Women constitute nearly half of the workforce in this industry.",
               "zh": "女性约占该行业劳动力的一半。"
+            }
+          ]
+        },
+        {
+          "w": "construct",
+          "rank": 4,
+          "ph": {
+            "uk": "kənˈstrʌkt",
+            "us": "kənˈstrʌkt"
+          },
+          "pos": "vt. / n.",
+          "gloss": "建造，修建；构思，构建；n. 构想，观念",
+          "usage": "con（共同）+struct（建造）→搭建起来；宾语常是桥、楼、理论、句子；名词 construction 建造（be under construction 在建设中），形容词 constructive 建设性的",
+          "phrases": [
+            "construct a bridge 建桥",
+            "construct a theory 构建理论"
+          ],
+          "ex": [
+            {
+              "en": "The first executive offices were constructed between 1799 and 1820.",
+              "zh": "第一批行政办公楼建于1799年至1820年之间。"
             }
           ]
         }
