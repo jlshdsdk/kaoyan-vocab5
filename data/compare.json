@@ -1937,8 +1937,8 @@
       ]
     },
     {
-      "title": "reluctant · relevant",
-      "memo": "都是 re- 开头的 9 字母形容词，中间定词义：-luct-(挣扎)→勉强的；-lev-(举起，同 elevate)→相关的。重音也不同：reluctant 第二音节，relevant 第一音节。结尾 -ant/-ent 别写混。",
+      "title": "reluctant · relevant · revolve",
+      "memo": "三个 re- 开头的形近脸，中间定词义：reluctant＝-luct(挣扎)→心里挣扎→不情愿的（be reluctant to do，谐音“驴拉坦克”）；relevant＝-lev(举起，同 elevate)→举到议题跟前→相关的（be relevant to，反义 irrelevant）；revolve 是动词——-volve(旋转，同族 involve 卷入、evolve 进化)→旋转，考研更考引申 revolve around 围绕/以……为中心（The debate revolves around whether...）。重音各异：reluctant 落第二音节、relevant 落第一音节、revolve 落第二音节；拼写收尾 -ant/-ent/-olve 各归各。",
       "words": [
         {
           "w": "reluctant",
@@ -1979,6 +1979,27 @@
             {
               "en": "Please keep your answers relevant to the question.",
               "zh": "请让你的回答紧扣问题。"
+            }
+          ]
+        },
+        {
+          "w": "revolve",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈvɒlv",
+            "us": "rɪˈvɑːlv"
+          },
+          "pos": "v.",
+          "gloss": "旋转；环绕，围绕",
+          "usage": "re（反复）+volv（旋转）→旋转；考研更考引申 revolve around 围绕……/以……为中心；同族 involve 卷入、evolve 进化；近 rotate",
+          "phrases": [
+            "revolve around... 围绕……；以……为中心",
+            "The Earth revolves around the Sun 地球绕太阳转"
+          ],
+          "ex": [
+            {
+              "en": "Much of the debate revolves around whether artificial intelligence will create more jobs than it destroys.",
+              "zh": "争论的焦点大多围绕人工智能创造的就业岗位是否会多于其摧毁的数量。"
             }
           ]
         }
