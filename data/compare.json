@@ -1520,6 +1520,71 @@
   ],
   "form": [
     {
+      "title": "precede · concede · coincide",
+      "memo": "三兄弟结尾都长 -cede/-cide，拼写差一个字母、意思差十万八千里：precede＝pre(在前)+cede(走)→走在前面→先于、发生在……之前（名词 precedent 先例、predecessor 前任）；concede＝con(彻底)+cede(让出)→彻底让出去→让步、（不情愿地）承认（concede defeat 承认失败）；coincide 最容易认错——结尾是 -cide 不是 -cede（co 共同+cid 落→落在同一点）→同时发生、（意见）一致，必接 coincide with，名词 coincidence 巧合。口诀：cede 走出“先后”与“让步”，cide 落到一起才“巧合一致”。precede 管“谁先谁后”，concede 管“认输让步”，coincide 管“对上号”。concede 另在 concede·conclude·convert 组里有 con- 动词角度的辨析。",
+      "words": [
+        {
+          "w": "precede",
+          "rank": 5,
+          "ph": {
+            "uk": "prɪˈsiːd",
+            "us": "prɪˈsiːd"
+          },
+          "pos": "v.",
+          "gloss": "先于；在……之前发生（或出现）",
+          "usage": "pre（在前的）+cede（走）→走在前面→先于；常考 A precede(s) B 结构；名词 precedent 先例、predecessor 前任",
+          "phrases": [],
+          "ex": [
+            {
+              "en": "A short welcome speech preceded the award ceremony.",
+              "zh": "颁奖典礼之前有一段简短的致辞。"
+            }
+          ]
+        },
+        {
+          "w": "concede",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsiːd",
+            "us": "kənˈsiːd"
+          },
+          "pos": "v.",
+          "gloss": "（不情愿地）承认；让步，认输",
+          "usage": "con（彻底）+cede（让出）→彻底让出→让步；比 admit 多一层“不情愿”；名词 concession 让步、妥协",
+          "phrases": [
+            "concede defeat 承认失败",
+            "concede to 向…让步"
+          ],
+          "ex": [
+            {
+              "en": "He finally conceded that he was wrong.",
+              "zh": "他最终承认自己错了。"
+            }
+          ]
+        },
+        {
+          "w": "coincide",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌkəʊɪnˈsaɪd",
+            "us": "ˌkoʊɪnˈsaɪd"
+          },
+          "pos": "vi.",
+          "gloss": "同时发生；（意见、利益等）相符，一致",
+          "usage": "co（共同）+in（上面）+cid（落）→同时落在一点→同时发生、一致；必接 coincide with；形容词 coincident，名词 coincidence",
+          "phrases": [
+            "coincide with... 与……相符/同时发生"
+          ],
+          "ex": [
+            {
+              "en": "My views coincide with hers.",
+              "zh": "我的观点和她的一致。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "sufficient · substantial · suspicious · susceptible",
       "memo": "四词同以 su- 开头、形近义远：sufficient 重够用，substantial 重大量/实质（完形常互为干扰项）；suspicious 怀疑的（of 搭配）；susceptible 易受影响的（to 搭配），sus(下)+cept(拿)→能从下面被拿住。",
       "words": [
