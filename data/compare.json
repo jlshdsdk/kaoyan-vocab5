@@ -2,6 +2,54 @@
   "v": 1,
   "syn": [
     {
+      "title": "oppose · object",
+      "memo": "都译“反对”，出手方式不同：oppose 及物，直接挂宾语——oppose the plan / oppose doing sth.，立场鲜明地反对，常用状态式 be opposed to（＝be against），阅读高频 as opposed to 与……相对/不同于；object 不及物，必接介词 to（object to sth./doing sth.）——侧重“出声反对、提异议”（Nobody objected. 没人吭声反对），名词 objection 异议（have no objection to 不反对），它还有名词本义“物体/对象/宾语”（2006 年真题 the object of our study）。一句话：oppose 立场上反对（vt.），object 嘴上扔出反对（vi.+to）——词根都是姿态：pose 放到对面，ject 扔出去。",
+      "words": [
+        {
+          "w": "oppose",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈpəʊz",
+            "us": "əˈpoʊz"
+          },
+          "pos": "vt.",
+          "gloss": "反对，反抗；抵制",
+          "usage": "op（反方向）+pose（放）→放到对面→反对；直接接宾语：oppose the plan / oppose doing sth.；状态式 be opposed to doing；形容词 opposite 相反的、名词 opposition 反对（派）",
+          "phrases": [
+            "be opposed to... 反对……",
+            "as opposed to 与……相对；不同于"
+          ],
+          "ex": [
+            {
+              "en": "The construction of the TMT is opposed by some locals partly because it reminds them of a humiliating history.",
+              "zh": "一些当地人反对修建30米望远镜（TMT），部分原因是这让他们想起了一段屈辱的历史。"
+            }
+          ]
+        },
+        {
+          "w": "object",
+          "rank": 5,
+          "ph": {
+            "uk": "əbˈdʒekt",
+            "us": "əbˈdʒekt"
+          },
+          "pos": "vi. / n.",
+          "gloss": "vi. 反对，不赞成；n. 物体；对象；宾语；目的",
+          "usage": "ob（方向）+ject（扔）→扔出去→提出反对；不及物，to 是介词：object to sth./doing sth.；名词 objection 异议（have no objection to 不反对）；名词义重音前移 /ˈɒbdʒɪkt/＝物体、对象",
+          "phrases": [
+            "object to doing sth. 反对做某事",
+            "have no objection to 对……不持异议"
+          ],
+          "ex": [
+            {
+              "en": "Members of the council strongly objected to plans to sell off the land.",
+              "zh": "委员会成员强烈反对出售土地的计划。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "council · commission · committee",
       "memo": "都译“委员会”，建制不同：council 是常设的“议会、理事会”——代表们定期开会决策（the city council 市议会、the UN Security Council 联合国安理会），小心同音形近 counsel＝忠告/劝告；commission 是为特定职能专门设立的“专责委员会”，官方监管色彩浓（the Federal Trade Commission 联邦贸易委员会，2021 年真题考过 the commission argued），词根 com(共同)+miss(送)→受委托办事的一群人，它还是三词里唯一带“钱”的——佣金/回扣（on commission 拿提成），动词“委托”（commission a report）；committee 是从大组织里派出来办事的小组，最日常、往往临时（set up a committee 设立委员会、admissions committee 招生委员会）。体量排序：council 建制机构 > commission 专责部门 > committee 干活小组。",
       "words": [
