@@ -2,6 +2,75 @@
   "v": 1,
   "syn": [
     {
+      "title": "initial · original · primary",
+      "memo": "都能译“最初的”，落点不同：initial 只管时间轴上的“开头”（the initial stage/reaction/draft 初期/最初反应/初稿），暗示后面会发展变化；original 锚定“原本”——原计划/原版（the original plan 原计划，多半没照做、the original manuscript 原稿），还有硬核义“原创的”（original works 原创作品，名词 originality 创造力），还能当名词“原作/原件”；primary 管的是“主次”而非先后——首要的、最主要的（primary concern/goal/cause），另有“初级的”义（primary school 小学）。一句话分工：initial 管先后，original 管原本与原创，primary 管主次。",
+      "words": [
+        {
+          "w": "initial",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɪʃl",
+            "us": "ɪˈnɪʃl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "最初的，开始的；n. [pl.] 首字母",
+          "usage": "in（里）+it（走）+ial→向里去→最初的；只表先后、不表重要性；the initial stage/reaction/draft；副词 initially 起初",
+          "phrases": [
+            "the initial stage 初始阶段",
+            "initial reaction 最初的反应"
+          ],
+          "ex": [
+            {
+              "en": "The initial reaction to the proposal was positive, but doubts soon appeared.",
+              "zh": "对该提案的最初反应是积极的，但疑问很快出现了。"
+            }
+          ]
+        },
+        {
+          "w": "original",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈrɪdʒənl",
+            "us": "əˈrɪdʒənl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "原先的，最初的；原创的，新颖的；n. 原作，原件",
+          "usage": "origin（起源）的形容词；“原先的”暗含现在已变（the original plan 原计划）；“原创的”是考研写作高频（original ideas，名词 originality 创造力）；名词指原作/原件",
+          "phrases": [
+            "original purpose 最初的目的",
+            "original works 原创作品"
+          ],
+          "ex": [
+            {
+              "en": "The original plan was to finish the bridge by the end of 2020.",
+              "zh": "原计划是在2020年底之前建成这座桥。"
+            }
+          ]
+        },
+        {
+          "w": "primary",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈpraɪməri",
+            "us": "ˈpraɪmeri"
+          },
+          "pos": "adj.",
+          "gloss": "首要的，最主要的；初级的，初等的；最初的",
+          "usage": "prim（第一，同 prime、primitive）→第一位的→首要的；primary concern/goal/cause 首要的/主要原因；另有“初级的”义（primary school 小学，美式 n. 初选）；2020 年真题考 gender the primary qualification；近 major/chief",
+          "phrases": [
+            "primary school 小学",
+            "the primary cause 主要原因"
+          ],
+          "ex": [
+            {
+              "en": "The primary cause of the accident was the driver's carelessness.",
+              "zh": "事故的主要原因是司机的粗心大意。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "notion · conception",
       "memo": "都译“概念/观念”，成色不同：notion 是个人脑子里的想法、看法，常模糊未成型（a vague notion 模糊的想法，the notion that... 接同位语从句，议论文高频）；conception 更正式，指对某事物的整体理解/概念把握（one's conception of...、have no conception of 完全不懂），另有“构想”“怀孕/受孕”两义（动词 conceive 兼“构想”与“怀孕”）。顺带分清第三方 concept＝客观的抽象概念：随口的看法用 notion，成型的理解用 conception，教科书里的术语用 concept。2013 年真题考过 the top-down conception of the fashion business。",
       "words": [
