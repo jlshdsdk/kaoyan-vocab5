@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "independent · indispensable",
+      "memo": "双 in- 开头的五音节\"孪生长词\"，重音都在第三音节，拼写只差后半段：independent = in(不)+depend(依赖)+ent → \"不依赖的\"=独立的（家族：depend 依赖 → dependence 依赖 / independence 独立）；indispensable = in(不)+dispens(支付)+able → \"不能不支付的\"=不可或缺的（近义组 necessary 的强档搭档）。拼写分界：-pend-ent 独立 vs -pens-able 必需。读音连介词搭配都成对记忆：independent OF 不依赖 / indispensable TO 必不可少。",
+      "words": [
+        {
+          "w": "independent",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌɪndɪˈpendənt",
+            "us": "ˌɪndɪˈpendənt"
+          },
+          "pos": "adj.",
+          "gloss": "独立的，自主的；无党派的",
+          "usage": "in-(不)+depend(依赖)+ent：不靠别人→独立；注意介词搭配 independent of",
+          "phrases": [
+            "be independent of… 不依赖于……",
+            "an independent country 独立国家"
+          ],
+          "ex": [
+            {
+              "en": "The court made a decision independent of the government.",
+              "zh": "法院独立于政府做出了裁决。"
+            }
+          ]
+        },
+        {
+          "w": "indispensable",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌɪndɪˈspensəbl",
+            "us": "ˌɪndɪˈspensəbl"
+          },
+          "pos": "adj.",
+          "gloss": "不可或缺的，必需的",
+          "usage": "in-(不)+dispens(支付)+able：不能不支付→缺了不行的；语气强于 necessary",
+          "phrases": [
+            "be indispensable to/for… 对……必不可少",
+            "an indispensable part of… ……不可缺少的一部分"
+          ],
+          "ex": [
+            {
+              "en": "Sleep is indispensable to good health.",
+              "zh": "睡眠对健康是不可或缺的。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "incident · indicate",
       "memo": "都以 inci-/indi- 开头的 8 字母形近词，词性与词根都不同：incident = incid(落在身上)+ent → \"落到身上的事\"=事件（名词，尤指不寻常/冲突性事件；辨 accident 意外事故、event 重大事件）；indicate = indi-(指向)+dic(说)+ate → \"指着说\"=表明、暗示（动词，indicate that…；比 show 正式）。拼写分界：-dent 结尾名词事件 vs -date 结尾动词表明。",
       "words": [
