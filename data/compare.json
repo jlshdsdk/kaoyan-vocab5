@@ -2,6 +2,75 @@
   "v": 1,
   "form": [
     {
+      "title": "submit · commit · admit",
+      "memo": "\"-mit 送\"词根一门三兄弟，前缀定方向：sub-(下)+mit → 从下往上送 = **提交**（submit a paper；submit to 屈服）；com-(加强)+mit → 把自己交出去 = **犯罪/承诺**（commit a crime；be committed to）；ad-(向)+mit → 放行送进来 = **承认/准许进入**（admit doing，不接 to do）。三词都是 \"送\"：向上送=提交，交出去=犯/诺，放进来=承认。commit 同时是「comment · commit · commitment」组员，那边重\"承诺\"，本组重\"前缀辨形\"。",
+      "words": [
+        {
+          "w": "submit",
+          "rank": 5,
+          "ph": {
+            "uk": "səbˈmɪt",
+            "us": "səbˈmɪt"
+          },
+          "pos": "vt. / vi.",
+          "gloss": "提交，呈递；屈服，听从",
+          "usage": "sub-(下)+mit(送)：从下往上送→提交；不及物 submit to 表\"屈服于\"",
+          "phrases": [
+            "submit…to… 把……提交给……",
+            "submit to… 屈服于……"
+          ],
+          "ex": [
+            {
+              "en": "Applicants must submit their resumes before Friday.",
+              "zh": "求职者必须在周五前提交简历。"
+            }
+          ]
+        },
+        {
+          "w": "commit",
+          "rank": 5,
+          "ph": {
+            "uk": "kəˈmɪt",
+            "us": "kəˈmɪt"
+          },
+          "pos": "vt.",
+          "gloss": "犯（罪、错）；承诺；把……交托给；致力于",
+          "usage": "com-(加强)+mit(送)：把自己交出去→做出（坏事）/许下（承诺）；be committed to 致力于",
+          "phrases": [
+            "commit a crime 犯罪",
+            "commit oneself to… 致力于……"
+          ],
+          "ex": [
+            {
+              "en": "He committed himself to protecting the environment.",
+              "zh": "他承诺致力于保护环境。"
+            }
+          ]
+        },
+        {
+          "w": "admit",
+          "rank": 5,
+          "ph": {
+            "uk": "ədˈmɪt",
+            "us": "ədˈmɪt"
+          },
+          "pos": "vt. / vi.",
+          "gloss": "承认；准许进入",
+          "usage": "ad-(向)+mit(送)：放行送进来→准许进入（admit sb. to/into）；后接 doing 不接 to do",
+          "phrases": [
+            "admit doing sth. 承认做某事",
+            "admit sb. to/into… 准许某人进入……"
+          ],
+          "ex": [
+            {
+              "en": "The suspect finally admitted taking the money.",
+              "zh": "嫌疑人最终承认拿了钱。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "comment · commit · commitment",
       "memo": "三个 com- 开头的\"mn/mt\"形近词，词义两条线：comment = com(共同)+ment(想)→\"说出想法\"=评论（comment on sth.）；commit = com(加强)+mit(送)→\"把自己交出去\"=犯(罪)/承诺/投入（commit a crime、commit oneself to 致力于）；commitment = commit+ment 名词→\"承诺、奉献\"（make a commitment）。链条：comment 动嘴评论，commit 交出自己，commitment 交出去的承诺。拼写：-ment 结尾的是评论，-mit/-tment 是承诺家族。",
       "words": [
