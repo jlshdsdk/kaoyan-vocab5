@@ -2988,6 +2988,96 @@
   ],
   "syn": [
     {
+      "title": "withhold · refuse · reject · deny",
+      "memo": "\"拒绝\"四档强度与用法各有侧重：withhold 最正式——\"扣住不给\"（withhold sth. from sb. 扣发/隐匿，不规则变形 withhold-withheld-withheld）；refuse 最日常——直接\"回绝\"（refuse to do，名词 refusal）；reject 强调\"驳回、摒弃\"——对提案/申请/器官（re-回+ject 扔→扔回来，rejection）；deny 双义——\"否认做过\"（deny doing，不接 to do）+\"拒绝给予\"（deny sb. sth.；There is no denying that 无可否认）。语法点：refuse 接 to do，deny 接 doing——完形高频考点。",
+      "words": [
+        {
+          "w": "withhold",
+          "rank": 5,
+          "ph": {
+            "uk": "wɪðˈhəʊld",
+            "us": "wɪðˈhoʊld"
+          },
+          "pos": "vt.",
+          "gloss": "拒绝给，扣留；保留，隐瞒",
+          "usage": "with-(相对)+hold(保持)：扣住不给；正式用语，变形 withhold-withheld-withheld",
+          "phrases": [
+            "withhold sth. from sb. 拒绝把某物给某人",
+            "withhold information 隐瞒信息"
+          ],
+          "ex": [
+            {
+              "en": "The police withheld the suspect's name from the media.",
+              "zh": "警方拒绝向媒体透露嫌疑人的姓名。"
+            }
+          ]
+        },
+        {
+          "w": "refuse",
+          "rank": 4,
+          "ph": {
+            "uk": "rɪˈfjuːz",
+            "us": "rɪˈfjuːz"
+          },
+          "pos": "v.",
+          "gloss": "拒绝，回绝（名词 refuse 读 /ˈrefjuːs/ 垃圾）",
+          "usage": "re-(回)+fuse(流)：给我的再流回去→回绝；最日常的\"拒绝\"，后接 to do",
+          "phrases": [
+            "refuse to do sth. 拒绝做某事",
+            "refuse sb. a visa 拒绝给某人签证"
+          ],
+          "ex": [
+            {
+              "en": "She refused to answer any questions without her lawyer.",
+              "zh": "她拒绝在没有律师的情况下回答任何问题。"
+            }
+          ]
+        },
+        {
+          "w": "reject",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈdʒekt",
+            "us": "rɪˈdʒekt"
+          },
+          "pos": "vt.",
+          "gloss": "拒绝接受；驳回；排斥",
+          "usage": "re-(回)+ject(扔)：扔回来→驳回；对象常为提案/申请/offer，医学义\"器官排斥\"",
+          "phrases": [
+            "reject a proposal 否决提案",
+            "reject an application 驳回申请"
+          ],
+          "ex": [
+            {
+              "en": "The committee rejected his proposal without explanation.",
+              "zh": "委员会没有说明理由就否决了他的提案。"
+            }
+          ]
+        },
+        {
+          "w": "deny",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈnaɪ",
+            "us": "dɪˈnaɪ"
+          },
+          "pos": "vt.",
+          "gloss": "否认；拒绝给予",
+          "usage": "de-(相反)+ny(说)：反着说→否认（deny doing 不接 to do）；deny sb. sth. 拒绝给予",
+          "phrases": [
+            "deny doing sth. 否认做过某事",
+            "There is no denying that… 无可否认……"
+          ],
+          "ex": [
+            {
+              "en": "The suspect denied taking part in the robbery.",
+              "zh": "嫌疑人否认参与了抢劫。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "necessary · indispensable",
       "memo": "都表\"必需\"，语气分两档：necessary = 需要的、必要的（中性常用，另有\"必然的\"义，2018 完形考过）；indispensable = 语气更强——in-(不)+dis(否定)+pens(支付)+able → \"不能不支付的\"=不可或缺的（be indispensable to/for…）。写作升级链：useful → necessary → indispensable，越往后越强。注意 indispensable 前缀是否定叠加（indis-），拼写长但结构好记：in(不)+dispense(免除)。",
       "words": [
