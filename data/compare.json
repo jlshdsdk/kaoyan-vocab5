@@ -1,2068 +1,54 @@
 {
   "v": 1,
-  "syn": [
-    {
-      "title": "domestic · internal",
-      "memo": "都可译“国内的”，但边界不同：domestic 以国界为界，与 foreign/international 相对——domestic market/industries/policy 国内市场/产业/政策（GDP 里的 D 就是它），另有两个独有义：“家庭的”（domestic chores 家务、domestic violence 家暴）和“驯养的”（domestic animals 家畜）；internal 以任意边界为界——身体（internal organs/injuries 内脏/内伤）、机构（internal emails 内部邮件）、国家（internal affairs 内政），反义 external。易混警告：internal 与 international（国际的）就差一截字母，拼错意思翻车。一句话：对外谈经济用 domestic，往里看内部用 internal。",
-      "words": [
-        {
-          "w": "domestic",
-          "rank": 5,
-          "ph": {
-            "uk": "dəˈmestɪk",
-            "us": "dəˈmestɪk"
-          },
-          "pos": "adj.",
-          "gloss": "国内的；家庭的；驯养的",
-          "usage": "dom（家，同 dome 圆顶→家）→家里的/本国的；以国界为界：domestic market/industries，与 foreign 相对；独有义“家庭的”（domestic violence 家暴）、“驯养的”（domestic animals 家畜）",
-          "phrases": [
-            "domestic market 国内市场",
-            "domestic violence 家庭暴力"
-          ],
-          "ex": [
-            {
-              "en": "The government has taken measures to protect domestic industries from fierce foreign competition.",
-              "zh": "政府已采取措施保护国内产业免受激烈的外国竞争。"
-            }
-          ]
-        },
-        {
-          "w": "internal",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪnˈtɜːnl",
-            "us": "ɪnˈtɜːrnl"
-          },
-          "pos": "adj.",
-          "gloss": "内部的；国内的，内政的；体内的",
-          "usage": "inter（在内）+nal→内部的；以任意边界为界：internal organs/injuries 内脏/内伤、internal emails 内部邮件、internal affairs 内政；反义 external 外部的；警告：international＝国际的，与 internal 只差一截，别拼混",
-          "phrases": [
-            "internal affairs 内政",
-            "internal organs 内脏"
-          ],
-          "ex": [
-            {
-              "en": "He accused the US of trying to interfere in his country's internal affairs.",
-              "zh": "他指责美国试图干涉他的国家的内政。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "oppose · object",
-      "memo": "都译“反对”，出手方式不同：oppose 及物，直接挂宾语——oppose the plan / oppose doing sth.，立场鲜明地反对，常用状态式 be opposed to（＝be against），阅读高频 as opposed to 与……相对/不同于；object 不及物，必接介词 to（object to sth./doing sth.）——侧重“出声反对、提异议”（Nobody objected. 没人吭声反对），名词 objection 异议（have no objection to 不反对），它还有名词本义“物体/对象/宾语”（2006 年真题 the object of our study）。一句话：oppose 立场上反对（vt.），object 嘴上扔出反对（vi.+to）——词根都是姿态：pose 放到对面，ject 扔出去。",
-      "words": [
-        {
-          "w": "oppose",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈpəʊz",
-            "us": "əˈpoʊz"
-          },
-          "pos": "vt.",
-          "gloss": "反对，反抗；抵制",
-          "usage": "op（反方向）+pose（放）→放到对面→反对；直接接宾语：oppose the plan / oppose doing sth.；状态式 be opposed to doing；形容词 opposite 相反的、名词 opposition 反对（派）",
-          "phrases": [
-            "be opposed to... 反对……",
-            "as opposed to 与……相对；不同于"
-          ],
-          "ex": [
-            {
-              "en": "The construction of the TMT is opposed by some locals partly because it reminds them of a humiliating history.",
-              "zh": "一些当地人反对修建30米望远镜（TMT），部分原因是这让他们想起了一段屈辱的历史。"
-            }
-          ]
-        },
-        {
-          "w": "object",
-          "rank": 5,
-          "ph": {
-            "uk": "əbˈdʒekt",
-            "us": "əbˈdʒekt"
-          },
-          "pos": "vi. / n.",
-          "gloss": "vi. 反对，不赞成；n. 物体；对象；宾语；目的",
-          "usage": "ob（方向）+ject（扔）→扔出去→提出反对；不及物，to 是介词：object to sth./doing sth.；名词 objection 异议（have no objection to 不反对）；名词义重音前移 /ˈɒbdʒɪkt/＝物体、对象",
-          "phrases": [
-            "object to doing sth. 反对做某事",
-            "have no objection to 对……不持异议"
-          ],
-          "ex": [
-            {
-              "en": "Members of the council strongly objected to plans to sell off the land.",
-              "zh": "委员会成员强烈反对出售土地的计划。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "council · commission · committee",
-      "memo": "都译“委员会”，建制不同：council 是常设的“议会、理事会”——代表们定期开会决策（the city council 市议会、the UN Security Council 联合国安理会），小心同音形近 counsel＝忠告/劝告；commission 是为特定职能专门设立的“专责委员会”，官方监管色彩浓（the Federal Trade Commission 联邦贸易委员会，2021 年真题考过 the commission argued），词根 com(共同)+miss(送)→受委托办事的一群人，它还是三词里唯一带“钱”的——佣金/回扣（on commission 拿提成），动词“委托”（commission a report）；committee 是从大组织里派出来办事的小组，最日常、往往临时（set up a committee 设立委员会、admissions committee 招生委员会）。体量排序：council 建制机构 > commission 专责部门 > committee 干活小组。",
-      "words": [
-        {
-          "w": "council",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈkaʊnsl",
-            "us": "ˈkaʊnsl"
-          },
-          "pos": "n. [C]",
-          "gloss": "委员会，理事会；（地方）议会",
-          "usage": "常设决策机构：the city council 市议会、the UN Security Council 联合国安理会；win a seat on the council 赢得议会席位；同音形近词 counsel＝n. 忠告 / v. 劝告，别混",
-          "phrases": [
-            "the city council 市议会",
-            "the UN Security Council 联合国安理会"
-          ],
-          "ex": [
-            {
-              "en": "The city council has approved funds for three new public libraries.",
-              "zh": "市议会已批准为三座新公共图书馆拨款。"
-            }
-          ]
-        },
-        {
-          "w": "commission",
-          "rank": 5,
-          "ph": {
-            "uk": "kəˈmɪʃn",
-            "us": "kəˈmɪʃn"
-          },
-          "pos": "n. / vt.",
-          "gloss": "（专责）委员会；佣金，回扣；委托；vt. 委托",
-          "usage": "com（共同）+miss（送）+ion→受委托办事的一群人→专责委员会，官方监管色彩浓；另考“佣金”（earn a commission of 10% 拿一成提成、on commission 拿提成制）；动词“委托”（commission a report/study）",
-          "phrases": [
-            "the Federal Trade Commission 联邦贸易委员会",
-            "earn a commission 拿佣金/提成"
-          ],
-          "ex": [
-            {
-              "en": "The commission argued that other agencies would protect against anti-competitive behavior.",
-              "zh": "（联邦通信）委员会认为，其他机构将会保护人们免受反竞争行为的侵害。"
-            }
-          ]
-        },
-        {
-          "w": "committee",
-          "rank": 5,
-          "ph": {
-            "uk": "kəˈmɪti",
-            "us": "kəˈmɪti"
-          },
-          "pos": "n. [C]",
-          "gloss": "委员会（大组织中派生的小组）",
-          "usage": "从大组织里推选出来处理特定事务：set up/appoint a committee 设立委员会、be on the committee 是委员会成员；admissions committee 招生委员会；注意结尾双 t（commit 的名词家族）",
-          "phrases": [
-            "set up a committee 设立委员会",
-            "the admissions committee 招生委员会"
-          ],
-          "ex": [
-            {
-              "en": "A special committee was set up to investigate the causes of the accident.",
-              "zh": "人们成立了一个特别委员会来调查事故原因。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "rival · opponent · competitor",
-      "memo": "都译“对手”，关系成色不同：rival 是势均力敌、长期争夺同一目标的“敌手”，可带敬意（a worthy rival 可敬的对手），还是三词中唯一能当动词的——rival sb. 匹敌；opponent＝op(相反)+pon(站)→站到对面的人——比赛/辩论的对手，更常考“反对者”（opponents of the plan 计划的反对者），绑定的是立场不是竞争，还能作 adj. 对立的；competitor 是 compete（竞争）的派生，商业/比赛语境的“竞争者、参赛者”（competitor firms 同业对手），纯描述、无褒贬。一句话：rival 争高低，opponent 立场相对，competitor 同场竞技。",
-      "words": [
-        {
-          "w": "rival",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈraɪvl",
-            "us": "ˈraɪvl"
-          },
-          "pos": "n. [C] / v. / adj.",
-          "gloss": "对手，竞争者；与……匹敌，媲美；竞争的",
-          "usage": "riv（河，同 river 词根）→词源“同饮一江水的人”→争水成对手；作动词“可与……匹敌”（rival sb. in sth.）；without rival 无可匹敌",
-          "phrases": [
-            "defeat one's rival 击败对手",
-            "without rival 无可匹敌"
-          ],
-          "ex": [
-            {
-              "en": "The two universities have long been rivals for research funding and the brightest students.",
-              "zh": "这两所大学长期以来一直在科研经费和最优秀生源上相互竞争。"
-            }
-          ]
-        },
-        {
-          "w": "opponent",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈpəʊnənt",
-            "us": "əˈpoʊnənt"
-          },
-          "pos": "n. [C] / adj.",
-          "gloss": "对手；反对者；adj. 对立的，敌对的",
-          "usage": "op（相反）+pon（站）+ent→站到对面的人；辩论/选举/体育的对手，更常考“反对者”（opponents of...），绑定立场而非竞争关系",
-          "phrases": [
-            "a political opponent 政敌",
-            "opponents of the plan 计划的反对者"
-          ],
-          "ex": [
-            {
-              "en": "Opponents of the new airport argue that it will destroy the nearby wetlands.",
-              "zh": "新机场的反对者认为它将毁掉附近的湿地。"
-            }
-          ]
-        },
-        {
-          "w": "competitor",
-          "rank": 3,
-          "ph": {
-            "uk": "kəmˈpetɪtə(r)",
-            "us": "kəmˈpetətər"
-          },
-          "pos": "n. [C]",
-          "gloss": "竞争者，对手；参赛者，选手",
-          "usage": "compete（竞争）+tor→参与竞争的人；商业语境常客（competitor firms 同业对手、a low-cost competitor 低成本竞争者）；名词 competition 竞争/比赛、competitive 竞争激烈的",
-          "phrases": [
-            "competitor firms 同业竞争对手",
-            "a low-cost competitor 低成本竞争对手"
-          ],
-          "ex": [
-            {
-              "en": "Firms that ignore their competitors' innovations risk losing market share.",
-              "zh": "无视竞争对手创新的公司面临失去市场份额的风险。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "cling · attach",
-      "memo": "都含“附”意，方向和姿态不同：cling 不及物，自己“抓/粘”上去，必接 to——字面紧抓（clung to my mother's arm），引申“坚守、不肯撒手”（cling to the hope/power/old habits，常带固执色彩），变化 clung–clung，2015 年真题考 cling to their phones；attach 及物，把 A“钉/系”到 B 上——attach A to B（贴照片、附文件，邮件附件＝attachment），重心在“附加、赋予”：attach importance/significance to 重视（写作高频），be attached to 依恋/附属于，2005 年真题考 with few strings attached（没多少附带条件）。一句话：cling 自己粘上去（vi.+to，常含固执），attach 把东西钉上去（vt.，重在附加）。",
-      "words": [
-        {
-          "w": "cling",
-          "rank": 5,
-          "ph": {
-            "uk": "klɪŋ",
-            "us": "klɪŋ"
-          },
-          "pos": "vi.",
-          "gloss": "粘住，紧抓；依附；坚持，坚守",
-          "usage": "谐音“可怜”——可怜的孩子紧抓妈妈衣角；不及物，必接 cling to；引申“坚守”，常含不肯改变的固执；变化 clung–clung",
-          "phrases": [
-            "cling to 紧紧抓住；坚持",
-            "cling together 粘在一起；互相忠诚"
-          ],
-          "ex": [
-            {
-              "en": "Everyone around us seems to agree by the way they cling to their phones, even without a signal on a subway.",
-              "zh": "我们周围的每个人似乎都赞成在路上一直玩手机，即使是在没有信号的地铁里。"
-            }
-          ]
-        },
-        {
-          "w": "attach",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈtætʃ",
-            "us": "əˈtætʃ"
-          },
-          "pos": "vt.",
-          "gloss": "系上，贴上，附上；附加；重视；使依恋",
-          "usage": "at（加强）+tach（钉）→牢牢钉上；attach A to B 把 A 附在 B 上；核心搭配 attach importance/significance to 重视（写作高频）；名词 attachment 附件、依恋",
-          "phrases": [
-            "attach importance to... 重视……",
-            "be attached to 依恋；附属于"
-          ],
-          "ex": [
-            {
-              "en": "We attach great importance to good design of buildings and neighbourhoods.",
-              "zh": "我们非常重视建筑和社区的良好设计。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "initial · original · primary",
-      "memo": "都能译“最初的”，落点不同：initial 只管时间轴上的“开头”（the initial stage/reaction/draft 初期/最初反应/初稿），暗示后面会发展变化；original 锚定“原本”——原计划/原版（the original plan 原计划，多半没照做、the original manuscript 原稿），还有硬核义“原创的”（original works 原创作品，名词 originality 创造力），还能当名词“原作/原件”；primary 管的是“主次”而非先后——首要的、最主要的（primary concern/goal/cause），另有“初级的”义（primary school 小学）。一句话分工：initial 管先后，original 管原本与原创，primary 管主次。",
-      "words": [
-        {
-          "w": "initial",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪˈnɪʃl",
-            "us": "ɪˈnɪʃl"
-          },
-          "pos": "adj. / n.",
-          "gloss": "最初的，开始的；n. [pl.] 首字母",
-          "usage": "in（里）+it（走）+ial→向里去→最初的；只表先后、不表重要性；the initial stage/reaction/draft；副词 initially 起初",
-          "phrases": [
-            "the initial stage 初始阶段",
-            "initial reaction 最初的反应"
-          ],
-          "ex": [
-            {
-              "en": "The initial reaction to the proposal was positive, but doubts soon appeared.",
-              "zh": "对该提案的最初反应是积极的，但疑问很快出现了。"
-            }
-          ]
-        },
-        {
-          "w": "original",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈrɪdʒənl",
-            "us": "əˈrɪdʒənl"
-          },
-          "pos": "adj. / n.",
-          "gloss": "原先的，最初的；原创的，新颖的；n. 原作，原件",
-          "usage": "origin（起源）的形容词；“原先的”暗含现在已变（the original plan 原计划）；“原创的”是考研写作高频（original ideas，名词 originality 创造力）；名词指原作/原件",
-          "phrases": [
-            "original purpose 最初的目的",
-            "original works 原创作品"
-          ],
-          "ex": [
-            {
-              "en": "The original plan was to finish the bridge by the end of 2020.",
-              "zh": "原计划是在2020年底之前建成这座桥。"
-            }
-          ]
-        },
-        {
-          "w": "primary",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈpraɪməri",
-            "us": "ˈpraɪmeri"
-          },
-          "pos": "adj.",
-          "gloss": "首要的，最主要的；初级的，初等的；最初的",
-          "usage": "prim（第一，同 prime、primitive）→第一位的→首要的；primary concern/goal/cause 首要的/主要原因；另有“初级的”义（primary school 小学，美式 n. 初选）；2020 年真题考 gender the primary qualification；近 major/chief",
-          "phrases": [
-            "primary school 小学",
-            "the primary cause 主要原因"
-          ],
-          "ex": [
-            {
-              "en": "The primary cause of the accident was the driver's carelessness.",
-              "zh": "事故的主要原因是司机的粗心大意。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "notion · conception",
-      "memo": "都译“概念/观念”，成色不同：notion 是个人脑子里的想法、看法，常模糊未成型（a vague notion 模糊的想法，the notion that... 接同位语从句，议论文高频）；conception 更正式，指对某事物的整体理解/概念把握（one's conception of...、have no conception of 完全不懂），另有“构想”“怀孕/受孕”两义（动词 conceive 兼“构想”与“怀孕”）。顺带分清第三方 concept＝客观的抽象概念：随口的看法用 notion，成型的理解用 conception，教科书里的术语用 concept。2013 年真题考过 the top-down conception of the fashion business。",
-      "words": [
-        {
-          "w": "notion",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈnəʊʃn",
-            "us": "ˈnoʊʃn"
-          },
-          "pos": "n.",
-          "gloss": "概念，观念；想法，见解",
-          "usage": "not（知道）+ion→知道后产生的看法；the notion that... 接同位语从句是高频考点；谐音“闹心”——想法让人闹心",
-          "phrases": [
-            "the notion that... ……的想法/观念",
-            "a common-sense notion 常识性的概念"
-          ],
-          "ex": [
-            {
-              "en": "The notion that money can buy happiness has been questioned by many psychologists.",
-              "zh": "金钱能买到幸福的观念受到许多心理学家的质疑。"
-            }
-          ]
-        },
-        {
-          "w": "conception",
-          "rank": 5,
-          "ph": {
-            "uk": "kənˈsepʃn",
-            "us": "kənˈsepʃn"
-          },
-          "pos": "n.",
-          "gloss": "概念，观念；构想；怀孕，受孕",
-          "usage": "动词 conceive（构想出/怀孕）的名词；侧重对某事物的整体理解、概括性把握；have no conception of 完全不懂；2013 年真题：the top-down conception of the fashion business",
-          "phrases": [
-            "have no conception of 完全不懂，不明白",
-            "one's conception of... 对……的理解"
-          ],
-          "ex": [
-            {
-              "en": "This top-down conception of the fashion business couldn't be more out of date.",
-              "zh": "这种自上而下的时尚行业理念已经完全过时了。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "eager · keen",
-      "memo": "都译“渴望/热衷”，温度和落点不同：eager 情绪更烫——迫不及待地盼（be eager to do 渴望做、be eager for 渴望得到），主语人/机构皆可；keen 更像“热衷、有兴趣”，英式口语高频（be keen on doing 热衷于），程度平缓些；keen 还独有一义“敏锐的”——a keen sense of smell 嗅觉敏锐、keen eyesight、a keen observer 敏锐的观察者，夸眼光/感官用它。搭配小抄：be eager to do / be keen on doing，on 前只能站 keen。",
-      "words": [
-        {
-          "w": "eager",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈiːɡə",
-            "us": "ˈiːɡər"
-          },
-          "pos": "adj.",
-          "gloss": "渴望的，热切的，渴求的",
-          "usage": "谐音“一哥”——谁不想当一哥→渴望的；be eager to do 渴望做、be eager for sth 渴望得到；语气比 keen 更急切；近 anxious（注意 anxious 另有“焦虑”义）",
-          "phrases": [
-            "be eager to do sth. 渴望做某事",
-            "be eager for sth. 渴望得到某物"
-          ],
-          "ex": [
-            {
-              "en": "The company is eager to expand its share of the rapidly growing electric car market.",
-              "zh": "该公司渴望扩大其在快速增长的电动汽车市场的份额。"
-            }
-          ]
-        },
-        {
-          "w": "keen",
-          "rank": 3,
-          "ph": {
-            "uk": "kiːn",
-            "us": "kiːn"
-          },
-          "pos": "adj.",
-          "gloss": "热衷的，渴望的；敏锐的；（刀刃）锋利的",
-          "usage": "be keen on (doing) 热衷于，英式口语高频；另一核心义“敏锐”：keen sense/eyesight/observer；联想 keep a keen eye 保持敏锐眼光",
-          "phrases": [
-            "be keen on 热衷于",
-            "a keen sense of smell 敏锐的嗅觉"
-          ],
-          "ex": [
-            {
-              "en": "She is keen on photography and spends most weekends taking pictures.",
-              "zh": "她热衷于摄影，大部分周末都在拍照。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "compose · constitute · construct",
-      "memo": "都译“组成/构成”，分工在方向和动作：compose 是“部分拼成整体”，常用被动——整体 be composed of 部分（＝consist of，但 consist of 只用主动无被动）；constitute 是“部分构成整体”，主动语态部分作主语——Women constitute half of the workforce，另有“算是、构成（威胁/违约）”引申义；construct 是“建造、构建”这个动作——把东西搭出来（construct a bridge 建桥、construct a theory 构建理论），不表组成关系，名词 construction 建造（be under construction 在建设中）、constructive 建设性的。正反记：Water is composed of hydrogen and oxygen ＝ Hydrogen and oxygen constitute water.；要表达“造出来”用 construct。",
-      "words": [
-        {
-          "w": "compose",
-          "rank": 5,
-          "ph": {
-            "uk": "kəmˈpəʊz",
-            "us": "kəmˈpoʊz"
-          },
-          "pos": "v.",
-          "gloss": "组成，构成；创作（乐曲、诗文）；使平静",
-          "usage": "com（都）+pose（摆）→都摆到一起→组成；被动搭配 be composed of 由……组成；另有“作曲、撰写”义，名词 composition 作文/构成",
-          "phrases": [
-            "be composed of... 由……组成",
-            "compose a symphony 创作交响曲"
-          ],
-          "ex": [
-            {
-              "en": "Women compose nearly sixty percent of the students enrolled in the medical schools.",
-              "zh": "在这些医学院注册的学生中，女性约占百分之六十。"
-            }
-          ]
-        },
-        {
-          "w": "constitute",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈkɒnstɪtjuːt",
-            "us": "ˈkɑːnstətuːt"
-          },
-          "pos": "vt.",
-          "gloss": "组成，构成；被视为，算是；设立，制定",
-          "usage": "con（一起）+stitut（站）+e→站到一起→组成；方向与 compose 相反：部分 constitute 整体，部分作主语；“算是/构成”义正式语域高频（constitute a threat/breach）；名词 constitution 宪法、体质",
-          "phrases": [
-            "constitute a threat to... 构成对……的威胁",
-            "constitute a breach of... 构成对……的违反"
-          ],
-          "ex": [
-            {
-              "en": "Women constitute nearly half of the workforce in this industry.",
-              "zh": "女性约占该行业劳动力的一半。"
-            }
-          ]
-        },
-        {
-          "w": "construct",
-          "rank": 4,
-          "ph": {
-            "uk": "kənˈstrʌkt",
-            "us": "kənˈstrʌkt"
-          },
-          "pos": "vt. / n.",
-          "gloss": "建造，修建；构思，构建；n. 构想，观念",
-          "usage": "con（共同）+struct（建造）→搭建起来；宾语常是桥、楼、理论、句子；名词 construction 建造（be under construction 在建设中），形容词 constructive 建设性的",
-          "phrases": [
-            "construct a bridge 建桥",
-            "construct a theory 构建理论"
-          ],
-          "ex": [
-            {
-              "en": "The first executive offices were constructed between 1799 and 1820.",
-              "zh": "第一批行政办公楼建于1799年至1820年之间。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "ally · alliance",
-      "memo": "都译“结盟/联盟”，分工在词性：ally 是“盟友”——指人/国家（a close ally 亲密盟国），还能当动词，ally with / ally oneself with / be allied to 与……结盟，动词义只能用它；alliance 是“联盟”——指结盟的关系或组织本身（form an alliance with 结成联盟、in alliance with 与……联合、break off an alliance with 解除盟约），纯名词不能当动词。派生链记住：ally（盟友/结盟）→allied（结盟的）→alliance（联盟）。写作点：句子里缺动词选 ally，缺名词选 alliance。",
-      "words": [
-        {
-          "w": "ally",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈælaɪ",
-            "us": "ˈælaɪ"
-          },
-          "pos": "n. [C] / v.",
-          "gloss": "同盟者，盟国；（使）结盟",
-          "usage": "all（都）+y→都站同一边→盟友；ally (oneself) with 与……结盟、be allied to 与……结盟；名词复数 allies",
-          "phrases": [
-            "ally oneself with 与……结盟",
-            "potential allies 潜在的盟友"
-          ],
-          "ex": [
-            {
-              "en": "Portugal is a traditional ally of England.",
-              "zh": "葡萄牙是英国的传统盟友。"
-            }
-          ]
-        },
-        {
-          "w": "alliance",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈlaɪəns",
-            "us": "əˈlaɪəns"
-          },
-          "pos": "n.",
-          "gloss": "联盟，同盟；结盟",
-          "usage": "al（加强）+li（捆绑）+ance（名词后缀）→捆绑到一起→结盟；纯名词，动词义只能用 ally；2018 年真题考过 its alliance with... 的用法",
-          "phrases": [
-            "in alliance with 与……合作/联盟",
-            "break off an alliance with 与……解除联盟"
-          ],
-          "ex": [
-            {
-              "en": "The two parties formed a political alliance to push the education reforms through parliament.",
-              "zh": "两党结成政治联盟，以推动教育改革在议会获得通过。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "dedicate · devote",
-      "memo": "近义可互换处多：dedicate 更庄重正式，对象是崇高事业，另有题献/落成典礼义；devote 重专注投入（时间精力），be devoted to 还可指深爱。两词都接 to doing/n.。",
-      "words": [
-        {
-          "w": "dedicate",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈdedɪkeɪt",
-            "us": "ˈdedɪkeɪt"
-          },
-          "pos": "vt.",
-          "gloss": "奉献；把（时间、精力等）用于；题献",
-          "usage": "de(加强)+dic(宣称)→郑重宣告归属。庄重，对象多为崇高目标；著作可 dedicate to sb. 题献。",
-          "phrases": [
-            "dedicate oneself to 献身于",
-            "be dedicated to doing 致力于做"
-          ],
-          "ex": [
-            {
-              "en": "She dedicated her life to medical research.",
-              "zh": "她把一生奉献给了医学研究。"
-            }
-          ]
-        },
-        {
-          "w": "devote",
-          "rank": 5,
-          "ph": {
-            "uk": "dɪˈvəʊt",
-            "us": "dɪˈvoʊt"
-          },
-          "pos": "vt.",
-          "gloss": "奉献；致力于；把……专用于",
-          "usage": "de+vot(许愿)→许愿奉献。重专注投入时间精力；be devoted to 还表深爱（人）。",
-          "phrases": [
-            "devote...to (doing) sth. 把……用于做某事",
-            "be devoted to sb. 深爱着某人"
-          ],
-          "ex": [
-            {
-              "en": "He devotes his weekends to volunteering.",
-              "zh": "他把周末都用于做志愿服务。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "restrict · constrain · restrain · confine · circumscribe · limit",
-      "memo": "同为“限制”：limit 最通用，可名可动；restrict 正式指规则限制（to）；confine 窄圈禁闭（to/within）；restrain 忍住不表露（from）；constrain 外部条件所迫；circumscribe 最书面，circum(周围)+scribe(画线)→划定界限，常指权力被框死。",
-      "words": [
-        {
-          "w": "restrict",
-          "rank": 5,
-          "ph": {
-            "uk": "rɪˈstrɪkt",
-            "us": "rɪˈstrɪkt"
-          },
-          "pos": "vt.",
-          "gloss": "限制，限定（数量、范围等）",
-          "usage": "指出台规则去限定，比 limit 书面，restrict...to... 是固定搭配。",
-          "phrases": [
-            "restrict...to... 把……限制在……",
-            "restrict access to 限制进入"
-          ],
-          "ex": [
-            {
-              "en": "The new law restricts the sale of cigarettes.",
-              "zh": "新法规限制香烟销售。"
-            }
-          ]
-        },
-        {
-          "w": "constrain",
-          "rank": 5,
-          "ph": {
-            "uk": "kənˈstreɪn",
-            "us": "kənˈstreɪn"
-          },
-          "pos": "vt.",
-          "gloss": "限制，约束；强迫，迫使",
-          "usage": "强调外部条件或情势逼得你不得不如此；词源同 strain(拉紧)。",
-          "phrases": [
-            "constrain sb. to do sth. 强迫某人做某事",
-            "financial constraints 财力限制"
-          ],
-          "ex": [
-            {
-              "en": "Lack of funds constrained the project.",
-              "zh": "资金短缺束缚了这个项目。"
-            }
-          ]
-        },
-        {
-          "w": "restrain",
-          "rank": 5,
-          "ph": {
-            "uk": "rɪˈstreɪn",
-            "us": "rɪˈstreɪn"
-          },
-          "pos": "vt.",
-          "gloss": "阻止，抑制；管束，约束",
-          "usage": "重在忍住不让它发出，对象多为情绪、冲动；restrain sb. from doing 是核心搭配。",
-          "phrases": [
-            "restrain oneself 克制自己",
-            "restrain sb. from doing sth. 阻止某人做某事"
-          ],
-          "ex": [
-            {
-              "en": "She could hardly restrain her anger.",
-              "zh": "她几乎抑制不住自己的怒火。"
-            }
-          ]
-        },
-        {
-          "w": "confine",
-          "rank": 5,
-          "ph": {
-            "uk": "kənˈfaɪn",
-            "us": "kənˈfaɪn"
-          },
-          "pos": "vt.",
-          "gloss": "限制；把……局限于；禁闭",
-          "usage": "强调限在狭窄范围内，常被动，搭配 to/within；con(加强)+fin(界限)→给出边界。",
-          "phrases": [
-            "be confined to 局限于",
-            "confine oneself to 只谈，只涉及"
-          ],
-          "ex": [
-            {
-              "en": "The disease is not confined to one region.",
-              "zh": "这种疾病并不局限于某一地区。"
-            }
-          ]
-        },
-        {
-          "w": "circumscribe",
-          "ph": {
-            "uk": "ˈsɜːkəmskraɪb",
-            "us": "ˈsɝːkəmskraɪb"
-          },
-          "pos": "vt.",
-          "gloss": "限制，约束（正式）；划定……界限",
-          "usage": "circum(周围)+scribe(画)→在周围画线→框定范围。最书面，常指权力、自由被限制。",
-          "phrases": [
-            "circumscribe the power of… 限制……的权力",
-            "be circumscribed by… 受……束缚/局限"
-          ],
-          "ex": [
-            {
-              "en": "The new constitution circumscribes the president's power.",
-              "zh": "新宪法限制了总统的权力。"
-            }
-          ]
-        },
-        {
-          "w": "limit",
-          "rank": 4,
-          "ph": {
-            "uk": "ˈlɪmɪt",
-            "us": "ˈlɪmɪt"
-          },
-          "pos": "vt./n.",
-          "gloss": "限制；限度，极限",
-          "usage": "最通用，可名可动，限制的可是数量、时间、权力等有形无形的边界。",
-          "phrases": [
-            "limit...to... 把……限制在……",
-            "speed limit 限速"
-          ],
-          "ex": [
-            {
-              "en": "We must limit our spending to what we can afford.",
-              "zh": "我们必须把开支限制在能承受的范围内。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "compete · contend",
-      "memo": "compete 中性常用：比赛/商业竞争（with/against/for）；contend 更正式激烈，且多两个高频义——contend that 主张、contend with 应对困境。重叠义仅“争夺”。",
-      "words": [
-        {
-          "w": "compete",
-          "rank": 5,
-          "ph": {
-            "uk": "kəmˈpiːt",
-            "us": "kəmˈpiːt"
-          },
-          "pos": "vi.",
-          "gloss": "竞争；参加比赛",
-          "usage": "最常用中性词，指体育比赛或商业/资源竞争；搭配 with/against + for。",
-          "phrases": [
-            "compete with/against sb. 与……竞争",
-            "compete for sth. 争夺……"
-          ],
-          "ex": [
-            {
-              "en": "Several companies are competing for the contract.",
-              "zh": "几家公司正在争夺这份合同。"
-            }
-          ]
-        },
-        {
-          "w": "contend",
-          "rank": 5,
-          "ph": {
-            "uk": "kənˈtend",
-            "us": "kənˈtend"
-          },
-          "pos": "vi./vt.",
-          "gloss": "争夺，竞争；声称，主张",
-          "usage": "con(共同)+tend(伸)→都把手伸向→争夺；contend that…＝主张；contend with＝不得不对付。",
-          "phrases": [
-            "contend for power 争夺权力",
-            "contend with sth. 应对，对付（困境）"
-          ],
-          "ex": [
-            {
-              "en": "Critics contend that the reform has gone too far.",
-              "zh": "批评者认为这项改革走得太远了。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "specific · concrete",
-      "memo": "都译\"具体\"，对立面不同：specific 对着含糊、一般，指明确、特定的那一个（a specific goal）；concrete 对着抽象，指感官摸得到的、落地的（concrete evidence），名词还是混凝土。写作：要求\"说明确\"用 specific，要求\"不空洞\"用 concrete。",
-      "words": [
-        {
-          "w": "specific",
-          "rank": 5,
-          "ph": {
-            "uk": "spəˈsɪfɪk",
-            "us": "spəˈsɪfɪk"
-          },
-          "pos": "adj. / n.",
-          "gloss": "明确的，具体的；特定的",
-          "usage": "对着含糊和一般：指定到某一个；名词是细节",
-          "phrases": [
-            "a specific goal 明确的目标",
-            "specific evidence 具体证据"
-          ],
-          "ex": [
-            {
-              "en": "The teacher asked for a specific example, not a general idea.",
-              "zh": "老师要的是一个明确例子，不是笼统的想法。"
-            }
-          ]
-        },
-        {
-          "w": "concrete",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈkɒŋkriːt",
-            "us": "ˈkɑːŋkriːt"
-          },
-          "pos": "adj. / n.",
-          "gloss": "具体的，确实的；混凝土（n.）",
-          "usage": "con-(共同)+cret(长出)：对着抽象，感官可及；名词是混凝土",
-          "phrases": [
-            "concrete evidence 确凿的证据",
-            "a concrete proposal 一项具体建议"
-          ],
-          "ex": [
-            {
-              "en": "We need concrete evidence, not an abstract argument.",
-              "zh": "我们要的是确凿的证据，不是抽象的论证。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "immense · enormous",
-      "memo": "都是\"巨大\"，量的对象不同：immense 是 im-(不)+mens(测量)→大到测不完，偏空间/规模/程度（immense scale）；enormous 是 e-(超出)+norm(常规)→超出常规的大，更常接数量和影响（an enormous amount of、enormous impact）。写作：规模用 immense，数量/影响用 enormous。",
-      "words": [
-        {
-          "w": "immense",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪˈmens",
-            "us": "ɪˈmens"
-          },
-          "pos": "adj.",
-          "gloss": "极大的，巨大的",
-          "usage": "im-(不)+mens(测量)：大到无法度量；常接规模、程度",
-          "phrases": [
-            "immense scale 巨大的规模",
-            "an immense improvement 巨大的进步"
-          ],
-          "ex": [
-            {
-              "en": "The project was carried out on an immense scale.",
-              "zh": "这项工程的规模极其巨大。"
-            }
-          ]
-        },
-        {
-          "w": "enormous",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪˈnɔːməs",
-            "us": "ɪˈnɔːrməs"
-          },
-          "pos": "adj.",
-          "gloss": "巨大的，庞大的",
-          "usage": "e-(超出)+norm(常规)：超出常规；常接数量与影响",
-          "phrases": [
-            "an enormous amount of 大量的",
-            "enormous impact 巨大的影响"
-          ],
-          "ex": [
-            {
-              "en": "The decision had an enormous impact on the industry.",
-              "zh": "这一决定对该行业产生了巨大影响。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "incentive · inspire · affirm · acclaim",
-      "memo": "激励一词先分词性：incentive 是推你行动的外在\"激励物\"（名词，an incentive to do）；inspire 是把劲鼓进人心里（in-入+spir 呼吸→打气，inspire sb. to do，另有启发灵感）。后面两个是反馈：affirm 是\"肯定\"其正确（af-加强+firm 牢固→断言属实）；acclaim 是为其\"喝彩\"（ac-加强+claim 喊→公开称赞，be acclaimed as）。串成\"给诱因→鼓舞人→肯定→赞誉\"。",
-      "words": [
-        {
-          "w": "incentive",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪnˈsentɪv",
-            "us": "ɪnˈsentɪv"
-          },
-          "pos": "n.[C,U]",
-          "gloss": "激励，刺激；动机，诱因",
-          "usage": "推人行动的\"动力\"；常接 an incentive to do sth. / for sb. to do sth.",
-          "phrases": [
-            "give sb. an incentive to do 激励某人做……",
-            "economic incentives 经济激励"
-          ],
-          "ex": [
-            {
-              "en": "Bonuses give employees an incentive to work harder.",
-              "zh": "奖金给了员工更努力工作的动力。"
-            }
-          ]
-        },
-        {
-          "w": "inspire",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪnˈspaɪə",
-            "us": "ɪnˈspaɪər"
-          },
-          "pos": "vt.",
-          "gloss": "鼓舞，激励；启发，启迪",
-          "usage": "in-(入)+spir(呼吸)：往里打气→鼓舞激励；inspire sb. to do",
-          "phrases": [
-            "inspire sb. to do sth. 激励某人做某事",
-            "inspire confidence 激发信心"
-          ],
-          "ex": [
-            {
-              "en": "Her talk inspired the students to keep going.",
-              "zh": "她的讲话激励学生们坚持下去。"
-            }
-          ]
-        },
-        {
-          "w": "affirm",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈfɜːm",
-            "us": "əˈfɜːrm"
-          },
-          "pos": "vt.",
-          "gloss": "断言，申明；肯定，证实",
-          "usage": "af-(加强)+firm(牢固)：使牢固→坚定地说属实；法庭语境\"宣誓证实\"",
-          "phrases": [
-            "affirm one's belief 坚定信念",
-            "affirm that… 断言……属实"
-          ],
-          "ex": [
-            {
-              "en": "The report affirmed that the policy had worked.",
-              "zh": "报告证实该政策确实奏效。"
-            }
-          ]
-        },
-        {
-          "w": "acclaim",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈkleɪm",
-            "us": "əˈkleɪm"
-          },
-          "pos": "vt. / n.",
-          "gloss": "称赞，为……喝彩；赞誉（n.）",
-          "usage": "ac-(加强)+claim(喊)：一再喊好→公开称誉；be acclaimed as 被誉为",
-          "phrases": [
-            "be acclaimed as… 被誉为……",
-            "win critical acclaim 赢得评论界赞誉"
-          ],
-          "ex": [
-            {
-              "en": "The young director was acclaimed as a new master of cinema.",
-              "zh": "这位年轻导演被誉为影坛新大师。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "territory · boundary · scope",
-      "memo": "都在回答“到哪里为止”：territory 是被管辖的一整块区域或知识领域；boundary 是切开两边的那条线；scope 是事情覆盖的幅度，也指还剩的余地。一块地、一条线、一个幅度。",
-      "words": [
-        {
-          "w": "territory",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈterətri",
-            "us": "ˈterətɔːri"
-          },
-          "pos": "n.",
-          "gloss": "领土，领地；领域",
-          "usage": "一块被划归的区域：领土，或知识、活动领域；不是那条分界线",
-          "phrases": [
-            "unknown territory 未知的领域",
-            "national territory 国家领土"
-          ],
-          "ex": [
-            {
-              "en": "Artificial intelligence is unfamiliar territory for many traditional publishers.",
-              "zh": "对许多传统出版商来说，人工智能是个陌生的领域。"
-            }
-          ]
-        },
-        {
-          "w": "boundary",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈbaʊndri",
-            "us": "ˈbaʊndri"
-          },
-          "pos": "n.",
-          "gloss": "边界，分界线；界限",
-          "usage": "分开两边的那条线：可指国境，也可指抽象界限；不是整片区域",
-          "phrases": [
-            "the boundary between A and B A 与 B 的分界",
-            "set boundaries 设定界限"
-          ],
-          "ex": [
-            {
-              "en": "The river is the boundary between the two countries.",
-              "zh": "这条河是两国的分界线。"
-            }
-          ]
-        },
-        {
-          "w": "scope",
-          "rank": 5,
-          "ph": {
-            "uk": "skəʊp",
-            "us": "skoʊp"
-          },
-          "pos": "n.[U]",
-          "gloss": "范围；余地",
-          "usage": "事情覆盖的幅度，或尚有的余地；不指土地，也不指分界线",
-          "phrases": [
-            "beyond the scope of… 超出……的范围",
-            "scope for improvement 改进的余地"
-          ],
-          "ex": [
-            {
-              "en": "The inquiry's scope was limited to the years after 2010.",
-              "zh": "调查范围仅限于2010年之后。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "hospitality · zeal",
-      "memo": "两词都含一份热，方向相反：hospitality 热在待人——好客、殷勤款待（主人待客，也指酒店服务业）；zeal 热在做事——对目标或信念的热忱，投入很深，有时近乎偏执。一个对外，一个对事。",
-      "words": [
-        {
-          "w": "hospitality",
-          "rank": 5,
-          "ph": {
-            "uk": "ˌhɒspɪˈtæləti",
-            "us": "ˌhɑːspɪˈtæləti"
-          },
-          "pos": "n.[U]",
-          "gloss": "好客；殷勤款待",
-          "usage": "热在待人：对外的好客与款待；也指酒店业。反义 hostility 敌意",
-          "phrases": [
-            "warm hospitality 热情款待",
-            "hospitality industry 酒店服务业"
-          ],
-          "ex": [
-            {
-              "en": "We thanked our hosts for their warm hospitality during our stay.",
-              "zh": "我们感谢主人在我们逗留期间的热情款待。"
-            }
-          ]
-        },
-        {
-          "w": "zeal",
-          "rank": 2,
-          "ph": {
-            "uk": "ziːl",
-            "us": "ziːl"
-          },
-          "pos": "n.[U]",
-          "gloss": "热忱，热情",
-          "usage": "热在做事：对目标或信念的内在热忱，常很投入；形容词 zealous",
-          "phrases": [
-            "with great zeal 以极大的热忱",
-            "a zeal for reform 改革的热忱"
-          ],
-          "ex": [
-            {
-              "en": "She pursued her research with such zeal that she often worked late into the night.",
-              "zh": "她以极大的热忱投入研究，常常工作到深夜。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "eliminate · obsolete",
-      "memo": "\"淘汰\"的动与静：eliminate 是动词，主动\"消除、淘汰\"（e-(出)+limin 门槛→赶出门槛；比赛淘汰选手、消除贫困/隐患）；obsolete 是形容词，被动\"被时代淘汰的、过时的\"（obsolete technology 过时技术）。搭配记忆：eliminate the obsolete 淘汰过时之物——一句话把两个词串起来。词性：eliminate vt. / obsolete adj.，注意 eliminate 与 exclude 的辨析（内部除名 vs 拒之门外）。",
-      "words": [
-        {
-          "w": "eliminate",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪˈlɪmɪneɪt",
-            "us": "ɪˈlɪmɪneɪt"
-          },
-          "pos": "vt.",
-          "gloss": "消除；淘汰（比赛中）；消灭",
-          "usage": "e-(出)+limin(门槛)+ate：赶出门槛→彻底除去；辨 exclude 是\"拒之门外\"（从未进入）",
-          "phrases": [
-            "eliminate poverty 消除贫困",
-            "be eliminated from the contest 在比赛中被淘汰"
-          ],
-          "ex": [
-            {
-              "en": "The new system aims to eliminate human error.",
-              "zh": "新系统旨在消除人为失误。"
-            }
-          ]
-        },
-        {
-          "w": "obsolete",
-          "rank": 2,
-          "ph": {
-            "uk": "ˈɒbsəliːt",
-            "us": "ˌɑːbsəˈliːt"
-          },
-          "pos": "adj.",
-          "gloss": "过时的，废弃的，被淘汰的",
-          "usage": "只作形容词（被时代淘汰的状态）；obsolescence n. 过时",
-          "phrases": [
-            "obsolete technology 过时的技术",
-            "become obsolete 被淘汰，变得过时"
-          ],
-          "ex": [
-            {
-              "en": "Typewriters have become obsolete in most offices.",
-              "zh": "打字机在大多数办公室里已经被淘汰了。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "argument · dispute",
-      "memo": "都表\"争论\"，侧重不同：argument 泛指\"争吵/辩论\"，另一高频义\"论点、论据\"（present an argument 提出论点——写作核心词）；dispute 更正式、多指\"就重大问题的争端/纠纷\"（legal disputes 法律纠纷、industrial disputes 劳资纠纷），且可作动词表\"对……提出异议\"（dispute the claim）。搭配锚点：settle an argument 解决争吵 / beyond dispute 无可争辩。",
-      "words": [
-        {
-          "w": "argument",
-          "rank": 4,
-          "ph": {
-            "uk": "ˈɑːɡjumənt",
-            "us": "ˈɑːrɡjəmənt"
-          },
-          "pos": "n.[C]",
-          "gloss": "争论，争吵；论点，论据",
-          "usage": "argue 的名词；双重身份：日常\"拌嘴\"+ 写作\"论点论据\"（develop an argument 展开论证）",
-          "phrases": [
-            "settle an argument 解决争端",
-            "present an argument 提出论点"
-          ],
-          "ex": [
-            {
-              "en": "They had an argument over who should pay the bill.",
-              "zh": "他们为该谁付账吵了一架。"
-            }
-          ]
-        },
-        {
-          "w": "dispute",
-          "rank": 5,
-          "ph": {
-            "uk": "dɪˈspjuːt",
-            "us": "dɪˈspjuːt"
-          },
-          "pos": "n. / v.",
-          "gloss": "争端，纠纷；争论；对……提出异议",
-          "usage": "dis-(分离)+put(放)：各执一词→正式争端；动词 dispute sth. 表\"质疑、否认\"",
-          "phrases": [
-            "be beyond dispute 无可争辩",
-            "settle a dispute between A and B 解决 A 与 B 的纠纷"
-          ],
-          "ex": [
-            {
-              "en": "The two countries settled their long-running border dispute.",
-              "zh": "两国解决了长期存在的边界争端。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "contempt · prejudice · discriminate",
-      "memo": "\"负面态度\"三段链——心里**蔑视**（contempt，n.）→ 未了解先**下判断**（prejudice，n. 偏见，pre-预先+jud 判断）→ 行动上**区别对待**（discriminate，v. 歧视，dis-+crimin 分开）。词性注意：前两个常作名词，discriminate 是动词（discriminate against 歧视 / between A and B 区分）。discriminate 在 9.18 生词笔记出现过，本组串成完整态度链。写作升级：don't look down on → have contempt for；be biased → have a prejudice against。",
-      "words": [
-        {
-          "w": "contempt",
-          "rank": 5,
-          "ph": {
-            "uk": "kənˈtempt",
-            "us": "kənˈtempt"
-          },
-          "pos": "n.[U]",
-          "gloss": "蔑视，轻蔑；藐视",
-          "usage": "con-(加强)+tempt(藐视)：心里最底层的不屑；法律语境 contempt of court 藐视法庭",
-          "phrases": [
-            "have/show contempt for… 对……表示蔑视",
-            "contempt of court 藐视法庭"
-          ],
-          "ex": [
-            {
-              "en": "He showed open contempt for the court's rules.",
-              "zh": "他对法庭规则公然表示蔑视。"
-            }
-          ]
-        },
-        {
-          "w": "prejudice",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈpredʒədɪs",
-            "us": "ˈpredʒədɪs"
-          },
-          "pos": "n. / vt.",
-          "gloss": "偏见，成见；使有偏见",
-          "usage": "pre-(预先)+jud(判断)：未经了解先下判断→成见；常见 a prejudice against…",
-          "phrases": [
-            "have a prejudice against… 对……抱有偏见",
-            "gender prejudice 性别偏见"
-          ],
-          "ex": [
-            {
-              "en": "The report revealed a deep prejudice against older workers.",
-              "zh": "该报告揭露了对年长员工的深层偏见。"
-            }
-          ]
-        },
-        {
-          "w": "discriminate",
-          "rank": 5,
-          "ph": {
-            "uk": "dɪˈskrɪmɪneɪt",
-            "us": "dɪˈskrɪmɪneɪt"
-          },
-          "pos": "vi. / vt.",
-          "gloss": "歧视；区别，辨别",
-          "usage": "dis-(分开)+crimin(分辨)：区别对待=歧视（against）；中性义\"区分\"接 between A and B",
-          "phrases": [
-            "discriminate against… 歧视……",
-            "discriminate between A and B 区分 A 和 B"
-          ],
-          "ex": [
-            {
-              "en": "The law forbids firms to discriminate against disabled applicants.",
-              "zh": "法律禁止企业歧视残障求职者。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "diminish · decline · descend",
-      "memo": "都含\"往下/变少\"的意象，分工不同：diminish 重\"逐渐变少、削弱\"（di-+mini 小，数字/资源/风险在缩水）；decline 最全能——数字\"下降\"、健康\"衰退\"、还有\"婉拒\"（de-+clin 倾斜，向下弯腰也=谢绝）；descend 最具体——空间上\"下来\"（de-+scend 爬，楼梯/后代），descend from 还表\"是……后裔\"。完形里三者可互换看搭配：risks diminish、birth rate declines、stairs descend。",
-      "words": [
-        {
-          "w": "diminish",
-          "rank": 5,
-          "ph": {
-            "uk": "dɪˈmɪnɪʃ",
-            "us": "dɪˈmɪnɪʃ"
-          },
-          "pos": "v.",
-          "gloss": "（使）减少，缩小；削弱",
-          "usage": "di-(分离)+mini(小)：逐渐变小，常含\"不幸地缩减\"意味；另有\"贬低\"义",
-          "phrases": [
-            "diminish the risk 降低风险",
-            "diminish the rights of… 削减……的权利"
-          ],
-          "ex": [
-            {
-              "en": "The medicine can diminish the risk of heart disease.",
-              "zh": "这种药能降低患心脏病的风险。"
-            }
-          ]
-        },
-        {
-          "w": "decline",
-          "rank": 5,
-          "ph": {
-            "uk": "dɪˈklaɪn",
-            "us": "dɪˈklaɪn"
-          },
-          "pos": "vi. / vt. / n.",
-          "gloss": "下降；衰退；婉拒",
-          "usage": "de-(向下)+clin(倾)：数字\"下降\"、产业\"衰退\"、礼貌\"谢绝\" decline to do",
-          "phrases": [
-            "decline to do sth. 婉拒做某事",
-            "fall into a decline 陷入衰退"
-          ],
-          "ex": [
-            {
-              "en": "The birth rate continued to decline for a third year.",
-              "zh": "出生率连续第三年下降。"
-            }
-          ]
-        },
-        {
-          "w": "descend",
-          "rank": 5,
-          "ph": {
-            "uk": "dɪˈsend",
-            "us": "dɪˈsend"
-          },
-          "pos": "vi.",
-          "gloss": "下降，下来；是……的后裔",
-          "usage": "de-(向下)+scend(爬)：空间上的\"下来、降临\"；descend from 表血统\"源自\"",
-          "phrases": [
-            "descend from… 从……下来；是……的后裔",
-            "descend on/upon… 突然造访"
-          ],
-          "ex": [
-            {
-              "en": "The plane began to descend through the clouds.",
-              "zh": "飞机开始穿云下降。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "perceive · detect",
-      "memo": "都表\"察觉\"，但路径相反：perceive 重主观感知——\"通过心灵意识到\"（per-(透过)+ceive 抓住→透过表象抓住含义，高频 perceive…as… 视为）；detect 重客观发觉——\"借助观察或仪器测出\"隐藏的事实（detect a lie / detect cancer）。阅读题里 perceive 常与理解、观点绑定，detect 常与证据、信号绑定。",
-      "words": [
-        {
-          "w": "perceive",
-          "rank": 5,
-          "ph": {
-            "uk": "pəˈsiːv",
-            "us": "pərˈsiːv"
-          },
-          "pos": "vt.",
-          "gloss": "察觉，感知；理解，认为",
-          "usage": "per-(透过) + ceive(抓住)：透过表象抓住含义→主观上意识到；常接 perceive…as…",
-          "phrases": [
-            "perceive…as… 把……视为……",
-            "perceive a change 察觉到变化"
-          ],
-          "ex": [
-            {
-              "en": "Many people perceive failure as a stepping stone to success.",
-              "zh": "许多人把失败视为通往成功的垫脚石。"
-            }
-          ]
-        },
-        {
-          "w": "detect",
-          "rank": 5,
-          "ph": {
-            "uk": "dɪˈtekt",
-            "us": "dɪˈtekt"
-          },
-          "pos": "vt.",
-          "gloss": "察觉，发觉；探测",
-          "usage": "侧重客观\"发现\"：用观察或仪器测出隐藏的事物（谎言/信号/疾病）",
-          "phrases": [
-            "detect a lie 识破谎言",
-            "detect cancer early 及早发现癌症"
-          ],
-          "ex": [
-            {
-              "en": "The sensor can detect smoke within seconds.",
-              "zh": "这个传感器能在几秒内探测到烟雾。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "retain · keep · preserve · hold · maintain",
-      "memo": "retain 最正式，强调\"保留不放\"（保留控制权/信息）；keep 最通用；preserve 重\"防损坏、维持原状\"（保护环境/保鲜）；hold 重\"握住、容纳、举行\"；maintain 重\"通过持续努力维系\"（保养机器/维持关系）。考研完形最爱 retain / maintain 的正式语域。",
-      "words": [
-        {
-          "w": "retain",
-          "rank": 5,
-          "ph": {
-            "uk": "rɪˈteɪn",
-            "us": "rɪˈteɪn"
-          },
-          "pos": "vt.",
-          "gloss": "保留；保持；留住",
-          "usage": "正式用语，强调\"继续持有\"不失去，宾语常为 control / information / position",
-          "phrases": [
-            "retain control of… 保持对……的控制",
-            "retain information 记住信息"
-          ],
-          "ex": [
-            {
-              "en": "She retained her position as chairman despite the challenge.",
-              "zh": "尽管受到挑战，她仍保住了主席之位。"
-            }
-          ]
-        },
-        {
-          "w": "keep",
-          "rank": 5,
-          "ph": {
-            "uk": "kiːp",
-            "us": "kiːp"
-          },
-          "pos": "v.",
-          "gloss": "保持；保存；继续",
-          "usage": "最通用的\"保持\"，口语书面皆宜，搭配最广",
-          "phrases": [
-            "keep calm 保持冷静",
-            "keep a secret 保守秘密"
-          ],
-          "ex": [
-            {
-              "en": "Keep the receipt in case you want to return it.",
-              "zh": "保存好收据，以防你想退货。"
-            }
-          ]
-        },
-        {
-          "w": "preserve",
-          "rank": 5,
-          "ph": {
-            "uk": "prɪˈzɜːv",
-            "us": "prɪˈzɜːrv"
-          },
-          "pos": "vt.",
-          "gloss": "保护；保存；维持……的原状",
-          "usage": "强调\"防止损坏、变质\"，对象常为环境/文物/传统/食物",
-          "phrases": [
-            "preserve the environment 保护环境",
-            "preserve traditional culture 保护传统文化"
-          ],
-          "ex": [
-            {
-              "en": "We must preserve our cultural heritage for future generations.",
-              "zh": "我们必须为子孙后代保护好文化遗产。"
-            }
-          ]
-        },
-        {
-          "w": "hold",
-          "rank": 5,
-          "ph": {
-            "uk": "həʊld",
-            "us": "hoʊld"
-          },
-          "pos": "vt.",
-          "gloss": "握住；持有；容纳；举行",
-          "usage": "重\"占据/盛纳\"的具体感：hold a meeting 举行会议、hold the record 保持纪录",
-          "phrases": [
-            "hold a meeting 举行会议",
-            "hold the world record 保持世界纪录"
-          ],
-          "ex": [
-            {
-              "en": "The new hall can hold over 500 people.",
-              "zh": "新大厅能容纳五百多人。"
-            }
-          ]
-        },
-        {
-          "w": "maintain",
-          "rank": 5,
-          "ph": {
-            "uk": "meɪnˈteɪn",
-            "us": "meɪnˈteɪn"
-          },
-          "pos": "vt.",
-          "gloss": "维持；保养；检修；主张",
-          "usage": "强调\"付出努力使持续运转\"；maintain that… 还表\"坚持主张\"",
-          "phrases": [
-            "maintain friendly relations 保持友好关系",
-            "maintain that… 主张/坚称……"
-          ],
-          "ex": [
-            {
-              "en": "The two countries have maintained friendly relations for decades.",
-              "zh": "两国数十年来一直保持着友好关系。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "subsidy · allowance · grant",
-      "memo": "都是“给钱”，给法和对象不同：subsidy 是“补贴”——政府为扶持产业、压低成本发的（farm subsidies 农业补贴、housing subsidy 住房补贴），受补的是产业/项目；allowance 是“津贴/零用钱”——按期发给个人的固定款项（jobseeker's allowance 求职津贴），另考 make allowance(s) for 考虑到/体谅；grant 是“拨款”——机构为特定目的（尤指科研、学业）批的一笔钱（research grant 科研拨款、student grants 助学金），动词还可“准予”，必背 take...for granted 理所当然。分工：产业用 subsidy，个人按月用 allowance，项目批款用 grant。",
-      "words": [
-        {
-          "w": "subsidy",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈsʌbsədi",
-            "us": "ˈsʌbsədi"
-          },
-          "pos": "n. [C]",
-          "gloss": "补贴，津贴，补助金",
-          "usage": "sub(辅助)+side(旁边)→在旁边支撑生活的收入→补贴；多为政府扶持产业/压低物价而发；动词 subsidize 补贴",
-          "phrases": [
-            "government subsidies 政府补贴",
-            "farm subsidy programme 农业补贴计划"
-          ],
-          "ex": [
-            {
-              "en": "Without a government subsidy, the rural bus service would have to close completely.",
-              "zh": "如果没有政府补贴，乡村巴士服务将不得不完全停运。"
-            }
-          ]
-        },
-        {
-          "w": "allowance",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈlaʊəns",
-            "us": "əˈlaʊəns"
-          },
-          "pos": "n. [C, U]",
-          "gloss": "津贴，补贴；零用钱；限额，免税额",
-          "usage": "allow(允许)+ance→允许支配的钱→津贴/零用钱；按期发给个人；高频搭配 make allowance(s) for 考虑到/体谅",
-          "phrases": [
-            "make allowance(s) for... 考虑到……；体谅……",
-            "jobseeker's allowance 求职者津贴"
-          ],
-          "ex": [
-            {
-              "en": "His parents give him a monthly allowance.",
-              "zh": "他的父母每月给他零用钱。"
-            }
-          ]
-        },
-        {
-          "w": "grant",
-          "rank": 4,
-          "ph": {
-            "uk": "ɡrɑːnt",
-            "us": "ɡrɑːnt"
-          },
-          "pos": "n. [C] / vt.",
-          "gloss": "拨款，补助金；授予物；准予，授予（vt.）",
-          "usage": "机构为特定目的（科研/学业）批的款项：research grant、student grants；动词 grant sb. sth. 准予/授予；必背 take...for granted 认为理所当然",
-          "phrases": [
-            "take...for granted 认为……理所当然",
-            "research grant 科研拨款"
-          ],
-          "ex": [
-            {
-              "en": "The university awarded her a research grant.",
-              "zh": "大学授予她一笔科研拨款。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "virtue · merit · morality",
-      "memo": "都带\"德\"，层次不同：morality 是宏观的\"道德\"——社会的道德规范/伦理体系（形容词 moral，同义 ethics，\"克隆的争论既是科学问题也是道德问题\"）；virtue 是个体的\"美德\"——诚实、耐心这类具体品质，可数（Patience is a virtue），反义 vice 罪恶，兼指事物的\"优点\"（the virtue of simplicity），by virtue of 凭借是高频考点；merit 是\"优点、价值\"——可长处可功绩，最中性（judge on merit 凭本身优劣评判），反义 defect，还可作动词\"值得\"。分工：谈社会伦理用 morality，夸人品用 virtue，评方案优劣用 merit。",
-      "words": [
-        {
-          "w": "virtue",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈvɜːtʃuː",
-            "us": "ˈvɜːtʃuː"
-          },
-          "pos": "n. [C, U]",
-          "gloss": "美德，德行；优点，长处",
-          "usage": "反义 vice 罪恶；by virtue of 凭借/因为 是高频考点；兼指事物\"优点\"（the virtue of simplicity）；近 merit、morality",
-          "phrases": [
-            "by virtue of 凭借，因为",
-            "virtue and vice 美德与罪恶"
-          ],
-          "ex": [
-            {
-              "en": "Patience is a virtue that modern society seems to have forgotten.",
-              "zh": "耐心是现代社会似乎已经遗忘的一种美德。"
-            }
-          ]
-        },
-        {
-          "w": "merit",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈmerɪt",
-            "us": "ˈmerɪt"
-          },
-          "pos": "n. / vt.",
-          "gloss": "优点，长处；价值，功绩；值得（vt.）",
-          "usage": "反义 defect 缺点；judge on (its) merit 凭本身优劣评判；还可作动词\"值得，应受\"；助记：身上有很多 merit 的人想 marry",
-          "phrases": [
-            "judge on (its) merit 凭本身优劣评判",
-            "have merit 有其优点"
-          ],
-          "ex": [
-            {
-              "en": "The plan has merit, but it also involves considerable financial risks.",
-              "zh": "这个计划有其优点，但也涉及相当大的财务风险。"
-            }
-          ]
-        },
-        {
-          "w": "morality",
-          "rank": 4,
-          "ph": {
-            "uk": "məˈræləti",
-            "us": "məˈræləti"
-          },
-          "pos": "n. [U]",
-          "gloss": "道德，道德观；正当性",
-          "usage": "形容词 moral；同义 ethics；指社会的道德规范/伦理体系；反义 immorality",
-          "phrases": [
-            "conventional morality 主流道德观念",
-            "a sense of morality 道德观念"
-          ],
-          "ex": [
-            {
-              "en": "The debate over cloning is as much about morality as about science.",
-              "zh": "关于克隆的争论既是科学问题，也是道德问题。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "outcome · consequence · conclusion",
-      "memo": "都译\"结果\"，因果链上的位置不同：outcome 最中性——行动或过程的\"最终产出\"（the final outcome of the negotiations 谈判的最终结果），不带好坏色彩；consequence 偏\"后果\"——强调前因引发的逻辑链，多指不良结果（face/suffer the consequences 承担后果，as a consequence of 由于……），另有\"重要性\"义（a matter of consequence）；conclusion 不是事情的结果——是推理的\"结论\"或文章的\"结尾\"（draw a conclusion、in conclusion 总之），jump to conclusions 匆匆下结论是阅读态度题高频。搭配分工：experiment/negotiation + outcome，决策失误 + consequence，研究/文章 + conclusion。",
-      "words": [
-        {
-          "w": "outcome",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈaʊtkʌm",
-            "us": "ˈaʊtkʌm"
-          },
-          "pos": "n.",
-          "gloss": "结果，结局；成果",
-          "usage": "out+come→出来的东西→结果（和 come out 一起记）；中性词，指行动/过程可能产生的结果；近义 result",
-          "phrases": [
-            "the final outcome 最终结果",
-            "the outcome of the experiment 实验结果"
-          ],
-          "ex": [
-            {
-              "en": "Researchers measured the outcome of the experiment after six months.",
-              "zh": "研究人员在六个月后评估了这项实验的结果。"
-            }
-          ]
-        },
-        {
-          "w": "consequence",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈkɒnsɪkwəns",
-            "us": "ˈkɒnsɪkwəns"
-          },
-          "pos": "n.",
-          "gloss": "结果，后果；重要性（u.）",
-          "usage": "con(共同)+sequ(跟随)→随之而来→后果；多指不良结果、侧重逻辑关系；同根 consequently 因此；形近角度另见 consensus·consequence 组",
-          "phrases": [
-            "as a consequence of 由于……的结果",
-            "face/suffer the consequences 承担后果"
-          ],
-          "ex": [
-            {
-              "en": "Cutting the training budget may save money now, but the long-term consequences could be severe.",
-              "zh": "削减培训预算或许现在能省钱，但长期后果可能很严重。"
-            }
-          ]
-        },
-        {
-          "w": "conclusion",
-          "rank": 4,
-          "ph": {
-            "uk": "kənˈkluːʒn",
-            "us": "kənˈkluːʒn"
-          },
-          "pos": "n.",
-          "gloss": "结论，推论；结尾，结束",
-          "usage": "conclude 的名词（con-clude 全部关上→收尾）；搭配 draw/come to a conclusion、in conclusion 总之（写作收尾）、jump to conclusions 匆匆下结论；动词另义\"缔结\"",
-          "phrases": [
-            "draw a conclusion 得出结论",
-            "in conclusion 总之"
-          ],
-          "ex": [
-            {
-              "en": "The researchers were careful not to draw conclusions from incomplete data.",
-              "zh": "研究人员谨慎地避免从不完整的数据中得出结论。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "guarantee · ensure · promise · assure",
-      "memo": "都译\"保证\"，保的对象和力度不同：ensure 是\"确保\"——采取措施让事情必然发生，宾语只能是事（ensure safety、ensure that...）；assure 是\"使确信\"——宾语必须是人（assure sb. that/of sth.），目的是消除对方疑虑，同根 insurance 保险；guarantee 语气最强——对质量、结果\"担保\"，能开保修单的那种（under guarantee 在保修期内），名动同形；promise 最轻——只是主观\"答应\"，可能不兑现（keep/break a promise），另有\"预示\"义（clear skies promise a fine day）。句型抓手：ensure/guarantee + 事情，assure + 人，promise + to do。",
-      "words": [
-        {
-          "w": "guarantee",
-          "rank": 5,
-          "ph": {
-            "uk": "ˌɡærənˈtiː",
-            "us": "ˌɡærənˈtiː"
-          },
-          "pos": "vt. / n.",
-          "gloss": "保证，担保；保修单（n.）",
-          "usage": "guar(联想 guard 警卫)+antee→担保；语气最强，可担保产品质量/结果；名动同形；搭配 under guarantee 在保修期内",
-          "phrases": [
-            "under guarantee 在保修期内",
-            "guarantee sb. sth. 向某人保证某事"
-          ],
-          "ex": [
-            {
-              "en": "Hard work does not guarantee success, but it greatly improves your chances.",
-              "zh": "努力并不能保证成功，但会大大增加成功的机会。"
-            }
-          ]
-        },
-        {
-          "w": "ensure",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪnˈʃʊə(r)",
-            "us": "ɪnˈʃʊə(r)"
-          },
-          "pos": "vt.",
-          "gloss": "确保，保证；保证给予",
-          "usage": "en(使)+sure(确信)→使确信→确保；宾语是事情不是人；常用 ensure that... / ensure sth.",
-          "phrases": [
-            "ensure the safety of... 确保……的安全",
-            "ensure that... 保证……"
-          ],
-          "ex": [
-            {
-              "en": "We are working to ensure the safety of people in the city.",
-              "zh": "我们正在努力确保这个城市里人们的安全。"
-            }
-          ]
-        },
-        {
-          "w": "promise",
-          "rank": 3,
-          "ph": {
-            "uk": "ˈprɒmɪs",
-            "us": "ˈprɒmɪs"
-          },
-          "pos": "vt. & vi. / n.",
-          "gloss": "许诺，答应；预示；诺言；出息，成功的迹象（n.）",
-          "usage": "主观答应、可能不兑现；搭配 keep/make/break a promise；另义\"预示\"（\"保证\"义考过 2020 完形）",
-          "phrases": [
-            "keep/make/break a promise 信守/许下/违背诺言",
-            "promise sb. to do sth. 答应某人做某事"
-          ],
-          "ex": [
-            {
-              "en": "The government has promised to cut taxes in order to stimulate the economy.",
-              "zh": "政府已承诺减税以刺激经济。"
-            }
-          ]
-        },
-        {
-          "w": "assure",
-          "rank": 5,
-          "ph": {
-            "uk": "əˈʃʊə(r)",
-            "us": "əˈʃʊə(r)"
-          },
-          "pos": "vt.",
-          "gloss": "向……保证；使确信，使放心",
-          "usage": "as(一再)+sure(确信)→一再地确信→使确信；宾语必须是人：assure sb. that/of sth.；同根 insurance 保险",
-          "phrases": [
-            "assure sb. of sth. 向某人保证某事",
-            "assure oneself 弄清楚，查明"
-          ],
-          "ex": [
-            {
-              "en": "Let me assure you that I will try to help you.",
-              "zh": "我向你保证，我会尽力帮你。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "complicated · complex · intricate",
-      "memo": "都译\"复杂\"，复杂的方式不同：complicated＝com(一起)+plic(折)+ated→因素交织折在一起，强调难分析、难处理（收养的法律程序漫长而复杂）；complex＝com+plex(折)→结构折叠到一起，强调结构深、要专门知识才懂（complex social structure），名词还是\"综合体/建筑群\"（apartment complexes），派生 complexity 复杂性高频；intricate＝in(里)+tric(纠缠)→盘根错节，强调细节精细密实（手表里两百多个零件的机构、社交关系网）。快速分工：事情难办用 complicated，体系宏大用 complex，细节缠人用 intricate。",
-      "words": [
-        {
-          "w": "complicated",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈkɒmplɪkeɪtɪd",
-            "us": "ˈkɒmplɪkeɪtɪd"
-          },
-          "pos": "adj.",
-          "gloss": "复杂的，难懂的；难处理的",
-          "usage": "com(一起)+plic(折叠)+ated→因素交织折在一起→难分析处理；书内辨析：complex 重结构深，intricate 重细节缠",
-          "phrases": [
-            "be further complicated by... 因……而更加复杂",
-            "a long and complicated process 漫长而复杂的过程"
-          ],
-          "ex": [
-            {
-              "en": "The legal process for adopting a child from abroad can be long and complicated.",
-              "zh": "从国外收养儿童的法律程序可能漫长而复杂。"
-            }
-          ]
-        },
-        {
-          "w": "complex",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈkɒmpleks",
-            "us": "ˈkɒmpleks"
-          },
-          "pos": "adj. / n.",
-          "gloss": "复杂的，难懂的；综合体，建筑群（n.）",
-          "usage": "com(一起)+plex(折叠)→折叠到一起→结构复杂；派生 complexity n. 复杂性；名词义\"建筑群\"是考点",
-          "phrases": [
-            "complex social structure 复杂的社会结构",
-            "apartment complexes 公寓建筑群"
-          ],
-          "ex": [
-            {
-              "en": "We live in an increasingly complex world.",
-              "zh": "我们生活在一个日益复杂的世界。"
-            }
-          ]
-        },
-        {
-          "w": "intricate",
-          "rank": 4,
-          "ph": {
-            "uk": "ˈɪntrɪkət",
-            "us": "ˈɪntrɪkət"
-          },
-          "pos": "adj.",
-          "gloss": "错综复杂的；复杂精细的",
-          "usage": "in(里)+tric(纠缠)+ate→纠缠在一起→盘根错节；近义 complicated；强调细节精细、难掌握细节",
-          "phrases": [
-            "an intricate mechanism 精密复杂的机构",
-            "intricate carvings 精细繁复的雕饰"
-          ],
-          "ex": [
-            {
-              "en": "The watch contains an intricate mechanism of more than two hundred tiny parts.",
-              "zh": "这块手表内部有一个由两百多个微小零件组成的精密复杂机构。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "demonstrate · illustrate · indicate · manifest",
-      "memo": "都译\"表明\"，证据力度不同：demonstrate 最硬——用实验、证据把结论\"证明\"出来（The study demonstrates...），另有\"演示、示范\"和 vi.\"示威\"义；illustrate 是\"举例说明\"——用例子、图表把道理讲明白（illustrate his argument with figures 用数据说明论点），不承担证明对错，另有\"加插图\"义；indicate 最软——数据、迹象\"指向\"结论，不把话说死，比 show 正式，\"暗示\"义是考点（2019 阅读）；manifest 偏\"显露\"——把看不见的情绪、品质、症状显性化，常考 manifests itself in...（压力常表现为头痛失眠），还兼形容词\"显而易见的\"（be manifest to all）。惯搭：study/research + demonstrate，example/incident + illustrate，data/findings + indicate，内在品质/症状 + manifest (itself)。",
-      "words": [
-        {
-          "w": "demonstrate",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈdemənstreɪt",
-            "us": "ˈdemənstreɪt"
-          },
-          "pos": "vt. / vi.",
-          "gloss": "证明，论证；演示，示范；游行示威（vi.）",
-          "usage": "de(加强)+monstr(表示)+ate→使劲表示→证明；同义 prove；名词 demonstration 演示/示威",
-          "phrases": [
-            "demonstrate the ability to do sth 展示做某事的能力",
-            "demonstrate against... 示威反对……"
-          ],
-          "ex": [
-            {
-              "en": "The study demonstrates the effectiveness of the drug.",
-              "zh": "这项研究证明了该药物的有效性。"
-            }
-          ]
-        },
-        {
-          "w": "illustrate",
-          "rank": 4,
-          "ph": {
-            "uk": "ˈɪləstreɪt",
-            "us": "ˈɪləstreɪt"
-          },
-          "pos": "vt.",
-          "gloss": "（用示例、图表）说明，阐明；给……加插图",
-          "usage": "il(向内)+lus(照亮)+trate→把里面照亮→阐明；名词 illustration 说明/图解；搭配 illustrate a point",
-          "phrases": [
-            "illustrate a point 说明一个观点",
-            "illustrate an argument with figures 用数据说明论点"
-          ],
-          "ex": [
-            {
-              "en": "The incident illustrates the need for better security measures.",
-              "zh": "这次事件说明了加强安全措施的必要。"
-            }
-          ]
-        },
-        {
-          "w": "indicate",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈɪndɪkeɪt",
-            "us": "ˈɪndɪkeɪt"
-          },
-          "pos": "vt.",
-          "gloss": "表明，标示；暗示；指出",
-          "usage": "in(里)+dic(说)+ate→话里带话→暗示；比 show 正式；名词 indication；\"暗示\"义是考点（2019 阅读）",
-          "phrases": [
-            "indicate that... 表明……",
-            "as indicated above 如上文所指出的"
-          ],
-          "ex": [
-            {
-              "en": "The survey data indicate a general satisfaction with the process.",
-              "zh": "调查数据表明对该过程总体满意。"
-            }
-          ]
-        },
-        {
-          "w": "manifest",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈmænɪfest",
-            "us": "ˈmænɪfest"
-          },
-          "pos": "vt. / adj.",
-          "gloss": "表明，显示；表露，显露；显而易见的（adj.）",
-          "usage": "书面正式词，指明确地表明；把看不见的显性化，常考 manifest itself in...；形容词义\"显而易见的\"（be manifest to all）；近义 obvious",
-          "phrases": [
-            "manifest itself in... 表现为……",
-            "be manifest to all 显而易见，人所共见"
-          ],
-          "ex": [
-            {
-              "en": "Stress often manifests itself in physical symptoms such as headaches and sleeplessness.",
-              "zh": "压力常常表现为头痛和失眠等身体症状。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "prosperity · flourish",
-      "memo": "都译\"繁荣\"，先分词性：prosperity 是名词——繁荣这个\"状态\"（economic prosperity 经济繁荣，bring prosperity 带来繁荣），形容词 prosperous；flourish 是动词——\"繁荣起来\"的\"过程\"，主语可以是经济、行业、公司，也能是植物和文化（a flourishing business 兴隆的生意）。画面感词根：prosper＝pro(向前)+sper(希望)→有希望向前→昌盛；flourish＝flour(花)+ish→开花→茁壮成长。近义 thrive 偏有生命物长势好；另注意 flourish 还有\"挥舞\"义。",
-      "words": [
-        {
-          "w": "prosperity",
-          "rank": 5,
-          "ph": {
-            "uk": "prɒˈsperəti",
-            "us": "prɒˈsperəti"
-          },
-          "pos": "n. [U]",
-          "gloss": "繁荣，昌盛；成功",
-          "usage": "pro(向前)+sper(希望)+ity→有希望向前→昌盛；形容词 prosperous；搭配 economic prosperity、bring prosperity",
-          "phrases": [
-            "economic prosperity 经济繁荣",
-            "bring prosperity 带来繁荣"
-          ],
-          "ex": [
-            {
-              "en": "Trade with neighbouring countries brought great prosperity to the coastal region.",
-              "zh": "与邻国的贸易给沿海地区带来了巨大的繁荣。"
-            }
-          ]
-        },
-        {
-          "w": "flourish",
-          "rank": 5,
-          "ph": {
-            "uk": "ˈflʌrɪʃ",
-            "us": "ˈflʌrɪʃ"
-          },
-          "pos": "vi. / n.",
-          "gloss": "繁荣，兴旺；茁壮成长；挥舞（vt.）",
-          "usage": "flour(花)+ish→开花→繁荣；近义 thrive、prosper，反义 decline 衰退；形容词 flourishing；另义 挥舞",
-          "phrases": [
-            "a flourishing economy 繁荣的经济",
-            "continue to flourish 继续繁荣"
-          ],
-          "ex": [
-            {
-              "en": "The author believes the anti-happy art flourishes when economy booms.",
-              "zh": "作者认为，当经济繁荣时，反快乐艺术也会繁荣。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "immense · enormous · considerable",
-      "memo": "都是\"大\"，量级和对象不同：immense 是 im-(不)+mens(测量)→大到测不完，偏空间/规模/程度（immense scale）；enormous 是 e-(超出)+norm(常规)→超出常规的大，更常接数量和影响（an enormous amount of、enormous impact）；considerable 最温和——\"相当大的、可观的\"，只是\"不少\"，够不上巨大（considerable attention/investment）。经典近形坑：considerable 相当大的 ≠ considerate 体贴的。写作：规模用 immense，数量/影响用 enormous，程度\"可观\"用 considerable。",
-      "words": [
-        {
-          "w": "immense",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪˈmens",
-            "us": "ɪˈmens"
-          },
-          "pos": "adj.",
-          "gloss": "极大的，巨大的",
-          "usage": "im-(不)+mens(测量)：大到无法度量；常接规模、程度",
-          "phrases": [
-            "immense scale 巨大的规模",
-            "an immense improvement 巨大的进步"
-          ],
-          "ex": [
-            {
-              "en": "The project was carried out on an immense scale.",
-              "zh": "这项工程的规模极其巨大。"
-            }
-          ]
-        },
-        {
-          "w": "enormous",
-          "rank": 5,
-          "ph": {
-            "uk": "ɪˈnɔːməs",
-            "us": "ɪˈnɔːrməs"
-          },
-          "pos": "adj.",
-          "gloss": "巨大的，庞大的",
-          "usage": "e-(超出)+norm(常规)：超出常规；常接数量与影响",
-          "phrases": [
-            "an enormous amount of 大量的",
-            "enormous impact 巨大的影响"
-          ],
-          "ex": [
-            {
-              "en": "The decision had an enormous impact on the industry.",
-              "zh": "这一决定对该行业产生了巨大影响。"
-            }
-          ]
-        },
-        {
-          "w": "considerable",
-          "rank": 5,
-          "ph": {
-            "uk": "kənˈsɪdərəbl",
-            "us": "kənˈsɪdərəbl"
-          },
-          "pos": "adj.",
-          "gloss": "相当大的，相当多的；可观的",
-          "usage": "consider 家族：字面\"值得考虑的量\"→量不小；近形陷阱 considerate 体贴的；搭配 considerable attention/investment",
-          "phrases": [
-            "considerable investment 相当大的投资",
-            "attract considerable attention 引起相当大的关注"
-          ],
-          "ex": [
-            {
-              "en": "The industry also points out that real grass require considerable amounts of water.",
-              "zh": "该行业还指出，种植真草需要大量的水。"
-            }
-          ]
-        }
-      ]
-    }
-  ],
   "form": [
+    {
+      "title": "invest · investigate",
+      "memo": "investigate 里\"藏着\"一个 invest（invest + i + gate 大门→投资前，我(i)站在大门口先调查一下）。invest /ɪnˈvest/ 双音节=投资、投入（invest in）；investigate /ɪnˈvestɪɡeɪt/ 四音节=调查、研究（investigate the cause）。辨形看长度与后缀：-igate 尾巴的是\"调查\"。invest 你 9.19 笔记背过，本组提醒：见到 investigate 别只当 invest 的加长版。",
+      "words": [
+        {
+          "w": "invest",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈvest",
+            "us": "ɪnˈvest"
+          },
+          "pos": "v.",
+          "gloss": "投资；投入（时间、精力）",
+          "usage": "in-(进)+vest(投入)：投进去；金钱 invest in stocks，抽象 invest time in doing",
+          "phrases": [
+            "invest in… 投资于……",
+            "invest time and effort 投入时间精力"
+          ],
+          "ex": [
+            {
+              "en": "The city plans to invest more in public transport.",
+              "zh": "该市计划加大对公共交通的投资。"
+            }
+          ]
+        },
+        {
+          "w": "investigate",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈvestɪɡeɪt",
+            "us": "ɪnˈvestɪɡeɪt"
+          },
+          "pos": "v.",
+          "gloss": "调查，调查研究；审查",
+          "usage": "invest 里加 i+gate：系统查明真相；名词 investigation（criminal investigation 刑事调查）",
+          "phrases": [
+            "investigate the cause 调查原因",
+            "police investigate the case 警方调查此案"
+          ],
+          "ex": [
+            {
+              "en": "Scientists are investigating the cause of the disease.",
+              "zh": "科学家正在调查这种疾病的成因。"
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "circulate · accumulate",
       "memo": "都以 -ulate 收尾的动词，前半截定乾坤：circulate＝circul(圈，同 circle)+ate→转圈→循环、流通、传播（blood/money/rumours circulate，名词 circulation 发行量）；accumulate＝ac(加强)+cumul(堆)+ate→堆起来→积累、积聚（accumulate experience/wealth 积累经验/财富，名词 accumulation，高频句型 Evidence has accumulated that... 越来越多的证据表明）。一句话：circulate 转圈跑（动态循环），accumulate 堆上去（越攒越多）。重音也分：circulate /ˈsɜːkjuleɪt/ 落首音节，accumulate /əˈkjuːmjəleɪt/ 落第二音节。",
@@ -2707,8 +693,8 @@
       ]
     },
     {
-      "title": "statute · statue · status",
-      "memo": "三词共享词根 stat(站立)，结尾定乾坤：-ute 立的规→法令；-ue 立着的像→雕像；-us 站的位置→地位。statute/statue 都含 /tʃuː/，status 元音变读 /eɪ/，别读混。",
+      "title": "statute · statue · status · stature",
+      "memo": "四词共享词根 stat(站立)，结尾定乾坤：-ute 立的规→法令；-ue 立着的像→雕像；-us 站的位置→地位；-ure 站的高度→身高。前三个都含 /tʃuː/，status 元音变读 /eɪ/，别读混。",
       "words": [
         {
           "w": "statute",
@@ -2770,6 +756,27 @@
             {
               "en": "Doctors enjoy high social status in this country.",
               "zh": "在这个国家，医生享有很高的社会地位。"
+            }
+          ]
+        },
+        {
+          "w": "stature",
+          "rank": null,
+          "ph": {
+            "uk": "ˈstætʃə",
+            "us": "ˈstætʃɚ"
+          },
+          "pos": "n.",
+          "gloss": "身高，个子；（成就、品格的）高度，声望",
+          "usage": "stat(站)+ure→站立的高度→身高；引申为学识品格的境界，a man of stature 德高望重之人。",
+          "phrases": [
+            "a man of great stature 身材高大/德高望重之人",
+            "grow in stature 渐有威望"
+          ],
+          "ex": [
+            {
+              "en": "He is a scholar of international stature.",
+              "zh": "他是一位具有国际声望的学者。"
             }
           ]
         }
@@ -4505,6 +2512,2226 @@
             {
               "en": "Language probably traces back at least 80,000 years.",
               "zh": "语言的出现至少可以追溯到8万年前。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "statute · statue · status",
+      "memo": "三词共享词根 stat(站立)，结尾定乾坤：-ute 立的规→法令；-ue 立着的像→雕像；-us 站的位置→地位。statute/statue 都含 /tʃuː/，status 元音变读 /eɪ/，别读混。",
+      "words": [
+        {
+          "w": "statute",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈstætʃuːt",
+            "us": "ˈstætʃuːt"
+          },
+          "pos": "n.",
+          "gloss": "法令，法规；章程，条例",
+          "usage": "statut(建立)+e→立法机关所立。正式语域，近义 legislation、regulation。",
+          "phrases": [
+            "the new statute 新法规",
+            "college statutes 大学校规"
+          ],
+          "ex": [
+            {
+              "en": "Parliament passed a statute banning smoking in public places.",
+              "zh": "议会通过了一项禁止在公共场所吸烟的法令。"
+            }
+          ]
+        },
+        {
+          "w": "statue",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈstætʃuː",
+            "us": "ˈstætʃuː"
+          },
+          "pos": "n.",
+          "gloss": "雕像，塑像",
+          "usage": "stat(站立)+ue→立着的像。statue 尾部无 t 音，勿与 statute 混读。",
+          "phrases": [
+            "the Statue of Liberty 自由女神像",
+            "erect a statue (of sb.) 为某人立雕像"
+          ],
+          "ex": [
+            {
+              "en": "A bronze statue of the founder stands in the square.",
+              "zh": "广场上立着创始人的一尊铜像。"
+            }
+          ]
+        },
+        {
+          "w": "status",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈsteɪtəs",
+            "us": "ˈsteɪtəs"
+          },
+          "pos": "n.",
+          "gloss": "地位，身份；状况，情形",
+          "usage": "stat(站)+us→我们所站的位置→地位。表单/问卷常客：marital status 婚姻状况。",
+          "phrases": [
+            "social status 社会地位",
+            "status quo 现状"
+          ],
+          "ex": [
+            {
+              "en": "Doctors enjoy high social status in this country.",
+              "zh": "在这个国家，医生享有很高的社会地位。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "syn": [
+    {
+      "title": "domestic · internal",
+      "memo": "都可译“国内的”，但边界不同：domestic 以国界为界，与 foreign/international 相对——domestic market/industries/policy 国内市场/产业/政策（GDP 里的 D 就是它），另有两个独有义：“家庭的”（domestic chores 家务、domestic violence 家暴）和“驯养的”（domestic animals 家畜）；internal 以任意边界为界——身体（internal organs/injuries 内脏/内伤）、机构（internal emails 内部邮件）、国家（internal affairs 内政），反义 external。易混警告：internal 与 international（国际的）就差一截字母，拼错意思翻车。一句话：对外谈经济用 domestic，往里看内部用 internal。",
+      "words": [
+        {
+          "w": "domestic",
+          "rank": 5,
+          "ph": {
+            "uk": "dəˈmestɪk",
+            "us": "dəˈmestɪk"
+          },
+          "pos": "adj.",
+          "gloss": "国内的；家庭的；驯养的",
+          "usage": "dom（家，同 dome 圆顶→家）→家里的/本国的；以国界为界：domestic market/industries，与 foreign 相对；独有义“家庭的”（domestic violence 家暴）、“驯养的”（domestic animals 家畜）",
+          "phrases": [
+            "domestic market 国内市场",
+            "domestic violence 家庭暴力"
+          ],
+          "ex": [
+            {
+              "en": "The government has taken measures to protect domestic industries from fierce foreign competition.",
+              "zh": "政府已采取措施保护国内产业免受激烈的外国竞争。"
+            }
+          ]
+        },
+        {
+          "w": "internal",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈtɜːnl",
+            "us": "ɪnˈtɜːrnl"
+          },
+          "pos": "adj.",
+          "gloss": "内部的；国内的，内政的；体内的",
+          "usage": "inter（在内）+nal→内部的；以任意边界为界：internal organs/injuries 内脏/内伤、internal emails 内部邮件、internal affairs 内政；反义 external 外部的；警告：international＝国际的，与 internal 只差一截，别拼混",
+          "phrases": [
+            "internal affairs 内政",
+            "internal organs 内脏"
+          ],
+          "ex": [
+            {
+              "en": "He accused the US of trying to interfere in his country's internal affairs.",
+              "zh": "他指责美国试图干涉他的国家的内政。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "oppose · object",
+      "memo": "都译“反对”，出手方式不同：oppose 及物，直接挂宾语——oppose the plan / oppose doing sth.，立场鲜明地反对，常用状态式 be opposed to（＝be against），阅读高频 as opposed to 与……相对/不同于；object 不及物，必接介词 to（object to sth./doing sth.）——侧重“出声反对、提异议”（Nobody objected. 没人吭声反对），名词 objection 异议（have no objection to 不反对），它还有名词本义“物体/对象/宾语”（2006 年真题 the object of our study）。一句话：oppose 立场上反对（vt.），object 嘴上扔出反对（vi.+to）——词根都是姿态：pose 放到对面，ject 扔出去。",
+      "words": [
+        {
+          "w": "oppose",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈpəʊz",
+            "us": "əˈpoʊz"
+          },
+          "pos": "vt.",
+          "gloss": "反对，反抗；抵制",
+          "usage": "op（反方向）+pose（放）→放到对面→反对；直接接宾语：oppose the plan / oppose doing sth.；状态式 be opposed to doing；形容词 opposite 相反的、名词 opposition 反对（派）",
+          "phrases": [
+            "be opposed to... 反对……",
+            "as opposed to 与……相对；不同于"
+          ],
+          "ex": [
+            {
+              "en": "The construction of the TMT is opposed by some locals partly because it reminds them of a humiliating history.",
+              "zh": "一些当地人反对修建30米望远镜（TMT），部分原因是这让他们想起了一段屈辱的历史。"
+            }
+          ]
+        },
+        {
+          "w": "object",
+          "rank": 5,
+          "ph": {
+            "uk": "əbˈdʒekt",
+            "us": "əbˈdʒekt"
+          },
+          "pos": "vi. / n.",
+          "gloss": "vi. 反对，不赞成；n. 物体；对象；宾语；目的",
+          "usage": "ob（方向）+ject（扔）→扔出去→提出反对；不及物，to 是介词：object to sth./doing sth.；名词 objection 异议（have no objection to 不反对）；名词义重音前移 /ˈɒbdʒɪkt/＝物体、对象",
+          "phrases": [
+            "object to doing sth. 反对做某事",
+            "have no objection to 对……不持异议"
+          ],
+          "ex": [
+            {
+              "en": "Members of the council strongly objected to plans to sell off the land.",
+              "zh": "委员会成员强烈反对出售土地的计划。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "council · commission · committee",
+      "memo": "都译“委员会”，建制不同：council 是常设的“议会、理事会”——代表们定期开会决策（the city council 市议会、the UN Security Council 联合国安理会），小心同音形近 counsel＝忠告/劝告；commission 是为特定职能专门设立的“专责委员会”，官方监管色彩浓（the Federal Trade Commission 联邦贸易委员会，2021 年真题考过 the commission argued），词根 com(共同)+miss(送)→受委托办事的一群人，它还是三词里唯一带“钱”的——佣金/回扣（on commission 拿提成），动词“委托”（commission a report）；committee 是从大组织里派出来办事的小组，最日常、往往临时（set up a committee 设立委员会、admissions committee 招生委员会）。体量排序：council 建制机构 > commission 专责部门 > committee 干活小组。",
+      "words": [
+        {
+          "w": "council",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkaʊnsl",
+            "us": "ˈkaʊnsl"
+          },
+          "pos": "n. [C]",
+          "gloss": "委员会，理事会；（地方）议会",
+          "usage": "常设决策机构：the city council 市议会、the UN Security Council 联合国安理会；win a seat on the council 赢得议会席位；同音形近词 counsel＝n. 忠告 / v. 劝告，别混",
+          "phrases": [
+            "the city council 市议会",
+            "the UN Security Council 联合国安理会"
+          ],
+          "ex": [
+            {
+              "en": "The city council has approved funds for three new public libraries.",
+              "zh": "市议会已批准为三座新公共图书馆拨款。"
+            }
+          ]
+        },
+        {
+          "w": "commission",
+          "rank": 5,
+          "ph": {
+            "uk": "kəˈmɪʃn",
+            "us": "kəˈmɪʃn"
+          },
+          "pos": "n. / vt.",
+          "gloss": "（专责）委员会；佣金，回扣；委托；vt. 委托",
+          "usage": "com（共同）+miss（送）+ion→受委托办事的一群人→专责委员会，官方监管色彩浓；另考“佣金”（earn a commission of 10% 拿一成提成、on commission 拿提成制）；动词“委托”（commission a report/study）",
+          "phrases": [
+            "the Federal Trade Commission 联邦贸易委员会",
+            "earn a commission 拿佣金/提成"
+          ],
+          "ex": [
+            {
+              "en": "The commission argued that other agencies would protect against anti-competitive behavior.",
+              "zh": "（联邦通信）委员会认为，其他机构将会保护人们免受反竞争行为的侵害。"
+            }
+          ]
+        },
+        {
+          "w": "committee",
+          "rank": 5,
+          "ph": {
+            "uk": "kəˈmɪti",
+            "us": "kəˈmɪti"
+          },
+          "pos": "n. [C]",
+          "gloss": "委员会（大组织中派生的小组）",
+          "usage": "从大组织里推选出来处理特定事务：set up/appoint a committee 设立委员会、be on the committee 是委员会成员；admissions committee 招生委员会；注意结尾双 t（commit 的名词家族）",
+          "phrases": [
+            "set up a committee 设立委员会",
+            "the admissions committee 招生委员会"
+          ],
+          "ex": [
+            {
+              "en": "A special committee was set up to investigate the causes of the accident.",
+              "zh": "人们成立了一个特别委员会来调查事故原因。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "rival · opponent · competitor",
+      "memo": "都译“对手”，关系成色不同：rival 是势均力敌、长期争夺同一目标的“敌手”，可带敬意（a worthy rival 可敬的对手），还是三词中唯一能当动词的——rival sb. 匹敌；opponent＝op(相反)+pon(站)→站到对面的人——比赛/辩论的对手，更常考“反对者”（opponents of the plan 计划的反对者），绑定的是立场不是竞争，还能作 adj. 对立的；competitor 是 compete（竞争）的派生，商业/比赛语境的“竞争者、参赛者”（competitor firms 同业对手），纯描述、无褒贬。一句话：rival 争高低，opponent 立场相对，competitor 同场竞技。",
+      "words": [
+        {
+          "w": "rival",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈraɪvl",
+            "us": "ˈraɪvl"
+          },
+          "pos": "n. [C] / v. / adj.",
+          "gloss": "对手，竞争者；与……匹敌，媲美；竞争的",
+          "usage": "riv（河，同 river 词根）→词源“同饮一江水的人”→争水成对手；作动词“可与……匹敌”（rival sb. in sth.）；without rival 无可匹敌",
+          "phrases": [
+            "defeat one's rival 击败对手",
+            "without rival 无可匹敌"
+          ],
+          "ex": [
+            {
+              "en": "The two universities have long been rivals for research funding and the brightest students.",
+              "zh": "这两所大学长期以来一直在科研经费和最优秀生源上相互竞争。"
+            }
+          ]
+        },
+        {
+          "w": "opponent",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈpəʊnənt",
+            "us": "əˈpoʊnənt"
+          },
+          "pos": "n. [C] / adj.",
+          "gloss": "对手；反对者；adj. 对立的，敌对的",
+          "usage": "op（相反）+pon（站）+ent→站到对面的人；辩论/选举/体育的对手，更常考“反对者”（opponents of...），绑定立场而非竞争关系",
+          "phrases": [
+            "a political opponent 政敌",
+            "opponents of the plan 计划的反对者"
+          ],
+          "ex": [
+            {
+              "en": "Opponents of the new airport argue that it will destroy the nearby wetlands.",
+              "zh": "新机场的反对者认为它将毁掉附近的湿地。"
+            }
+          ]
+        },
+        {
+          "w": "competitor",
+          "rank": 3,
+          "ph": {
+            "uk": "kəmˈpetɪtə(r)",
+            "us": "kəmˈpetətər"
+          },
+          "pos": "n. [C]",
+          "gloss": "竞争者，对手；参赛者，选手",
+          "usage": "compete（竞争）+tor→参与竞争的人；商业语境常客（competitor firms 同业对手、a low-cost competitor 低成本竞争者）；名词 competition 竞争/比赛、competitive 竞争激烈的",
+          "phrases": [
+            "competitor firms 同业竞争对手",
+            "a low-cost competitor 低成本竞争对手"
+          ],
+          "ex": [
+            {
+              "en": "Firms that ignore their competitors' innovations risk losing market share.",
+              "zh": "无视竞争对手创新的公司面临失去市场份额的风险。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "cling · attach",
+      "memo": "都含“附”意，方向和姿态不同：cling 不及物，自己“抓/粘”上去，必接 to——字面紧抓（clung to my mother's arm），引申“坚守、不肯撒手”（cling to the hope/power/old habits，常带固执色彩），变化 clung–clung，2015 年真题考 cling to their phones；attach 及物，把 A“钉/系”到 B 上——attach A to B（贴照片、附文件，邮件附件＝attachment），重心在“附加、赋予”：attach importance/significance to 重视（写作高频），be attached to 依恋/附属于，2005 年真题考 with few strings attached（没多少附带条件）。一句话：cling 自己粘上去（vi.+to，常含固执），attach 把东西钉上去（vt.，重在附加）。",
+      "words": [
+        {
+          "w": "cling",
+          "rank": 5,
+          "ph": {
+            "uk": "klɪŋ",
+            "us": "klɪŋ"
+          },
+          "pos": "vi.",
+          "gloss": "粘住，紧抓；依附；坚持，坚守",
+          "usage": "谐音“可怜”——可怜的孩子紧抓妈妈衣角；不及物，必接 cling to；引申“坚守”，常含不肯改变的固执；变化 clung–clung",
+          "phrases": [
+            "cling to 紧紧抓住；坚持",
+            "cling together 粘在一起；互相忠诚"
+          ],
+          "ex": [
+            {
+              "en": "Everyone around us seems to agree by the way they cling to their phones, even without a signal on a subway.",
+              "zh": "我们周围的每个人似乎都赞成在路上一直玩手机，即使是在没有信号的地铁里。"
+            }
+          ]
+        },
+        {
+          "w": "attach",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈtætʃ",
+            "us": "əˈtætʃ"
+          },
+          "pos": "vt.",
+          "gloss": "系上，贴上，附上；附加；重视；使依恋",
+          "usage": "at（加强）+tach（钉）→牢牢钉上；attach A to B 把 A 附在 B 上；核心搭配 attach importance/significance to 重视（写作高频）；名词 attachment 附件、依恋",
+          "phrases": [
+            "attach importance to... 重视……",
+            "be attached to 依恋；附属于"
+          ],
+          "ex": [
+            {
+              "en": "We attach great importance to good design of buildings and neighbourhoods.",
+              "zh": "我们非常重视建筑和社区的良好设计。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "initial · original · primary",
+      "memo": "都能译“最初的”，落点不同：initial 只管时间轴上的“开头”（the initial stage/reaction/draft 初期/最初反应/初稿），暗示后面会发展变化；original 锚定“原本”——原计划/原版（the original plan 原计划，多半没照做、the original manuscript 原稿），还有硬核义“原创的”（original works 原创作品，名词 originality 创造力），还能当名词“原作/原件”；primary 管的是“主次”而非先后——首要的、最主要的（primary concern/goal/cause），另有“初级的”义（primary school 小学）。一句话分工：initial 管先后，original 管原本与原创，primary 管主次。",
+      "words": [
+        {
+          "w": "initial",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɪʃl",
+            "us": "ɪˈnɪʃl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "最初的，开始的；n. [pl.] 首字母",
+          "usage": "in（里）+it（走）+ial→向里去→最初的；只表先后、不表重要性；the initial stage/reaction/draft；副词 initially 起初",
+          "phrases": [
+            "the initial stage 初始阶段",
+            "initial reaction 最初的反应"
+          ],
+          "ex": [
+            {
+              "en": "The initial reaction to the proposal was positive, but doubts soon appeared.",
+              "zh": "对该提案的最初反应是积极的，但疑问很快出现了。"
+            }
+          ]
+        },
+        {
+          "w": "original",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈrɪdʒənl",
+            "us": "əˈrɪdʒənl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "原先的，最初的；原创的，新颖的；n. 原作，原件",
+          "usage": "origin（起源）的形容词；“原先的”暗含现在已变（the original plan 原计划）；“原创的”是考研写作高频（original ideas，名词 originality 创造力）；名词指原作/原件",
+          "phrases": [
+            "original purpose 最初的目的",
+            "original works 原创作品"
+          ],
+          "ex": [
+            {
+              "en": "The original plan was to finish the bridge by the end of 2020.",
+              "zh": "原计划是在2020年底之前建成这座桥。"
+            }
+          ]
+        },
+        {
+          "w": "primary",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈpraɪməri",
+            "us": "ˈpraɪmeri"
+          },
+          "pos": "adj.",
+          "gloss": "首要的，最主要的；初级的，初等的；最初的",
+          "usage": "prim（第一，同 prime、primitive）→第一位的→首要的；primary concern/goal/cause 首要的/主要原因；另有“初级的”义（primary school 小学，美式 n. 初选）；2020 年真题考 gender the primary qualification；近 major/chief",
+          "phrases": [
+            "primary school 小学",
+            "the primary cause 主要原因"
+          ],
+          "ex": [
+            {
+              "en": "The primary cause of the accident was the driver's carelessness.",
+              "zh": "事故的主要原因是司机的粗心大意。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "notion · conception",
+      "memo": "都译“概念/观念”，成色不同：notion 是个人脑子里的想法、看法，常模糊未成型（a vague notion 模糊的想法，the notion that... 接同位语从句，议论文高频）；conception 更正式，指对某事物的整体理解/概念把握（one's conception of...、have no conception of 完全不懂），另有“构想”“怀孕/受孕”两义（动词 conceive 兼“构想”与“怀孕”）。顺带分清第三方 concept＝客观的抽象概念：随口的看法用 notion，成型的理解用 conception，教科书里的术语用 concept。2013 年真题考过 the top-down conception of the fashion business。",
+      "words": [
+        {
+          "w": "notion",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈnəʊʃn",
+            "us": "ˈnoʊʃn"
+          },
+          "pos": "n.",
+          "gloss": "概念，观念；想法，见解",
+          "usage": "not（知道）+ion→知道后产生的看法；the notion that... 接同位语从句是高频考点；谐音“闹心”——想法让人闹心",
+          "phrases": [
+            "the notion that... ……的想法/观念",
+            "a common-sense notion 常识性的概念"
+          ],
+          "ex": [
+            {
+              "en": "The notion that money can buy happiness has been questioned by many psychologists.",
+              "zh": "金钱能买到幸福的观念受到许多心理学家的质疑。"
+            }
+          ]
+        },
+        {
+          "w": "conception",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsepʃn",
+            "us": "kənˈsepʃn"
+          },
+          "pos": "n.",
+          "gloss": "概念，观念；构想；怀孕，受孕",
+          "usage": "动词 conceive（构想出/怀孕）的名词；侧重对某事物的整体理解、概括性把握；have no conception of 完全不懂；2013 年真题：the top-down conception of the fashion business",
+          "phrases": [
+            "have no conception of 完全不懂，不明白",
+            "one's conception of... 对……的理解"
+          ],
+          "ex": [
+            {
+              "en": "This top-down conception of the fashion business couldn't be more out of date.",
+              "zh": "这种自上而下的时尚行业理念已经完全过时了。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "eager · keen",
+      "memo": "都译“渴望/热衷”，温度和落点不同：eager 情绪更烫——迫不及待地盼（be eager to do 渴望做、be eager for 渴望得到），主语人/机构皆可；keen 更像“热衷、有兴趣”，英式口语高频（be keen on doing 热衷于），程度平缓些；keen 还独有一义“敏锐的”——a keen sense of smell 嗅觉敏锐、keen eyesight、a keen observer 敏锐的观察者，夸眼光/感官用它。搭配小抄：be eager to do / be keen on doing，on 前只能站 keen。",
+      "words": [
+        {
+          "w": "eager",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈiːɡə",
+            "us": "ˈiːɡər"
+          },
+          "pos": "adj.",
+          "gloss": "渴望的，热切的，渴求的",
+          "usage": "谐音“一哥”——谁不想当一哥→渴望的；be eager to do 渴望做、be eager for sth 渴望得到；语气比 keen 更急切；近 anxious（注意 anxious 另有“焦虑”义）",
+          "phrases": [
+            "be eager to do sth. 渴望做某事",
+            "be eager for sth. 渴望得到某物"
+          ],
+          "ex": [
+            {
+              "en": "The company is eager to expand its share of the rapidly growing electric car market.",
+              "zh": "该公司渴望扩大其在快速增长的电动汽车市场的份额。"
+            }
+          ]
+        },
+        {
+          "w": "keen",
+          "rank": 3,
+          "ph": {
+            "uk": "kiːn",
+            "us": "kiːn"
+          },
+          "pos": "adj.",
+          "gloss": "热衷的，渴望的；敏锐的；（刀刃）锋利的",
+          "usage": "be keen on (doing) 热衷于，英式口语高频；另一核心义“敏锐”：keen sense/eyesight/observer；联想 keep a keen eye 保持敏锐眼光",
+          "phrases": [
+            "be keen on 热衷于",
+            "a keen sense of smell 敏锐的嗅觉"
+          ],
+          "ex": [
+            {
+              "en": "She is keen on photography and spends most weekends taking pictures.",
+              "zh": "她热衷于摄影，大部分周末都在拍照。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "compose · constitute · construct",
+      "memo": "都译“组成/构成”，分工在方向和动作：compose 是“部分拼成整体”，常用被动——整体 be composed of 部分（＝consist of，但 consist of 只用主动无被动）；constitute 是“部分构成整体”，主动语态部分作主语——Women constitute half of the workforce，另有“算是、构成（威胁/违约）”引申义；construct 是“建造、构建”这个动作——把东西搭出来（construct a bridge 建桥、construct a theory 构建理论），不表组成关系，名词 construction 建造（be under construction 在建设中）、constructive 建设性的。正反记：Water is composed of hydrogen and oxygen ＝ Hydrogen and oxygen constitute water.；要表达“造出来”用 construct。",
+      "words": [
+        {
+          "w": "compose",
+          "rank": 5,
+          "ph": {
+            "uk": "kəmˈpəʊz",
+            "us": "kəmˈpoʊz"
+          },
+          "pos": "v.",
+          "gloss": "组成，构成；创作（乐曲、诗文）；使平静",
+          "usage": "com（都）+pose（摆）→都摆到一起→组成；被动搭配 be composed of 由……组成；另有“作曲、撰写”义，名词 composition 作文/构成",
+          "phrases": [
+            "be composed of... 由……组成",
+            "compose a symphony 创作交响曲"
+          ],
+          "ex": [
+            {
+              "en": "Women compose nearly sixty percent of the students enrolled in the medical schools.",
+              "zh": "在这些医学院注册的学生中，女性约占百分之六十。"
+            }
+          ]
+        },
+        {
+          "w": "constitute",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnstɪtjuːt",
+            "us": "ˈkɑːnstətuːt"
+          },
+          "pos": "vt.",
+          "gloss": "组成，构成；被视为，算是；设立，制定",
+          "usage": "con（一起）+stitut（站）+e→站到一起→组成；方向与 compose 相反：部分 constitute 整体，部分作主语；“算是/构成”义正式语域高频（constitute a threat/breach）；名词 constitution 宪法、体质",
+          "phrases": [
+            "constitute a threat to... 构成对……的威胁",
+            "constitute a breach of... 构成对……的违反"
+          ],
+          "ex": [
+            {
+              "en": "Women constitute nearly half of the workforce in this industry.",
+              "zh": "女性约占该行业劳动力的一半。"
+            }
+          ]
+        },
+        {
+          "w": "construct",
+          "rank": 4,
+          "ph": {
+            "uk": "kənˈstrʌkt",
+            "us": "kənˈstrʌkt"
+          },
+          "pos": "vt. / n.",
+          "gloss": "建造，修建；构思，构建；n. 构想，观念",
+          "usage": "con（共同）+struct（建造）→搭建起来；宾语常是桥、楼、理论、句子；名词 construction 建造（be under construction 在建设中），形容词 constructive 建设性的",
+          "phrases": [
+            "construct a bridge 建桥",
+            "construct a theory 构建理论"
+          ],
+          "ex": [
+            {
+              "en": "The first executive offices were constructed between 1799 and 1820.",
+              "zh": "第一批行政办公楼建于1799年至1820年之间。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ally · alliance",
+      "memo": "都译“结盟/联盟”，分工在词性：ally 是“盟友”——指人/国家（a close ally 亲密盟国），还能当动词，ally with / ally oneself with / be allied to 与……结盟，动词义只能用它；alliance 是“联盟”——指结盟的关系或组织本身（form an alliance with 结成联盟、in alliance with 与……联合、break off an alliance with 解除盟约），纯名词不能当动词。派生链记住：ally（盟友/结盟）→allied（结盟的）→alliance（联盟）。写作点：句子里缺动词选 ally，缺名词选 alliance。",
+      "words": [
+        {
+          "w": "ally",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈælaɪ",
+            "us": "ˈælaɪ"
+          },
+          "pos": "n. [C] / v.",
+          "gloss": "同盟者，盟国；（使）结盟",
+          "usage": "all（都）+y→都站同一边→盟友；ally (oneself) with 与……结盟、be allied to 与……结盟；名词复数 allies",
+          "phrases": [
+            "ally oneself with 与……结盟",
+            "potential allies 潜在的盟友"
+          ],
+          "ex": [
+            {
+              "en": "Portugal is a traditional ally of England.",
+              "zh": "葡萄牙是英国的传统盟友。"
+            }
+          ]
+        },
+        {
+          "w": "alliance",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈlaɪəns",
+            "us": "əˈlaɪəns"
+          },
+          "pos": "n.",
+          "gloss": "联盟，同盟；结盟",
+          "usage": "al（加强）+li（捆绑）+ance（名词后缀）→捆绑到一起→结盟；纯名词，动词义只能用 ally；2018 年真题考过 its alliance with... 的用法",
+          "phrases": [
+            "in alliance with 与……合作/联盟",
+            "break off an alliance with 与……解除联盟"
+          ],
+          "ex": [
+            {
+              "en": "The two parties formed a political alliance to push the education reforms through parliament.",
+              "zh": "两党结成政治联盟，以推动教育改革在议会获得通过。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dedicate · devote",
+      "memo": "近义可互换处多：dedicate 更庄重正式，对象是崇高事业，另有题献/落成典礼义；devote 重专注投入（时间精力），be devoted to 还可指深爱。两词都接 to doing/n.。",
+      "words": [
+        {
+          "w": "dedicate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈdedɪkeɪt",
+            "us": "ˈdedɪkeɪt"
+          },
+          "pos": "vt.",
+          "gloss": "奉献；把（时间、精力等）用于；题献",
+          "usage": "de(加强)+dic(宣称)→郑重宣告归属。庄重，对象多为崇高目标；著作可 dedicate to sb. 题献。",
+          "phrases": [
+            "dedicate oneself to 献身于",
+            "be dedicated to doing 致力于做"
+          ],
+          "ex": [
+            {
+              "en": "She dedicated her life to medical research.",
+              "zh": "她把一生奉献给了医学研究。"
+            }
+          ]
+        },
+        {
+          "w": "devote",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈvəʊt",
+            "us": "dɪˈvoʊt"
+          },
+          "pos": "vt.",
+          "gloss": "奉献；致力于；把……专用于",
+          "usage": "de+vot(许愿)→许愿奉献。重专注投入时间精力；be devoted to 还表深爱（人）。",
+          "phrases": [
+            "devote...to (doing) sth. 把……用于做某事",
+            "be devoted to sb. 深爱着某人"
+          ],
+          "ex": [
+            {
+              "en": "He devotes his weekends to volunteering.",
+              "zh": "他把周末都用于做志愿服务。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "restrict · constrain · restrain · confine · circumscribe · limit",
+      "memo": "同为“限制”：limit 最通用，可名可动；restrict 正式指规则限制（to）；confine 窄圈禁闭（to/within）；restrain 忍住不表露（from）；constrain 外部条件所迫；circumscribe 最书面，circum(周围)+scribe(画线)→划定界限，常指权力被框死。",
+      "words": [
+        {
+          "w": "restrict",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈstrɪkt",
+            "us": "rɪˈstrɪkt"
+          },
+          "pos": "vt.",
+          "gloss": "限制，限定（数量、范围等）",
+          "usage": "指出台规则去限定，比 limit 书面，restrict...to... 是固定搭配。",
+          "phrases": [
+            "restrict...to... 把……限制在……",
+            "restrict access to 限制进入"
+          ],
+          "ex": [
+            {
+              "en": "The new law restricts the sale of cigarettes.",
+              "zh": "新法规限制香烟销售。"
+            }
+          ]
+        },
+        {
+          "w": "constrain",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈstreɪn",
+            "us": "kənˈstreɪn"
+          },
+          "pos": "vt.",
+          "gloss": "限制，约束；强迫，迫使",
+          "usage": "强调外部条件或情势逼得你不得不如此；词源同 strain(拉紧)。",
+          "phrases": [
+            "constrain sb. to do sth. 强迫某人做某事",
+            "financial constraints 财力限制"
+          ],
+          "ex": [
+            {
+              "en": "Lack of funds constrained the project.",
+              "zh": "资金短缺束缚了这个项目。"
+            }
+          ]
+        },
+        {
+          "w": "restrain",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈstreɪn",
+            "us": "rɪˈstreɪn"
+          },
+          "pos": "vt.",
+          "gloss": "阻止，抑制；管束，约束",
+          "usage": "重在忍住不让它发出，对象多为情绪、冲动；restrain sb. from doing 是核心搭配。",
+          "phrases": [
+            "restrain oneself 克制自己",
+            "restrain sb. from doing sth. 阻止某人做某事"
+          ],
+          "ex": [
+            {
+              "en": "She could hardly restrain her anger.",
+              "zh": "她几乎抑制不住自己的怒火。"
+            }
+          ]
+        },
+        {
+          "w": "confine",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈfaɪn",
+            "us": "kənˈfaɪn"
+          },
+          "pos": "vt.",
+          "gloss": "限制；把……局限于；禁闭",
+          "usage": "强调限在狭窄范围内，常被动，搭配 to/within；con(加强)+fin(界限)→给出边界。",
+          "phrases": [
+            "be confined to 局限于",
+            "confine oneself to 只谈，只涉及"
+          ],
+          "ex": [
+            {
+              "en": "The disease is not confined to one region.",
+              "zh": "这种疾病并不局限于某一地区。"
+            }
+          ]
+        },
+        {
+          "w": "circumscribe",
+          "ph": {
+            "uk": "ˈsɜːkəmskraɪb",
+            "us": "ˈsɝːkəmskraɪb"
+          },
+          "pos": "vt.",
+          "gloss": "限制，约束（正式）；划定……界限",
+          "usage": "circum(周围)+scribe(画)→在周围画线→框定范围。最书面，常指权力、自由被限制。",
+          "phrases": [
+            "circumscribe the power of… 限制……的权力",
+            "be circumscribed by… 受……束缚/局限"
+          ],
+          "ex": [
+            {
+              "en": "The new constitution circumscribes the president's power.",
+              "zh": "新宪法限制了总统的权力。"
+            }
+          ]
+        },
+        {
+          "w": "limit",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈlɪmɪt",
+            "us": "ˈlɪmɪt"
+          },
+          "pos": "vt./n.",
+          "gloss": "限制；限度，极限",
+          "usage": "最通用，可名可动，限制的可是数量、时间、权力等有形无形的边界。",
+          "phrases": [
+            "limit...to... 把……限制在……",
+            "speed limit 限速"
+          ],
+          "ex": [
+            {
+              "en": "We must limit our spending to what we can afford.",
+              "zh": "我们必须把开支限制在能承受的范围内。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "compete · contend",
+      "memo": "compete 中性常用：比赛/商业竞争（with/against/for）；contend 更正式激烈，且多两个高频义——contend that 主张、contend with 应对困境。重叠义仅“争夺”。",
+      "words": [
+        {
+          "w": "compete",
+          "rank": 5,
+          "ph": {
+            "uk": "kəmˈpiːt",
+            "us": "kəmˈpiːt"
+          },
+          "pos": "vi.",
+          "gloss": "竞争；参加比赛",
+          "usage": "最常用中性词，指体育比赛或商业/资源竞争；搭配 with/against + for。",
+          "phrases": [
+            "compete with/against sb. 与……竞争",
+            "compete for sth. 争夺……"
+          ],
+          "ex": [
+            {
+              "en": "Several companies are competing for the contract.",
+              "zh": "几家公司正在争夺这份合同。"
+            }
+          ]
+        },
+        {
+          "w": "contend",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈtend",
+            "us": "kənˈtend"
+          },
+          "pos": "vi./vt.",
+          "gloss": "争夺，竞争；声称，主张",
+          "usage": "con(共同)+tend(伸)→都把手伸向→争夺；contend that…＝主张；contend with＝不得不对付。",
+          "phrases": [
+            "contend for power 争夺权力",
+            "contend with sth. 应对，对付（困境）"
+          ],
+          "ex": [
+            {
+              "en": "Critics contend that the reform has gone too far.",
+              "zh": "批评者认为这项改革走得太远了。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specific · concrete",
+      "memo": "都译\"具体\"，对立面不同：specific 对着含糊、一般，指明确、特定的那一个（a specific goal）；concrete 对着抽象，指感官摸得到的、落地的（concrete evidence），名词还是混凝土。写作：要求\"说明确\"用 specific，要求\"不空洞\"用 concrete。",
+      "words": [
+        {
+          "w": "specific",
+          "rank": 5,
+          "ph": {
+            "uk": "spəˈsɪfɪk",
+            "us": "spəˈsɪfɪk"
+          },
+          "pos": "adj. / n.",
+          "gloss": "明确的，具体的；特定的",
+          "usage": "对着含糊和一般：指定到某一个；名词是细节",
+          "phrases": [
+            "a specific goal 明确的目标",
+            "specific evidence 具体证据"
+          ],
+          "ex": [
+            {
+              "en": "The teacher asked for a specific example, not a general idea.",
+              "zh": "老师要的是一个明确例子，不是笼统的想法。"
+            }
+          ]
+        },
+        {
+          "w": "concrete",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒŋkriːt",
+            "us": "ˈkɑːŋkriːt"
+          },
+          "pos": "adj. / n.",
+          "gloss": "具体的，确实的；混凝土（n.）",
+          "usage": "con-(共同)+cret(长出)：对着抽象，感官可及；名词是混凝土",
+          "phrases": [
+            "concrete evidence 确凿的证据",
+            "a concrete proposal 一项具体建议"
+          ],
+          "ex": [
+            {
+              "en": "We need concrete evidence, not an abstract argument.",
+              "zh": "我们要的是确凿的证据，不是抽象的论证。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "immense · enormous",
+      "memo": "都是\"巨大\"，量的对象不同：immense 是 im-(不)+mens(测量)→大到测不完，偏空间/规模/程度（immense scale）；enormous 是 e-(超出)+norm(常规)→超出常规的大，更常接数量和影响（an enormous amount of、enormous impact）。写作：规模用 immense，数量/影响用 enormous。",
+      "words": [
+        {
+          "w": "immense",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈmens",
+            "us": "ɪˈmens"
+          },
+          "pos": "adj.",
+          "gloss": "极大的，巨大的",
+          "usage": "im-(不)+mens(测量)：大到无法度量；常接规模、程度",
+          "phrases": [
+            "immense scale 巨大的规模",
+            "an immense improvement 巨大的进步"
+          ],
+          "ex": [
+            {
+              "en": "The project was carried out on an immense scale.",
+              "zh": "这项工程的规模极其巨大。"
+            }
+          ]
+        },
+        {
+          "w": "enormous",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɔːməs",
+            "us": "ɪˈnɔːrməs"
+          },
+          "pos": "adj.",
+          "gloss": "巨大的，庞大的",
+          "usage": "e-(超出)+norm(常规)：超出常规；常接数量与影响",
+          "phrases": [
+            "an enormous amount of 大量的",
+            "enormous impact 巨大的影响"
+          ],
+          "ex": [
+            {
+              "en": "The decision had an enormous impact on the industry.",
+              "zh": "这一决定对该行业产生了巨大影响。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "incentive · inspire · affirm · acclaim",
+      "memo": "激励一词先分词性：incentive 是推你行动的外在\"激励物\"（名词，an incentive to do）；inspire 是把劲鼓进人心里（in-入+spir 呼吸→打气，inspire sb. to do，另有启发灵感）。后面两个是反馈：affirm 是\"肯定\"其正确（af-加强+firm 牢固→断言属实）；acclaim 是为其\"喝彩\"（ac-加强+claim 喊→公开称赞，be acclaimed as）。串成\"给诱因→鼓舞人→肯定→赞誉\"。",
+      "words": [
+        {
+          "w": "incentive",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈsentɪv",
+            "us": "ɪnˈsentɪv"
+          },
+          "pos": "n.[C,U]",
+          "gloss": "激励，刺激；动机，诱因",
+          "usage": "推人行动的\"动力\"；常接 an incentive to do sth. / for sb. to do sth.",
+          "phrases": [
+            "give sb. an incentive to do 激励某人做……",
+            "economic incentives 经济激励"
+          ],
+          "ex": [
+            {
+              "en": "Bonuses give employees an incentive to work harder.",
+              "zh": "奖金给了员工更努力工作的动力。"
+            }
+          ]
+        },
+        {
+          "w": "inspire",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈspaɪə",
+            "us": "ɪnˈspaɪər"
+          },
+          "pos": "vt.",
+          "gloss": "鼓舞，激励；启发，启迪",
+          "usage": "in-(入)+spir(呼吸)：往里打气→鼓舞激励；inspire sb. to do",
+          "phrases": [
+            "inspire sb. to do sth. 激励某人做某事",
+            "inspire confidence 激发信心"
+          ],
+          "ex": [
+            {
+              "en": "Her talk inspired the students to keep going.",
+              "zh": "她的讲话激励学生们坚持下去。"
+            }
+          ]
+        },
+        {
+          "w": "affirm",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈfɜːm",
+            "us": "əˈfɜːrm"
+          },
+          "pos": "vt.",
+          "gloss": "断言，申明；肯定，证实",
+          "usage": "af-(加强)+firm(牢固)：使牢固→坚定地说属实；法庭语境\"宣誓证实\"",
+          "phrases": [
+            "affirm one's belief 坚定信念",
+            "affirm that… 断言……属实"
+          ],
+          "ex": [
+            {
+              "en": "The report affirmed that the policy had worked.",
+              "zh": "报告证实该政策确实奏效。"
+            }
+          ]
+        },
+        {
+          "w": "acclaim",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈkleɪm",
+            "us": "əˈkleɪm"
+          },
+          "pos": "vt. / n.",
+          "gloss": "称赞，为……喝彩；赞誉（n.）",
+          "usage": "ac-(加强)+claim(喊)：一再喊好→公开称誉；be acclaimed as 被誉为",
+          "phrases": [
+            "be acclaimed as… 被誉为……",
+            "win critical acclaim 赢得评论界赞誉"
+          ],
+          "ex": [
+            {
+              "en": "The young director was acclaimed as a new master of cinema.",
+              "zh": "这位年轻导演被誉为影坛新大师。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "territory · boundary · scope",
+      "memo": "都在回答“到哪里为止”：territory 是被管辖的一整块区域或知识领域；boundary 是切开两边的那条线；scope 是事情覆盖的幅度，也指还剩的余地。一块地、一条线、一个幅度。",
+      "words": [
+        {
+          "w": "territory",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈterətri",
+            "us": "ˈterətɔːri"
+          },
+          "pos": "n.",
+          "gloss": "领土，领地；领域",
+          "usage": "一块被划归的区域：领土，或知识、活动领域；不是那条分界线",
+          "phrases": [
+            "unknown territory 未知的领域",
+            "national territory 国家领土"
+          ],
+          "ex": [
+            {
+              "en": "Artificial intelligence is unfamiliar territory for many traditional publishers.",
+              "zh": "对许多传统出版商来说，人工智能是个陌生的领域。"
+            }
+          ]
+        },
+        {
+          "w": "boundary",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈbaʊndri",
+            "us": "ˈbaʊndri"
+          },
+          "pos": "n.",
+          "gloss": "边界，分界线；界限",
+          "usage": "分开两边的那条线：可指国境，也可指抽象界限；不是整片区域",
+          "phrases": [
+            "the boundary between A and B A 与 B 的分界",
+            "set boundaries 设定界限"
+          ],
+          "ex": [
+            {
+              "en": "The river is the boundary between the two countries.",
+              "zh": "这条河是两国的分界线。"
+            }
+          ]
+        },
+        {
+          "w": "scope",
+          "rank": 5,
+          "ph": {
+            "uk": "skəʊp",
+            "us": "skoʊp"
+          },
+          "pos": "n.[U]",
+          "gloss": "范围；余地",
+          "usage": "事情覆盖的幅度，或尚有的余地；不指土地，也不指分界线",
+          "phrases": [
+            "beyond the scope of… 超出……的范围",
+            "scope for improvement 改进的余地"
+          ],
+          "ex": [
+            {
+              "en": "The inquiry's scope was limited to the years after 2010.",
+              "zh": "调查范围仅限于2010年之后。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hospitality · zeal",
+      "memo": "两词都含一份热，方向相反：hospitality 热在待人——好客、殷勤款待（主人待客，也指酒店服务业）；zeal 热在做事——对目标或信念的热忱，投入很深，有时近乎偏执。一个对外，一个对事。",
+      "words": [
+        {
+          "w": "hospitality",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌhɒspɪˈtæləti",
+            "us": "ˌhɑːspɪˈtæləti"
+          },
+          "pos": "n.[U]",
+          "gloss": "好客；殷勤款待",
+          "usage": "热在待人：对外的好客与款待；也指酒店业。反义 hostility 敌意",
+          "phrases": [
+            "warm hospitality 热情款待",
+            "hospitality industry 酒店服务业"
+          ],
+          "ex": [
+            {
+              "en": "We thanked our hosts for their warm hospitality during our stay.",
+              "zh": "我们感谢主人在我们逗留期间的热情款待。"
+            }
+          ]
+        },
+        {
+          "w": "zeal",
+          "rank": 2,
+          "ph": {
+            "uk": "ziːl",
+            "us": "ziːl"
+          },
+          "pos": "n.[U]",
+          "gloss": "热忱，热情",
+          "usage": "热在做事：对目标或信念的内在热忱，常很投入；形容词 zealous",
+          "phrases": [
+            "with great zeal 以极大的热忱",
+            "a zeal for reform 改革的热忱"
+          ],
+          "ex": [
+            {
+              "en": "She pursued her research with such zeal that she often worked late into the night.",
+              "zh": "她以极大的热忱投入研究，常常工作到深夜。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "eliminate · obsolete",
+      "memo": "\"淘汰\"的动与静：eliminate 是动词，主动\"消除、淘汰\"（e-(出)+limin 门槛→赶出门槛；比赛淘汰选手、消除贫困/隐患）；obsolete 是形容词，被动\"被时代淘汰的、过时的\"（obsolete technology 过时技术）。搭配记忆：eliminate the obsolete 淘汰过时之物——一句话把两个词串起来。词性：eliminate vt. / obsolete adj.，注意 eliminate 与 exclude 的辨析（内部除名 vs 拒之门外）。",
+      "words": [
+        {
+          "w": "eliminate",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈlɪmɪneɪt",
+            "us": "ɪˈlɪmɪneɪt"
+          },
+          "pos": "vt.",
+          "gloss": "消除；淘汰（比赛中）；消灭",
+          "usage": "e-(出)+limin(门槛)+ate：赶出门槛→彻底除去；辨 exclude 是\"拒之门外\"（从未进入）",
+          "phrases": [
+            "eliminate poverty 消除贫困",
+            "be eliminated from the contest 在比赛中被淘汰"
+          ],
+          "ex": [
+            {
+              "en": "The new system aims to eliminate human error.",
+              "zh": "新系统旨在消除人为失误。"
+            }
+          ]
+        },
+        {
+          "w": "obsolete",
+          "rank": 2,
+          "ph": {
+            "uk": "ˈɒbsəliːt",
+            "us": "ˌɑːbsəˈliːt"
+          },
+          "pos": "adj.",
+          "gloss": "过时的，废弃的，被淘汰的",
+          "usage": "只作形容词（被时代淘汰的状态）；obsolescence n. 过时",
+          "phrases": [
+            "obsolete technology 过时的技术",
+            "become obsolete 被淘汰，变得过时"
+          ],
+          "ex": [
+            {
+              "en": "Typewriters have become obsolete in most offices.",
+              "zh": "打字机在大多数办公室里已经被淘汰了。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "argument · dispute",
+      "memo": "都表\"争论\"，侧重不同：argument 泛指\"争吵/辩论\"，另一高频义\"论点、论据\"（present an argument 提出论点——写作核心词）；dispute 更正式、多指\"就重大问题的争端/纠纷\"（legal disputes 法律纠纷、industrial disputes 劳资纠纷），且可作动词表\"对……提出异议\"（dispute the claim）。搭配锚点：settle an argument 解决争吵 / beyond dispute 无可争辩。",
+      "words": [
+        {
+          "w": "argument",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈɑːɡjumənt",
+            "us": "ˈɑːrɡjəmənt"
+          },
+          "pos": "n.[C]",
+          "gloss": "争论，争吵；论点，论据",
+          "usage": "argue 的名词；双重身份：日常\"拌嘴\"+ 写作\"论点论据\"（develop an argument 展开论证）",
+          "phrases": [
+            "settle an argument 解决争端",
+            "present an argument 提出论点"
+          ],
+          "ex": [
+            {
+              "en": "They had an argument over who should pay the bill.",
+              "zh": "他们为该谁付账吵了一架。"
+            }
+          ]
+        },
+        {
+          "w": "dispute",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈspjuːt",
+            "us": "dɪˈspjuːt"
+          },
+          "pos": "n. / v.",
+          "gloss": "争端，纠纷；争论；对……提出异议",
+          "usage": "dis-(分离)+put(放)：各执一词→正式争端；动词 dispute sth. 表\"质疑、否认\"",
+          "phrases": [
+            "be beyond dispute 无可争辩",
+            "settle a dispute between A and B 解决 A 与 B 的纠纷"
+          ],
+          "ex": [
+            {
+              "en": "The two countries settled their long-running border dispute.",
+              "zh": "两国解决了长期存在的边界争端。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "contempt · prejudice · discriminate",
+      "memo": "\"负面态度\"三段链——心里**蔑视**（contempt，n.）→ 未了解先**下判断**（prejudice，n. 偏见，pre-预先+jud 判断）→ 行动上**区别对待**（discriminate，v. 歧视，dis-+crimin 分开）。词性注意：前两个常作名词，discriminate 是动词（discriminate against 歧视 / between A and B 区分）。discriminate 在 9.18 生词笔记出现过，本组串成完整态度链。写作升级：don't look down on → have contempt for；be biased → have a prejudice against。",
+      "words": [
+        {
+          "w": "contempt",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈtempt",
+            "us": "kənˈtempt"
+          },
+          "pos": "n.[U]",
+          "gloss": "蔑视，轻蔑；藐视",
+          "usage": "con-(加强)+tempt(藐视)：心里最底层的不屑；法律语境 contempt of court 藐视法庭",
+          "phrases": [
+            "have/show contempt for… 对……表示蔑视",
+            "contempt of court 藐视法庭"
+          ],
+          "ex": [
+            {
+              "en": "He showed open contempt for the court's rules.",
+              "zh": "他对法庭规则公然表示蔑视。"
+            }
+          ]
+        },
+        {
+          "w": "prejudice",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈpredʒədɪs",
+            "us": "ˈpredʒədɪs"
+          },
+          "pos": "n. / vt.",
+          "gloss": "偏见，成见；使有偏见",
+          "usage": "pre-(预先)+jud(判断)：未经了解先下判断→成见；常见 a prejudice against…",
+          "phrases": [
+            "have a prejudice against… 对……抱有偏见",
+            "gender prejudice 性别偏见"
+          ],
+          "ex": [
+            {
+              "en": "The report revealed a deep prejudice against older workers.",
+              "zh": "该报告揭露了对年长员工的深层偏见。"
+            }
+          ]
+        },
+        {
+          "w": "discriminate",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈskrɪmɪneɪt",
+            "us": "dɪˈskrɪmɪneɪt"
+          },
+          "pos": "vi. / vt.",
+          "gloss": "歧视；区别，辨别",
+          "usage": "dis-(分开)+crimin(分辨)：区别对待=歧视（against）；中性义\"区分\"接 between A and B",
+          "phrases": [
+            "discriminate against… 歧视……",
+            "discriminate between A and B 区分 A 和 B"
+          ],
+          "ex": [
+            {
+              "en": "The law forbids firms to discriminate against disabled applicants.",
+              "zh": "法律禁止企业歧视残障求职者。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "diminish · decline · descend",
+      "memo": "都含\"往下/变少\"的意象，分工不同：diminish 重\"逐渐变少、削弱\"（di-+mini 小，数字/资源/风险在缩水）；decline 最全能——数字\"下降\"、健康\"衰退\"、还有\"婉拒\"（de-+clin 倾斜，向下弯腰也=谢绝）；descend 最具体——空间上\"下来\"（de-+scend 爬，楼梯/后代），descend from 还表\"是……后裔\"。完形里三者可互换看搭配：risks diminish、birth rate declines、stairs descend。",
+      "words": [
+        {
+          "w": "diminish",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈmɪnɪʃ",
+            "us": "dɪˈmɪnɪʃ"
+          },
+          "pos": "v.",
+          "gloss": "（使）减少，缩小；削弱",
+          "usage": "di-(分离)+mini(小)：逐渐变小，常含\"不幸地缩减\"意味；另有\"贬低\"义",
+          "phrases": [
+            "diminish the risk 降低风险",
+            "diminish the rights of… 削减……的权利"
+          ],
+          "ex": [
+            {
+              "en": "The medicine can diminish the risk of heart disease.",
+              "zh": "这种药能降低患心脏病的风险。"
+            }
+          ]
+        },
+        {
+          "w": "decline",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈklaɪn",
+            "us": "dɪˈklaɪn"
+          },
+          "pos": "vi. / vt. / n.",
+          "gloss": "下降；衰退；婉拒",
+          "usage": "de-(向下)+clin(倾)：数字\"下降\"、产业\"衰退\"、礼貌\"谢绝\" decline to do",
+          "phrases": [
+            "decline to do sth. 婉拒做某事",
+            "fall into a decline 陷入衰退"
+          ],
+          "ex": [
+            {
+              "en": "The birth rate continued to decline for a third year.",
+              "zh": "出生率连续第三年下降。"
+            }
+          ]
+        },
+        {
+          "w": "descend",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈsend",
+            "us": "dɪˈsend"
+          },
+          "pos": "vi.",
+          "gloss": "下降，下来；是……的后裔",
+          "usage": "de-(向下)+scend(爬)：空间上的\"下来、降临\"；descend from 表血统\"源自\"",
+          "phrases": [
+            "descend from… 从……下来；是……的后裔",
+            "descend on/upon… 突然造访"
+          ],
+          "ex": [
+            {
+              "en": "The plane began to descend through the clouds.",
+              "zh": "飞机开始穿云下降。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "perceive · detect",
+      "memo": "都表\"察觉\"，但路径相反：perceive 重主观感知——\"通过心灵意识到\"（per-(透过)+ceive 抓住→透过表象抓住含义，高频 perceive…as… 视为）；detect 重客观发觉——\"借助观察或仪器测出\"隐藏的事实（detect a lie / detect cancer）。阅读题里 perceive 常与理解、观点绑定，detect 常与证据、信号绑定。",
+      "words": [
+        {
+          "w": "perceive",
+          "rank": 5,
+          "ph": {
+            "uk": "pəˈsiːv",
+            "us": "pərˈsiːv"
+          },
+          "pos": "vt.",
+          "gloss": "察觉，感知；理解，认为",
+          "usage": "per-(透过) + ceive(抓住)：透过表象抓住含义→主观上意识到；常接 perceive…as…",
+          "phrases": [
+            "perceive…as… 把……视为……",
+            "perceive a change 察觉到变化"
+          ],
+          "ex": [
+            {
+              "en": "Many people perceive failure as a stepping stone to success.",
+              "zh": "许多人把失败视为通往成功的垫脚石。"
+            }
+          ]
+        },
+        {
+          "w": "detect",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈtekt",
+            "us": "dɪˈtekt"
+          },
+          "pos": "vt.",
+          "gloss": "察觉，发觉；探测",
+          "usage": "侧重客观\"发现\"：用观察或仪器测出隐藏的事物（谎言/信号/疾病）",
+          "phrases": [
+            "detect a lie 识破谎言",
+            "detect cancer early 及早发现癌症"
+          ],
+          "ex": [
+            {
+              "en": "The sensor can detect smoke within seconds.",
+              "zh": "这个传感器能在几秒内探测到烟雾。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "retain · keep · preserve · hold · maintain",
+      "memo": "retain 最正式，强调\"保留不放\"（保留控制权/信息）；keep 最通用；preserve 重\"防损坏、维持原状\"（保护环境/保鲜）；hold 重\"握住、容纳、举行\"；maintain 重\"通过持续努力维系\"（保养机器/维持关系）。考研完形最爱 retain / maintain 的正式语域。",
+      "words": [
+        {
+          "w": "retain",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈteɪn",
+            "us": "rɪˈteɪn"
+          },
+          "pos": "vt.",
+          "gloss": "保留；保持；留住",
+          "usage": "正式用语，强调\"继续持有\"不失去，宾语常为 control / information / position",
+          "phrases": [
+            "retain control of… 保持对……的控制",
+            "retain information 记住信息"
+          ],
+          "ex": [
+            {
+              "en": "She retained her position as chairman despite the challenge.",
+              "zh": "尽管受到挑战，她仍保住了主席之位。"
+            }
+          ]
+        },
+        {
+          "w": "keep",
+          "rank": 5,
+          "ph": {
+            "uk": "kiːp",
+            "us": "kiːp"
+          },
+          "pos": "v.",
+          "gloss": "保持；保存；继续",
+          "usage": "最通用的\"保持\"，口语书面皆宜，搭配最广",
+          "phrases": [
+            "keep calm 保持冷静",
+            "keep a secret 保守秘密"
+          ],
+          "ex": [
+            {
+              "en": "Keep the receipt in case you want to return it.",
+              "zh": "保存好收据，以防你想退货。"
+            }
+          ]
+        },
+        {
+          "w": "preserve",
+          "rank": 5,
+          "ph": {
+            "uk": "prɪˈzɜːv",
+            "us": "prɪˈzɜːrv"
+          },
+          "pos": "vt.",
+          "gloss": "保护；保存；维持……的原状",
+          "usage": "强调\"防止损坏、变质\"，对象常为环境/文物/传统/食物",
+          "phrases": [
+            "preserve the environment 保护环境",
+            "preserve traditional culture 保护传统文化"
+          ],
+          "ex": [
+            {
+              "en": "We must preserve our cultural heritage for future generations.",
+              "zh": "我们必须为子孙后代保护好文化遗产。"
+            }
+          ]
+        },
+        {
+          "w": "hold",
+          "rank": 5,
+          "ph": {
+            "uk": "həʊld",
+            "us": "hoʊld"
+          },
+          "pos": "vt.",
+          "gloss": "握住；持有；容纳；举行",
+          "usage": "重\"占据/盛纳\"的具体感：hold a meeting 举行会议、hold the record 保持纪录",
+          "phrases": [
+            "hold a meeting 举行会议",
+            "hold the world record 保持世界纪录"
+          ],
+          "ex": [
+            {
+              "en": "The new hall can hold over 500 people.",
+              "zh": "新大厅能容纳五百多人。"
+            }
+          ]
+        },
+        {
+          "w": "maintain",
+          "rank": 5,
+          "ph": {
+            "uk": "meɪnˈteɪn",
+            "us": "meɪnˈteɪn"
+          },
+          "pos": "vt.",
+          "gloss": "维持；保养；检修；主张",
+          "usage": "强调\"付出努力使持续运转\"；maintain that… 还表\"坚持主张\"",
+          "phrases": [
+            "maintain friendly relations 保持友好关系",
+            "maintain that… 主张/坚称……"
+          ],
+          "ex": [
+            {
+              "en": "The two countries have maintained friendly relations for decades.",
+              "zh": "两国数十年来一直保持着友好关系。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "subsidy · allowance · grant · subvention",
+      "memo": "都是\"给钱\"，给法和对象不同：subsidy 是\"补贴\"——政府为扶持产业、压低成本发的（farm subsidies 农业补贴、housing subsidy 住房补贴），受补的是产业/项目；allowance 是\"津贴/零用钱\"——按期发给个人的固定款项（jobseeker's allowance 求职津贴），另考 make allowance(s) for 考虑到/体谅；grant 是\"拨款\"——机构为特定目的（尤指科研、学业）批的一笔钱（research grant 科研拨款、student grants 助学金），动词还可\"准予\"，必背 take...for granted 理所当然；subvention 最书面——公家给机构（大学、剧团）的补助金，词根 sub(从旁)+vent(来)→从旁相助。分工：产业用 subsidy，个人按月用 allowance，项目批款用 grant，机构受助用 subvention。",
+      "words": [
+        {
+          "w": "subsidy",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈsʌbsədi",
+            "us": "ˈsʌbsədi"
+          },
+          "pos": "n. [C]",
+          "gloss": "补贴，津贴，补助金",
+          "usage": "sub(辅助)+side(旁边)→在旁边支撑生活的收入→补贴；多为政府扶持产业/压低物价而发；动词 subsidize 补贴",
+          "phrases": [
+            "government subsidies 政府补贴",
+            "farm subsidy programme 农业补贴计划"
+          ],
+          "ex": [
+            {
+              "en": "Without a government subsidy, the rural bus service would have to close completely.",
+              "zh": "如果没有政府补贴，乡村巴士服务将不得不完全停运。"
+            }
+          ]
+        },
+        {
+          "w": "allowance",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈlaʊəns",
+            "us": "əˈlaʊəns"
+          },
+          "pos": "n. [C, U]",
+          "gloss": "津贴，补贴；零用钱；限额，免税额",
+          "usage": "allow(允许)+ance→允许支配的钱→津贴/零用钱；按期发给个人；高频搭配 make allowance(s) for 考虑到/体谅",
+          "phrases": [
+            "make allowance(s) for... 考虑到……；体谅……",
+            "jobseeker's allowance 求职者津贴"
+          ],
+          "ex": [
+            {
+              "en": "His parents give him a monthly allowance.",
+              "zh": "他的父母每月给他零用钱。"
+            }
+          ]
+        },
+        {
+          "w": "grant",
+          "rank": 4,
+          "ph": {
+            "uk": "ɡrɑːnt",
+            "us": "ɡrɑːnt"
+          },
+          "pos": "n. [C] / vt.",
+          "gloss": "拨款，补助金；授予物；准予，授予（vt.）",
+          "usage": "机构为特定目的（科研/学业）批的款项：research grant、student grants；动词 grant sb. sth. 准予/授予；必背 take...for granted 认为理所当然",
+          "phrases": [
+            "take...for granted 认为……理所当然",
+            "research grant 科研拨款"
+          ],
+          "ex": [
+            {
+              "en": "The university awarded her a research grant.",
+              "zh": "大学授予她一笔科研拨款。"
+            }
+          ]
+        },
+        {
+          "w": "subvention",
+          "ph": {
+            "uk": "səbˈvenʃn",
+            "us": "səbˈvenʃn"
+          },
+          "pos": "n. [C, U]",
+          "gloss": "（政府给机构的）补助金，津贴",
+          "usage": "sub(从旁)+vent(来)→从旁相助→补助；最书面，多指公共资金对大学、艺术团体等机构的资助；近 subsidy",
+          "phrases": [
+            "state subvention 国家补助",
+            "public subventions 公共补助金"
+          ],
+          "ex": [
+            {
+              "en": "The theatre survives on a modest annual subvention from the city.",
+              "zh": "这家剧院靠市政府每年一笔不多的补助维持运转。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "virtue · merit · morality",
+      "memo": "都带\"德\"，层次不同：morality 是宏观的\"道德\"——社会的道德规范/伦理体系（形容词 moral，同义 ethics，\"克隆的争论既是科学问题也是道德问题\"）；virtue 是个体的\"美德\"——诚实、耐心这类具体品质，可数（Patience is a virtue），反义 vice 罪恶，兼指事物的\"优点\"（the virtue of simplicity），by virtue of 凭借是高频考点；merit 是\"优点、价值\"——可长处可功绩，最中性（judge on merit 凭本身优劣评判），反义 defect，还可作动词\"值得\"。分工：谈社会伦理用 morality，夸人品用 virtue，评方案优劣用 merit。",
+      "words": [
+        {
+          "w": "virtue",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈvɜːtʃuː",
+            "us": "ˈvɜːtʃuː"
+          },
+          "pos": "n. [C, U]",
+          "gloss": "美德，德行；优点，长处",
+          "usage": "反义 vice 罪恶；by virtue of 凭借/因为 是高频考点；兼指事物\"优点\"（the virtue of simplicity）；近 merit、morality",
+          "phrases": [
+            "by virtue of 凭借，因为",
+            "virtue and vice 美德与罪恶"
+          ],
+          "ex": [
+            {
+              "en": "Patience is a virtue that modern society seems to have forgotten.",
+              "zh": "耐心是现代社会似乎已经遗忘的一种美德。"
+            }
+          ]
+        },
+        {
+          "w": "merit",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈmerɪt",
+            "us": "ˈmerɪt"
+          },
+          "pos": "n. / vt.",
+          "gloss": "优点，长处；价值，功绩；值得（vt.）",
+          "usage": "反义 defect 缺点；judge on (its) merit 凭本身优劣评判；还可作动词\"值得，应受\"；助记：身上有很多 merit 的人想 marry",
+          "phrases": [
+            "judge on (its) merit 凭本身优劣评判",
+            "have merit 有其优点"
+          ],
+          "ex": [
+            {
+              "en": "The plan has merit, but it also involves considerable financial risks.",
+              "zh": "这个计划有其优点，但也涉及相当大的财务风险。"
+            }
+          ]
+        },
+        {
+          "w": "morality",
+          "rank": 4,
+          "ph": {
+            "uk": "məˈræləti",
+            "us": "məˈræləti"
+          },
+          "pos": "n. [U]",
+          "gloss": "道德，道德观；正当性",
+          "usage": "形容词 moral；同义 ethics；指社会的道德规范/伦理体系；反义 immorality",
+          "phrases": [
+            "conventional morality 主流道德观念",
+            "a sense of morality 道德观念"
+          ],
+          "ex": [
+            {
+              "en": "The debate over cloning is as much about morality as about science.",
+              "zh": "关于克隆的争论既是科学问题，也是道德问题。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "outcome · consequence · conclusion",
+      "memo": "都译\"结果\"，因果链上的位置不同：outcome 最中性——行动或过程的\"最终产出\"（the final outcome of the negotiations 谈判的最终结果），不带好坏色彩；consequence 偏\"后果\"——强调前因引发的逻辑链，多指不良结果（face/suffer the consequences 承担后果，as a consequence of 由于……），另有\"重要性\"义（a matter of consequence）；conclusion 不是事情的结果——是推理的\"结论\"或文章的\"结尾\"（draw a conclusion、in conclusion 总之），jump to conclusions 匆匆下结论是阅读态度题高频。搭配分工：experiment/negotiation + outcome，决策失误 + consequence，研究/文章 + conclusion。",
+      "words": [
+        {
+          "w": "outcome",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈaʊtkʌm",
+            "us": "ˈaʊtkʌm"
+          },
+          "pos": "n.",
+          "gloss": "结果，结局；成果",
+          "usage": "out+come→出来的东西→结果（和 come out 一起记）；中性词，指行动/过程可能产生的结果；近义 result",
+          "phrases": [
+            "the final outcome 最终结果",
+            "the outcome of the experiment 实验结果"
+          ],
+          "ex": [
+            {
+              "en": "Researchers measured the outcome of the experiment after six months.",
+              "zh": "研究人员在六个月后评估了这项实验的结果。"
+            }
+          ]
+        },
+        {
+          "w": "consequence",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnsɪkwəns",
+            "us": "ˈkɒnsɪkwəns"
+          },
+          "pos": "n.",
+          "gloss": "结果，后果；重要性（u.）",
+          "usage": "con(共同)+sequ(跟随)→随之而来→后果；多指不良结果、侧重逻辑关系；同根 consequently 因此；形近角度另见 consensus·consequence 组",
+          "phrases": [
+            "as a consequence of 由于……的结果",
+            "face/suffer the consequences 承担后果"
+          ],
+          "ex": [
+            {
+              "en": "Cutting the training budget may save money now, but the long-term consequences could be severe.",
+              "zh": "削减培训预算或许现在能省钱，但长期后果可能很严重。"
+            }
+          ]
+        },
+        {
+          "w": "conclusion",
+          "rank": 4,
+          "ph": {
+            "uk": "kənˈkluːʒn",
+            "us": "kənˈkluːʒn"
+          },
+          "pos": "n.",
+          "gloss": "结论，推论；结尾，结束",
+          "usage": "conclude 的名词（con-clude 全部关上→收尾）；搭配 draw/come to a conclusion、in conclusion 总之（写作收尾）、jump to conclusions 匆匆下结论；动词另义\"缔结\"",
+          "phrases": [
+            "draw a conclusion 得出结论",
+            "in conclusion 总之"
+          ],
+          "ex": [
+            {
+              "en": "The researchers were careful not to draw conclusions from incomplete data.",
+              "zh": "研究人员谨慎地避免从不完整的数据中得出结论。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "guarantee · ensure · promise · assure",
+      "memo": "都译\"保证\"，保的对象和力度不同：ensure 是\"确保\"——采取措施让事情必然发生，宾语只能是事（ensure safety、ensure that...）；assure 是\"使确信\"——宾语必须是人（assure sb. that/of sth.），目的是消除对方疑虑，同根 insurance 保险；guarantee 语气最强——对质量、结果\"担保\"，能开保修单的那种（under guarantee 在保修期内），名动同形；promise 最轻——只是主观\"答应\"，可能不兑现（keep/break a promise），另有\"预示\"义（clear skies promise a fine day）。句型抓手：ensure/guarantee + 事情，assure + 人，promise + to do。",
+      "words": [
+        {
+          "w": "guarantee",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌɡærənˈtiː",
+            "us": "ˌɡærənˈtiː"
+          },
+          "pos": "vt. / n.",
+          "gloss": "保证，担保；保修单（n.）",
+          "usage": "guar(联想 guard 警卫)+antee→担保；语气最强，可担保产品质量/结果；名动同形；搭配 under guarantee 在保修期内",
+          "phrases": [
+            "under guarantee 在保修期内",
+            "guarantee sb. sth. 向某人保证某事"
+          ],
+          "ex": [
+            {
+              "en": "Hard work does not guarantee success, but it greatly improves your chances.",
+              "zh": "努力并不能保证成功，但会大大增加成功的机会。"
+            }
+          ]
+        },
+        {
+          "w": "ensure",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈʃʊə(r)",
+            "us": "ɪnˈʃʊə(r)"
+          },
+          "pos": "vt.",
+          "gloss": "确保，保证；保证给予",
+          "usage": "en(使)+sure(确信)→使确信→确保；宾语是事情不是人；常用 ensure that... / ensure sth.",
+          "phrases": [
+            "ensure the safety of... 确保……的安全",
+            "ensure that... 保证……"
+          ],
+          "ex": [
+            {
+              "en": "We are working to ensure the safety of people in the city.",
+              "zh": "我们正在努力确保这个城市里人们的安全。"
+            }
+          ]
+        },
+        {
+          "w": "promise",
+          "rank": 3,
+          "ph": {
+            "uk": "ˈprɒmɪs",
+            "us": "ˈprɒmɪs"
+          },
+          "pos": "vt. & vi. / n.",
+          "gloss": "许诺，答应；预示；诺言；出息，成功的迹象（n.）",
+          "usage": "主观答应、可能不兑现；搭配 keep/make/break a promise；另义\"预示\"（\"保证\"义考过 2020 完形）",
+          "phrases": [
+            "keep/make/break a promise 信守/许下/违背诺言",
+            "promise sb. to do sth. 答应某人做某事"
+          ],
+          "ex": [
+            {
+              "en": "The government has promised to cut taxes in order to stimulate the economy.",
+              "zh": "政府已承诺减税以刺激经济。"
+            }
+          ]
+        },
+        {
+          "w": "assure",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈʃʊə(r)",
+            "us": "əˈʃʊə(r)"
+          },
+          "pos": "vt.",
+          "gloss": "向……保证；使确信，使放心",
+          "usage": "as(一再)+sure(确信)→一再地确信→使确信；宾语必须是人：assure sb. that/of sth.；同根 insurance 保险",
+          "phrases": [
+            "assure sb. of sth. 向某人保证某事",
+            "assure oneself 弄清楚，查明"
+          ],
+          "ex": [
+            {
+              "en": "Let me assure you that I will try to help you.",
+              "zh": "我向你保证，我会尽力帮你。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "complicated · complex · intricate",
+      "memo": "都译\"复杂\"，复杂的方式不同：complicated＝com(一起)+plic(折)+ated→因素交织折在一起，强调难分析、难处理（收养的法律程序漫长而复杂）；complex＝com+plex(折)→结构折叠到一起，强调结构深、要专门知识才懂（complex social structure），名词还是\"综合体/建筑群\"（apartment complexes），派生 complexity 复杂性高频；intricate＝in(里)+tric(纠缠)→盘根错节，强调细节精细密实（手表里两百多个零件的机构、社交关系网）。快速分工：事情难办用 complicated，体系宏大用 complex，细节缠人用 intricate。",
+      "words": [
+        {
+          "w": "complicated",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒmplɪkeɪtɪd",
+            "us": "ˈkɒmplɪkeɪtɪd"
+          },
+          "pos": "adj.",
+          "gloss": "复杂的，难懂的；难处理的",
+          "usage": "com(一起)+plic(折叠)+ated→因素交织折在一起→难分析处理；书内辨析：complex 重结构深，intricate 重细节缠",
+          "phrases": [
+            "be further complicated by... 因……而更加复杂",
+            "a long and complicated process 漫长而复杂的过程"
+          ],
+          "ex": [
+            {
+              "en": "The legal process for adopting a child from abroad can be long and complicated.",
+              "zh": "从国外收养儿童的法律程序可能漫长而复杂。"
+            }
+          ]
+        },
+        {
+          "w": "complex",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒmpleks",
+            "us": "ˈkɒmpleks"
+          },
+          "pos": "adj. / n.",
+          "gloss": "复杂的，难懂的；综合体，建筑群（n.）",
+          "usage": "com(一起)+plex(折叠)→折叠到一起→结构复杂；派生 complexity n. 复杂性；名词义\"建筑群\"是考点",
+          "phrases": [
+            "complex social structure 复杂的社会结构",
+            "apartment complexes 公寓建筑群"
+          ],
+          "ex": [
+            {
+              "en": "We live in an increasingly complex world.",
+              "zh": "我们生活在一个日益复杂的世界。"
+            }
+          ]
+        },
+        {
+          "w": "intricate",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈɪntrɪkət",
+            "us": "ˈɪntrɪkət"
+          },
+          "pos": "adj.",
+          "gloss": "错综复杂的；复杂精细的",
+          "usage": "in(里)+tric(纠缠)+ate→纠缠在一起→盘根错节；近义 complicated；强调细节精细、难掌握细节",
+          "phrases": [
+            "an intricate mechanism 精密复杂的机构",
+            "intricate carvings 精细繁复的雕饰"
+          ],
+          "ex": [
+            {
+              "en": "The watch contains an intricate mechanism of more than two hundred tiny parts.",
+              "zh": "这块手表内部有一个由两百多个微小零件组成的精密复杂机构。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "demonstrate · illustrate · indicate · manifest",
+      "memo": "都译\"表明\"，证据力度不同：demonstrate 最硬——用实验、证据把结论\"证明\"出来（The study demonstrates...），另有\"演示、示范\"和 vi.\"示威\"义；illustrate 是\"举例说明\"——用例子、图表把道理讲明白（illustrate his argument with figures 用数据说明论点），不承担证明对错，另有\"加插图\"义；indicate 最软——数据、迹象\"指向\"结论，不把话说死，比 show 正式，\"暗示\"义是考点（2019 阅读）；manifest 偏\"显露\"——把看不见的情绪、品质、症状显性化，常考 manifests itself in...（压力常表现为头痛失眠），还兼形容词\"显而易见的\"（be manifest to all）。惯搭：study/research + demonstrate，example/incident + illustrate，data/findings + indicate，内在品质/症状 + manifest (itself)。",
+      "words": [
+        {
+          "w": "demonstrate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈdemənstreɪt",
+            "us": "ˈdemənstreɪt"
+          },
+          "pos": "vt. / vi.",
+          "gloss": "证明，论证；演示，示范；游行示威（vi.）",
+          "usage": "de(加强)+monstr(表示)+ate→使劲表示→证明；同义 prove；名词 demonstration 演示/示威",
+          "phrases": [
+            "demonstrate the ability to do sth 展示做某事的能力",
+            "demonstrate against... 示威反对……"
+          ],
+          "ex": [
+            {
+              "en": "The study demonstrates the effectiveness of the drug.",
+              "zh": "这项研究证明了该药物的有效性。"
+            }
+          ]
+        },
+        {
+          "w": "illustrate",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈɪləstreɪt",
+            "us": "ˈɪləstreɪt"
+          },
+          "pos": "vt.",
+          "gloss": "（用示例、图表）说明，阐明；给……加插图",
+          "usage": "il(向内)+lus(照亮)+trate→把里面照亮→阐明；名词 illustration 说明/图解；搭配 illustrate a point",
+          "phrases": [
+            "illustrate a point 说明一个观点",
+            "illustrate an argument with figures 用数据说明论点"
+          ],
+          "ex": [
+            {
+              "en": "The incident illustrates the need for better security measures.",
+              "zh": "这次事件说明了加强安全措施的必要。"
+            }
+          ]
+        },
+        {
+          "w": "indicate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɪndɪkeɪt",
+            "us": "ˈɪndɪkeɪt"
+          },
+          "pos": "vt.",
+          "gloss": "表明，标示；暗示；指出",
+          "usage": "in(里)+dic(说)+ate→话里带话→暗示；比 show 正式；名词 indication；\"暗示\"义是考点（2019 阅读）",
+          "phrases": [
+            "indicate that... 表明……",
+            "as indicated above 如上文所指出的"
+          ],
+          "ex": [
+            {
+              "en": "The survey data indicate a general satisfaction with the process.",
+              "zh": "调查数据表明对该过程总体满意。"
+            }
+          ]
+        },
+        {
+          "w": "manifest",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈmænɪfest",
+            "us": "ˈmænɪfest"
+          },
+          "pos": "vt. / adj.",
+          "gloss": "表明，显示；表露，显露；显而易见的（adj.）",
+          "usage": "书面正式词，指明确地表明；把看不见的显性化，常考 manifest itself in...；形容词义\"显而易见的\"（be manifest to all）；近义 obvious",
+          "phrases": [
+            "manifest itself in... 表现为……",
+            "be manifest to all 显而易见，人所共见"
+          ],
+          "ex": [
+            {
+              "en": "Stress often manifests itself in physical symptoms such as headaches and sleeplessness.",
+              "zh": "压力常常表现为头痛和失眠等身体症状。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "prosperity · flourish",
+      "memo": "都译\"繁荣\"，先分词性：prosperity 是名词——繁荣这个\"状态\"（economic prosperity 经济繁荣，bring prosperity 带来繁荣），形容词 prosperous；flourish 是动词——\"繁荣起来\"的\"过程\"，主语可以是经济、行业、公司，也能是植物和文化（a flourishing business 兴隆的生意）。画面感词根：prosper＝pro(向前)+sper(希望)→有希望向前→昌盛；flourish＝flour(花)+ish→开花→茁壮成长。近义 thrive 偏有生命物长势好；另注意 flourish 还有\"挥舞\"义。",
+      "words": [
+        {
+          "w": "prosperity",
+          "rank": 5,
+          "ph": {
+            "uk": "prɒˈsperəti",
+            "us": "prɒˈsperəti"
+          },
+          "pos": "n. [U]",
+          "gloss": "繁荣，昌盛；成功",
+          "usage": "pro(向前)+sper(希望)+ity→有希望向前→昌盛；形容词 prosperous；搭配 economic prosperity、bring prosperity",
+          "phrases": [
+            "economic prosperity 经济繁荣",
+            "bring prosperity 带来繁荣"
+          ],
+          "ex": [
+            {
+              "en": "Trade with neighbouring countries brought great prosperity to the coastal region.",
+              "zh": "与邻国的贸易给沿海地区带来了巨大的繁荣。"
+            }
+          ]
+        },
+        {
+          "w": "flourish",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈflʌrɪʃ",
+            "us": "ˈflʌrɪʃ"
+          },
+          "pos": "vi. / n.",
+          "gloss": "繁荣，兴旺；茁壮成长；挥舞（vt.）",
+          "usage": "flour(花)+ish→开花→繁荣；近义 thrive、prosper，反义 decline 衰退；形容词 flourishing；另义 挥舞",
+          "phrases": [
+            "a flourishing economy 繁荣的经济",
+            "continue to flourish 继续繁荣"
+          ],
+          "ex": [
+            {
+              "en": "The author believes the anti-happy art flourishes when economy booms.",
+              "zh": "作者认为，当经济繁荣时，反快乐艺术也会繁荣。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "immense · enormous · considerable",
+      "memo": "都是\"大\"，量级和对象不同：immense 是 im-(不)+mens(测量)→大到测不完，偏空间/规模/程度（immense scale）；enormous 是 e-(超出)+norm(常规)→超出常规的大，更常接数量和影响（an enormous amount of、enormous impact）；considerable 最温和——\"相当大的、可观的\"，只是\"不少\"，够不上巨大（considerable attention/investment）。经典近形坑：considerable 相当大的 ≠ considerate 体贴的。写作：规模用 immense，数量/影响用 enormous，程度\"可观\"用 considerable。",
+      "words": [
+        {
+          "w": "immense",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈmens",
+            "us": "ɪˈmens"
+          },
+          "pos": "adj.",
+          "gloss": "极大的，巨大的",
+          "usage": "im-(不)+mens(测量)：大到无法度量；常接规模、程度",
+          "phrases": [
+            "immense scale 巨大的规模",
+            "an immense improvement 巨大的进步"
+          ],
+          "ex": [
+            {
+              "en": "The project was carried out on an immense scale.",
+              "zh": "这项工程的规模极其巨大。"
+            }
+          ]
+        },
+        {
+          "w": "enormous",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɔːməs",
+            "us": "ɪˈnɔːrməs"
+          },
+          "pos": "adj.",
+          "gloss": "巨大的，庞大的",
+          "usage": "e-(超出)+norm(常规)：超出常规；常接数量与影响",
+          "phrases": [
+            "an enormous amount of 大量的",
+            "enormous impact 巨大的影响"
+          ],
+          "ex": [
+            {
+              "en": "The decision had an enormous impact on the industry.",
+              "zh": "这一决定对该行业产生了巨大影响。"
+            }
+          ]
+        },
+        {
+          "w": "considerable",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsɪdərəbl",
+            "us": "kənˈsɪdərəbl"
+          },
+          "pos": "adj.",
+          "gloss": "相当大的，相当多的；可观的",
+          "usage": "consider 家族：字面\"值得考虑的量\"→量不小；近形陷阱 considerate 体贴的；搭配 considerable attention/investment",
+          "phrases": [
+            "considerable investment 相当大的投资",
+            "attract considerable attention 引起相当大的关注"
+          ],
+          "ex": [
+            {
+              "en": "The industry also points out that real grass require considerable amounts of water.",
+              "zh": "该行业还指出，种植真草需要大量的水。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "subsidy · allowance · grant",
+      "memo": "都是“给钱”，给法和对象不同：subsidy 是“补贴”——政府为扶持产业、压低成本发的（farm subsidies 农业补贴、housing subsidy 住房补贴），受补的是产业/项目；allowance 是“津贴/零用钱”——按期发给个人的固定款项（jobseeker's allowance 求职津贴），另考 make allowance(s) for 考虑到/体谅；grant 是“拨款”——机构为特定目的（尤指科研、学业）批的一笔钱（research grant 科研拨款、student grants 助学金），动词还可“准予”，必背 take...for granted 理所当然。分工：产业用 subsidy，个人按月用 allowance，项目批款用 grant。",
+      "words": [
+        {
+          "w": "subsidy",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈsʌbsədi",
+            "us": "ˈsʌbsədi"
+          },
+          "pos": "n. [C]",
+          "gloss": "补贴，津贴，补助金",
+          "usage": "sub(辅助)+side(旁边)→在旁边支撑生活的收入→补贴；多为政府扶持产业/压低物价而发；动词 subsidize 补贴",
+          "phrases": [
+            "government subsidies 政府补贴",
+            "farm subsidy programme 农业补贴计划"
+          ],
+          "ex": [
+            {
+              "en": "Without a government subsidy, the rural bus service would have to close completely.",
+              "zh": "如果没有政府补贴，乡村巴士服务将不得不完全停运。"
+            }
+          ]
+        },
+        {
+          "w": "allowance",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈlaʊəns",
+            "us": "əˈlaʊəns"
+          },
+          "pos": "n. [C, U]",
+          "gloss": "津贴，补贴；零用钱；限额，免税额",
+          "usage": "allow(允许)+ance→允许支配的钱→津贴/零用钱；按期发给个人；高频搭配 make allowance(s) for 考虑到/体谅",
+          "phrases": [
+            "make allowance(s) for... 考虑到……；体谅……",
+            "jobseeker's allowance 求职者津贴"
+          ],
+          "ex": [
+            {
+              "en": "His parents give him a monthly allowance.",
+              "zh": "他的父母每月给他零用钱。"
+            }
+          ]
+        },
+        {
+          "w": "grant",
+          "rank": 4,
+          "ph": {
+            "uk": "ɡrɑːnt",
+            "us": "ɡrɑːnt"
+          },
+          "pos": "n. [C] / vt.",
+          "gloss": "拨款，补助金；授予物；准予，授予（vt.）",
+          "usage": "机构为特定目的（科研/学业）批的款项：research grant、student grants；动词 grant sb. sth. 准予/授予；必背 take...for granted 认为理所当然",
+          "phrases": [
+            "take...for granted 认为……理所当然",
+            "research grant 科研拨款"
+          ],
+          "ex": [
+            {
+              "en": "The university awarded her a research grant.",
+              "zh": "大学授予她一笔科研拨款。"
             }
           ]
         }
