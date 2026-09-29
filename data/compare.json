@@ -891,8 +891,8 @@
       ]
     },
     {
-      "title": "sufficient · substantial · suspicious · susceptible",
-      "memo": "四词同以 su- 开头、形近义远：sufficient 重够用，substantial 重大量/实质（完形常互为干扰项）；suspicious 怀疑的（of 搭配）；susceptible 易受影响的（to 搭配），sus(下)+cept(拿)→能从下面被拿住。",
+      "title": "sufficient · substantial · suspicious · susceptible · speculate",
+      "memo": "四词同以 su- 开头、形近义远：sufficient 重够用，substantial 重大量/实质（完形常互为干扰项）；suspicious 怀疑的（of 搭配）；susceptible 易受影响的（to 搭配），sus(下)+cept(拿)→能从下面被拿住。 speculate 是后加入的第五位 su- 家员：spec(看)+ulate → \"看着猜\"=推测/投机，与前四词无词根亲缘，纯粹 su- 开头形近凑队。",
       "words": [
         {
           "w": "sufficient",
@@ -975,6 +975,27 @@
             {
               "en": "Some people are more susceptible to colds than others.",
               "zh": "有些人比其他人更容易感冒。"
+            }
+          ]
+        },
+        {
+          "w": "speculate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈspekjuleɪt",
+            "us": "ˈspekjuleɪt"
+          },
+          "pos": "vi.",
+          "gloss": "推测，推断；投机",
+          "usage": "spec(看)+ulate：\"看着猜\"→推测（speculate about/on）；金融义\"投机\"（speculate in stocks）",
+          "phrases": [
+            "speculate about/on… 推测……",
+            "speculate in stocks 炒股投机"
+          ],
+          "ex": [
+            {
+              "en": "Scientists can only speculate about what lies deep inside the planet.",
+              "zh": "对于地球深处有什么，科学家只能推测。"
             }
           ]
         }
@@ -3028,6 +3049,96 @@
             {
               "en": "Doctors enjoy high social status in this country.",
               "zh": "在这个国家，医生享有很高的社会地位。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "sufficient · substantial · suspicious · susceptible",
+      "memo": "四词同以 su- 开头、形近义远：sufficient 重够用，substantial 重大量/实质（完形常互为干扰项）；suspicious 怀疑的（of 搭配）；susceptible 易受影响的（to 搭配），sus(下)+cept(拿)→能从下面被拿住。",
+      "words": [
+        {
+          "w": "sufficient",
+          "rank": 5,
+          "ph": {
+            "uk": "səˈfɪʃnt",
+            "us": "səˈfɪʃnt"
+          },
+          "pos": "adj.",
+          "gloss": "足够的，充分的",
+          "usage": "强调数量\"够用\"——满足需要即可，不多余；逻辑/数学语境指\"充分条件\"",
+          "phrases": [
+            "be sufficient for… 对……足够",
+            "sufficient evidence 充分的证据"
+          ],
+          "ex": [
+            {
+              "en": "We have sufficient evidence to prove his innocence.",
+              "zh": "我们有充分的证据证明他清白。"
+            }
+          ]
+        },
+        {
+          "w": "substantial",
+          "rank": 5,
+          "ph": {
+            "uk": "səbˈstænʃl",
+            "us": "səbˈstænʃl"
+          },
+          "pos": "adj.",
+          "gloss": "大量的，可观的；坚固的；实质性的",
+          "usage": "来自 substance（实质）：一义\"量大可观\"，一义\"实质的／坚固的\"（与\"表面、空谈\"相对）",
+          "phrases": [
+            "a substantial amount of… 大量的……",
+            "substantial progress 实质性进展"
+          ],
+          "ex": [
+            {
+              "en": "The project has made substantial progress over the past year.",
+              "zh": "该项目在过去一年里取得了实质性进展。"
+            }
+          ]
+        },
+        {
+          "w": "suspicious",
+          "rank": 5,
+          "ph": {
+            "uk": "səˈspɪʃəs",
+            "us": "səˈspɪʃəs"
+          },
+          "pos": "adj.",
+          "gloss": "怀疑的；可疑的",
+          "usage": "双义：人\"起疑的\"（be suspicious of…）／物\"可疑的\"（a suspicious package）",
+          "phrases": [
+            "be suspicious of/about… 对……起疑心",
+            "a suspicious look 可疑的神色"
+          ],
+          "ex": [
+            {
+              "en": "The police grew suspicious of his inconsistent answers.",
+              "zh": "他前后矛盾的回答引起了警方怀疑。"
+            }
+          ]
+        },
+        {
+          "w": "susceptible",
+          "rank": 5,
+          "ph": {
+            "uk": "səˈseptəbl",
+            "us": "səˈseptəbl"
+          },
+          "pos": "adj.",
+          "gloss": "易受影响的；敏感的；易患……病的",
+          "usage": "sus(下)+cept(拿)+ible→能从下面被拿住→易受影响；注意 to 搭配，勿与 suspicious of 混。",
+          "phrases": [
+            "be susceptible to sth. 易受……影响/损害",
+            "be susceptible to colds 容易感冒"
+          ],
+          "ex": [
+            {
+              "en": "Some people are more susceptible to colds than others.",
+              "zh": "有些人比其他人更容易感冒。"
             }
           ]
         }
