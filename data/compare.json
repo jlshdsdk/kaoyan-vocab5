@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "moderate · miserable",
+      "memo": "都以 m 开头、-ble/-rate 结尾的四音节形容词，情绪一暖一冷：moderate = moder(适度)+ate →\"有节制的\"（适中/温和，褒义；词根同 mode 模式→合乎模式的=适度的）；miserable = miser(可怜)+able →\"痛苦的\"（ miserable life 悲惨生活，名词 misery 苦难）。拼写分界：-der-ate 适度 vs -ser-able 悲惨。读音都重音在首，但 moderate 尾音 /rət/、miserable 尾音 /rəbl/。",
+      "words": [
+        {
+          "w": "moderate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈmɒdərət",
+            "us": "ˈmɑːdərət"
+          },
+          "pos": "adj. / v.",
+          "gloss": "适度的，中等的；温和的；缓和（v.）",
+          "usage": "mod(适度)+erate：不过分的→中等、温和（观点持重）；真题完形高频选项",
+          "phrases": [
+            "moderate risk 中等风险",
+            "hold moderate views 持温和观点"
+          ],
+          "ex": [
+            {
+              "en": "Regular moderate exercise is good for your heart.",
+              "zh": "规律适度的锻炼对心脏有好处。"
+            }
+          ]
+        },
+        {
+          "w": "miserable",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈmɪzərəbl",
+            "us": "ˈmɪzərəbl"
+          },
+          "pos": "adj.",
+          "gloss": "痛苦的，悲惨的；令人不快的",
+          "usage": "miser(可怜)+able：名词 misery n. 苦难；a miserable life 悲惨的生活",
+          "phrases": [
+            "a miserable life 悲惨的生活",
+            "feel miserable 感到难受"
+          ],
+          "ex": [
+            {
+              "en": "Millions of people lived in miserable conditions at that time.",
+              "zh": "当时数百万人生活在悲惨的境况中。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "submit · commit · admit",
       "memo": "\"-mit 送\"词根一门三兄弟，前缀定方向：sub-(下)+mit → 从下往上送 = **提交**（submit a paper；submit to 屈服）；com-(加强)+mit → 把自己交出去 = **犯罪/承诺**（commit a crime；be committed to）；ad-(向)+mit → 放行送进来 = **承认/准许进入**（admit doing，不接 to do）。三词都是 \"送\"：向上送=提交，交出去=犯/诺，放进来=承认。commit 同时是「comment · commit · commitment」组员，那边重\"承诺\"，本组重\"前缀辨形\"。",
       "words": [
