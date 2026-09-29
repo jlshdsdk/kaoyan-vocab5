@@ -2,6 +2,75 @@
   "v": 1,
   "form": [
     {
+      "title": "initial · initiate · initiative",
+      "memo": "三词同根 init(开始)：initial -al 形容词→\"最初的\"（the initial stage 初始阶段；n. 首字母）；initiate -ate 动词→\"发起、使开始\"（initiate a reform 发起改革；注意与 imitate 模仿、intimidate 恐吓 三胞胎辨析）；initiative -ive 名词→\"主动性、倡议\"（take the initiative 采取主动，on one's own initiative 主动地）。链条记法：initial 最初的→initiate 去开始→initiative 开始的能力=主动。",
+      "words": [
+        {
+          "w": "initial",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɪʃl",
+            "us": "ɪˈnɪʃl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "最初的，开始的；首字母（n.[pl.]）",
+          "usage": "in-(里)+it(走)+-ial：向里走的第一步→最初的；initial reaction 最初反应",
+          "phrases": [
+            "the initial stage 初始阶段",
+            "initial reaction 最初的反应"
+          ],
+          "ex": [
+            {
+              "en": "The initial results of the experiment were promising.",
+              "zh": "实验的初步结果令人鼓舞。"
+            }
+          ]
+        },
+        {
+          "w": "initiate",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɪʃieɪt",
+            "us": "ɪˈnɪʃieɪt"
+          },
+          "pos": "vt.",
+          "gloss": "开始，发起；使初步了解",
+          "usage": "initi(开始)+-ate：使开始；三胞胎辨析 initiate 开始 / imitate 模仿 / intimidate 恐吓",
+          "phrases": [
+            "initiate a discussion 发起讨论",
+            "initiate sb. into… 使某人初步了解……"
+          ],
+          "ex": [
+            {
+              "en": "The government initiated a reform of the tax system.",
+              "zh": "政府发起了税制改革。"
+            }
+          ]
+        },
+        {
+          "w": "initiative",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɪʃətɪv",
+            "us": "ɪˈnɪʃətɪv"
+          },
+          "pos": "n.",
+          "gloss": "主动性；倡议；主动权",
+          "usage": "initiate 的派生名词；take the initiative 是高频搭配",
+          "phrases": [
+            "take the initiative 采取主动",
+            "on one's own initiative 主动地"
+          ],
+          "ex": [
+            {
+              "en": "She took the initiative and organized the whole event herself.",
+              "zh": "她主动牵头，独自组织了整场活动。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "counsel · council",
       "memo": "完全同音：都读 /ˈkaʊnsl/，听力里全靠语境分。词根同源（拉丁 consilium），却分工明确：counsel -el 结尾 → \"劝告/律师\"（give counsel 提出忠告；legal counsel 法律顾问；动词 counsel sb. to do 劝某人做）；council -cil 结尾 → \"委员会/议会\"（the city council 市议会；council meeting 委员会会议）。拼写口诀：-el 一个人给你建议，-cil 一群人开会。councilor 委员 / counselor 顾问（美式）也随词尾区分。",
       "words": [
