@@ -2940,6 +2940,54 @@
   ],
   "syn": [
     {
+      "title": "necessary · indispensable",
+      "memo": "都表\"必需\"，语气分两档：necessary = 需要的、必要的（中性常用，另有\"必然的\"义，2018 完形考过）；indispensable = 语气更强——in-(不)+dis(否定)+pens(支付)+able → \"不能不支付的\"=不可或缺的（be indispensable to/for…）。写作升级链：useful → necessary → indispensable，越往后越强。注意 indispensable 前缀是否定叠加（indis-），拼写长但结构好记：in(不)+dispense(免除)。",
+      "words": [
+        {
+          "w": "necessary",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈnesəsəri",
+            "us": "ˈnesəseri"
+          },
+          "pos": "adj. / n.",
+          "gloss": "必需的，必要的；必然的（n. 必需品，常 pl.）",
+          "usage": "中性常用词：it is necessary (for sb.) to do；另表\"必然的\"（a necessary result）",
+          "phrases": [
+            "be necessary for/to… 对……是必要的",
+            "if necessary 如有必要"
+          ],
+          "ex": [
+            {
+              "en": "It is necessary to make plans before starting a project.",
+              "zh": "开始一个项目之前有必要先做计划。"
+            }
+          ]
+        },
+        {
+          "w": "indispensable",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌɪndɪˈspensəbl",
+            "us": "ˌɪndɪˈspensəbl"
+          },
+          "pos": "adj.",
+          "gloss": "不可或缺的，必需的",
+          "usage": "in-(不)+dis+pens(支付)+able：不能不支付的→缺了不行的；语气强于 necessary",
+          "phrases": [
+            "be indispensable to/for… 对……必不可少",
+            "an indispensable part of… ……不可缺少的一部分"
+          ],
+          "ex": [
+            {
+              "en": "Water is indispensable to all living things.",
+              "zh": "水对所有生物都是不可或缺的。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "domestic · internal",
       "memo": "都可译“国内的”，但边界不同：domestic 以国界为界，与 foreign/international 相对——domestic market/industries/policy 国内市场/产业/政策（GDP 里的 D 就是它），另有两个独有义：“家庭的”（domestic chores 家务、domestic violence 家暴）和“驯养的”（domestic animals 家畜）；internal 以任意边界为界——身体（internal organs/injuries 内脏/内伤）、机构（internal emails 内部邮件）、国家（internal affairs 内政），反义 external。易混警告：internal 与 international（国际的）就差一截字母，拼错意思翻车。一句话：对外谈经济用 domestic，往里看内部用 internal。",
       "words": [
