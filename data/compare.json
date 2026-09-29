@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "incident · indicate",
+      "memo": "都以 inci-/indi- 开头的 8 字母形近词，词性与词根都不同：incident = incid(落在身上)+ent → \"落到身上的事\"=事件（名词，尤指不寻常/冲突性事件；辨 accident 意外事故、event 重大事件）；indicate = indi-(指向)+dic(说)+ate → \"指着说\"=表明、暗示（动词，indicate that…；比 show 正式）。拼写分界：-dent 结尾名词事件 vs -date 结尾动词表明。",
+      "words": [
+        {
+          "w": "incident",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɪnsɪdənt",
+            "us": "ˈɪnsədənt"
+          },
+          "pos": "n.[C]",
+          "gloss": "事件，事变（尤指不寻常的或冲突性的）",
+          "usage": "incid(落)+ent：落到身上的事；近形三兄弟 incident 事件 / accident 意外事故 / event 重大事件",
+          "phrases": [
+            "a border incident 边境事件",
+            "without incident 平安无事"
+          ],
+          "ex": [
+            {
+              "en": "The border incident was reported in the morning news.",
+              "zh": "这起边境事件被早间新闻报道了。"
+            }
+          ]
+        },
+        {
+          "w": "indicate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɪndɪkeɪt",
+            "us": "ˈɪndəkeɪt"
+          },
+          "pos": "vt.",
+          "gloss": "标示，指示；表明，暗示",
+          "usage": "indi-(指向)+dic(说)+ate：指着说→表明；比 show 正式，阅读题高频信号词",
+          "phrases": [
+            "indicate that… 表明……",
+            "as indicated above 如上文所指出的"
+          ],
+          "ex": [
+            {
+              "en": "The survey indicates that most students lack sleep.",
+              "zh": "调查表明大多数学生睡眠不足。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "moderate · miserable",
       "memo": "都以 m 开头、-ble/-rate 结尾的四音节形容词，情绪一暖一冷：moderate = moder(适度)+ate →\"有节制的\"（适中/温和，褒义；词根同 mode 模式→合乎模式的=适度的）；miserable = miser(可怜)+able →\"痛苦的\"（ miserable life 悲惨生活，名词 misery 苦难）。拼写分界：-der-ate 适度 vs -ser-able 悲惨。读音都重音在首，但 moderate 尾音 /rət/、miserable 尾音 /rəbl/。",
       "words": [
