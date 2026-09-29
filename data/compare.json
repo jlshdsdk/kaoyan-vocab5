@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "evaluate · evolution",
+      "memo": "都以 eva-/evo- 开头的长词：evaluate = e(出)+valu(价值)+ate → \"把价值说出来\"=评估、评价（动词，evaluate the performance）；evolution = e(出)+volu(转)+tion → \"(随时间)转出来\"=进化、演变（名词，the theory of evolution 进化论；动词 evolve）。拼写分界：-valuate 动词评估 vs -volution 名词演变。词性也不同：evaluate 是动作，evolution 是过程。",
+      "words": [
+        {
+          "w": "evaluate",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈvæljueɪt",
+            "us": "ɪˈvæljueɪt"
+          },
+          "pos": "vt.",
+          "gloss": "评估，评价；估价",
+          "usage": "e-(出)+valu(价值)+ate：把价值说出来→评估；近义 assess",
+          "phrases": [
+            "evaluate the performance 评估表现",
+            "evaluate the impact 评估影响"
+          ],
+          "ex": [
+            {
+              "en": "Teachers evaluate students' progress through regular tests.",
+              "zh": "老师通过定期测验来评估学生的进步。"
+            }
+          ]
+        },
+        {
+          "w": "evolution",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌiːvəˈluːʃn",
+            "us": "ˌevəˈluːʃn"
+          },
+          "pos": "n.[U]",
+          "gloss": "进化；演变，发展",
+          "usage": "e-(出)+volu(转)+tion：随时间转出来→演化；动词 evolve vi. 进化",
+          "phrases": [
+            "the theory of evolution 进化论",
+            "the evolution of language 语言的演变"
+          ],
+          "ex": [
+            {
+              "en": "The evolution of smartphones has changed how we live.",
+              "zh": "智能手机的演变改变了我们的生活方式。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "independent · indispensable",
       "memo": "双 in- 开头的五音节\"孪生长词\"，重音都在第三音节，拼写只差后半段：independent = in(不)+depend(依赖)+ent → \"不依赖的\"=独立的（家族：depend 依赖 → dependence 依赖 / independence 独立）；indispensable = in(不)+dispens(支付)+able → \"不能不支付的\"=不可或缺的（近义组 necessary 的强档搭档）。拼写分界：-pend-ent 独立 vs -pens-able 必需。读音连介词搭配都成对记忆：independent OF 不依赖 / indispensable TO 必不可少。",
       "words": [
