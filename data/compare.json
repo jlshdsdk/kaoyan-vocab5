@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "counsel · council",
+      "memo": "完全同音：都读 /ˈkaʊnsl/，听力里全靠语境分。词根同源（拉丁 consilium），却分工明确：counsel -el 结尾 → \"劝告/律师\"（give counsel 提出忠告；legal counsel 法律顾问；动词 counsel sb. to do 劝某人做）；council -cil 结尾 → \"委员会/议会\"（the city council 市议会；council meeting 委员会会议）。拼写口诀：-el 一个人给你建议，-cil 一群人开会。councilor 委员 / counselor 顾问（美式）也随词尾区分。",
+      "words": [
+        {
+          "w": "counsel",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkaʊnsl",
+            "us": "ˈkaʊnsl"
+          },
+          "pos": "n. / vt.",
+          "gloss": "忠告，劝告；律师，法律顾问；劝告",
+          "usage": "-el 结尾：给\"个人\"的建议或提供咨询的人；动词 counsel sb. to do 劝某人做……",
+          "phrases": [
+            "legal counsel 法律顾问",
+            "counsel sb. to do sth. 建议某人做某事"
+          ],
+          "ex": [
+            {
+              "en": "The doctor counseled him to quit smoking immediately.",
+              "zh": "医生建议他立即戒烟。"
+            }
+          ]
+        },
+        {
+          "w": "council",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkaʊnsl",
+            "us": "ˈkaʊnsl"
+          },
+          "pos": "n.[C]",
+          "gloss": "委员会，理事会；（地方）议会",
+          "usage": "-cil 结尾：一群人组成的议事机构；the city council 市议会",
+          "phrases": [
+            "the city council 市议会",
+            "a council meeting 委员会会议"
+          ],
+          "ex": [
+            {
+              "en": "The city council approved the new housing plan.",
+              "zh": "市议会批准了新的住房计划。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "invest · investigate",
       "memo": "investigate 里\"藏着\"一个 invest（invest + i + gate 大门→投资前，我(i)站在大门口先调查一下）。invest /ɪnˈvest/ 双音节=投资、投入（invest in）；investigate /ɪnˈvestɪɡeɪt/ 四音节=调查、研究（investigate the cause）。辨形看长度与后缀：-igate 尾巴的是\"调查\"。invest 你 9.19 笔记背过，本组提醒：见到 investigate 别只当 invest 的加长版。",
       "words": [
