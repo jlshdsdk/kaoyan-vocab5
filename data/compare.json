@@ -3147,6 +3147,54 @@
   ],
   "syn": [
     {
+      "title": "coincide · identical",
+      "memo": "都说\"一样\"，词性和程度不同：coincide 是动词——co(一起)+cid(落)→两条线\"落在一起\"→相符、一致，说的只是\"对得上\"，不要求处处相等（My views coincide with hers 我俩观点一致；利益并不总是一致），另有一义\"同时发生\"（名词 coincidence 巧合，by coincidence 碰巧）；identical 是形容词——程度拉满的\"完全相同、一模一样\"（be identical to/with，双胞胎穿 identical shirts 让人分不清），还有\"同一的\"义（the identical man 就是同一个人）。分工：观点/利益\"对得上\"用 coincide with，分毫不差用 identical to/with。",
+      "words": [
+        {
+          "w": "coincide",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌkəʊɪnˈsaɪd",
+            "us": "ˌkoʊɪnˈsaɪd"
+          },
+          "pos": "vi.",
+          "gloss": "相符，相一致；同时发生；重叠",
+          "usage": "co(一起)+in(上)+cid(落)→同时落到一处→相符/同时发生；搭配 coincide with...；形容词 coincident，名词 coincidence 巧合（by coincidence 碰巧）；形近角度另见 precede·concede·coincide 组",
+          "phrases": [
+            "coincide with... 与……相符/同时发生",
+            "by coincidence 碰巧"
+          ],
+          "ex": [
+            {
+              "en": "The interests of employers and employees do not always coincide.",
+              "zh": "雇主和雇员的利益并不总是一致的。"
+            }
+          ]
+        },
+        {
+          "w": "identical",
+          "rank": 5,
+          "ph": {
+            "uk": "aɪˈdentɪkl",
+            "us": "aɪˈdentɪkl"
+          },
+          "pos": "adj.",
+          "gloss": "完全相同的，一模一样的；同一的",
+          "usage": "近 same 但程度更强（分毫不差）；搭配 be identical to/with...；同根 identify 识别、identity 身份（IDENTICAL twins 同卵双胞胎）",
+          "phrases": [
+            "be identical to/with... 与……完全相同",
+            "identical twins 同卵双胞胎"
+          ],
+          "ex": [
+            {
+              "en": "The fingerprints found on the bottle were identical to those of the suspect.",
+              "zh": "瓶子上发现的指纹与嫌疑人的指纹完全相同。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "withhold · refuse · reject · deny",
       "memo": "\"拒绝\"四档强度与用法各有侧重：withhold 最正式——\"扣住不给\"（withhold sth. from sb. 扣发/隐匿，不规则变形 withhold-withheld-withheld）；refuse 最日常——直接\"回绝\"（refuse to do，名词 refusal）；reject 强调\"驳回、摒弃\"——对提案/申请/器官（re-回+ject 扔→扔回来，rejection）；deny 双义——\"否认做过\"（deny doing，不接 to do）+\"拒绝给予\"（deny sb. sth.；There is no denying that 无可否认）。语法点：refuse 接 to do，deny 接 doing——完形高频考点。",
       "words": [
