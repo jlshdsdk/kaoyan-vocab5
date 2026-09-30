@@ -27,6 +27,12 @@ html { interpolate-size: allow-keywords; }   /* 支持的浏览器：展开高�
 .pg-meta { margin-left: auto; color: var(--ink-2); font-size: 13px; white-space: nowrap; }
 .pg-body { padding: 4px 18px 14px; }
 .pg-body p { margin: 10px 0 0; line-height: 1.9; font-size: 15.5px; overflow-wrap: anywhere; }
+/* 词标注：正文 (english 中文) 只显示英文，点单词显示/隐藏中文释义 */
+.vw { border: 0; background: none; margin: 0; padding: 0 1px; font: inherit; line-height: inherit; color: var(--accent); cursor: pointer; border-bottom: 1px dashed color-mix(in srgb, var(--accent) 55%, transparent); }
+.vw:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); border-bottom-style: solid; }
+.vw .en { font-weight: 700; }
+.vw .cn { display: none; color: var(--warn); }
+.vw.on .cn { display: inline; }
 .pgr { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 14px 0 4px; }
 .pgr .btn { padding: 6px 18px; font-size: 14px; }
 .pgbtn[disabled] { opacity: .45; cursor: default; pointer-events: none; }
@@ -55,7 +61,7 @@ html { interpolate-size: allow-keywords; }   /* 支持的浏览器：展开高�
       <h2 style="margin:0">📖 短文助记</h2>
       <span id="pgSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
     </div>
-    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文</p>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文 · 正文只显示英文，点单词显示 / 隐藏中文释义</p>
   </div>
   <div id="passageList"></div>
 </main>
@@ -78,7 +84,21 @@ const PAGE_SIZE = 5;             // 每页 5 篇
 let page = 0;                    // 当前页（0 起）
 let passages = [];               // 新短文插数组头部（最新在前）
 
-/* 正文按空行/换行拆段落，逐段转义渲染 */
+/* 正文按空行/换行拆段落；段落内 (english 中文) 标注转成可点单词，其余原样转义 */
+const VW_RE = /\(([A-Za-z][A-Za-z0-9'’.~-]*)[ \t]+([^()]+?)\)/g;
+
+function renderPara(text) {
+  let out = '', last = 0, m;
+  VW_RE.lastIndex = 0;
+  while ((m = VW_RE.exec(text))) {
+    out += esc(text.slice(last, m.index));
+    out += `<button type="button" class="vw" aria-expanded="false" title="点击显示/隐藏释义"><span class="en">${esc(m[1])}</span><span class="cn">(${esc(m[2])})</span></button>`;
+    last = m.index + m[0].length;
+  }
+  out += esc(text.slice(last));
+  return out;
+}
+
 function paras(text) {
   return String(text || '').split(/\n+/).map(s => s.trim()).filter(Boolean);
 }
@@ -93,7 +113,7 @@ function passageCard(p) {
         <span class="pg-meta">${esc(p.date || '')}</span>
       </div>
     </summary>
-    <div class="pg-body">${ps.map(t => `<p>${esc(t)}</p>`).join('') || '<p style="color:var(--ink-2)">（正文为空）</p>'}</div>
+    <div class="pg-body">${ps.map(t => `<p>${renderPara(t)}</p>`).join('') || '<p style="color:var(--ink-2)">（正文为空）</p>'}</div>
   </details>`;
 }
 
@@ -120,6 +140,12 @@ function render() {
 }
 
 $('passageList').addEventListener('click', e => {
+  const vw = e.target.closest('.vw');
+  if (vw) {
+    vw.classList.toggle('on');
+    vw.setAttribute('aria-expanded', vw.classList.contains('on'));
+    return;
+  }
   const btn = e.target.closest('.pgbtn');
   if (!btn) return;
   const next = Number(btn.dataset.pg);
