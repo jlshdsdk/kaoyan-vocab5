@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "impulse · impose",
+      "memo": "im- 开头一字之差，词根定身份：impulse＝im(向内)+puls(驱动)→内在的驱力→名词\"冲动\"（on impulse 一时冲动，形容词 impulsive 冲动的），物理里还是\"脉冲\"；impose＝im(里面)+pose(放)→把东西硬放到别人头上→动词\"强加、强制实行\"，还能\"征税\"（impose sth. on sb. 把……强加给……，a new tax was imposed on... 被征收新税，名词 imposition）。分工：心里\"冲\"出来的名词用 impulse，压到别人头上的动词用 impose。pose（放）家族另见 propose·purpose 组和 exploit·expose 组。",
+      "words": [
+        {
+          "w": "impulse",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɪmpʌls",
+            "us": "ˈɪmpʌls"
+          },
+          "pos": "n.",
+          "gloss": "冲动，一时的念头；推动力；脉冲",
+          "usage": "im(向内)+puls(驱动)→内在驱力→冲动；搭配 on impulse 一时冲动；形容词 impulsive 冲动的；物理学义\"脉冲\"",
+          "phrases": [
+            "on impulse 一时冲动",
+            "a sudden impulse 突然的冲动"
+          ],
+          "ex": [
+            {
+              "en": "Some kids who are low in sympathy may make up for that shortfall by experiencing more guilt, which can rein in their nastier impulses.",
+              "zh": "一些缺乏同情心的孩子可能会通过体验更多的内疚感来弥补这一不足，这可以遏制他们更恶劣的冲动。"
+            }
+          ]
+        },
+        {
+          "w": "impose",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪmˈpəʊz",
+            "us": "ɪmˈpəʊz"
+          },
+          "pos": "vt.",
+          "gloss": "把……强加于；强制实行；征收（税款）",
+          "usage": "im(里面)+pose(放)→硬放进别人头脑→强加；搭配 impose sth. on sb.；名词 imposition 征收/强加；形近辨析 impose 施加 / expose 揭露 / oppose 反对 / suppose 猜想",
+          "phrases": [
+            "impose sth. on sb. 将某物强加到某人身上",
+            "impose a ban 强令禁止"
+          ],
+          "ex": [
+            {
+              "en": "A new tax was imposed on fuel.",
+              "zh": "当局开始对燃油征收一项新税。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "evaluate · evolution",
       "memo": "都以 eva-/evo- 开头的长词：evaluate = e(出)+valu(价值)+ate → \"把价值说出来\"=评估、评价（动词，evaluate the performance）；evolution = e(出)+volu(转)+tion → \"(随时间)转出来\"=进化、演变（名词，the theory of evolution 进化论；动词 evolve）。拼写分界：-valuate 动词评估 vs -volution 名词演变。词性也不同：evaluate 是动作，evolution 是过程。",
       "words": [
