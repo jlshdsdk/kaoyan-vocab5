@@ -50,8 +50,8 @@
       ]
     },
     {
-      "title": "evaluate · evolution",
-      "memo": "都以 eva-/evo- 开头的长词：evaluate = e(出)+valu(价值)+ate → \"把价值说出来\"=评估、评价（动词，evaluate the performance）；evolution = e(出)+volu(转)+tion → \"(随时间)转出来\"=进化、演变（名词，the theory of evolution 进化论；动词 evolve）。拼写分界：-valuate 动词评估 vs -volution 名词演变。词性也不同：evaluate 是动作，evolution 是过程。",
+      "title": "evaluate · evolution · estimate",
+      "memo": "三个 e- 开头的长词，中段定身份：evaluate＝e(出)+valu(价值)+ate→\"把价值说出来\"→评估、评价（evaluate the performance，近义 assess）；evolution＝e(出)+volu(转)+tion→\"(随时间)转出来\"→进化、演变（the theory of evolution 进化论，动词 evolve）；estimate 是\"估计\"——估数量、价值（estimate the crowd at 30,000，be estimated to be...，名词读 /ˈestɪmət/，a rough estimate 粗略估计）。义近辨析：evaluate 评\"好坏优劣\"，estimate 估\"多少大小\"；拼写上 estimate 少个 v，别把 evaluate 误写成 evalulate。evaluate/evolution 拼写分界：-valuate 动词评估 vs -volution 名词演变。",
       "words": [
         {
           "w": "evaluate",
@@ -92,6 +92,27 @@
             {
               "en": "The evolution of smartphones has changed how we live.",
               "zh": "智能手机的演变改变了我们的生活方式。"
+            }
+          ]
+        },
+        {
+          "w": "estimate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈestɪmeɪt",
+            "us": "ˈestɪmeɪt"
+          },
+          "pos": "vt. / n.",
+          "gloss": "估计，估算；估计，估价（n.）",
+          "usage": "动词读 /ˈestɪmeɪt/、名词读 /ˈestɪmət/；估的是数量/价值；义近辨析 evaluate 评优劣、estimate 估数量，近义 assess；搭配 be estimated to be... / estimate...at... / a rough estimate",
+          "phrases": [
+            "be estimated to be... 估计为……",
+            "a rough estimate 粗略估计"
+          ],
+          "ex": [
+            {
+              "en": "Police estimate the crowd at 30,000.",
+              "zh": "警方估计聚集的人有3万。"
             }
           ]
         }
