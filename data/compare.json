@@ -3216,6 +3216,54 @@
   ],
   "syn": [
     {
+      "title": "evaluate · estimate",
+      "memo": "都译\"评估\"，评的对象不同：evaluate 评\"好坏优劣\"——依据标准作判断（evaluate the performance/students/applicants 评估表现/学生/申请人），词根 valu(价值)→评的是价值，名词 evaluation；estimate 估\"多少大小\"——给出数字、不求精确（estimate the crowd at 30,000、It is estimated that... 据估计，名词 estimate 估计值读 /ˈestɪmət/，a rough estimate 粗略估计）。重叠处：评估项目\"值不值\"两个都能用，但写作里问\"质量如何\"用 evaluate，问\"数量几何\"用 estimate；两者共同近义是 assess（常指评定等级）。形近角度（含 evolution）另见 evaluate·evolution·estimate 近形组。",
+      "words": [
+        {
+          "w": "evaluate",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈvæljueɪt",
+            "us": "ɪˈvæljueɪt"
+          },
+          "pos": "vt.",
+          "gloss": "评估，评价；估价",
+          "usage": "e(出)+valu(价值)+ate→把价值说出来→评优劣；名词 evaluation；近义 assess；搭配 evaluate the performance 评估表现",
+          "phrases": [
+            "evaluate the performance 评估表现",
+            "evaluate students/applicants 评估学生/申请人"
+          ],
+          "ex": [
+            {
+              "en": "We need to learn how to evaluate them properly.",
+              "zh": "我们需要学习如何正确评估它们。"
+            }
+          ]
+        },
+        {
+          "w": "estimate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈestɪmeɪt",
+            "us": "ˈestɪmeɪt"
+          },
+          "pos": "vt. / n.",
+          "gloss": "估计，估算；估计，估价（n.）",
+          "usage": "估的是数量/成本/规模，不求精确；动词读 /ˈestɪmeɪt/、名词读 /ˈestɪmət/；搭配 estimate...at... / be estimated to be... / a rough estimate；近义 assess",
+          "phrases": [
+            "estimate...at... 估计……为……",
+            "a rough estimate 粗略估计"
+          ],
+          "ex": [
+            {
+              "en": "Police estimate the crowd at 30,000.",
+              "zh": "警方估计聚集的人有3万。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "coincide · identical",
       "memo": "都说\"一样\"，词性和程度不同：coincide 是动词——co(一起)+cid(落)→两条线\"落在一起\"→相符、一致，说的只是\"对得上\"，不要求处处相等（My views coincide with hers 我俩观点一致；利益并不总是一致），另有一义\"同时发生\"（名词 coincidence 巧合，by coincidence 碰巧）；identical 是形容词——程度拉满的\"完全相同、一模一样\"（be identical to/with，双胞胎穿 identical shirts 让人分不清），还有\"同一的\"义（the identical man 就是同一个人）。分工：观点/利益\"对得上\"用 coincide with，分毫不差用 identical to/with。",
       "words": [
