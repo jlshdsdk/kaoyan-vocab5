@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>短文助记 · 考研五书词汇</title>
+<link rel="stylesheet" href="assets/css/base.css?v=19">
+<style>
+/* 短文助记：折叠卡（details/summary，同词义辨析款），每页 5 篇，点标题展开/收起。
+ * 内容为仓库级数据（data/passages.json），录入即全设备可见，与账号进度无关。 */
+html { interpolate-size: allow-keywords; }   /* 支持的浏览器：展开高度平滑过渡，不跳 */
+.pgroup { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-card); margin: 10px 0; box-shadow: var(--shadow); overflow: hidden; }
+.pgroup > summary { cursor: pointer; user-select: none; list-style: none; }
+.pgroup > summary::-webkit-details-marker { display: none; }
+.pgroup > summary::marker { content: ''; }
+.pgroup > summary:hover { background: var(--bg-inset); }
+/* 组头边框常驻透明（收起/展开零高度差，消除 1px 抖动） */
+.pgroup > summary .pg-head { padding: 14px 18px; border-bottom: 1px solid transparent; }
+.pgroup[open] > summary .pg-head { border-bottom-color: var(--line); }
+/* 展开高度动画：不支持的浏览器自动退化为瞬时展开（无回归） */
+.pgroup::details-content { block-size: 0; overflow: hidden; transition: block-size .28s ease; }
+.pgroup[open]::details-content { block-size: auto; }
+.pg-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.pg-head h3 { margin: 0; font-size: 17px; flex: 1 1 0; min-width: 0; overflow-wrap: anywhere; }
+.pg-caret { flex: none; color: var(--ink-2); font-size: 12px; transition: transform .28s ease; }
+.pgroup[open] .pg-caret { transform: rotate(90deg); }
+.pg-meta { margin-left: auto; color: var(--ink-2); font-size: 13px; white-space: nowrap; }
+.pg-body { padding: 4px 18px 14px; }
+.pg-body p { margin: 10px 0 0; line-height: 1.9; font-size: 15.5px; overflow-wrap: anywhere; }
+.pgr { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 14px 0 4px; }
+.pgr .btn { padding: 6px 18px; font-size: 14px; }
+.pgbtn[disabled] { opacity: .45; cursor: default; pointer-events: none; }
+.pginfo { color: var(--ink-2); font-size: 14px; white-space: nowrap; }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="index.html">📚 五书词汇</a>
+  <a class="tab" href="index.html">今日</a>
+  <a class="tab" href="browse.html">词库</a>
+  <a class="tab" href="wordbook.html">生词本</a>
+  <a class="tab" href="notes.html">生词笔记</a>
+  <a class="tab" href="favorites.html">收藏词</a>
+  <a class="tab active" href="passages.html">短文助记</a>
+  <a class="tab" href="compare.html">词义辨析</a>
+  <a class="tab" href="stats.html">统计</a>
+  <a class="tab" href="settings.html">设置</a>
+  <span class="spacer"></span><span id="authSlot"></span>
+  <button class="iconbtn" id="themeBtn" title="切换深浅色">🌙</button>
+</nav>
+
+<main>
+  <div class="card">
+    <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+      <h2 style="margin:0">📖 短文助记</h2>
+      <span id="pgSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
+    </div>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文</p>
+  </div>
+  <div id="passageList"></div>
+</main>
+
+<script type="module">
+import { initAuthNav } from './assets/js/auth-nav.js?v=18';
+import { initTheme, setTheme, getTheme, esc } from './assets/js/ui.js?v=18';
+
+initAuthNav();
+initTheme();
+document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+document.getElementById('themeBtn').onclick = () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+};
+const $ = id => document.getElementById(id);
+
+const PAGE_SIZE = 5;             // 每页 5 篇
+let page = 0;                    // 当前页（0 起）
+let passages = [];               // 新短文插数组头部（最新在前）
+
+/* 正文按空行/换行拆段落，逐段转义渲染 */
+function paras(text) {
+  return String(text || '').split(/\n+/).map(s => s.trim()).filter(Boolean);
+}
+
+function passageCard(p) {
+  const ps = paras(p.text);
+  return `<details class="pgroup">
+    <summary>
+      <div class="pg-head">
+        <span class="pg-caret" aria-hidden="true">▶</span>
+        <h3>${esc(p.title || '（无标题）')}</h3>
+        <span class="pg-meta">${esc(p.date || '')}</span>
+      </div>
+    </summary>
+    <div class="pg-body">${ps.map(t => `<p>${esc(t)}</p>`).join('') || '<p style="color:var(--ink-2)">（正文为空）</p>'}</div>
+  </details>`;
+}
+
+function pagerHTML(cur, total) {
+  if (total <= 1) return '';
+  return `<div class="pgr">
+    <button class="btn pgbtn" data-pg="${cur - 1}" ${cur === 0 ? 'disabled' : ''}>‹ 上一页</button>
+    <span class="pginfo">${cur + 1} / ${total} 页 · 共 ${passages.length} 篇</span>
+    <button class="btn pgbtn" data-pg="${cur + 1}" ${cur === total - 1 ? 'disabled' : ''}>下一页 ›</button>
+  </div>`;
+}
+
+function render() {
+  const total = Math.max(1, Math.ceil(passages.length / PAGE_SIZE));
+  if (page >= total) page = total - 1;
+  if (page < 0) page = 0;
+  $('pgSummary').textContent = passages.length ? `共 ${passages.length} 篇` : '';
+  if (!passages.length) {
+    $('passageList').innerHTML = '<div class="card"><p style="color:var(--ink-2);margin:6px 0">还没有短文 —— 把短文发给 ZCode，录入推送后就会出现在这里（全设备可见）</p></div>';
+    return;
+  }
+  const slice = passages.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  $('passageList').innerHTML = slice.map(passageCard).join('') + pagerHTML(page, total);
+}
+
+$('passageList').addEventListener('click', e => {
+  const btn = e.target.closest('.pgbtn');
+  if (!btn) return;
+  const next = Number(btn.dataset.pg);
+  if (!Number.isNaN(next) && next >= 0) {
+    page = next;
+    render();
+    scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
+
+(async function load() {
+  try {
+    const r = await fetch(`data/passages.json?v=${Date.now()}`);   // 每次会话取新，防 CDN 旧缓存
+    if (r.ok) {
+      const j = await r.json();
+      if (j && Array.isArray(j.passages)) passages = j.passages;
+    }
+  } catch (e) { console.warn('短文加载失败', e); }
+  render();
+})();
+</script>
+</body>
+</html>
