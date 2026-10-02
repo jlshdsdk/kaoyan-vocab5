@@ -3456,6 +3456,96 @@
   ],
   "syn": [
     {
+      "title": "obstacle · barrier · hindrance · bar",
+      "memo": "四个\"挡路\"的，挡的方式不同：obstacle 是\"要绕过/克服的困难\"——ob(反)+sta(站)+cle→反着站的东西（the biggest obstacle to progress 发展的最大障碍，搭配 obstacle to；书内辨析：hindrance 妨碍干扰、obstruction 阻塞道路通道）；barrier 是\"屏障/壁垒\"——bar(栏杆)+ier→隔开两边的有形屏障或无形隔阂（trade barriers 贸易壁垒、language barriers 语言障碍、a barrier to sth.）；hindrance 是\"拖后腿的妨碍\"——hinder 的名词，指拖慢进度的干扰（more of a hindrance than a help 帮倒忙，prove no hindrance to 结果并不妨碍）；bar 原义\"栏杆\"→动词\"禁止、阻挡\"（bar sb. from (doing) sth. 禁止，behind bars 在狱中，a bar to success 障碍，另有\"酒吧/条/律师界\"义）。一句话分工：要克服的困难 obstacle，隔开两边的壁垒 barrier，拖后腿 hindrance，明令禁止 bar。",
+      "words": [
+        {
+          "w": "obstacle",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɒbstəkl",
+            "us": "ˈɑːbstəkl"
+          },
+          "pos": "n. [C]",
+          "gloss": "障碍，障碍物；干扰",
+          "usage": "ob(反)+sta(站)+cle→反着站→挡路的东西；需绕过或克服；搭配 obstacle to (doing) sth.；书内辨析：obstacle 障碍物、hindrance 妨碍、obstruction 阻塞通道",
+          "phrases": [
+            "an obstacle to... ……的障碍",
+            "put obstacles in the way of 阻止"
+          ],
+          "ex": [
+            {
+              "en": "Lack of confidence is often the biggest obstacle to career progress for young employees.",
+              "zh": "缺乏自信往往是年轻员工职业发展的最大障碍。"
+            }
+          ]
+        },
+        {
+          "w": "barrier",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈbæriə(r)",
+            "us": "ˈbæriər"
+          },
+          "pos": "n. [C]",
+          "gloss": "屏障，障碍物；关卡；隔阂",
+          "usage": "bar(栏杆)+ier→隔开两边的屏障；有形的（natural barrier 天然屏障）或无形的（language/racial barriers 语言/种族隔阂）；热点搭配 trade barriers 贸易壁垒；a barrier to sth.",
+          "phrases": [
+            "trade barriers 贸易壁垒",
+            "a barrier to... ……的障碍"
+          ],
+          "ex": [
+            {
+              "en": "Language barriers often prevent skilled immigrants from finding jobs that match their qualifications.",
+              "zh": "语言障碍常常使技术移民无法找到与其资历相匹配的工作。"
+            }
+          ]
+        },
+        {
+          "w": "hindrance",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈhɪndrəns",
+            "us": "ˈhɪndrəns"
+          },
+          "pos": "n. [U] / [C, 常单数]",
+          "gloss": "妨碍，阻挠；造成妨碍的人或事物",
+          "usage": "hinder（妨碍）的名词；强调\"拖后腿、拖慢进度\"而非绝对挡死；高频 more of a hindrance than a help 帮倒忙、prove no hindrance to 结果并不妨碍",
+          "phrases": [
+            "more of a hindrance than a help 与其说是帮忙不如说是添乱",
+            "a hindrance to... ……的妨碍"
+          ],
+          "ex": [
+            {
+              "en": "Rather than being a hindrance, the new regulations actually help small businesses compete fairly.",
+              "zh": "新法规非但没有造成妨碍，实际上还有助于小企业公平竞争。"
+            }
+          ]
+        },
+        {
+          "w": "bar",
+          "rank": 3,
+          "ph": {
+            "uk": "bɑː(r)",
+            "us": "bɑːr"
+          },
+          "pos": "n. / vt.",
+          "gloss": "条，棒，栏杆；酒吧；障碍；禁止，阻挡（vt.）",
+          "usage": "原义\"栏杆\"→拦住→动词\"禁止\"（bar sb. from (doing) sth.，被动 be barred from 被禁止）；behind bars 在狱中；the bar 律师界；名词义\"障碍\"现多用于 a bar to...",
+          "phrases": [
+            "bar sb. from sth. 阻止某人做某事",
+            "behind bars 在狱中"
+          ],
+          "ex": [
+            {
+              "en": "Poverty should never be a bar to higher education.",
+              "zh": "贫困绝不应成为接受高等教育的障碍。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "initial · original · primary · prime · prior",
       "memo": "五个\"先/首\"，两条线：时间的先——initial 是\"起点\"（in+it 走→起步的：the initial stage 初始阶段、initial reaction 最初反应，n. 首字母，派生 initiate 开始、initiative 主动性）；original 是\"源头\"（origin 起源→原先的 the original plan 原计划，还引申\"独创的\"an original design 原创设计、n. 原作）；prior 是\"在前\"（必背介词搭配 prior to 在……之前，prior experience 以往经验，与 previous 几乎同义但暗含更重要，名词 priority 优先权）。地位的先——primary 首要的/初级的（primary aim 主要目的、primary school 小学）；prime 更高一级\"头等的、第一流的\"（a prime concern 头等大事、prime minister 首相，n. 全盛期 in the prime of）。一句话分工：起点 initial，源头/原创 original，时间在前用 prior，首要 primary，第一流 prime。",
       "words": [
