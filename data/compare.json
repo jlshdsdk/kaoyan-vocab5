@@ -5096,8 +5096,8 @@
       ]
     },
     {
-      "title": "perceive · detect",
-      "memo": "都表\"察觉\"，但路径相反：perceive 重主观感知——\"通过心灵意识到\"（per-(透过)+ceive 抓住→透过表象抓住含义，高频 perceive…as… 视为）；detect 重客观发觉——\"借助观察或仪器测出\"隐藏的事实（detect a lie / detect cancer）。阅读题里 perceive 常与理解、观点绑定，detect 常与证据、信号绑定。",
+      "title": "perceive · detect · discern",
+      "memo": "都表\"察觉\"，路径三分：perceive 重主观感知——\"通过心灵意识到\"（per-(透过)+ceive 抓住→透过表象抓住含义，高频 perceive…as… 视为）；detect 重客观发觉——\"借助观察或仪器测出\"隐藏的事实（detect a lie / detect cancer）；discern 重\"分辨\"——dis(分开)+cern(判断)→把相似事物分开→费力地看清、辨出（discern a pattern 从数据里辨出规律、雾中 barely discern the outline 依稀辨出轮廓），书面词，宾语常是 pattern/difference/outline。阅读题里 perceive 常与理解、观点绑定，detect 常与证据、信号绑定，discern 常与\"从混杂信息里辨出\"绑定。",
       "words": [
         {
           "w": "perceive",
@@ -5138,6 +5138,27 @@
             {
               "en": "The sensor can detect smoke within seconds.",
               "zh": "这个传感器能在几秒内探测到烟雾。"
+            }
+          ]
+        },
+        {
+          "w": "discern",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈsɜːn",
+            "us": "dɪˈsɜːrn"
+          },
+          "pos": "vt.",
+          "gloss": "察觉出；分辨出，识别；（依稀）看出，听出",
+          "usage": "dis(分开)+cern(判断)→使相似事物分开→分辨；书面词，暗含\"费力看清\"；宾语常是 pattern/difference/outline；名词 discernment 辨别力；书内近义标 perceive",
+          "phrases": [
+            "discern a pattern 辨出规律",
+            "discern the outline 依稀辨出轮廓"
+          ],
+          "ex": [
+            {
+              "en": "It is hard to discern any clear pattern in the survey results.",
+              "zh": "很难从调查结果中看出任何清晰的规律。"
             }
           ]
         }
