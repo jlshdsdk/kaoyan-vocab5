@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "conform · confront",
+      "memo": "con- 开头一字之差，尾巴定态度：conform＝con(共同)+form(形式)→\"共同的形式\"→遵守、符合——跟着规矩走（conform to/with... 遵守/符合，conform to the standard 符合标准，名词 conformity 一致/从众，书内近义 comply；form 家族还有 transform 改变、reform 改革、uniform 一律的）；confront＝con(一起)+front(前面)→来到面前→面对、对抗——迎着上（confront problems directly 直接面对问题，被动 be confronted with/by... 面临，confront sb. with sth. 使某人对质，名词 confrontation 对峙，近义 face）。态度对立好记：conform 是\"随大流\"，confront 是\"迎面怼\"。听力抓尾巴：-form 跟从，-front 迎击。",
+      "words": [
+        {
+          "w": "conform",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈfɔːm",
+            "us": "kənˈfɔːrm"
+          },
+          "pos": "vi.",
+          "gloss": "遵守；符合；顺应，随大流",
+          "usage": "con(共同)+form(形式)→共同的形式→与规则一致；必须与 to/with 连用（conform to the standard）；名词 conformity 一致/从众；书内近义 comply；同根 transform/reform/uniform",
+          "phrases": [
+            "conform to/with... 遵守；符合……",
+            "conform to the standard 符合标准"
+          ],
+          "ex": [
+            {
+              "en": "The products conform to international safety standards.",
+              "zh": "这些产品符合国际安全标准。"
+            }
+          ]
+        },
+        {
+          "w": "confront",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈfrʌnt",
+            "us": "kənˈfrʌnt"
+          },
+          "pos": "vt.",
+          "gloss": "面对；对抗；使当面对质",
+          "usage": "con(一起)+front(前面)→来到面前→正视困难；主动 confront sth. 直面，被动 be confronted with/by... 面临；confront sb. with sth. 使某人对质；名词 confrontation 对峙；近义 face",
+          "phrases": [
+            "be confronted with... 面临……",
+            "confront sb. with sth. 使某人面对/对质某事"
+          ],
+          "ex": [
+            {
+              "en": "He is willing to confront problems directly.",
+              "zh": "他愿意直接面对问题。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "outcome · overcome",
       "memo": "come 家族双胞胎，前缀定身份：outcome＝out(出)+come→\"走出来\"的东西→名词\"结果、结局\"（the final outcome 最终结果，重音在前 /ˈaʊtkʌm/，和 come out（结果是）一起记；义近角度另见 outcome·consequence·conclusion 组）；overcome＝over(越过)+come→从困难上面飞过去→动词\"克服、战胜\"（过去式 overcame：overcome the difficulty/fear 克服困难/恐惧，还可被动\"被（情感）淹没\" be overcome by grief）。三抓手分清：词性（outcome 名词 / overcome 动词）、重音（前重 / 后重）、前缀（out 出来 / over 越过）。家族联动：income 进来的收入，被压垮是 overwhelm（over+whelm 淹没）——克敌是 overcome，被情绪淹没是 overwhelmed。",
       "words": [
