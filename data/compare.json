@@ -3456,6 +3456,117 @@
   ],
   "syn": [
     {
+      "title": "initial · original · primary · prime · prior",
+      "memo": "五个\"先/首\"，两条线：时间的先——initial 是\"起点\"（in+it 走→起步的：the initial stage 初始阶段、initial reaction 最初反应，n. 首字母，派生 initiate 开始、initiative 主动性）；original 是\"源头\"（origin 起源→原先的 the original plan 原计划，还引申\"独创的\"an original design 原创设计、n. 原作）；prior 是\"在前\"（必背介词搭配 prior to 在……之前，prior experience 以往经验，与 previous 几乎同义但暗含更重要，名词 priority 优先权）。地位的先——primary 首要的/初级的（primary aim 主要目的、primary school 小学）；prime 更高一级\"头等的、第一流的\"（a prime concern 头等大事、prime minister 首相，n. 全盛期 in the prime of）。一句话分工：起点 initial，源头/原创 original，时间在前用 prior，首要 primary，第一流 prime。",
+      "words": [
+        {
+          "w": "initial",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɪʃl",
+            "us": "ɪˈnɪʃl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "最初的，开始的；首字母（n.）",
+          "usage": "in(里)+it(走)+ial→起步的→最初的；搭配 the initial stage/reaction；名词义\"首字母\"，动词义\"用首字母签名\"；派生 initiate 开始、initiative 主动性（形近组另见）",
+          "phrases": [
+            "the initial stage 初始阶段",
+            "initial reaction 最初的反应"
+          ],
+          "ex": [
+            {
+              "en": "The initial reaction to the proposal was positive, but doubts soon appeared.",
+              "zh": "对该提案的最初反应是积极的，但疑问很快出现了。"
+            }
+          ]
+        },
+        {
+          "w": "original",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈrɪdʒənl",
+            "us": "əˈrɪdʒənl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "原先的，最初的；新颖的，有独创性的；原作（n.）",
+          "usage": "origin(起源)的派生→原先的/原始的；引申\"独创\"（原创设计、想法新颖）；n. 原件、原作（the original 原文）；副词 originally 起初",
+          "phrases": [
+            "the original plan 原计划",
+            "original design 独创的设计"
+          ],
+          "ex": [
+            {
+              "en": "The original plan was to finish the bridge by the end of 2020.",
+              "zh": "原计划是在2020年底之前建成这座桥。"
+            }
+          ]
+        },
+        {
+          "w": "primary",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈpraɪməri",
+            "us": "ˈpraɪməri"
+          },
+          "pos": "adj. / n.",
+          "gloss": "首要的，主要的；初级的，小学的；（美）初选（n.）",
+          "usage": "prime 的形容词化：最重要的；另义\"初等的\"（primary school 小学——\"初级\"不是\"小学\"一个意思）；搭配 primary aim/cause/school",
+          "phrases": [
+            "primary school 小学",
+            "the primary aim 主要目的"
+          ],
+          "ex": [
+            {
+              "en": "The primary aim of this course is to improve your spoken English.",
+              "zh": "这门课的主要目的是提高英语会话能力。"
+            }
+          ]
+        },
+        {
+          "w": "prime",
+          "rank": 5,
+          "ph": {
+            "uk": "praɪm",
+            "us": "praɪm"
+          },
+          "pos": "adj. / n. / v.",
+          "gloss": "首要的，第一流的，典型的；全盛时期（n.）；使准备好（v.）",
+          "usage": "地位比 primary 更高：头等的、最好的（a prime concern 头等大事、prime minister 首相、prime time 黄金时段）；n. 鼎盛期 in the prime of...；同义 chief/main/principal",
+          "phrases": [
+            "a prime concern 头等大事",
+            "in the prime of life 正当盛年"
+          ],
+          "ex": [
+            {
+              "en": "She is in the prime of her career as a novelist.",
+              "zh": "她正处于小说家职业生涯的鼎盛时期。"
+            }
+          ]
+        },
+        {
+          "w": "prior",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈpraɪə(r)",
+            "us": "ˈpraɪər"
+          },
+          "pos": "adj.",
+          "gloss": "先前的，较早的；优先的，更重要的",
+          "usage": "必背搭配 prior to 在……之前（=before 的正式版）；prior experience/consent 以往经验/事先同意；与 previous 几乎同义但暗含\"更重要\"；名词 priority 优先权（写作高频 give priority to）",
+          "phrases": [
+            "prior to... 在……之前",
+            "prior knowledge/experience 先验知识/以往经验"
+          ],
+          "ex": [
+            {
+              "en": "This information must not be disclosed without prior written consent.",
+              "zh": "未事先征得书面许可，此消息不得泄露。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "adequate · sufficient",
       "memo": "都译\"足够\"，底线和充裕度不同：adequate 是\"刚够用、达标\"——ad(加强)+equate(等同)→与需求正好相等同→够用但不多（The room was small but adequate 房间小但够用），另有\"胜任、适当\"义（be adequate to doing sth. 胜任），反义 inadequate 不充分——写作里的高频批评词；sufficient 是\"充足、足以满足需要\"——suf(向下预备)+fic(做)+ient→先做好了→足够（sufficient evidence 充分的证据、be sufficient for 对……足够），偏书面，反义 insufficient，名词还指逻辑上的\"充分条件\"。一句话分工：勉强达标用 adequate，充足有富余用 sufficient；口语随便说 enough。形近角度 sufficient 另见 sufficient·substantial·suspicious·susceptible 组。",
       "words": [
