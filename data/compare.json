@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "confine · combine",
+      "memo": "形近双胞胎：都是 con-/com- 开头的双音节动词，尾音都是 /baɪn/ 的音，词根分家：confine＝con(加强)+fin(界限，同 finish/final 的 fin)→划出界限→限制、把……局限于（be confined to 局限于，重症语境还指\"卧床/禁闭\"，名词 confinement；同根 define 下定义）；combine＝com(共同)+bine(联想\"并\")→并在一起→结合、联合（combine...with...，名词 combination；义近角度另见 combine·integrate·assimilate·merge·consolidate·ally 组）。拼写抓中间：-fin- 是\"界限\"（限制），-bin- 是\"捆绑\"（结合）；义近角度 confine 另见 restrict 限制家族组。一句话：划界用 confine，绑一起用 combine。",
+      "words": [
+        {
+          "w": "confine",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈfaɪn",
+            "us": "kənˈfaɪn"
+          },
+          "pos": "vt.",
+          "gloss": "限制，把……局限于；禁闭，使不外出",
+          "usage": "con(加强)+fin(界限)→给出界限→限制；常与 to/within 连用（be confined to）；书内辨析：confine 限在狭窄范围/禁闭，restrain 感情抑制，control 监督控制；义近角度另见 restrict·constrain·restrain·confine·circumscribe·limit 组",
+          "phrases": [
+            "be confined to... 局限于……",
+            "confine oneself to 只涉及，只谈"
+          ],
+          "ex": [
+            {
+              "en": "These small mammals are generally confined to the south of the island.",
+              "zh": "这些小型哺乳动物一般只出没于该岛南部。"
+            }
+          ]
+        },
+        {
+          "w": "combine",
+          "rank": 5,
+          "ph": {
+            "uk": "kəmˈbaɪn",
+            "us": "kəmˈbaɪn"
+          },
+          "pos": "v. / n.",
+          "gloss": "（使）结合，联合；联盟，联合体（n.）",
+          "usage": "com(共同)+bine(联想\"并\")→并在一起→结合；搭配 combine...with...；各部分结合后仍可辨认；名词 combination 联合/组合；义近角度另见 combine·integrate·assimilate·merge·consolidate·ally 组",
+          "phrases": [
+            "combine...with... 把……与……结合",
+            "a combination of... ……的结合"
+          ],
+          "ex": [
+            {
+              "en": "The new course combines traditional lectures with online discussions, giving students more flexibility.",
+              "zh": "新课程将传统授课与在线讨论结合起来，给了学生更大的灵活性。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "consequence · sequence",
       "memo": "同根 sequ（跟随），前缀定身份：consequence＝con+sequ+ence→\"跟着而来\"的东西→后果、结果（as a consequence 因此、face the consequences 承担后果，形容词 consequent 随之发生的、副词 consequently 因此）；sequence＝sequ+ence→\"一个跟着一个\"→顺序、一连串（in sequence 按顺序、a sequence of events 一连串事件，科技语境还指\"序列\"，基因测序用动词 sequence）。sequ- 家族认全：consequence 后果 / sequence 顺序 / subsequent 随后的（sub- 在后）/ consequent 随之发生的 / consensus 共识（形近另见 consensus·consequence 组，义近另见 outcome·consequence·conclusion 组）。听力抓前缀：con- 是结果，sub- 是随后，裸 sequ- 是顺序。",
       "words": [
