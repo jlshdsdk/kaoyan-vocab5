@@ -3216,6 +3216,138 @@
   ],
   "syn": [
     {
+      "title": "combine · integrate · assimilate · merge · consolidate · ally",
+      "memo": "六词都往\"合\"里走，合的方式不同：combine 最通用——combine...with... 把两者\"结合\"，各部分仍可辨；integrate 是\"融入整体\"——integrate...into/with... 使浑然一体（名词 integration，同根 integrity 完整/正直）；merge 是（企业等）\"合并\"——两方并成一方、界限消失（merger n. 企业合并，merge into 融入/渐变为）；consolidate 是 con+solid(坚实)→先\"巩固\"（consolidate one's position 巩固地位），机构语境再引申\"整合统一\"；assimilate 是 as+simil(相似)→\"吸收同化\"——变进来、变相似（immigrants assimilate into the local culture，也可吸收知识，近 absorb）；ally 只\"结盟\"不合并——ally oneself with / be allied to 结成同盟（n. ally 盟友、alliance 同盟，见 ally·alliance 组）。一句话分工：部件结合用 combine，融为一体用 integrate，组织并购用 merge，先做强用 consolidate，吸收同化用 assimilate，只结盟不合并用 ally。",
+      "words": [
+        {
+          "w": "combine",
+          "rank": 5,
+          "ph": {
+            "uk": "kəmˈbaɪn",
+            "us": "kəmˈbaɪn"
+          },
+          "pos": "v. / n.",
+          "gloss": "（使）结合，联合；联盟，联合体（n.）",
+          "usage": "最通用的\"结合\"；搭配 combine...with...；各部分结合后仍可辨认；名词义\"联合企业/集团\"",
+          "phrases": [
+            "combine...with... 把……与……结合",
+            "combine theory with practice 理论结合实践"
+          ],
+          "ex": [
+            {
+              "en": "The new course combines traditional lectures with online discussions, giving students far more flexibility.",
+              "zh": "新课程将传统授课与在线讨论结合起来，给了学生更大的灵活性。"
+            }
+          ]
+        },
+        {
+          "w": "integrate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɪntɪɡreɪt",
+            "us": "ˈɪntɪɡreɪt"
+          },
+          "pos": "v.",
+          "gloss": "使成一体，使合并；使融入（群体）",
+          "usage": "使部分融入整体、浑然一体；搭配 integrate...into/with...；名词 integration 融合，同根 integrity 完整/正直；形近角度另见 interfere·integrate·integrity 组",
+          "phrases": [
+            "integrate...into... 使……并入……",
+            "integrate...with... 使……与……结合"
+          ],
+          "ex": [
+            {
+              "en": "The department has successfully integrated new ideas into the traditional course structure.",
+              "zh": "那个系成功地将新的理念融入传统的课程结构中。"
+            }
+          ]
+        },
+        {
+          "w": "assimilate",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈsɪməleɪt",
+            "us": "əˈsɪməleɪt"
+          },
+          "pos": "v.",
+          "gloss": "吸收，消化；使同化，（使）融入",
+          "usage": "as(加强)+simil(相似)+ate→使相似→同化；文化融入 assimilate into the local culture，也可指吸收知识/营养；近 absorb",
+          "phrases": [
+            "assimilate into... 融入……",
+            "assimilate knowledge 吸收知识"
+          ],
+          "ex": [
+            {
+              "en": "Immigrant children tend to assimilate into the local culture far faster than their parents do.",
+              "zh": "移民儿童往往比他们的父母快得多地融入当地文化。"
+            }
+          ]
+        },
+        {
+          "w": "merge",
+          "rank": 3,
+          "ph": {
+            "uk": "mɜːdʒ",
+            "us": "mɜːrdʒ"
+          },
+          "pos": "v.",
+          "gloss": "（使）合并，（使）融合；渐渐融入",
+          "usage": "多指组织/公司合并、界限消失；名词 merger（企业）合并；merge into 融入、渐变为；近 combine、integrate",
+          "phrases": [
+            "merge A with B 把 A 和 B 合并",
+            "merge into 融入；渐变为"
+          ],
+          "ex": [
+            {
+              "en": "The two banks will merge next year to cut costs.",
+              "zh": "这两家银行明年将合并以削减成本。"
+            }
+          ]
+        },
+        {
+          "w": "consolidate",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsɒlɪdeɪt",
+            "us": "kənˈsɑːlɪdeɪt"
+          },
+          "pos": "v.",
+          "gloss": "巩固，加强；合并，统一",
+          "usage": "con(共同)+solid(坚实)+ate→使坚实→巩固；先义\"巩固地位/统治\"（consolidate one's position），机构语境再引申\"整合\"；名词 consolidation",
+          "phrases": [
+            "consolidate one's position 巩固地位",
+            "consolidate the ties 加强联系"
+          ],
+          "ex": [
+            {
+              "en": "The popularity of these novels consolidated Dickens' as a nationally and internationally celebrated man of letters.",
+              "zh": "这些小说的流行巩固了狄更斯作为国内外著名文人的地位。"
+            }
+          ]
+        },
+        {
+          "w": "ally",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈælaɪ",
+            "us": "ˈælaɪ"
+          },
+          "pos": "v. / n.",
+          "gloss": "（使）结盟；同盟者，盟国（n.）",
+          "usage": "只结盟、不合并主权；搭配 ally oneself with / be allied to；名词 ally 盟友（复数 allies）、alliance 同盟（义近角度另见 ally·alliance 组）；形近角度另见 allege·array·alley·ally 组",
+          "phrases": [
+            "ally oneself with... 与……结盟",
+            "be allied to... 与……结盟/关联"
+          ],
+          "ex": [
+            {
+              "en": "Portugal is a traditional ally of England.",
+              "zh": "葡萄牙是英国的传统盟友。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "announce · declare",
       "memo": "都译\"宣布\"，正式度和\"首次性\"不同：announce＝an(加强)+nounce(说)→首次公开让人知道，常带\"预告\"意味（The company announced its plan 宣布计划；announce sth. to sb. 向某人宣布），名词 announcement、announcer 播音员；declare＝de(加强)+clar(清楚)→公开说清楚→正式场合郑重宣布，多用于官方（declare war on... 对……宣战；be declared a global pandemic/disaster area 被宣布为…），另有\"申报\"（declare goods 申报物品）和\"断言\"义，名词 declaration（《独立宣言》the Declaration of Independence）。书内三级辨析：announce 首次向公众宣布 < declare 正式场合郑重宣布 < proclaim 官方宣布国家大事。",
       "words": [
