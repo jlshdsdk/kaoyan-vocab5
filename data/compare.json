@@ -3408,6 +3408,54 @@
   ],
   "syn": [
     {
+      "title": "adequate · sufficient",
+      "memo": "都译\"足够\"，底线和充裕度不同：adequate 是\"刚够用、达标\"——ad(加强)+equate(等同)→与需求正好相等同→够用但不多（The room was small but adequate 房间小但够用），另有\"胜任、适当\"义（be adequate to doing sth. 胜任），反义 inadequate 不充分——写作里的高频批评词；sufficient 是\"充足、足以满足需要\"——suf(向下预备)+fic(做)+ient→先做好了→足够（sufficient evidence 充分的证据、be sufficient for 对……足够），偏书面，反义 insufficient，名词还指逻辑上的\"充分条件\"。一句话分工：勉强达标用 adequate，充足有富余用 sufficient；口语随便说 enough。形近角度 sufficient 另见 sufficient·substantial·suspicious·susceptible 组。",
+      "words": [
+        {
+          "w": "adequate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈædɪkwət",
+            "us": "ˈædɪkwət"
+          },
+          "pos": "adj.",
+          "gloss": "足够的，充分的；胜任的，适当的",
+          "usage": "ad(加强)+equate(等同)→与需求相等同→刚够用；程度偏\"达标线\"；搭配 be adequate for/to (doing) sth.；反义 inadequate；名词 adequacy",
+          "phrases": [
+            "be adequate for... 足够……之用",
+            "adequate resources 充足的资源"
+          ],
+          "ex": [
+            {
+              "en": "The room was small but adequate.",
+              "zh": "房间虽小但够用。"
+            }
+          ]
+        },
+        {
+          "w": "sufficient",
+          "rank": 5,
+          "ph": {
+            "uk": "səˈfɪʃnt",
+            "us": "səˈfɪʃnt"
+          },
+          "pos": "adj.",
+          "gloss": "足够的，充足的",
+          "usage": "suf(向下预备)+fic(做)+ient→先做好→充足；程度偏\"充分、有富余\"；搭配 be sufficient for...、sufficient evidence；反义 insufficient；形近角度另见 sufficient·substantial·suspicious·susceptible 组",
+          "phrases": [
+            "sufficient evidence 充分的证据",
+            "be sufficient for... 对……足够"
+          ],
+          "ex": [
+            {
+              "en": "Our budget is hardly sufficient to pay people, let alone buy any new equipment.",
+              "zh": "我们的预算几乎不够支付工资，更不用说买新设备了。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "controversy · argument · debate · dispute · quarrel",
       "memo": "五级\"吵\"，从社会吵到床头：controversy 是公开的激烈争议——contra(反)+vers(转)→因反对而转向，主语多是政策、话题（cause controversy 引起争议、a controversy over 关于……的争议）；argument 是说理的争论——argue 的名词，提理由说服对方，另义\"论点、论据\"（an argument against... 反对……的论据）；debate 是正式辩论——为做决定、辨真理的公开辩论（political debate、debate on/about 就……辩论）；dispute 是带目的性的争端——可指利益争夺（in dispute 有争议、beyond dispute 无可争辩、劳资纠纷 industrial dispute，动词\"对……表示异议\"）；quarrel 最生活化——情绪化的口角（quarrel with sb. about/over sth.，make up a quarrel 言归于好）。一句话分工：社会争议 controversy，说理论点 argument，正式辩论 debate，利益争端 dispute，日常口角 quarrel。",
       "words": [
