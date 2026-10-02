@@ -3216,6 +3216,54 @@
   ],
   "syn": [
     {
+      "title": "announce · declare",
+      "memo": "都译\"宣布\"，正式度和\"首次性\"不同：announce＝an(加强)+nounce(说)→首次公开让人知道，常带\"预告\"意味（The company announced its plan 宣布计划；announce sth. to sb. 向某人宣布），名词 announcement、announcer 播音员；declare＝de(加强)+clar(清楚)→公开说清楚→正式场合郑重宣布，多用于官方（declare war on... 对……宣战；be declared a global pandemic/disaster area 被宣布为…），另有\"申报\"（declare goods 申报物品）和\"断言\"义，名词 declaration（《独立宣言》the Declaration of Independence）。书内三级辨析：announce 首次向公众宣布 < declare 正式场合郑重宣布 < proclaim 官方宣布国家大事。",
+      "words": [
+        {
+          "w": "announce",
+          "rank": 3,
+          "ph": {
+            "uk": "əˈnaʊns",
+            "us": "əˈnaʊns"
+          },
+          "pos": "vt.",
+          "gloss": "宣布，宣告；播报；预告",
+          "usage": "an(加强)+nounce(说)→一再讲→首次公开告知，常带预告意味；名词 announcement 宣布/通知、announcer 播音员；搭配 announce sth. to sb.",
+          "phrases": [
+            "announce sth. to sb. 向某人宣布某事",
+            "announce the news 宣布消息"
+          ],
+          "ex": [
+            {
+              "en": "The company announced its plan to open offices in three Asian cities.",
+              "zh": "该公司宣布了在三个亚洲城市开设办事处的计划。"
+            }
+          ]
+        },
+        {
+          "w": "declare",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈkleə(r)",
+            "us": "dɪˈkler"
+          },
+          "pos": "v.",
+          "gloss": "宣布，宣告，声明；断言，宣称；申报",
+          "usage": "de(加强)+clar(清楚)→说清楚→正式郑重宣布，多用于官方场合；搭配 declare war on...；名词 declaration 声明/宣言；海关\"申报\"也用它",
+          "phrases": [
+            "declare war on... 对……宣战",
+            "make a declaration 发表声明"
+          ],
+          "ex": [
+            {
+              "en": "The region was declared a disaster area after the flood destroyed thousands of homes.",
+              "zh": "洪水摧毁数千所房屋后，该地区被宣布为灾区。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "entail · involve",
       "memo": "都译\"涉及/需要\"且都接 doing，语气不同：entail 是\"必然带来\"——形势或决定在逻辑上躲不掉的代价（The job entails a lot of hard work 这份工作必然要求刻苦；entail considerable risk 必然带风险），词根 en(使)+tail(切)→切下来就得承担，书面正式，暗示\"逃不掉\"；involve 覆盖面广——①牵涉、涉及（人被卷入：be involved in the scandal 卷入丑闻）②包含、需要（The job involves travelling 需要出差）③使参与。对比同一句型：The job entails hard work（必然要求）vs The job involves travelling（包含出差环节）。写作分工：强调\"不可避免的后果/代价\"用 entail，说\"牵涉哪些人和事\"用 involve。",
       "words": [
