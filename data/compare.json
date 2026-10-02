@@ -3573,6 +3573,54 @@
   ],
   "syn": [
     {
+      "title": "outrage · rage",
+      "memo": "rage 是\"狂怒\"本身——失控的暴怒（in a rage 怒气冲冲、be speechless with rage 气得说不出话），作 vi. 还有高频义\"（风暴/战火/争论）肆虐\"（The blizzard was still raging 暴风雪仍在肆虐）；outrage＝out(超出)+rage→超出常理令人暴怒→因骇人之事激起的\"义愤、公愤\"（public outrage 公愤、be outraged at/by 对……感到愤怒，名词还指\"暴行\"，形容词 outrageous 骇人的/蛮横无理的，被动 outraged 震怒的）。一句话分工：个人失控的火是 rage，道义上的公愤是 outrage。书内补刀：rage 狂怒失控 / anger 常用词 / indignation 因不公而愤慨 / fury 难以压制的狂怒。",
+      "words": [
+        {
+          "w": "outrage",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈaʊtreɪdʒ",
+            "us": "ˈaʊtreɪdʒ"
+          },
+          "pos": "n. / vt.",
+          "gloss": "愤怒，义愤；暴行，骇人事件（n.）；激怒，使震怒（vt.）",
+          "usage": "out(超出)+rage→超出常理的怒→义愤；搭配 public outrage 公愤、be outraged at/by...；名词义\"暴行\"、形容词 outrageous 骇人的也是考点",
+          "phrases": [
+            "public outrage 公愤",
+            "be outraged at/by... 对……感到愤怒"
+          ],
+          "ex": [
+            {
+              "en": "The decision to close the local hospital caused public outrage.",
+              "zh": "关闭当地医院的决定引起了公众的愤怒。"
+            }
+          ]
+        },
+        {
+          "w": "rage",
+          "rank": 5,
+          "ph": {
+            "uk": "reɪdʒ",
+            "us": "reɪdʒ"
+          },
+          "pos": "n. / vi.",
+          "gloss": "狂怒，暴怒；肆虐，激烈进行（vi.）",
+          "usage": "失控的暴怒；搭配 in a rage、be speechless with rage；vi. 主语常是 storm/battle/fire/debate——\"肆虐\"是阅读高频；书内辨析 rage 失控 / anger 常用 / indignation 因不公 / fury 难压制",
+          "phrases": [
+            "in a rage 怒气冲冲",
+            "be speechless with rage 气得说不出话"
+          ],
+          "ex": [
+            {
+              "en": "The blizzard was still raging outside.",
+              "zh": "外面暴风雪仍在肆虐。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "originate · derive",
       "memo": "都说\"从哪来\"，主语和方向不同：originate 的主语是\"源头那件事/物\"本身——某事物在哪儿发端（originate in/from... 起源于：The disease originated in the tropics 疾病起源于热带；还可 vt.\"开创、发明\"originate a style 开创一种风格）；derive 的主语是\"取得好处/内容的那方\"——derive...from... 从……获得（derive energy from light 从光照中获得能量、derive pleasure from reading），被动 be derived from... 则是\"出自、源于\"——词源/学科归属题高频（be derived from Latin 源于拉丁语）。逻辑对照：A originates in B＝B 产生了 A；A is derived from B＝A 出自 B。一句话：源头自己\"发源\"用 originate，从……得到用 derive...from，说\"出自\"用 be derived from。形近角度 origin 另见 region·religion·origin 组。",
       "words": [
