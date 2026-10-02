@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "consequence · sequence",
+      "memo": "同根 sequ（跟随），前缀定身份：consequence＝con+sequ+ence→\"跟着而来\"的东西→后果、结果（as a consequence 因此、face the consequences 承担后果，形容词 consequent 随之发生的、副词 consequently 因此）；sequence＝sequ+ence→\"一个跟着一个\"→顺序、一连串（in sequence 按顺序、a sequence of events 一连串事件，科技语境还指\"序列\"，基因测序用动词 sequence）。sequ- 家族认全：consequence 后果 / sequence 顺序 / subsequent 随后的（sub- 在后）/ consequent 随之发生的 / consensus 共识（形近另见 consensus·consequence 组，义近另见 outcome·consequence·conclusion 组）。听力抓前缀：con- 是结果，sub- 是随后，裸 sequ- 是顺序。",
+      "words": [
+        {
+          "w": "consequence",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnsɪkwəns",
+            "us": "ˈkɑːnsəkwens"
+          },
+          "pos": "n.",
+          "gloss": "结果，后果；重要性（u.）",
+          "usage": "con(共同)+sequ(跟随)+ence→随之而来→后果；多指不良结果、重逻辑链；形容词 consequent、副词 consequently 因此；同根 subsequent 随后的；义近/形近角度见 outcome 组与 consensus 组",
+          "phrases": [
+            "as a consequence of 由于……的结果",
+            "face the consequences 承担后果"
+          ],
+          "ex": [
+            {
+              "en": "Parents have spent years raising us up. As a consequence, they should be supported when they are getting old.",
+              "zh": "父母经历那么多年养育我们长大，所以当他们老去的时候，我们应该赡养他们。"
+            }
+          ]
+        },
+        {
+          "w": "sequence",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈsiːkwəns",
+            "us": "ˈsiːkwəns"
+          },
+          "pos": "n. / v.",
+          "gloss": "顺序，次序；一连串，一系列；序列；按顺序排列（v.）",
+          "usage": "sequ(跟随)+ence→一个跟一个→顺序/一连串；搭配 in sequence、a sequence of；基因\"测序\"用动词 sequence；同根 consequent/subsequent",
+          "phrases": [
+            "in sequence 按顺序",
+            "a sequence of events 一连串事件"
+          ],
+          "ex": [
+            {
+              "en": "The genes are read in a precise sequence, and a single error can cause serious disease.",
+              "zh": "基因按精确的顺序被读取，一个错误就可能引发严重的疾病。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "region · religion",
       "memo": "拼写只差一段：region 地区，religion 宗教（中间多一个 gi，词也更长）。词根分家：region＝reg(统治)→管辖的范围→地区、区域（同根 regional 地区的，行政上的\"行政区\"也用它，书内记法：发音类似\"瑞金\"——一个地方）；religion＝re+lig(捆绑)→把人\"绑\"在信仰上→宗教（同根 obligation 义务——也是把你\"绑\"住的东西；形容词 religious 宗教的/虔诚的高频）。听力拼写抓中段：-gi- 只是 region，-ligi- 才是 religion。一句话：地理用 region，信仰用 religion。",
       "words": [
