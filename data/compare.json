@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "anticipate · participate",
+      "memo": "共饮 -cipate 尾巴（cip＝take 拿），前缀定方向：anticipate＝anti(before 在前)+cip+ate→在脑海里\"提前拿到\"→预期、预料（考点：后接动名词 anticipate doing，不接不定式；anticipate a question 预判问题，名词 anticipation，搭配 in anticipation of 预期到）；participate＝parti(联想 party)+cip+ate→聚会里\"人人拿一份\"→参加、参与（participate in 参加，participant 参加者、participation 参与）。区分抓词头：anti- 是\"提前\"，parti- 是\"一份/part\"。一句话：脑子里提前拿是 anticipate，现场伸手拿一份是 participate。",
+      "words": [
+        {
+          "w": "anticipate",
+          "rank": 5,
+          "ph": {
+            "uk": "ænˈtɪsɪpeɪt",
+            "us": "ænˈtɪsɪpeɪt"
+          },
+          "pos": "vt.",
+          "gloss": "预期，预料，期望；先于……行动",
+          "usage": "anti(before)+cip(拿)+ate→提前拿到→预料；语法考点：后接动名词 anticipate doing，不接不定式；名词 anticipation、搭配 in anticipation of...；近 expect/foresee",
+          "phrases": [
+            "anticipate doing sth. 期盼/预料做某事",
+            "in anticipation of... 预期到……"
+          ],
+          "ex": [
+            {
+              "en": "He anticipated something unusual would happen.",
+              "zh": "他预感到不寻常的事将要发生。"
+            }
+          ]
+        },
+        {
+          "w": "participate",
+          "rank": 5,
+          "ph": {
+            "uk": "pɑːˈtɪsɪpeɪt",
+            "us": "pɑːrˈtɪsɪpeɪt"
+          },
+          "pos": "vi.",
+          "gloss": "参加，参与；分享，分担",
+          "usage": "parti(部分/part)+cip(拿)+ate→拿一份→参与；必须与 in 连用（participate in the activity）；名词 participation 参与、participant 参加者；近 join/engage",
+          "phrases": [
+            "participate in... 参加……",
+            "fully participate in... 充分参与……"
+          ],
+          "ex": [
+            {
+              "en": "Over half of the staff in the company participate in strike.",
+              "zh": "这个公司一半以上的人参加了罢工。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "conform · confront",
       "memo": "con- 开头一字之差，尾巴定态度：conform＝con(共同)+form(形式)→\"共同的形式\"→遵守、符合——跟着规矩走（conform to/with... 遵守/符合，conform to the standard 符合标准，名词 conformity 一致/从众，书内近义 comply；form 家族还有 transform 改变、reform 改革、uniform 一律的）；confront＝con(一起)+front(前面)→来到面前→面对、对抗——迎着上（confront problems directly 直接面对问题，被动 be confronted with/by... 面临，confront sb. with sth. 使某人对质，名词 confrontation 对峙，近义 face）。态度对立好记：conform 是\"随大流\"，confront 是\"迎面怼\"。听力抓尾巴：-form 跟从，-front 迎击。",
       "words": [
