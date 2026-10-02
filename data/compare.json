@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "outcome · overcome",
+      "memo": "come 家族双胞胎，前缀定身份：outcome＝out(出)+come→\"走出来\"的东西→名词\"结果、结局\"（the final outcome 最终结果，重音在前 /ˈaʊtkʌm/，和 come out（结果是）一起记；义近角度另见 outcome·consequence·conclusion 组）；overcome＝over(越过)+come→从困难上面飞过去→动词\"克服、战胜\"（过去式 overcame：overcome the difficulty/fear 克服困难/恐惧，还可被动\"被（情感）淹没\" be overcome by grief）。三抓手分清：词性（outcome 名词 / overcome 动词）、重音（前重 / 后重）、前缀（out 出来 / over 越过）。家族联动：income 进来的收入，被压垮是 overwhelm（over+whelm 淹没）——克敌是 overcome，被情绪淹没是 overwhelmed。",
+      "words": [
+        {
+          "w": "outcome",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈaʊtkʌm",
+            "us": "ˈaʊtkʌm"
+          },
+          "pos": "n.",
+          "gloss": "结果，结局；成果",
+          "usage": "out(出)+come→走出来的东西→结果；中性词，指行动/过程的最终产出；和 come out（结果是）一起记；义近角度另见 outcome·consequence·conclusion 组",
+          "phrases": [
+            "the final outcome 最终结果",
+            "the outcome of the experiment 实验结果"
+          ],
+          "ex": [
+            {
+              "en": "The final outcome of the negotiations depends on whether both sides are willing to compromise.",
+              "zh": "谈判的最终结果取决于双方是否愿意妥协。"
+            }
+          ]
+        },
+        {
+          "w": "overcome",
+          "rank": 3,
+          "ph": {
+            "uk": "ˌəʊvəˈkʌm",
+            "us": "ˌoʊvərˈkʌm"
+          },
+          "pos": "vt.",
+          "gloss": "克服，解决；战胜；被（情感）压倒",
+          "usage": "over(越过)+come→从困难上飞过去→克服；过去式 overcame、过去分词 overcome；搭配 overcome the difficulty/fear；被动 be overcome by 被（情感/浓烟等）击倒；别和 overwhelm（压倒、使不知所措）混",
+          "phrases": [
+            "overcome the difficulty 克服困难",
+            "be overcome by... 被……压倒/淹没"
+          ],
+          "ex": [
+            {
+              "en": "He finally managed to overcome his fear of flying.",
+              "zh": "他终于克服了对飞行的恐惧。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "confine · combine",
       "memo": "形近双胞胎：都是 con-/com- 开头的双音节动词，尾音都是 /baɪn/ 的音，词根分家：confine＝con(加强)+fin(界限，同 finish/final 的 fin)→划出界限→限制、把……局限于（be confined to 局限于，重症语境还指\"卧床/禁闭\"，名词 confinement；同根 define 下定义）；combine＝com(共同)+bine(联想\"并\")→并在一起→结合、联合（combine...with...，名词 combination；义近角度另见 combine·integrate·assimilate·merge·consolidate·ally 组）。拼写抓中间：-fin- 是\"界限\"（限制），-bin- 是\"捆绑\"（结合）；义近角度 confine 另见 restrict 限制家族组。一句话：划界用 confine，绑一起用 combine。",
       "words": [
