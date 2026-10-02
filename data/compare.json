@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "region · religion",
+      "memo": "拼写只差一段：region 地区，religion 宗教（中间多一个 gi，词也更长）。词根分家：region＝reg(统治)→管辖的范围→地区、区域（同根 regional 地区的，行政上的\"行政区\"也用它，书内记法：发音类似\"瑞金\"——一个地方）；religion＝re+lig(捆绑)→把人\"绑\"在信仰上→宗教（同根 obligation 义务——也是把你\"绑\"住的东西；形容词 religious 宗教的/虔诚的高频）。听力拼写抓中段：-gi- 只是 region，-ligi- 才是 religion。一句话：地理用 region，信仰用 religion。",
+      "words": [
+        {
+          "w": "region",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈriːdʒən",
+            "us": "ˈriːdʒən"
+          },
+          "pos": "n.",
+          "gloss": "地区，区域；（身体）部位；行政区",
+          "usage": "reg(统治)→管辖的范围→地区；形容词 regional 地区的/区域的；近 area；书内记法：发音类似\"瑞金\"（一个地方）",
+          "phrases": [
+            "poor regions 贫困地区",
+            "brain regions 大脑区域"
+          ],
+          "ex": [
+            {
+              "en": "This is one of the most densely populated regions of North America.",
+              "zh": "这是北美人口最为稠密的地区之一。"
+            }
+          ]
+        },
+        {
+          "w": "religion",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈlɪdʒən",
+            "us": "rɪˈlɪdʒən"
+          },
+          "pos": "n.",
+          "gloss": "宗教；宗教信仰",
+          "usage": "re+lig(捆绑)→把人绑在信仰上→宗教；同根 obligation 义务；形容词 religious 宗教的/虔诚的（religious beliefs 宗教信仰）；搭配 the freedom of religion 宗教自由",
+          "phrases": [
+            "the freedom of religion 宗教自由",
+            "religious beliefs 宗教信仰"
+          ],
+          "ex": [
+            {
+              "en": "In that society, religion once shaped laws, education and almost every aspect of daily life.",
+              "zh": "在那个社会，宗教曾塑造了法律、教育以及日常生活的几乎每一个方面。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "impulse · impose",
       "memo": "im- 开头一字之差，词根定身份：impulse＝im(向内)+puls(驱动)→内在的驱力→名词\"冲动\"（on impulse 一时冲动，形容词 impulsive 冲动的），物理里还是\"脉冲\"；impose＝im(里面)+pose(放)→把东西硬放到别人头上→动词\"强加、强制实行\"，还能\"征税\"（impose sth. on sb. 把……强加给……，a new tax was imposed on... 被征收新税，名词 imposition）。分工：心里\"冲\"出来的名词用 impulse，压到别人头上的动词用 impose。pose（放）家族另见 propose·purpose 组和 exploit·expose 组。",
       "words": [
