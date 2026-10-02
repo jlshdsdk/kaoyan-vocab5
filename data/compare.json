@@ -3264,6 +3264,75 @@
   ],
   "syn": [
     {
+      "title": "endure · abide · tolerate",
+      "memo": "都译\"忍受\"，忍的东西和场合不同：endure 最硬核——end(最后)+ure→坚持到最后→忍受苦难（endure hardships/extreme cold，长时段的苦），另有 vi.\"持续\"（species have endured for millions of years），正式、多用于否定句；tolerate 忍的是\"人或行为\"——书内明示\"不指苦难\"：can't tolerate that noise 容忍噪声、监管者 won't tolerate misleading claims 不容忍违规，派生 tolerable 可忍受的、tolerance 宽容/耐受；abide 的\"忍受\"义现在主要活在口语否定 can't abide（无法容忍）里，真正的考点是 abide by 遵守（法律/诺言/合同）。一句话分工：苦难用 endure，人和行为用 tolerate，\"遵守\"用 abide by。书内补刀：忍苦难还有 bear/stand，也多用于否定句。",
+      "words": [
+        {
+          "w": "endure",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈdjʊə(r)",
+            "us": "ɪnˈdʊr"
+          },
+          "pos": "vt. & vi.",
+          "gloss": "忍受，容忍；持续，持久（vi.）",
+          "usage": "end(最后)+ure→坚持到最后→忍耐；宾语多是苦难、疼痛等长时间硬扛的东西；正式，多用于否定句；名词 endurance 忍耐力",
+          "phrases": [
+            "endure hardships 忍受苦难",
+            "endure extreme cold 忍受极寒"
+          ],
+          "ex": [
+            {
+              "en": "The early settlers had to endure extreme cold and food shortages during their first winter.",
+              "zh": "早期移民在第一个冬天不得不忍受极度的寒冷和食物短缺。"
+            }
+          ]
+        },
+        {
+          "w": "abide",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈbaɪd",
+            "us": "əˈbaɪd"
+          },
+          "pos": "v.",
+          "gloss": "容忍，忍受；遵守，忠于；逗留，居住（旧）",
+          "usage": "忍受义今多用于否定 can't abide 无法容忍；高频考点 abide by 遵守（法律/诺言）；过去式 abode/abided，形容词 abiding 持久不变的",
+          "phrases": [
+            "abide by... 遵守……；信守……",
+            "can't abide (doing) sth. 无法容忍"
+          ],
+          "ex": [
+            {
+              "en": "Both sides promised to abide by the contract.",
+              "zh": "双方承诺遵守合同。"
+            }
+          ]
+        },
+        {
+          "w": "tolerate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈtɒləreɪt",
+            "us": "ˈtɑːləreɪt"
+          },
+          "pos": "vt.",
+          "gloss": "容忍，忍受；容许，默许；（对药物）有耐受性",
+          "usage": "书内辨析：tolerate 忍的是人或行为，不指苦难；常用否定 won't/can't tolerate；派生 tolerable 可忍受的、tolerance 宽容/耐受性；医学义\"耐受\"也考",
+          "phrases": [
+            "tolerate that noise 容忍那种噪声",
+            "won't tolerate misleading claims 不容忍误导性宣传"
+          ],
+          "ex": [
+            {
+              "en": "I don't know how you tolerate that noise!",
+              "zh": "我不知道你怎么能忍受那样的噪声！"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "combine · integrate · assimilate · merge · consolidate · ally",
       "memo": "六词都往\"合\"里走，合的方式不同：combine 最通用——combine...with... 把两者\"结合\"，各部分仍可辨；integrate 是\"融入整体\"——integrate...into/with... 使浑然一体（名词 integration，同根 integrity 完整/正直）；merge 是（企业等）\"合并\"——两方并成一方、界限消失（merger n. 企业合并，merge into 融入/渐变为）；consolidate 是 con+solid(坚实)→先\"巩固\"（consolidate one's position 巩固地位），机构语境再引申\"整合统一\"；assimilate 是 as+simil(相似)→\"吸收同化\"——变进来、变相似（immigrants assimilate into the local culture，也可吸收知识，近 absorb）；ally 只\"结盟\"不合并——ally oneself with / be allied to 结成同盟（n. ally 盟友、alliance 同盟，见 ally·alliance 组）。一句话分工：部件结合用 combine，融为一体用 integrate，组织并购用 merge，先做强用 consolidate，吸收同化用 assimilate，只结盟不合并用 ally。",
       "words": [
