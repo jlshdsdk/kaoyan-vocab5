@@ -84,8 +84,9 @@ const PAGE_SIZE = 5;             // 每页 5 篇
 let page = 0;                    // 当前页（0 起）
 let passages = [];               // 新短文插数组头部（最新在前）
 
-/* 正文按空行/换行拆段落；段落内 (english 中文) 标注转成可点单词，其余原样转义 */
-const VW_RE = /\(([A-Za-z][A-Za-z0-9'’.~-]*)[ \t]+([^()]+?)\)/g;
+/* 正文按空行/换行拆段落；段落内 (english 中文) 标注转成可点单词，其余原样转义。
+ * english 允许多词短语（如 abide by）：贪吃吃下连续空格分隔的 ASCII 词，碰到中文即停。 */
+const VW_RE = /\(([A-Za-z][A-Za-z0-9'’.~-]*(?: [A-Za-z][A-Za-z0-9'’.~-]*)*) ([^()]+?)\)/g;
 
 function renderPara(text) {
   let out = '', last = 0, m;
