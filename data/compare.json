@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "evaluate · elevate",
+      "memo": "都是 e- 开头 -ate 收尾的双音节动词，中间定乾坤：evaluate＝e(出)+valu(价值)+ate→\"把价值说出来\"→评估、评价（词根 valu＝value 价值，同根 valuable；义近角度另见 evaluate·estimate 组，eva- 家族另见 evaluate·evolution·estimate 组）；elevate＝e(向外)+lev(举，同 level 水平、lever 杠杆)→举起来→提升、使升高（elevate blood pressure 使血压升高、elevate your mind 提升心智；名词 elevation 提高/海拔，elevator 电梯就是\"举你的东西\"；书内辨析：elevate 举起/提升/晋升，hoist 用机器绞起，lift 提重物离地，反义 lower）。一句话：-valu- 是\"价值\"（评），-lev- 是\"举\"（升）；口语里\"电梯\"一跳出来就找 elevator。",
+      "words": [
+        {
+          "w": "evaluate",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈvæljueɪt",
+            "us": "ɪˈvæljueɪt"
+          },
+          "pos": "vt.",
+          "gloss": "评估，评价；估价",
+          "usage": "e(出)+valu(价值)+ate→把价值说出来→评优劣；名词 evaluation；近义 assess；义近角度另见 evaluate·estimate 组，形近另见 evaluate·evolution·estimate 组",
+          "phrases": [
+            "evaluate the performance 评估表现",
+            "evaluate students/applicants 评估学生/申请人"
+          ],
+          "ex": [
+            {
+              "en": "We need to learn how to evaluate them properly.",
+              "zh": "我们需要学习如何正确评估它们。"
+            }
+          ]
+        },
+        {
+          "w": "elevate",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈelɪveɪt",
+            "us": "ˈelɪveɪt"
+          },
+          "pos": "vt.",
+          "gloss": "提升，提高，举起；提拔；使情绪高昂",
+          "usage": "e(向外)+lev(举)+ate→举起来→升高；搭配 elevate blood pressure/the role；名词 elevation 提高/海拔、elevator 电梯；书内辨析 elevate 提升/晋升 vs hoist 机器绞起 vs lift 提重物；反义 lower",
+          "phrases": [
+            "elevate blood pressure 使血压升高",
+            "elevate your mind 提升心智"
+          ],
+          "ex": [
+            {
+              "en": "Regular reading can elevate your mind and broaden your understanding of the world.",
+              "zh": "经常阅读可以提升你的心智，拓宽你对世界的理解。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "anticipate · participate",
       "memo": "共饮 -cipate 尾巴（cip＝take 拿），前缀定方向：anticipate＝anti(before 在前)+cip+ate→在脑海里\"提前拿到\"→预期、预料（考点：后接动名词 anticipate doing，不接不定式；anticipate a question 预判问题，名词 anticipation，搭配 in anticipation of 预期到）；participate＝parti(联想 party)+cip+ate→聚会里\"人人拿一份\"→参加、参与（participate in 参加，participant 参加者、participation 参与）。区分抓词头：anti- 是\"提前\"，parti- 是\"一份/part\"。一句话：脑子里提前拿是 anticipate，现场伸手拿一份是 participate。",
       "words": [
