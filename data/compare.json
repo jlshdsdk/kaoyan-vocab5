@@ -3504,6 +3504,54 @@
   ],
   "syn": [
     {
+      "title": "switch · shift",
+      "memo": "都译\"转变\"，动作的\"劲道\"不同：switch 原义\"开关、闸\"——干脆利落的\"切换\"，一下换到另一档（switch to doing sth. 转而做某事、switch...to... 把……换到……，本义 n. 开关高频：switch on/off = turn on/off）；shift 是\"挪动、转移\"——位置、状态、重心的移动或渐变（shift...onto/to... 把……转嫁给……、shift attention to 转移注意力、a shift in... 方式的转变，另有\"轮班\"义 day/night shift 白班/夜班，shift off 推卸）。一句话分工：按\"档位\"啪一下切过去用 switch，重心/立场慢慢挪过去用 shift。名词搭配对照：make the switch 完成切换，a fundamental shift in the way we do business 经营方式的根本转变。",
+      "words": [
+        {
+          "w": "switch",
+          "rank": 5,
+          "ph": {
+            "uk": "swɪtʃ",
+            "us": "swɪtʃ"
+          },
+          "pos": "v. / n.",
+          "gloss": "转变，转换；开关（n.）",
+          "usage": "原义\"电闸\"→像按开关一样干脆地切换；搭配 switch to (doing) sth. 转而做、switch...to...；本义\"开关\"高频（switch on/off 接通/切断）；近 shift",
+          "phrases": [
+            "switch to doing sth. 转而做某事",
+            "switch on/off 打开/关掉"
+          ],
+          "ex": [
+            {
+              "en": "But switching to a mainly plant-based diet wouldn't help.",
+              "zh": "但转向以农作物为主的饮食不会有帮助。"
+            }
+          ]
+        },
+        {
+          "w": "shift",
+          "rank": 5,
+          "ph": {
+            "uk": "ʃɪft",
+            "us": "ʃɪft"
+          },
+          "pos": "v. / n.",
+          "gloss": "转移，转变；轮班（n.）",
+          "usage": "位置/状态/重心的移动或渐变；搭配 shift...onto/to... 转嫁、shift attention to、a shift in...；另有\"轮班\"义（day/night shift）与 shift off 推卸；同义 change/substitute",
+          "phrases": [
+            "shift...onto/to... 把……转移到……",
+            "a shift in... ……的转变"
+          ],
+          "ex": [
+            {
+              "en": "Over the last ten years there has been a fundamental shift in the way we do business.",
+              "zh": "在过去的十年里，我们做生意的方式发生了根本性的转变。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "obstacle · barrier · hindrance · bar",
       "memo": "四个\"挡路\"的，挡的方式不同：obstacle 是\"要绕过/克服的困难\"——ob(反)+sta(站)+cle→反着站的东西（the biggest obstacle to progress 发展的最大障碍，搭配 obstacle to；书内辨析：hindrance 妨碍干扰、obstruction 阻塞道路通道）；barrier 是\"屏障/壁垒\"——bar(栏杆)+ier→隔开两边的有形屏障或无形隔阂（trade barriers 贸易壁垒、language barriers 语言障碍、a barrier to sth.）；hindrance 是\"拖后腿的妨碍\"——hinder 的名词，指拖慢进度的干扰（more of a hindrance than a help 帮倒忙，prove no hindrance to 结果并不妨碍）；bar 原义\"栏杆\"→动词\"禁止、阻挡\"（bar sb. from (doing) sth. 禁止，behind bars 在狱中，a bar to success 障碍，另有\"酒吧/条/律师界\"义）。一句话分工：要克服的困难 obstacle，隔开两边的壁垒 barrier，拖后腿 hindrance，明令禁止 bar。",
       "words": [
