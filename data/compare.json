@@ -3312,6 +3312,117 @@
   ],
   "syn": [
     {
+      "title": "controversy · argument · debate · dispute · quarrel",
+      "memo": "五级\"吵\"，从社会吵到床头：controversy 是公开的激烈争议——contra(反)+vers(转)→因反对而转向，主语多是政策、话题（cause controversy 引起争议、a controversy over 关于……的争议）；argument 是说理的争论——argue 的名词，提理由说服对方，另义\"论点、论据\"（an argument against... 反对……的论据）；debate 是正式辩论——为做决定、辨真理的公开辩论（political debate、debate on/about 就……辩论）；dispute 是带目的性的争端——可指利益争夺（in dispute 有争议、beyond dispute 无可争辩、劳资纠纷 industrial dispute，动词\"对……表示异议\"）；quarrel 最生活化——情绪化的口角（quarrel with sb. about/over sth.，make up a quarrel 言归于好）。一句话分工：社会争议 controversy，说理论点 argument，正式辩论 debate，利益争端 dispute，日常口角 quarrel。",
+      "words": [
+        {
+          "w": "controversy",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒntrəvɜːsi",
+            "us": "ˈkɑːntrəvɜːrsi"
+          },
+          "pos": "n. [C, U]",
+          "gloss": "争论，争议，（公开的）辩论",
+          "usage": "contra(反对)+vers(转)+y→因反对而转向→公开争议；主语多是政策/话题/人物；形容词 controversial 争议性的；搭配 cause/spark controversy",
+          "phrases": [
+            "cause controversy 引起争议",
+            "a controversy over... 关于……的争论"
+          ],
+          "ex": [
+            {
+              "en": "They fueled a lot of controversy.",
+              "zh": "他们引发了许多争论。"
+            }
+          ]
+        },
+        {
+          "w": "argument",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈɑːɡjumənt",
+            "us": "ˈɑːrɡjumənt"
+          },
+          "pos": "n. [C]",
+          "gloss": "争论，辩论；论点，论据；理由",
+          "usage": "argue 的名词：提理由说服对方；阅读题高频义是\"论点/论据\"（the author's argument 作者的论点）；搭配 have an argument over、an argument against；义近角度另见 argument·dispute 组",
+          "phrases": [
+            "settle an argument 解决争端",
+            "an argument against... 反对……的论据"
+          ],
+          "ex": [
+            {
+              "en": "The two economists had a fierce argument over the causes of inflation.",
+              "zh": "两位经济学家就通货膨胀的成因发生了激烈争论。"
+            }
+          ]
+        },
+        {
+          "w": "debate",
+          "rank": 4,
+          "ph": {
+            "uk": "dɪˈbeɪt",
+            "us": "dɪˈbeɪt"
+          },
+          "pos": "n. / v.",
+          "gloss": "辩论，争论；讨论",
+          "usage": "de(往下)+bate(联想 beat)→把对手打下去→正式公开辩论，为做决定/辨真理；搭配 debate on/about、beyond debate；动词还可\"斟酌考虑\"",
+          "phrases": [
+            "debate about/on... 就……辩论",
+            "political debate 政治辩论"
+          ],
+          "ex": [
+            {
+              "en": "The debate over the EU's single currency is stuck because the dominant powers are busy handling their own crises.",
+              "zh": "关于欧盟单一货币的讨论陷入了僵局，因为几个主要国家都在忙于应对自身的危机。"
+            }
+          ]
+        },
+        {
+          "w": "dispute",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈspjuːt",
+            "us": "dɪˈspjuːt"
+          },
+          "pos": "n. / v.",
+          "gloss": "争论，争端，纠纷；对……表示异议（v.）",
+          "usage": "带目的性的争执，可指利益/领土/劳资争夺；高频 beyond dispute 无可争辩、in dispute 在争议中；动词\"质疑、表示异议\"（dispute the findings）；形近角度另见 consensus·consequence 组附近同根词",
+          "phrases": [
+            "beyond dispute 无可争辩",
+            "industrial dispute 劳资纠纷"
+          ],
+          "ex": [
+            {
+              "en": "The matter was settled beyond dispute by the court judgment.",
+              "zh": "此问题已由法庭判决，不容争辩。"
+            }
+          ]
+        },
+        {
+          "w": "quarrel",
+          "rank": 3,
+          "ph": {
+            "uk": "ˈkwɒrəl",
+            "us": "ˈkwɔːrəl"
+          },
+          "pos": "n. / vi.",
+          "gloss": "争吵，口角；抱怨的理由",
+          "usage": "最生活化、情绪化的争吵；搭配 quarrel with sb. about/over sth.、make up a quarrel 言归于好；过去式 quarrelled/英",
+          "phrases": [
+            "quarrel with sb. about/over sth. 为某事和某人争吵",
+            "make up a quarrel (争吵后)言归于好"
+          ],
+          "ex": [
+            {
+              "en": "He got involved in a quarrel with his neighbour.",
+              "zh": "他和邻居吵了一架。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "endure · abide · tolerate",
       "memo": "都译\"忍受\"，忍的东西和场合不同：endure 最硬核——end(最后)+ure→坚持到最后→忍受苦难（endure hardships/extreme cold，长时段的苦），另有 vi.\"持续\"（species have endured for millions of years），正式、多用于否定句；tolerate 忍的是\"人或行为\"——书内明示\"不指苦难\"：can't tolerate that noise 容忍噪声、监管者 won't tolerate misleading claims 不容忍违规，派生 tolerable 可忍受的、tolerance 宽容/耐受；abide 的\"忍受\"义现在主要活在口语否定 can't abide（无法容忍）里，真正的考点是 abide by 遵守（法律/诺言/合同）。一句话分工：苦难用 endure，人和行为用 tolerate，\"遵守\"用 abide by。书内补刀：忍苦难还有 bear/stand，也多用于否定句。",
       "words": [
