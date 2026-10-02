@@ -290,8 +290,8 @@
       ]
     },
     {
-      "title": "region · religion",
-      "memo": "拼写只差一段：region 地区，religion 宗教（中间多一个 gi，词也更长）。词根分家：region＝reg(统治)→管辖的范围→地区、区域（同根 regional 地区的，行政上的\"行政区\"也用它，书内记法：发音类似\"瑞金\"——一个地方）；religion＝re+lig(捆绑)→把人\"绑\"在信仰上→宗教（同根 obligation 义务——也是把你\"绑\"住的东西；形容词 religious 宗教的/虔诚的高频）。听力拼写抓中段：-gi- 只是 region，-ligi- 才是 religion。一句话：地理用 region，信仰用 religion。",
+      "title": "region · religion · origin",
+      "memo": "三个带 /dʒ/ 尾音的高频名词，中段分家：region＝reg(统治)→管辖的范围→地区、区域（regional 地区的，书内记法：发音类似\"瑞金\"）；religion＝re+lig(捆绑)→把人\"绑\"在信仰上→宗教（多一段 ligi，形容词 religious 虔诚的，同根 obligation）；origin 词形最短→起源、由来（the origin of the universe 宇宙起源、(pl.) 出身血统；形容词 original 原先的/独创的，义近角度另见 initial·original·primary·prime·prior 组）。听力抓开头和长度：region 重音在前 /ˈriː-/；religion 多一段 -ligi-；origin 开头 /ˈɒr-/。一句话：地理 region，信仰 religion，源头 origin。",
       "words": [
         {
           "w": "region",
@@ -332,6 +332,27 @@
             {
               "en": "In that society, religion once shaped laws, education and almost every aspect of daily life.",
               "zh": "在那个社会，宗教曾塑造了法律、教育以及日常生活的几乎每一个方面。"
+            }
+          ]
+        },
+        {
+          "w": "origin",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈɒrɪdʒɪn",
+            "us": "ˈɔːrɪdʒɪn"
+          },
+          "pos": "n.",
+          "gloss": "起源，源头，起因；（复数）出身，血统",
+          "usage": "词形最短的\"源\"；the origin of... 的起源；(pl.) origins 出身、血统；形容词 original 原先的/独创的（义近角度另见 initial·original·primary·prime·prior 组）、originally 起初；同根 orient 东方（书内记法：文化的 origin 在东方）",
+          "phrases": [
+            "the origin of... ……的起源",
+            "by origin 论出身"
+          ],
+          "ex": [
+            {
+              "en": "Scientists are still debating the exact origin of the universe.",
+              "zh": "科学家仍在争论宇宙的确切起源。"
             }
           ]
         }
