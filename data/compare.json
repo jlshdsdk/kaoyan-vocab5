@@ -3573,6 +3573,54 @@
   ],
   "syn": [
     {
+      "title": "originate · derive",
+      "memo": "都说\"从哪来\"，主语和方向不同：originate 的主语是\"源头那件事/物\"本身——某事物在哪儿发端（originate in/from... 起源于：The disease originated in the tropics 疾病起源于热带；还可 vt.\"开创、发明\"originate a style 开创一种风格）；derive 的主语是\"取得好处/内容的那方\"——derive...from... 从……获得（derive energy from light 从光照中获得能量、derive pleasure from reading），被动 be derived from... 则是\"出自、源于\"——词源/学科归属题高频（be derived from Latin 源于拉丁语）。逻辑对照：A originates in B＝B 产生了 A；A is derived from B＝A 出自 B。一句话：源头自己\"发源\"用 originate，从……得到用 derive...from，说\"出自\"用 be derived from。形近角度 origin 另见 region·religion·origin 组。",
+      "words": [
+        {
+          "w": "originate",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈrɪdʒɪneɪt",
+            "us": "əˈrɪdʒɪneɪt"
+          },
+          "pos": "v.",
+          "gloss": "发源，起源，发端于；开创，发明",
+          "usage": "主语是发源的事物本身；搭配 originate in/from... 起源于、originate with sb. 由某人首创；vt. 还可\"开创\"；名词 origin 起源（形近见 region·religion·origin 组）、original 原先的",
+          "phrases": [
+            "originate in/from... 起源于……",
+            "originate with sb. 由某人首创"
+          ],
+          "ex": [
+            {
+              "en": "The disease is thought to have originated in the tropics.",
+              "zh": "这种疾病据说起源于热带地区。"
+            }
+          ]
+        },
+        {
+          "w": "derive",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈraɪv",
+            "us": "dɪˈraɪv"
+          },
+          "pos": "vt. & vi.",
+          "gloss": "得到，获得；源自，源于；追溯……的起源",
+          "usage": "de(向下)+riv(河)→自源头顺流而下→源于；主动 derive...from... 从……获得；被动 be derived from... 出自/源于（词源题高频）；近 acquire；名词 derivative 衍生物",
+          "phrases": [
+            "derive...from... 从……获得",
+            "be derived from... 源自……"
+          ],
+          "ex": [
+            {
+              "en": "This income was derived directly from his writing.",
+              "zh": "这笔收入直接来源于他的写作。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "switch · shift",
       "memo": "都译\"转变\"，动作的\"劲道\"不同：switch 原义\"开关、闸\"——干脆利落的\"切换\"，一下换到另一档（switch to doing sth. 转而做某事、switch...to... 把……换到……，本义 n. 开关高频：switch on/off = turn on/off）；shift 是\"挪动、转移\"——位置、状态、重心的移动或渐变（shift...onto/to... 把……转嫁给……、shift attention to 转移注意力、a shift in... 方式的转变，另有\"轮班\"义 day/night shift 白班/夜班，shift off 推卸）。一句话分工：按\"档位\"啪一下切过去用 switch，重心/立场慢慢挪过去用 shift。名词搭配对照：make the switch 完成切换，a fundamental shift in the way we do business 经营方式的根本转变。",
       "words": [
