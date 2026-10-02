@@ -2,6 +2,75 @@
   "v": 1,
   "form": [
     {
+      "title": "contradict · controversy · contradiction",
+      "memo": "contra＝\"相反\"，尾巴定身份：contradict＝contra(反)+dict(说)→反着说→反驳、与……矛盾（contradict oneself 自相矛盾、The two reports contradict each other 两份报告相互矛盾，近义 refute；dict 家族还有 predict 预言、dictate 口述/命令）；contradiction 是它的名词——矛盾、不一致（in contradiction to 与……相反，形容词式搭配 self-contradiction 自相矛盾）；controversy 换了尾巴 vers(转)＝contra(反)+vers→因反对而转向→（公开的）争议（cause controversy 引起争议，义近五兄弟见 controversy·argument 组，形容词 controversial 争议性的）。同根顺带认全：contrary 相反的（on the contrary 相反、contrary to 与……相反）。一句话：contradict 动词\"反着说\"，contradiction 名词\"矛盾\"，controversy \"反着转\"→公开争论。",
+      "words": [
+        {
+          "w": "contradict",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌkɒntrəˈdɪkt",
+            "us": "ˌkɑːntrəˈdɪkt"
+          },
+          "pos": "vt.",
+          "gloss": "反驳，驳斥；与……矛盾，与……抵触",
+          "usage": "contra(反)+dict(说)→反着说→反驳/矛盾；搭配 contradict oneself 自相矛盾；近义 refute；名词 contradiction；形近角度另见 contract·contrast·contradict 组",
+          "phrases": [
+            "contradict oneself 自相矛盾",
+            "contradict each other 相互矛盾"
+          ],
+          "ex": [
+            {
+              "en": "The two reports contradict each other.",
+              "zh": "这两份报告相互矛盾。"
+            }
+          ]
+        },
+        {
+          "w": "controversy",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒntrəvɜːsi",
+            "us": "ˈkɑːntrəvɜːrsi"
+          },
+          "pos": "n. [C, U]",
+          "gloss": "争论，争议，（公开的）辩论",
+          "usage": "contra(反)+vers(转)+y→因反对而转向→公开争议；搭配 cause/spark controversy、a controversy over...；形容词 controversial 争议性的；义近角度另见 controversy·argument·debate·dispute·quarrel 组",
+          "phrases": [
+            "cause controversy 引起争议",
+            "a controversy over... 关于……的争论"
+          ],
+          "ex": [
+            {
+              "en": "They fueled a lot of controversy.",
+              "zh": "他们引发了许多争论。"
+            }
+          ]
+        },
+        {
+          "w": "contradiction",
+          "rank": 3,
+          "ph": {
+            "uk": "ˌkɒntrəˈdɪkʃn",
+            "us": "ˌkɑːntrəˈdɪkʃn"
+          },
+          "pos": "n. [C, U]",
+          "gloss": "矛盾，不一致；反驳",
+          "usage": "contradict 的名词；搭配 in contradiction to... 与……相反、a contradiction between A and B 两者的矛盾；写作利器：there is a clear contradiction between...",
+          "phrases": [
+            "in contradiction to... 与……相反",
+            "a contradiction between... ……之间的矛盾"
+          ],
+          "ex": [
+            {
+              "en": "There is a clear contradiction between the two witness statements.",
+              "zh": "两份证人证言之间存在明显的矛盾。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "evaluate · elevate",
       "memo": "都是 e- 开头 -ate 收尾的双音节动词，中间定乾坤：evaluate＝e(出)+valu(价值)+ate→\"把价值说出来\"→评估、评价（词根 valu＝value 价值，同根 valuable；义近角度另见 evaluate·estimate 组，eva- 家族另见 evaluate·evolution·estimate 组）；elevate＝e(向外)+lev(举，同 level 水平、lever 杠杆)→举起来→提升、使升高（elevate blood pressure 使血压升高、elevate your mind 提升心智；名词 elevation 提高/海拔，elevator 电梯就是\"举你的东西\"；书内辨析：elevate 举起/提升/晋升，hoist 用机器绞起，lift 提重物离地，反义 lower）。一句话：-valu- 是\"价值\"（评），-lev- 是\"举\"（升）；口语里\"电梯\"一跳出来就找 elevator。",
       "words": [
