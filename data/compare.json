@@ -2,6 +2,75 @@
   "v": 1,
   "form": [
     {
+      "title": "raise · rise · arise",
+      "memo": "词形三兄弟，举手投足看\"及物\"：raise 是及物动词——手把东西\"举起来\"（raise prices/hands/funds 提价/举手/筹款，还能 raise children 抚养、raise a question 提出，n. 加薪；raise-raised-raised）；rise 是不及物动词——主语自己\"升起来\"（prices rise 物价上涨、the sun rises 日出，rise-rose-risen，高频 give rise to 引起、on the rise 在增长）；arise 也是不及物——抽象事物\"冒出来\"（problems/opportunities/differences arise 问题/机会出现，高频 arise from/out of... 由……引起，arise-arose-arisen）。一句话分工：动手举 raise（带宾语），自己升 rise（太阳/数字），抽象冒出 arise（问题/机会）。过去式认全：raised / rose-risen / arose-arisen，语填题常考。",
+      "words": [
+        {
+          "w": "raise",
+          "rank": 4,
+          "ph": {
+            "uk": "reɪz",
+            "us": "reɪz"
+          },
+          "pos": "vt. / n.",
+          "gloss": "举起，提高，增加；筹募；提及；抚养，饲养；加薪（n.）",
+          "usage": "及物动词，必须带宾语：raise prices/hands/funds；引申 raise children 抚养、raise a question 提出；名词义\"加薪\"（美式）；过去式 raised",
+          "phrases": [
+            "raise funds 筹募资金",
+            "raise a question 提出问题"
+          ],
+          "ex": [
+            {
+              "en": "It would be a shame to raise prices too much.",
+              "zh": "大幅增加票价是一件令人羞耻的事情。"
+            }
+          ]
+        },
+        {
+          "w": "rise",
+          "rank": 4,
+          "ph": {
+            "uk": "raɪz",
+            "us": "raɪz"
+          },
+          "pos": "vi. / n.",
+          "gloss": "上升，升起；增加，提高；上涨（n.）",
+          "usage": "不及物动词（rise-rose-risen）：主语自己升高；高频 give rise to 引起/导致、on the rise 在增长、rise to one's feet 站起来；名词义\"上涨/加薪\"",
+          "phrases": [
+            "give rise to 引起，导致",
+            "on the rise 在增长"
+          ],
+          "ex": [
+            {
+              "en": "Everybody loves a fat pay rise.",
+              "zh": "人人都喜欢大幅加薪。"
+            }
+          ]
+        },
+        {
+          "w": "arise",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈraɪz",
+            "us": "əˈraɪz"
+          },
+          "pos": "vi.",
+          "gloss": "出现，产生，形成；起因于",
+          "usage": "不及物动词（arise-arose-arisen）：主语多是 problem/question/opportunity/difficulty 等抽象事物；高频 arise from/out of... 由……引起；书内记法：a+rise→一个太阳升起的景象\"出现\"了",
+          "phrases": [
+            "arise from/out of... 由……引起",
+            "problems arise 出现问题"
+          ],
+          "ex": [
+            {
+              "en": "Legal disputes may arise when the terms of a contract are vaguely worded.",
+              "zh": "当合同条款措辞含糊时，就可能产生法律纠纷。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "assume · consume · resume · presume",
       "memo": "同根 sume（拿），前缀定去向：assume＝as(向)+sume→拿来当真→假定、认为，另有两义\"承担\"（assume responsibility 承担责任）和\"装出\"（assume an air of 装出……样子）；consume＝con(全)+sume→全拿光→消耗、消费（consume energy 消耗能源，consumer 消费者、consumption 消耗量，be consumed with 心里全被……占据）；presume＝pre(预先)+sume→预先拿定→（有依据地）推测、假定（presumed innocent until proved guilty 无罪推定，presumably 据推测，presume to do 冒昧做——书内辨析：presume 凭经验推测，assume 假定设想常无证据，suppose 按事实猜想）；resume＝re(重新)+sume→重新拿起→（中断后）重新开始（resume doing/one's career；动词读 /rɪˈzjuːm/，注意名词\"简历\"是 résumé 读 /ˈrezjʊmeɪ/）。一句话：拿真 assume，拿光 consume，先拿 presume，重拿 resume。",
       "words": [
