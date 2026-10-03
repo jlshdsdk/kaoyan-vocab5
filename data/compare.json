@@ -3732,6 +3732,54 @@
   ],
   "syn": [
     {
+      "title": "inevitable · unavoidable",
+      "memo": "都译\"不可避免\"，书面度和语感不同：inevitable 是书面高频词——in(不)+evit(避免)+able→\"必然发生的\"，语感是规律/大势使然、躲也躲不掉（It is inevitable that... 必然……是写作利器，the inevitable course of history 历史必由之路，名词 the inevitable 注定发生的事）；unavoidable 是 avoid 的派生——具体情境下\"这一次没躲开\"的（Some delay was unavoidable 鉴于风暴延误在所难免），更中性、偏口语。一句话分工：宏观必然（历史进程、技术变革）用 inevitable，具体麻烦（延误、损失）用 unavoidable。词族联动：avoid 避开（后接 doing）、evade 逃避责任/回避问题（贬义）、avert 避免（重大事故）。",
+      "words": [
+        {
+          "w": "inevitable",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnevɪtəbl",
+            "us": "ɪˈnevɪtəbl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "不可避免的，必然发生的；注定发生的事（n.）",
+          "usage": "in(不)+evit(避免)+able→必然发生；It is inevitable that... 写作高频；the inevitable course of history 历史必由之路；近 unavoidable 但更书面、偏宏观必然",
+          "phrases": [
+            "It is inevitable that... ……是不可避免的",
+            "the inevitable course of history 历史必由之路"
+          ],
+          "ex": [
+            {
+              "en": "It is inevitable that technology will change the way we live and work.",
+              "zh": "技术将不可避免地改变我们生活和工作的方式。"
+            }
+          ]
+        },
+        {
+          "w": "unavoidable",
+          "rank": 1,
+          "ph": {
+            "uk": "ˌʌnəˈvɔɪdəbl",
+            "us": "ˌʌnəˈvɔɪdəbl"
+          },
+          "pos": "adj.",
+          "gloss": "无法避免的",
+          "usage": "un+avoid+able：具体情境下这一次\"没躲开\"；多形容延误、损失、费用等具体麻烦；动词 avoid 后接 doing",
+          "phrases": [
+            "unavoidable delay 不可避免的延误",
+            "avoid doing sth. 避免做某事"
+          ],
+          "ex": [
+            {
+              "en": "Some delay was unavoidable given the severity of the winter storms.",
+              "zh": "鉴于冬季风暴的严重程度，出现一些延误在所难免。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "outrage · rage",
       "memo": "rage 是\"狂怒\"本身——失控的暴怒（in a rage 怒气冲冲、be speechless with rage 气得说不出话），作 vi. 还有高频义\"（风暴/战火/争论）肆虐\"（The blizzard was still raging 暴风雪仍在肆虐）；outrage＝out(超出)+rage→超出常理令人暴怒→因骇人之事激起的\"义愤、公愤\"（public outrage 公愤、be outraged at/by 对……感到愤怒，名词还指\"暴行\"，形容词 outrageous 骇人的/蛮横无理的，被动 outraged 震怒的）。一句话分工：个人失控的火是 rage，道义上的公愤是 outrage。书内补刀：rage 狂怒失控 / anger 常用词 / indignation 因不公而愤慨 / fury 难以压制的狂怒。",
       "words": [
