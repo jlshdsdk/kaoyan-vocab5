@@ -3939,6 +3939,75 @@
   ],
   "syn": [
     {
+      "title": "prosecute · accuse · claim",
+      "memo": "都进\"官司\"语境，走的程序不同：prosecute 是司法动作——检方\"起诉、提起公诉\"（pro 事先+secut 追踪→事先追踪行迹→起诉：be prosecuted 受到起诉，prosecution 起诉、prosecutor 检察官/公诉人）；accuse 是\"指控、指责\"——轻重皆可（accuse sb. of (doing) sth. 指控某人做某事：She accused him of lying 轻则\"指责\"，名词 accusation；书内对照：charge 更正式且配 with——charge sb. with 正式起诉 vs accuse sb. of）；claim 是\"声称、主张\"——单方宣称未必有据（critics claim that...，They even claimed that plants have brain-like command centers），另义\"索赔、认领\"（claim compensation 索赔、make a claim on your insurance 按保险单索赔、lay claim to 声称对……的权利）。一句话分工：检方起诉 prosecute，指控/指责 accuse（of），单方声称与索赔 claim。",
+      "words": [
+        {
+          "w": "prosecute",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈprɒsɪkjuːt",
+            "us": "ˈprɑːsɪkjuːt"
+          },
+          "pos": "v.",
+          "gloss": "起诉，控告，提起公诉；继续从事（旧）",
+          "usage": "pro(事先)+secut(追踪)+e→事先追踪行迹→起诉；主语多是检方/官方；名词 prosecution 起诉、prosecutor 检察官/公诉人；形近别和 execute（处决）混",
+          "phrases": [
+            "be prosecuted for... 因……被起诉",
+            "the prosecuting lawyer 控方律师"
+          ],
+          "ex": [
+            {
+              "en": "Among prosecuted firms, those with the most comprehensive corporate social responsibility programmes tended to get more lenient penalties.",
+              "zh": "在受到起诉的公司中，那些有最全面的社会责任计划的公司往往会得到较为宽大的处罚。"
+            }
+          ]
+        },
+        {
+          "w": "accuse",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈkjuːz",
+            "us": "əˈkjuːz"
+          },
+          "pos": "vt.",
+          "gloss": "指控，控告；指责",
+          "usage": "语法必带 of：accuse sb. of (doing) sth.；轻可\"指责\"重可\"控告\"；名词 accusation 指控、the accused 被告；对照 charge sb. with（更正式的起诉）；反义 defend 辩护",
+          "phrases": [
+            "accuse sb. of (doing) sth. 指控某人（做）某事",
+            "stand accused of... 被指控……"
+          ],
+          "ex": [
+            {
+              "en": "Still, we need to be careful not to accuse opponents of bad arguments too quickly.",
+              "zh": "尽管如此，我们仍须谨慎行事，不要过快地指责对手的论点有多糟糕。"
+            }
+          ]
+        },
+        {
+          "w": "claim",
+          "rank": 5,
+          "ph": {
+            "uk": "kleɪm",
+            "us": "kleɪm"
+          },
+          "pos": "v. / n.",
+          "gloss": "声称，主张，断言；索取，认领；索赔；主张（n.）",
+          "usage": "单方宣称、未必有据——阅读态度题信号词（critics claim that...）；另义\"（依权利）索取/索赔\"：claim compensation、make a claim on insurance、lay claim to...；形近别和 acclaim（欢呼喝彩）混",
+          "phrases": [
+            "claim compensation 索赔",
+            "lay claim to... 声称对……的权利"
+          ],
+          "ex": [
+            {
+              "en": "They even claimed that plants have 'brain-like command centers' at their root tips.",
+              "zh": "他们甚至声称，植物的根尖有'类似大脑的指挥中心'。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "initial · original · primary · prime · premier · foremost",
       "memo": "六个\"首/先\"分两条线。时间的先——initial 是\"起点\"（in+it 走→起步的：the initial stage 初始阶段，n. 首字母，派生 initiate/initiative）；original 是\"源头\"（origin 起源→the original plan 原计划，引申\"独创的\"an original design，n. 原作）。地位的首——primary 首要的/初级的（primary aim 主要目的、primary school 小学）；prime 更高一级\"头等的、第一流的\"（a prime concern 头等大事、prime minister 首相，n. 全盛期 in the prime of）；premier 与 prime 同源，指\"坐第一把交椅的人\"——n. 总理/首相（the French premier），adj. 首屈一指的（one of the premier cultural events），小心形近 premiere 首映式；foremost 是 fore(前)+most(最)→\"排最前的\"——最重要的/最著名的（the foremost critic 首屈一指的评论家，必背 first and foremost 首先）。一句话分工：起点 initial，源头原创 original，首要 primary，头等 prime，首相 premier，排最前 foremost。",
       "words": [
