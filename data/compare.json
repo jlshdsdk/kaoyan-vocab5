@@ -2,6 +2,96 @@
   "v": 1,
   "form": [
     {
+      "title": "assume · consume · resume · presume",
+      "memo": "同根 sume（拿），前缀定去向：assume＝as(向)+sume→拿来当真→假定、认为，另有两义\"承担\"（assume responsibility 承担责任）和\"装出\"（assume an air of 装出……样子）；consume＝con(全)+sume→全拿光→消耗、消费（consume energy 消耗能源，consumer 消费者、consumption 消耗量，be consumed with 心里全被……占据）；presume＝pre(预先)+sume→预先拿定→（有依据地）推测、假定（presumed innocent until proved guilty 无罪推定，presumably 据推测，presume to do 冒昧做——书内辨析：presume 凭经验推测，assume 假定设想常无证据，suppose 按事实猜想）；resume＝re(重新)+sume→重新拿起→（中断后）重新开始（resume doing/one's career；动词读 /rɪˈzjuːm/，注意名词\"简历\"是 résumé 读 /ˈrezjʊmeɪ/）。一句话：拿真 assume，拿光 consume，先拿 presume，重拿 resume。",
+      "words": [
+        {
+          "w": "assume",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈsjuːm",
+            "us": "əˈsuːm"
+          },
+          "pos": "vt.",
+          "gloss": "假定，假设，认为；承担（责任）；呈现，装出",
+          "usage": "as(向)+sume(拿)→拿来当真→假定；三义都高频：assume that... 假定、assume responsibility/office 承担、assume an air of 装出；名词 assumption；书内辨析 presume 凭据推测 / assume 常无证据",
+          "phrases": [
+            "assume responsibility 承担责任",
+            "assume that... 假定……"
+          ],
+          "ex": [
+            {
+              "en": "It's probably safe to assume (that) we'll be hearing more about this story.",
+              "zh": "可以肯定的是，我们会听到更多关于这个故事的消息。"
+            }
+          ]
+        },
+        {
+          "w": "consume",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsjuːm",
+            "us": "kənˈsuːm"
+          },
+          "pos": "vt.",
+          "gloss": "消耗，消费；吃喝；使充满（内心）",
+          "usage": "con(全)+sume(拿)→全拿光→耗尽；consumer 消费者、consumption 消耗量；be consumed with... 满心都是（嫉妒/愧疚）；名词义\"（感情）强烈的\"也考",
+          "phrases": [
+            "consume energy 消耗能源",
+            "be consumed with... 被……占据心神"
+          ],
+          "ex": [
+            {
+              "en": "From 1998 to 2000, 14.5 percent of the fruit Americans consumed was imported.",
+              "zh": "自1998年到2000年间，美国人食用的水果中有14.5%是进口的。"
+            }
+          ]
+        },
+        {
+          "w": "resume",
+          "rank": 3,
+          "ph": {
+            "uk": "rɪˈzjuːm",
+            "us": "rɪˈzuːm"
+          },
+          "pos": "v. / n.",
+          "gloss": "（中断后）重新开始，继续；恢复；简历（n.）",
+          "usage": "re(重新)+sume(拿)→重新拿起→接着来；resume doing sth./one's career；动词读 /rɪˈzjuːm/，名词\"简历\"是 résumé 读 /ˈrezjʊmeɪ/；名词义 resumption 恢复",
+          "phrases": [
+            "resume doing sth. 继续做某事",
+            "resume talks 恢复会谈"
+          ],
+          "ex": [
+            {
+              "en": "She resumed her career after an interval of six years.",
+              "zh": "时隔六年之后她又开始了自己的职业生涯。"
+            }
+          ]
+        },
+        {
+          "w": "presume",
+          "rank": 4,
+          "ph": {
+            "uk": "prɪˈzjuːm",
+            "us": "prɪˈzuːm"
+          },
+          "pos": "vt. / vi.",
+          "gloss": "（有依据地）推测，假定；冒昧，擅自行事",
+          "usage": "pre(预先)+sume(拿)→预先拿定→推测；法律高频 be presumed innocent until proved guilty 无罪推定；presume to do sth. 冒昧/擅自；副词 presumably 据推测；书内辨析 presume 凭经验推测 / assume 无证据假定 / suppose 按事实猜想",
+          "phrases": [
+            "presume that... 推测……",
+            "presume to do sth. 冒昧做某事"
+          ],
+          "ex": [
+            {
+              "en": "In law, a person is presumed innocent until proved guilty.",
+              "zh": "从法律上，一个人在证实有罪之前应该被假定无罪。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "contradict · controversy · contradiction",
       "memo": "contra＝\"相反\"，尾巴定身份：contradict＝contra(反)+dict(说)→反着说→反驳、与……矛盾（contradict oneself 自相矛盾、The two reports contradict each other 两份报告相互矛盾，近义 refute；dict 家族还有 predict 预言、dictate 口述/命令）；contradiction 是它的名词——矛盾、不一致（in contradiction to 与……相反，形容词式搭配 self-contradiction 自相矛盾）；controversy 换了尾巴 vers(转)＝contra(反)+vers→因反对而转向→（公开的）争议（cause controversy 引起争议，义近五兄弟见 controversy·argument 组，形容词 controversial 争议性的）。同根顺带认全：contrary 相反的（on the contrary 相反、contrary to 与……相反）。一句话：contradict 动词\"反着说\"，contradiction 名词\"矛盾\"，controversy \"反着转\"→公开争论。",
       "words": [
