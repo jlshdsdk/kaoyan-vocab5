@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "claim · acclaim",
+      "memo": "同根 claim（本义\"喊、说\"），前缀定情绪：claim 是一个人\"声称\"——单方宣称未必有据（critics claim that...，另义\"索赔、认领\"claim compensation/make a claim；义近角度另见 prosecute·accuse·claim 组）；acclaim＝ac(一再)+claim(喊)→一群人\"一再喊好\"→称赞、喝彩（be acclaimed as... 被誉为、win critical acclaim 赢得评论界赞誉、receive acclaim，名词义\"称誉\"尤指对艺术成就；近 praise/hail）；家族顺带认全：exclaim＝ex(往外)喊→（因惊讶）惊叫、exclaim in delight 高兴地大叫；proclaim＝pro(向前)喊→（权力机关）正式宣布：The president proclaimed a state of emergency。一句话：claim 一个人说，acclaim 一群人喊好，exclaim 吓一跳喊出来，proclaim 官方向前宣告。",
+      "words": [
+        {
+          "w": "claim",
+          "rank": 5,
+          "ph": {
+            "uk": "kleɪm",
+            "us": "kleɪm"
+          },
+          "pos": "v. / n.",
+          "gloss": "声称，主张，断言；索取，认领；索赔；主张（n.）",
+          "usage": "词根本义\"喊\"→\"宣称\"；单方宣称、未必有据，是阅读态度题信号词（critics claim that...）；另义\"（依权利）索取/索赔\"claim compensation、lay claim to；义近角度另见 prosecute·accuse·claim 组",
+          "phrases": [
+            "claim compensation 索赔",
+            "lay claim to... 声称对……的权利"
+          ],
+          "ex": [
+            {
+              "en": "You can make a claim on your insurance policy.",
+              "zh": "你可按保险单索赔。"
+            }
+          ]
+        },
+        {
+          "w": "acclaim",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈkleɪm",
+            "us": "əˈkleɪm"
+          },
+          "pos": "vt. / n.",
+          "gloss": "称赞，为……喝彩；喝彩，欢呼；称誉（n.）",
+          "usage": "ac(一再)+claim(喊)→一再喊好→称誉；搭配 be acclaimed as... 被誉为、win critical acclaim；名词义尤指对艺术成就的高度评价；近 praise/hail；义近角度另见 incentive·inspire·affirm·acclaim 组",
+          "phrases": [
+            "be acclaimed as... 被誉为……",
+            "win critical acclaim 赢得评论界赞誉"
+          ],
+          "ex": [
+            {
+              "en": "The work was acclaimed as a masterpiece.",
+              "zh": "该作品被誉为杰作。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "deprive · derive",
       "memo": "de- 开头、尾音都是 /aɪv/ 的双胞胎，中间 pr/r 定性质：deprive＝de+prive(联想 private 私人)→把私人所有的\"拿走\"→剥夺、使丧失（必带介词：deprive sb. of sth. 剥夺某人的某物，被动 be deprived of 被剥夺；名词 deprivation 缺失/剥夺——sleep deprivation 睡眠不足，形容词 deprived 贫困的，反义 entitle 给予权利）；derive＝de+rive(河，联想 river)→顺流而下→源自、获得（derive...from... 从……获得，be derived from 出自；义近角度另见 originate·derive 组）。听力抓辅音：/dɪˈpraɪv/ 多个 p 音（私人财产被拿走→剥夺），/dɪˈraɪv/ 是顺河而下（源自）。一句话：夺走 pr-ivate 是 deprive，顺 r-iver 而下是 derive。",
       "words": [
