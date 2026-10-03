@@ -3732,6 +3732,96 @@
   ],
   "syn": [
     {
+      "title": "promote · boost · foster · accelerate",
+      "memo": "四个\"往前推\"，推法不同：promote 最通用——pro(向前)+mote(动)→使向前动→促进抽象事物的发展（promote development/economic growth/gender equality，另有\"促销、晋升\"义，名词 promotion）；boost 是\"往上推一把\"——提振数字和指标（boost productivity/the economy 提振经济，boost confidence 提振信心，n. 增长/激励考过 2021 阅读）；foster 是像养孩子一样\"培育\"——慢慢滋养出来（foster an interest in 培养兴趣、foster a sense of 培养意识、foster economic growth，另有\"领养\"义，近 cultivate）；accelerate 是纯\"踩油门\"——ac(加强)+celer(速度)→使更快（accelerate the pace of... 加快……的步伐，反义 decelerate 减速）。一句话分工：通用促进 promote，提振指标 boost，培育养出 foster，加速进程 accelerate。",
+      "words": [
+        {
+          "w": "promote",
+          "rank": 5,
+          "ph": {
+            "uk": "prəˈməʊt",
+            "us": "prəˈmoʊt"
+          },
+          "pos": "vt.",
+          "gloss": "促进，增进；提升，晋升；促销，推销",
+          "usage": "pro(向前)+mote(动)→使向前动→促进；及物动词直接接宾语；另义\"促销/晋升\"（promotion 三义都考）；近 advocate",
+          "phrases": [
+            "promote economic growth 促进经济发展",
+            "be promoted to 被提拔为"
+          ],
+          "ex": [
+            {
+              "en": "Reading widely can promote the development of critical thinking.",
+              "zh": "广泛阅读可以促进批判性思维的发展。"
+            }
+          ]
+        },
+        {
+          "w": "boost",
+          "rank": 5,
+          "ph": {
+            "uk": "buːst",
+            "us": "buːst"
+          },
+          "pos": "vt. / n.",
+          "gloss": "提高，推动，提振；增长，激励（n.）",
+          "usage": "往上推一把→指标类提升（boost productivity/the economy/confidence）；n. 增长/鼓励（2021 年阅读考过）；give a boost to 使增长/鼓舞",
+          "phrases": [
+            "boost the economy 推动经济发展",
+            "give a boost to 促进，鼓舞"
+          ],
+          "ex": [
+            {
+              "en": "Automation should eventually boost productivity.",
+              "zh": "自动化最终应该提高生产力。"
+            }
+          ]
+        },
+        {
+          "w": "foster",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈfɒstə(r)",
+            "us": "ˈfɔːstər"
+          },
+          "pos": "vt. / adj.",
+          "gloss": "培养，培育，促进；领养，抚育；领养的（adj.）",
+          "usage": "像养孩子一样慢慢滋养（foster an interest/a sense of 培养兴趣/意识）；另义\"领养\"（foster children 养子）；近 cultivate；书内记法：four 个 sister 都是妈妈培养的",
+          "phrases": [
+            "foster an interest in... 培养对……的兴趣",
+            "foster a sense of... 培养……意识"
+          ],
+          "ex": [
+            {
+              "en": "They have fostered over 60 children during the past ten years.",
+              "zh": "在过去10年间，他们抚育了60多个儿童。"
+            }
+          ]
+        },
+        {
+          "w": "accelerate",
+          "rank": 5,
+          "ph": {
+            "uk": "əkˈseləreɪt",
+            "us": "əkˈseləreɪt"
+          },
+          "pos": "v.",
+          "gloss": "（使）加速，加快；促进",
+          "usage": "ac(加强)+celer(速度)+ate→使更快；搭配 accelerate the pace of... 加快……的步伐；同根 accelerator 油门/加速器；反义 decelerate 减速；名词 acceleration",
+          "phrases": [
+            "accelerate the pace of... 加快……的步伐",
+            "accelerate the process 加快进程"
+          ],
+          "ex": [
+            {
+              "en": "Exposure to the sun can accelerate the ageing process.",
+              "zh": "暴露在日光下会加快老化过程。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "inevitable · unavoidable",
       "memo": "都译\"不可避免\"，书面度和语感不同：inevitable 是书面高频词——in(不)+evit(避免)+able→\"必然发生的\"，语感是规律/大势使然、躲也躲不掉（It is inevitable that... 必然……是写作利器，the inevitable course of history 历史必由之路，名词 the inevitable 注定发生的事）；unavoidable 是 avoid 的派生——具体情境下\"这一次没躲开\"的（Some delay was unavoidable 鉴于风暴延误在所难免），更中性、偏口语。一句话分工：宏观必然（历史进程、技术变革）用 inevitable，具体麻烦（延误、损失）用 unavoidable。词族联动：avoid 避开（后接 doing）、evade 逃避责任/回避问题（贬义）、avert 避免（重大事故）。",
       "words": [
