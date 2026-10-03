@@ -3987,6 +3987,96 @@
   ],
   "syn": [
     {
+      "title": "resume · recover · restore · revive",
+      "memo": "四个\"恢复\"，恢复的对象不同：resume 是\"（中断后）重新开始\"——恢复的是活动、进程（resume talks 恢复会谈、resume one's career 重返职业生涯，re+sume 重新拿起，名词 resumption）；recover 是\"从伤病/挫折中缓过来\"——主语常是人、城市、经济，必配 from（recover from the crisis 从危机中恢复，另有\"追回\"义 recover stolen paintings 追回失窃画作）；restore 是\"使恢复原状\"——他动词把东西放回原处（restore order 恢复秩序、restore sb. to health 恢复健康、restore public trust 恢复信任，还有\"修复古建筑\"和\"归还\"义，名词 restoration）；revive 是 re+vive(活)→\"复活、复苏\"——让死气沉沉的重新活过来（revive the economy 振兴经济、revive an old custom 复兴旧俗，名词 revival）。一句话分工：中断的活动 resume，伤病挫折后 recover，使回原状 restore，死而复生 revive。",
+      "words": [
+        {
+          "w": "resume",
+          "rank": 3,
+          "ph": {
+            "uk": "rɪˈzjuːm",
+            "us": "rɪˈzuːm"
+          },
+          "pos": "v. / n.",
+          "gloss": "（中断后）重新开始，继续；恢复；简历（n.）",
+          "usage": "re+sume(拿)→重新拿起→接着来；恢复的是活动/进程：resume talks/doing sth.；名词义\"简历\"是 résumé 读 /ˈrezjʊmeɪ/；形近角度另见 assume·consume·resume·presume 组",
+          "phrases": [
+            "resume doing sth. 继续做某事",
+            "resume talks 恢复会谈"
+          ],
+          "ex": [
+            {
+              "en": "She resumed her career after an interval of six years.",
+              "zh": "时隔六年之后她又开始了自己的职业生涯。"
+            }
+          ]
+        },
+        {
+          "w": "recover",
+          "rank": 3,
+          "ph": {
+            "uk": "rɪˈkʌvə(r)",
+            "us": "rɪˈkʌvər"
+          },
+          "pos": "v.",
+          "gloss": "恢复，痊愈；收回，追回；弥补",
+          "usage": "主语多是人/经济/城市，必配 from：recover from...；及物另义\"追回\"（recover stolen goods 追回失窃物）、\"挽回损失\"；名词 recovery 恢复/复苏",
+          "phrases": [
+            "recover from... 从……中恢复",
+            "recover stolen paintings 追回失窃画作"
+          ],
+          "ex": [
+            {
+              "en": "It took the city nearly a decade to recover from the financial crisis.",
+              "zh": "这座城市花了近十年才从金融危机中恢复过来。"
+            }
+          ]
+        },
+        {
+          "w": "restore",
+          "rank": 5,
+          "ph": {
+            "uk": "rɪˈstɔː(r)",
+            "us": "rɪˈstɔːr"
+          },
+          "pos": "vt.",
+          "gloss": "恢复；修复；归还；使复位",
+          "usage": "re(回)+store(储存)→放回原处→恢复原状；他动词：restore order/one's health/public trust；restore sb. to... 使某人恢复到；\"修复\"义指古建筑文物（restore the cathedral）；名词 restoration",
+          "phrases": [
+            "restore order 恢复秩序",
+            "restore sb. to health 使某人恢复健康"
+          ],
+          "ex": [
+            {
+              "en": "Trust is easily destroyed and hugely expensive to restore.",
+              "zh": "信任很容易被摧毁，但是恢复需要花费巨大的代价。"
+            }
+          ]
+        },
+        {
+          "w": "revive",
+          "rank": 4,
+          "ph": {
+            "uk": "rɪˈvaɪv",
+            "us": "rɪˈvaɪv"
+          },
+          "pos": "v.",
+          "gloss": "（使）苏醒，复苏；复兴，重新流行",
+          "usage": "re(再)+vive(活)→又活一遍→复活；主语多是经济、传统、兴趣等\"没了生气\"的东西：revive the economy/an old custom；名词 revival 复兴；同根 survive 幸存、vivid 生动的",
+          "phrases": [
+            "revive the economy 振兴经济",
+            "revive an old custom 复兴旧俗"
+          ],
+          "ex": [
+            {
+              "en": "The government is trying to revive the economy through tax cuts.",
+              "zh": "政府正试图通过减税来振兴经济。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "prosecute · accuse · claim",
       "memo": "都进\"官司\"语境，走的程序不同：prosecute 是司法动作——检方\"起诉、提起公诉\"（pro 事先+secut 追踪→事先追踪行迹→起诉：be prosecuted 受到起诉，prosecution 起诉、prosecutor 检察官/公诉人）；accuse 是\"指控、指责\"——轻重皆可（accuse sb. of (doing) sth. 指控某人做某事：She accused him of lying 轻则\"指责\"，名词 accusation；书内对照：charge 更正式且配 with——charge sb. with 正式起诉 vs accuse sb. of）；claim 是\"声称、主张\"——单方宣称未必有据（critics claim that...，They even claimed that plants have brain-like command centers），另义\"索赔、认领\"（claim compensation 索赔、make a claim on your insurance 按保险单索赔、lay claim to 声称对……的权利）。一句话分工：检方起诉 prosecute，指控/指责 accuse（of），单方声称与索赔 claim。",
       "words": [
