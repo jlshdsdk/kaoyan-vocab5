@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "deprive · derive",
+      "memo": "de- 开头、尾音都是 /aɪv/ 的双胞胎，中间 pr/r 定性质：deprive＝de+prive(联想 private 私人)→把私人所有的\"拿走\"→剥夺、使丧失（必带介词：deprive sb. of sth. 剥夺某人的某物，被动 be deprived of 被剥夺；名词 deprivation 缺失/剥夺——sleep deprivation 睡眠不足，形容词 deprived 贫困的，反义 entitle 给予权利）；derive＝de+rive(河，联想 river)→顺流而下→源自、获得（derive...from... 从……获得，be derived from 出自；义近角度另见 originate·derive 组）。听力抓辅音：/dɪˈpraɪv/ 多个 p 音（私人财产被拿走→剥夺），/dɪˈraɪv/ 是顺河而下（源自）。一句话：夺走 pr-ivate 是 deprive，顺 r-iver 而下是 derive。",
+      "words": [
+        {
+          "w": "deprive",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈpraɪv",
+            "us": "dɪˈpraɪv"
+          },
+          "pos": "vt.",
+          "gloss": "剥夺，使丧失；免去（职务）",
+          "usage": "de+prive(联想 private)→拿走私人所有→剥夺；语法必带 of：deprive sb. of sth.、be deprived of；名词 deprivation 缺失（sleep deprivation）、deprived 贫困的；反义 entitle",
+          "phrases": [
+            "deprive sb. of sth. 剥夺某人的某物",
+            "be deprived of education 被剥夺受教育的机会"
+          ],
+          "ex": [
+            {
+              "en": "No child should be deprived of education because of family poverty.",
+              "zh": "任何孩子都不应因家庭贫困而被剥夺受教育的机会。"
+            }
+          ]
+        },
+        {
+          "w": "derive",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈraɪv",
+            "us": "dɪˈraɪv"
+          },
+          "pos": "vt. & vi.",
+          "gloss": "得到，获得；源自，源于；追溯……的起源",
+          "usage": "de+rive(河)→顺流而下→源于；主动 derive...from... 从……获得，被动 be derived from... 出自（词源题高频）；名词 derivative 衍生物；义近角度另见 originate·derive 组",
+          "phrases": [
+            "derive...from... 从……获得",
+            "be derived from... 源自……"
+          ],
+          "ex": [
+            {
+              "en": "Elegance, he believed, did not derive from abundance.",
+              "zh": "他认为，优雅并非来自繁多。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "raise · rise · arise",
       "memo": "词形三兄弟，举手投足看\"及物\"：raise 是及物动词——手把东西\"举起来\"（raise prices/hands/funds 提价/举手/筹款，还能 raise children 抚养、raise a question 提出，n. 加薪；raise-raised-raised）；rise 是不及物动词——主语自己\"升起来\"（prices rise 物价上涨、the sun rises 日出，rise-rose-risen，高频 give rise to 引起、on the rise 在增长）；arise 也是不及物——抽象事物\"冒出来\"（problems/opportunities/differences arise 问题/机会出现，高频 arise from/out of... 由……引起，arise-arose-arisen）。一句话分工：动手举 raise（带宾语），自己升 rise（太阳/数字），抽象冒出 arise（问题/机会）。过去式认全：raised / rose-risen / arose-arisen，语填题常考。",
       "words": [
