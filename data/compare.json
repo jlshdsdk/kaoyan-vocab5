@@ -3891,6 +3891,138 @@
   ],
   "syn": [
     {
+      "title": "initial · original · primary · prime · premier · foremost",
+      "memo": "六个\"首/先\"分两条线。时间的先——initial 是\"起点\"（in+it 走→起步的：the initial stage 初始阶段，n. 首字母，派生 initiate/initiative）；original 是\"源头\"（origin 起源→the original plan 原计划，引申\"独创的\"an original design，n. 原作）。地位的首——primary 首要的/初级的（primary aim 主要目的、primary school 小学）；prime 更高一级\"头等的、第一流的\"（a prime concern 头等大事、prime minister 首相，n. 全盛期 in the prime of）；premier 与 prime 同源，指\"坐第一把交椅的人\"——n. 总理/首相（the French premier），adj. 首屈一指的（one of the premier cultural events），小心形近 premiere 首映式；foremost 是 fore(前)+most(最)→\"排最前的\"——最重要的/最著名的（the foremost critic 首屈一指的评论家，必背 first and foremost 首先）。一句话分工：起点 initial，源头原创 original，首要 primary，头等 prime，首相 premier，排最前 foremost。",
+      "words": [
+        {
+          "w": "initial",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈnɪʃl",
+            "us": "ɪˈnɪʃl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "最初的，开始的；首字母（n.）",
+          "usage": "in(里)+it(走)+ial→起步的→最初的；搭配 the initial stage/reaction；名词义\"首字母\"，动词义\"用首字母签名\"；派生 initiate 开始、initiative 主动性（形近组另见）",
+          "phrases": [
+            "the initial stage 初始阶段",
+            "initial reaction 最初的反应"
+          ],
+          "ex": [
+            {
+              "en": "The initial reaction to the proposal was positive, but doubts soon appeared.",
+              "zh": "对该提案的最初反应是积极的，但疑问很快出现了。"
+            }
+          ]
+        },
+        {
+          "w": "original",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈrɪdʒənl",
+            "us": "əˈrɪdʒənl"
+          },
+          "pos": "adj. / n.",
+          "gloss": "原先的，最初的；新颖的，有独创性的；原作（n.）",
+          "usage": "origin(起源)的派生→原先的/原始的；引申\"独创\"（原创设计、想法新颖）；n. 原件、原作（the original 原文）；副词 originally 起初",
+          "phrases": [
+            "the original plan 原计划",
+            "original design 独创的设计"
+          ],
+          "ex": [
+            {
+              "en": "The original plan was to finish the bridge by the end of 2020.",
+              "zh": "原计划是在2020年底之前建成这座桥。"
+            }
+          ]
+        },
+        {
+          "w": "primary",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈpraɪməri",
+            "us": "ˈpraɪməri"
+          },
+          "pos": "adj. / n.",
+          "gloss": "首要的，主要的；初级的，小学的；（美）初选（n.）",
+          "usage": "prime 的形容词化：最重要的；另义\"初等的\"（primary school 小学——\"初级\"不是\"小学\"一个意思）；搭配 primary aim/cause/school",
+          "phrases": [
+            "primary school 小学",
+            "the primary aim 主要目的"
+          ],
+          "ex": [
+            {
+              "en": "The primary aim of this course is to improve your spoken English.",
+              "zh": "这门课的主要目的是提高英语会话能力。"
+            }
+          ]
+        },
+        {
+          "w": "prime",
+          "rank": 5,
+          "ph": {
+            "uk": "praɪm",
+            "us": "praɪm"
+          },
+          "pos": "adj. / n. / v.",
+          "gloss": "首要的，第一流的，典型的；全盛时期（n.）；使准备好（v.）",
+          "usage": "地位比 primary 更高：头等的、最好的（a prime concern 头等大事、prime minister 首相、prime time 黄金时段）；n. 鼎盛期 in the prime of...；同义 chief/main/principal",
+          "phrases": [
+            "a prime concern 头等大事",
+            "in the prime of life 正当盛年"
+          ],
+          "ex": [
+            {
+              "en": "She is in the prime of her career as a novelist.",
+              "zh": "她正处于小说家职业生涯的鼎盛时期。"
+            }
+          ]
+        },
+        {
+          "w": "premier",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈpremiə(r)",
+            "us": "prɪˈmɪr"
+          },
+          "pos": "n. / adj.",
+          "gloss": "总理，首相；（加拿大的）省长；首要的，最好的（adj.）",
+          "usage": "与 prime 同源，\"坐第一把交椅的人\"→总理/首相；adj. 义\"首屈一指的\"（one of the premier cultural events）；形近陷阱 premiere n. 首映式（读 /ˈpremieə(r)/）",
+          "phrases": [
+            "the French premier 法国总理",
+            "one of the premier events 首屈一指的盛会"
+          ],
+          "ex": [
+            {
+              "en": "The festival has grown into one of the premier cultural events in the region.",
+              "zh": "这个艺术节已发展成该地区首屈一指的文化盛事。"
+            }
+          ]
+        },
+        {
+          "w": "foremost",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈfɔːməʊst",
+            "us": "ˈfɔːrmoʊst"
+          },
+          "pos": "adj. / adv.",
+          "gloss": "最重要的，最著名的；最前的；首先（adv.）",
+          "usage": "fore(前)+most(最)→列在最前→最重要的；搭配 the foremost + 身份（the foremost classical-music critic）；必背 first and foremost 首先；近 principal",
+          "phrases": [
+            "first and foremost 首先",
+            "the foremost reason 最重要的原因"
+          ],
+          "ex": [
+            {
+              "en": "During his lifetime, though, he was also one of England's foremost classical-music critics, and a stylist so widely admired that his Autobiography (1947) became a best-seller.",
+              "zh": "然而他（指内维尔·卡达斯）在世时也曾是英国首屈一指的古典音乐评论家之一，同时也是一位广受赞赏的文体家，他于1947年出版的《自传》曾成为畅销书。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "promote · boost · foster · accelerate",
       "memo": "四个\"往前推\"，推法不同：promote 最通用——pro(向前)+mote(动)→使向前动→促进抽象事物的发展（promote development/economic growth/gender equality，另有\"促销、晋升\"义，名词 promotion）；boost 是\"往上推一把\"——提振数字和指标（boost productivity/the economy 提振经济，boost confidence 提振信心，n. 增长/激励考过 2021 阅读）；foster 是像养孩子一样\"培育\"——慢慢滋养出来（foster an interest in 培养兴趣、foster a sense of 培养意识、foster economic growth，另有\"领养\"义，近 cultivate）；accelerate 是纯\"踩油门\"——ac(加强)+celer(速度)→使更快（accelerate the pace of... 加快……的步伐，反义 decelerate 减速）。一句话分工：通用促进 promote，提振指标 boost，培育养出 foster，加速进程 accelerate。",
       "words": [
@@ -4264,7 +4396,7 @@
     },
     {
       "title": "initial · original · primary · prime · prior",
-      "memo": "五个\"先/首\"，两条线：时间的先——initial 是\"起点\"（in+it 走→起步的：the initial stage 初始阶段、initial reaction 最初反应，n. 首字母，派生 initiate 开始、initiative 主动性）；original 是\"源头\"（origin 起源→原先的 the original plan 原计划，还引申\"独创的\"an original design 原创设计、n. 原作）；prior 是\"在前\"（必背介词搭配 prior to 在……之前，prior experience 以往经验，与 previous 几乎同义但暗含更重要，名词 priority 优先权）。地位的先——primary 首要的/初级的（primary aim 主要目的、primary school 小学）；prime 更高一级\"头等的、第一流的\"（a prime concern 头等大事、prime minister 首相，n. 全盛期 in the prime of）。一句话分工：起点 initial，源头/原创 original，时间在前用 prior，首要 primary，第一流 prime。",
+      "memo": "五个\"先/首\"，两条线：时间的先——initial 是\"起点\"（in+it 走→起步的：the initial stage 初始阶段、initial reaction 最初反应，n. 首字母，派生 initiate 开始、initiative 主动性）；original 是\"源头\"（origin 起源→原先的 the original plan 原计划，还引申\"独创的\"an original design 原创设计、n. 原作）；prior 是\"在前\"（必背介词搭配 prior to 在……之前，prior experience 以往经验，与 previous 几乎同义但暗含更重要，名词 priority 优先权）。地位的先——primary 首要的/初级的（primary aim 主要目的、primary school 小学）；prime 更高一级\"头等的、第一流的\"（a prime concern 头等大事、prime minister 首相，n. 全盛期 in the prime of）。一句话分工：起点 initial，源头/原创 original，时间在前用 prior，首要 primary，第一流 prime。（六词扩充版另见 initial·original·primary·prime·premier·foremost 组）",
       "words": [
         {
           "w": "initial",
