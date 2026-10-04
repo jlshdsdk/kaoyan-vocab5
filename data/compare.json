@@ -4386,6 +4386,54 @@
   ],
   "syn": [
     {
+      "title": "transform · convert",
+      "memo": "都\"变形\"，变的深度不同：transform＝trans(转)+form(形式)→换个形态→\"彻底改变、使改观\"——脱胎换骨级别（transform...into... 使改观：Cheap solar panels transformed energy supply 太阳能板改变了能源供应，名词 transformation，形近另见 conform 组之外的 form 家族：reform/uniform）；convert＝con(完全)+vert(转)→完全转变→\"转换（用途）、改变（信仰）\"（convert...into/to... 把……变成……：convert land to fields 土地转用途、farmers converted to organic production 转向有机生产/改变生产方式，名词 conversion 转换/皈依，形近见 concede·conclude·convert 组）。书内五级\"变化\"全收录：transform 彻底改变性质性格 / change 本质改变 / alter 局部改变基本保持原状 / vary 无规则陆续变化 / convert（使）转变（用途、信仰）。一句话分工：脱胎换骨用 transform，转换用途或信仰用 convert。",
+      "words": [
+        {
+          "w": "transform",
+          "rank": 5,
+          "ph": {
+            "uk": "trænsˈfɔːm",
+            "us": "trænsˈfɔːrm"
+          },
+          "pos": "vt.",
+          "gloss": "使改变形态；彻底改变，使改观；改革",
+          "usage": "trans(转)+form(形式)→换形态→彻底改观；搭配 transform...into...；书内辨析：transform 彻底改性质、alter 局部改、vary 陆续变；名词 transformation",
+          "phrases": [
+            "transform...into... 把……转变成……",
+            "transform society 变革社会"
+          ],
+          "ex": [
+            {
+              "en": "Cheap solar panels have transformed energy supply in villages the national grid never reached.",
+              "zh": "廉价的太阳能板改变了国家电网从未覆盖的村庄的能源供应。"
+            }
+          ]
+        },
+        {
+          "w": "convert",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈvɜːt",
+            "us": "kənˈvɜːrt"
+          },
+          "pos": "v. / n.",
+          "gloss": "（使）转变，转化；改变信仰；皈依者（n.）",
+          "usage": "con(完全)+vert(转)→完全转变；搭配 convert...into/to...；可指用途转换（土地、厂房）、能源转换，也可指信仰改变（convert to Islam）；名词 conversion 转换/皈依；形近角度另见 concede·conclude·convert 组",
+          "phrases": [
+            "convert...into/to... 把……变成……",
+            "convert to... 转向/改信……"
+          ],
+          "ex": [
+            {
+              "en": "A lot of conventional farmers have converted to organic production.",
+              "zh": "许多传统农民已经转向有机生产。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "intervene · interfere · interrupt",
       "memo": "inter＝\"在中间\"，动词尾巴定性质：interrupt＝inter+rupt(断裂)→\"在中间断开\"→打断、中断（interrupt sb. 打断话头、be interrupted by 被……打断，名词 interruption；飓风中断投递也用它）；interfere＝inter+fer(带来)→把（自己的观点）带到中间→干涉、妨碍，多含贬义（考点介词：interfere in sth. 干涉某事 / interfere with sth. 妨碍某事，形容词 interfering 管闲事的，形近角度另见 interfere·integrate·integrity 组）；intervene＝inter+ven(来)→\"来到中间\"→介入、调停，中性偏积极（intervene in sth. 介入某事、intervene between...and... 在……之间调停，名词 intervention 干预/介入）。书内辨析一句收拢：intervene 强调介入，interfere 强调干扰，interrupt 强调打断。一句话：把进程斩断 interrupt，搅局添乱 interfere（贬），居中调停 intervene（中性）。",
       "words": [
