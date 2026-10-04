@@ -7071,8 +7071,8 @@
       ]
     },
     {
-      "title": "restrict · constrain · restrain · confine · circumscribe · limit",
-      "memo": "同为“限制”：limit 最通用，可名可动；restrict 正式指规则限制（to）；confine 窄圈禁闭（to/within）；restrain 忍住不表露（from）；constrain 外部条件所迫；circumscribe 最书面，circum(周围)+scribe(画线)→划定界限，常指权力被框死。",
+      "title": "restrict · constrain · restrain · confine · circumscribe · limit · curb",
+      "memo": "同为\"限制\"：limit 最通用，可名可动；restrict 正式指规则限制（to）；confine 窄圈禁闭（to/within）；restrain 忍住不表露（from）；constrain 外部条件所迫；circumscribe 最书面，circum(周围)+scribe(画线)→划定界限，常指权力被框死；curb 是\"勒住\"——本义马勒/马嚼子→遏制、抑制（curb the influence of ads 遏制广告影响、curb inflation 抑制通胀、put a curb on... 限制；书内记法：cur(联想 occur)+b(联想\"不\")→不想让事情发生就要控制它，两度考过：2020 阅读动词\"抑制\"、2010 阅读名词 Curbs 限制措施）。",
       "words": [
         {
           "w": "restrict",
@@ -7196,6 +7196,27 @@
             {
               "en": "We must limit our spending to what we can afford.",
               "zh": "我们必须把开支限制在能承受的范围内。"
+            }
+          ]
+        },
+        {
+          "w": "curb",
+          "rank": 5,
+          "ph": {
+            "uk": "kɜːb",
+            "us": "kɜːrb"
+          },
+          "pos": "vt. / n.",
+          "gloss": "遏制，抑制，控制；约束（n.）",
+          "usage": "本义\"马勒/马嚼子\"→勒住→遏制；多指压制不好的势头：curb inflation/prices/one's anger；put a curb on... 限制；书内记法 cur(联想 occur)+b(联想\"不\")→不让发生；2020 阅读动词义、2010 阅读名词义两度考过；近 restrain",
+          "phrases": [
+            "put a curb on... 限制……",
+            "curb inflation 抑制通货膨胀"
+          ],
+          "ex": [
+            {
+              "en": "The city introduced parking fees to curb the use of private cars downtown.",
+              "zh": "该市引入停车收费制度，以抑制市中心的私家车使用。"
             }
           ]
         }
