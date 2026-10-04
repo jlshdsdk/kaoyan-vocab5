@@ -2,6 +2,96 @@
   "v": 1,
   "form": [
     {
+      "title": "access · assess · accuse · amuse",
+      "memo": "cc/ss 双写混淆四件套，两对来记：access vs assess 近音（/ˈækses/ vs /əˈses/）——access＝ac+cess(走)→\"走进去\"→通道、使用权（have access to... 有……的机会/权利，形容词 accessible 易接近的，还有\"访问（电脑）\"义）；assess＝as+sess(坐，同 session)→\"坐下来定价值\"→评估、评定（assess the impact 评估影响，名词 assessment，近 evaluate，书内辨析 assess 定确切价值 / estimate 大致推断 / evaluate 等价判断）；accuse vs amuse 只差 c/m（/əˈkjuːz/ vs /əˈmjuːz/）——accuse 是\"指控\"（accuse sb. of，义近角度另见 prosecute·accuse·claim 组）；amuse 书内记法：一只可爱的米老鼠（mouse）把我们\"逗乐\"了（be amused at/by 被逗乐，amusing 好笑的 vs amused 被逗乐的，反义 bore）。拼写口诀：双 c 是通道、双 s 坐着评，带 c 控告要开口（/k/），带 m 逗乐想 mouse。",
+      "words": [
+        {
+          "w": "access",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈækses",
+            "us": "ˈækses"
+          },
+          "pos": "n. [U] / vt.",
+          "gloss": "通道，入口；使用权，机会；访问（电脑文件）",
+          "usage": "ac+cess(走)→一再向前走→接近；不可数，高频 have access to...；形容词 accessible 易接近的/可得到的；\"权利\"义考过 2020 阅读、\"访问\"义考过 2013 完形",
+          "phrases": [
+            "have access to... 有……的机会/权利",
+            "give sb. access to 提供某人接近……的机会"
+          ],
+          "ex": [
+            {
+              "en": "Favoritism in official access can fan public perceptions of corruption.",
+              "zh": "官员接见中存在的“偏袒行为”会煽动公众的腐败感知。"
+            }
+          ]
+        },
+        {
+          "w": "assess",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈses",
+            "us": "əˈses"
+          },
+          "pos": "vt.",
+          "gloss": "评估，评定；估价",
+          "usage": "as+sess(坐)→坐下来定价值→评估；assess the impact/ability；名词 assessment；书内辨析：assess 定确切价值、estimate 大致推断、evaluate 等价判断；近 evaluate",
+          "phrases": [
+            "assess the impact 评估影响",
+            "assess sb.'s ability 评定某人的能力"
+          ],
+          "ex": [
+            {
+              "en": "It is hard, the state argues, for judges to assess the implications of new and rapidly changing technologies.",
+              "zh": "该州认为，法官很难评估快速变化的新技术的影响。"
+            }
+          ]
+        },
+        {
+          "w": "accuse",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈkjuːz",
+            "us": "əˈkjuːz"
+          },
+          "pos": "vt.",
+          "gloss": "指控，控告；指责",
+          "usage": "必带 of：accuse sb. of (doing) sth.；名词 accusation、the accused 被告；对照 charge sb. with（更正式）；义近角度另见 prosecute·accuse·claim 组",
+          "phrases": [
+            "accuse sb. of (doing) sth. 指控某人（做）某事",
+            "stand accused of... 被指控……"
+          ],
+          "ex": [
+            {
+              "en": "She accused him of lying.",
+              "zh": "她指责他说谎。"
+            }
+          ]
+        },
+        {
+          "w": "amuse",
+          "rank": 4,
+          "ph": {
+            "uk": "əˈmjuːz",
+            "us": "əˈmjuːz"
+          },
+          "pos": "vt.",
+          "gloss": "逗乐，逗笑；给……提供娱乐",
+          "usage": "书内记法：一只可爱的米老鼠（mouse）把我们逗乐了；be amused at/by 被逗乐、amuse oneself by 自娱；形容词 amusing 好笑的（事物）vs amused 被逗乐的（人）；反义 bore 使厌烦",
+          "phrases": [
+            "be amused at/by... 被……逗乐",
+            "amuse oneself by... 通过……自娱"
+          ],
+          "ex": [
+            {
+              "en": "His account of the camping trip amused the whole family.",
+              "zh": "他讲述的露营趣事逗乐了全家人。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "inflation · deflation",
       "memo": "一对反义经济词，前缀定方向：in-(向内)+flat(吹)+ion → \"往里吹气\"=通货膨胀（inflation rate 通胀率；词库记法：公寓都住不起了因为通胀）；de-(向下)+flat+ion → \"放气\"=通货紧缩。同根反义对还有 inflate/deflate v.。记忆：通胀像吹气球（物价胀大），紧缩像放气（物价缩小）。",
       "words": [
