@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "adapt · adopt",
+      "memo": "一字之差的双胞胎（/əˈdæpt/ vs /əˈdɒpt/），中间元音定命运：adapt＝ad+apt(适合，同 apt 恰当的)→使自己\"合身\"→适应、改编（adapt to... 适应、adapt oneself to 使自己适应，be adapted from... 由……改编——小说改编电影也用它，名词 adaptation 改编本/适应）；adopt＝ad+opt(选择，同 option 选项)→选来归自己→采纳、采用、收养（adopt a new approach 采用新方法、adopt a child 收养孩子、adopt a resolution 通过决议，名词 adoption，反义 reject）。书内神记法：刚被收养（adopt），但他适应（adapt）不了新家庭。听音抓元音：/æ/ 是适应，/ɒ/ 是采纳。三胞胎还有个 adept /əˈdept/ 熟练的（be adept at），一并认走。",
+      "words": [
+        {
+          "w": "adapt",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈdæpt",
+            "us": "əˈdæpt"
+          },
+          "pos": "v.",
+          "gloss": "适应；（使）适应新环境；改编，改写",
+          "usage": "ad+apt(适合)→使自己合身→适应；vi. 适应（adapt to...），vt. 改编（be adapted from 由……改编）；名词 adaptation 改编本/适应；书内辨析 adapt 修改以适应 / adjust 调整 / fit 大小适合",
+          "phrases": [
+            "adapt to... 适应……",
+            "be adapted from... 根据……改编"
+          ],
+          "ex": [
+            {
+              "en": "It is not easy for old people to adapt to the fast pace of modern life.",
+              "zh": "老年人不容易适应现代生活的快节奏。"
+            }
+          ]
+        },
+        {
+          "w": "adopt",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈdɒpt",
+            "us": "əˈdɑːpt"
+          },
+          "pos": "vt.",
+          "gloss": "采纳，采取；收养，领养；正式通过（决议）",
+          "usage": "ad+opt(选择)→选来归自己→采纳；三义都高频：adopt an approach/a policy 采用、adopt a child 收养、adopt a resolution 通过决议；名词 adoption 采用/收养；反义 reject 拒绝",
+          "phrases": [
+            "adopt a new approach 采用新方法",
+            "adopt a child 收养孩子"
+          ],
+          "ex": [
+            {
+              "en": "After going through a series of tests, the couple were finally allowed to adopt the child.",
+              "zh": "经过一系列审查后，这对夫妇最终获准收养这个孩子。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "valid · invalid",
       "memo": "一对正反双胞胎，词根 val（价值）：valid 读 /ˈvælɪd/——\"有效的、有根据的、（法律上）有效的\"（valid concerns 合理的担忧、a valid contract 有效合同；书内记法：不是\"歪理的\"，是\"合理的\"）；invalid 是它的否定，但一词两命、重音分家：形容词读 /ɪnˈvælɪd/ \"无效的、站不住脚的\"（invalid claims 无效声明、Without the correct signature, the contract is invalid 没签名合同无效）；名词读 /ˈɪnvəlɪd/ \"病弱者、伤残者\"（be treated as an invalid 被当作病人对待）——重音一移，词义从\"无效\"变\"病人\"。家族认全：validate＝使有效、验证（validate the hypothesis 验证假设，名词 validation），validity＝有效性（question the validity of... 质疑……的有效性）。",
       "words": [
