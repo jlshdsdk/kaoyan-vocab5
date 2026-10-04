@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "evolve · involve",
+      "memo": "同根 volve（转、卷），前缀定方向：evolve＝e(向外)+volv(转)→\"转出来\"→进化、演变、逐步发展（evolve from...into... 从……演变成……，The company evolved into a major manufacturer，名词 evolution 进化/演变——the theory of evolution 进化论，近 develop）；involve＝in(向内)+volv(卷)→\"卷进去\"→牵涉、涉及、包含（involve doing sth. 需要/包含做某事，be/become involved in... 被卷入/参与，名词 involvement 介入；义近角度另见 entail·involve 组）。一句话：转出来往前长是 evolve，卷进去脱不了身是 involve。家族顺带认全：revolve＝re(反复)+volv→旋转（revolve around... 围绕/以……为中心），revolution 就是\"翻转\"→革命。",
+      "words": [
+        {
+          "w": "evolve",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪˈvɒlv",
+            "us": "ɪˈvɑːlv"
+          },
+          "pos": "v.",
+          "gloss": "进化；演变，（使）逐渐形成，逐步发展",
+          "usage": "e(向外)+volv(转)→转出来→不断发展；搭配 evolve from...into...；名词 evolution 进化论/演变；近 develop；形近角度另见 evaluate·evolution·estimate 组（evolution 在那里）",
+          "phrases": [
+            "evolve from...into... 从……进化成……",
+            "evolve into... 逐渐发展成……"
+          ],
+          "ex": [
+            {
+              "en": "The company has evolved into a major chemical manufacturer.",
+              "zh": "这家公司已逐步发展成一家大型的化工厂。"
+            }
+          ]
+        },
+        {
+          "w": "involve",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈvɒlv",
+            "us": "ɪnˈvɑːlv"
+          },
+          "pos": "vt.",
+          "gloss": "牵涉，涉及；需要，包含；使参与",
+          "usage": "in(向内)+volv(卷)→卷进去→牵涉；involve doing sth. 需要/包含做某事、be/become/get involved in 卷入/参与；名词 involvement 介入；义近角度另见 entail·involve 组",
+          "phrases": [
+            "be involved in... 参与……；被卷入……",
+            "involve doing sth. 需要/包含做某事"
+          ],
+          "ex": [
+            {
+              "en": "Fantasies of great wealth often involve visions of fancy cars and extravagant homes.",
+              "zh": "说起巨额财富，人们往往会想到名车（豪车）与豪宅。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "content · contend · tend",
       "memo": "tent/tend（伸、握）家族三兄弟，词尾定身份：content 是双面词——名词 /ˈkɒntent/ \"内容、含量\"（the content of the examination，复数 contents 目录），形容词 /kənˈtent/ \"满足的\"（be content with... 对……满足，近 contented/satisfied，反义 discontent）——名形异音是听口难点；contend＝con(共同)+tend(伸)→共同将手伸向某物→争夺、主张（阅读高频义\"声称\"，义近角度另见 contend·contest·competition 组和 compete·contend 组）；tend 本义\"伸向\"→vi. 倾向于（tend to do sth. 往往会做——阅读频率极高，名词 tendency 趋势），vt. 另义\"照料\"（tend the sick 照护病人）。一句话：握住的是 content，伸手抢的是 contend，伸向未来的是 tend。",
       "words": [
