@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "inflation · deflation",
+      "memo": "一对反义经济词，前缀定方向：in-(向内)+flat(吹)+ion → \"往里吹气\"=通货膨胀（inflation rate 通胀率；词库记法：公寓都住不起了因为通胀）；de-(向下)+flat+ion → \"放气\"=通货紧缩。同根反义对还有 inflate/deflate v.。记忆：通胀像吹气球（物价胀大），紧缩像放气（物价缩小）。",
+      "words": [
+        {
+          "w": "inflation",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈfleɪʃn",
+            "us": "ɪnˈfleɪʃn"
+          },
+          "pos": "n.[U]",
+          "gloss": "通货膨胀；（物价）上涨",
+          "usage": "经济语境高频词；inflation rate 通胀率是图表作文常客",
+          "phrases": [
+            "control inflation 控制通胀",
+            "the inflation rate 通货膨胀率"
+          ],
+          "ex": [
+            {
+              "en": "The government introduced new measures to control inflation.",
+              "zh": "政府出台了控制通胀的新措施。"
+            }
+          ]
+        },
+        {
+          "w": "deflation",
+          "rank": 5,
+          "ph": {
+            "uk": "dɪˈfleɪʃn",
+            "us": "dɪˈfleɪʃn"
+          },
+          "pos": "n.[U]",
+          "gloss": "通货紧缩",
+          "usage": "inflation 的反义词：物价普遍下跌、经济收缩期",
+          "phrases": [
+            "a period of deflation 通货紧缩时期",
+            "deflationary pressure 通缩压力"
+          ],
+          "ex": [
+            {
+              "en": "Deflation can hurt an economy as much as inflation.",
+              "zh": "通缩对经济的伤害不亚于通胀。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "claim · acclaim",
       "memo": "同根 claim（本义\"喊、说\"），前缀定情绪：claim 是一个人\"声称\"——单方宣称未必有据（critics claim that...，另义\"索赔、认领\"claim compensation/make a claim；义近角度另见 prosecute·accuse·claim 组）；acclaim＝ac(一再)+claim(喊)→一群人\"一再喊好\"→称赞、喝彩（be acclaimed as... 被誉为、win critical acclaim 赢得评论界赞誉、receive acclaim，名词义\"称誉\"尤指对艺术成就；近 praise/hail）；家族顺带认全：exclaim＝ex(往外)喊→（因惊讶）惊叫、exclaim in delight 高兴地大叫；proclaim＝pro(向前)喊→（权力机关）正式宣布：The president proclaimed a state of emergency。一句话：claim 一个人说，acclaim 一群人喊好，exclaim 吓一跳喊出来，proclaim 官方向前宣告。",
       "words": [
