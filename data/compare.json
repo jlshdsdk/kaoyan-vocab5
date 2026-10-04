@@ -2,6 +2,75 @@
   "v": 1,
   "form": [
     {
+      "title": "content · contend · tend",
+      "memo": "tent/tend（伸、握）家族三兄弟，词尾定身份：content 是双面词——名词 /ˈkɒntent/ \"内容、含量\"（the content of the examination，复数 contents 目录），形容词 /kənˈtent/ \"满足的\"（be content with... 对……满足，近 contented/satisfied，反义 discontent）——名形异音是听口难点；contend＝con(共同)+tend(伸)→共同将手伸向某物→争夺、主张（阅读高频义\"声称\"，义近角度另见 contend·contest·competition 组和 compete·contend 组）；tend 本义\"伸向\"→vi. 倾向于（tend to do sth. 往往会做——阅读频率极高，名词 tendency 趋势），vt. 另义\"照料\"（tend the sick 照护病人）。一句话：握住的是 content，伸手抢的是 contend，伸向未来的是 tend。",
+      "words": [
+        {
+          "w": "content",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈkɒntent",
+            "us": "ˈkɑːntent"
+          },
+          "pos": "n. / adj.",
+          "gloss": "内容，目录，含量（n.）；满足的，满意的（adj.）",
+          "usage": "名形异音：名词 /ˈkɒntent/（内容/含量/目录），形容词 /kənˈtent/（满足的）——听口易混；be content with... 对……满足；形容词近 contented；to one's heart's content 尽情地",
+          "phrases": [
+            "be content with... 对……满足",
+            "the content of... ……的内容"
+          ],
+          "ex": [
+            {
+              "en": "The content of the examination has changed little in twenty years.",
+              "zh": "二十年来，考试内容几乎没有变化。"
+            }
+          ]
+        },
+        {
+          "w": "contend",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈtend",
+            "us": "kənˈtend"
+          },
+          "pos": "v.",
+          "gloss": "声称，主张；争夺，竞争；对付",
+          "usage": "con(共同)+tend(伸)→共同伸手→争夺；阅读高频义 vt.\"声称\"（contend that...）；contend with 对付；名词 contender 竞争者；义近角度另见 contend·contest·competition 组和 compete·contend 组",
+          "phrases": [
+            "contend that... 主张……",
+            "contend with sth. 对付，处理"
+          ],
+          "ex": [
+            {
+              "en": "It is the playgoers, the RSC contends, who bring in much of the town's revenue.",
+              "zh": "皇家莎士比亚剧团认为，是看戏的人给小镇带来了大部分的收入。"
+            }
+          ]
+        },
+        {
+          "w": "tend",
+          "rank": 4,
+          "ph": {
+            "uk": "tend",
+            "us": "tend"
+          },
+          "pos": "vi. / vt.",
+          "gloss": "倾向于，往往会；照料，护理",
+          "usage": "本义\"伸向\"→伸向某方向→倾向于；高频 tend to do sth. 往往会做（阅读利器）；vt. 照料（tend the garden/sick）；名词 tendency 倾向/趋势；近 incline",
+          "phrases": [
+            "tend to do sth. 倾向于做某事",
+            "tend to/towards 倾向于"
+          ],
+          "ex": [
+            {
+              "en": "Older workers tend to be more loyal to their employers than younger ones.",
+              "zh": "年纪较大的员工往往比年轻员工对雇主更忠诚。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "president · precedent",
       "memo": "近音双胞胎（都读 /ˈpre…dənt/），中间词根定身份：president＝pre(前)+sid(坐)→\"坐在最前面的人\"→总统、校长、总裁、主席（同根 preside over 主持/掌管、presidency 总统职位；书内记法：主席 president 需要经常出席 present 各种会议）；precedent＝pre(前)+ced(走)→\"走在前面的事\"→先例、惯例（set a precedent for... 为……开创先例、break with precedent 打破惯例，同根 preceding 在前的、precedence 优先权——ced 家族还有 proceed 前进）。听音抓辅音：president 中段读 /z/（日理万机嗡嗡响），precedent 读 /s/。一句话：坐着主持的是 president，走在前面立规矩的是 precedent。",
       "words": [
