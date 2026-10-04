@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "president · precedent",
+      "memo": "近音双胞胎（都读 /ˈpre…dənt/），中间词根定身份：president＝pre(前)+sid(坐)→\"坐在最前面的人\"→总统、校长、总裁、主席（同根 preside over 主持/掌管、presidency 总统职位；书内记法：主席 president 需要经常出席 present 各种会议）；precedent＝pre(前)+ced(走)→\"走在前面的事\"→先例、惯例（set a precedent for... 为……开创先例、break with precedent 打破惯例，同根 preceding 在前的、precedence 优先权——ced 家族还有 proceed 前进）。听音抓辅音：president 中段读 /z/（日理万机嗡嗡响），precedent 读 /s/。一句话：坐着主持的是 president，走在前面立规矩的是 precedent。",
+      "words": [
+        {
+          "w": "president",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈprezɪdənt",
+            "us": "ˈprezɪdənt"
+          },
+          "pos": "n. [C]",
+          "gloss": "总统；（大学）校长；（公司）总裁，会长，主席",
+          "usage": "pre(前)+sid(坐)→坐在最前面主持的人；多义词：国家总统/大学校长/机构总裁；同根 preside over 主持、presidency 总统任期；书内记法：主席需要经常出席 present 各种会议",
+          "phrases": [
+            "the president of the university 大学校长",
+            "the president of the board 董事会主席"
+          ],
+          "ex": [
+            {
+              "en": "The president of the university welcomed the freshmen at the opening ceremony.",
+              "zh": "校长在开学典礼上欢迎了新生。"
+            }
+          ]
+        },
+        {
+          "w": "precedent",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈpresɪdənt",
+            "us": "ˈpresɪdənt"
+          },
+          "pos": "n.",
+          "gloss": "先例，前例；惯例；传统",
+          "usage": "pre(前)+ced(走)→走在前面→先例；法律语境高频：set a precedent for... 为……开创先例、break with precedent 打破惯例；形容词义\"在前的\"少用；同根 preceding 在前的、precedence 优先权",
+          "phrases": [
+            "set a precedent for... 为……开创先例",
+            "break with precedent 打破惯例"
+          ],
+          "ex": [
+            {
+              "en": "The court's ruling set an important precedent for similar cases.",
+              "zh": "法院的裁决为类似案件开创了一个重要先例。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "access · assess · accuse · amuse",
       "memo": "cc/ss 双写混淆四件套，两对来记：access vs assess 近音（/ˈækses/ vs /əˈses/）——access＝ac+cess(走)→\"走进去\"→通道、使用权（have access to... 有……的机会/权利，形容词 accessible 易接近的，还有\"访问（电脑）\"义）；assess＝as+sess(坐，同 session)→\"坐下来定价值\"→评估、评定（assess the impact 评估影响，名词 assessment，近 evaluate，书内辨析 assess 定确切价值 / estimate 大致推断 / evaluate 等价判断）；accuse vs amuse 只差 c/m（/əˈkjuːz/ vs /əˈmjuːz/）——accuse 是\"指控\"（accuse sb. of，义近角度另见 prosecute·accuse·claim 组）；amuse 书内记法：一只可爱的米老鼠（mouse）把我们\"逗乐\"了（be amused at/by 被逗乐，amusing 好笑的 vs amused 被逗乐的，反义 bore）。拼写口诀：双 c 是通道、双 s 坐着评，带 c 控告要开口（/k/），带 m 逗乐想 mouse。",
       "words": [
