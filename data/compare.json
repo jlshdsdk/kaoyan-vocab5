@@ -4173,6 +4173,117 @@
   ],
   "syn": [
     {
+      "title": "admit · acknowledge · confess · recognize · concede",
+      "memo": "五个\"认了\"，认的方式不同：admit 最通用——不情愿但认了：屈服于外力或良心驱使而承认（admit doing sth. 接动名词不接 to do，另有\"准许进入\"义 admit sb. to/into，名词 admission 承认/入场费）；acknowledge 最公开正式——公开承认（某事属实/某人的地位）：be acknowledged as 被公认为、an acknowledged expert 公认的专家，另有\"致谢\"和\"告知已收到\"义（acknowledge the assistance）；confess 最坦白——con+fess(说)→全部说出来：坦白、供认、忏悔，常指对己不利的犯罪事实（confess to doing sth.，名词 confession 供认/忏悔）；recognize 是\"认出/认可\"——不是认错：认出旧识（recognize her voice）或认可地位（recognize...as...，名词 recognition）；concede 是\"（不情愿地）承认+让步\"——con(全)+cede(走)→全放弃：concede defeat 承认失败、concede that...（形近见 precede·concede·coincide 和 concede·conclude·convert 组）。一句话分工：一般承认 admit，公开认可 acknowledge，坦白认罪 confess，认出/认可 recognize，不情愿认输 concede。",
+      "words": [
+        {
+          "w": "admit",
+          "rank": 5,
+          "ph": {
+            "uk": "ədˈmɪt",
+            "us": "ədˈmɪt"
+          },
+          "pos": "v.",
+          "gloss": "承认；准许进入，接纳",
+          "usage": "ad(去)+mit(送)→放行→准许进入/承认；语法考点：admit doing（不接 to do）；名词 admission 承认/入场费；形近角度另见 submit·commit·admit 组",
+          "phrases": [
+            "admit doing sth. 承认做某事",
+            "admit sb. to/into... 准许某人进入"
+          ],
+          "ex": [
+            {
+              "en": "She admitted breaking the window.",
+              "zh": "她承认打破了窗户。"
+            }
+          ]
+        },
+        {
+          "w": "acknowledge",
+          "rank": 4,
+          "ph": {
+            "uk": "əkˈnɒlɪdʒ",
+            "us": "əkˈnɑːlɪdʒ"
+          },
+          "pos": "vt.",
+          "gloss": "承认；公认；致谢；告知已收到",
+          "usage": "公开地承认（某事属实/某人的地位）：be acknowledged as 公认为、an acknowledged expert 公认的专家；另义\"致谢\"、\"告知收到\"（acknowledge the email 回复确认收到）；语法 acknowledge doing sth.；名词 acknowledgement",
+          "phrases": [
+            "be acknowledged as... 被公认为……",
+            "acknowledge the assistance of... 感谢……的援助"
+          ],
+          "ex": [
+            {
+              "en": "He acknowledged that the plan had failed.",
+              "zh": "他承认计划失败了。"
+            }
+          ]
+        },
+        {
+          "w": "confess",
+          "rank": 4,
+          "ph": {
+            "uk": "kənˈfes",
+            "us": "kənˈfes"
+          },
+          "pos": "v.",
+          "gloss": "坦白，供认，承认；忏悔",
+          "usage": "con(全部)+fess(说)→全说出来→坦白；常指承认对己不利或犯罪的事实；考点 confess to doing sth.；名词 confession 供认/忏悔；形近别和 profession/professor 混",
+          "phrases": [
+            "confess to doing sth. 承认做了某事",
+            "confess one's crime 供认罪行"
+          ],
+          "ex": [
+            {
+              "en": "He confessed to stealing the money.",
+              "zh": "他承认偷了钱。"
+            }
+          ]
+        },
+        {
+          "w": "recognize",
+          "rank": 3,
+          "ph": {
+            "uk": "ˈrekəɡnaɪz",
+            "us": "ˈrekəɡnaɪz"
+          },
+          "pos": "vt.",
+          "gloss": "认出，识别；承认，认可；认识到",
+          "usage": "本义\"认出\"（recognize her voice 听出声音）；引申\"正式认可\"recognize...as...；高频 recognize the importance of 认识到……的重要性；亦拼 recognise；名词 recognition 承认/认出",
+          "phrases": [
+            "recognize...as... 认可……为……",
+            "recognize the importance of 认识到……的重要性"
+          ],
+          "ex": [
+            {
+              "en": "The government finally recognized the union's right to negotiate on behalf of workers.",
+              "zh": "政府最终承认了工会代表工人谈判的权利。"
+            }
+          ]
+        },
+        {
+          "w": "concede",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsiːd",
+            "us": "kənˈsiːd"
+          },
+          "pos": "v.",
+          "gloss": "（不情愿地）承认；让步，认输；让出",
+          "usage": "con(全部)+cede(走)→全放弃→不情愿地认；考点 concede defeat 承认失败、concede to sb. 向某人让步；名词 concession 让步；形近角度另见 precede·concede·coincide 组和 concede·conclude·convert 组",
+          "phrases": [
+            "concede defeat 承认失败",
+            "concede to sb. 向某人让步"
+          ],
+          "ex": [
+            {
+              "en": "He finally conceded that he was wrong.",
+              "zh": "他最终承认自己错了。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "perplex · confuse · puzzle",
       "memo": "都\"使人转不过弯\"，困惑的深度和味道不同：confuse 最常用、最轻——con+fus(流)→流到一起→\"混淆、分不清\"（confuse A with B 把 A 和 B 混淆：Don't confuse correlation with causation 别把相关当因果，名词 confusion 混乱）；puzzle 最具象——像拼图一样\"让人琢磨不透\"，名词义\"谜/智力游戏\"高频（This question has puzzled scientists for decades、a puzzle to sb. 谜团、puzzle out 琢磨出答案）；perplex 最书面、程度最深——per(彻底)+plex(折叠，同 complex 复杂的)→完全叠在一起理不清（be perplexed by/at 对……大惑不解，名词 perplexity，形容词 perplexing 令人费解的）。一句话分工：日常混淆用 confuse，琢磨不透的谜用 puzzle，正式书面的大惑不解用 perplex。",
       "words": [
