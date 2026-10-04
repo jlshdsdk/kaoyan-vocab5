@@ -4173,6 +4173,117 @@
   ],
   "syn": [
     {
+      "title": "comply · abide · conform · submit · obey",
+      "memo": "五个\"听规矩的\"，服从的方式不同：comply 最技术性——com+ply(联想 play)→一起玩就要遵守规则（comply with... 必带 with，多指遵守规章/标准/法规，名词 compliance 合规）；abide by 信守——遵守法律/信守诺言/忠于某人（忍受义见 endure·abide·tolerate 组）；conform 是\"与形式一致\"——con+form→遵守公认规则、顺应潮流（conform to/with，另含\"随大流\"义，形近见 conform·confront 组）；submit 是\"屈服、听任\"——sub(下)+mit(送)→低头递交→submit to 屈服于/听任安排（另有高频\"提交\"义 submit an application，形近见 submit·commit·admit 组，近 surrender/yield）；obey 最直白——及物动词直接接宾语（obey orders/the law，名词 obedience）。一句话分工：守规章 comply with，信守 abide by，符合规则 conform to，屈服听任 submit to，直接服从 obey。书内等式：comply with = conform to = abide by。",
+      "words": [
+        {
+          "w": "comply",
+          "rank": 5,
+          "ph": {
+            "uk": "kəmˈplaɪ",
+            "us": "kəmˈplaɪ"
+          },
+          "pos": "vi.",
+          "gloss": "遵从，依从，服从",
+          "usage": "com(共同)+ply(联想 play)→一起玩就守规则；必带 with：comply with regulations/standards；名词 compliance 合规（高频）；反义 refuse",
+          "phrases": [
+            "comply with... 遵守……",
+            "in compliance with 依照……"
+          ],
+          "ex": [
+            {
+              "en": "Companies must comply with the new regulations.",
+              "zh": "公司必须遵守新规定。"
+            }
+          ]
+        },
+        {
+          "w": "abide",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈbaɪd",
+            "us": "əˈbaɪd"
+          },
+          "pos": "v.",
+          "gloss": "遵守，忠于；（本义）忍受，容忍",
+          "usage": "考点搭配 abide by 遵守（法律/裁定/诺言）；\"遵守\"与\"容忍\"两义都考（容忍义多用于否定 can't abide，义近见 endure·abide·tolerate 组）；过去式 abode/abided",
+          "phrases": [
+            "abide by... 遵守……；信守……",
+            "abide by the ruling 服从裁定"
+          ],
+          "ex": [
+            {
+              "en": "Both sides promised to abide by the contract.",
+              "zh": "双方承诺遵守合同。"
+            }
+          ]
+        },
+        {
+          "w": "conform",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈfɔːm",
+            "us": "kənˈfɔːrm"
+          },
+          "pos": "vi.",
+          "gloss": "遵守；符合；顺应，随大流",
+          "usage": "con(共同)+form(形式)→与规范一致；必带 to/with：conform to the standard/customs；名词 conformity 一致/从众；形近角度另见 conform·confront 组",
+          "phrases": [
+            "conform to/with... 遵守；符合……",
+            "conform to the standard 符合标准"
+          ],
+          "ex": [
+            {
+              "en": "He refused to conform to the local customs.",
+              "zh": "他拒绝遵从当地的风俗习惯。"
+            }
+          ]
+        },
+        {
+          "w": "submit",
+          "rank": 5,
+          "ph": {
+            "uk": "səbˈmɪt",
+            "us": "səbˈmɪt"
+          },
+          "pos": "v.",
+          "gloss": "屈服，听从；提交，呈递；主张",
+          "usage": "sub(下)+mit(送)→从下往上送→提交；屈服义 submit to... 屈服于/听任（反义 resist，近 surrender/yield）；高频\"提交\"义 submit an application/a paper；形近角度另见 submit·commit·admit 组",
+          "phrases": [
+            "submit to... 屈服于……",
+            "submit an application 提交申请"
+          ],
+          "ex": [
+            {
+              "en": "A team of researchers working together in the laboratory would submit the results of their research to a journal.",
+              "zh": "在实验室通力合作的一组研究人员将他们的研究成果提交给某刊物。"
+            }
+          ]
+        },
+        {
+          "w": "obey",
+          "rank": 3,
+          "ph": {
+            "uk": "əˈbeɪ",
+            "us": "əˈbeɪ"
+          },
+          "pos": "v.",
+          "gloss": "服从，听从；遵守",
+          "usage": "及物动词直接接宾语（最省介词的一个）：obey orders/the law/traffic rules；名词 obedience 服从、反义 disobey 违抗",
+          "phrases": [
+            "obey orders 服从命令",
+            "obey traffic laws 遵守交通法规"
+          ],
+          "ex": [
+            {
+              "en": "Soldiers are trained to obey orders.",
+              "zh": "士兵被训练服从命令。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "resume · recover · restore · revive",
       "memo": "四个\"恢复\"，恢复的对象不同：resume 是\"（中断后）重新开始\"——恢复的是活动、进程（resume talks 恢复会谈、resume one's career 重返职业生涯，re+sume 重新拿起，名词 resumption）；recover 是\"从伤病/挫折中缓过来\"——主语常是人、城市、经济，必配 from（recover from the crisis 从危机中恢复，另有\"追回\"义 recover stolen paintings 追回失窃画作）；restore 是\"使恢复原状\"——他动词把东西放回原处（restore order 恢复秩序、restore sb. to health 恢复健康、restore public trust 恢复信任，还有\"修复古建筑\"和\"归还\"义，名词 restoration）；revive 是 re+vive(活)→\"复活、复苏\"——让死气沉沉的重新活过来（revive the economy 振兴经济、revive an old custom 复兴旧俗，名词 revival）。一句话分工：中断的活动 resume，伤病挫折后 recover，使回原状 restore，死而复生 revive。",
       "words": [
