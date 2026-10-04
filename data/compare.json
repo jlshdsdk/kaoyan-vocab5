@@ -4173,6 +4173,75 @@
   ],
   "syn": [
     {
+      "title": "contend · contest · competition",
+      "memo": "都含\"争\"，争的内容不同：contest 是台面上的\"比赛\"——n. 有规则的竞赛（a speech contest 演讲比赛、an essay contest 征文比赛），作 vt. 可\"争夺、对……提出异议\"（contest the results 质疑结果）；contend 是较劲+主张——con+tend(伸)→共同将手伸向某物→争夺（contend for power 争夺权力、contend with sth. 对付困境），阅读高频义是 vt.\"声称、主张\"（The RSC contends that... 剧团认为）；competition 是抽象\"竞争\"——com+pet(追寻)→共同追寻同一样东西→竞争（face stiff competition 面临激烈竞争，动词 compete、形容词 competitive，competition law 竞争法）。一句话分工：台面上的比赛 contest，较劲与主张 contend，抽象竞争 competition。注意别混：contest 名词是\"比赛\"，contend 高频义却是\"主张\"——阅读里 see contend 就往\"认为\"上想。跨组：contend 义近另见 compete·contend 组，名词 contention 形近在 conv- 七词组。",
+      "words": [
+        {
+          "w": "contend",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈtend",
+            "us": "kənˈtend"
+          },
+          "pos": "v.",
+          "gloss": "声称，主张；争夺，竞争；对付，处理",
+          "usage": "con(共同)+tend(伸)→共同将手伸向某物→争夺；阅读高频义 vt.\"声称、主张\"（contend that...）；搭配 contend for 争夺、contend with 对付；名词 contender 竞争者；义近角度另见 compete·contend 组",
+          "phrases": [
+            "contend for power 争夺权力",
+            "contend with sth. 对付，处理"
+          ],
+          "ex": [
+            {
+              "en": "But in her new book, Join the Club, Tina Rosenberg contends that peer pressure can also be a positive force through what she calls the social cure.",
+              "zh": "但是蒂娜·罗森伯格在其新书《加入俱乐部》中指出，同辈压力也可能通过她称之为“社会救治”的活动而成为正面力量。"
+            }
+          ]
+        },
+        {
+          "w": "contest",
+          "rank": 4,
+          "ph": {
+            "uk": "kənˈtest",
+            "us": "kənˈtest"
+          },
+          "pos": "n. / vt.",
+          "gloss": "比赛，竞赛；争夺；争夺，争辩，对……提出异议（vt.）",
+          "usage": "n. 有规则的竞赛（a speech contest）；vt. 争夺席位/质疑结果（contest the election results）；重音不变（区别于 record 这类名动异重的词）；同义 fight/struggle/contend",
+          "phrases": [
+            "a speech contest 演讲比赛",
+            "contest the results 对结果提出异议"
+          ],
+          "ex": [
+            {
+              "en": "She entered the national essay contest and won first prize.",
+              "zh": "她参加了全国征文比赛并获得一等奖。"
+            }
+          ]
+        },
+        {
+          "w": "competition",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌkɒmpəˈtɪʃ(ə)n",
+            "us": "ˌkɑːmpəˈtɪʃ(ə)n"
+          },
+          "pos": "n.",
+          "gloss": "竞争；比赛，竞赛；对手",
+          "usage": "com(共同)+pet(追寻)+ition→共同追寻同一样东西→竞争；搭配 face stiff/fierce competition、in competition with；动词 compete 竞争、形容词 competitive 竞争的/有竞争力的",
+          "phrases": [
+            "face stiff competition 面临激烈竞争",
+            "in competition with... 与……竞争"
+          ],
+          "ex": [
+            {
+              "en": "The firm is facing stiff competition from its online rivals.",
+              "zh": "该公司正面临来自在线竞争对手的激烈竞争。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "comprise · consist · compose · constitute",
       "memo": "四个\"组成\"，主语站的角度不同：consist of 只能\"整体当主语\"——A consists of B（A 由 B 组成），硬考点：只用主动、无被动（× is consisted of），另有 consist in 在于、consist with 一致；comprise 也多\"整体打头\"——A comprises B（包含，最正式），be comprised of 常见但受争议；compose 是\"部分打头\"——部分构成整体，常用被动 be composed of（The earth is composed of several layers），主动另义\"作曲、撰写\"（Mozart composed...，名词 composition 作文/构成）；constitute 也是\"部分打头\"——部分\"构成\"整体，更书面，还引申\"构成（要件）、被视为\"（Women constitute nearly half of the workforce；Repeated delays may constitute a breach 构成违约，名词 constitution 宪法/构成）。一句话方向：整体→部分用 consist of / comprise，部分→整体用 be composed of / constitute。书内分工原话：comprise 与 consist of 表整体由……组成；compose 与 constitute 指部分构成整体。跨组：compose/constitute 另见 compose·constitute·construct 组，constitute 形近另见 resistant 组。",
       "words": [
