@@ -7663,8 +7663,8 @@
       ]
     },
     {
-      "title": "immense · enormous · considerable",
-      "memo": "都是\"大\"，量级和对象不同：immense 是 im-(不)+mens(测量)→大到测不完，偏空间/规模/程度（immense scale）；enormous 是 e-(超出)+norm(常规)→超出常规的大，更常接数量和影响（an enormous amount of、enormous impact）；considerable 最温和——\"相当大的、可观的\"，只是\"不少\"，够不上巨大（considerable attention/investment）。经典近形坑：considerable 相当大的 ≠ considerate 体贴的。写作：规模用 immense，数量/影响用 enormous，程度\"可观\"用 considerable。",
+      "title": "immense · enormous · considerable · massive",
+      "memo": "都是\"大\"，量级和对象不同：immense 是 im-(不)+mens(测量)→大到测不完，偏空间/规模/程度（immense scale）；enormous 是 e-(超出)+norm(常规)→超出常规的大，更常接数量和影响（an enormous amount of、enormous impact）；massive 是 mass(块)+ive→\"大块头的\"——强调体量大而厚重、规模庞大（a massive campaign 大规模运动、massive pressure 巨大压力，名词 mass 群众/质量）；considerable 最温和——\"相当大的、可观的\"，只是\"不少\"，够不上巨大（considerable attention/investment）。经典近形坑：considerable 相当大的 ≠ considerate 体贴的。写作：规模用 immense，数量/影响用 enormous，大块头/大规模用 massive，程度\"可观\"用 considerable。",
       "words": [
         {
           "w": "immense",
@@ -7726,6 +7726,27 @@
             {
               "en": "The industry also points out that real grass require considerable amounts of water.",
               "zh": "该行业还指出，种植真草需要大量的水。"
+            }
+          ]
+        },
+        {
+          "w": "massive",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈmæsɪv",
+            "us": "ˈmæsɪv"
+          },
+          "pos": "adj.",
+          "gloss": "大而重的，厚实的；大规模的，大量的；非常严重的",
+          "usage": "mass(块)+ive→大块头→体量大而厚重；修饰规模/工程/压力：a massive campaign、massive pressure；同根 mass 群众/质量、the mass media 大众传媒",
+          "phrases": [
+            "a massive campaign 大规模的运动",
+            "massive pressure 巨大压力"
+          ],
+          "ex": [
+            {
+              "en": "This massive investment could change the picture rapidly in coming years.",
+              "zh": "这项大规模投资可能会在未来几年迅速改变局面。"
             }
           ]
         }
