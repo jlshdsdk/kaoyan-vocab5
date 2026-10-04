@@ -4173,6 +4173,75 @@
   ],
   "syn": [
     {
+      "title": "perplex · confuse · puzzle",
+      "memo": "都\"使人转不过弯\"，困惑的深度和味道不同：confuse 最常用、最轻——con+fus(流)→流到一起→\"混淆、分不清\"（confuse A with B 把 A 和 B 混淆：Don't confuse correlation with causation 别把相关当因果，名词 confusion 混乱）；puzzle 最具象——像拼图一样\"让人琢磨不透\"，名词义\"谜/智力游戏\"高频（This question has puzzled scientists for decades、a puzzle to sb. 谜团、puzzle out 琢磨出答案）；perplex 最书面、程度最深——per(彻底)+plex(折叠，同 complex 复杂的)→完全叠在一起理不清（be perplexed by/at 对……大惑不解，名词 perplexity，形容词 perplexing 令人费解的）。一句话分工：日常混淆用 confuse，琢磨不透的谜用 puzzle，正式书面的大惑不解用 perplex。",
+      "words": [
+        {
+          "w": "confuse",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈfjuːz",
+            "us": "kənˈfjuːz"
+          },
+          "pos": "vt.",
+          "gloss": "使困惑；混淆，混同",
+          "usage": "con(共同)+fus(流)→流到一起→分不清；两大用法：confuse A with/and B 混淆两者、使某人糊涂；名词 confusion 混乱/困惑；形近别和 refuse（拒绝）的名词 refusal 混",
+          "phrases": [
+            "confuse A with B 把 A 和 B 混淆",
+            "be confused about 对……感到困惑"
+          ],
+          "ex": [
+            {
+              "en": "Do not confuse correlation with causation when interpreting survey data.",
+              "zh": "解读调查数据时，不要把相关性误当作因果关系。"
+            }
+          ]
+        },
+        {
+          "w": "puzzle",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈpʌzl",
+            "us": "ˈpʌzl"
+          },
+          "pos": "v. / n.",
+          "gloss": "使困惑；（使）苦思；谜，智力游戏（n.）",
+          "usage": "名词\"谜/拼图\"是本义（书内记法：孩子趴着玩拼图）；高频 a puzzle to sb. 某人的难解之谜、puzzle out 琢磨出；形容词 puzzled 感到困惑的、puzzling 令人费解的",
+          "phrases": [
+            "be puzzled about/by... 对……感到困惑",
+            "puzzle out 琢磨出，苦思而解决"
+          ],
+          "ex": [
+            {
+              "en": "What puzzles the author is that some bosses fail to see the link between trust and data protection.",
+              "zh": "令作者困惑的是，一些老板未能看到信任和数据保护之间的联系。"
+            }
+          ]
+        },
+        {
+          "w": "perplex",
+          "rank": 5,
+          "ph": {
+            "uk": "pəˈpleks",
+            "us": "pərˈpleks"
+          },
+          "pos": "vt.",
+          "gloss": "使困惑，使茫然；使复杂化",
+          "usage": "per(彻底)+plex(折叠)→完全叠在一起理不清；最书面，程度深于 confuse；搭配 be perplexed by/at...；名词 perplexity 困惑、形容词 perplexing 令人费解的；同根 complex 复杂的",
+          "phrases": [
+            "be perplexed by/at... 对……感到困惑",
+            "a perplexing question 令人费解的问题"
+          ],
+          "ex": [
+            {
+              "en": "The sudden change in the company's policy perplexed many investors.",
+              "zh": "公司政策的突然转变使许多投资者感到困惑。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "comply · abide · conform · submit · obey",
       "memo": "五个\"听规矩的\"，服从的方式不同：comply 最技术性——com+ply(联想 play)→一起玩就要遵守规则（comply with... 必带 with，多指遵守规章/标准/法规，名词 compliance 合规）；abide by 信守——遵守法律/信守诺言/忠于某人（忍受义见 endure·abide·tolerate 组）；conform 是\"与形式一致\"——con+form→遵守公认规则、顺应潮流（conform to/with，另含\"随大流\"义，形近见 conform·confront 组）；submit 是\"屈服、听任\"——sub(下)+mit(送)→低头递交→submit to 屈服于/听任安排（另有高频\"提交\"义 submit an application，形近见 submit·commit·admit 组，近 surrender/yield）；obey 最直白——及物动词直接接宾语（obey orders/the law，名词 obedience）。一句话分工：守规章 comply with，信守 abide by，符合规则 conform to，屈服听任 submit to，直接服从 obey。书内等式：comply with = conform to = abide by。",
       "words": [
