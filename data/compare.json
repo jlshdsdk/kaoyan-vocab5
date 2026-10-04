@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "valid · invalid",
+      "memo": "一对正反双胞胎，词根 val（价值）：valid 读 /ˈvælɪd/——\"有效的、有根据的、（法律上）有效的\"（valid concerns 合理的担忧、a valid contract 有效合同；书内记法：不是\"歪理的\"，是\"合理的\"）；invalid 是它的否定，但一词两命、重音分家：形容词读 /ɪnˈvælɪd/ \"无效的、站不住脚的\"（invalid claims 无效声明、Without the correct signature, the contract is invalid 没签名合同无效）；名词读 /ˈɪnvəlɪd/ \"病弱者、伤残者\"（be treated as an invalid 被当作病人对待）——重音一移，词义从\"无效\"变\"病人\"。家族认全：validate＝使有效、验证（validate the hypothesis 验证假设，名词 validation），validity＝有效性（question the validity of... 质疑……的有效性）。",
+      "words": [
+        {
+          "w": "valid",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈvælɪd",
+            "us": "ˈvælɪd"
+          },
+          "pos": "adj.",
+          "gloss": "有效的，有法律效力的；合理的，有根据的",
+          "usage": "val(价值)+id→有价值的→有效/有据；修饰论点（a valid argument 有说服力的论点）、证件、合同；书内记法：不是\"歪理的\"是\"合理的\"；动词 validate 验证、名词 validity 有效性",
+          "phrases": [
+            "a valid argument 有根据的论点",
+            "a valid passport/contract 有效护照/合同"
+          ],
+          "ex": [
+            {
+              "en": "Your season ticket remains valid until the end of March.",
+              "zh": "你的季票三月月底前仍然有效。"
+            }
+          ]
+        },
+        {
+          "w": "invalid",
+          "rank": 5,
+          "ph": {
+            "uk": "ɪnˈvælɪd",
+            "us": "ɪnˈvælɪd"
+          },
+          "pos": "adj. / n.",
+          "gloss": "无效的，作废的；（论据）站不住脚的；病弱者，伤残者（n.）",
+          "usage": "一词两命：形容词 /ɪnˈvælɪd/ 无效的（in+val 无价值→无效，invalid claims）；名词 /ˈɪnvəlɪd/ 病弱者（重音移到首音节）——重音变词义变；反义 valid",
+          "phrases": [
+            "invalid claims 无效的声明",
+            "be treated as an invalid 被当作病人对待"
+          ],
+          "ex": [
+            {
+              "en": "Without the correct signature, the contract is invalid.",
+              "zh": "没有正确的签名，这份合同无效。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "evolve · involve",
       "memo": "同根 volve（转、卷），前缀定方向：evolve＝e(向外)+volv(转)→\"转出来\"→进化、演变、逐步发展（evolve from...into... 从……演变成……，The company evolved into a major manufacturer，名词 evolution 进化/演变——the theory of evolution 进化论，近 develop）；involve＝in(向内)+volv(卷)→\"卷进去\"→牵涉、涉及、包含（involve doing sth. 需要/包含做某事，be/become involved in... 被卷入/参与，名词 involvement 介入；义近角度另见 entail·involve 组）。一句话：转出来往前长是 evolve，卷进去脱不了身是 involve。家族顺带认全：revolve＝re(反复)+volv→旋转（revolve around... 围绕/以……为中心），revolution 就是\"翻转\"→革命。",
       "words": [
