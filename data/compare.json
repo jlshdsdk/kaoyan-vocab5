@@ -4173,6 +4173,96 @@
   ],
   "syn": [
     {
+      "title": "comprise · consist · compose · constitute",
+      "memo": "四个\"组成\"，主语站的角度不同：consist of 只能\"整体当主语\"——A consists of B（A 由 B 组成），硬考点：只用主动、无被动（× is consisted of），另有 consist in 在于、consist with 一致；comprise 也多\"整体打头\"——A comprises B（包含，最正式），be comprised of 常见但受争议；compose 是\"部分打头\"——部分构成整体，常用被动 be composed of（The earth is composed of several layers），主动另义\"作曲、撰写\"（Mozart composed...，名词 composition 作文/构成）；constitute 也是\"部分打头\"——部分\"构成\"整体，更书面，还引申\"构成（要件）、被视为\"（Women constitute nearly half of the workforce；Repeated delays may constitute a breach 构成违约，名词 constitution 宪法/构成）。一句话方向：整体→部分用 consist of / comprise，部分→整体用 be composed of / constitute。书内分工原话：comprise 与 consist of 表整体由……组成；compose 与 constitute 指部分构成整体。跨组：compose/constitute 另见 compose·constitute·construct 组，constitute 形近另见 resistant 组。",
+      "words": [
+        {
+          "w": "comprise",
+          "rank": 4,
+          "ph": {
+            "uk": "kəmˈpraɪz",
+            "us": "kəmˈpraɪz"
+          },
+          "pos": "vt.",
+          "gloss": "包含，包括；由……组成；构成",
+          "usage": "最正式；多\"整体打头\"：A comprises B（不用 of）；be comprised of 常见但有争议，谨慎使用；书内记法：com+prise(联想 prize)→一起奖赏→包括了所有人",
+          "phrases": [
+            "be comprised of... 由……组成（有争议）",
+            "comprise... 包含……"
+          ],
+          "ex": [
+            {
+              "en": "The committee comprises representatives from all six departments.",
+              "zh": "委员会由来自全部六个部门的代表组成。"
+            }
+          ]
+        },
+        {
+          "w": "consist",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈsɪst",
+            "us": "kənˈsɪst"
+          },
+          "pos": "vi.",
+          "gloss": "由……组成；在于；（与……）一致",
+          "usage": "con(一起)+sist(站)→站在一起→组成；只能整体当主语且只用主动：A consists of B（× is consisted of 是硬伤）；consist in 在于、consist with 与……一致；形近角度另见 resistant·consistent 组",
+          "phrases": [
+            "consist of... 由……组成",
+            "consist in... 在于……"
+          ],
+          "ex": [
+            {
+              "en": "It consists of approximately 75 buildings.",
+              "zh": "它由大约75座建筑物组成。"
+            }
+          ]
+        },
+        {
+          "w": "compose",
+          "rank": 5,
+          "ph": {
+            "uk": "kəmˈpəʊz",
+            "us": "kəmˈpoʊz"
+          },
+          "pos": "vt.",
+          "gloss": "组成，构成；创作（乐曲、文学作品）；使平静",
+          "usage": "com(都)+pose(放)→都摆在一起→构成；\"部分打头\"常用被动 be composed of；主动另义\"作曲/撰写\"（compose a symphony/an essay）；反义 decompose 分解；名词 composition；义近角度另见 compose·constitute·construct 组",
+          "phrases": [
+            "be composed of... 由……组成",
+            "compose a symphony 创作交响曲"
+          ],
+          "ex": [
+            {
+              "en": "The earth is composed of several layers.",
+              "zh": "地球由几层组成。"
+            }
+          ]
+        },
+        {
+          "w": "constitute",
+          "rank": 5,
+          "ph": {
+            "uk": "ˈkɒnstɪtjuːt",
+            "us": "ˈkɑːnstɪtuːt"
+          },
+          "pos": "vt.",
+          "gloss": "组成，构成；被视为，算作；设立，制定",
+          "usage": "con+stitut(站)→站到一起→组成；\"部分打头\"且书面：Women constitute nearly half...；引申\"构成（要件）、算作\"（constitute a threat/breach）；名词 constitution 宪法；形近角度另见 resistant·consistent·constitute·constant 组",
+          "phrases": [
+            "constitute a threat to... 构成对……的威胁",
+            "constitute a breach 构成违约"
+          ],
+          "ex": [
+            {
+              "en": "Women constitute nearly half of the workforce in this industry.",
+              "zh": "女性约占该行业劳动力的一半。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "admit · acknowledge · confess · recognize · concede",
       "memo": "五个\"认了\"，认的方式不同：admit 最通用——不情愿但认了：屈服于外力或良心驱使而承认（admit doing sth. 接动名词不接 to do，另有\"准许进入\"义 admit sb. to/into，名词 admission 承认/入场费）；acknowledge 最公开正式——公开承认（某事属实/某人的地位）：be acknowledged as 被公认为、an acknowledged expert 公认的专家，另有\"致谢\"和\"告知已收到\"义（acknowledge the assistance）；confess 最坦白——con+fess(说)→全部说出来：坦白、供认、忏悔，常指对己不利的犯罪事实（confess to doing sth.，名词 confession 供认/忏悔）；recognize 是\"认出/认可\"——不是认错：认出旧识（recognize her voice）或认可地位（recognize...as...，名词 recognition）；concede 是\"（不情愿地）承认+让步\"——con(全)+cede(走)→全放弃：concede defeat 承认失败、concede that...（形近见 precede·concede·coincide 和 concede·conclude·convert 组）。一句话分工：一般承认 admit，公开认可 acknowledge，坦白认罪 confess，认出/认可 recognize，不情愿认输 concede。",
       "words": [
