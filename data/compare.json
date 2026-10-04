@@ -4338,6 +4338,75 @@
   ],
   "syn": [
     {
+      "title": "intervene · interfere · interrupt",
+      "memo": "inter＝\"在中间\"，动词尾巴定性质：interrupt＝inter+rupt(断裂)→\"在中间断开\"→打断、中断（interrupt sb. 打断话头、be interrupted by 被……打断，名词 interruption；飓风中断投递也用它）；interfere＝inter+fer(带来)→把（自己的观点）带到中间→干涉、妨碍，多含贬义（考点介词：interfere in sth. 干涉某事 / interfere with sth. 妨碍某事，形容词 interfering 管闲事的，形近角度另见 interfere·integrate·integrity 组）；intervene＝inter+ven(来)→\"来到中间\"→介入、调停，中性偏积极（intervene in sth. 介入某事、intervene between...and... 在……之间调停，名词 intervention 干预/介入）。书内辨析一句收拢：intervene 强调介入，interfere 强调干扰，interrupt 强调打断。一句话：把进程斩断 interrupt，搅局添乱 interfere（贬），居中调停 intervene（中性）。",
+      "words": [
+        {
+          "w": "intervene",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌɪntəˈviːn",
+            "us": "ˌɪntərˈviːn"
+          },
+          "pos": "vi.",
+          "gloss": "介入，干涉，干预；调停；插话",
+          "usage": "inter(之间)+ven(来)→来到中间→介入；中性偏积极（及时介入阻止坏事）；intervene in sth. 介入、intervene between...and... 调停；名词 intervention；书内辨析：intervene 强调介入 / interfere 干扰 / interrupt 打断",
+          "phrases": [
+            "intervene in sth. 介入某事",
+            "intervene between...and... 在……和……之间调停"
+          ],
+          "ex": [
+            {
+              "en": "She went over to intervene between the two men.",
+              "zh": "她走过去为两个男人进行调解。"
+            }
+          ]
+        },
+        {
+          "w": "interfere",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌɪntəˈfɪə(r)",
+            "us": "ˌɪntərˈfɪr"
+          },
+          "pos": "vi.",
+          "gloss": "干涉，干预；妨碍，干扰",
+          "usage": "inter(之间)+fer(带来)→把自己的意志带到中间→干涉，多含贬义；考点介词：interfere in 干涉 / interfere with 妨碍；形容词 interfering 管闲事的；形近角度另见 interfere·integrate·integrity 组",
+          "phrases": [
+            "interfere in sth. 干涉某事",
+            "interfere with sth. 妨碍某事"
+          ],
+          "ex": [
+            {
+              "en": "The police are very unwilling to interfere in family problems.",
+              "zh": "警方很不情愿插手家庭问题。"
+            }
+          ]
+        },
+        {
+          "w": "interrupt",
+          "rank": 5,
+          "ph": {
+            "uk": "ˌɪntəˈrʌpt",
+            "us": "ˌɪntəˈrʌpt"
+          },
+          "pos": "vt. & vi.",
+          "gloss": "打断（谈话）；中断，使暂停；遮挡",
+          "usage": "inter(之间)+rupt(断裂)→在中间断开→打断；interrupt sb. 打断话头、be interrupted by 被……打断；名词 interruption；同根 erupt 爆发、bankrupt 破产的、corrupt 腐败的",
+          "phrases": [
+            "interrupt sb. 打断某人",
+            "be interrupted by... 被……打断"
+          ],
+          "ex": [
+            {
+              "en": "After Hurricane Katrina interrupted routine delivery, temporary mail service points were set up.",
+              "zh": "卡特里娜飓风中断了日常投递后，建立了临时邮件服务点。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "contend · contest · competition",
       "memo": "都含\"争\"，争的内容不同：contest 是台面上的\"比赛\"——n. 有规则的竞赛（a speech contest 演讲比赛、an essay contest 征文比赛），作 vt. 可\"争夺、对……提出异议\"（contest the results 质疑结果）；contend 是较劲+主张——con+tend(伸)→共同将手伸向某物→争夺（contend for power 争夺权力、contend with sth. 对付困境），阅读高频义是 vt.\"声称、主张\"（The RSC contends that... 剧团认为）；competition 是抽象\"竞争\"——com+pet(追寻)→共同追寻同一样东西→竞争（face stiff competition 面临激烈竞争，动词 compete、形容词 competitive，competition law 竞争法）。一句话分工：台面上的比赛 contest，较劲与主张 contend，抽象竞争 competition。注意别混：contest 名词是\"比赛\"，contend 高频义却是\"主张\"——阅读里 see contend 就往\"认为\"上想。跨组：contend 义近另见 compete·contend 组，名词 contention 形近在 conv- 七词组。",
       "words": [
