@@ -5355,8 +5355,8 @@
       ]
     },
     {
-      "title": "evaluate · estimate",
-      "memo": "都译\"评估\"，评的对象不同：evaluate 评\"好坏优劣\"——依据标准作判断（evaluate the performance/students/applicants 评估表现/学生/申请人），词根 valu(价值)→评的是价值，名词 evaluation；estimate 估\"多少大小\"——给出数字、不求精确（estimate the crowd at 30,000、It is estimated that... 据估计，名词 estimate 估计值读 /ˈestɪmət/，a rough estimate 粗略估计）。重叠处：评估项目\"值不值\"两个都能用，但写作里问\"质量如何\"用 evaluate，问\"数量几何\"用 estimate；两者共同近义是 assess（常指评定等级）。形近角度（含 evolution）另见 evaluate·evolution·estimate 近形组。",
+      "title": "evaluate · estimate · assess",
+      "memo": "都译\"评估\"，评的方式不同：evaluate＝e(出)+valu(价值)+ate→\"把价值说出来\"→评优劣、评价值（evaluate the performance，名词 evaluation）；estimate 估\"数量、大小、成本\"——给数字、不求精确（estimate the crowd at 30,000、It is estimated that...，名词读 /ˈestɪmət/，a rough estimate 粗略估计）；assess＝as+sess(坐)→\"坐下来定价值\"→按标准专业地评定（assess the impact/damage/sb.'s ability，名词 assessment 高频——risk assessment 风险评估）。书内辨析一句收拢：assess 定确切价值并据此评定，estimate 个人推理作大致判断，evaluate 以等价物对价值作确定判断。形近角度：evaluate 另见 evaluate·elevate 组和 evaluate·evolution·estimate 组，assess 另见 access·assess·accuse·amuse 近形组。",
       "words": [
         {
           "w": "evaluate",
@@ -5397,6 +5397,27 @@
             {
               "en": "Police estimate the crowd at 30,000.",
               "zh": "警方估计聚集的人有3万。"
+            }
+          ]
+        },
+        {
+          "w": "assess",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈses",
+            "us": "əˈses"
+          },
+          "pos": "vt.",
+          "gloss": "评估，评定；估价",
+          "usage": "as+sess(坐，同 session)→坐下来定价值→按标准专业评定；assess the impact/damage/sb.'s ability；名词 assessment 高频（risk assessment 风险评估）；形近角度另见 access·assess·accuse·amuse 组",
+          "phrases": [
+            "assess the impact 评估影响",
+            "assess sb.'s ability 评定某人的能力"
+          ],
+          "ex": [
+            {
+              "en": "It is hard, the state argues, for judges to assess the implications of rapid changes in technology.",
+              "zh": "该州认为，法官很难评估快速变化的新技术的影响。"
             }
           ]
         }
