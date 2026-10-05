@@ -46,8 +46,7 @@
   <div class="stat-grid">
     <div class="card"><b id="stStreak">0</b><span>连续打卡（天）</span></div>
     <div class="card"><b id="stLearning">0</b><span>学生词</span></div>
-    <div class="card"><b id="stGrad">0</b><span>已毕业</span></div>
-    <div class="card"><b id="stFam">0</b><span>已标熟悉</span></div>
+    <div class="card"><b id="stMaster">0</b><span>已掌握</span><small id="stMasterDetail" style="color:var(--ink-2);font-size:12px;display:block;margin-top:2px"></small></div>
     <div class="card"><b id="stAcc">0%</b><span>复习正确率</span></div>
   </div>
 
@@ -91,8 +90,9 @@ function render() {
   const s = store.getState();
   $('stStreak').textContent = store.streakDays();
   $('stLearning').textContent = Object.keys(s.words).length;
-  $('stGrad').textContent = Object.keys(s.graduated).length;
-  $('stFam').textContent = Object.keys(s.familiar).length;
+  const grad = Object.keys(s.graduated).length, fam = Object.keys(s.familiar).length;
+  $('stMaster').textContent = grad + fam;   // 已掌握 = 毕业词 + 熟悉词
+  $('stMasterDetail').textContent = `毕业 ${grad} · 熟悉 ${fam}`;
   let r = 0, c = 0;
   for (const w of Object.values(s.words)) { r += w.reviews || 0; c += w.correct || 0; }
   $('stAcc').textContent = (r ? Math.round(c / r * 100) : 0) + '%';
