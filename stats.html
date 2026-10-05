@@ -60,7 +60,7 @@
     <h3 style="margin:0 0 8px">词库总览 · 重要性分布</h3>
     <p id="rankDist" style="color:var(--ink-2);margin:0 0 12px;font-size:15px"></p>
     <div id="rankRows"></div>
-    <p style="color:var(--ink-2);font-size:13px;margin:12px 0 0">★ 数量 = 该词被几本书同时收录，越多越重要；学习顺序、筛选都以它为优先级依据。<br>行末 <b style="color:var(--good)">已掌握</b>/总数：仅统计完全毕业词，生词库中正在学习的词不计入。</p>
+    <p style="color:var(--ink-2);font-size:13px;margin:12px 0 0">★ 数量 = 该词被几本书同时收录，越多越重要；学习顺序、筛选都以它为优先级依据。<br>行末 <b style="color:var(--good)">已掌握</b>/总数：毕业词与熟悉词合并统计，正在学习的词不计入。</p>
   </div>
 </main>
 
@@ -116,11 +116,15 @@ function render() {
   if (idx) {
     const dist = [0, 0, 0, 0, 0, 0];
     for (const [, m] of Object.entries(idx.map)) dist[m[1]]++;
-    // 各星级已掌握数：只统计完全毕业词（生词库/熟悉词不算）
+    // 各星级已掌握数：毕业词 + 熟悉词 合并统计（与顶部"已掌握"口径一致）
     const mast = [0, 0, 0, 0, 0, 0];
     for (const w of Object.keys(s.graduated)) {
       const m = idx.map[w];
       if (m) mast[m[1]]++;
+    }
+    for (const w of Object.keys(s.familiar)) {
+      const m = idx.map[w];
+      if (m && !s.graduated[w]) mast[m[1]]++;   // 防两集合重复计数
     }
     const colors = { 5: '#d84315', 4: '#e64a19', 3: '#b26a00', 2: '#3f51b5', 1: '#6b6558' };
     const names = { 5: '五书', 4: '四书', 3: '三书', 2: '两书', 1: '一书' };
