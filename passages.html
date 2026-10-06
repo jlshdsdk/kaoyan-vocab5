@@ -28,13 +28,16 @@ html { interpolate-size: allow-keywords; }   /* 支持的浏览器：展开高�
 .pg-body { padding: 4px 18px 14px; }
 .pg-body p { margin: 10px 0 0; line-height: 1.9; font-size: 15.5px; overflow-wrap: anywhere; }
 .pg-body p.pch { font-weight: 700; }   /* "第N章"小标题行加粗 */
-/* 词标注：正文 (english 中文) 只显示英文，点单词在英文正下方显示/隐藏中文释义 */
-.vw { display: inline-block; vertical-align: baseline; border: 0; background: none; margin: 0; padding: 0 1px; font: inherit; line-height: inherit; color: var(--accent); cursor: pointer; text-align: left; }
+/* 词标注：正文 (english 中文) 只显示英文；点开后中文释义作为独立块行插到词所在行下面
+ *（vwwrap 是行内容器：按钮只有单词、正常混排；释义块打断行内流，独占下一行，再后面接原文），
+ * JS 在展开时把释义块对齐到单词正下方 */
+.vwwrap { display: inline; }
+.vw { border: 0; background: none; margin: 0; padding: 0 1px; font: inherit; line-height: inherit; color: var(--accent); cursor: pointer; }
 .vw:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); }
 .vw .en { font-weight: 700; border-bottom: 1px dashed color-mix(in srgb, var(--accent) 55%, transparent); }
 .vw:hover .en { border-bottom-style: solid; }
-.vw .cn { display: none; color: var(--warn); font-size: 0.92em; line-height: 1.45; }
-.vw.on .cn { display: block; }
+.vwwrap > .cn { display: none; color: var(--warn); font-size: 0.92em; line-height: 1.5; margin-top: 2px; }
+.vw.on + .cn { display: block; }
 .pgr { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 14px 0 4px; }
 .pgr .btn { padding: 6px 18px; font-size: 14px; }
 .pgbtn[disabled] { opacity: .45; cursor: default; pointer-events: none; }
@@ -95,7 +98,7 @@ function renderPara(text) {
   VW_RE.lastIndex = 0;
   while ((m = VW_RE.exec(text))) {
     out += esc(text.slice(last, m.index));
-    out += `<button type="button" class="vw" aria-expanded="false" title="点击显示/隐藏释义"><span class="en">${esc(m[1])}</span><span class="cn">(${esc(m[2])})</span></button>`;
+    out += `<span class="vwwrap"><button type="button" class="vw" aria-expanded="false" title="点击显示/隐藏释义"><span class="en">${esc(m[1])}</span></button><span class="cn">(${esc(m[2])})</span></span>`;
     last = m.index + m[0].length;
   }
   out += esc(text.slice(last));
@@ -145,11 +148,25 @@ function render() {
   $('passageList').innerHTML = slice.map(passageCard).join('') + pagerHTML(page, total);
 }
 
+/* 点词切换释义；展开时把释义块对齐到单词正下方（视口左缘差算缩进） */
+function toggleVw(vw) {
+  vw.classList.toggle('on');
+  const on = vw.classList.contains('on');
+  vw.setAttribute('aria-expanded', on);
+  const cn = vw.nextElementSibling;             // 释义块是按钮的兄弟节点
+  if (on) {
+    const en = vw.querySelector('.en');
+    const cr = cn.getBoundingClientRect(), er = en.getBoundingClientRect();
+    cn.style.paddingLeft = Math.max(0, Math.round(er.left - cr.left)) + 'px';
+  } else {
+    cn.style.paddingLeft = '';
+  }
+}
+
 $('passageList').addEventListener('click', e => {
-  const vw = e.target.closest('.vw');
-  if (vw) {
-    vw.classList.toggle('on');
-    vw.setAttribute('aria-expanded', vw.classList.contains('on'));
+  const wrap = e.target.closest('.vwwrap');
+  if (wrap) {
+    toggleVw(wrap.querySelector('.vw'));
     return;
   }
   const btn = e.target.closest('.pgbtn');
