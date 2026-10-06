@@ -64,7 +64,7 @@ ruby.vw rt { font-size: 1em; color: var(--warn); font-weight: 700; line-height: 
       <h2 style="margin:0">📖 短文助记</h2>
       <span id="pgSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
     </div>
-    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文 · 中文释义常驻在英文单词下方 · 点单词选中，按 U 听英音 / I 听美音</p>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文 · 中文释义常驻在英文单词下方 · 点单词选中，← / → 切换上一个 / 下一个，U 听英音 / I 听美音</p>
   </div>
   <div id="passageList"></div>
 </main>
@@ -148,19 +148,36 @@ function render() {
   $('passageList').innerHTML = slice.map(passageCard).join('') + pagerHTML(page, total);
 }
 
-/* 词选中与发音：点词选中（再点同一个取消），U / I 播英音 / 美音（与今日学习页一致） */
+/* 词选中与发音：点词选中（再点同一个取消），U / I 播英音 / 美音（与今日学习页一致），
+ * ← / → 在已展开短文的可见单词间按阅读顺序移动选中并滚动跟随 */
 let selWord = null;
 
-function selectWord(rb) {
-  if (selWord === rb) {
-    rb.classList.remove('sel');
-    selWord = null;
-    return;
-  }
+function selectWord(rb, scroll = false) {
   if (selWord) selWord.classList.remove('sel');
   selWord = rb;
   rb.classList.add('sel');
   prefetchRealAudio(rb.querySelector('.en').textContent);   // 预取真人音频，按 U/I 零等待
+  if (scroll) rb.scrollIntoView({ block: 'center' });
+}
+
+function visibleWords() {
+  // 只取已展开且当前可见的词（折叠的短文、其他分页不在导航范围）
+  return Array.from(document.querySelectorAll('details.pgroup[open] ruby.vw'))
+    .filter(rb => rb.getBoundingClientRect().width > 0);
+}
+
+function moveSel(dir) {
+  const words = visibleWords();
+  if (!words.length) { toast('先展开一篇短文，再用 ← / → 选词'); return; }
+  if (!selWord || !selWord.isConnected || !words.includes(selWord)) {
+    selectWord(dir > 0 ? words[0] : words[words.length - 1], true);
+    return;
+  }
+  const i = words.indexOf(selWord);
+  const j = i + dir;
+  if (j < 0) { toast('已经是第一个词'); return; }
+  if (j >= words.length) { toast('已经是最后一个词'); return; }
+  selectWord(words[j], true);
 }
 
 $('passageList').addEventListener('click', e => {
@@ -179,12 +196,14 @@ $('passageList').addEventListener('click', e => {
   }
 });
 
-/* U / I 播英音 / 美音；未选中时提示 */
+/* U / I 播英音 / 美音，← / → 切换上一个 / 下一个单词；未选中时 → 从第一个词开始 */
 document.addEventListener('keydown', e => {
   if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable)) return;
   const k = e.key.toLowerCase();
+  if (e.key === 'ArrowLeft') { e.preventDefault(); moveSel(-1); return; }
+  if (e.key === 'ArrowRight') { e.preventDefault(); moveSel(1); return; }
   if (k !== 'u' && k !== 'i') return;
-  if (!selWord) { toast('先点一个单词，再按 U（英音）/ I（美音）听发音'); return; }
+  if (!selWord || !selWord.isConnected) { toast('先点一个单词，再按 U（英音）/ I（美音）听发音'); return; }
   pronounce(selWord.querySelector('.en').textContent, k === 'u' ? 'uk' : 'us');
 });
 
