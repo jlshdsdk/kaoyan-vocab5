@@ -33,7 +33,7 @@ html { interpolate-size: allow-keywords; }   /* 支持的浏览器：展开高�
  * ruby 子树禁用任意断行（防止单词被从字母中间拆开），释义单行不折。
  * 点词选中（高亮），按 U / I 播英音 / 美音（与今日学习页快捷键一致） */
 ruby.vw { ruby-position: under; ruby-align: center; margin: 0 1px; color: var(--accent); overflow-wrap: normal; word-break: normal; cursor: pointer; }
-.vw .en { font-weight: 700; overflow-wrap: normal; word-break: normal; border-radius: 4px; }
+.vw .en { font-weight: 700; overflow-wrap: normal; word-break: normal; border-radius: 4px; border-bottom: 1px dashed var(--accent); }
 ruby.vw.sel .en { background: color-mix(in srgb, var(--accent) 20%, transparent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent); }
 ruby.vw rt { font-size: 1em; color: var(--warn); font-weight: 700; line-height: 1.4; padding-top: 3px; white-space: nowrap; overflow-wrap: normal; word-break: normal; }
 .pgr { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 14px 0 4px; }
