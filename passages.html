@@ -28,12 +28,13 @@ html { interpolate-size: allow-keywords; }   /* 支持的浏览器：展开高�
 .pg-body { padding: 4px 18px 14px; }
 .pg-body p { margin: 10px 0 0; line-height: 1.9; font-size: 15.5px; overflow-wrap: anywhere; }
 .pg-body p.pch { font-weight: 700; }   /* "第N章"小标题行加粗 */
-/* 词标注：正文 (english 中文) 只显示英文，点单词显示/隐藏中文释义 */
-.vw { border: 0; background: none; margin: 0; padding: 0 1px; font: inherit; line-height: inherit; color: var(--accent); cursor: pointer; border-bottom: 1px dashed color-mix(in srgb, var(--accent) 55%, transparent); }
-.vw:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); border-bottom-style: solid; }
-.vw .en { font-weight: 700; }
-.vw .cn { display: none; color: var(--warn); }
-.vw.on .cn { display: inline; }
+/* 词标注：正文 (english 中文) 只显示英文，点单词在英文正下方显示/隐藏中文释义 */
+.vw { display: inline-block; vertical-align: baseline; border: 0; background: none; margin: 0; padding: 0 1px; font: inherit; line-height: inherit; color: var(--accent); cursor: pointer; text-align: left; }
+.vw:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.vw .en { font-weight: 700; border-bottom: 1px dashed color-mix(in srgb, var(--accent) 55%, transparent); }
+.vw:hover .en { border-bottom-style: solid; }
+.vw .cn { display: none; color: var(--warn); font-size: 0.92em; line-height: 1.45; }
+.vw.on .cn { display: block; }
 .pgr { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 14px 0 4px; }
 .pgr .btn { padding: 6px 18px; font-size: 14px; }
 .pgbtn[disabled] { opacity: .45; cursor: default; pointer-events: none; }
