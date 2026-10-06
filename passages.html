@@ -26,14 +26,16 @@ html { interpolate-size: allow-keywords; }   /* 支持的浏览器：展开高�
 .pgroup[open] .pg-caret { transform: rotate(90deg); }
 .pg-meta { margin-left: auto; color: var(--ink-2); font-size: 13px; white-space: nowrap; }
 .pg-body { padding: 4px 18px 14px; }
-.pg-body p { margin: 10px 0 0; line-height: 1.9; font-size: 15.5px; overflow-wrap: anywhere; }
+.pg-body p { margin: 12px 0 0; line-height: 2.4; font-size: 15.5px; overflow-wrap: anywhere; }
 .pg-body p.pch { font-weight: 700; }   /* "第N章"小标题行加粗 */
 /* 词标注：正文 (english 中文) 渲染成 ruby 注音式——英文正常混排行内，中文释义常驻其正下方，
  * 小一号字、居中对齐，由浏览器 ruby 布局保证整齐。
- * ruby 子树禁用任意断行（防止单词被从字母中间拆开），释义单行不折 */
-ruby.vw { ruby-position: under; ruby-align: center; margin: 0 1px; color: var(--accent); overflow-wrap: normal; word-break: normal; }
-.vw .en { font-weight: 700; overflow-wrap: normal; word-break: normal; }
-ruby.vw rt { font-size: 0.58em; color: var(--warn); font-weight: 400; line-height: 1.3; padding-top: 1px; white-space: nowrap; overflow-wrap: normal; word-break: normal; }
+ * ruby 子树禁用任意断行（防止单词被从字母中间拆开），释义单行不折。
+ * 点词选中（高亮），按 U / I 播英音 / 美音（与今日学习页快捷键一致） */
+ruby.vw { ruby-position: under; ruby-align: center; margin: 0 1px; color: var(--accent); overflow-wrap: normal; word-break: normal; cursor: pointer; }
+.vw .en { font-weight: 700; overflow-wrap: normal; word-break: normal; border-radius: 4px; }
+ruby.vw.sel .en { background: color-mix(in srgb, var(--accent) 20%, transparent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent); }
+ruby.vw rt { font-size: 0.72em; color: var(--warn); font-weight: 400; line-height: 1.4; padding-top: 3px; white-space: nowrap; overflow-wrap: normal; word-break: normal; }
 .pgr { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 14px 0 4px; }
 .pgr .btn { padding: 6px 18px; font-size: 14px; }
 .pgbtn[disabled] { opacity: .45; cursor: default; pointer-events: none; }
@@ -62,17 +64,19 @@ ruby.vw rt { font-size: 0.58em; color: var(--warn); font-weight: 400; line-heigh
       <h2 style="margin:0">📖 短文助记</h2>
       <span id="pgSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
     </div>
-    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文 · 中文释义常驻在英文单词下方</p>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文 · 中文释义常驻在英文单词下方 · 点单词选中，按 U 听英音 / I 听美音</p>
   </div>
   <div id="passageList"></div>
 </main>
 
 <script type="module">
 import { initAuthNav } from './assets/js/auth-nav.js?v=18';
-import { initTheme, setTheme, getTheme, esc } from './assets/js/ui.js?v=18';
+import { initTheme, setTheme, getTheme, esc, toast } from './assets/js/ui.js?v=18';
+import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=24';
 
 initAuthNav();
 initTheme();
+initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
 document.getElementById('themeBtn').onclick = () => {
   const next = getTheme() === 'dark' ? 'light' : 'dark';
@@ -144,7 +148,27 @@ function render() {
   $('passageList').innerHTML = slice.map(passageCard).join('') + pagerHTML(page, total);
 }
 
+/* 词选中与发音：点词选中（再点同一个取消），U / I 播英音 / 美音（与今日学习页一致） */
+let selWord = null;
+
+function selectWord(rb) {
+  if (selWord === rb) {
+    rb.classList.remove('sel');
+    selWord = null;
+    return;
+  }
+  if (selWord) selWord.classList.remove('sel');
+  selWord = rb;
+  rb.classList.add('sel');
+  prefetchRealAudio(rb.querySelector('.en').textContent);   // 预取真人音频，按 U/I 零等待
+}
+
 $('passageList').addEventListener('click', e => {
+  const rb = e.target.closest('ruby.vw');
+  if (rb) {
+    selectWord(rb);
+    return;
+  }
   const btn = e.target.closest('.pgbtn');
   if (!btn) return;
   const next = Number(btn.dataset.pg);
@@ -153,6 +177,15 @@ $('passageList').addEventListener('click', e => {
     render();
     scrollTo({ top: 0, behavior: 'smooth' });
   }
+});
+
+/* U / I 播英音 / 美音；未选中时提示 */
+document.addEventListener('keydown', e => {
+  if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable)) return;
+  const k = e.key.toLowerCase();
+  if (k !== 'u' && k !== 'i') return;
+  if (!selWord) { toast('先点一个单词，再按 U（英音）/ I（美音）听发音'); return; }
+  pronounce(selWord.querySelector('.en').textContent, k === 'u' ? 'uk' : 'us');
 });
 
 (async function load() {
