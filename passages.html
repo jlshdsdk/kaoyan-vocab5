@@ -27,6 +27,7 @@ html { interpolate-size: allow-keywords; }   /* 支持的浏览器：展开高�
 .pg-meta { margin-left: auto; color: var(--ink-2); font-size: 13px; white-space: nowrap; }
 .pg-body { padding: 4px 18px 14px; }
 .pg-body p { margin: 10px 0 0; line-height: 1.9; font-size: 15.5px; overflow-wrap: anywhere; }
+.pg-body p.pch { font-weight: 700; }   /* "第N章"小标题行加粗 */
 /* 词标注：正文 (english 中文) 只显示英文，点单词显示/隐藏中文释义 */
 .vw { border: 0; background: none; margin: 0; padding: 0 1px; font: inherit; line-height: inherit; color: var(--accent); cursor: pointer; border-bottom: 1px dashed color-mix(in srgb, var(--accent) 55%, transparent); }
 .vw:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); border-bottom-style: solid; }
@@ -104,6 +105,9 @@ function paras(text) {
   return String(text || '').split(/\n+/).map(s => s.trim()).filter(Boolean);
 }
 
+/* "第N章/第N回"开头的小标题行加粗渲染 */
+const CH_RE = /^第[〇零一二三四五六七八九十百千万\d]+[章回节]/;
+
 function passageCard(p) {
   const ps = paras(p.text);
   return `<details class="pgroup">
@@ -114,7 +118,7 @@ function passageCard(p) {
         <span class="pg-meta">${esc(p.date || '')}</span>
       </div>
     </summary>
-    <div class="pg-body">${ps.map(t => `<p>${renderPara(t)}</p>`).join('') || '<p style="color:var(--ink-2)">（正文为空）</p>'}</div>
+    <div class="pg-body">${ps.map(t => `<p${CH_RE.test(t) ? ' class="pch"' : ''}>${renderPara(t)}</p>`).join('') || '<p style="color:var(--ink-2)">（正文为空）</p>'}</div>
   </details>`;
 }
 
