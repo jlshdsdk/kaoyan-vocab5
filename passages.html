@@ -64,7 +64,7 @@ ruby.vw rt { font-size: 1em; color: var(--warn); font-weight: 700; line-height: 
       <h2 style="margin:0">📖 短文助记</h2>
       <span id="pgSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
     </div>
-    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文 · 中文释义常驻在英文单词下方 · 点单词选中，← / → 切换上一个 / 下一个，U 听英音 / I 听美音，X 收藏到收藏词</p>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文 · 中文释义常驻在英文单词下方 · 点单词选中，← / → 切换上一个 / 下一个，U 听美音 / I 听英音，X 收藏到收藏词</p>
   </div>
   <div id="passageList"></div>
 </main>
@@ -213,7 +213,7 @@ document.addEventListener('keydown', e => {
   }
   if (k !== 'u' && k !== 'i') return;
   if (!selWord || !selWord.isConnected) { toast('先点一个单词，再按 U（英音）/ I（美音）听发音'); return; }
-  pronounce(selWord.querySelector('.en').textContent, k === 'u' ? 'uk' : 'us');
+  pronounce(selWord.querySelector('.en').textContent, k === 'u' ? 'us' : 'uk');
 });
 
 (async function load() {
