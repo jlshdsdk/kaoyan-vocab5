@@ -263,8 +263,10 @@
       ]
     },
     {
-      "title": "access · assess · accuse · amuse",
-      "memo": "cc/ss 双写混淆四件套，两对来记：access vs assess 近音（/ˈækses/ vs /əˈses/）——access＝ac+cess(走)→\"走进去\"→通道、使用权（have access to... 有……的机会/权利，形容词 accessible 易接近的，还有\"访问（电脑）\"义）；assess＝as+sess(坐，同 session)→\"坐下来定价值\"→评估、评定（assess the impact 评估影响，名词 assessment，近 evaluate，书内辨析 assess 定确切价值 / estimate 大致推断 / evaluate 等价判断）；accuse vs amuse 只差 c/m（/əˈkjuːz/ vs /əˈmjuːz/）——accuse 是\"指控\"（accuse sb. of，义近角度另见 prosecute·accuse·claim 组）；amuse 书内记法：一只可爱的米老鼠（mouse）把我们\"逗乐\"了（be amused at/by 被逗乐，amusing 好笑的 vs amused 被逗乐的，反义 bore）。拼写口诀：双 c 是通道、双 s 坐着评，带 c 控告要开口（/k/），带 m 逗乐想 mouse。",
+      "title": "access · assess · accuse · amuse · assert · assume",
+      "memo": [
+        "a- 开头近音混淆家族，四对来记：access vs assess 近音（/ˈækses/ vs /əˈses/）——access＝ac+cess(走)→\"走进去\"→通道、使用权（have access to...，形容词 accessible，\"权利\"义考过 2020 阅读）；assess＝as+sess(坐，同 session)→\"坐下来定价值\"→评估、评定（assess the impact，名词 assessment，近 evaluate）；accuse vs amuse 只差 c/m（/əˈkjuːz/ vs /əˈmjuːz/）——accuse 是\"指控\"（accuse sb. of，义近角度另见 prosecute·accuse·claim 组）；amuse 书内记法：米老鼠（mouse）把我们\"逗乐\"了（be amused at/by，反义 bore）。assert /əˈsɜːt/＝as+sert(放)→\"把话摆上去\"→断言、宣称（assert oneself 坚持己见，名词 assertion；书内辨析：assert 自信断言 / affirm 肯定 / state 客观陈述）；assume /əˈsjuːm/＝as+sume(拿)→拿来当真→假定（义近/形近角度另见 assume·consume·resume·presume 组）。拼写口诀：双 c 通道，双 s 坐评，带 c 控告，带 m 逗乐，-sert 摆话断言，-sume 拿来假定。"
+      ],
       "words": [
         {
           "w": "access",
@@ -347,6 +349,48 @@
             {
               "en": "His account of the camping trip amused the whole family.",
               "zh": "他讲述的露营趣事逗乐了全家人。"
+            }
+          ]
+        },
+        {
+          "w": "assert",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈsɜːt",
+            "us": "əˈsɜːrt"
+          },
+          "pos": "vt.",
+          "gloss": "断言，宣称；维护，坚持（权利）",
+          "usage": "as(加强)+sert(放)→把话摆上去→断言；主观自信地宣称（assert that...）；高频 assert oneself 坚持自己的权利/权威；名词 assertion 断言；书内辨析 assert 断言 / affirm 肯定 / state 陈述 / declare 官方宣布；反义 deny",
+          "phrases": [
+            "assert oneself 坚持自己的权利/主张",
+            "assert that... 断言……"
+          ],
+          "ex": [
+            {
+              "en": "The professor asserted that bilingual children often perform better in tasks requiring flexible thinking.",
+              "zh": "这位教授断言，双语儿童在需要灵活思维的任务中往往表现更好。"
+            }
+          ]
+        },
+        {
+          "w": "assume",
+          "rank": 5,
+          "ph": {
+            "uk": "əˈsjuːm",
+            "us": "əˈsuːm"
+          },
+          "pos": "vt.",
+          "gloss": "假定，假设，认为；承担（责任）；呈现，装出",
+          "usage": "as(向)+sume(拿)→拿来当真→假定；三义高频：assume that 假定、assume responsibility 承担、assume an air of 装出；名词 assumption；书内辨析 presume 凭据推测 / assume 常无证据；形近角度另见 assume·consume·resume·presume 组",
+          "phrases": [
+            "assume responsibility 承担责任",
+            "assume that... 假定……"
+          ],
+          "ex": [
+            {
+              "en": "Aaron Norris assumes that many children's views on real estate are influenced by the media.",
+              "zh": "亚伦·诺里斯认为很多孩子对房地产的看法受到了媒体的影响。"
             }
           ]
         }
