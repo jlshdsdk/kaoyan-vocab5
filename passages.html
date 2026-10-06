@@ -64,17 +64,20 @@ ruby.vw rt { font-size: 1em; color: var(--warn); font-weight: 700; line-height: 
       <h2 style="margin:0">📖 短文助记</h2>
       <span id="pgSummary" style="margin-left:auto;color:var(--ink-2);font-size:14px"></span>
     </div>
-    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文 · 中文释义常驻在英文单词下方 · 点单词选中，← / → 切换上一个 / 下一个，U 听英音 / I 听美音</p>
+    <p style="color:var(--ink-2);font-size:13.5px;margin:8px 0 0">短文由站长录入（把短文发给 ZCode 即可），推送后全设备可见 · 默认只显示标题，点标题展开 / 收起全文 · 中文释义常驻在英文单词下方 · 点单词选中，← / → 切换上一个 / 下一个，U 听英音 / I 听美音，X 收藏到收藏词</p>
   </div>
   <div id="passageList"></div>
 </main>
 
 <script type="module">
 import { initAuthNav } from './assets/js/auth-nav.js?v=18';
+import { startSync } from './assets/js/sync.js?v=19';
 import { initTheme, setTheme, getTheme, esc, toast } from './assets/js/ui.js?v=18';
 import { initAudio, pronounce, prefetchRealAudio } from './assets/js/audio.js?v=24';
+import * as store from './assets/js/store.js?v=20';   // X 键收藏走与收藏词页同一套数据（随账号云同步）
 
 initAuthNav();
+startSync();
 initTheme();
 initAudio();
 document.getElementById('themeBtn').textContent = getTheme() === 'dark' ? '☀️' : '🌙';
@@ -196,12 +199,18 @@ $('passageList').addEventListener('click', e => {
   }
 });
 
-/* U / I 播英音 / 美音，← / → 切换上一个 / 下一个单词；未选中时 → 从第一个词开始 */
+/* U / I 播英音 / 美音，← / → 切换上一个 / 下一个单词，X 收藏当前单词到收藏词；未选中时 → 从第一个词开始 */
 document.addEventListener('keydown', e => {
   if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable)) return;
   const k = e.key.toLowerCase();
   if (e.key === 'ArrowLeft') { e.preventDefault(); moveSel(-1); return; }
   if (e.key === 'ArrowRight') { e.preventDefault(); moveSel(1); return; }
+  if (k === 'x' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+    if (!selWord || !selWord.isConnected) { toast('先点一个单词，再按 X 收藏'); return; }
+    const w = selWord.querySelector('.en').textContent;
+    toast(store.addFav(w) ? `⭐ 已收藏「${w}」到收藏词` : `「${w}」已经在收藏词里了`);
+    return;
+  }
   if (k !== 'u' && k !== 'i') return;
   if (!selWord || !selWord.isConnected) { toast('先点一个单词，再按 U（英音）/ I（美音）听发音'); return; }
   pronounce(selWord.querySelector('.en').textContent, k === 'u' ? 'uk' : 'us');
