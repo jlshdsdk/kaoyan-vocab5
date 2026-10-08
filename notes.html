@@ -205,6 +205,31 @@ function renderGroups() {
 
 function renderList() { renderGroups(); }
 
+/* 一键导出某一天的生词 + 中文释义为 Markdown（只含所选日；浏览器按下载设置保存文件） */
+function buildDayMD(rec) {
+  const words = rec.words || [];
+  const lines = [`# 生词笔记 · ${rec.date}（${words.length} 词）`, ''];
+  for (const w of words) {
+    const g = (w.gloss || '').trim();
+    lines.push(`- **${w.w}**${g ? ' ' + g : ''}`);
+  }
+  if (!words.length) lines.push('（这一天没有生词）');
+  return lines.join('\n') + '\n';
+}
+
+function exportDayMD(rec) {
+  const md = buildDayMD(rec);
+  const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `生词笔记-${rec.date}.md`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  toast(`已导出 ${rec.date}（${(rec.words || []).length} 词）的 MD 文件`);
+}
+
 function renderDay() {
   const rec = days.find(d => d.date === selDate);
   if (!rec) { $('dayView').innerHTML = ''; return; }
@@ -213,10 +238,12 @@ function renderDay() {
     <div class="dayhead">
       <h3>📝 ${esc(rec.date)}${wd(rec.date)}</h3>
       <span class="nmeta">${words.length} 词</span>
+      <button class="btn" id="exportMdBtn" style="margin-left:auto;padding:5px 14px;font-size:13.5px" title="把这一天的单词和中文释义导出为 Markdown 文件下载">⬇ 导出 MD</button>
     </div>
     <div class="note-grid">${words.map(noteWordCard).join('')}</div>
     ${groups.map(noteGroupCard).join('')}
   </section>`;
+  $('exportMdBtn').onclick = () => exportDayMD(rec);
   for (const w of words) prefetchRealAudio(w.w);
 }
 
