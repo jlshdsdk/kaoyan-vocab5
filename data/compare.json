@@ -2,6 +2,54 @@
   "v": 1,
   "form": [
     {
+      "title": "convey · survey",
+      "memo": "尾巴都是 -vey（/veɪ/），词根同出，前缀定分工：convey＝con(共同)+vey(路，同 via)→\"在路上送\"→运送、传送；高频引申\"表达，传达（思想感情）\"（convey information/one's feelings，Colours like red convey a sense of energy 颜色传达出活力感；近 transmit/deliver）；survey＝sur(上面)+vey(看，同 view)→\"从上往下看\"→俯瞰、审视→调查、勘测（conduct a survey 做调查、a recent survey showed... 最近的调查显示，还可\"概述\"和\"测量\"；重音区分：名词 /ˈsɜːveɪ/ 前重，动词 /səˈveɪ/ 后重）。一句话：在路上送的是 convey（送货物也送思想），从上往下看的是 survey（勘测与调查）。",
+      "words": [
+        {
+          "w": "convey",
+          "rank": 5,
+          "ph": {
+            "uk": "kənˈveɪ",
+            "us": "kənˈveɪ"
+          },
+          "pos": "vt.",
+          "gloss": "运送，输送；表达，传达（思想、感情）",
+          "usage": "con(共同)+vey(路)→在路上送→运送；阅读高频义\"表达/传达\"：convey information/a sense of...；近 transmit、deliver；形近别和 convy（无此词）式的 convey/survey 混",
+          "phrases": [
+            "convey information 传递信息",
+            "convey one's feelings 表达感情"
+          ],
+          "ex": [
+            {
+              "en": "Colours like red convey a sense of energy and strength.",
+              "zh": "红色之类的颜色可给人以充满活力与力量的感觉。"
+            }
+          ]
+        },
+        {
+          "w": "survey",
+          "rank": 4,
+          "ph": {
+            "uk": "ˈsɜːveɪ",
+            "us": "ˈsɜːrveɪ"
+          },
+          "pos": "n. / vt.",
+          "gloss": "调查，民意调查；测量，勘测；俯瞰，审视；概述",
+          "usage": "sur(上面)+vey(看)→从上看→俯瞰/勘测/调查；高频 conduct a survey、a recent survey showed...；名动异音：名词 /ˈsɜːveɪ/ 前重、动词 /səˈveɪ/ 后重",
+          "phrases": [
+            "conduct a survey 做调查",
+            "a recent survey shows/reveals... 最近的调查显示……"
+          ],
+          "ex": [
+            {
+              "en": "A recent survey showed 75 percent of those questioned were in favour of the plan.",
+              "zh": "最近的一项调查显示，75%的受访者支持该计划。"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "adapt · adopt",
       "memo": "一字之差的双胞胎（/əˈdæpt/ vs /əˈdɒpt/），中间元音定命运：adapt＝ad+apt(适合，同 apt 恰当的)→使自己\"合身\"→适应、改编（adapt to... 适应、adapt oneself to 使自己适应，be adapted from... 由……改编——小说改编电影也用它，名词 adaptation 改编本/适应）；adopt＝ad+opt(选择，同 option 选项)→选来归自己→采纳、采用、收养（adopt a new approach 采用新方法、adopt a child 收养孩子、adopt a resolution 通过决议，名词 adoption，反义 reject）。书内神记法：刚被收养（adopt），但他适应（adapt）不了新家庭。听音抓元音：/æ/ 是适应，/ɒ/ 是采纳。三胞胎还有个 adept /əˈdept/ 熟练的（be adept at），一并认走。",
       "words": [
