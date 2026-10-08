@@ -112,8 +112,8 @@ function paras(text) {
   return String(text || '').split(/\n+/).map(s => s.trim()).filter(Boolean);
 }
 
-/* "第N章/第N回"开头的小标题行加粗渲染 */
-const CH_RE = /^第[〇零一二三四五六七八九十百千万\d]+[章回节]/;
+/* "第N章/回/节"或"一、二、三、"（中文数字顿号式）开头的小标题行加粗渲染 */
+const CH_RE = /^(第[〇零一二三四五六七八九十百千万\d]+[章回节]|[〇零一二三四五六七八九十百千万\d]+、)/;
 
 function passageCard(p) {
   const ps = paras(p.text);
